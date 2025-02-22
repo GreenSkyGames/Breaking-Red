@@ -1,7 +1,7 @@
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _speed = 5;
     public int facingDirection = 1;
