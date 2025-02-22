@@ -8,11 +8,25 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anim;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+	//These functions serve to display the dialogue box.
+	public float activateRange = 1;
+	public LayerMask enemyLayer;
+	public Transform ActivatePoint;
+
+
+	private void Update()
+	{
+		if(Input.GetButtonDown("PlayerActivate")) //This is set to the "f" key currently
+		{
+			//This checks if there is an enemy in range of the ActivatePoint gameobject that is bound to the player.
+			Collider2D[] enemies = Physics2D.OverlapCircleAll(ActivatePoint.position, activateRange, enemyLayer);
+			//If it finds enemies, they're on the list.  If there is an enemy, it displays its dialogue box.
+			if(enemies.Length > 0)
+			{
+				enemies[0].GetComponent<NPCManager>().displayDialogueBox();
+			}
+		}
+	}
 
     // Update is called once per frame
     void FixedUpdate()

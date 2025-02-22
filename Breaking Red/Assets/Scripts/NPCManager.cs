@@ -11,6 +11,8 @@ public class NPCManager : MonoBehaviour
 	public LayerMask playerLayer;
 	//private bool isChasing;
 
+	public Canvas myCanvas;
+
 	private float attackCooldownTimer;
 	private int facingDirection = -1;
 	private EnemyState enemyState;
@@ -138,6 +140,23 @@ public class NPCManager : MonoBehaviour
 			anim.SetBool("isChasing", true);
 		else if (enemyState == EnemyState.Attacking)
 			anim.SetBool("isAttacking", true);
+	}
+
+	//This actually displays the dialogue box!
+	//Now to stop the enemy from attacking at the same time...
+	public void displayDialogueBox()
+	{
+		if(myCanvas.gameObject.activeSelf == true)
+		{
+			myCanvas.gameObject.SetActive(false);
+			ChangeState(EnemyState.Idle);
+		}
+		else
+		{
+			//Debug.Log("Test.");
+			myCanvas.gameObject.SetActive(true);
+			ChangeState(EnemyState.Dialogue);
+		}
 	}
 
 	//Visualize the range of player detection
