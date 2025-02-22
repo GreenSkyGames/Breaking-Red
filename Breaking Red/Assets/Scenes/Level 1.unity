@@ -16048,9 +16048,9 @@ GameObject:
   - component: {fileID: 1325530106}
   - component: {fileID: 1325530105}
   - component: {fileID: 1325530104}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TheWolf
-  m_TagString: Untagged
+  m_TagString: TheWolf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16588,7 +16588,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1325530105}
         m_TargetAssemblyTypeName: NPCManager, Assembly-CSharp
         m_MethodName: displayDialogueBox
         m_Mode: 1
