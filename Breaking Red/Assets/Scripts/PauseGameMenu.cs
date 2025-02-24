@@ -32,13 +32,13 @@ public class PauseGameMenu : MonoBehaviour
 
     public void ResumeGame(){
         PauseMenu.SetActive(false); //pause menu goes away 
-        Time.timescale=1f; // resuming the game
+        Time.timeScale=1f; // resuming the game
         isPaused = false; //game is not paused 
     }
 
     void PauseGame(){
         PauseMenu.SetActive(true); //pause menu called 
-        Time.timescale=0f; // pausing the game 
+        Time.timeScale=0f; // pausing the game 
         isPaused = true; //game is paused 
     }
 
