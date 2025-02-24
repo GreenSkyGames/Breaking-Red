@@ -42,3 +42,12 @@ The following packages were updated:
   com.unity.collab-proxy from version 2.4.4 to 2.6.0
   com.unity.inputsystem from version 1.9.0 to 1.11.2
   com.unity.visualscripting from version 1.9.4 to 1.9.5
+
+=== Sun Feb 23 13:44:42 2025
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.inputsystem from version 1.11.2 to 1.13.0
+  com.unity.test-framework from version 1.4.5 to 1.4.6
