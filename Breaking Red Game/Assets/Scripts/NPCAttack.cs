@@ -9,7 +9,7 @@ public class NPCAttack : MonoBehaviour
 	public float stunTime = 1;
 	public LayerMask playerLayer;
 
-/*
+
 	//This function is useful for enemies or objects that deal damage on touch.
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
@@ -18,7 +18,7 @@ public class NPCAttack : MonoBehaviour
 			collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-damage);
 		}
 	}
-*/
+
 
 	//Check if the player is in attack range by checking the player layer.
 	//If something is found, the hits array is > 0, and damage and knockback are dealt.
