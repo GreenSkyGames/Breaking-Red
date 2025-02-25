@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 59ea8696d201cf2418ca44db9a3491ad
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 218266
+  packageName: Free Dreamy Ambient Music Pack
+  packageVersion: 1.0
+  assetPath: Assets/AmbientMusicByMtBerkoo/AmbientPack_UnderwaterCliff_by_MtBerkoo/Mt.
+    Berkoo - Full Void.wav
+  uploadId: 492792
