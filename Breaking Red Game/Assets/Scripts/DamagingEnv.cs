@@ -10,4 +10,11 @@ public class DamagingEnv : MonoBehaviour
             collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-damage);
         }
     }
+
+    public void death()
+    {
+        Debug.Log("Player died moving over an edge!");
+        Application.Quit();//quitting the game 
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
 }

@@ -1,25 +1,36 @@
+// Liz Beltran 
+// Puase menu script 
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
+using UnityEngine.InputSystem; 
+//using System.Collections; 
+using System.Collections.Generic; // 
 
 public class PauseGameMenu : MonoBehaviour
-{
+{  
     public static bool isPaused = false; 
+    // public GameObject pauseMenuUI; 
     public GameObject PauseMenu; // pause menu object to be connected with script 
+    public GameObject ResumeButton; 
+    public GameObject MenuButton; 
 
-    void Start()
-    {
-        PauseMenu.SetActive(false); // Ensure the pause menu is not visible at start
-        LoadGame(); // Load game state if there is any saved data at the start
+    void Start(){
+        if (SceneManager.GetActiveScene().name == "PauseMenu")
+        {
+            PauseMenu.SetActive(true);  // Show menu in PauseMenu scene
+        }
+        else
+        {
+            PauseMenu.SetActive(false); // Hide menu in other scenes
+        }
+        LoadGame();
     }
-
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (isPaused)
+        if(Input.GetKeyDown(KeyCode.P)){
+            if(isPaused)
             {
                 ResumeGame(); 
             }
@@ -30,37 +41,19 @@ public class PauseGameMenu : MonoBehaviour
         } 
     }
 
-    public void ResumeGame()
-{
-    PauseMenu.SetActive(false); // Hides the pause menu
-    Time.timeScale = 1f; // Resumes normal time flow
-    isPaused = false; // Updates the paused state
-    Debug.Log("Game Resumed"); // Optional: for debugging
-}
-
-
-    void PauseGame()
-    {
-        PauseMenu.SetActive(true);
-        Time.timeScale = 0f; // pausing the game 
-        isPaused = true;
+    public void ResumeGame(){
+        PauseMenu.SetActive(false); //pause menu goes away 
+        Time.timeScale=1f; // resuming the game
+        isPaused = false; //game is not paused
+        //SceneManager.LoadScene("Level 1");
     }
 
-    public void LoadMenu()
-    {
-        Debug.Log("Loading menu.");
-        SceneManager.LoadScene("Start Menu");
+    void PauseGame(){
+        PauseMenu.SetActive(true); //pause menu called 
+        Time.timeScale=0f; // pausing the game 
+        isPaused = true; //game is paused
+        //SceneManager.LoadScene("PauseMenu");
     }
-
-    public void QuitGame()
-    {
-        Debug.Log("Quitting game.");
-        Application.Quit();
-        #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false; // Uncomment this line if testing in the Unity Editor
-        #endif
-    }
-
     public void SaveGame()
     {
         // Assume that you're saving player's position
@@ -106,4 +99,15 @@ public class PauseGameMenu : MonoBehaviour
             Debug.Log("No save data to load.");
         }
     }
+
+    public void LoadMenu(){
+        Debug.Log("Loading menu.");
+        SceneManager.LoadScene("Start Menu");
+    }
+    public void QuitGame(){
+        Debug.Log("Quitting game."); 
+        Application.Quit();//quitting the game 
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
+
 }
