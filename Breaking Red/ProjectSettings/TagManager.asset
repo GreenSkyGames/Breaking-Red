@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - TheWolf
   - PoisonApple
+  - L1
+  - L2
   layers:
   - Default
   - TransparentFX
