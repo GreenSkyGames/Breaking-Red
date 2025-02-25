@@ -150,6 +150,7 @@ public class NPCMovement : MonoBehaviour
 }
 
 //Set up an enum to handle the different enemy animation states.
+/*
 public enum EnemyState
 {
 	Idle,
@@ -158,3 +159,4 @@ public enum EnemyState
 	Knockback,
 	Dialogue,
 }
+*/

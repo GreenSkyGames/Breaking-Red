@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 	public LayerMask enemyLayer;
 	public Transform ActivatePoint;
 
+    public float health = 100.0f;
 
 	private void Update()
 	{
