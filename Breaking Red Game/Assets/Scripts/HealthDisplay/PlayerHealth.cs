@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         currentHealth += amount;
+        Debug.Log("Health " + currentHealth);
 
         if (currentHealth <= 0)
         {
@@ -29,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 playerMovement.enabled = false; //disable the player controller script
             }
+            UnityEditor.EditorApplication.isPlaying = false;
 
             // Optionally, you might want to add other game over logic here,
             // such as displaying a game over screen, triggering events, etc.
