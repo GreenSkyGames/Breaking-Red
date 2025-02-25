@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Breaking Red.sln"
+    "dotnet.defaultSolution": "Breaking Red Game.sln"
 }
