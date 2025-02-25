@@ -17,14 +17,24 @@ public class PauseGameMenu : MonoBehaviour
     public GameObject MenuButton; 
 
     void Start(){
-        PauseMenu.SetActive(false); 
+        if (SceneManager.GetActiveScene().name == "PauseMenu")
+        {
+            PauseMenu.SetActive(true);  // Show menu in PauseMenu scene
+        }
+        else
+        {
+            PauseMenu.SetActive(false); // Hide menu in other scenes
+        }
     }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.P)){
-            if(isPaused){
+            if(isPaused)
+            {
                 ResumeGame(); 
-            }else{
+            }
+            else
+            {
                 PauseGame(); 
             }
         } 
@@ -33,21 +43,25 @@ public class PauseGameMenu : MonoBehaviour
     public void ResumeGame(){
         PauseMenu.SetActive(false); //pause menu goes away 
         Time.timeScale=1f; // resuming the game
-        isPaused = false; //game is not paused 
+        isPaused = false; //game is not paused
+        //SceneManager.LoadScene("Level 1");
     }
 
     void PauseGame(){
         PauseMenu.SetActive(true); //pause menu called 
         Time.timeScale=0f; // pausing the game 
-        isPaused = true; //game is paused 
+        isPaused = true; //game is paused
+        //SceneManager.LoadScene("PauseMenu");
     }
 
     public void LoadMenu(){
-        Debug.Log("Loading menu."); 
+        Debug.Log("Loading menu.");
+        SceneManager.LoadScene("Start Menu");
     }
     public void QuitGame(){
         Debug.Log("Quitting game."); 
         Application.Quit();//quitting the game 
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 
 } //end class 
