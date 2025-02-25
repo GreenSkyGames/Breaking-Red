@@ -1,21 +1,22 @@
 // Liz Beltran 
 // Puase menu script 
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using UnityEngine.InputSystem; 
-//using System.Collections; 
-using System.Collections.Generic; // 
+using UnityEngine.InputSystem;
 
 public class PauseGameMenu : MonoBehaviour
-{  
-    public static bool isPaused = false; 
-    // public GameObject pauseMenuUI; 
-    public GameObject PauseMenu; // pause menu object to be connected with script 
-    public GameObject ResumeButton; 
-    public GameObject MenuButton; 
+{
+    public GameObject PauseMenu;
+    public GameObject ResumeButton;
+    public GameObject MenuButton;
+    public GameObject Quitbutton;
 
+    private int ButtonSelect;
+    private float _select;
+    public static bool isPaused; //make global variable so no other inputs during pause
     void Start(){
         if (SceneManager.GetActiveScene().name == "PauseMenu")
         {
@@ -37,7 +38,31 @@ public class PauseGameMenu : MonoBehaviour
             {
                 PauseGame(); 
             }
-        } 
+            if(_select == 1)
+            {
+                if(ButtonSelect == 1)
+                {
+                    EventSystem.current.SetSelectedGameObject(Quitbutton);
+                    ButtonSelect = 3;
+                }
+                else if(ButtonSelect == 2)
+                {
+                    EventSystem.current.SetSelectedGameObject(ResumeButton);
+                    ButtonSelect = 1;
+                }
+                else if(ButtonSelect == 3)
+                {
+                    EventSystem.current.SetSelectedGameObject(MenuButton);
+                    ButtonSelect = 2;
+                }
+            }
+            
+            if(isPaused){
+                resumeGame();
+            }else{
+                pauseGame();
+            }
+        }
     }
 
     public void ResumeGame(){
@@ -64,4 +89,7 @@ public class PauseGameMenu : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
     }
 
-} //end class 
+    public void quitGame(){
+        Application.Quit();
+    }
+}
