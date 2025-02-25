@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 3490455145668807390}
   - component: {fileID: 691563667995140870}
   - component: {fileID: 1078054167276414150}
-  - component: {fileID: 238265388853472347}
+  - component: {fileID: 348356797252426832}
   m_Layer: 7
   m_Name: PurpleTorchEnemy
   m_TagString: Enemy
@@ -299,7 +299,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &238265388853472347
+--- !u!114 &348356797252426832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -308,15 +308,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4868536043419205611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228d2630b7fd9de4a99a8d97a62af43d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
   attackRange: 1
   attackCooldown: 1
   playerDetectRange: 5
-  DetectionPoint: {fileID: 6769459427701160004}
+  DetectionPoint: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   myCanvas: {fileID: 0}

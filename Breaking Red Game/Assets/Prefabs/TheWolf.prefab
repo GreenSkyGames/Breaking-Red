@@ -76,8 +76,8 @@ GameObject:
   - component: {fileID: 8086228100989377878}
   - component: {fileID: 998717416765251416}
   - component: {fileID: 5272995025209110295}
-  - component: {fileID: 6885050428720429908}
   - component: {fileID: 5372717892491288868}
+  - component: {fileID: 4460684304078704880}
   m_Layer: 7
   m_Name: TheWolf
   m_TagString: TheWolf
@@ -279,27 +279,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.00042026184, y: -0.013866414}
   m_Radius: 0.029544083
---- !u!114 &6885050428720429908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7729365132012887990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228d2630b7fd9de4a99a8d97a62af43d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  attackRange: 1
-  attackCooldown: 1
-  playerDetectRange: 5
-  DetectionPoint: {fileID: 3572575336149032000}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  myCanvas: {fileID: 0}
 --- !u!114 &5372717892491288868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,3 +299,24 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &4460684304078704880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729365132012887990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  attackRange: 1
+  attackCooldown: 1
+  playerDetectRange: 5
+  DetectionPoint: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  myCanvas: {fileID: 0}
