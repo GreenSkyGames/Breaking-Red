@@ -1,29 +1,29 @@
 Using pre-set license
 Built from '6000.0/staging' branch; Version is '6000.0.38f1 (82314a941f2d) revision 8532298'; Using compiler version '193933523'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16178 MB
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 30413 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-D:\Unity\Hub\6000.0.38f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\6000.0.38f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker3
 -projectPath
-F:/25-1_Spr/CS383 Software Engineering by Dr. BC/Main Team/Breaking-Red/Breaking Red Game
+C:/Breaking Red Game
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-52261
+63699
 -job-worker-count
-3
+11
 -background-job-worker-count
 8
 -gc-helper-count
 1
-Successfully changed project path to: F:/25-1_Spr/CS383 Software Engineering by Dr. BC/Main Team/Breaking-Red/Breaking Red Game
-F:/25-1_Spr/CS383 Software Engineering by Dr. BC/Main Team/Breaking-Red/Breaking Red Game
+Successfully changed project path to: C:/Breaking Red Game
+C:/Breaking Red Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -59,13 +59,15 @@ F:/25-1_Spr/CS383 Software Engineering by Dr. BC/Main Team/Breaking-Red/Breaking
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [27400]  Target information:
+Player connection [37360]  Target information:
 
-Player connection [27400]  * "[IP] 172.20.3.223 [Port] 0 [Flags] 2 [Guid] 2205407084 [EditorId] 2205407084 [Version] 1048832 [Id] WindowsEditor(7,Spectrum0112358) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [37360]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 706043913 [EditorId] 706043913 [Version] 1048832 [Id] WindowsEditor(7,X-Blue21) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [27400] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [27400] Host joined alternative multi-casting on [225.0.0.222:34997]...
-JobSystem: Creating JobQueue using job-worker-count value 3
+Player connection [37360]  * "[IP] 172.29.220.54 [Port] 0 [Flags] 2 [Guid] 706043913 [EditorId] 706043913 [Version] 1048832 [Id] WindowsEditor(7,X-Blue21) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [37360] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [37360] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 11
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
@@ -76,59 +78,59 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 636.34 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 3.37 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.38f1 (82314a941f2d)
-[Subsystems] Discovering subsystems at path D:/Unity/Hub/6000.0.38f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path F:/25-1_Spr/CS383 Software Engineering by Dr. BC/Main Team/Breaking-Red/Breaking Red Game/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Breaking Red Game/Assets
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics 620 (ID=0x3ea0)
-    Vendor:   Intel
-    VRAM:     8089 MB
-    Driver:   25.20.100.6519
+    Renderer: NVIDIA GeForce RTX 4060 Laptop GPU (ID=0x28a0)
+    Vendor:   NVIDIA
+    VRAM:     7957 MB
+    Driver:   32.0.15.6119
 Initialize mono
-Mono path[0] = 'D:/Unity/Hub/6000.0.38f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Unity/Hub/6000.0.38f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'D:/Unity/Hub/6000.0.38f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56552
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56372
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Unity/Hub/6000.0.38f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.830452 seconds.
-- Loaded All Assemblies, in 20.527 seconds
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003957 seconds.
+- Loaded All Assemblies, in  0.523 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.920 seconds
-Domain Reload Profiling: 22446ms
-	BeginReloadAssembly (15811ms)
+- Finished resetting the current domain, in  0.549 seconds
+Domain Reload Profiling: 1069ms
+	BeginReloadAssembly (197ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (849ms)
-	RebuildNativeTypeToScriptingClass (40ms)
-	initialDomainReloadingComplete (973ms)
-	LoadAllAssembliesAndSetupDomain (2853ms)
-		LoadAssemblies (15810ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (52ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (69ms)
+	LoadAllAssembliesAndSetupDomain (186ms)
+		LoadAssemblies (192ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (2845ms)
-			TypeCache.Refresh (2842ms)
-				TypeCache.ScanAssembly (2293ms)
+		AnalyzeDomain (182ms)
+			TypeCache.Refresh (180ms)
+				TypeCache.ScanAssembly (160ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1921ms)
+	FinalizeReload (549ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1812ms)
+		SetupLoadedEditorAssemblies (481ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (49ms)
-			SetLoadedEditorAssemblies (9ms)
-			BeforeProcessingInitializeOnLoad (143ms)
-			ProcessInitializeOnLoadAttributes (702ms)
-			ProcessInitializeOnLoadMethodAttributes (908ms)
+			InitializePlatformSupportModulesInManaged (47ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (83ms)
+			ProcessInitializeOnLoadAttributes (260ms)
+			ProcessInitializeOnLoadMethodAttributes (86ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -140,11 +142,11 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in 21.886 seconds
+- Loaded All Assemblies, in  0.890 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 4.75 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.86 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Package Manager log level set to [2]
@@ -152,456 +154,166 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  5.407 seconds
-Domain Reload Profiling: 27290ms
-	BeginReloadAssembly (628ms)
+- Finished resetting the current domain, in  1.022 seconds
+Domain Reload Profiling: 1907ms
+	BeginReloadAssembly (161ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (15ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (111ms)
-	RebuildCommonClasses (115ms)
-	RebuildNativeTypeToScriptingClass (40ms)
-	initialDomainReloadingComplete (91ms)
-	LoadAllAssembliesAndSetupDomain (21009ms)
-		LoadAssemblies (19685ms)
+		CreateAndSetChildDomain (26ms)
+	RebuildCommonClasses (43ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (605ms)
+		LoadAssemblies (435ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1715ms)
-			TypeCache.Refresh (1374ms)
-				TypeCache.ScanAssembly (1247ms)
-			BuildScriptInfoCaches (302ms)
-			ResolveRequiredComponents (32ms)
-	FinalizeReload (5408ms)
+		AnalyzeDomain (269ms)
+			TypeCache.Refresh (197ms)
+				TypeCache.ScanAssembly (181ms)
+			BuildScriptInfoCaches (58ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1023ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (4012ms)
+		SetupLoadedEditorAssemblies (816ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (15ms)
-			BeforeProcessingInitializeOnLoad (730ms)
-			ProcessInitializeOnLoadAttributes (2786ms)
-			ProcessInitializeOnLoadMethodAttributes (463ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (133ms)
+			ProcessInitializeOnLoadAttributes (552ms)
+			ProcessInitializeOnLoadMethodAttributes (120ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (25ms)
-database is locked
-database is locked
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 5.55 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 1.74 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 222 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7001 unused Assets / (5.0 MB). Loaded Objects now: 7714.
-Memory consumption went from 176.4 MB to 171.5 MB.
-Total: 25.950500 ms (FindLiveObjects: 1.919900 ms CreateObjectMapping: 2.969400 ms MarkObjects: 15.494100 ms  DeleteObjects: 5.565000 ms)
+Unloading 7008 unused Assets / (4.2 MB). Loaded Objects now: 7722.
+Memory consumption went from 183.2 MB to 179.0 MB.
+Total: 10.481700 ms (FindLiveObjects: 0.697900 ms CreateObjectMapping: 0.663100 ms MarkObjects: 6.634200 ms  DeleteObjects: 2.485300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 711419.210908 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Jog_3.wav
-  artifactKey: Guid(bbcb4b3bf38060449a80a30190bf748b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Jog_3.wav using Guid(bbcb4b3bf38060449a80a30190bf748b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e1c1a4f62457b790e023d8c8c0b21dc3') in 0.456716 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 549511.852821 seconds.
+  path: Assets/Sprites/Grass Tiles/tileset_30.asset
+  artifactKey: Guid(83f9c5859541d104696d17cce5412881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Grass Tiles/tileset_30.asset using Guid(83f9c5859541d104696d17cce5412881) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '04b06cc6368953694912a3deabcbf13c') in 0.0816464 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000065 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Jog_Stop_1.wav
-  artifactKey: Guid(73b24e21eb97d1a48a6117a4a6fc6c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Jog_Stop_1.wav using Guid(73b24e21eb97d1a48a6117a4a6fc6c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1d9ee6f64d0e9b1562bde23974261dfe') in 0.037412 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.044048 seconds.
+  path: Assets/Sprites/Grass Tiles/tileset_37.asset
+  artifactKey: Guid(094149fc047fb0c4e926a6e5899fefc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Grass Tiles/tileset_37.asset using Guid(094149fc047fb0c4e926a6e5899fefc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c806da2bfa3e7eb381f6019da2cef1d7') in 0.0031685 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Jog_6.wav
-  artifactKey: Guid(8d6e75bcb826a524e9b7044c9b4da07d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Jog_6.wav using Guid(8d6e75bcb826a524e9b7044c9b4da07d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7f0031182631c14a61c81ab2b963fc16') in 0.0442028 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprites/Grass Tiles/tileset_42.asset
+  artifactKey: Guid(80ac20ee9c8003044bcde02556bec224) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Grass Tiles/tileset_42.asset using Guid(80ac20ee9c8003044bcde02556bec224) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8dfc42ff400dff07ac562c184b827435') in 0.0038693 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Land_4.wav
-  artifactKey: Guid(6927ab4436534244f8421c9a209a27a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Land_4.wav using Guid(6927ab4436534244f8421c9a209a27a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '76d39fde11a80610fcd48daa032d9dff') in 0.0537819 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprites/Grass Tiles/tileset_43.asset
+  artifactKey: Guid(b5767f30897e3ce4faa6dbd60bb2b1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Grass Tiles/tileset_43.asset using Guid(b5767f30897e3ce4faa6dbd60bb2b1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6d3faaa1c9c327af493e30e568588f78') in 0.0037396 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000074 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Jog_5.wav
-  artifactKey: Guid(783f08c73b9fc974b8d5384753f806e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Jog_5.wav using Guid(783f08c73b9fc974b8d5384753f806e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dea3e13d17cde75af4b9102812562c85') in 0.0419136 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Jog_Stop_2.wav
-  artifactKey: Guid(3039c6e07ac96a9428ce11fc47633e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Jog_Stop_2.wav using Guid(3039c6e07ac96a9428ce11fc47633e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '77788f262e9a88ff35983291fca3b62c') in 0.0389762 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.753945 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Jog_3.wav
-  artifactKey: Guid(30f9843e129ddec41aa6eac506f4deb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Jog_3.wav using Guid(30f9843e129ddec41aa6eac506f4deb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9b0851120997d3195ed0a86ebb2d8191') in 0.0336303 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Jog_5.wav
-  artifactKey: Guid(49a9fe41886b48c409635d1803bf5ea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Jog_5.wav using Guid(49a9fe41886b48c409635d1803bf5ea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6171418bda7757b41b5d9dda6284ac5b') in 0.0403401 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_2.wav
-  artifactKey: Guid(5dd16498c25b9614fb95f24b15105873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_2.wav using Guid(5dd16498c25b9614fb95f24b15105873) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2b80b9f36f3216cd9553b18ea8e79697') in 0.0447558 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_4.wav
-  artifactKey: Guid(eac6d6b43daab554198ce80b7734ee8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_4.wav using Guid(eac6d6b43daab554198ce80b7734ee8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '31dc7e2dca57bfc51c642c3b25dd0d62') in 0.0461505 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_1.wav
-  artifactKey: Guid(861964416fdd5374b8f733b1ad47728e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_1.wav using Guid(861964416fdd5374b8f733b1ad47728e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e5111f9d01f4db2ddb5fb4d091ab02d0') in 0.0374663 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_3.wav
-  artifactKey: Guid(f321fcbd37d3a3e4aa483c1bb77d8cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_3.wav using Guid(f321fcbd37d3a3e4aa483c1bb77d8cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0759b00fdd9337523529bc0a8544729e') in 0.0440391 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_Stop_1.wav
-  artifactKey: Guid(f7c5f1833d32b3543bdbc0c974bae562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_Stop_1.wav using Guid(f7c5f1833d32b3543bdbc0c974bae562) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cd93e639ff3ec8107230194bb2f28414') in 0.0433603 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_4.wav
-  artifactKey: Guid(89f216867a6804a4e8d05a9c5e1f1f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_4.wav using Guid(89f216867a6804a4e8d05a9c5e1f1f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b9af16ba8a9aaf249552c9362c66b08b') in 0.036023 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Jog_Stop_1.wav
-  artifactKey: Guid(32eab752851dc3a42a14dfc06637bfbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Jog_Stop_1.wav using Guid(32eab752851dc3a42a14dfc06637bfbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ce617472c7f5ea20beba0cb4817342a9') in 0.046232 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_Stop_4.wav
-  artifactKey: Guid(c0cae0a9752ce4844acb7a1788958f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_Stop_4.wav using Guid(c0cae0a9752ce4844acb7a1788958f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9945cf9eabf663ef5852415e3e4ea205') in 0.050724 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_Stop_2.wav
-  artifactKey: Guid(cd6f6c4e99df4514183c3385be3cdf59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_Stop_2.wav using Guid(cd6f6c4e99df4514183c3385be3cdf59) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f74ac056792812b7679a5f778f3c6f95') in 0.0433136 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Walk_Stop_4.wav
-  artifactKey: Guid(bd277a1a2d432694199e0005a2086d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Walk_Stop_4.wav using Guid(bd277a1a2d432694199e0005a2086d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '127d7e4c5a8d5f019ad6d9f27f6cd177') in 0.0636939 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000086 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Jog_Stop_2.wav
-  artifactKey: Guid(13727d141a3ceee43a3bdd7d4bac27f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Jog_Stop_2.wav using Guid(13727d141a3ceee43a3bdd7d4bac27f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4e2d4bdaf7b85f5c965345760a262dde') in 0.0475394 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Walk_Stop_2.wav
-  artifactKey: Guid(3a8412d504d45c2498f73764e918142d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Walk_Stop_2.wav using Guid(3a8412d504d45c2498f73764e918142d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dbbcc3d97956950585a2b4aaac2f9ef4') in 0.06254 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_5.wav
-  artifactKey: Guid(eb2e0504818817341bf12d11550cfabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_5.wav using Guid(eb2e0504818817341bf12d11550cfabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '27e37ea7eb117264825020f8bc0d4f2c') in 0.050465 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_8.wav
-  artifactKey: Guid(dbbc254ba2df36b48bc529ac0c624cb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_8.wav using Guid(dbbc254ba2df36b48bc529ac0c624cb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a503f6b14dc0c06c851c175aadec576c') in 0.0572142 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_6.wav
-  artifactKey: Guid(175738ea3b49f334bbae0d50e2e8bd16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Walk_6.wav using Guid(175738ea3b49f334bbae0d50e2e8bd16) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5b6edcca85129cdcc9569c585af4c900') in 0.0384139 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000064 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Jump_4.wav
-  artifactKey: Guid(4587ed2a84794c047b06f5cffb84db95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Jump_4.wav using Guid(4587ed2a84794c047b06f5cffb84db95) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5a4635ed7d6e6457f885b83a5ce1e3c9') in 0.0367848 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_7.wav
-  artifactKey: Guid(2fbaf04f7ae643c49ad97a6b7d78cc83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_7.wav using Guid(2fbaf04f7ae643c49ad97a6b7d78cc83) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b8f934d67cdeaecf4927c60c1b90f4d3') in 0.0288422 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Run_4.wav
-  artifactKey: Guid(341c73328a3ef7e4cb6b674b056288bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Snow/Footstep_Snow_Run_4.wav using Guid(341c73328a3ef7e4cb6b674b056288bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cd6c28671db863cd4b6b9d414d16d96d') in 0.0279393 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 36.639688 seconds.
+  path: Assets/Sprites/Above Ground Tiles/House_Red_3.asset
+  artifactKey: Guid(49ff30967a41d74498d46e282e60f946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Above Ground Tiles/House_Red_3.asset using Guid(49ff30967a41d74498d46e282e60f946) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '430d71532c195876b9957aaf31cb9e60') in 0.0911883 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000025 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Walk_7.wav
-  artifactKey: Guid(2cc47630e02348d4b8c7d469e94a8e63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Walk_7.wav using Guid(2cc47630e02348d4b8c7d469e94a8e63) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '928d28d1412f5e55502a7ba17ef836d2') in 0.0314062 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_Stop_3.wav
-  artifactKey: Guid(1ec7b1f22a9b9b14787a0248ac4d75b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Slush/Footstep_Slush_Boots_Run_Stop_3.wav using Guid(1ec7b1f22a9b9b14787a0248ac4d75b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '88e4399b75ea59bfb755a3e09bfa1734') in 0.0329717 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.465314 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Jog_3.wav
-  artifactKey: Guid(956d1f46ea5d5874d8cc89e87f07791f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Jog_3.wav using Guid(956d1f46ea5d5874d8cc89e87f07791f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca93351c2ff5de49f49c683a02c56264') in 0.0496715 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000091 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Jump_3.wav
-  artifactKey: Guid(61cbaed9d0110a2498d6822a5fc22153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Jump_3.wav using Guid(61cbaed9d0110a2498d6822a5fc22153) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '557abe8c8bd70283b80b49b1b15bf6f4') in 0.041855 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Run_Stop_3.wav
-  artifactKey: Guid(bc7a32c42e951fa44918f5d3f4699f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Run_Stop_3.wav using Guid(bc7a32c42e951fa44918f5d3f4699f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ed1668d1998e37af00c36c0197911b1a') in 0.0481705 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Walk_6.wav
-  artifactKey: Guid(4e66f1ee9fe61844587c15ff940bed27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Walk_6.wav using Guid(4e66f1ee9fe61844587c15ff940bed27) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2d91835c43f0d5491dd3eb8c869c60ab') in 0.0361436 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Run_Stop_4.wav
-  artifactKey: Guid(26e15d9452a3b124294c9103b188ce86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Run_Stop_4.wav using Guid(26e15d9452a3b124294c9103b188ce86) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bd2730dedfa76586b0bc34ba36fbb165') in 0.0391901 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Jog_Stop_4.wav
-  artifactKey: Guid(05a6e1f74cfa9024c94b9ec5e49b7dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Jog_Stop_4.wav using Guid(05a6e1f74cfa9024c94b9ec5e49b7dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8e30ad8736ec62fe80b26cec1fb46e94') in 0.0333737 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Run_7.wav
-  artifactKey: Guid(a7b33997f21bef347a0c60fbc83c9710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Run_7.wav using Guid(a7b33997f21bef347a0c60fbc83c9710) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aa1e85db0c3aa3d17ab05657fa6ac000') in 0.0278205 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Walk_8.wav
-  artifactKey: Guid(d0340060652876d459d9244d94b29294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Walk_8.wav using Guid(d0340060652876d459d9244d94b29294) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2283c70c45e540aa9d908c171742eb74') in 0.0287799 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Land_2.wav
-  artifactKey: Guid(adbf34159c62c09449c2d4c708a2be4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Land_2.wav using Guid(adbf34159c62c09449c2d4c708a2be4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '01e7510c178227fb79cf36f028ebb7c1') in 0.0290307 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  path: Assets/Sprites/Above Ground Tiles/Tree_17.asset
+  artifactKey: Guid(d7fdf0aa9904d2b42817530e8a03015a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Above Ground Tiles/Tree_17.asset using Guid(d7fdf0aa9904d2b42817530e8a03015a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c6df589d9a13f805a5f8bb228344b8d9') in 0.0254682 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000040 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Walk_4.wav
-  artifactKey: Guid(8e4901aa588e0e746b50b6cedcd9901c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Walk_4.wav using Guid(8e4901aa588e0e746b50b6cedcd9901c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c4af2d22779f3ec583e88c8b0da3f47f') in 0.0270162 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  path: Assets/Sprites/Above Ground Tiles/Tree_2.asset
+  artifactKey: Guid(3ca6e42e0ce057e478b3ed7ce05722bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Above Ground Tiles/Tree_2.asset using Guid(3ca6e42e0ce057e478b3ed7ce05722bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2907480c9f46b5a3d2ef79a195376b2d') in 0.0110276 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Walk_Stop_4.wav
-  artifactKey: Guid(5a66a5711f562d94297dec06c69f9ac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Metal/Footstep_Metal_Boots_Walk_Stop_4.wav using Guid(5a66a5711f562d94297dec06c69f9ac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2d0cd9945b4d43db3e73c7ed3c1d8922') in 0.0301697 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Above Ground Tiles/Tree_30.asset
+  artifactKey: Guid(2874654ea69819f489fa4aaf7d717150) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Above Ground Tiles/Tree_30.asset using Guid(2874654ea69819f489fa4aaf7d717150) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '312f32f0925e61e7072e476fea1a73eb') in 0.0310161 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.904126 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Run_6.wav
-  artifactKey: Guid(0d4f245dd649abe4885714436e4c2e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Run_6.wav using Guid(0d4f245dd649abe4885714436e4c2e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cd367333b9fbd16522539914e36b5f1d') in 0.0489259 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Above Ground Tiles/Tree_29.asset
+  artifactKey: Guid(7a9ff8d7ea1e56445baee22811f76773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Above Ground Tiles/Tree_29.asset using Guid(7a9ff8d7ea1e56445baee22811f76773) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a6cdbb3e55df4fcaeea4aa8b36c0c4b0') in 0.0285879 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Walk_Stop_4.wav
-  artifactKey: Guid(be6804367720f9c4ab78eceaec55cbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Walk_Stop_4.wav using Guid(be6804367720f9c4ab78eceaec55cbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e56b055a7cadecff7538077bc4a66bf7') in 0.066803 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Above Ground Tiles/Tree_21.asset
+  artifactKey: Guid(cb5b70931770bd54cbf724c67ce683b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Above Ground Tiles/Tree_21.asset using Guid(cb5b70931770bd54cbf724c67ce683b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '78828cc8b261b00de29171b967c7753b') in 0.0242536 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Walk_5.wav
-  artifactKey: Guid(ede73c846579fa14c949c2f864bd30bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Walk_5.wav using Guid(ede73c846579fa14c949c2f864bd30bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2b62312dbf3b86a5365343f484487c91') in 0.0411402 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Above Ground Tiles/Tree_20.asset
+  artifactKey: Guid(f34e1cc93d93afb4488705be9d4c7edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Above Ground Tiles/Tree_20.asset using Guid(f34e1cc93d93afb4488705be9d4c7edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '108bdf142dced2bebec5187576ad589d') in 0.0244347 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Walk_2.wav
-  artifactKey: Guid(c91151a764be3ca42903454ac5894216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Walk_2.wav using Guid(c91151a764be3ca42903454ac5894216) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '69cf6aa51524ece54d34d5ccf4b7b156') in 0.0526106 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000034 seconds.
+  path: Assets/Sprites/Above Ground Tiles/Tree_26.asset
+  artifactKey: Guid(3c4643695dd46e44d99c54b7a03c8b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Above Ground Tiles/Tree_26.asset using Guid(3c4643695dd46e44d99c54b7a03c8b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a50f3b1d4e02d0921f1e219e837ab777') in 0.0307861 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Walk_Stop_2.wav
-  artifactKey: Guid(b58d072de7ec08544b4d955ff71896b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Gravel/Footstep_Gravel_Boots_Walk_Stop_2.wav using Guid(b58d072de7ec08544b4d955ff71896b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '86efb46f4a30c6b65c332d72c03ce400') in 0.0450817 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 2.493508 seconds.
+  path: Assets/Sprites/Above Ground Tiles/Tree_40.asset
+  artifactKey: Guid(dbd4c32a1d022ab4aae514863d238f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Above Ground Tiles/Tree_40.asset using Guid(dbd4c32a1d022ab4aae514863d238f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '65f675d9004db30e001499dddc3af829') in 0.0299543 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.570106 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Jog_4.wav
-  artifactKey: Guid(f75d77063458ec247b32314f805cbfc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Jog_4.wav using Guid(f75d77063458ec247b32314f805cbfc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b06f4e25455b4976521ae3d24d69ec60') in 0.0382123 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 35.255549 seconds.
+  path: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/HexagonPointTop.png
+  artifactKey: Guid(5aa8b770bc43046bc8d993d0d5b7f4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/v2/HexagonPointTop.png using Guid(5aa8b770bc43046bc8d993d0d5b7f4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6bf595940bf15de28917ba072ec3ecca') in 0.0678973 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Run_3.wav
-  artifactKey: Guid(c15423c4643d8b2459416e63f9825c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Run_3.wav using Guid(c15423c4643d8b2459416e63f9825c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '36f63b3f61812a95bf8e606751572ab1') in 0.0509123 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000109 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Jump_4.wav
-  artifactKey: Guid(1b2582afb48555346bdcd3daaf8d6a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Jump_4.wav using Guid(1b2582afb48555346bdcd3daaf8d6a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c8a9b25be4693a2d86793ea2d874b937') in 0.0461773 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Jump_2.wav
-  artifactKey: Guid(5099f647f640052408fec523fccbc86f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Jump_2.wav using Guid(5099f647f640052408fec523fccbc86f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c8f4dc3d5525e4df62d37d413b8ea916') in 0.0424577 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Jog_Stop_2.wav
-  artifactKey: Guid(32713b5028fb95e4e8b49a4d21eca63c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Jog_Stop_2.wav using Guid(32713b5028fb95e4e8b49a4d21eca63c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e2a009d75b8e169baf09a4476d9bb8f5') in 0.0646782 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000075 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Run_Stop_1.wav
-  artifactKey: Guid(643688ad54116994fb3c666fa9333299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Run_Stop_1.wav using Guid(643688ad54116994fb3c666fa9333299) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fca9b8055e8d8f5ea2b9d9580a295921') in 0.0302424 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Run_5.wav
-  artifactKey: Guid(8beafa29f963a014aac0ed159ae5b800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Essential_Footsteps_SFX_SoundKajiya/Leaves/Footstep_FootstepLeaves_Boots_Run_5.wav using Guid(8beafa29f963a014aac0ed159ae5b800) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '778a9adf54147dc9050b11b113e52341') in 0.0308271 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 2.443399 seconds.
+  path: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Square.png
+  artifactKey: Guid(48e93eef0688c4a259cb0eddcd8661f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Square.png using Guid(48e93eef0688c4a259cb0eddcd8661f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '778fb8649beebc683333006303526a6e') in 0.0127412 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server

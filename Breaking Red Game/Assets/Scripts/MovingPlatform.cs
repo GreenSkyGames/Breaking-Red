@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class MovingPlatform : terrainObjects
 {
@@ -14,6 +15,8 @@ public class MovingPlatform : terrainObjects
     private Vector2 _prevPos;
 
     private Rigidbody2D _playerRigidbody;
+
+    [SerializeField] private TilemapRenderer tilemapRenderer;
 
     void Start()
     {
@@ -46,23 +49,37 @@ public class MovingPlatform : terrainObjects
     }
 
     // Detect when the player steps onto the platform
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.collider.CompareTag("Player"))
+        Debug.Log("InCollider");
+        if (collider.CompareTag("Player"))
         {
-            _playerRigidbody = collision.collider.GetComponent<Rigidbody2D>();
+            Debug.Log("Yes");
+            _playerRigidbody = collider.GetComponent<Rigidbody2D>();
+        }
+
+        if (tilemapRenderer != null)
+        {
+            tilemapRenderer.enabled = false; // Hide the tilemap layer
         }
     }
 
     // Detect when the player leaves the platform
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collider)
     {
-        if (collision.collider.CompareTag("Player"))
+        Debug.Log("OffCollider");
+        if (collider.CompareTag("Player"))
         {
-            if (collision.collider.GetComponent<Rigidbody2D>() == _playerRigidbody)
+            Debug.Log("No");
+            if (collider.GetComponent<Rigidbody2D>() == _playerRigidbody)
             {
                 _playerRigidbody = null;
             }
+        }
+
+        if (tilemapRenderer != null)
+        {
+            tilemapRenderer.enabled = false; // Show the tilemap layer
         }
     }
 }
