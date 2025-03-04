@@ -16,7 +16,7 @@ public class MovingPlatform : terrainObjects
 
     private Rigidbody2D _playerRigidbody;
 
-    [SerializeField] private TilemapRenderer tilemapRenderer;
+    [SerializeField] private Tilemap tilemap;
 
     void Start()
     {
@@ -40,9 +40,10 @@ public class MovingPlatform : terrainObjects
 
         if (_playerRigidbody != null)
         {
-            Vector2 playerVel = _playerRigidbody.linearVelocity;
+            /*Vector2 playerVel = _playerRigidbody.linearVelocity;
             playerVel.x = platformVelocity.x;
-            _playerRigidbody.linearVelocity = playerVel;
+            _playerRigidbody.linearVelocity = playerVel;*/
+            _playerRigidbody.position += platformVelocity * Time.deltaTime;
         }
 
         _prevPos = currentPosition; // Update the previous position
@@ -51,35 +52,33 @@ public class MovingPlatform : terrainObjects
     // Detect when the player steps onto the platform
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("InCollider");
         if (collider.CompareTag("Player"))
         {
-            Debug.Log("Yes");
             _playerRigidbody = collider.GetComponent<Rigidbody2D>();
+            if (tilemap != null && tilemap.gameObject.activeSelf)
+            {
+                tilemap.gameObject.SetActive(false); // Hide the tilemap layer
+            }
         }
 
-        if (tilemapRenderer != null)
-        {
-            tilemapRenderer.enabled = false; // Hide the tilemap layer
-        }
+        
     }
 
     // Detect when the player leaves the platform
     private void OnTriggerExit2D(Collider2D collider)
     {
-        Debug.Log("OffCollider");
         if (collider.CompareTag("Player"))
         {
-            Debug.Log("No");
             if (collider.GetComponent<Rigidbody2D>() == _playerRigidbody)
             {
                 _playerRigidbody = null;
             }
+            if (tilemap != null && !tilemap.gameObject.activeSelf)
+            {
+                tilemap.gameObject.SetActive(true); // Show the tilemap layer
+            }
         }
 
-        if (tilemapRenderer != null)
-        {
-            tilemapRenderer.enabled = false; // Show the tilemap layer
-        }
+        
     }
 }
