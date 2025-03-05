@@ -76,8 +76,8 @@ GameObject:
   - component: {fileID: 4422631742275925518}
   - component: {fileID: 3490455145668807390}
   - component: {fileID: 691563667995140870}
-  - component: {fileID: 1078054167276414150}
-  - component: {fileID: 348356797252426832}
+  - component: {fileID: 5350014535343959427}
+  - component: {fileID: 7668871493132201296}
   m_Layer: 7
   m_Name: PurpleTorchEnemy
   m_TagString: Enemy
@@ -93,8 +93,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4868536043419205611}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.13, y: -3.54, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 86.91295, y: 10.275864, z: 0.09251358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -279,7 +279,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.015661716, y: -0.00783062}
   m_Radius: 0.44287062
---- !u!114 &1078054167276414150
+--- !u!114 &5350014535343959427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,7 +299,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &348356797252426832
+--- !u!114 &7668871493132201296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -308,15 +308,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4868536043419205611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
+  m_Script: {fileID: 11500000, guid: 228d2630b7fd9de4a99a8d97a62af43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
   attackRange: 1
   attackCooldown: 1
   playerDetectRange: 5
-  DetectionPoint: {fileID: 0}
+  DetectionPoint: {fileID: 6769459427701160004}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   myCanvas: {fileID: 0}
