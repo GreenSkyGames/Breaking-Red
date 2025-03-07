@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 112
+  controlID: 98
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -1004,7 +1004,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 42b90000
       m_LastClickedID: 47426
-      m_ExpandedIDs: 0afbffff
+      m_ExpandedIDs: 0afbffff36ba0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1302,7 +1302,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c6c10000
     m_LastClickedID: 49606
-    m_ExpandedIDs: 0000000062bc000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000062bc0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1507,7 +1507,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 1516
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
