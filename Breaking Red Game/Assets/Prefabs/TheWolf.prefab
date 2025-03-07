@@ -77,7 +77,8 @@ GameObject:
   - component: {fileID: 998717416765251416}
   - component: {fileID: 5272995025209110295}
   - component: {fileID: 1231940742920002264}
-  - component: {fileID: 4258002183723441536}
+  - component: {fileID: 6226005939510379487}
+  - component: {fileID: 3678474055483349312}
   m_Layer: 7
   m_Name: TheWolf
   m_TagString: TheWolf
@@ -299,7 +300,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &4258002183723441536
+--- !u!114 &6226005939510379487
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -308,7 +309,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7729365132012887990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228d2630b7fd9de4a99a8d97a62af43d, type: 3}
+  m_Script: {fileID: 11500000, guid: 26778492f4a42314e8539f8556d9aa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: The Wolf
+    sentences:
+    - Hey Red Imma gonna punch u
+    - You can't run
+    - Mebbe you can, this is placeholder
+--- !u!114 &3678474055483349312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729365132012887990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2

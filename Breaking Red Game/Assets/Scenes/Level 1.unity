@@ -575,34 +575,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96754783}
   m_CullTransparentMesh: 1
---- !u!1 &145140976 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4868536043419205611, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-  m_PrefabInstance: {fileID: 1651321472}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &145140977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4783761956478570052, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
   m_PrefabInstance: {fileID: 1651321472}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &145140986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145140976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26778492f4a42314e8539f8556d9aa0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Purple Torch Guy
-    sentences:
-    - I'm not even in the game!
-    - Placehodler
-    - PALCEHODLRE
 --- !u!1 &339135967
 GameObject:
   m_ObjectHideFlags: 0
@@ -19019,34 +18996,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3254744323394355554, guid: cb7ab67716b6040b991c70b4585bcbe7, type: 3}
   m_PrefabInstance: {fileID: 2112269162}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1518785635 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-  m_PrefabInstance: {fileID: 1830360922}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1518785636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
   m_PrefabInstance: {fileID: 1830360922}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1518785645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518785635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26778492f4a42314e8539f8556d9aa0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: The Wolf
-    sentences:
-    - Hey Red Imma gonna punch u
-    - You can't run
-    - Mebbe you can, this is placeholder
 --- !u!1 &1560380199
 GameObject:
   m_ObjectHideFlags: 0
@@ -21009,17 +20963,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurpleTorchEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 7668871493132201296, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
+    - target: {fileID: 6305068722902045572, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
       propertyPath: myCanvas
       value: 
       objectReference: {fileID: 1804353379}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4868536043419205611, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 145140986}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
 --- !u!1 &1670194161
 GameObject:
@@ -22309,7 +22260,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4258002183723441536, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
+    - target: {fileID: 3678474055483349312, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
       propertyPath: myCanvas
       value: 
       objectReference: {fileID: 1804353379}
@@ -22320,10 +22271,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1518785645}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
 --- !u!1 &1874323318
 GameObject:
