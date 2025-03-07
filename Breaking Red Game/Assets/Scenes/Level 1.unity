@@ -15668,7 +15668,7 @@ GameObject:
   - component: {fileID: 1290226683}
   - component: {fileID: 1290226684}
   m_Layer: 0
-  m_Name: Music
+  m_Name: BGMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19178,7 +19178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1616591272}
   m_Layer: 0
-  m_Name: SFX Handler
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
