@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -1.2987057, y: -5.064932, z: 0}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: -1.2987057, y: -5.064932, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
