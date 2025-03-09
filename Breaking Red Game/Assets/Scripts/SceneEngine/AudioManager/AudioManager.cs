@@ -40,6 +40,8 @@ public class AudioManager : MonoBehaviour
                 type.Source.outputAudioMixerGroup = type.Group;
             }
         }
+
+        Play("CabinBGM");
     }
 
     public void Play(string name)
