@@ -19057,57 +19057,57 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 7c1b7bbc412834d24b0900b6768572e6, type: 3}
     Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: CabinBGM
-    Volume: 0.5
+    Volume: 0.2
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 01b0e0369b9d548bdb5bf561d71e5eb5, type: 3}
     Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: Level1BGM
-    Volume: 0
+    Name: L1BGM
+    Volume: 0.2
     Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 2d2be9ad9f9294fda8292aefe64d92ee, type: 3}
     Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: Level2BGM
-    Volume: 0
-    Pitch: 0
+    Name: L2BGM
+    Volume: 0.2
+    Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 03b28d4c7405e4fa3864377a171cf308, type: 3}
     Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: FightingBGM
-    Volume: 0
-    Pitch: 0
+    Volume: 0.2
+    Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 4a0d04ae017589c45a785134a254ecf4, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: FootstepSound
-    Volume: 0
-    Pitch: 0
-    Loop: 0
+    Volume: 0.6
+    Pitch: 1
+    Loop: 1
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: d7f59595aa88d4148b306f5e4a1b5096, type: 3}
+    Clip: {fileID: 8300000, guid: b1334dbf63b8b12469d492e285f8003d, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: DoorSound
-    Volume: 0
-    Pitch: 0
+    Volume: 0.8
+    Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: d7f59595aa88d4148b306f5e4a1b5096, type: 3}
+    Clip: {fileID: 8300000, guid: adec86daeff9c914ebcad89840070648, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: DoorSound
-    Volume: 0
-    Pitch: 0
+    Name: WolfSound
+    Volume: 0.4
+    Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: d7f59595aa88d4148b306f5e4a1b5096, type: 3}
+    Clip: {fileID: 8300000, guid: bc5a2b7e1aa854877a8ba7ca3edd06d4, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: DoorSound
-    Volume: 0
-    Pitch: 0
+    Name: AttackSound
+    Volume: 0.4
+    Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: d7f59595aa88d4148b306f5e4a1b5096, type: 3}

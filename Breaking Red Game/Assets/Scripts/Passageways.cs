@@ -11,9 +11,24 @@ public class Passageways : MonoBehaviour
         Debug.Log("Trigger!");
         if(other.CompareTag("Player"))
         {
+            AudioManager.instance.Play("DoorSound"); // Play the open door sound
+
             Vector2 newPosition = GetDest();
             if(newPosition != Vector2.zero)
             {
+                // Check the tag of the current door to change BGmusic
+                if (gameObject.CompareTag("L1"))
+                {
+                    AudioManager.instance.Stop("CabinBGM");
+                    AudioManager.instance.Play("L1BGM");
+                    AudioManager.instance.Play("WolfSound");
+                }
+                else if (gameObject.CompareTag("L2"))
+                {
+                    AudioManager.instance.Stop("L1BGM");
+                    AudioManager.instance.Play("CabinBGM");
+                }
+
                 Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
@@ -22,7 +37,6 @@ public class Passageways : MonoBehaviour
                 }
                 //other.transform.position = newPosition;
                 StartCoroutine(TeleportWithFade(other, newPosition, rb));
-
             }
         }
     }
