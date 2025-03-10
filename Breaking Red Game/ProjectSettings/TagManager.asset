@@ -9,6 +9,7 @@ TagManager:
   - PoisonApple
   - L1
   - L2
+  - DialogueBox
   layers:
   - Default
   - TransparentFX
