@@ -10,8 +10,8 @@ public class WeatherManager : MonoBehaviour
         // Randomly choose weather at the start
         RandomWeather();
 
-        // Change weather every 5 seconds
-        InvokeRepeating("RandomWeather", 0f, 5f);  // First call immediately, repeat every 5 seconds
+        // Change weather every 8 seconds
+        InvokeRepeating("RandomWeather", 0f, 8f);
     }
 
     // Randomly choose to activate rain or snow
@@ -31,7 +31,6 @@ public class WeatherManager : MonoBehaviour
         }
     }
 
-    // Activate rain effect and deactivate snow effect
     private void ActivateRain()
     {
         if (rainEffect != null)
@@ -45,7 +44,6 @@ public class WeatherManager : MonoBehaviour
         }
     }
 
-    // Activate snow effect and deactivate rain effect
     private void ActivateSnow()
     {
         if (snowEffect != null)

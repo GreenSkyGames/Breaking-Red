@@ -37,9 +37,6 @@ public class MainMenu : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         SceneManager.LoadScene("Level 1");
-
-        // Fade in the CabinBGM
-        StartCoroutine(AudioManager.instance.FadeIn("CabinBGM", 1.5f));
     }
 
     public void QuitGame()
