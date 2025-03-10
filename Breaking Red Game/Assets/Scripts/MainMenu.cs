@@ -23,8 +23,23 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     { //when player resumes a previous game 
         Debug.Log("Starting a new game");
+
+        // Play the button click
+        AudioManager.instance.Play("ClickSound");
+        // Fading out the MenuBGM and fading in the CabinBGM
+        StartCoroutine(TransitionToGameScene());
+    }
+
+    private IEnumerator TransitionToGameScene()
+    {
+        // Fade out the MenuBGM
+        StartCoroutine(AudioManager.instance.FadeOut("MenuBGM", 1.5f));
+        yield return new WaitForSeconds(1.5f);
+
         SceneManager.LoadScene("Level 1");
 
+        // Fade in the CabinBGM
+        StartCoroutine(AudioManager.instance.FadeIn("CabinBGM", 1.5f));
     }
 
     public void QuitGame()
@@ -32,5 +47,6 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quitting game.");
         Application.Quit();//quitting the game 
         UnityEditor.EditorApplication.isPlaying = false;
+        AudioManager.instance.Play("ClickSound"); // Play sound on button click
     }
 }

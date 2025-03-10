@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
 
         else
@@ -20,7 +21,6 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -40,8 +40,7 @@ public class AudioManager : MonoBehaviour
                 type.Source.outputAudioMixerGroup = type.Group;
             }
         }
-
-        Play("CabinBGM");
+        AudioManager.instance.Play("MenuBGM");
     }
 
     public void Play(string name)
