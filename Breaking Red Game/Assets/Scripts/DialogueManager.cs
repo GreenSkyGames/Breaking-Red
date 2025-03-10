@@ -6,69 +6,112 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-	public TMP_Text nameText;
-	public TMP_Text dialogueText;
+	public static DialogueManager Instance { get; private set; }
 
-	private Queue<string> sentences;
+	public GameObject DialogueParent;
+	public TMP_Text DialogueTitleText;
+	public TMP_Text DialogueBodyText;
+	public GameObject responseButtonPrefab;
+	public Transform responseButtonContainer;
 
-	private GameObject currentNPC;
 	private GameObject temp;
 
-	public void StartDialogue (NPCDialogue dialogue)
+	private void Awake()
 	{
-		Debug.Log("Starting convo with " + dialogue.name);
-
-		nameText.text = dialogue.name;
-
-		if(dialogue.name == "The Wolf")
+		if(Instance == null)
 		{
-			currentNPC = GameObject.FindWithTag("TheWolf");
+			Instance = this;
 		}
-
-		sentences.Clear();
-
-		foreach(string sentence in dialogue.sentences)
+		else
 		{
-			sentences.Enqueue(sentence);
+			Destroy(gameObject);
 		}
-
-		DisplayNextSentence();
+		//HideDialogue();
+		closeDialogue();
 	}
 
-	public void DisplayNextSentence()
+	public void StartDialogue(string title, NPCDialogue node)
 	{
-		if (sentences.Count == 0)
+		//Display the ui (not needed)
+		//ShowDialogue();
+		//openDialogue();
+
+		//Set name and body text
+		DialogueTitleText.text = title; //This gives name of the NPC
+		DialogueBodyText.text = node.dialogueText;
+
+		//Remove any existing response buttons
+		foreach(Transform child in responseButtonContainer)
 		{
-			EndDialogue();
+			Destroy(child.gameObject);
+		}
+
+		foreach(PlayerDialogue response in node.responses)
+		{
+			//This creates the buttons for each response
+			GameObject buttonObj = Instantiate(responseButtonPrefab, responseButtonContainer);
+			buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
+
+			//Set button to trigger SelectResponse
+			buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response, title));
+		}
+	}
+
+	//Stuff will happen in SelectResponse
+	public void SelectResponse(PlayerDialogue response, string title)
+	{
+		//Maybe make button do something here?
+		Debug.Log("Stuff is " + response.responseText);
+
+		//This will be an if-else chain for all ten NPCs
+		if(title == "The Wolf")
+		{
+			temp = GameObject.FindWithTag("TheWolf");
+			//Debug.Log("the worhfla: " + temp.tag);
+
+			//This is how to make things happen during dialogue.
+			//Certain lines and titles can be used like a key to create a certain result.
+			if(response.responseText == "Like I believe that!")
+			{
+				temp.GetComponent<NPCManager>().ChangeState(EnemyState.Attacking);
+			}
+		}
+
+		if(!response.nextNode.IsLastNode())
+		{
+			StartDialogue(title, response.nextNode);
+		}
+		else
+		{
+			//HideDialogue();
 			closeDialogue();
 		}
-		string sentence = sentences.Dequeue();
-		dialogueText.text = sentence;
 	}
 
-	void EndDialogue()
+	public void HideDialogue()
 	{
-		Debug.Log("End of convo.");
-		currentNPC.GetComponent<NPCManager>().ChangeState(EnemyState.Attacking);
-		//gameObject.SetActive(false);
+		DialogueParent.SetActive(false);
 	}
 
-	void Start()
+	public void ShowDialogue()
 	{
-		sentences = new Queue<string>();
+		DialogueParent.SetActive(true);
 	}
 	
+	//If this is used by the canvas button, it will not inherit currentNPC
+	//This means the NPC talking will retain the last state given
 	public void closeDialogue()
 	{
 		temp = GameObject.FindWithTag("DialogueBox");
-		Debug.Log("Weird tag " + temp.tag);
-		//Debug.Log("What I do have " + nameText.text);
+		//Debug.Log("Weird tag " + temp.tag);
 		temp.SetActive(false);
-		return;
+		//return;
 	}
 
 	public void openDialogue()
 	{
-		gameObject.SetActive(true);
+		temp = GameObject.FindWithTag("DialogueBox");
+		temp.SetActive(true);
+		//return;
 	}
 }

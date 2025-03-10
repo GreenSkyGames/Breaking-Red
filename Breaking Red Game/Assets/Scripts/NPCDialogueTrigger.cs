@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class NPCDialogueTrigger : MonoBehaviour
 {
-    public NPCDialogue dialogue;
+	//actor
+
+    //public NPCDialogue Dialogue; //Brackseys
+	public Dialogue Dialogue; //Duls
+	public string Name;
 
 	public void TriggerDialogue()
 	{
-		FindFirstObjectByType<DialogueManager>().StartDialogue(dialogue);
+		//FindFirstObjectByType<DialogueManager>().StartDialogue(Dialogue);
+		DialogueManager.Instance.StartDialogue(Name, Dialogue.RootNode);
 	}
 
 }

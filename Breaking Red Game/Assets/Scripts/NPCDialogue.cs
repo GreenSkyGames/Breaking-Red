@@ -1,11 +1,17 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class NPCDialogue
 {
-	public string name;
+	//dialoguenode
+	//public string name;
+	public string dialogueText;
+	public List<PlayerDialogue> responses;
 
-	[TextArea(3, 10)]
-	public string[] sentences;
+	internal bool IsLastNode()
+	{
+		return responses.Count <= 0;
+	}
 
 }

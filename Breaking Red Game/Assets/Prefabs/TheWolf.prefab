@@ -312,12 +312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26778492f4a42314e8539f8556d9aa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: The Wolf
-    sentences:
-    - Hey Red Imma gonna punch u
-    - You can't run
-    - Mebbe you can, this is placeholder
+  Dialogue: {fileID: 11400000, guid: ba600c2e3d33b32449d3100a4448f13d, type: 2}
+  Name: The Wolf
 --- !u!114 &3678474055483349312
 MonoBehaviour:
   m_ObjectHideFlags: 0
