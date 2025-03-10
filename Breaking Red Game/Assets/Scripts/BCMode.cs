@@ -29,6 +29,9 @@ public class BCMODE : MonoBehaviour
 
  public void OnToggleValueChanged(bool isON)
  {
+    // Play the button click
+    AudioManager.instance.Play("ClickSound");
+
     PlayerPrefs.SetInt("BCMode", isON ? 1 : 0);
     PlayerPrefs.Save();
  }
