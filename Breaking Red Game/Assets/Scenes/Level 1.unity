@@ -5873,6 +5873,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479460034}
+  - component: {fileID: 479460035}
   m_Layer: 0
   m_Name: WeatherSystem
   m_TagString: Untagged
@@ -5897,6 +5898,20 @@ Transform:
   - {fileID: 1802545716}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &479460035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479460033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daeebaa14554a884292a87f20065aaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rainEffect: {fileID: 28224561}
+  snowEffect: {fileID: 1802545715}
 --- !u!1 &525710955
 GameObject:
   m_ObjectHideFlags: 0
@@ -26791,7 +26806,7 @@ Transform:
   m_GameObject: {fileID: 1802545715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.29, y: -12.33, z: 0}
+  m_LocalPosition: {x: 18.1, y: -3.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27128,8 +27143,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.1
-      minScalar: 0.01
+      scalar: 0.15
+      minScalar: 0.02
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -27592,7 +27607,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 5
+      value: 25
       mode: 0
       spread: 0
       speed:
