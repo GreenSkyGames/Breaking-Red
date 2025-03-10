@@ -23976,11 +23976,11 @@ MonoBehaviour:
     Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: d7f59595aa88d4148b306f5e4a1b5096, type: 3}
+    Clip: {fileID: 8300000, guid: f0304227573024abb878a0435f77db98, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: DoorSound
-    Volume: 0
-    Pitch: 0
+    Name: PowerUpSound
+    Volume: 0.4
+    Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: d7f59595aa88d4148b306f5e4a1b5096, type: 3}
@@ -27243,7 +27243,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.3
+      scalar: 0.1
       minScalar: 0.01
       maxCurve:
         serializedVersion: 2

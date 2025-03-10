@@ -19,14 +19,17 @@ public class Passageways : MonoBehaviour
                 // Check the tag of the current door to change BGmusic
                 if (gameObject.CompareTag("L1"))
                 {
-                    AudioManager.instance.Stop("CabinBGM");
-                    AudioManager.instance.Play("L1BGM");
-                    AudioManager.instance.Play("WolfSound");
+                    // Fade out the current music before stopping it
+                    StartCoroutine(AudioManager.instance.FadeOut("CabinBGM", 1.5f)); // Fade out
+                    StartCoroutine(AudioManager.instance.FadeIn("L1BGM", 1.5f));  // Fade in
+                    StartCoroutine(AudioManager.instance.FadeIn("WolfSound", 1.5f)); // Fade in
                 }
                 else if (gameObject.CompareTag("L2"))
                 {
-                    AudioManager.instance.Stop("L1BGM");
-                    AudioManager.instance.Play("CabinBGM");
+                    // Fade out the current music before stopping it
+                    StartCoroutine(AudioManager.instance.FadeOut("WolfSound", 1.5f)); // Fade out
+                    StartCoroutine(AudioManager.instance.FadeOut("L1BGM", 1.5f)); // Fade out
+                    StartCoroutine(AudioManager.instance.FadeIn("CabinBGM", 1.5f));  // Fade in
                 }
 
                 Rigidbody2D rb = other.GetComponent<Rigidbody2D>();

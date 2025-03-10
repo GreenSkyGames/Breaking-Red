@@ -29,6 +29,9 @@ public class PowerUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            // Play power up sound effect
+            AudioManager.instance.Play("PowerUpSound");
+
             // Get the PowerUpManager and call ApplyPowerUpEffect
             PowerUpManager powerUpManager = other.GetComponent<PowerUpManager>();
             if (powerUpManager != null)
