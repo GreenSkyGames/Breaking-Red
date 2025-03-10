@@ -31627,7 +31627,7 @@ GameObject:
   - component: {fileID: 1804353380}
   m_Layer: 5
   m_Name: DialogueBoxCanvas
-  m_TagString: Untagged
+  m_TagString: DialogueBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31744,11 +31744,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 77.92032
+      value: -6.1
       objectReference: {fileID: 0}
     - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.063168
+      value: -3.41
       objectReference: {fileID: 0}
     - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31789,6 +31789,10 @@ PrefabInstance:
     - target: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
       propertyPath: m_Name
       value: TheWolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094443961451776758, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
