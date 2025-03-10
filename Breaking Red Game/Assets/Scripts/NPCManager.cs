@@ -21,6 +21,8 @@ public class NPCManager : MonoBehaviour
 	private Transform player;
 	private Animator anim;
 
+	private bool isHostile = false;
+
 	
     //Start is currently being used to:
 	// - find rigidbody component
@@ -41,7 +43,15 @@ public class NPCManager : MonoBehaviour
     {
 		if(enemyState != EnemyState.Knockback && enemyState != EnemyState.Dialogue)
 		{
-			CheckForPlayer();
+			if(isHostile == true)
+			{
+				enemyAttack();
+			}
+			else
+			{
+				ChangeState(EnemyState.Idle); //Change to idle if not hostile
+				rb.linearVelocity = Vector2.zero; //kill billiards effect
+			}
 
 			if(attackCooldownTimer > 0)
 			{
@@ -59,6 +69,7 @@ public class NPCManager : MonoBehaviour
 		else if(enemyState == EnemyState.Dialogue)
 		{
 			//ChangeState(EnemyState.Idle);
+			//isHostile = false;
 			rb.linearVelocity = Vector2.zero;
 		}
     }
@@ -87,8 +98,9 @@ public class NPCManager : MonoBehaviour
 	}
 
 	//Check if the player is within detection range.
-	private void CheckForPlayer()
+	public void enemyAttack()
 	{
+		isHostile = true;
 		//Detect if there are collsions and put them in the hits array.
 		//Only checks the player's layer, so won't detect other objects.
 		Collider2D[] hits = Physics2D.OverlapCircleAll(DetectionPoint.position, playerDetectRange, playerLayer);
@@ -108,6 +120,7 @@ public class NPCManager : MonoBehaviour
 			{
 				ChangeState(EnemyState.Chasing);
 			}
+
 		}
 		else
 		{
@@ -135,11 +148,17 @@ public class NPCManager : MonoBehaviour
 
 		//Update the new animation
 		if(enemyState == EnemyState.Idle || enemyState == EnemyState.Dialogue)
+		{
 			anim.SetBool("isIdle", true);
+		}
 		else if (enemyState == EnemyState.Chasing)
+		{
 			anim.SetBool("isChasing", true);
+		}
 		else if (enemyState == EnemyState.Attacking)
+		{
 			anim.SetBool("isAttacking", true);
+		}
 	}
 
 	//This actually displays the dialogue box!

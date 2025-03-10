@@ -71,9 +71,10 @@ public class DialogueManager : MonoBehaviour
 
 			//This is how to make things happen during dialogue.
 			//Certain lines and titles can be used like a key to create a certain result.
-			if(response.responseText == "Like I believe that!")
+			if(response.responseText == "*Attack*")
 			{
-				temp.GetComponent<NPCManager>().ChangeState(EnemyState.Attacking);
+				//temp.GetComponent<NPCManager>().ChangeState(EnemyState.Attacking);
+				temp.GetComponent<NPCManager>().enemyAttack();
 			}
 		}
 

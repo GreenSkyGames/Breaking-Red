@@ -23,7 +23,7 @@ MonoBehaviour:
           nextNode:
             dialogueText: What, did someone die recently?
             responses:
-            - responseText: 
+            - responseText: '*Attack*'
               nextNode:
                 dialogueText: 
                 responses: []
@@ -31,7 +31,7 @@ MonoBehaviour:
       nextNode:
         dialogueText: Why so hostile?
         responses:
-        - responseText: 
+        - responseText: I'm watching you, Wolf.
           nextNode:
             dialogueText: 
             responses: []
