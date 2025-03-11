@@ -76,6 +76,14 @@ public class DialogueManager : MonoBehaviour
 				//temp.GetComponent<NPCManager>().ChangeState(EnemyState.Attacking);
 				temp.GetComponent<NPCManager>().enemyAttack();
 			}
+			if(response.responseText == "I'm watching you, Wolf.")
+			{
+				temp.GetComponent<NPCManager>().switchHostility();
+			}
+		}
+		else if(title == "The Bear")
+		{
+			//stuff for The Bear goes here
 		}
 
 		if(!response.nextNode.IsLastNode())
@@ -100,7 +108,8 @@ public class DialogueManager : MonoBehaviour
 	}
 	
 	//If this is used by the canvas button, it will not inherit currentNPC
-	//This means the NPC talking will retain the last state given
+	//This means the NPC talking will retain the last state given 
+	//(The last state is usually Dialogue, since the box just opened)
 	public void closeDialogue()
 	{
 		temp = GameObject.FindWithTag("DialogueBox");

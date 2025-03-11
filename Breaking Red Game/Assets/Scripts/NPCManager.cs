@@ -21,7 +21,7 @@ public class NPCManager : MonoBehaviour
 	private Transform player;
 	private Animator anim;
 
-	private bool isHostile = false;
+	public bool isHostile;
 
 	
     //Start is currently being used to:
@@ -36,27 +36,38 @@ public class NPCManager : MonoBehaviour
     }
 
     //Update is being used to:
-	// - call function to check if player is in range
-	// - provide cooldown window for attack animation
-	// - call chase animation/stop motion for attack animation.
+	//- Check if enemy is in knockback (not implemented)
+	//- Check if enemy is hostile, and if they are, attack the player.
+	//- Set state to idle or dialogue accordingly
+	//- Refresh the Chase state during pursuit
     void Update()
     {
-		if(enemyState != EnemyState.Knockback && enemyState != EnemyState.Dialogue)
+		if(enemyState != EnemyState.Knockback)
 		{
+			//If enemy is hostile, they pursue and attack.
+			//They can be turned back by way of dialogue manager (or other classes)
+			//by using .GetComponent<NPCManager>().switchHostility().
 			if(isHostile == true)
 			{
 				enemyAttack();
+				if(attackCooldownTimer > 0)
+				{
+					attackCooldownTimer -= Time.deltaTime;
+				}
 			}
 			else
 			{
 				ChangeState(EnemyState.Idle); //Change to idle if not hostile
 				rb.linearVelocity = Vector2.zero; //kill billiards effect
+
+				if(enemyState == EnemyState.Dialogue)
+				{
+					//ChangeState(EnemyState.Idle);
+					//isHostile = false;
+					rb.linearVelocity = Vector2.zero;
+				}
 			}
 
-			if(attackCooldownTimer > 0)
-			{
-				attackCooldownTimer -= Time.deltaTime;
-			}
 			if(enemyState == EnemyState.Chasing)
 			{
 				Chase();
@@ -66,14 +77,22 @@ public class NPCManager : MonoBehaviour
 				rb.linearVelocity = Vector2.zero;
 			}
 		}
-		else if(enemyState == EnemyState.Dialogue)
-		{
-			//ChangeState(EnemyState.Idle);
-			//isHostile = false;
-			rb.linearVelocity = Vector2.zero;
-		}
     }
 
+	//A plainly stated way to change the hostility bool.
+	public void switchHostility()
+	{
+		if(isHostile == true)
+		{
+			isHostile = false;
+		}
+		else
+		{
+			isHostile = true;
+		}
+	}
+
+	//Chase handles both direction of the NPC and the flipping their animation (for now).
 	void Chase()
 	{
 		//NOTE:  THIS IS FOR ENEMIES THAT FACE RIGHT.
@@ -120,7 +139,6 @@ public class NPCManager : MonoBehaviour
 			{
 				ChangeState(EnemyState.Chasing);
 			}
-
 		}
 		else
 		{
