@@ -10,7 +10,11 @@ TagManager:
   - L1
   - L2
   - DialogueBox
+<<<<<<< Updated upstream
   - GoldenApple
+=======
+  - L3
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

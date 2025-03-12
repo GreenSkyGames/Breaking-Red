@@ -312,12 +312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26778492f4a42314e8539f8556d9aa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Purple Torch Guy
-    sentences:
-    - I'm not even in the game!
-    - Placehodler
-    - PALCEHODLRE
+  Dialogue: {fileID: 0}
+  Name: 
 --- !u!114 &6305068722902045572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,15 +323,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4868536043419205611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
+  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
   attackRange: 1
   attackCooldown: 1
   playerDetectRange: 5
-  DetectionPoint: {fileID: 6769459427701160004}
+  DetectionPoint: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   myCanvas: {fileID: 0}
+  isHostile: 0

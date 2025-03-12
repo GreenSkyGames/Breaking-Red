@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Passageways : MonoBehaviour
@@ -92,6 +93,10 @@ public class Passageways : MonoBehaviour
                 return new Vector2(-1, 0);
             case "L2":
                 return new Vector2(-83.5f, -17.8f);
+            case "L3":
+                SceneManager.LoadScene("Level 2");
+
+                return new Vector2(-19.7f, -21.2f);
             default:
                 Debug.LogWarning("No destination set for tag: " + gameObject.tag);
                 return Vector2.zero;
