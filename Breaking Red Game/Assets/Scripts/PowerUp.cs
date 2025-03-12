@@ -20,6 +20,7 @@ public class PowerUp : MonoBehaviour
 
             case itemName.GoldenApple:
                 playerController.health += effectAmount;  // increases health
+                Debug.Log("Player health increased");
                 break;
         }
     }

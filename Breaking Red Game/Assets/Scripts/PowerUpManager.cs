@@ -36,6 +36,7 @@ public class PowerUpManager : MonoBehaviour
             {
                 // add to inventory for later use
                 InventoryManager.instance.AddToInventory(powerUp);
+                Debug.Log("Item added to inventory");
                 inputReceived = true;
             }
 
