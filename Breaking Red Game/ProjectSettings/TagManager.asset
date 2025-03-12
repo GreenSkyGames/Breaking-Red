@@ -10,6 +10,7 @@ TagManager:
   - L1
   - L2
   - DialogueBox
+  - GoldenApple
   layers:
   - Default
   - TransparentFX
