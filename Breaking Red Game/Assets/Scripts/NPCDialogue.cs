@@ -5,8 +5,7 @@ using System.Collections.Generic;
 public class NPCDialogue
 {
 	//dialoguenode
-	//This is the text for the NPC dialogue.
-	//This does not require monobehaviour.
+	//public string name;
 	public string dialogueText;
 	public List<PlayerDialogue> responses;
 
@@ -14,4 +13,5 @@ public class NPCDialogue
 	{
 		return responses.Count <= 0;
 	}
+
 }
