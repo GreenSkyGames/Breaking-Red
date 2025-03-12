@@ -6,42 +6,43 @@ public class PowerUp : MonoBehaviour
     public enum itemName { PoisonApple, GoldenApple }
 
     public itemName type;  // Type of the power-up
-    public float effectAmount;  // Amount of effect (e.g., how much health is reduced or increased)
+    public float effectAmount;
 
-    // Apply the effect of the power-up to the player
+    // apply effect to the player
     public void ApplyEffect(PlayerController playerController)
     {
         switch (type)
         {
             case itemName.PoisonApple:
-                playerController.health -= effectAmount;  // Poison apple decreases health
+                playerController.health -= effectAmount;  // decreases health
                 Debug.Log("Player health decreased");
                 break;
 
             case itemName.GoldenApple:
-                playerController.health += effectAmount;  // Health boost increases health
+                playerController.health += effectAmount;  // increases health
                 break;
         }
     }
 
-    // Detect when the player collides with the power-up
+    // when player collides
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // Play power up sound effect
+            // play power up sound effect tbd
             AudioManager.instance.Play("PowerUpSound");
 
-            // Get the PowerUpManager and call ApplyPowerUpEffect
+            // trigger PowerUpManager to handle the interaction
             PowerUpManager powerUpManager = other.GetComponent<PowerUpManager>();
             if (powerUpManager != null)
             {
-                powerUpManager.ApplyPowerUpEffect(this, other.GetComponent<PlayerController>());
+                powerUpManager.HandlePowerUpInteraction(this, other.GetComponent<PlayerController>());
             }
 
-            // Destroy the power-up object after being collected
+            // destroy the power-up object after interaction (it will either be used or stored)
             Destroy(gameObject);
         }
     }
 }
+
 
