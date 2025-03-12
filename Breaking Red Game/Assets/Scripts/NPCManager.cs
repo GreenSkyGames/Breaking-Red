@@ -79,17 +79,18 @@ public class NPCManager : MonoBehaviour
 		}
     }
 
-	//A plainly stated way to change the hostility bool.
+	//Quality of life functions for changing hostility.
 	public void switchHostility()
 	{
-		if(isHostile == true)
-		{
-			isHostile = false;
-		}
-		else
-		{
-			isHostile = true;
-		}
+		isHostile = !isHostile;
+	}
+	public void offHostility()
+	{
+		isHostile = false;
+	}
+	public void onHostility()
+	{
+		isHostile = true;
 	}
 
 	//Chase handles both direction of the NPC and the flipping their animation (for now).
@@ -119,7 +120,7 @@ public class NPCManager : MonoBehaviour
 	//Check if the player is within detection range.
 	public void enemyAttack()
 	{
-		isHostile = true;
+		//isHostile = true;
 		//Detect if there are collsions and put them in the hits array.
 		//Only checks the player's layer, so won't detect other objects.
 		Collider2D[] hits = Physics2D.OverlapCircleAll(DetectionPoint.position, playerDetectRange, playerLayer);

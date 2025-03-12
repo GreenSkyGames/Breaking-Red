@@ -13,20 +13,29 @@ MonoBehaviour:
   m_Name: WolfDialogue
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: If it isn't Red Riding Hood
+    dialogueText: Oh?  Little Red Riding Hood, back in these woods?  I thought you
+      knew better than to come around here!
     responses:
-    - responseText: I should kill you right now!
+    - responseText: I should have expected to find your mangy hide here!  Was it
+        you?!
       nextNode:
-        dialogueText: I'm just minding my own business
+        dialogueText: You've been gone from these woods for too long, Red!  You don't
+          know how things work here anymore!
         responses:
-        - responseText: Like I believe that!
+        - responseText: I know enough about YOU, Wolf!  You always had it in for
+            Grandmother!
           nextNode:
-            dialogueText: What, did someone die recently?
+            dialogueText: So what if I did?  What, did someone finally whack the
+              old broad?
             responses:
-            - responseText: '*Attack*'
+            - responseText: How dare you!  I'll kill you for that!
               nextNode:
-                dialogueText: 
-                responses: []
+                dialogueText: You can try, Red!  Show me what you got!
+                responses:
+                - responseText: '*Attack*'
+                  nextNode:
+                    dialogueText: 
+                    responses: []
     - responseText: What are you doing here, Wolf?
       nextNode:
         dialogueText: Why so hostile?
