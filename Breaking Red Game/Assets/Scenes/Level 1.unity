@@ -23027,16 +23027,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -77, y: 6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 9
-      m_TileSpriteIndex: 9
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -76, y: 6, z: 0}
     second:
       serializedVersion: 2
@@ -23081,7 +23071,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -23171,7 +23161,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -23257,8 +23247,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 4050a71633c2d3d4cb24f8092f54b4e6, type: 2}
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: e97a4bef41d92f54bb3b903e2acdef6c, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 8f2609f64425e584eb2b8c8e3fba0e91, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 3def33d6a30bbf041a816330992f71cd, type: 2}
   - m_RefCount: 1
@@ -23284,14 +23274,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -6647965541945082594, guid: 17891a08789fa5842b762951d3988492, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 6549364391076933906, guid: 17891a08789fa5842b762951d3988492, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: -95462197395711422, guid: 17891a08789fa5842b762951d3988492, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 82217339814700182, guid: 20accd36f5130c942b5ef906bf5348c7, type: 3}
+    m_Data: {fileID: 6549364391076933906, guid: 17891a08789fa5842b762951d3988492, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -219141025, guid: 20accd36f5130c942b5ef906bf5348c7, type: 3}
   - m_RefCount: 1
@@ -23305,7 +23295,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 1854853777, guid: 20accd36f5130c942b5ef906bf5348c7, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 51
+  - m_RefCount: 50
     m_Data:
       e00: 1
       e01: 0
@@ -23324,7 +23314,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 51
+  - m_RefCount: 50
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
@@ -26772,7 +26762,7 @@ GameObject:
   - component: {fileID: 1794359518}
   - component: {fileID: 1794359517}
   m_Layer: 0
-  m_Name: Damaging Environment Variable
+  m_Name: Fireplace Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26881,7 +26871,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1775937986, guid: 661960ad8df2446428ce2adfa4bf4189, type: 3}
+  m_Sprite: {fileID: 82217339814700182, guid: 20accd36f5130c942b5ef906bf5348c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -26901,8 +26891,8 @@ Transform:
   m_GameObject: {fileID: 1794359516}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3552, y: -12.6412, z: 0}
-  m_LocalScale: {x: 1.4696, y: 1.3375, z: 1}
+  m_LocalPosition: {x: -86.5, y: -10.703, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
