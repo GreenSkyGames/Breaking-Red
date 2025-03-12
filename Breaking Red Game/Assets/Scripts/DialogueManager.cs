@@ -26,16 +26,11 @@ public class DialogueManager : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
-		//HideDialogue();
 		closeDialogue();
 	}
 
 	public void StartDialogue(string title, NPCDialogue node)
 	{
-		//Display the ui (not needed)
-		//ShowDialogue();
-		//openDialogue();
-
 		//Set name and body text
 		DialogueTitleText.text = title; //This gives name of the NPC
 		DialogueBodyText.text = node.dialogueText;
@@ -60,22 +55,33 @@ public class DialogueManager : MonoBehaviour
 	//Stuff will happen in SelectResponse
 	public void SelectResponse(PlayerDialogue response, string title)
 	{
-		//Maybe make button do something here?
-		Debug.Log("Stuff is " + response.responseText);
+		//Debug.Log("Stuff is " + response.responseText);
 
 		//This will be an if-else chain for all ten NPCs
+		//This is how to make things happen during dialogue.
+		//Certain lines and titles can be used like a key to create a certain result.
 		if(title == "The Wolf")
 		{
 			temp = GameObject.FindWithTag("TheWolf");
 			//Debug.Log("the worhfla: " + temp.tag);
 
-			//This is how to make things happen during dialogue.
-			//Certain lines and titles can be used like a key to create a certain result.
 			if(response.responseText == "*Attack*")
 			{
 				//temp.GetComponent<NPCManager>().ChangeState(EnemyState.Attacking);
-				temp.GetComponent<NPCManager>().enemyAttack();
+				temp.GetComponent<NPCManager>().onHostility();
 			}
+			if(response.responseText == "I'm watching you, Wolf.")
+			{
+				temp.GetComponent<NPCManager>().offHostility();
+			}
+		}
+		else if(title == "The Bear")
+		{
+			//stuff for The Bear goes here
+		}
+		else if(title == "The Hiker")
+		{
+			//stuff for The Hiker goes here
 		}
 
 		if(!response.nextNode.IsLastNode())
@@ -84,21 +90,10 @@ public class DialogueManager : MonoBehaviour
 		}
 		else
 		{
-			//HideDialogue();
 			closeDialogue();
 		}
 	}
 
-	public void HideDialogue()
-	{
-		DialogueParent.SetActive(false);
-	}
-
-	public void ShowDialogue()
-	{
-		DialogueParent.SetActive(true);
-	}
-	
 	//If this is used by the canvas button, it will not inherit currentNPC
 	//This means the NPC talking will retain the last state given
 	public void closeDialogue()

@@ -31714,7 +31714,7 @@ PrefabInstance:
     - target: {fileID: 6226005939510379487, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
       propertyPath: Dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: ba600c2e3d33b32449d3100a4448f13d, type: 2}
+      objectReference: {fileID: 11400000, guid: 0c2641bb458617a48b7d4e0f89c3ae24, type: 2}
     - target: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
       propertyPath: m_Name
       value: TheWolf
