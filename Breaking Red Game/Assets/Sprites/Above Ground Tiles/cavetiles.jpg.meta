@@ -1,0 +1,5377 @@
+fileFormatVersion: 2
+guid: c9d35626a645308408314a6643ab9f7d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -205404686831204125
+    second: cavetiles_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cavetiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e8c93e8681462df0800000000000000
+      internalID: -205404686831204125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab99db7b37cfb74f975a28350d6ff06
+      internalID: -731842644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74442cedc5b51c479e330d2850677e8
+      internalID: 999289007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3821252da050d4681317823982dbf2
+      internalID: 1611141284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96e252bd89113b429e53171bb65ca18
+      internalID: -1344968093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992bf2fdc98109d43bd4289e9649a48a
+      internalID: -559387177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7a7702a9ee6fa44a98d578ce2b4c95
+      internalID: -1269710865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa57246160febf041bd3f1fad7107fad
+      internalID: -489265572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99bbceb33b9fb74db5debf36da89844
+      internalID: 2138134939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d9bc9bc00309d4dbd8eb460d91c611
+      internalID: -1012960148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_21
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ed6e0941aa97048922b6f6d0482432
+      internalID: -1802067855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_44
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 928
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49500b36c9548f448845034d82e2e81
+      internalID: -1772423555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_49
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 928
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a98127d9872ea24dbd0f55547e36a70
+      internalID: 1926853253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_63
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 928
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9615da45e934d45a1b224816ea0d3e
+      internalID: 1596952413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_64
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 928
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f969dad147e324da4758e134eacec7
+      internalID: -862213085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_65
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 928
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ed1c2c332232e4e91e4abc89abadaf
+      internalID: 1924686149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_85
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 912
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8cfaba264f146445a36c2119965fc8f
+      internalID: -1664429555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_86
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 912
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf3df27894de2d4890510479abe3721
+      internalID: -1182272353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_87
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 912
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f8fff3df868cc4cafe27273d5a716d
+      internalID: -1312514476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_103
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 912
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13dc7f8fb8e8f041bf407422330828d
+      internalID: 332049691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_104
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 912
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8078ba9b575a23742bdaa5801e3fa889
+      internalID: 773345454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_105
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 912
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bed8a5869ef6fb478dd080d478f46d3
+      internalID: -1843268398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_126
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 896
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc5caf015dca7148a080d3514c2e8ff
+      internalID: -64722070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_127
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 896
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7f0d3a191f3c64abe0636ac723b1b7
+      internalID: -1460678519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_138
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 896
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf4ad623ceb3a847b67589dd544018b
+      internalID: 9719039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_139
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 896
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce8aba2644cb6344a7a98d7ce1c33ce
+      internalID: -1849385114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_140
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 896
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc2594787fa76e44b045207d96d8f3a
+      internalID: 813357181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_143
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 896
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d9c18b3e0db754e8e92f314286481b
+      internalID: 823047707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_144
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ead7cac1a2f7874faff473194cac37d
+      internalID: -1045425122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_145
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 896
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20330cd6450aef04c81add3f2518629b
+      internalID: -1621914272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_174
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 880
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b85390269bd5bb40b5a2ae9530b115f
+      internalID: 683946811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_178
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 880
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e96ab85f17b5e94b9256bf9b308b7ea
+      internalID: 1626376819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_179
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 880
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38d74094b0fb7e40b395a58fb259fad
+      internalID: 1809395865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_180
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 880
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76de3b68091ad394da7b4234b4a2c7d6
+      internalID: 1107700049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_194
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 880
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4563ccd4f80fa04f841f0b116d1dea1
+      internalID: 1182016668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_208
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 864
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485b08544cc63a245a7b58a735081412
+      internalID: -481510974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_211
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 864
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb6b25e71064754b948ef61c0084057
+      internalID: -1460030777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_218
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 864
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d2e5935963c4846b6a62bef691b56c
+      internalID: -755136531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_219
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 864
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eaa75a098237dc4ead18efe0cff034c
+      internalID: 2051824785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_220
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 864
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d10586fa46def478d471b499d19496
+      internalID: -1542711265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_230
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 864
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddfca97b45fa784a8cc6b2922f44f0f
+      internalID: 1777876965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_248
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 848
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e005eeab50b1348b1489c04a8506dc
+      internalID: -747286735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_252
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 848
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8022ac1916205418dc102a35fc635d
+      internalID: 1451898651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_253
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 848
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9d8b41d2156714ea4c75ac9d70fb7c
+      internalID: 1311530610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_255
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 848
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3bbb315b7466b44adc7a64bddc70d1
+      internalID: -748345579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_260
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 848
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197793bde0164da41acc955fef73eb70
+      internalID: 1219075680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_262
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 848
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422defc431058b743aff01e13a592ddb
+      internalID: 974772603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_263
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 848
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2280fb6c19afb49920bda4cef55a60
+      internalID: 2082089798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_264
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 848
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5c401645d26fd47878c4d645a2bffc
+      internalID: 273238089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_265
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 848
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6583814a2a4f4484398794deff3fbcfd
+      internalID: -1757910612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_266
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 848
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265b7136926353c489e59967aca80408
+      internalID: 1106341033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_292
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 832
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a694aaeebf1b82241a030653e874158f
+      internalID: 92759322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_293
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 832
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c8b842ee854844ea80f863d95d2dde
+      internalID: -509957645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_298
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 832
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7f47a7b0a91fc4a92ecf24960c1f8b
+      internalID: 1265525751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_302
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 832
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfa2c04a8ae5714daa5c28db5232cf9
+      internalID: -1712032364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_303
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 832
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15877a76f8fd624596bd916acb5c4b9
+      internalID: -1502349586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_306
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 832
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f88b00f643252647b6e209a9daf5909
+      internalID: -1389297359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_312
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 832
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8531e6aa21c0bbc47bd9d98c32aabbb2
+      internalID: 1762284146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_313
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 832
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2e9f66be4bc164e9085d2d5d33ee50
+      internalID: 293176593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_326
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0949fa655648f4540aec10f9044803ac
+      internalID: -852933731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_327
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4361a47a0b77b8d4891cb24fa3eb835f
+      internalID: 84733142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_329
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16223e8ce8711c5429c3971ae700fc23
+      internalID: -1876753809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_337
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2e2c9ba86e3aa478e30c83d9d3d341
+      internalID: 2093168336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_342
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6dabf6222cb0e469be1d6225f68f8f
+      internalID: -1032682243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_351
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a574a9ee27c96e04db3c4a34dd1d9603
+      internalID: 1183800676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_367
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5494c7b36306047986726d84fa10ea
+      internalID: -659455328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_370
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c90388bc48411240b17902180773612
+      internalID: -1567702436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_384
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9755f564e8f77a8448d956b1aa3e3819
+      internalID: -1742007035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_385
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f4533e552408448b4fc450fef1d8c4
+      internalID: -1956014028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_386
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a84d52c3b8dcd40864b922597ffb70
+      internalID: 171257563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_405
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be17a8c107abba54d990cec921479af9
+      internalID: 275629604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_410
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a98769d9f7e84d4cb531aaed550cde6
+      internalID: -353757640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_424
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9adb630e7f2844cb1a8fa2fc4dea81
+      internalID: -1879831744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_425
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6bee1fabd2acf40bfbd05f45d89898
+      internalID: 167003974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_428
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3f75c8b366f72418e0004371dadedc
+      internalID: -1243428752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_443
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4587223fed97dd4795df3ad9762865f
+      internalID: 2040695318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_452
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a4a1083307d7042b25922145ea00dc
+      internalID: -1290647451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_453
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eaebff6fa9f2b64592238bebc515db7
+      internalID: -1010726224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_634
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb6b47abc9045544aade63c462c4c6e
+      internalID: -802944658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_644
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e4cdf1d2b2d074b89ef8ffdbdc3a6f
+      internalID: 2045756554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_660
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb75cc3561222b429c8028528fccc16
+      internalID: 1574084211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_688
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba636db897563bf408e65de1191acf08
+      internalID: -1912417065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_689
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a538fe649e8fab54a811407bffa3d927
+      internalID: -1553656370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_728
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e200a74a524d5489a96a6d60c0faa9
+      internalID: -1081674211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_729
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb27e2af4a45314688e5b282b55a4b0
+      internalID: -57956943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_790
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 640
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18fae865fdf0254cb8d53fd4aa7c741
+      internalID: -2097251166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_829
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 624
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2447f70471de7a1429c945dac0c463c1
+      internalID: -1670654157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_875
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 608
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b5710c833a4f74e9a7dca6bace33c9
+      internalID: -201579508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_889
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 592
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9025e14b442621d459aabd2c48f94fb6
+      internalID: -1457388724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_909
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 592
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9104f54d7a10f6d42854dd520eff9824
+      internalID: 204839672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_923
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 576
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037f9fe407abd1441a8f0f22106bcc51
+      internalID: 2001055404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_924
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 576
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446cb9aef8180ec4e9ad734999de578e
+      internalID: 163746612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_927
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 576
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a44b23f546aeb14f98d7b336ad7a772
+      internalID: 1830029180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_996
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 560
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88cb5906222afcf48b3b97ee1fd7c5c4
+      internalID: 1398717507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_999
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 560
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80b206c83d1fd441abf050ede853a47
+      internalID: -1339496287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1000
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 544
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a7ef6afcd5ecf4986b326d6bb89b29
+      internalID: 309464097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_997
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 560
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2cfc0dd78317441aa8c89e30503a09
+      internalID: -694401479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1227
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e14496360a5e5f489f853f7c813e9ac
+      internalID: -871977361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1228
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb99f544a9187443a839b4dd7b290a4
+      internalID: -30079993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1542
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cbadadf1ddce745b0b82e7271e905e
+      internalID: 12788652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1615
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d9ff621c3b7c842a475d75f2913838
+      internalID: -1084044599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1616
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a9775c3211d7b4784e5a6475bf561e
+      internalID: 2006329359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1620
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373b8a6bd028a844489296d4d078970f
+      internalID: 879361555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1655
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740f015946c477243bfc488c72d53e8d
+      internalID: 43797863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1660
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: debce0b3d7dd51745967daba1a63aa41
+      internalID: -1411926500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1735
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f33641da238aa4886ca66af41a5d25
+      internalID: 1234203073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1740
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9d71d888851924188d85c51a460464
+      internalID: -519505026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_1933
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c29ed623e750145aab9d6c750a61c3
+      internalID: -1855384331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2066
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58a0311574fd2f4185bf551e477d3bc
+      internalID: 999394938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2067
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a912f75d50c5d9143baa97595eafc206
+      internalID: -1832201699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2068
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d5f85dd708ed148ab41e1b4ccc29e4
+      internalID: 725939973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2106
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97cc979d0151bda488e9b348e169c361
+      internalID: -1861647749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2107
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fa392c24098d549b3114187e2e0cb5
+      internalID: 83049390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2108
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40be45d39e42f25488b6921f2ca4831c
+      internalID: 1107052863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2146
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2986e512473e9e4996e4de4db6453ea
+      internalID: -2102469180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2147
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d0fa45e8ba37a46b42a54ddfff5f43
+      internalID: 1360348512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2148
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d81b7fa6f3615041b731d0d72ccdcad
+      internalID: -674534677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2251
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea369a2baef48b46af32aeb4527ad46
+      internalID: -930455235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2256
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f4d118f399dc146b9a6271177d1d35
+      internalID: -898903817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2257
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4aa75b9114e434f8cc2fab22ac3456
+      internalID: 1248415507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2258
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1d8ab24a6d08c45940ef77165ecf91
+      internalID: 946158312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2296
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9e605260e29404dbcbaa6e5b23234f
+      internalID: -1966058565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2297
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018f8574c025deb43a3a6902b085faf0
+      internalID: 1031340488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2298
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8743bd1c2718eae45a8c9c37a133e684
+      internalID: 873485441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2321
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d147960fc9f5544ba03d3fa4a13eee
+      internalID: -548775248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2327
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4549bb2bf105fd4b88ef24e569cff3f
+      internalID: 1953451782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2328
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8fac57f12431c4cb831f24603b142c
+      internalID: 913282283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2336
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac0a1fa456d6ff44aeacf6183baf2ab
+      internalID: 1149238253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2337
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950bc7c7c86b35744a36fc6f86708952
+      internalID: -1776944011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavetiles_2338
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b2419dfad647b428c0e8147af7acb8
+      internalID: 1737092099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f07a5cb31551bf14c907c517735a6857
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cavetiles_0: -205404686831204125
+      cavetiles_1: -492245653
+      cavetiles_10: -1269710865
+      cavetiles_100: -1875500240
+      cavetiles_1000: 309464097
+      cavetiles_1001: 700668505
+      cavetiles_1002: -1910848470
+      cavetiles_1003: -253595311
+      cavetiles_1004: 1272196646
+      cavetiles_1005: 255574212
+      cavetiles_1006: -496864732
+      cavetiles_1007: 809727454
+      cavetiles_1008: 1475390511
+      cavetiles_1009: -466585994
+      cavetiles_101: 1195121264
+      cavetiles_1010: 1167580903
+      cavetiles_1011: -1873236318
+      cavetiles_1012: 1000192307
+      cavetiles_1013: -36645315
+      cavetiles_1014: -2017618887
+      cavetiles_1015: -884107099
+      cavetiles_1016: -133701340
+      cavetiles_1017: -1953579308
+      cavetiles_1018: -1932751712
+      cavetiles_1019: 254533985
+      cavetiles_102: -964352458
+      cavetiles_1020: -1706844784
+      cavetiles_1021: -1612557998
+      cavetiles_1022: -653795601
+      cavetiles_1023: -2079451608
+      cavetiles_1024: -324097367
+      cavetiles_1025: -1798866890
+      cavetiles_1026: -181204646
+      cavetiles_1027: 269310352
+      cavetiles_1028: 297017706
+      cavetiles_1029: 1504201194
+      cavetiles_103: 332049691
+      cavetiles_1030: 1876934875
+      cavetiles_1031: -1401861330
+      cavetiles_1032: -1537021064
+      cavetiles_1033: -1150097174
+      cavetiles_1034: 1876115857
+      cavetiles_1035: -639171303
+      cavetiles_1036: -731028471
+      cavetiles_1037: 57405215
+      cavetiles_1038: 1841915790
+      cavetiles_1039: 1112255929
+      cavetiles_104: 773345454
+      cavetiles_1040: 679233277
+      cavetiles_1041: -830631607
+      cavetiles_1042: -2029876546
+      cavetiles_1043: -1041652630
+      cavetiles_1044: -1452947210
+      cavetiles_1045: 1841988539
+      cavetiles_1046: 519157254
+      cavetiles_1047: -327356
+      cavetiles_1048: -1443009827
+      cavetiles_1049: -1156805626
+      cavetiles_105: -1843268398
+      cavetiles_1050: 1353950112
+      cavetiles_1051: 655451129
+      cavetiles_1052: -1324802164
+      cavetiles_1053: 1389705910
+      cavetiles_1054: -1527619519
+      cavetiles_1055: -197337627
+      cavetiles_1056: 1506844843
+      cavetiles_1057: -413080172
+      cavetiles_1058: -96354011
+      cavetiles_1059: 498281419
+      cavetiles_106: 970727807
+      cavetiles_1060: -320575342
+      cavetiles_1061: -184025391
+      cavetiles_1062: -1071020919
+      cavetiles_1063: -1055406870
+      cavetiles_1064: 1507495106
+      cavetiles_1065: -707774985
+      cavetiles_1066: 74321184
+      cavetiles_1067: 191515733
+      cavetiles_1068: -170514071
+      cavetiles_1069: 623403669
+      cavetiles_107: -1389784403
+      cavetiles_1070: 680469424
+      cavetiles_1071: 595989989
+      cavetiles_1072: 304119694
+      cavetiles_1073: -1042643401
+      cavetiles_1074: -1904447314
+      cavetiles_1075: -1498617709
+      cavetiles_1076: -2086484728
+      cavetiles_1077: -1370589703
+      cavetiles_1078: -794781636
+      cavetiles_1079: 1847083123
+      cavetiles_108: 519720705
+      cavetiles_1080: -524348778
+      cavetiles_1081: 1433659183
+      cavetiles_1082: -272538634
+      cavetiles_1083: -1985930522
+      cavetiles_1084: -1602505622
+      cavetiles_1085: -1945897589
+      cavetiles_1086: 1696630672
+      cavetiles_1087: -190254331
+      cavetiles_1088: -32057978
+      cavetiles_1089: 931328661
+      cavetiles_109: -1412233567
+      cavetiles_1090: 1189933590
+      cavetiles_1091: -873146063
+      cavetiles_1092: -1891164259
+      cavetiles_1093: -135597591
+      cavetiles_1094: 1539602599
+      cavetiles_1095: 742648695
+      cavetiles_1096: 1932938338
+      cavetiles_1097: -244554468
+      cavetiles_1098: -1954241142
+      cavetiles_1099: 857074627
+      cavetiles_11: -489265572
+      cavetiles_110: -410221559
+      cavetiles_1100: 165916182
+      cavetiles_1101: -1174642635
+      cavetiles_1102: -35955692
+      cavetiles_1103: 1568704206
+      cavetiles_1104: -607078939
+      cavetiles_1105: -915113219
+      cavetiles_1106: 213030297
+      cavetiles_1107: -388465774
+      cavetiles_1108: -1972881062
+      cavetiles_1109: -841102058
+      cavetiles_111: -723116666
+      cavetiles_1110: -1793793532
+      cavetiles_1111: -522362129
+      cavetiles_1112: 923333711
+      cavetiles_1113: 1239341705
+      cavetiles_1114: -1529971427
+      cavetiles_1115: 1590900548
+      cavetiles_1116: 46638130
+      cavetiles_1117: -1678120753
+      cavetiles_1118: -1771159203
+      cavetiles_1119: 1899860878
+      cavetiles_112: 75644083
+      cavetiles_1120: 2110135297
+      cavetiles_1121: -630865826
+      cavetiles_1122: -1509135170
+      cavetiles_1123: -1501201195
+      cavetiles_1124: 1398587975
+      cavetiles_1125: -1147546364
+      cavetiles_1126: 1549961969
+      cavetiles_1127: 255644969
+      cavetiles_1128: 2043940268
+      cavetiles_1129: -1885398235
+      cavetiles_113: -1909665035
+      cavetiles_1130: 706675564
+      cavetiles_1131: -1262429148
+      cavetiles_1132: 1355755888
+      cavetiles_1133: 1649259102
+      cavetiles_1134: 1705383400
+      cavetiles_1135: -334133118
+      cavetiles_1136: -1973232896
+      cavetiles_1137: -1499967693
+      cavetiles_1138: -1327284591
+      cavetiles_1139: 29422843
+      cavetiles_114: 97105526
+      cavetiles_1140: -505784582
+      cavetiles_1141: -1000426345
+      cavetiles_1142: -573035540
+      cavetiles_1143: 947999659
+      cavetiles_1144: 635752818
+      cavetiles_1145: -1196921305
+      cavetiles_1146: -332229222
+      cavetiles_1147: 1065117712
+      cavetiles_1148: -932666929
+      cavetiles_1149: -728771838
+      cavetiles_1150: 1980581555
+      cavetiles_1152: 1868105452
+      cavetiles_1153: 1354329939
+      cavetiles_1154: 1512972964
+      cavetiles_1155: -853437320
+      cavetiles_1156: -861415335
+      cavetiles_1157: -544233491
+      cavetiles_1158: 417964225
+      cavetiles_1159: 1020190179
+      cavetiles_116: 1851151501
+      cavetiles_1160: 827395230
+      cavetiles_1161: -101482120
+      cavetiles_1162: 14547196
+      cavetiles_1163: 989780805
+      cavetiles_1164: 2117150028
+      cavetiles_1165: -580726513
+      cavetiles_1166: -199894631
+      cavetiles_1167: -1332225669
+      cavetiles_1168: 2055947585
+      cavetiles_1169: -1582739499
+      cavetiles_117: 942635974
+      cavetiles_1170: -2018941940
+      cavetiles_1171: 1855957202
+      cavetiles_1172: 892939112
+      cavetiles_1173: -152997290
+      cavetiles_1174: 1677418171
+      cavetiles_1175: -1563308314
+      cavetiles_1176: -932708338
+      cavetiles_1177: 1365283003
+      cavetiles_1178: 1959891186
+      cavetiles_1179: 1225034664
+      cavetiles_118: 1132307025
+      cavetiles_1180: -582826097
+      cavetiles_1181: -1760875146
+      cavetiles_1182: -885874787
+      cavetiles_1183: -38827971
+      cavetiles_1184: 868960627
+      cavetiles_1185: 1780894784
+      cavetiles_1186: -1610542373
+      cavetiles_1187: 1557050990
+      cavetiles_1188: -1071054496
+      cavetiles_1189: 144068152
+      cavetiles_119: -1858293202
+      cavetiles_1190: 712734076
+      cavetiles_1191: 2141471755
+      cavetiles_1192: 1701304917
+      cavetiles_1193: -293544826
+      cavetiles_1194: -716280265
+      cavetiles_1195: -2084850318
+      cavetiles_1196: -57404744
+      cavetiles_1197: 230131503
+      cavetiles_1198: 1546096057
+      cavetiles_1199: 1254801680
+      cavetiles_12: -276457443
+      cavetiles_120: 1602787953
+      cavetiles_1200: 787241435
+      cavetiles_1201: -703750079
+      cavetiles_1202: 967505925
+      cavetiles_1203: 463605862
+      cavetiles_1204: 1049223200
+      cavetiles_1205: 922759252
+      cavetiles_1206: 244445500
+      cavetiles_1207: 2093474911
+      cavetiles_1208: 2114987971
+      cavetiles_1209: 85089009
+      cavetiles_121: -1460267540
+      cavetiles_1210: 1850784036
+      cavetiles_1211: 1615864863
+      cavetiles_1212: 1635368302
+      cavetiles_1213: 398987620
+      cavetiles_1214: 1743006975
+      cavetiles_1215: 18285046
+      cavetiles_1216: -508095902
+      cavetiles_1217: 541785422
+      cavetiles_1218: -1683102564
+      cavetiles_1219: -1261926083
+      cavetiles_122: 402253602
+      cavetiles_1220: -1143414409
+      cavetiles_1221: -1612130721
+      cavetiles_1222: 225269030
+      cavetiles_1223: 4657852
+      cavetiles_1224: -526617149
+      cavetiles_1225: -2088304630
+      cavetiles_1226: 21047424
+      cavetiles_1227: -871977361
+      cavetiles_1228: -30079993
+      cavetiles_1229: -1745511151
+      cavetiles_123: 462895285
+      cavetiles_1230: 972120131
+      cavetiles_1231: -324595554
+      cavetiles_1232: 2071157287
+      cavetiles_1233: -766809695
+      cavetiles_1234: 951188798
+      cavetiles_1235: 108483085
+      cavetiles_1236: -1775134791
+      cavetiles_1237: 124772604
+      cavetiles_1238: 1323710737
+      cavetiles_1239: 325052465
+      cavetiles_124: 1161521338
+      cavetiles_1240: 1923236916
+      cavetiles_1241: -1963447101
+      cavetiles_1242: 1251265025
+      cavetiles_1243: -763457026
+      cavetiles_1244: 252149751
+      cavetiles_1245: 1464876585
+      cavetiles_1246: -941113860
+      cavetiles_1247: -748481418
+      cavetiles_1248: -587471509
+      cavetiles_1249: -64499408
+      cavetiles_125: -788367823
+      cavetiles_1250: -2009426630
+      cavetiles_1251: -2033547502
+      cavetiles_1252: 451212309
+      cavetiles_1253: -1362592408
+      cavetiles_1254: 1299637621
+      cavetiles_1255: -2141404594
+      cavetiles_1256: 1874761913
+      cavetiles_1257: 426782107
+      cavetiles_1258: 1035894922
+      cavetiles_1259: 246802705
+      cavetiles_126: -64722070
+      cavetiles_1260: 1112730001
+      cavetiles_1261: -1972926627
+      cavetiles_1262: 1576056335
+      cavetiles_1263: -1768652064
+      cavetiles_1264: 1491278358
+      cavetiles_1265: 1632414906
+      cavetiles_1266: 1611291053
+      cavetiles_1267: 1312805957
+      cavetiles_1268: 1754324295
+      cavetiles_1269: -2051669696
+      cavetiles_127: -1460678519
+      cavetiles_1270: 355021996
+      cavetiles_1271: 356289293
+      cavetiles_1272: -555235952
+      cavetiles_1273: -1843291034
+      cavetiles_1274: -588410793
+      cavetiles_1275: 1277449988
+      cavetiles_1276: 1803015691
+      cavetiles_1277: 676828184
+      cavetiles_1278: 1068634271
+      cavetiles_1279: -1477200961
+      cavetiles_128: 867145631
+      cavetiles_1280: -1664314948
+      cavetiles_1281: -265594982
+      cavetiles_1282: -188624809
+      cavetiles_1283: 582322847
+      cavetiles_1284: -1956975073
+      cavetiles_1285: -1350195294
+      cavetiles_1286: 995465560
+      cavetiles_1287: -985673304
+      cavetiles_1288: -940012018
+      cavetiles_1289: -1490446819
+      cavetiles_129: 958866610
+      cavetiles_1290: 1596349537
+      cavetiles_1291: 484864818
+      cavetiles_1292: 447150220
+      cavetiles_1293: -1497775136
+      cavetiles_1294: -1893822375
+      cavetiles_1295: -323278955
+      cavetiles_1296: 636811491
+      cavetiles_1297: 1059801896
+      cavetiles_1298: -489763842
+      cavetiles_1299: 1067025330
+      cavetiles_13: 291638832
+      cavetiles_130: -782686672
+      cavetiles_1300: 1366347842
+      cavetiles_1301: -468963588
+      cavetiles_1302: -1331290711
+      cavetiles_1303: 2096515180
+      cavetiles_1304: -1849008409
+      cavetiles_1305: -55221746
+      cavetiles_1306: 817497411
+      cavetiles_1307: -76756414
+      cavetiles_1308: -776606269
+      cavetiles_1309: -2063487467
+      cavetiles_131: -1422682815
+      cavetiles_1310: -1925704353
+      cavetiles_1311: -1145950614
+      cavetiles_1312: -300566649
+      cavetiles_1313: -914834228
+      cavetiles_1314: 201053746
+      cavetiles_1315: -603901482
+      cavetiles_1316: -1595379618
+      cavetiles_1317: -2028320649
+      cavetiles_1318: 1269530113
+      cavetiles_1319: -1320084239
+      cavetiles_132: 1065190583
+      cavetiles_1320: 90735469
+      cavetiles_1321: 1430718724
+      cavetiles_1322: 793453530
+      cavetiles_1323: 247067138
+      cavetiles_1324: 970088228
+      cavetiles_1325: -1643144579
+      cavetiles_1326: 413732415
+      cavetiles_1327: -1790613420
+      cavetiles_1328: -801180488
+      cavetiles_1329: 1677793879
+      cavetiles_133: 1062875588
+      cavetiles_1330: -1784264035
+      cavetiles_1331: -1331509415
+      cavetiles_1332: -946859748
+      cavetiles_1333: 439857939
+      cavetiles_1334: -569570023
+      cavetiles_1335: -694591110
+      cavetiles_1336: 207155292
+      cavetiles_1337: -1275397149
+      cavetiles_1338: -130339226
+      cavetiles_1339: 1479224059
+      cavetiles_134: 1028530943
+      cavetiles_1340: -733075824
+      cavetiles_1341: 194023437
+      cavetiles_1342: 746952903
+      cavetiles_1343: 1373130132
+      cavetiles_1344: 789135306
+      cavetiles_1345: -1542156887
+      cavetiles_1346: 1644530533
+      cavetiles_1347: -1259687643
+      cavetiles_1348: 103035231
+      cavetiles_1349: 1415826464
+      cavetiles_135: 756128776
+      cavetiles_1350: -1979291570
+      cavetiles_1351: -20015453
+      cavetiles_1352: 310812992
+      cavetiles_1353: 763229840
+      cavetiles_1354: -1546503264
+      cavetiles_1355: 623707338
+      cavetiles_1356: 1012673924
+      cavetiles_1357: 1326439094
+      cavetiles_1358: 67217679
+      cavetiles_1359: -322585402
+      cavetiles_136: -1776203464
+      cavetiles_1360: -1154198732
+      cavetiles_1361: 2044516278
+      cavetiles_1362: 231328288
+      cavetiles_1363: 1425030283
+      cavetiles_1364: -512106902
+      cavetiles_1365: -1911511213
+      cavetiles_1366: -148300581
+      cavetiles_1367: 2109431998
+      cavetiles_1368: -1416692556
+      cavetiles_1369: 1479101780
+      cavetiles_137: -933411073
+      cavetiles_1370: -2073944959
+      cavetiles_1371: -90016574
+      cavetiles_1372: -1636453729
+      cavetiles_1373: 326497107
+      cavetiles_1374: 1044433370
+      cavetiles_1375: -1108886489
+      cavetiles_1376: -1870839197
+      cavetiles_1377: -1383838062
+      cavetiles_1378: 281303275
+      cavetiles_1379: -158025470
+      cavetiles_138: 9719039
+      cavetiles_1380: 927375393
+      cavetiles_1381: -1838191097
+      cavetiles_1382: 1965259579
+      cavetiles_1383: 1065470386
+      cavetiles_1384: -169628463
+      cavetiles_1385: -1435733564
+      cavetiles_1386: 1022721967
+      cavetiles_1387: 1823555094
+      cavetiles_1388: 177663067
+      cavetiles_1389: -1958776050
+      cavetiles_139: -1849385114
+      cavetiles_1390: 1582468592
+      cavetiles_1391: -180590864
+      cavetiles_1392: -929168314
+      cavetiles_1393: -851393235
+      cavetiles_1394: -2097119766
+      cavetiles_1395: -823921443
+      cavetiles_1396: -724655082
+      cavetiles_1397: -161375374
+      cavetiles_1398: -388062148
+      cavetiles_1399: -542972060
+      cavetiles_14: -1126389320
+      cavetiles_140: 813357181
+      cavetiles_1400: 901338522
+      cavetiles_1401: -1973219932
+      cavetiles_1402: -204891169
+      cavetiles_1403: 1149912485
+      cavetiles_1404: -596721849
+      cavetiles_1405: 1848310630
+      cavetiles_1406: -612663487
+      cavetiles_1407: 724526951
+      cavetiles_1408: -36847074
+      cavetiles_1409: -94348133
+      cavetiles_141: 324736940
+      cavetiles_1410: -1644229973
+      cavetiles_1411: -730082161
+      cavetiles_1412: 866978613
+      cavetiles_1413: 1437136464
+      cavetiles_1414: -1508773945
+      cavetiles_1415: 1697229069
+      cavetiles_1416: -570138322
+      cavetiles_1417: 1323456641
+      cavetiles_1418: 1311598782
+      cavetiles_1419: 1954395714
+      cavetiles_142: -1987095237
+      cavetiles_1420: -1803188387
+      cavetiles_1421: -601158865
+      cavetiles_1422: 415640601
+      cavetiles_1423: -1552564383
+      cavetiles_1424: 476375621
+      cavetiles_1425: 934891706
+      cavetiles_1426: 2133212201
+      cavetiles_1427: -1142901786
+      cavetiles_1428: -1046670552
+      cavetiles_1429: -135968451
+      cavetiles_143: 823047707
+      cavetiles_1430: 346820028
+      cavetiles_1431: -679172778
+      cavetiles_1432: -207661972
+      cavetiles_1433: -699908006
+      cavetiles_1434: -1719638557
+      cavetiles_1435: -89270323
+      cavetiles_1436: 341614189
+      cavetiles_1437: 949509659
+      cavetiles_1438: -1565587047
+      cavetiles_1439: 742753347
+      cavetiles_144: -1045425122
+      cavetiles_1440: 1164922450
+      cavetiles_1441: -1105823882
+      cavetiles_1442: 2045484186
+      cavetiles_1443: -373646984
+      cavetiles_1444: 1684447486
+      cavetiles_1445: -1741274874
+      cavetiles_1446: -1512603368
+      cavetiles_1447: 896229830
+      cavetiles_1448: 1889730422
+      cavetiles_1449: 1522061
+      cavetiles_145: -1621914272
+      cavetiles_1450: -1776265249
+      cavetiles_1451: -255606754
+      cavetiles_1452: -1777828260
+      cavetiles_1453: -1433641456
+      cavetiles_1454: -1280413245
+      cavetiles_1455: 604622891
+      cavetiles_1456: 1131056119
+      cavetiles_1457: 117831658
+      cavetiles_1458: 2089002949
+      cavetiles_1459: 1429541498
+      cavetiles_146: -1466053277
+      cavetiles_1460: 839201112
+      cavetiles_1461: 594333309
+      cavetiles_1462: -540357677
+      cavetiles_1463: 1899192880
+      cavetiles_1464: -1777804493
+      cavetiles_1465: 1283347353
+      cavetiles_1466: 1070949704
+      cavetiles_1467: 1317464497
+      cavetiles_1468: 1600094064
+      cavetiles_1469: 666975735
+      cavetiles_147: 1600134601
+      cavetiles_1470: -1850046672
+      cavetiles_1471: -1816186553
+      cavetiles_1472: -2069973543
+      cavetiles_1473: 1870705682
+      cavetiles_1474: 1666460616
+      cavetiles_1475: 1089211816
+      cavetiles_1476: -1493997911
+      cavetiles_1477: 1313349134
+      cavetiles_1478: 1798876763
+      cavetiles_1479: 181512352
+      cavetiles_148: -414864039
+      cavetiles_1480: -1293807653
+      cavetiles_1481: -1386453946
+      cavetiles_1482: 1135817309
+      cavetiles_1483: 1281974479
+      cavetiles_1484: -1357797869
+      cavetiles_1485: 572127073
+      cavetiles_1486: -1222448992
+      cavetiles_1487: 1201494775
+      cavetiles_1488: -1239202779
+      cavetiles_1489: 950231074
+      cavetiles_149: 1059927331
+      cavetiles_1490: 2053422695
+      cavetiles_1491: -1408939070
+      cavetiles_1492: -273325081
+      cavetiles_1493: -1481012321
+      cavetiles_1494: 948838771
+      cavetiles_1495: -318993574
+      cavetiles_1496: 1146661764
+      cavetiles_1497: -1514250473
+      cavetiles_1498: -572775447
+      cavetiles_1499: 1136329943
+      cavetiles_15: 2138134939
+      cavetiles_150: -648585908
+      cavetiles_1500: 669602108
+      cavetiles_1501: -1365933344
+      cavetiles_1502: -9818903
+      cavetiles_1503: 1299564205
+      cavetiles_1504: -974520569
+      cavetiles_1505: -74289319
+      cavetiles_1506: 828631179
+      cavetiles_1507: -629756765
+      cavetiles_1508: 1316385900
+      cavetiles_1509: -897265807
+      cavetiles_151: 1147562744
+      cavetiles_1510: -1952400587
+      cavetiles_1511: 1772401371
+      cavetiles_1512: -74876136
+      cavetiles_1513: -1812290807
+      cavetiles_1514: -106959608
+      cavetiles_1515: -1880769410
+      cavetiles_1516: -662322856
+      cavetiles_1517: 1206746618
+      cavetiles_1518: 25443637
+      cavetiles_1519: -175669520
+      cavetiles_152: -1395450058
+      cavetiles_1520: 880360747
+      cavetiles_1521: -427552404
+      cavetiles_1522: 80178785
+      cavetiles_1523: 942061391
+      cavetiles_1524: -838882163
+      cavetiles_1525: 890866374
+      cavetiles_1526: 361856930
+      cavetiles_1527: -1879946481
+      cavetiles_1528: 1355686146
+      cavetiles_1529: -1506749267
+      cavetiles_153: 229425081
+      cavetiles_1530: 1025974739
+      cavetiles_1531: -190606691
+      cavetiles_1532: -1358825973
+      cavetiles_1533: -1039338239
+      cavetiles_1534: -605679327
+      cavetiles_1535: 1857937365
+      cavetiles_1536: 2028518073
+      cavetiles_1537: -509683991
+      cavetiles_1538: -1951856245
+      cavetiles_1539: -860109534
+      cavetiles_154: 1689663993
+      cavetiles_1540: 779803351
+      cavetiles_1541: 649467826
+      cavetiles_1542: 12788652
+      cavetiles_1543: 1431343001
+      cavetiles_1544: 1967842278
+      cavetiles_1545: 573323892
+      cavetiles_1546: 572633355
+      cavetiles_1547: 276286286
+      cavetiles_1548: -1698277919
+      cavetiles_1549: -154820326
+      cavetiles_155: 947837823
+      cavetiles_1550: 2126543582
+      cavetiles_1551: 374513907
+      cavetiles_1552: 84432190
+      cavetiles_1553: -1361830573
+      cavetiles_1554: 441758198
+      cavetiles_1555: 1034285686
+      cavetiles_1556: 2031929363
+      cavetiles_1557: 543795465
+      cavetiles_1558: -1148170650
+      cavetiles_1559: 1439179550
+      cavetiles_156: -2119185675
+      cavetiles_1560: -1969313966
+      cavetiles_1561: 1247275100
+      cavetiles_1562: 615976358
+      cavetiles_1563: -242747623
+      cavetiles_1564: 290552083
+      cavetiles_1565: 1238825012
+      cavetiles_1566: -338418690
+      cavetiles_1567: -1035199784
+      cavetiles_1568: 1337280943
+      cavetiles_1569: 2040536023
+      cavetiles_157: 327907726
+      cavetiles_1570: -610581311
+      cavetiles_1571: 868611090
+      cavetiles_1572: -489614135
+      cavetiles_1573: 1897675477
+      cavetiles_1574: -1796292792
+      cavetiles_1575: -242652104
+      cavetiles_1576: 302867183
+      cavetiles_1577: 986709545
+      cavetiles_1578: 63704288
+      cavetiles_1579: 1626592863
+      cavetiles_158: 366101727
+      cavetiles_1580: -2099018646
+      cavetiles_1581: -1962056097
+      cavetiles_1582: -950380105
+      cavetiles_1583: -30146679
+      cavetiles_1584: 936450821
+      cavetiles_1585: -997684589
+      cavetiles_1586: -1640958725
+      cavetiles_1587: -1824027303
+      cavetiles_1588: 200072269
+      cavetiles_1589: -1694941301
+      cavetiles_159: 551305123
+      cavetiles_1590: 134110409
+      cavetiles_1591: 569917863
+      cavetiles_1592: -2102492354
+      cavetiles_1593: -540235514
+      cavetiles_1594: 2113272231
+      cavetiles_1595: 1965963819
+      cavetiles_1596: 1543905582
+      cavetiles_1597: -624023857
+      cavetiles_1598: 926908981
+      cavetiles_1599: 342007576
+      cavetiles_16: -1012960148
+      cavetiles_160: 1421551850
+      cavetiles_1600: -843878455
+      cavetiles_1601: 1520361428
+      cavetiles_1602: 414057777
+      cavetiles_1603: -1211665653
+      cavetiles_1604: -1920816149
+      cavetiles_1605: -45561607
+      cavetiles_1606: 1187705562
+      cavetiles_1607: 954490062
+      cavetiles_1608: -494723730
+      cavetiles_1609: -1882518660
+      cavetiles_161: -1053075261
+      cavetiles_1610: 813478853
+      cavetiles_1611: 1778717973
+      cavetiles_1612: -247549377
+      cavetiles_1613: -1610907276
+      cavetiles_1614: -1212322856
+      cavetiles_1615: -1084044599
+      cavetiles_1616: 2006329359
+      cavetiles_1617: -1438733208
+      cavetiles_1618: 1337957171
+      cavetiles_1619: -912598284
+      cavetiles_162: 335136067
+      cavetiles_1620: 879361555
+      cavetiles_1621: 878930105
+      cavetiles_1622: -30211494
+      cavetiles_1623: 285714339
+      cavetiles_1624: 980641813
+      cavetiles_1625: -14788286
+      cavetiles_1626: 2030764893
+      cavetiles_1627: 254986428
+      cavetiles_1628: 811173789
+      cavetiles_1629: 1806535616
+      cavetiles_163: 909997962
+      cavetiles_1630: 467564006
+      cavetiles_1631: 1945540103
+      cavetiles_1632: 987857965
+      cavetiles_1633: 1280796292
+      cavetiles_1634: 62858131
+      cavetiles_1635: -1348066120
+      cavetiles_1636: -510252627
+      cavetiles_1637: 2072308362
+      cavetiles_1638: -1086830835
+      cavetiles_1639: 114635895
+      cavetiles_164: -1480211905
+      cavetiles_1640: 1019959227
+      cavetiles_1641: -1611135601
+      cavetiles_1642: -1552600276
+      cavetiles_1643: 960052483
+      cavetiles_1644: -2136999346
+      cavetiles_1645: 920193781
+      cavetiles_1646: -2092247341
+      cavetiles_1647: -103418934
+      cavetiles_1648: 2091805536
+      cavetiles_1649: -1759212566
+      cavetiles_165: 825489181
+      cavetiles_1650: -1968174291
+      cavetiles_1651: -122123583
+      cavetiles_1652: -1800165767
+      cavetiles_1653: 2140577408
+      cavetiles_1654: 585983704
+      cavetiles_1655: 43797863
+      cavetiles_1656: -919748299
+      cavetiles_1657: 1704467990
+      cavetiles_1658: -444604229
+      cavetiles_1659: -1442073716
+      cavetiles_166: 1357944712
+      cavetiles_1660: -1411926500
+      cavetiles_1661: -1350145804
+      cavetiles_1662: -734341897
+      cavetiles_1663: -877085153
+      cavetiles_1664: 784734733
+      cavetiles_1665: 249023024
+      cavetiles_1666: 1643269303
+      cavetiles_1667: 1882333455
+      cavetiles_1668: 1992459256
+      cavetiles_1669: -198786081
+      cavetiles_167: -1574038498
+      cavetiles_1670: 997947995
+      cavetiles_1671: -1956743781
+      cavetiles_1672: 1241025342
+      cavetiles_1673: 141505116
+      cavetiles_1674: -1684634208
+      cavetiles_1675: 1907411869
+      cavetiles_1676: 1036056078
+      cavetiles_1677: 106434711
+      cavetiles_1678: 215249106
+      cavetiles_1679: 1796663820
+      cavetiles_168: -2097482664
+      cavetiles_1680: 347721706
+      cavetiles_1681: 649787506
+      cavetiles_1682: -829265572
+      cavetiles_1683: 901030004
+      cavetiles_1684: 1570219368
+      cavetiles_1685: 1027878356
+      cavetiles_1686: -1508372754
+      cavetiles_1687: -1752214346
+      cavetiles_1688: -1399286025
+      cavetiles_1689: 1820782041
+      cavetiles_169: 1944937482
+      cavetiles_1690: -136656736
+      cavetiles_1691: -184687801
+      cavetiles_1692: 1953538404
+      cavetiles_1693: 1372857207
+      cavetiles_1694: 631710968
+      cavetiles_1695: -1631297671
+      cavetiles_1696: -63477185
+      cavetiles_1697: -1600970364
+      cavetiles_1698: -353285900
+      cavetiles_1699: 465643880
+      cavetiles_17: 1301460732
+      cavetiles_170: -1466750936
+      cavetiles_1700: 1806118438
+      cavetiles_1701: -207389832
+      cavetiles_1702: 1747407102
+      cavetiles_1703: 986536942
+      cavetiles_1704: -1523027648
+      cavetiles_1705: 317909311
+      cavetiles_1706: 607099628
+      cavetiles_1707: -230562294
+      cavetiles_1708: -864548757
+      cavetiles_1709: 827082523
+      cavetiles_171: 1491074491
+      cavetiles_1710: -1852672487
+      cavetiles_1711: -1835647925
+      cavetiles_1712: -6330780
+      cavetiles_1713: 1677035907
+      cavetiles_1714: 1651060569
+      cavetiles_1715: -633839248
+      cavetiles_1716: -300728656
+      cavetiles_1717: 1321669479
+      cavetiles_1718: -721428311
+      cavetiles_1719: 908622794
+      cavetiles_172: 1578558842
+      cavetiles_1720: 1593964132
+      cavetiles_1721: -1753096276
+      cavetiles_1722: -125208887
+      cavetiles_1723: 999339092
+      cavetiles_1724: -1806398904
+      cavetiles_1725: 574181378
+      cavetiles_1726: 2085438030
+      cavetiles_1727: -309816088
+      cavetiles_1728: 1107604627
+      cavetiles_1729: 1958028368
+      cavetiles_173: 527206208
+      cavetiles_1730: -1838304860
+      cavetiles_1731: 1451091909
+      cavetiles_1732: -1810455445
+      cavetiles_1733: -445468635
+      cavetiles_1734: -1263210152
+      cavetiles_1735: 1234203073
+      cavetiles_1736: 631048125
+      cavetiles_1737: -2132090825
+      cavetiles_1738: 1763224855
+      cavetiles_1739: -699141425
+      cavetiles_174: 683946811
+      cavetiles_1740: -519505026
+      cavetiles_1741: 101158953
+      cavetiles_1742: -314543303
+      cavetiles_1743: -1698483501
+      cavetiles_1744: 257292389
+      cavetiles_1745: 491984869
+      cavetiles_1746: 181206031
+      cavetiles_1747: -711015815
+      cavetiles_1748: -1369718278
+      cavetiles_1749: -1796036897
+      cavetiles_175: -173630624
+      cavetiles_1750: 1318300260
+      cavetiles_1751: -483780834
+      cavetiles_1752: -686804038
+      cavetiles_1753: 1077516944
+      cavetiles_1754: 1996928272
+      cavetiles_1755: 1167672189
+      cavetiles_1756: 1202804667
+      cavetiles_1757: 1189431053
+      cavetiles_1758: 1128453937
+      cavetiles_1759: -919618526
+      cavetiles_176: 948135422
+      cavetiles_1760: -759262708
+      cavetiles_1761: 1211853194
+      cavetiles_1762: -17005883
+      cavetiles_1763: -2023396074
+      cavetiles_1764: -1036193706
+      cavetiles_1765: 1806107092
+      cavetiles_1766: -1902886189
+      cavetiles_1767: -928599949
+      cavetiles_1768: 1195508898
+      cavetiles_1769: -1723426049
+      cavetiles_177: -64855404
+      cavetiles_1770: -331611573
+      cavetiles_1771: -1833587433
+      cavetiles_1772: -890180276
+      cavetiles_1773: 1175281387
+      cavetiles_1774: -1761959256
+      cavetiles_1775: 1499132802
+      cavetiles_1776: -2029597225
+      cavetiles_1777: 106402256
+      cavetiles_1778: -609744261
+      cavetiles_1779: 1965671517
+      cavetiles_178: 1626376819
+      cavetiles_1780: -36523496
+      cavetiles_1781: -1914319688
+      cavetiles_1782: 96358652
+      cavetiles_1783: 1526545540
+      cavetiles_1784: 643687443
+      cavetiles_1785: 459308596
+      cavetiles_1786: 1846244865
+      cavetiles_1787: -1894162458
+      cavetiles_1788: -1149815247
+      cavetiles_1789: -703239460
+      cavetiles_179: 1809395865
+      cavetiles_1790: -732754994
+      cavetiles_1791: 1036716625
+      cavetiles_1792: 1154636489
+      cavetiles_1793: 624656847
+      cavetiles_1794: -516210909
+      cavetiles_1795: 696432580
+      cavetiles_1796: 1737498233
+      cavetiles_1797: 336665511
+      cavetiles_1798: -156938785
+      cavetiles_1799: 1421423340
+      cavetiles_18: 638338444
+      cavetiles_180: 1107700049
+      cavetiles_1800: 1374606603
+      cavetiles_1801: 1352061463
+      cavetiles_1802: -1137138604
+      cavetiles_1803: 1862899108
+      cavetiles_1804: 1303611338
+      cavetiles_1805: -2147171680
+      cavetiles_1806: 1113554316
+      cavetiles_1807: -1614154259
+      cavetiles_1808: -1947781497
+      cavetiles_1809: 266324808
+      cavetiles_181: -2039085479
+      cavetiles_1810: 144216983
+      cavetiles_1811: -1125791793
+      cavetiles_1812: -20394939
+      cavetiles_1813: 806325403
+      cavetiles_1814: 1586258056
+      cavetiles_1815: -411180602
+      cavetiles_1816: -21826596
+      cavetiles_1817: 38727881
+      cavetiles_1818: -1960988117
+      cavetiles_1819: -161202977
+      cavetiles_182: -1250033684
+      cavetiles_1820: -1113742004
+      cavetiles_1821: -1676742834
+      cavetiles_1822: -651550849
+      cavetiles_1823: -823931964
+      cavetiles_1824: -1542394456
+      cavetiles_1825: -2065921215
+      cavetiles_1826: 1474936683
+      cavetiles_1827: -148609241
+      cavetiles_1828: 230782486
+      cavetiles_1829: 337788544
+      cavetiles_183: -493569280
+      cavetiles_1830: 1270554530
+      cavetiles_1831: 1013692401
+      cavetiles_1832: 1715274529
+      cavetiles_1833: 1091689093
+      cavetiles_1834: 947059273
+      cavetiles_1835: -547965239
+      cavetiles_1836: -1282239808
+      cavetiles_1837: -126851347
+      cavetiles_1838: -99946064
+      cavetiles_1839: 1556878320
+      cavetiles_184: 1360387787
+      cavetiles_1840: -985524180
+      cavetiles_1841: -1240398331
+      cavetiles_1842: 1218716143
+      cavetiles_1843: -1322255134
+      cavetiles_1844: -760386980
+      cavetiles_1845: 143492410
+      cavetiles_1846: 523181052
+      cavetiles_1847: -526689913
+      cavetiles_1848: 1829962433
+      cavetiles_1849: 1521350155
+      cavetiles_185: 1330533072
+      cavetiles_1850: -1879844351
+      cavetiles_1851: -138487667
+      cavetiles_1852: 1962543059
+      cavetiles_1853: 857640743
+      cavetiles_1854: 404016832
+      cavetiles_1855: -1740262715
+      cavetiles_1856: 924548979
+      cavetiles_1857: 2059215815
+      cavetiles_1858: 862507304
+      cavetiles_1859: -723804521
+      cavetiles_186: 1537386522
+      cavetiles_1860: 1161986077
+      cavetiles_1861: 824485459
+      cavetiles_1862: 298544690
+      cavetiles_1863: 716255230
+      cavetiles_1864: 134097077
+      cavetiles_1865: 537027596
+      cavetiles_1866: 1297019272
+      cavetiles_1867: -32583224
+      cavetiles_1868: -813738861
+      cavetiles_1869: 121023493
+      cavetiles_187: -312405253
+      cavetiles_1870: 1668974022
+      cavetiles_1871: -551870953
+      cavetiles_1872: 1539115655
+      cavetiles_1873: 1652398555
+      cavetiles_1874: -1888124830
+      cavetiles_1875: 175594209
+      cavetiles_1876: -2006397459
+      cavetiles_1877: -1780443277
+      cavetiles_1878: -2083712324
+      cavetiles_1879: 90203380
+      cavetiles_188: -1632349689
+      cavetiles_1880: -1546579605
+      cavetiles_1881: -613654511
+      cavetiles_1882: -986470073
+      cavetiles_1883: 1604301813
+      cavetiles_1884: 1576511514
+      cavetiles_1885: 675378369
+      cavetiles_1886: 2083348022
+      cavetiles_1887: -1715183783
+      cavetiles_1888: -1053324357
+      cavetiles_1889: 1852287988
+      cavetiles_189: 1457928081
+      cavetiles_1890: 1623986640
+      cavetiles_1891: 1119716965
+      cavetiles_1892: 1820402296
+      cavetiles_1893: 431558801
+      cavetiles_1894: 1445423004
+      cavetiles_1895: -516973373
+      cavetiles_1896: -1702351725
+      cavetiles_1897: 1252446062
+      cavetiles_1898: -1397139693
+      cavetiles_1899: 759916472
+      cavetiles_19: -1909697231
+      cavetiles_190: 509484430
+      cavetiles_1900: 1326355657
+      cavetiles_1901: 2146965305
+      cavetiles_1902: -286423079
+      cavetiles_1903: 452278594
+      cavetiles_1904: -1025149241
+      cavetiles_1905: 1902994935
+      cavetiles_1906: 1009820726
+      cavetiles_1907: -519690272
+      cavetiles_1908: -560555298
+      cavetiles_1909: 1929130924
+      cavetiles_191: -1245862126
+      cavetiles_1910: -1425609125
+      cavetiles_1911: -998254219
+      cavetiles_1912: -632330551
+      cavetiles_1913: 1656532834
+      cavetiles_1914: 1211550498
+      cavetiles_1915: 859238805
+      cavetiles_1916: 985646372
+      cavetiles_1917: -1986337298
+      cavetiles_1918: -1513155311
+      cavetiles_1919: 1863693885
+      cavetiles_192: -375898853
+      cavetiles_1920: -585063646
+      cavetiles_1921: -1729858960
+      cavetiles_1922: 1248856066
+      cavetiles_1923: -454546380
+      cavetiles_1924: -626988292
+      cavetiles_1925: -536373837
+      cavetiles_1926: -2009522571
+      cavetiles_1927: -1534177890
+      cavetiles_1928: -1562587310
+      cavetiles_1929: -1964337077
+      cavetiles_193: 134561995
+      cavetiles_1930: 939423377
+      cavetiles_1931: 1002754497
+      cavetiles_1932: -1772694699
+      cavetiles_1933: -1855384331
+      cavetiles_1934: 705497118
+      cavetiles_1935: 1620745764
+      cavetiles_1936: 1364691612
+      cavetiles_1937: 666112347
+      cavetiles_1938: -19168245
+      cavetiles_1939: -1901461357
+      cavetiles_194: 1182016668
+      cavetiles_1940: 379756466
+      cavetiles_1941: -1402542482
+      cavetiles_1942: 731377319
+      cavetiles_1943: 905267749
+      cavetiles_1944: -2041291989
+      cavetiles_1945: 1755700502
+      cavetiles_1946: 1243547820
+      cavetiles_1947: 1875998333
+      cavetiles_1948: 1648735652
+      cavetiles_1949: -253418271
+      cavetiles_195: 598202158
+      cavetiles_1950: 873707140
+      cavetiles_1951: -168401006
+      cavetiles_1952: 587077660
+      cavetiles_1953: 2116215924
+      cavetiles_1954: -246828482
+      cavetiles_1955: 1276131542
+      cavetiles_1956: 377359361
+      cavetiles_1957: -727072197
+      cavetiles_1958: -1011196815
+      cavetiles_1959: 128846554
+      cavetiles_196: 165895393
+      cavetiles_1960: -1500474906
+      cavetiles_1961: -402498138
+      cavetiles_1962: 2076570455
+      cavetiles_1963: -851363248
+      cavetiles_1964: -1708281947
+      cavetiles_1965: -1160886130
+      cavetiles_1966: 1494646396
+      cavetiles_1967: -207680198
+      cavetiles_1968: -350737445
+      cavetiles_1969: 1457433192
+      cavetiles_197: 898429420
+      cavetiles_1970: -342747485
+      cavetiles_1971: -678120221
+      cavetiles_1972: -726053141
+      cavetiles_1973: 1901191331
+      cavetiles_1974: 320736167
+      cavetiles_1975: -1677705005
+      cavetiles_1976: 1573285756
+      cavetiles_1977: -495691608
+      cavetiles_1978: -1673084612
+      cavetiles_1979: -310523347
+      cavetiles_198: -2076916151
+      cavetiles_1980: 1424977878
+      cavetiles_1981: 473208703
+      cavetiles_1982: -1829309247
+      cavetiles_1983: -1313231763
+      cavetiles_1984: -1010589376
+      cavetiles_1985: -841728496
+      cavetiles_1986: 1809120154
+      cavetiles_1987: 153250312
+      cavetiles_1988: -654891054
+      cavetiles_1989: 838452045
+      cavetiles_199: 1256455592
+      cavetiles_1990: -708380481
+      cavetiles_1991: 948528976
+      cavetiles_1992: -137322255
+      cavetiles_1993: -87107230
+      cavetiles_1994: -1829269123
+      cavetiles_1995: 1446578109
+      cavetiles_1996: -1297617443
+      cavetiles_1997: -922260322
+      cavetiles_1998: -526074539
+      cavetiles_1999: 273097718
+      cavetiles_2: -84350173
+      cavetiles_20: 767498083
+      cavetiles_200: -1806018275
+      cavetiles_2000: -160737505
+      cavetiles_2001: -741483645
+      cavetiles_2002: 385792542
+      cavetiles_2003: -886855077
+      cavetiles_2004: 1964002627
+      cavetiles_2005: 472369710
+      cavetiles_2006: -1301285787
+      cavetiles_2007: -1529688905
+      cavetiles_2008: -433009262
+      cavetiles_2009: -2105135037
+      cavetiles_201: 184921282
+      cavetiles_2010: -700090512
+      cavetiles_2011: -1746768879
+      cavetiles_2012: 346820074
+      cavetiles_2013: -1201906583
+      cavetiles_2014: 1829704790
+      cavetiles_2015: 1042352241
+      cavetiles_2016: 1963991493
+      cavetiles_2017: -102702647
+      cavetiles_2018: -1644850018
+      cavetiles_2019: 691826325
+      cavetiles_202: 1426043285
+      cavetiles_2020: 1509184165
+      cavetiles_2021: 332882898
+      cavetiles_2022: 1726663729
+      cavetiles_2023: 2096662998
+      cavetiles_2024: -487137092
+      cavetiles_2025: -2014972003
+      cavetiles_2026: -515778646
+      cavetiles_2027: 2068245185
+      cavetiles_2028: 1190725623
+      cavetiles_2029: 1138241788
+      cavetiles_203: 408538034
+      cavetiles_2030: -1381748160
+      cavetiles_2031: -670312872
+      cavetiles_2032: 512784518
+      cavetiles_2033: 413823170
+      cavetiles_2034: -1703731021
+      cavetiles_2035: -1573965374
+      cavetiles_2036: 1725755776
+      cavetiles_2037: 1418528146
+      cavetiles_2038: 478416918
+      cavetiles_2039: -97384384
+      cavetiles_204: -1004148561
+      cavetiles_2040: 1443417484
+      cavetiles_2041: 2089183880
+      cavetiles_2042: 146819793
+      cavetiles_2043: 737988767
+      cavetiles_2044: -2106884855
+      cavetiles_2045: -345282149
+      cavetiles_2046: 1155410929
+      cavetiles_2047: -1465294254
+      cavetiles_2048: 1941844373
+      cavetiles_2049: -1898325938
+      cavetiles_205: -2051544958
+      cavetiles_2050: 698009880
+      cavetiles_2051: 202930134
+      cavetiles_2052: -119426796
+      cavetiles_2053: -23110561
+      cavetiles_2054: -1746047268
+      cavetiles_2055: -488888348
+      cavetiles_2056: 803694788
+      cavetiles_2057: 639933271
+      cavetiles_2058: -1998441000
+      cavetiles_2059: -436155764
+      cavetiles_206: 1285773182
+      cavetiles_2060: -70605130
+      cavetiles_2061: 521504555
+      cavetiles_2062: 505852855
+      cavetiles_2063: 1308488446
+      cavetiles_2064: -1384057231
+      cavetiles_2065: -1311515603
+      cavetiles_2066: 999394938
+      cavetiles_2067: -1832201699
+      cavetiles_2068: 725939973
+      cavetiles_2069: -452589200
+      cavetiles_207: 1217885583
+      cavetiles_2070: 132331156
+      cavetiles_2071: 2111306978
+      cavetiles_2072: -44511381
+      cavetiles_2073: -1838581922
+      cavetiles_2074: 717681552
+      cavetiles_2075: 772841955
+      cavetiles_2076: -628297162
+      cavetiles_2077: 1954821481
+      cavetiles_2078: 404228962
+      cavetiles_2079: 764184691
+      cavetiles_208: -481510974
+      cavetiles_2080: 124297084
+      cavetiles_2081: 825699859
+      cavetiles_2082: -401225024
+      cavetiles_2083: 1205086148
+      cavetiles_2084: -856626631
+      cavetiles_2085: 1556223919
+      cavetiles_2086: 1204145537
+      cavetiles_2087: 32468782
+      cavetiles_2088: -551459720
+      cavetiles_2089: 1749730073
+      cavetiles_209: 375064989
+      cavetiles_2090: 1396675722
+      cavetiles_2091: -601924099
+      cavetiles_2092: 1140680390
+      cavetiles_2093: -1489103702
+      cavetiles_2094: -1063076383
+      cavetiles_2095: 537878387
+      cavetiles_2096: -297118319
+      cavetiles_2097: -1477895066
+      cavetiles_2098: 1408585784
+      cavetiles_2099: -130002616
+      cavetiles_21: -1802067855
+      cavetiles_210: -1251129547
+      cavetiles_2100: -643229473
+      cavetiles_2101: -1883237373
+      cavetiles_2102: -129229917
+      cavetiles_2103: 1548029022
+      cavetiles_2104: -330538135
+      cavetiles_2105: -2145675207
+      cavetiles_2106: -1861647749
+      cavetiles_2107: 83049390
+      cavetiles_2108: 1107052863
+      cavetiles_2109: -735947901
+      cavetiles_211: -1460030777
+      cavetiles_2110: 1944948414
+      cavetiles_2111: -132502214
+      cavetiles_2112: -1002352976
+      cavetiles_2113: 862227486
+      cavetiles_2114: 69198545
+      cavetiles_2115: -459673169
+      cavetiles_2116: 205153073
+      cavetiles_2117: 773681093
+      cavetiles_2118: 277254526
+      cavetiles_2119: 1262264727
+      cavetiles_212: -155781380
+      cavetiles_2120: 1992365275
+      cavetiles_2121: -1071178883
+      cavetiles_2122: 911437884
+      cavetiles_2123: 512740858
+      cavetiles_2124: 2062314150
+      cavetiles_2125: -1097181350
+      cavetiles_2126: -1468417517
+      cavetiles_2127: -1391931822
+      cavetiles_2128: -610847435
+      cavetiles_2129: -282459919
+      cavetiles_213: -1834573491
+      cavetiles_2130: 1506120092
+      cavetiles_2131: -1684675449
+      cavetiles_2132: -2074913518
+      cavetiles_2133: -166166592
+      cavetiles_2134: 2120106432
+      cavetiles_2135: -1194674490
+      cavetiles_2136: 1310950182
+      cavetiles_2137: 301831972
+      cavetiles_2138: -1224102161
+      cavetiles_2139: -1344551067
+      cavetiles_214: 1965575261
+      cavetiles_2140: 31383864
+      cavetiles_2141: 772348925
+      cavetiles_2142: -2019986975
+      cavetiles_2143: 2059734265
+      cavetiles_2144: -2034123152
+      cavetiles_2145: 620243700
+      cavetiles_2146: -2102469180
+      cavetiles_2147: 1360348512
+      cavetiles_2148: -674534677
+      cavetiles_2149: 446724097
+      cavetiles_215: 2135792659
+      cavetiles_2150: 274455332
+      cavetiles_2151: 319066244
+      cavetiles_2152: 256311697
+      cavetiles_2153: 903374552
+      cavetiles_2154: 2139639722
+      cavetiles_2155: -1424439485
+      cavetiles_2156: 1258960481
+      cavetiles_2157: 1254211996
+      cavetiles_2158: 1708918340
+      cavetiles_2159: -1822856235
+      cavetiles_216: 1842150723
+      cavetiles_2160: -808992373
+      cavetiles_2161: 1578545688
+      cavetiles_2162: 283068461
+      cavetiles_2163: -1932045274
+      cavetiles_2164: -1248460342
+      cavetiles_2165: 828866055
+      cavetiles_2166: 1539493115
+      cavetiles_2167: 1238337111
+      cavetiles_2168: 1460288616
+      cavetiles_2169: 998370320
+      cavetiles_217: 1419047354
+      cavetiles_2170: 1293912529
+      cavetiles_2171: -961176530
+      cavetiles_2172: 1979960326
+      cavetiles_2173: -1493899861
+      cavetiles_2174: 615486662
+      cavetiles_2175: 1257774514
+      cavetiles_2176: 829369238
+      cavetiles_2177: 597795659
+      cavetiles_2178: -817122853
+      cavetiles_2179: 321393252
+      cavetiles_218: -755136531
+      cavetiles_2180: 1851456370
+      cavetiles_2181: 2039784097
+      cavetiles_2182: 135399366
+      cavetiles_2183: 761506050
+      cavetiles_2184: -195251980
+      cavetiles_2185: 1250392379
+      cavetiles_2186: -1309133074
+      cavetiles_2187: 120900378
+      cavetiles_2188: -2088082675
+      cavetiles_2189: 340335327
+      cavetiles_219: 2051824785
+      cavetiles_2190: -1269862405
+      cavetiles_2191: 282065250
+      cavetiles_2192: -183576771
+      cavetiles_2193: 1909267884
+      cavetiles_2194: 1218870069
+      cavetiles_2195: 653437550
+      cavetiles_2196: -196866610
+      cavetiles_2197: -907006482
+      cavetiles_2198: 643212302
+      cavetiles_2199: -1008519913
+      cavetiles_22: -1550695559
+      cavetiles_220: -1542711265
+      cavetiles_2200: 1984959689
+      cavetiles_2201: 346809024
+      cavetiles_2202: -1193224
+      cavetiles_2203: 2110977086
+      cavetiles_2204: -983375045
+      cavetiles_2205: 706745560
+      cavetiles_2206: -623900454
+      cavetiles_2207: 540234850
+      cavetiles_2208: 1667000940
+      cavetiles_2209: -657655358
+      cavetiles_221: 1381356051
+      cavetiles_2210: -1390932653
+      cavetiles_2211: 935196914
+      cavetiles_2212: -467672767
+      cavetiles_2213: 618897
+      cavetiles_2214: 1889572946
+      cavetiles_2215: -1637794620
+      cavetiles_2216: -870437638
+      cavetiles_2217: -1531778643
+      cavetiles_2218: 544313752
+      cavetiles_2219: -527949200
+      cavetiles_222: -947086365
+      cavetiles_2220: -414289233
+      cavetiles_2221: 437434793
+      cavetiles_2222: 1875870365
+      cavetiles_2223: 1594057613
+      cavetiles_2224: 1519298401
+      cavetiles_2225: -766174905
+      cavetiles_2226: -1026250852
+      cavetiles_2227: -1323571161
+      cavetiles_2228: -1211327161
+      cavetiles_2229: -1236184519
+      cavetiles_223: 2032858413
+      cavetiles_2230: -549349356
+      cavetiles_2231: 1562835874
+      cavetiles_2232: 899576452
+      cavetiles_2233: 1862722992
+      cavetiles_2234: 612344187
+      cavetiles_2235: -994381270
+      cavetiles_2236: -1766459044
+      cavetiles_2237: -675776120
+      cavetiles_2238: -754375921
+      cavetiles_2239: -904007497
+      cavetiles_224: -1362096442
+      cavetiles_2240: 1180715096
+      cavetiles_2241: -446433753
+      cavetiles_2242: -960624870
+      cavetiles_2243: -1367580639
+      cavetiles_2244: 1090650409
+      cavetiles_2245: 903992557
+      cavetiles_2246: 1224633317
+      cavetiles_2247: 706396931
+      cavetiles_2248: -936464776
+      cavetiles_2249: 2112126326
+      cavetiles_225: -193932750
+      cavetiles_2250: -1493117020
+      cavetiles_2251: -930455235
+      cavetiles_2252: 1874088116
+      cavetiles_2253: 691386042
+      cavetiles_2254: 467791497
+      cavetiles_2255: 386760265
+      cavetiles_2256: -898903817
+      cavetiles_2257: 1248415507
+      cavetiles_2258: 946158312
+      cavetiles_2259: -369604461
+      cavetiles_226: -1077215104
+      cavetiles_2260: 991557338
+      cavetiles_2261: -986763367
+      cavetiles_2262: 677086209
+      cavetiles_2263: 438571390
+      cavetiles_2264: 1075902739
+      cavetiles_2265: -1380256035
+      cavetiles_2266: 1586290607
+      cavetiles_2267: -1865823181
+      cavetiles_2268: 55963480
+      cavetiles_2269: -523769580
+      cavetiles_227: -31173507
+      cavetiles_2270: -1835286241
+      cavetiles_2271: -1796679930
+      cavetiles_2272: -374484348
+      cavetiles_2273: 790788057
+      cavetiles_2274: -460128625
+      cavetiles_2275: 1614829171
+      cavetiles_2276: -1327217205
+      cavetiles_2277: 1445427251
+      cavetiles_2278: -1532321790
+      cavetiles_2279: -1236266203
+      cavetiles_228: 124700664
+      cavetiles_2280: 1379360787
+      cavetiles_2281: 1125639941
+      cavetiles_2282: 339147069
+      cavetiles_2283: -2143037895
+      cavetiles_2284: 2059998790
+      cavetiles_2285: -1801590886
+      cavetiles_2286: 201785685
+      cavetiles_2287: 920300629
+      cavetiles_2288: -2088859351
+      cavetiles_2289: 268478029
+      cavetiles_229: -1005745825
+      cavetiles_2290: 1940911642
+      cavetiles_2291: 76530827
+      cavetiles_2292: 1369157501
+      cavetiles_2293: -2102341981
+      cavetiles_2294: -1656712602
+      cavetiles_2295: -584067113
+      cavetiles_2296: -1966058565
+      cavetiles_2297: 1031340488
+      cavetiles_2298: 873485441
+      cavetiles_2299: -57931799
+      cavetiles_23: 2001810091
+      cavetiles_230: 1777876965
+      cavetiles_2300: 910382666
+      cavetiles_2301: -1638740748
+      cavetiles_2302: 990686192
+      cavetiles_2303: -240706604
+      cavetiles_2304: 71475623
+      cavetiles_2305: -2128308992
+      cavetiles_2306: -561479659
+      cavetiles_2307: 554958278
+      cavetiles_2308: -886970821
+      cavetiles_2309: 1407850384
+      cavetiles_231: 1916801270
+      cavetiles_2310: 299899363
+      cavetiles_2311: -1917085716
+      cavetiles_2312: 885192658
+      cavetiles_2313: -1566573181
+      cavetiles_2314: 1393603144
+      cavetiles_2315: -1457027301
+      cavetiles_2316: 29203123
+      cavetiles_2317: 597863729
+      cavetiles_2318: -166263494
+      cavetiles_2319: 2145193570
+      cavetiles_232: -799659333
+      cavetiles_2320: 529836547
+      cavetiles_2321: -548775248
+      cavetiles_2322: -1961184782
+      cavetiles_2323: -422265562
+      cavetiles_2324: 1132478313
+      cavetiles_2325: 690534581
+      cavetiles_2326: -994598101
+      cavetiles_2327: 1953451782
+      cavetiles_2328: 913282283
+      cavetiles_2329: -255499993
+      cavetiles_233: -1455772032
+      cavetiles_2330: 1888016027
+      cavetiles_2331: 349181052
+      cavetiles_2332: 354474468
+      cavetiles_2333: 150149250
+      cavetiles_2334: -1675582689
+      cavetiles_2335: 272473184
+      cavetiles_2336: 1149238253
+      cavetiles_2337: -1776944011
+      cavetiles_2338: 1737092099
+      cavetiles_2339: -854493455
+      cavetiles_234: -2102030366
+      cavetiles_2340: 2066887491
+      cavetiles_2341: -119872846
+      cavetiles_2342: -1272882349
+      cavetiles_2343: 1911343051
+      cavetiles_2344: -1787615920
+      cavetiles_2345: -1015313055
+      cavetiles_2346: 1570880628
+      cavetiles_2347: -1508431913
+      cavetiles_2348: 2056655173
+      cavetiles_2349: 611038171
+      cavetiles_235: 1619889994
+      cavetiles_2350: 1334999323
+      cavetiles_2351: -1210796122
+      cavetiles_2352: 2122675023
+      cavetiles_2353: -1286131786
+      cavetiles_2354: -1324066232
+      cavetiles_2355: -1406842357
+      cavetiles_2356: -1682587281
+      cavetiles_2357: -2063761150
+      cavetiles_2358: -1172895041
+      cavetiles_2359: -502325413
+      cavetiles_236: -2016089055
+      cavetiles_2360: 484245575
+      cavetiles_2361: -1834246062
+      cavetiles_2362: -13352067
+      cavetiles_2363: -92347127
+      cavetiles_2364: 450540788
+      cavetiles_2365: 347391677
+      cavetiles_2366: 904371403
+      cavetiles_2367: -1280608487
+      cavetiles_2368: 1738358646
+      cavetiles_2369: -185239913
+      cavetiles_237: 85292244
+      cavetiles_2370: 509781133
+      cavetiles_2371: 893391768
+      cavetiles_2372: -545510473
+      cavetiles_2373: -1441685112
+      cavetiles_2374: -807437356
+      cavetiles_2375: -442779776
+      cavetiles_2376: -328523461
+      cavetiles_2377: -693701223
+      cavetiles_2378: -1063055799
+      cavetiles_2379: -555228036
+      cavetiles_238: 1315060082
+      cavetiles_2380: 1781022562
+      cavetiles_2381: -968427708
+      cavetiles_2382: 1850004773
+      cavetiles_2383: 1645552569
+      cavetiles_2384: -1532293794
+      cavetiles_2385: 1523504624
+      cavetiles_2386: -1871946296
+      cavetiles_2387: -1858253021
+      cavetiles_2388: 1203499679
+      cavetiles_2389: 1787282911
+      cavetiles_239: -245075165
+      cavetiles_2390: 907448999
+      cavetiles_2391: 674138731
+      cavetiles_2392: 1202064330
+      cavetiles_2393: -933134194
+      cavetiles_2394: 1863237874
+      cavetiles_2395: -1495889779
+      cavetiles_2396: 829290566
+      cavetiles_2397: -299954504
+      cavetiles_2398: 86480328
+      cavetiles_2399: 374117554
+      cavetiles_24: -495111640
+      cavetiles_240: 237153290
+      cavetiles_241: 2143427968
+      cavetiles_242: -1693996427
+      cavetiles_243: -294323983
+      cavetiles_244: 295998946
+      cavetiles_245: -537689250
+      cavetiles_246: -1261407864
+      cavetiles_247: -1992705675
+      cavetiles_248: -747286735
+      cavetiles_249: 679670599
+      cavetiles_25: 1968747604
+      cavetiles_250: 344828306
+      cavetiles_251: -1438101711
+      cavetiles_252: 1451898651
+      cavetiles_253: 1311530610
+      cavetiles_254: 130099798
+      cavetiles_255: -748345579
+      cavetiles_256: 856697491
+      cavetiles_257: 1934835239
+      cavetiles_258: -1916326642
+      cavetiles_259: 1387137205
+      cavetiles_26: 212108727
+      cavetiles_260: 1219075680
+      cavetiles_261: 431602323
+      cavetiles_262: 974772603
+      cavetiles_263: 2082089798
+      cavetiles_264: 273238089
+      cavetiles_265: -1757910612
+      cavetiles_266: 1106341033
+      cavetiles_267: 647060627
+      cavetiles_268: 776755426
+      cavetiles_269: 415010880
+      cavetiles_27: 1734287154
+      cavetiles_270: 501673809
+      cavetiles_271: -864452987
+      cavetiles_272: -2014887101
+      cavetiles_273: 1253783945
+      cavetiles_274: 617208446
+      cavetiles_275: 476503280
+      cavetiles_276: -1944296454
+      cavetiles_277: -311797135
+      cavetiles_278: -1022218890
+      cavetiles_279: -1062478174
+      cavetiles_28: 592826451
+      cavetiles_280: 257044081
+      cavetiles_281: -362799194
+      cavetiles_282: -261352067
+      cavetiles_283: -1637057594
+      cavetiles_284: 1135556366
+      cavetiles_285: 715943198
+      cavetiles_286: -645449362
+      cavetiles_287: -649229309
+      cavetiles_288: 396709543
+      cavetiles_289: 299875479
+      cavetiles_29: 1930202518
+      cavetiles_290: 921336325
+      cavetiles_291: 234264786
+      cavetiles_292: 92759322
+      cavetiles_293: -509957645
+      cavetiles_294: 1823931193
+      cavetiles_295: -359277825
+      cavetiles_296: -2032619847
+      cavetiles_297: 1744297214
+      cavetiles_298: 1265525751
+      cavetiles_299: 993820994
+      cavetiles_3: 429781883
+      cavetiles_30: 1716996627
+      cavetiles_300: -69409615
+      cavetiles_301: -1891342534
+      cavetiles_302: -1712032364
+      cavetiles_303: -1502349586
+      cavetiles_304: -596280030
+      cavetiles_305: -562488771
+      cavetiles_306: -1389297359
+      cavetiles_307: 2056609994
+      cavetiles_308: 1667177447
+      cavetiles_309: -166409336
+      cavetiles_31: 1284214958
+      cavetiles_310: 1198303509
+      cavetiles_311: -1328785500
+      cavetiles_312: 1762284146
+      cavetiles_313: 293176593
+      cavetiles_314: -1817305597
+      cavetiles_315: 287378745
+      cavetiles_316: 305619914
+      cavetiles_317: -866539003
+      cavetiles_318: 1569453936
+      cavetiles_319: -518335363
+      cavetiles_32: -452336501
+      cavetiles_320: -958782787
+      cavetiles_321: -351587995
+      cavetiles_322: -1313702350
+      cavetiles_323: 363203070
+      cavetiles_324: -104032528
+      cavetiles_325: -2050476306
+      cavetiles_326: -852933731
+      cavetiles_327: 84733142
+      cavetiles_328: 1620073995
+      cavetiles_329: -1876753809
+      cavetiles_33: 2108452203
+      cavetiles_330: 567055543
+      cavetiles_331: 1653290313
+      cavetiles_332: -655558059
+      cavetiles_333: 239087150
+      cavetiles_334: -1203205580
+      cavetiles_335: -1627375745
+      cavetiles_336: 485415971
+      cavetiles_337: 2093168336
+      cavetiles_338: -740785828
+      cavetiles_339: 2048789944
+      cavetiles_34: -423959777
+      cavetiles_340: 1193655308
+      cavetiles_341: -227294084
+      cavetiles_342: -1032682243
+      cavetiles_343: 1162813454
+      cavetiles_344: 1832888439
+      cavetiles_345: -1728874571
+      cavetiles_346: -781224660
+      cavetiles_347: 1005754605
+      cavetiles_348: 515421362
+      cavetiles_349: -1205565273
+      cavetiles_35: -1854117968
+      cavetiles_350: -1081458038
+      cavetiles_351: 1183800676
+      cavetiles_352: -1122295725
+      cavetiles_353: -348792619
+      cavetiles_354: -1382707308
+      cavetiles_355: 16976625
+      cavetiles_356: -1081380638
+      cavetiles_357: -451905654
+      cavetiles_358: 314038550
+      cavetiles_359: 1742286392
+      cavetiles_36: -1027563765
+      cavetiles_360: -139263950
+      cavetiles_361: 1406442673
+      cavetiles_362: -1136425061
+      cavetiles_363: 2111234769
+      cavetiles_364: 147424672
+      cavetiles_365: -1950000933
+      cavetiles_366: 1670407315
+      cavetiles_367: -659455328
+      cavetiles_368: -1750464884
+      cavetiles_369: -706989643
+      cavetiles_37: 1540369782
+      cavetiles_370: -1567702436
+      cavetiles_371: 337991739
+      cavetiles_372: 1842853756
+      cavetiles_373: 712393259
+      cavetiles_374: -1849494652
+      cavetiles_375: 1548929113
+      cavetiles_376: 1066032846
+      cavetiles_377: 909913634
+      cavetiles_378: -1659809965
+      cavetiles_379: -1566970602
+      cavetiles_38: -553117770
+      cavetiles_380: -1175102144
+      cavetiles_381: -420667468
+      cavetiles_382: 580792364
+      cavetiles_383: 374330175
+      cavetiles_384: -1742007035
+      cavetiles_385: -1956014028
+      cavetiles_386: 171257563
+      cavetiles_387: 773920339
+      cavetiles_388: -39656644
+      cavetiles_389: -1599567347
+      cavetiles_39: 859321108
+      cavetiles_390: -74922210
+      cavetiles_391: 1780090322
+      cavetiles_392: 560740745
+      cavetiles_393: 240296716
+      cavetiles_394: -1790620664
+      cavetiles_395: 453672067
+      cavetiles_396: 1942320805
+      cavetiles_397: 145244937
+      cavetiles_398: -556158180
+      cavetiles_399: -1725763282
+      cavetiles_4: -731842644
+      cavetiles_40: -637293807
+      cavetiles_400: -595985726
+      cavetiles_401: -1546066051
+      cavetiles_402: 315061319
+      cavetiles_403: 1497943580
+      cavetiles_404: 16981940
+      cavetiles_405: 275629604
+      cavetiles_406: 1166617732
+      cavetiles_407: -1237701534
+      cavetiles_408: -1626040987
+      cavetiles_409: -105828732
+      cavetiles_41: 991662486
+      cavetiles_410: -353757640
+      cavetiles_411: 1451890361
+      cavetiles_412: -22812921
+      cavetiles_413: 1640206046
+      cavetiles_414: -1556866965
+      cavetiles_415: -1661772305
+      cavetiles_416: -2128241946
+      cavetiles_417: -1532968525
+      cavetiles_418: 1250892565
+      cavetiles_419: -327383534
+      cavetiles_42: -1061495189
+      cavetiles_420: 417823603
+      cavetiles_421: 460881222
+      cavetiles_422: -1013115532
+      cavetiles_423: 1875004145
+      cavetiles_424: -1879831744
+      cavetiles_425: 167003974
+      cavetiles_426: -1860821179
+      cavetiles_427: 1568297363
+      cavetiles_428: -1243428752
+      cavetiles_429: -1591967741
+      cavetiles_43: 864732598
+      cavetiles_430: 897831511
+      cavetiles_431: -317126130
+      cavetiles_432: -335502101
+      cavetiles_433: 182384228
+      cavetiles_434: -2039424614
+      cavetiles_435: 1178488968
+      cavetiles_436: -1092830743
+      cavetiles_437: 139814864
+      cavetiles_438: -691976740
+      cavetiles_439: 913022320
+      cavetiles_44: -1772423555
+      cavetiles_440: 597498118
+      cavetiles_441: 463456374
+      cavetiles_442: 1236812513
+      cavetiles_443: 2040695318
+      cavetiles_444: 900909126
+      cavetiles_445: 555094899
+      cavetiles_446: 1469753329
+      cavetiles_447: 174475048
+      cavetiles_448: -261758843
+      cavetiles_449: 2061730080
+      cavetiles_45: 1740608796
+      cavetiles_450: -1314978481
+      cavetiles_451: -180137061
+      cavetiles_452: -1290647451
+      cavetiles_453: -1010726224
+      cavetiles_454: -707342689
+      cavetiles_455: 1901895307
+      cavetiles_456: -508537538
+      cavetiles_457: -622120050
+      cavetiles_458: 1501891759
+      cavetiles_459: 503371665
+      cavetiles_46: 614446301
+      cavetiles_460: 954073238
+      cavetiles_461: 2120955775
+      cavetiles_462: -1375315022
+      cavetiles_463: 483110035
+      cavetiles_464: -1072788643
+      cavetiles_465: -1750092373
+      cavetiles_466: 2136234570
+      cavetiles_467: -1182845951
+      cavetiles_468: -345612324
+      cavetiles_469: 1324504503
+      cavetiles_47: 710016353
+      cavetiles_470: -1652153813
+      cavetiles_471: -1355971780
+      cavetiles_472: -77848475
+      cavetiles_473: 1281208090
+      cavetiles_474: -511870871
+      cavetiles_475: -214599329
+      cavetiles_476: -1639217357
+      cavetiles_477: -713081004
+      cavetiles_478: 578149519
+      cavetiles_479: -2140449393
+      cavetiles_48: -155678440
+      cavetiles_480: -1195457766
+      cavetiles_481: 2113272334
+      cavetiles_482: 519977617
+      cavetiles_483: -524435169
+      cavetiles_484: -2087135109
+      cavetiles_485: 1079342061
+      cavetiles_486: -507184942
+      cavetiles_487: 609920564
+      cavetiles_488: -278070190
+      cavetiles_489: 317639603
+      cavetiles_49: 1926853253
+      cavetiles_490: -1407287798
+      cavetiles_491: 302894973
+      cavetiles_492: 1183439739
+      cavetiles_493: 1976205079
+      cavetiles_494: 2057213147
+      cavetiles_495: -1343940152
+      cavetiles_496: -1640990423
+      cavetiles_497: 1932886338
+      cavetiles_498: 97374369
+      cavetiles_499: -273352706
+      cavetiles_5: 999289007
+      cavetiles_50: -2030655288
+      cavetiles_500: -1742985603
+      cavetiles_501: 926675147
+      cavetiles_502: -1019665108
+      cavetiles_503: 1429924431
+      cavetiles_504: -1392469486
+      cavetiles_505: -997204934
+      cavetiles_506: -386114011
+      cavetiles_507: -1610741412
+      cavetiles_508: -2132044258
+      cavetiles_509: -855093290
+      cavetiles_51: 1715018221
+      cavetiles_510: 612244194
+      cavetiles_511: -708389547
+      cavetiles_512: 1847883158
+      cavetiles_513: 114915044
+      cavetiles_514: 1247405281
+      cavetiles_515: 542857969
+      cavetiles_516: 779926138
+      cavetiles_517: 736990092
+      cavetiles_518: -452741099
+      cavetiles_519: -506409819
+      cavetiles_52: -543610958
+      cavetiles_520: 1526949072
+      cavetiles_521: 2026489590
+      cavetiles_522: -1724774078
+      cavetiles_523: -198575659
+      cavetiles_524: 1056997556
+      cavetiles_525: -551151715
+      cavetiles_526: 1481825935
+      cavetiles_527: 1054180990
+      cavetiles_528: 336317311
+      cavetiles_529: -178851858
+      cavetiles_53: 1632516817
+      cavetiles_530: 370003217
+      cavetiles_531: 1702646388
+      cavetiles_532: 815231303
+      cavetiles_533: 1898792875
+      cavetiles_534: -2071186632
+      cavetiles_535: 1029223626
+      cavetiles_536: -1076880118
+      cavetiles_537: -1154593648
+      cavetiles_538: 966050896
+      cavetiles_539: 1564736174
+      cavetiles_54: -1585980665
+      cavetiles_540: -716234385
+      cavetiles_541: -1698352559
+      cavetiles_542: -1098381453
+      cavetiles_543: -1633647626
+      cavetiles_544: 2109753908
+      cavetiles_545: -1765846557
+      cavetiles_546: 2079357351
+      cavetiles_547: 1336849577
+      cavetiles_548: 268877953
+      cavetiles_549: -1494005905
+      cavetiles_55: 887930151
+      cavetiles_550: -2064381760
+      cavetiles_551: 205382921
+      cavetiles_552: -220891838
+      cavetiles_553: 1310143860
+      cavetiles_554: 1967960884
+      cavetiles_555: 1315998812
+      cavetiles_556: -1204716107
+      cavetiles_557: 2012192163
+      cavetiles_558: 1197475662
+      cavetiles_559: 1966961347
+      cavetiles_56: -1425099102
+      cavetiles_560: -156417378
+      cavetiles_561: -700127619
+      cavetiles_562: -1884481290
+      cavetiles_563: -1657665185
+      cavetiles_564: 252677159
+      cavetiles_565: -1879547707
+      cavetiles_566: 1458788056
+      cavetiles_567: 1251021730
+      cavetiles_568: 768198925
+      cavetiles_569: -366455912
+      cavetiles_57: 712937585
+      cavetiles_570: 2130599732
+      cavetiles_571: 1693623542
+      cavetiles_572: -1305167406
+      cavetiles_573: -1333070321
+      cavetiles_574: -665294358
+      cavetiles_575: 1347138399
+      cavetiles_576: 863846400
+      cavetiles_577: 408765234
+      cavetiles_578: -901542525
+      cavetiles_579: -895788525
+      cavetiles_58: 549492508
+      cavetiles_580: 1193097008
+      cavetiles_581: 1184482185
+      cavetiles_582: 792715621
+      cavetiles_583: -2115900519
+      cavetiles_584: 1766078019
+      cavetiles_585: 2061082465
+      cavetiles_586: -111529982
+      cavetiles_587: 1176637601
+      cavetiles_588: 930966709
+      cavetiles_589: -1229506777
+      cavetiles_59: 1444457586
+      cavetiles_590: 1950428395
+      cavetiles_591: -1018908929
+      cavetiles_592: -1269809509
+      cavetiles_593: 1611844041
+      cavetiles_594: -908926582
+      cavetiles_595: 708488630
+      cavetiles_596: 938764296
+      cavetiles_597: 835384615
+      cavetiles_598: 666508583
+      cavetiles_599: 573221008
+      cavetiles_6: 2023755871
+      cavetiles_60: 1945666639
+      cavetiles_600: 1905016549
+      cavetiles_601: 1219115542
+      cavetiles_602: -1594386991
+      cavetiles_603: -1876083145
+      cavetiles_604: -1783039627
+      cavetiles_605: -1333168971
+      cavetiles_606: 1608656149
+      cavetiles_607: 583494523
+      cavetiles_608: 702921030
+      cavetiles_609: 277765149
+      cavetiles_61: -1073085044
+      cavetiles_610: 1750033171
+      cavetiles_611: -645348108
+      cavetiles_612: -414951584
+      cavetiles_613: -600029453
+      cavetiles_614: 539645558
+      cavetiles_615: 975693970
+      cavetiles_616: 1264117060
+      cavetiles_617: -302751906
+      cavetiles_618: 847507747
+      cavetiles_619: -147687637
+      cavetiles_62: 718471608
+      cavetiles_620: -2103084302
+      cavetiles_621: 1043877593
+      cavetiles_622: 965005421
+      cavetiles_623: 853581614
+      cavetiles_624: -1505668320
+      cavetiles_625: -152504192
+      cavetiles_626: 1604940844
+      cavetiles_627: -935484200
+      cavetiles_628: -1047427062
+      cavetiles_629: 868944715
+      cavetiles_63: 1596952413
+      cavetiles_630: -31584423
+      cavetiles_631: 1441278503
+      cavetiles_632: -1757092448
+      cavetiles_633: -1501752371
+      cavetiles_634: -802944658
+      cavetiles_635: -2137539323
+      cavetiles_636: 1750781695
+      cavetiles_637: 1201726580
+      cavetiles_638: -682090144
+      cavetiles_639: -939358202
+      cavetiles_64: -862213085
+      cavetiles_640: -1406722231
+      cavetiles_641: 1014604483
+      cavetiles_642: -533395932
+      cavetiles_643: -1991880195
+      cavetiles_644: 2045756554
+      cavetiles_645: 3292542
+      cavetiles_646: 874808202
+      cavetiles_647: 433664186
+      cavetiles_648: -142212827
+      cavetiles_649: 245050061
+      cavetiles_65: 1924686149
+      cavetiles_650: -690975003
+      cavetiles_651: -215202334
+      cavetiles_652: -156492603
+      cavetiles_653: -400424292
+      cavetiles_654: 1884195648
+      cavetiles_655: 915072033
+      cavetiles_656: -1572921474
+      cavetiles_657: 840311539
+      cavetiles_658: 631860971
+      cavetiles_659: 2110455209
+      cavetiles_66: 1050275743
+      cavetiles_660: 1574084211
+      cavetiles_661: -2039107081
+      cavetiles_662: -1365911182
+      cavetiles_663: -393166425
+      cavetiles_664: 688460445
+      cavetiles_665: -1892601663
+      cavetiles_666: -278052688
+      cavetiles_667: -302908443
+      cavetiles_668: -1758339917
+      cavetiles_669: -1681043330
+      cavetiles_67: -1723618685
+      cavetiles_670: -1265136154
+      cavetiles_671: 1332675628
+      cavetiles_672: 751793686
+      cavetiles_673: -1030146100
+      cavetiles_674: 1232229384
+      cavetiles_675: 617069286
+      cavetiles_676: -1092782963
+      cavetiles_677: -637728728
+      cavetiles_678: -1473280943
+      cavetiles_679: -261830788
+      cavetiles_68: 75864285
+      cavetiles_680: -1336364631
+      cavetiles_681: -1073338518
+      cavetiles_682: 421710517
+      cavetiles_683: 56197718
+      cavetiles_684: 997127167
+      cavetiles_685: 1869560883
+      cavetiles_686: 1546384641
+      cavetiles_687: 1465544998
+      cavetiles_688: -1912417065
+      cavetiles_689: -1553656370
+      cavetiles_69: -479608091
+      cavetiles_690: 477983498
+      cavetiles_691: -945122602
+      cavetiles_692: 19683409
+      cavetiles_693: -438045308
+      cavetiles_694: 1550880012
+      cavetiles_695: -513965941
+      cavetiles_696: -913851622
+      cavetiles_697: -1433815819
+      cavetiles_698: -527074472
+      cavetiles_699: -1111582047
+      cavetiles_7: 1611141284
+      cavetiles_70: 1632423228
+      cavetiles_700: -653878793
+      cavetiles_701: -537399719
+      cavetiles_702: 31807894
+      cavetiles_703: -373908433
+      cavetiles_704: 259128358
+      cavetiles_705: -366006165
+      cavetiles_706: 623964654
+      cavetiles_707: 191695581
+      cavetiles_708: -601265804
+      cavetiles_709: -640193010
+      cavetiles_71: 640303621
+      cavetiles_710: 474904392
+      cavetiles_711: -1417286727
+      cavetiles_712: 504204003
+      cavetiles_713: -237319960
+      cavetiles_714: 1343056610
+      cavetiles_715: 1595874873
+      cavetiles_716: 1880813433
+      cavetiles_717: -845140670
+      cavetiles_718: 1008409223
+      cavetiles_719: 86427220
+      cavetiles_72: 932026828
+      cavetiles_720: -1603035120
+      cavetiles_721: 1588090787
+      cavetiles_722: -979964843
+      cavetiles_723: -1675700500
+      cavetiles_724: -1715389349
+      cavetiles_725: 1055557400
+      cavetiles_726: 818167199
+      cavetiles_727: 899103102
+      cavetiles_728: -1081674211
+      cavetiles_729: -57956943
+      cavetiles_73: 1259776472
+      cavetiles_730: 2121700523
+      cavetiles_731: -135582382
+      cavetiles_732: -227901289
+      cavetiles_733: -797920097
+      cavetiles_734: -756748639
+      cavetiles_735: 1161189485
+      cavetiles_736: 1759384667
+      cavetiles_737: 1630837581
+      cavetiles_738: -1681020899
+      cavetiles_739: 1092287871
+      cavetiles_74: -1641816905
+      cavetiles_740: -847994669
+      cavetiles_741: 1140666565
+      cavetiles_742: -1015198756
+      cavetiles_743: 776133919
+      cavetiles_744: -1008214969
+      cavetiles_745: -613557918
+      cavetiles_746: 378609145
+      cavetiles_747: -1809130074
+      cavetiles_748: 247991262
+      cavetiles_749: 1459343127
+      cavetiles_75: -1581708472
+      cavetiles_750: 754161644
+      cavetiles_751: 784831031
+      cavetiles_752: 1663909231
+      cavetiles_753: 1646649074
+      cavetiles_754: -174483189
+      cavetiles_755: -1025237203
+      cavetiles_756: -1710856634
+      cavetiles_757: 2035460191
+      cavetiles_758: 352544712
+      cavetiles_759: -989596201
+      cavetiles_76: -1137924665
+      cavetiles_760: -42497837
+      cavetiles_761: -588658051
+      cavetiles_762: 684880458
+      cavetiles_763: -1719476457
+      cavetiles_764: 2067127604
+      cavetiles_765: -915633307
+      cavetiles_766: 649969213
+      cavetiles_767: 640858074
+      cavetiles_768: -1212085363
+      cavetiles_769: 2001586129
+      cavetiles_77: 1435426833
+      cavetiles_770: -240820369
+      cavetiles_771: -2074553125
+      cavetiles_772: 739200641
+      cavetiles_773: -1207505255
+      cavetiles_774: -416119980
+      cavetiles_775: -1162511175
+      cavetiles_776: 2131185516
+      cavetiles_777: 150236092
+      cavetiles_778: 781819292
+      cavetiles_779: 326204953
+      cavetiles_78: -185327353
+      cavetiles_780: -527281380
+      cavetiles_781: -699577175
+      cavetiles_782: 18234734
+      cavetiles_783: 879882856
+      cavetiles_784: 2135386629
+      cavetiles_785: -939973645
+      cavetiles_786: -977374518
+      cavetiles_787: -924446324
+      cavetiles_788: -1578074291
+      cavetiles_789: -1934560072
+      cavetiles_79: -954468449
+      cavetiles_790: -2097251166
+      cavetiles_791: 1901127200
+      cavetiles_792: 588372917
+      cavetiles_793: 1973357220
+      cavetiles_794: -837042987
+      cavetiles_795: 719156905
+      cavetiles_796: 316875469
+      cavetiles_797: -1365870756
+      cavetiles_798: 2006568729
+      cavetiles_799: 731793442
+      cavetiles_8: -1344968093
+      cavetiles_80: -1898191517
+      cavetiles_800: -1828799235
+      cavetiles_801: 124583572
+      cavetiles_802: 298591077
+      cavetiles_803: -549666522
+      cavetiles_804: 1586776523
+      cavetiles_805: -1036148293
+      cavetiles_806: 1360556174
+      cavetiles_807: -692571373
+      cavetiles_808: -94192192
+      cavetiles_809: -1329079153
+      cavetiles_81: 396316865
+      cavetiles_810: 230802429
+      cavetiles_811: 702043211
+      cavetiles_812: -1918831370
+      cavetiles_813: -113243348
+      cavetiles_814: -901934727
+      cavetiles_815: -2128390232
+      cavetiles_816: 72289308
+      cavetiles_817: 1815489680
+      cavetiles_818: -1938990659
+      cavetiles_819: -2099951534
+      cavetiles_82: -986826056
+      cavetiles_820: -601282901
+      cavetiles_821: 1125456807
+      cavetiles_822: 1723658753
+      cavetiles_823: -464882498
+      cavetiles_824: -1056191700
+      cavetiles_825: 1801270593
+      cavetiles_826: 1773043003
+      cavetiles_827: 1820511767
+      cavetiles_828: 1418060362
+      cavetiles_829: -1670654157
+      cavetiles_83: -1994018707
+      cavetiles_830: 453025720
+      cavetiles_831: 1388334798
+      cavetiles_832: -1150933377
+      cavetiles_833: -518591265
+      cavetiles_834: -333440348
+      cavetiles_835: 505547802
+      cavetiles_836: -360924712
+      cavetiles_837: -132249213
+      cavetiles_838: -409312318
+      cavetiles_839: 803981751
+      cavetiles_84: 1505283330
+      cavetiles_840: -1449869968
+      cavetiles_841: -1984864263
+      cavetiles_842: -1235451039
+      cavetiles_843: -585020897
+      cavetiles_844: 855815450
+      cavetiles_845: -1644826083
+      cavetiles_846: 721119687
+      cavetiles_847: -132452309
+      cavetiles_848: -938726977
+      cavetiles_849: -896904587
+      cavetiles_85: -1664429555
+      cavetiles_850: -1661197798
+      cavetiles_851: 907007971
+      cavetiles_852: -501905964
+      cavetiles_853: -490913619
+      cavetiles_854: -84746583
+      cavetiles_855: 792754973
+      cavetiles_856: -869098784
+      cavetiles_857: 811882681
+      cavetiles_858: -977311655
+      cavetiles_859: 699617332
+      cavetiles_86: -1182272353
+      cavetiles_860: 208691238
+      cavetiles_861: -369224490
+      cavetiles_862: 1115803647
+      cavetiles_863: -372999329
+      cavetiles_864: 1192482342
+      cavetiles_865: 577137078
+      cavetiles_866: 2019016952
+      cavetiles_867: -82979598
+      cavetiles_868: -1403633955
+      cavetiles_869: 1821626436
+      cavetiles_87: -1312514476
+      cavetiles_870: -249328460
+      cavetiles_871: 1701207054
+      cavetiles_872: -2037403599
+      cavetiles_873: -1342744070
+      cavetiles_874: 175490516
+      cavetiles_875: -201579508
+      cavetiles_876: 272477645
+      cavetiles_877: 95753938
+      cavetiles_878: -139565694
+      cavetiles_879: 306247811
+      cavetiles_88: -1473623593
+      cavetiles_880: -395851492
+      cavetiles_881: -2129791819
+      cavetiles_882: -448104758
+      cavetiles_883: -838794597
+      cavetiles_884: 1352982900
+      cavetiles_885: -140481192
+      cavetiles_886: -1518149651
+      cavetiles_887: -1647387864
+      cavetiles_888: 420610764
+      cavetiles_889: -1457388724
+      cavetiles_89: -238195156
+      cavetiles_890: 723771837
+      cavetiles_891: 1179711905
+      cavetiles_892: -1005208530
+      cavetiles_893: 1644882276
+      cavetiles_894: -505333226
+      cavetiles_895: 494330036
+      cavetiles_896: 1069843324
+      cavetiles_897: 190507549
+      cavetiles_898: 1188957250
+      cavetiles_899: 1930947299
+      cavetiles_9: -559387177
+      cavetiles_90: -1056073665
+      cavetiles_900: 441124689
+      cavetiles_901: -1891571074
+      cavetiles_902: -938990703
+      cavetiles_903: -1533638547
+      cavetiles_904: 848440192
+      cavetiles_905: 1797728063
+      cavetiles_906: 1619478196
+      cavetiles_907: -1792180532
+      cavetiles_908: 448262677
+      cavetiles_909: 204839672
+      cavetiles_91: 394682440
+      cavetiles_910: -551109927
+      cavetiles_911: 1904623634
+      cavetiles_912: 84541740
+      cavetiles_913: 1166430225
+      cavetiles_914: 918827567
+      cavetiles_915: 273314509
+      cavetiles_916: -1600229583
+      cavetiles_917: -335559793
+      cavetiles_918: 2083612386
+      cavetiles_919: 1235191191
+      cavetiles_92: -2013372533
+      cavetiles_920: 726479278
+      cavetiles_921: -1513725227
+      cavetiles_922: 1469372295
+      cavetiles_923: 2001055404
+      cavetiles_924: 163746612
+      cavetiles_925: -486171515
+      cavetiles_926: -641123735
+      cavetiles_927: 1830029180
+      cavetiles_928: -289736296
+      cavetiles_929: -23492594
+      cavetiles_93: 1528684025
+      cavetiles_930: -1097289899
+      cavetiles_931: 713467699
+      cavetiles_932: -1008241142
+      cavetiles_933: -1590413994
+      cavetiles_934: -1819180981
+      cavetiles_935: 1634948286
+      cavetiles_936: 511095143
+      cavetiles_937: 1332849468
+      cavetiles_938: -1072933328
+      cavetiles_939: -1185551932
+      cavetiles_94: -1538215015
+      cavetiles_940: 406927515
+      cavetiles_941: 1449675433
+      cavetiles_942: 495359937
+      cavetiles_943: -1321847354
+      cavetiles_944: 430914547
+      cavetiles_945: 1581119377
+      cavetiles_946: 2138111078
+      cavetiles_947: 1998204784
+      cavetiles_948: -917305666
+      cavetiles_949: -103679349
+      cavetiles_95: -1364514906
+      cavetiles_950: 394322859
+      cavetiles_951: -266434164
+      cavetiles_952: 1320369352
+      cavetiles_953: 1463485183
+      cavetiles_954: 266510964
+      cavetiles_955: -999556255
+      cavetiles_956: 324194267
+      cavetiles_957: 1689144810
+      cavetiles_958: -1434591485
+      cavetiles_959: 1311321298
+      cavetiles_96: -1197695082
+      cavetiles_960: -320972333
+      cavetiles_961: -1427303849
+      cavetiles_962: 1188398993
+      cavetiles_963: -120633900
+      cavetiles_964: -1367169681
+      cavetiles_965: 970218367
+      cavetiles_966: 18428071
+      cavetiles_967: -1601027675
+      cavetiles_968: -2114141031
+      cavetiles_969: -1829710829
+      cavetiles_97: -219466925
+      cavetiles_970: 152489691
+      cavetiles_971: -1664098840
+      cavetiles_972: -190331970
+      cavetiles_973: -642107660
+      cavetiles_974: 1470134152
+      cavetiles_975: 251953232
+      cavetiles_976: -604926817
+      cavetiles_977: -1209352859
+      cavetiles_978: -430324588
+      cavetiles_979: -910119479
+      cavetiles_98: 1574876781
+      cavetiles_980: 249764710
+      cavetiles_981: -785649767
+      cavetiles_982: -1585400999
+      cavetiles_983: 543084090
+      cavetiles_984: 438995311
+      cavetiles_985: -1707192060
+      cavetiles_986: -1640406472
+      cavetiles_987: 864268721
+      cavetiles_988: 668746927
+      cavetiles_989: -1453146085
+      cavetiles_990: 1210773812
+      cavetiles_991: 814994052
+      cavetiles_992: 1548654087
+      cavetiles_993: 674318212
+      cavetiles_994: 247191262
+      cavetiles_995: -968251115
+      cavetiles_996: 1398717507
+      cavetiles_997: -694401479
+      cavetiles_998: 730645314
+      cavetiles_999: -1339496287
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
