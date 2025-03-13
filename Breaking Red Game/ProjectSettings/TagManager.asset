@@ -16,6 +16,7 @@ TagManager:
   - IL1.1
   - L4
   - L5
+  - Weather
   layers:
   - Default
   - TransparentFX
