@@ -18,14 +18,14 @@ public class Passageways : MonoBehaviour
             if(newPosition != Vector2.zero)
             {
                 // Check the tag of the current door to change BGmusic
-                if (gameObject.CompareTag("L1"))
+                if (gameObject.CompareTag("IL1"))
                 {
                     // Fade out the current music before stopping it
                     StartCoroutine(AudioManager.instance.FadeOut("CabinBGM", 1.5f)); // Fade out
                     StartCoroutine(AudioManager.instance.FadeIn("L1BGM", 1.5f));  // Fade in
                     StartCoroutine(AudioManager.instance.FadeIn("WolfSound", 1.5f)); // Fade in
                 }
-                else if (gameObject.CompareTag("L2"))
+                else if (gameObject.CompareTag("IL1.1"))
                 {
                     // Fade out the current music before stopping it
                     StartCoroutine(AudioManager.instance.FadeOut("WolfSound", 1.5f)); // Fade out
@@ -90,11 +90,23 @@ public class Passageways : MonoBehaviour
         switch(gameObject.tag)
         {
             case "L1":
+                SceneManager.LoadScene("Level 1");
+                return new Vector2(-19.7f, -21.2f);
+            case "IL1":
                 return new Vector2(-1, 0);
-            case "L2":
+            case "IL1.1":
                 return new Vector2(-83.5f, -17.8f);
-            case "L3":
+            case "L2":
                 SceneManager.LoadScene("Level 2");
+                return new Vector2(-19.7f, -21.2f);
+            case "L3":
+                SceneManager.LoadScene("Level 3");
+                return new Vector2(-19.7f, -21.2f);
+            case "L4":
+                SceneManager.LoadScene("Level 4");
+                return new Vector2(-19.7f, -21.2f);
+            case "L5":
+                SceneManager.LoadScene("Level 5");
 
                 return new Vector2(-19.7f, -21.2f);
             default:

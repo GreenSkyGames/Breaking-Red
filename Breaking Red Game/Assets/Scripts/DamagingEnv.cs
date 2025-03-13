@@ -20,10 +20,4 @@ public class DamagingEnv : MonoBehaviour
         Application.Quit();//quitting the game 
         UnityEditor.EditorApplication.isPlaying = false;
     }
-
-    void Scales()
-    {
-        float newScale = Mathf.Lerp(_seedHeight, _finalHeight, Time.time * _scaleSpeed);
-        transform.localScale = new Vector3(newScale, newScale, newScale);
-    }
 }
