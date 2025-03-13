@@ -19510,8 +19510,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  scaleSpeed: 2
+  seedHeight: 1
+  finalHeight: 0
+  isScaling: 0
   facingDirection: 1
   rb: {fileID: 856914893}
+  Collider: {fileID: 856914894}
+  spriteRenderer: {fileID: 856914895}
   anim: {fileID: 856914891}
   activateRange: 1
   enemyLayer:
@@ -20669,9 +20675,9 @@ MonoBehaviour:
   _collisionEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1794359517}
-        m_TargetAssemblyTypeName: DamagingEnv, Assembly-CSharp
-        m_MethodName: death
+      - m_Target: {fileID: 856914892}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Scales
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29485,6 +29491,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  _scaleSpeed: 0
+  _seedHeight: 0
+  _finalHeight: 0
 --- !u!61 &1794359518
 BoxCollider2D:
   m_ObjectHideFlags: 0
