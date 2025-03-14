@@ -5255,57 +5255,11 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
---- !u!4 &402427249 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3572575336149032000, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-  m_PrefabInstance: {fileID: 885138863}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &471417925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4157680255768475798, guid: ba1dcfd06e3747247b119853f7188fa4, type: 3}
   m_PrefabInstance: {fileID: 4769185274173588353}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &494381796 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-  m_PrefabInstance: {fileID: 885138863}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &494381797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 494381796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e6789b9bfffb2c46a6a340ea4bbe41f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueKnotName: TheWolf
---- !u!114 &494381798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 494381796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  attackRange: 1
-  attackCooldown: 1
-  playerDetectRange: 5
-  DetectionPoint: {fileID: 402427249}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  myCanvas: {fileID: 828688488}
-  isHostile: 0
-  facingRight: 1
 --- !u!1 &511392578
 GameObject:
   m_ObjectHideFlags: 0
@@ -49648,75 +49602,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &885138863
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.769392
-      objectReference: {fileID: 0}
-    - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -7.093523
-      objectReference: {fileID: 0}
-    - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.09251358
-      objectReference: {fileID: 0}
-    - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418360911177093948, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_Name
-      value: TheWolf
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6226005939510379487, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-    - {fileID: 3175469785067069841, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 494381798}
-    - targetCorrespondingSourceObject: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 494381797}
-  m_SourcePrefab: {fileID: 100100000, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
 --- !u!1 &922502240
 GameObject:
   m_ObjectHideFlags: 0
@@ -61509,4 +61394,3 @@ SceneRoots:
   - {fileID: 1044498642}
   - {fileID: 194577171}
   - {fileID: 1428322933}
-  - {fileID: 885138863}
