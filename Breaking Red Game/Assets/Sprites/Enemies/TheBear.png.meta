@@ -1090,7 +1090,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -1125,10 +1125,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -2726,9 +2726,9 @@ TextureImporter:
       name: TheBear_69
       rect:
         serializedVersion: 2
-        x: 18
+        x: 15
         y: 2817
-        width: 27
+        width: 29
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -2748,9 +2748,9 @@ TextureImporter:
       name: TheBear_70
       rect:
         serializedVersion: 2
-        x: 82
+        x: 79
         y: 2817
-        width: 27
+        width: 30
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -2770,9 +2770,9 @@ TextureImporter:
       name: TheBear_71
       rect:
         serializedVersion: 2
-        x: 146
+        x: 143
         y: 2818
-        width: 27
+        width: 29
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -2792,9 +2792,9 @@ TextureImporter:
       name: TheBear_72
       rect:
         serializedVersion: 2
-        x: 210
+        x: 207
         y: 2818
-        width: 28
+        width: 31
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -2814,9 +2814,9 @@ TextureImporter:
       name: TheBear_73
       rect:
         serializedVersion: 2
-        x: 274
+        x: 271
         y: 2817
-        width: 29
+        width: 32
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -2836,9 +2836,9 @@ TextureImporter:
       name: TheBear_74
       rect:
         serializedVersion: 2
-        x: 338
+        x: 335
         y: 2817
-        width: 31
+        width: 34
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -2858,9 +2858,9 @@ TextureImporter:
       name: TheBear_75
       rect:
         serializedVersion: 2
-        x: 402
+        x: 399
         y: 2817
-        width: 29
+        width: 32
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -2880,9 +2880,9 @@ TextureImporter:
       name: TheBear_76
       rect:
         serializedVersion: 2
-        x: 466
+        x: 463
         y: 2817
-        width: 28
+        width: 31
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -2902,9 +2902,9 @@ TextureImporter:
       name: TheBear_77
       rect:
         serializedVersion: 2
-        x: 530
+        x: 527
         y: 2817
-        width: 27
+        width: 30
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -3122,9 +3122,9 @@ TextureImporter:
       name: TheBear_87
       rect:
         serializedVersion: 2
-        x: 19
+        x: 20
         y: 2689
-        width: 27
+        width: 29
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -3146,7 +3146,7 @@ TextureImporter:
         serializedVersion: 2
         x: 83
         y: 2689
-        width: 27
+        width: 30
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -3166,9 +3166,9 @@ TextureImporter:
       name: TheBear_89
       rect:
         serializedVersion: 2
-        x: 147
+        x: 148
         y: 2690
-        width: 27
+        width: 29
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -3190,7 +3190,7 @@ TextureImporter:
         serializedVersion: 2
         x: 210
         y: 2690
-        width: 28
+        width: 31
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -3212,7 +3212,7 @@ TextureImporter:
         serializedVersion: 2
         x: 273
         y: 2689
-        width: 29
+        width: 32
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -3234,7 +3234,7 @@ TextureImporter:
         serializedVersion: 2
         x: 335
         y: 2689
-        width: 31
+        width: 34
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -3256,7 +3256,7 @@ TextureImporter:
         serializedVersion: 2
         x: 401
         y: 2689
-        width: 29
+        width: 32
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -3278,7 +3278,7 @@ TextureImporter:
         serializedVersion: 2
         x: 466
         y: 2689
-        width: 28
+        width: 31
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -3300,7 +3300,7 @@ TextureImporter:
         serializedVersion: 2
         x: 531
         y: 2689
-        width: 27
+        width: 30
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5300,9 +5300,9 @@ TextureImporter:
       name: TheBear_186
       rect:
         serializedVersion: 2
-        x: 18
+        x: 15
         y: 1921
-        width: 26
+        width: 29
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5322,9 +5322,9 @@ TextureImporter:
       name: TheBear_187
       rect:
         serializedVersion: 2
-        x: 82
+        x: 79
         y: 1921
-        width: 26
+        width: 29
         height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5390,7 +5390,7 @@ TextureImporter:
         serializedVersion: 2
         x: 20
         y: 1793
-        width: 26
+        width: 29
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -5412,7 +5412,7 @@ TextureImporter:
         serializedVersion: 2
         x: 84
         y: 1793
-        width: 26
+        width: 29
         height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6576,9 +6576,9 @@ TextureImporter:
       name: TheBear_244
       rect:
         serializedVersion: 2
-        x: 16
+        x: 13
         y: 897
-        width: 32
+        width: 35
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6598,9 +6598,9 @@ TextureImporter:
       name: TheBear_245
       rect:
         serializedVersion: 2
-        x: 80
+        x: 77
         y: 896
-        width: 28
+        width: 31
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6620,9 +6620,9 @@ TextureImporter:
       name: TheBear_246
       rect:
         serializedVersion: 2
-        x: 144
+        x: 141
         y: 896
-        width: 25
+        width: 28
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6642,9 +6642,9 @@ TextureImporter:
       name: TheBear_247
       rect:
         serializedVersion: 2
-        x: 208
+        x: 205
         y: 900
-        width: 32
+        width: 35
         height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6664,9 +6664,9 @@ TextureImporter:
       name: TheBear_248
       rect:
         serializedVersion: 2
-        x: 272
+        x: 269
         y: 897
-        width: 32
+        width: 35
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6686,9 +6686,9 @@ TextureImporter:
       name: TheBear_249
       rect:
         serializedVersion: 2
-        x: 336
+        x: 333
         y: 896
-        width: 26
+        width: 29
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6708,9 +6708,9 @@ TextureImporter:
       name: TheBear_250
       rect:
         serializedVersion: 2
-        x: 400
+        x: 397
         y: 896
-        width: 27
+        width: 30
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6730,9 +6730,9 @@ TextureImporter:
       name: TheBear_251
       rect:
         serializedVersion: 2
-        x: 464
+        x: 461
         y: 898
-        width: 32
+        width: 35
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6930,7 +6930,7 @@ TextureImporter:
         serializedVersion: 2
         x: 16
         y: 769
-        width: 32
+        width: 35
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6952,7 +6952,7 @@ TextureImporter:
         serializedVersion: 2
         x: 84
         y: 768
-        width: 28
+        width: 31
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6974,7 +6974,7 @@ TextureImporter:
         serializedVersion: 2
         x: 151
         y: 768
-        width: 25
+        width: 28
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -6996,7 +6996,7 @@ TextureImporter:
         serializedVersion: 2
         x: 208
         y: 772
-        width: 32
+        width: 35
         height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -7018,7 +7018,7 @@ TextureImporter:
         serializedVersion: 2
         x: 272
         y: 769
-        width: 32
+        width: 35
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -7040,7 +7040,7 @@ TextureImporter:
         serializedVersion: 2
         x: 342
         y: 768
-        width: 26
+        width: 29
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -7062,7 +7062,7 @@ TextureImporter:
         serializedVersion: 2
         x: 405
         y: 768
-        width: 27
+        width: 30
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -7084,7 +7084,7 @@ TextureImporter:
         serializedVersion: 2
         x: 464
         y: 770
-        width: 32
+        width: 35
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -8578,9 +8578,9 @@ TextureImporter:
       name: TheBear_335
       rect:
         serializedVersion: 2
-        x: 75
+        x: 72
         y: 129
-        width: 35
+        width: 38
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -8600,9 +8600,9 @@ TextureImporter:
       name: TheBear_336
       rect:
         serializedVersion: 2
-        x: 136
+        x: 133
         y: 129
-        width: 33
+        width: 36
         height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -8666,9 +8666,9 @@ TextureImporter:
       name: TheBear_339
       rect:
         serializedVersion: 2
-        x: 331
+        x: 328
         y: 129
-        width: 35
+        width: 38
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -8844,7 +8844,7 @@ TextureImporter:
         serializedVersion: 2
         x: 82
         y: 1
-        width: 35
+        width: 38
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -8866,7 +8866,7 @@ TextureImporter:
         serializedVersion: 2
         x: 151
         y: 1
-        width: 34
+        width: 37
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -8931,9 +8931,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 338
-        y: 0
-        width: 35
-        height: 44
+        y: 1
+        width: 38
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

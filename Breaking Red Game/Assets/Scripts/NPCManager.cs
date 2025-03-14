@@ -1,8 +1,4 @@
 using UnityEngine;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Ink.Runtime;
 
 public class NPCManager : MonoBehaviour
 {
@@ -26,8 +22,8 @@ public class NPCManager : MonoBehaviour
 	private Animator anim;
 
 	public bool isHostile;
-	public bool facingRight;
 
+	
     //Start is currently being used to:
 	// - find rigidbody component
 	// - find animator component
@@ -38,32 +34,6 @@ public class NPCManager : MonoBehaviour
 		anim = GetComponent<Animator>();
 		ChangeState(EnemyState.Idle);
     }
-
-	private void OnEnable()
-	{
-		StartCoroutine(WaitForGameEventsManager());
-	}
-
-	//This activates these functions for ALL examples of NPCManager
-	private IEnumerator WaitForGameEventsManager()
-	{
-		while(GameEventsManager.instance == null || GameEventsManager.instance.dialogueEvents == null)
-		{
-			yield return null;
-		}
-		//Debug.Log("Hostility enable test");
-		GameEventsManager.instance.dialogueEvents.startHostility += onHostility;
-		GameEventsManager.instance.dialogueEvents.stopHostility += offHostility;
-	}
-
-	private void OnDisable()
-	{
-		if(GameEventsManager.instance != null && GameEventsManager.instance.dialogueEvents != null)
-		{
-			GameEventsManager.instance.dialogueEvents.startHostility -= onHostility;
-			GameEventsManager.instance.dialogueEvents.stopHostility -= offHostility;			
-		}
-	}
 
     //Update is being used to:
 	//- Check if enemy is in knockback (not implemented)
@@ -122,10 +92,6 @@ public class NPCManager : MonoBehaviour
 	{
 		isHostile = true;
 	}
-	public void setHostility(bool activate)
-	{
-		isHostile = activate;
-	}
 
 	//Chase handles both direction of the NPC and the flipping their animation (for now).
 	void Chase()
@@ -133,21 +99,10 @@ public class NPCManager : MonoBehaviour
 		//NOTE:  THIS IS FOR ENEMIES THAT FACE RIGHT.
 		//facingDirection NEEDS TO BE SIGN CHANGED FOR THOSE THAT FACE LEFT.
 		//Or a better solution might be to manage the sprite itself.
-		if(facingRight == true)
+		if(player.position.x > transform.position.x && facingDirection == 1 ||
+			player.position.x < transform.position.x && facingDirection == -1)
 		{
-			if(player.position.x > transform.position.x && facingDirection == 1 ||
-				player.position.x < transform.position.x && facingDirection == -1)
-			{
-				Flip();
-			}
-		}
-		else
-		{
-			if(player.position.x > transform.position.x && facingDirection == -1 ||
-				player.position.x < transform.position.x && facingDirection == 1)
-			{
-				Flip();
-			}
+			Flip();
 		}
 		Vector2 direction = (player.position - transform.position).normalized;
 		rb.linearVelocity = direction * speed;
@@ -209,7 +164,6 @@ public class NPCManager : MonoBehaviour
 
 		//Update current state
 		enemyState = newState;
-		//Debug.Log("State is " + enemyState);
 
 		//Update the new animation
 		if(enemyState == EnemyState.Idle || enemyState == EnemyState.Dialogue)
@@ -232,13 +186,13 @@ public class NPCManager : MonoBehaviour
 	{
 		if(myCanvas.gameObject.activeSelf == true)
 		{
-			//myCanvas.gameObject.SetActive(false);
+			myCanvas.gameObject.SetActive(false);
 			ChangeState(EnemyState.Idle);
 		}
 		else
 		{
 			//Debug.Log("Test.");
-			//myCanvas.gameObject.SetActive(true);
+			myCanvas.gameObject.SetActive(true);
 			ChangeState(EnemyState.Dialogue);
 		}
 	}
