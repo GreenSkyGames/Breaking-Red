@@ -32,7 +32,7 @@ public class PowerUpManager : MonoBehaviour
                 powerUp.ApplyEffect(playerController);  // apply the power-up effect
                 inputReceived = true;
             }
-            else if (Input.GetKeyDown(KeyCode.S))  // 'S' for Store for Later
+            else if (Input.GetKeyDown(KeyCode.L))  // 'L' for Store for Later
             {
                 // add to inventory for later use
                 InventoryManager.instance.AddToInventory(powerUp);
@@ -44,6 +44,7 @@ public class PowerUpManager : MonoBehaviour
         }
 
         // hide the prompt after the player makes a choice
+        Debug.Log("Choice prompt hidden");
         choicePrompt.SetActive(false);
     }
 }
