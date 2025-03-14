@@ -17,6 +17,8 @@ TagManager:
   - L4
   - L5
   - Weather
+  - PurpleTorchEnemy
+  - TheBear
   layers:
   - Default
   - TransparentFX
