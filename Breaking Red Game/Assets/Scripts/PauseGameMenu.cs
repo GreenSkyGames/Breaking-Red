@@ -28,7 +28,7 @@ public class PauseGameMenu : MonoBehaviour
         {
             PauseMenu.SetActive(false); // Hide menu in other scenes
         }
-        //LoadGame(); COMMENTED OUT FOR GAME TESTING FUNCTIONALITY
+        LoadGame();
     }
     void Update()
     {
