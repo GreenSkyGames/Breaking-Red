@@ -77,11 +77,11 @@ GameObject:
   - component: {fileID: 3490455145668807390}
   - component: {fileID: 691563667995140870}
   - component: {fileID: 5350014535343959427}
-  - component: {fileID: 5974743231433461337}
-  - component: {fileID: 8893855111234015680}
+  - component: {fileID: 8120501714737714936}
+  - component: {fileID: 8069164262632535030}
   m_Layer: 7
   m_Name: PurpleTorchEnemy
-  m_TagString: Enemy
+  m_TagString: PurpleTorchEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,7 +300,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &5974743231433461337
+--- !u!114 &8120501714737714936
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,12 +309,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4868536043419205611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26778492f4a42314e8539f8556d9aa0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e6789b9bfffb2c46a6a340ea4bbe41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialogue: {fileID: 0}
-  Name: PurpleTorchEnemy
---- !u!114 &8893855111234015680
+  dialogueKnotName: PurpleTorchEnemy
+--- !u!114 &8069164262632535030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,7 +322,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4868536043419205611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
@@ -336,3 +335,4 @@ MonoBehaviour:
     m_Bits: 64
   myCanvas: {fileID: 0}
   isHostile: 0
+  facingRight: 0

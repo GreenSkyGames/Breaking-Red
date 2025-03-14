@@ -77,8 +77,8 @@ GameObject:
   - component: {fileID: 998717416765251416}
   - component: {fileID: 5272995025209110295}
   - component: {fileID: 1231940742920002264}
-  - component: {fileID: 6226005939510379487}
-  - component: {fileID: 3175469785067069841}
+  - component: {fileID: 6834397048408610695}
+  - component: {fileID: 6273597732280082222}
   m_Layer: 7
   m_Name: TheWolf
   m_TagString: TheWolf
@@ -300,7 +300,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &6226005939510379487
+--- !u!114 &6834397048408610695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,21 +309,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7729365132012887990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26778492f4a42314e8539f8556d9aa0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogue: {fileID: 11400000, guid: 0c2641bb458617a48b7d4e0f89c3ae24, type: 2}
-  Name: The Wolf
---- !u!114 &3175469785067069841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7729365132012887990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
@@ -336,3 +322,17 @@ MonoBehaviour:
     m_Bits: 64
   myCanvas: {fileID: 0}
   isHostile: 0
+  facingRight: 0
+--- !u!114 &6273597732280082222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729365132012887990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e6789b9bfffb2c46a6a340ea4bbe41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueKnotName: TheWolf

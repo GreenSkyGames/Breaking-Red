@@ -28007,60 +28007,13 @@ PrefabInstance:
     - {fileID: 8893855111234015680, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4868536043419205611, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1651321476}
-    - targetCorrespondingSourceObject: {fileID: 4868536043419205611, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1651321475}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
 --- !u!4 &1651321473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6769459427701160004, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
   m_PrefabInstance: {fileID: 1651321472}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1651321474 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4868536043419205611, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-  m_PrefabInstance: {fileID: 1651321472}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1651321475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651321474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  attackRange: 1
-  attackCooldown: 1
-  playerDetectRange: 5
-  DetectionPoint: {fileID: 1651321473}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  myCanvas: {fileID: 1804353379}
-  isHostile: 0
-  facingRight: 0
---- !u!114 &1651321476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651321474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e6789b9bfffb2c46a6a340ea4bbe41f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueKnotName: PurpleTorchEnemy
 --- !u!1 &1736057583
 GameObject:
   m_ObjectHideFlags: 0
@@ -33957,60 +33910,13 @@ PrefabInstance:
     - {fileID: 3175469785067069841, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1830360926}
-    - targetCorrespondingSourceObject: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1830360925}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
 --- !u!4 &1830360923 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3572575336149032000, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
   m_PrefabInstance: {fileID: 1830360922}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1830360924 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-  m_PrefabInstance: {fileID: 1830360922}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1830360925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830360924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e6789b9bfffb2c46a6a340ea4bbe41f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueKnotName: TheWolf
---- !u!114 &1830360926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830360924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  attackRange: 1
-  attackCooldown: 1
-  playerDetectRange: 5
-  DetectionPoint: {fileID: 1830360923}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  myCanvas: {fileID: 1804353379}
-  isHostile: 0
-  facingRight: 1
 --- !u!1 &1913420598
 GameObject:
   m_ObjectHideFlags: 0
