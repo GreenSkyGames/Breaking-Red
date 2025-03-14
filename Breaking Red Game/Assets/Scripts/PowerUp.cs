@@ -3,7 +3,7 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     // Enum to define different types of power-ups
-    public enum itemName { PoisonApple, GoldenApple }
+    public enum itemName { PoisonApple, GoldenApple, BerserkerBrew }
 
     public itemName type;  // Type of the power-up
     public float effectAmount;
@@ -21,6 +21,11 @@ public class PowerUp : MonoBehaviour
             case itemName.GoldenApple:
                 playerController.health += effectAmount;  // increases health
                 Debug.Log("Player health increased");
+                break;
+            
+            case itemName.BerserkerBrew:
+                //playerController.speed += effectAmount;
+                Debug.Log("Player speed increased");
                 break;
         }
     }
