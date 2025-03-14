@@ -209,7 +209,7 @@ public class NPCManager : MonoBehaviour
 
 		//Update current state
 		enemyState = newState;
-		Debug.Log("State is " + enemyState);
+		//Debug.Log("State is " + enemyState);
 
 		//Update the new animation
 		if(enemyState == EnemyState.Idle || enemyState == EnemyState.Dialogue)
