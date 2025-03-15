@@ -19,8 +19,7 @@ public class Passageways : MonoBehaviour
             {
                 // Log the tag to check the value
                 Debug.Log("Current tag: " + gameObject.tag); // Print the tag of the current door
-                //BackgroundMusic.instance.ChangeBackgroundMusic(gameObject.tag); // Having issue when this code plays.The passage way can not work.
-
+                
                 Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
@@ -29,6 +28,8 @@ public class Passageways : MonoBehaviour
                 }
                 //other.transform.position = newPosition;
                 StartCoroutine(TeleportWithFade(other, newPosition, rb));
+
+                BackgroundMusic.instance.ChangeBackgroundMusic(gameObject.tag); // Having issue when this code plays.The passage way can not work.
             }
         }
     }
