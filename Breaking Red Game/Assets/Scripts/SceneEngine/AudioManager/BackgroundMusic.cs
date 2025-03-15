@@ -9,20 +9,17 @@ public class BackgroundMusic : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        DontDestroyOnLoad(gameObject);
     }
 
     public void ChangeBackgroundMusic(string tag)
     {
+        if (instance == null)
+        {
+            Debug.LogError("BackgroundMusic instance is null!");  // Check if instance is null
+            return;
+        }
+
         Debug.Log("Changing background music for tag: " + tag); // Log to check the tag received
 
         // List of audio names to pause
