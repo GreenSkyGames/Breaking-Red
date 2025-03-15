@@ -27871,6 +27871,10 @@ PrefabInstance:
       propertyPath: playerLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 8069164262632535030, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
+      propertyPath: myCanvas
+      value: 
+      objectReference: {fileID: 1804353379}
     - target: {fileID: 8893855111234015680, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
       propertyPath: myCanvas
       value: 
@@ -33770,6 +33774,10 @@ PrefabInstance:
       propertyPath: Dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 0c2641bb458617a48b7d4e0f89c3ae24, type: 2}
+    - target: {fileID: 6834397048408610695, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
+      propertyPath: myCanvas
+      value: 
+      objectReference: {fileID: 1804353379}
     - target: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
       propertyPath: m_Name
       value: TheWolf
