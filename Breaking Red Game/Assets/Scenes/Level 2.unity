@@ -69157,6 +69157,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 851572732}
     m_Modifications:
     - target: {fileID: 4682149530838873907, guid: 377bc1e7d16a2f642affe7e9e80b2122, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682149530838873907, guid: 377bc1e7d16a2f642affe7e9e80b2122, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682149530838873907, guid: 377bc1e7d16a2f642affe7e9e80b2122, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682149530838873907, guid: 377bc1e7d16a2f642affe7e9e80b2122, type: 3}
       propertyPath: m_LocalPosition.x
       value: 71.17
       objectReference: {fileID: 0}
@@ -69199,6 +69211,22 @@ PrefabInstance:
     - target: {fileID: 6378629658583778911, guid: 377bc1e7d16a2f642affe7e9e80b2122, type: 3}
       propertyPath: m_Name
       value: BerserkerBrew
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933203623082116499, guid: 377bc1e7d16a2f642affe7e9e80b2122, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6308103
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933203623082116499, guid: 377bc1e7d16a2f642affe7e9e80b2122, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7275168
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933203623082116499, guid: 377bc1e7d16a2f642affe7e9e80b2122, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0064885616
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933203623082116499, guid: 377bc1e7d16a2f642affe7e9e80b2122, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.014840761
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
