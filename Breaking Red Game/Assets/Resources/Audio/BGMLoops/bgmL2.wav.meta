@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d2be9ad9f9294fda8292aefe64d92ee
+guid: 5d1f1f52ce078494588ef5d6408dc298
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
@@ -20,10 +20,3 @@ AudioImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 221545
-  packageName: Adventure Music and SFX
-  packageVersion: 1.0
-  assetPath: Assets/WhatSoundsNice/Adventure Music & SFX/Music/Loops/crisis_loop.wav
-  uploadId: 498390
