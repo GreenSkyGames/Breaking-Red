@@ -1190,14 +1190,14 @@ MonoBehaviour:
     Loop: 1
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 2d2be9ad9f9294fda8292aefe64d92ee, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: L3BGM
     Volume: 0.1
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 7c1b7bbc412834d24b0900b6768572e6, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: L4BGM
     Volume: 0.1
     Pitch: 1
@@ -1232,14 +1232,14 @@ MonoBehaviour:
     Loop: 0
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: adec86daeff9c914ebcad89840070648, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: WolfSound
     Volume: 0.4
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 17e0cf03063fa0b4cb4e96d6b787547a, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: BatSound
     Volume: 0.5
     Pitch: 1
@@ -1255,6 +1255,13 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: f0304227573024abb878a0435f77db98, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: PowerUpSound
+    Volume: 0.4
+    Pitch: 1
+    Loop: 0
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: ddbf2d5a074b23241badf0d07173cc9a, type: 3}
+    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: ClickSound
     Volume: 0.4
     Pitch: 1
     Loop: 0

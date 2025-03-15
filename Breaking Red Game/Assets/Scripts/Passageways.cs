@@ -17,21 +17,9 @@ public class Passageways : MonoBehaviour
             Vector2 newPosition = GetDest();
             if(newPosition != Vector2.zero)
             {
-                // Check the tag of the current door to change BGmusic
-                if (gameObject.CompareTag("IL1"))
-                {
-                    // Fade out the current music before stopping it
-                    StartCoroutine(AudioManager.instance.FadeOut("CabinBGM", 1.5f)); // Fade out
-                    StartCoroutine(AudioManager.instance.FadeIn("L1BGM", 1.5f));  // Fade in
-                    StartCoroutine(AudioManager.instance.FadeIn("WolfSound", 1.5f)); // Fade in
-                }
-                else if (gameObject.CompareTag("IL1.1"))
-                {
-                    // Fade out the current music before stopping it
-                    StartCoroutine(AudioManager.instance.FadeOut("WolfSound", 1.5f)); // Fade out
-                    StartCoroutine(AudioManager.instance.FadeOut("L1BGM", 1.5f)); // Fade out
-                    StartCoroutine(AudioManager.instance.FadeIn("CabinBGM", 1.5f));  // Fade in
-                }
+                // Log the tag to check the value
+                Debug.Log("Current tag: " + gameObject.tag); // Print the tag of the current door
+                //BackgroundMusic.instance.ChangeBackgroundMusic(gameObject.tag); // Having issue when this code plays.The passage way can not work.
 
                 Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
                 if (rb != null)

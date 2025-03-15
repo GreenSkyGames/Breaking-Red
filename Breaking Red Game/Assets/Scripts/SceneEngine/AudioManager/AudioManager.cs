@@ -68,6 +68,32 @@ public class AudioManager : MonoBehaviour
         }
         Debug.LogWarning("Can not find audio named " + name + "!");
     }
+    public IEnumerator PauseAllMusic(float fadeDuration, List<string> audioNamesToPause)
+    {
+        // Gradually reduce the volume of each audio source that matches the specified names
+        foreach (AudioType type in AudioTypes)
+        {
+            // Check if the current audio's name is in the specified list
+            if (audioNamesToPause.Contains(type.Name) && type.Source.isPlaying)
+            {
+                float startVolume = type.Source.volume; // Save the initial volume
+                float elapsed = 0f;
+
+                // Gradually lower the volume
+                while (elapsed < fadeDuration)
+                {
+                    type.Source.volume = Mathf.Lerp(startVolume, 0f, elapsed / fadeDuration); // Linear interpolation for volume reduction
+                    elapsed += Time.deltaTime;
+                    yield return null; // Wait for the next frame
+                }
+
+                type.Source.volume = 0f; // Ensure the volume is set to 0
+                type.Source.Pause(); // Pause the audio source
+            }
+        }
+
+        yield return null;
+    }
 
     public void Stop(string name)
     {
