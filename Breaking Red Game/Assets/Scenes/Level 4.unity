@@ -47463,7 +47463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1919729348}
   m_Layer: 0
-  m_Name: Collectibles
+  m_Name: Power-Ups
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
