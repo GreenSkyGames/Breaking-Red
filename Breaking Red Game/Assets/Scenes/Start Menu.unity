@@ -1171,12 +1171,12 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 01b0e0369b9d548bdb5bf561d71e5eb5, type: 3}
     Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: CabinBGM
-    Volume: 0.01
+    Volume: 0.1
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: de1945b6e693c464ca22565af47171c6, type: 3}
-    Group: {fileID: -2475642296232132954, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: L1BGM
     Volume: 0.1
     Pitch: 1
