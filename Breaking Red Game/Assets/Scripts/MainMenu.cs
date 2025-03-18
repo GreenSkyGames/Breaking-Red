@@ -36,7 +36,8 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(AudioManager.instance.FadeOut("MenuBGM", 1.5f));
         yield return new WaitForSeconds(1.5f);
 
-        SceneManager.LoadScene("Level 1");
+        //SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("CharacterSelector");
     }
 
     public void QuitGame()
