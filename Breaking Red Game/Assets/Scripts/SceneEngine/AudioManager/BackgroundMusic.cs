@@ -53,7 +53,7 @@ public class BackgroundMusic : MonoBehaviour
                 StartCoroutine(AudioManager.instance.FadeIn("WolfSound", 1.0f));
                 break;
 
-            case "L2":
+            case "Level 2":
                 StartCoroutine(AudioManager.instance.FadeOut("L1BGM", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeOut("WolfSound", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeIn("L2BGM", 1.0f)); // Fade in level 2 music
@@ -61,7 +61,7 @@ public class BackgroundMusic : MonoBehaviour
                 StartCoroutine(AudioManager.instance.FadeIn("BatSound", 1.0f));
                 break;
 
-            case "L3":
+            case "Level 3":
                 StartCoroutine(AudioManager.instance.FadeOut("L2BGM", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeOut("WolfSound", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeOut("BatSound", 1.0f));
@@ -69,14 +69,14 @@ public class BackgroundMusic : MonoBehaviour
                 StartCoroutine(AudioManager.instance.FadeIn("BatSound", 1.0f));
                 break;
 
-            case "L4":
+            case "Level 4":
                 StartCoroutine(AudioManager.instance.FadeOut("L3BGM", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeOut("BatSound", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeIn("L4BGM", 1.0f));  // Fade in level 4 music
-                // StartCoroutine(AudioManager.instance.FadeIn("BatSound", 1.5f));
+                StartCoroutine(AudioManager.instance.FadeIn("BatSound", 1.5f));
                 break;
 
-            case "L5":
+            case "Level 5":
                 StartCoroutine(AudioManager.instance.FadeOut("L4BGM", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeIn("L5BGM", 1.0f));  // Fade in level 5 music
                 StartCoroutine(AudioManager.instance.FadeIn("BatSound", 1.0f));
