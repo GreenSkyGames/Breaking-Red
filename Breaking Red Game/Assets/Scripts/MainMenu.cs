@@ -26,15 +26,6 @@ public class MainMenu : MonoBehaviour
 
         // Play the button click
         AudioManager.instance.Play("ClickSound");
-        // Fading out the MenuBGM and fading in the CabinBGM
-        StartCoroutine(TransitionToGameScene());
-    }
-
-    private IEnumerator TransitionToGameScene()
-    {
-        // Fade out the MenuBGM
-        StartCoroutine(AudioManager.instance.FadeOut("MenuBGM", 1.5f));
-        yield return new WaitForSeconds(1.5f);
 
         //SceneManager.LoadScene("Level 1");
         SceneManager.LoadScene("CharacterSelector");

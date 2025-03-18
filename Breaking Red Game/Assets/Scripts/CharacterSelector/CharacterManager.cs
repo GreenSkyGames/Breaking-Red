@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 
 public class CharacterManager : MonoBehaviour
@@ -22,7 +23,9 @@ public class CharacterManager : MonoBehaviour
     }
 
     public void NextOption(){
-        //AudioManager.instance.Play("ClickSound"); 
+        // Play the button click
+        AudioManager.instance.Play("ClickSound");
+
         selectedOption++;
 
         if(selectedOption >= characterDB.CharacterCount){
@@ -35,7 +38,9 @@ public class CharacterManager : MonoBehaviour
 
     public void BackOption()
     {
-        //AudioManager.instance.Play("ClickSound");
+        // Play the button click
+        AudioManager.instance.Play("ClickSound");
+
         selectedOption--;
 
         if(selectedOption < 0){
@@ -62,6 +67,19 @@ public class CharacterManager : MonoBehaviour
     }
 
     public void ChangeScene(string sceneID){
+        // Play the button click
+        AudioManager.instance.Play("ClickSound");
+        // Fading out the MenuBGM and fading in the CabinBGM
+        StartCoroutine(TransitionToGameScene());
+
+    }
+
+    private IEnumerator TransitionToGameScene()
+    {
+        // Fade out the MenuBGM
+        StartCoroutine(AudioManager.instance.FadeOut("MenuBGM", 1.5f));
+        yield return new WaitForSeconds(1.5f);
+
         SceneManager.LoadScene("Level 1");
     }
 }

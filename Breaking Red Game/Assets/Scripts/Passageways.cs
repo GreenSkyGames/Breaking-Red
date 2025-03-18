@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,6 +18,9 @@ public class Passageways : MonoBehaviour
             Vector2 newPosition = GetDest();
             if(newPosition != Vector2.zero)
             {
+                List<string> BGaudioNames = new List<string> { "CabinBGM", "L1BGM", "L2BGM", "L3BGM", "L4BGM", "L5BGM", "WolfSound", "BatSound" };
+                StartCoroutine(HandleMusicTransition(BGaudioNames));
+
                 // Log the tag to check the value
                 Debug.Log("Current tag: " + gameObject.tag); // Print the tag of the current door
                 
@@ -28,8 +32,6 @@ public class Passageways : MonoBehaviour
                 }
                 //other.transform.position = newPosition;
                 StartCoroutine(TeleportWithFade(other, newPosition, rb));
-
-                BackgroundMusic.instance.ChangeBackgroundMusic(gameObject.tag); // Having issue when this code plays.The passage way can not work.
             }
         }
     }
@@ -103,4 +105,39 @@ public class Passageways : MonoBehaviour
                 return Vector2.zero;
         }
     }
+
+    private IEnumerator HandleMusicTransition(List<string> BGaudioNames)
+    {
+        // Pause all music gradually
+        yield return StartCoroutine(AudioManager.instance.PauseAllAudioSources());
+
+        // Check the tag of the current door to change BGmusic
+        if (gameObject.CompareTag("IL1.1"))
+        {
+            StartCoroutine(AudioManager.instance.FadeIn("CabinBGM", 1.5f, 0.05f));  // Fade in CabinBGM
+        }
+        else if (gameObject.CompareTag("IL1"))
+        {
+            StartCoroutine(AudioManager.instance.FadeIn("L1BGM", 1.5f, 0.1f));  // Fade in L1BGM
+            StartCoroutine(AudioManager.instance.FadeIn("WolfSound", 1.5f, 0.1f)); // Fade in WolfSound
+        }
+        else if (gameObject.CompareTag("L2"))
+        {
+            StartCoroutine(AudioManager.instance.FadeIn("L2BGM", 1.5f, 1.5f));  // Fade in L2BGM
+            StartCoroutine(AudioManager.instance.FadeIn("BatSound", 1.5f, 1.0f)); // Fade in BatSound
+        }
+        else if (gameObject.CompareTag("L3"))
+        {
+            StartCoroutine(AudioManager.instance.FadeIn("L3BGM", 1.5f, 1.0f));  // Fade in L3BGM
+        }
+        else if (gameObject.CompareTag("L4"))
+        {
+            StartCoroutine(AudioManager.instance.FadeIn("L4BGM", 1.5f, 1.0f));  // Fade in L4BGM
+        }
+        else if (gameObject.CompareTag("L5"))
+        {
+            StartCoroutine(AudioManager.instance.FadeIn("L5BGM", 1.5f, 1.0f));  // Fade in L5BGM
+        }
+    }
 }
+
