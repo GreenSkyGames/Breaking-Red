@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public AudioType[] AudioTypes;
+
+    public List<AudioSource> allAudioSources = new List<AudioSource>(); // To store all active AudioSources
+    public List<bool> audioSourceStates = new List<bool>(); // To store the state, play or pause
 
     private void Awake()
     {
@@ -43,6 +47,20 @@ public class AudioManager : MonoBehaviour
         AudioManager.instance.Play("MenuBGM");
     }
 
+    // Helper function to get the AudioSource by the audio name
+    private AudioSource GetAudioSource(string name)
+    {
+        foreach (AudioType type in AudioTypes)
+        {
+            if (type.Name == name)
+            {
+                return type.Source;
+            }
+        }
+        Debug.LogWarning("Can not find audio named " + name + "!");
+        return null;
+    }
+
     public void Play(string name)
     {
         foreach(AudioType type in AudioTypes)
@@ -68,33 +86,7 @@ public class AudioManager : MonoBehaviour
         }
         Debug.LogWarning("Can not find audio named " + name + "!");
     }
-    public IEnumerator PauseAllMusic(float fadeDuration, List<string> audioNamesToPause)
-    {
-        // Gradually reduce the volume of each audio source that matches the specified names
-        foreach (AudioType type in AudioTypes)
-        {
-            // Check if the current audio's name is in the specified list
-            if (audioNamesToPause.Contains(type.Name) && type.Source.isPlaying)
-            {
-                float startVolume = type.Source.volume; // Save the initial volume
-                float elapsed = 0f;
-
-                // Gradually lower the volume
-                while (elapsed < fadeDuration)
-                {
-                    type.Source.volume = Mathf.Lerp(startVolume, 0f, elapsed / fadeDuration); // Linear interpolation for volume reduction
-                    elapsed += Time.deltaTime;
-                    yield return null; // Wait for the next frame
-                }
-
-                type.Source.volume = 0f; // Ensure the volume is set to 0
-                type.Source.Pause(); // Pause the audio source
-            }
-        }
-
-        yield return null;
-    }
-
+    
     public void Stop(string name)
     {
         foreach (AudioType type in AudioTypes)
@@ -150,18 +142,70 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // Helper function to get the AudioSource by the audio name
-    private AudioSource GetAudioSource(string name)
+    public IEnumerator PauseAllMusic(float fadeDuration, List<string> audioNamesToPause)
     {
+        // Gradually reduce the volume of each audio source that matches the specified names
         foreach (AudioType type in AudioTypes)
         {
-            if (type.Name == name)
+            // Check if the current audio's name is in the specified list
+            if (audioNamesToPause.Contains(type.Name) && type.Source.isPlaying)
             {
-                return type.Source;
+                float startVolume = type.Source.volume; // Save the initial volume
+                float elapsed = 0f;
+
+                // Gradually lower the volume
+                while (elapsed < fadeDuration)
+                {
+                    type.Source.volume = Mathf.Lerp(startVolume, 0f, elapsed / fadeDuration); // Linear interpolation for volume reduction
+                    elapsed += Time.deltaTime;
+                    yield return null; // Wait for the next frame
+                }
+
+                type.Source.volume = 0f; // Ensure the volume is set to 0
+                type.Source.Pause(); // Pause the audio source
             }
         }
-        Debug.LogWarning("Can not find audio named " + name + "!");
-        return null;
+
+        yield return null;
     }
 
+    // Save the state of all audio sources
+    public IEnumerator PauseAllAudioSources()
+    {
+        allAudioSources.Clear();
+        audioSourceStates.Clear();
+
+        // Find all AudioSources in the scene and pause them
+        #pragma warning disable CS0618
+        foreach (AudioSource audioSource in FindObjectsOfType<AudioSource>())
+        {
+            allAudioSources.Add(audioSource);
+            audioSourceStates.Add(audioSource.isPlaying);
+
+            audioSource.Pause();  // Pause the audio
+        }
+        #pragma warning restore CS0618
+
+        yield return null;
+    }
+
+    // Restore the state of all audio sources
+    public IEnumerator RestoreAudioStates()
+    {
+        for (int i = 0; i < allAudioSources.Count; i++)
+        {
+            AudioSource audioSource = allAudioSources[i];
+
+            if (audioSourceStates[i])
+            {
+                audioSource.UnPause();  // Unpause the audio
+            }
+        }
+
+        // Clear the stored states after restoring
+        allAudioSources.Clear();
+        audioSourceStates.Clear();
+
+        yield return null;
+    }
 }

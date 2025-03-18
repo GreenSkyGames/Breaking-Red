@@ -49,7 +49,7 @@ public class PauseGameMenu : MonoBehaviour
         AudioManager.instance.Play("ClickSound");
 
         // Restore all audio sources
-        RestoreAudioStates();
+        StartCoroutine(AudioManager.instance.RestoreAudioStates());
 
         PauseMenu.SetActive(false); //pause menu goes away 
         Time.timeScale=1f; // resuming the game
@@ -62,46 +62,12 @@ public class PauseGameMenu : MonoBehaviour
         AudioManager.instance.Play("ClickSound");
 
         // Pause all audio sources and save their states
-        PauseAllAudioSources();
+        StartCoroutine(AudioManager.instance.PauseAllAudioSources());
 
         PauseMenu.SetActive(true); //pause menu called 
         Time.timeScale=0f; // pausing the game 
         isPaused = true; //game is paused
         //SceneManager.LoadScene("PauseMenu");
-    }
-
-    // Save the state of all audio sources
-    private void PauseAllAudioSources()
-    {
-        allAudioSources.Clear();
-        audioSourceStates.Clear();
-
-        // Find all AudioSources in the scene and pause them
-        foreach (AudioSource audioSource in FindObjectsOfType<AudioSource>())
-        {
-            allAudioSources.Add(audioSource);
-            audioSourceStates.Add(audioSource.isPlaying);
-
-            audioSource.Pause();  // Pause the audio
-        }
-    }
-
-    // Restore the state of all audio sources
-    private void RestoreAudioStates()
-    {
-        for (int i = 0; i < allAudioSources.Count; i++)
-        {
-            AudioSource audioSource = allAudioSources[i];
-
-            if (audioSourceStates[i])
-            {
-                audioSource.UnPause();  // Unpause the audio
-            }
-        }
-
-        // Clear the stored states after restoring
-        allAudioSources.Clear();
-        audioSourceStates.Clear();
     }
 
     public void SaveGame()
