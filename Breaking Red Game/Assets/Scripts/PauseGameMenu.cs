@@ -30,7 +30,7 @@ public class PauseGameMenu : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.P)){
-            if(isPaused)
+            if (isPaused)
             {
                 ResumeGame(); 
             }
@@ -119,6 +119,7 @@ public class PauseGameMenu : MonoBehaviour
     public void LoadMenu(){
         // Play the button click
         AudioManager.instance.Play("ClickSound");
+        AudioManager.instance.Play("MenuBGM");
 
         Debug.Log("Loading menu.");
         SceneManager.LoadScene("Start Menu");
