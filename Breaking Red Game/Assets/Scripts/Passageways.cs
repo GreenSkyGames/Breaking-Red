@@ -28,18 +28,17 @@ public class Passageways : MonoBehaviour
                 }
                 //other.transform.position = newPosition;
                 StartCoroutine(TeleportWithFade(other, newPosition, rb));
-
-                BackgroundMusic.instance.ChangeBackgroundMusic(gameObject.tag); // Having issue when this code plays.The passage way can not work.
             }
         }
     }
     private IEnumerator TeleportWithFade(Collider2D player, Vector2 newPosition, Rigidbody2D rb)
     {
         yield return StartCoroutine(FadeToBlack(0.5f)); // Fade out
+        BackgroundMusic.instance.ChangeBackgroundMusic(gameObject.tag); // Change BGM
         player.transform.position = newPosition; // Move player
         yield return new WaitForSeconds(0.3f); // Small delay at black screen
         yield return StartCoroutine(FadeFromBlack(0.5f)); // Fade back in
-
+              
         if (rb != null)
         {
             rb.constraints = RigidbodyConstraints2D.None;

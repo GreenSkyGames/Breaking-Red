@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            Debug.Log("AudioManager instance initialized.");
         }
 
         else
@@ -48,7 +49,7 @@ public class AudioManager : MonoBehaviour
     }
 
     // Helper function to get the AudioSource by the audio name
-    private AudioSource GetAudioSource(string name)
+    public AudioSource GetAudioSource(string name)
     {
         foreach (AudioType type in AudioTypes)
         {
@@ -140,33 +141,6 @@ public class AudioManager : MonoBehaviour
 
             audioSource.volume = targetVolume;
         }
-    }
-
-    public IEnumerator PauseAllMusic(float fadeDuration, List<string> audioNamesToPause)
-    {
-        // Gradually reduce the volume of each audio source that matches the specified names
-        foreach (AudioType type in AudioTypes)
-        {
-            // Check if the current audio's name is in the specified list
-            if (audioNamesToPause.Contains(type.Name) && type.Source.isPlaying)
-            {
-                float startVolume = type.Source.volume; // Save the initial volume
-                float elapsed = 0f;
-
-                // Gradually lower the volume
-                while (elapsed < fadeDuration)
-                {
-                    type.Source.volume = Mathf.Lerp(startVolume, 0f, elapsed / fadeDuration); // Linear interpolation for volume reduction
-                    elapsed += Time.deltaTime;
-                    yield return null; // Wait for the next frame
-                }
-
-                type.Source.volume = 0f; // Ensure the volume is set to 0
-                type.Source.Pause(); // Pause the audio source
-            }
-        }
-
-        yield return null;
     }
 
     // Save the state of all audio sources
