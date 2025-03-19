@@ -5,8 +5,14 @@ public class PowerUp : MonoBehaviour
     // Enum to define different types of power-ups
     public enum itemName { PoisonApple, GoldenApple, BerserkerBrew }
     public itemName type;  // Type of the power-up
+    public Sprite sprite;
+    private InventoryManager inventoryManager;
     public float effectAmount;
 
+    void Start()
+    {
+        inventoryManager = InventoryManager.instance;
+    }
     // apply effect to the player
     public void ApplyEffect(PlayerController playerController)
     {
@@ -24,7 +30,7 @@ public class PowerUp : MonoBehaviour
             
             case itemName.BerserkerBrew:
                 //playerController.speed += effectAmount;
-                Debug.Log("Player speed increased");
+                Debug.Log("Player attack power increased");
                 break;
         }
     }
@@ -45,7 +51,7 @@ public class PowerUp : MonoBehaviour
             }
 
             // destroy the power-up object after interaction (it will either be used or stored)
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

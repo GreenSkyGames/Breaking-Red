@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PowerUpManager : MonoBehaviour
 {
     public GameObject choicePrompt;  // Use Now or Store for Later UI
+    public Image[] inventorySlots;
 
     public void HandlePowerUpInteraction(PowerUp powerUp, PlayerController playerController)
     {
@@ -27,6 +29,7 @@ public class PowerUpManager : MonoBehaviour
 
         while (!inputReceived)
         {
+            Time.timeScale = 0;
             if (Input.GetKeyDown(KeyCode.U))  // 'U' for Use Now
             {
                 powerUp.ApplyEffect(playerController);  // apply the power-up effect
@@ -35,8 +38,9 @@ public class PowerUpManager : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.L))  // 'L' for Store for Later
             {
                 // add to inventory for later use
-                InventoryManager.instance.AddToInventory(powerUp);
+                InventoryManager.instance.AddToInventory(powerUp.type.ToString(), powerUp.sprite);
                 Debug.Log("Item added to inventory");
+                Destroy(powerUp.gameObject);
                 inputReceived = true;
             }
 
@@ -45,7 +49,18 @@ public class PowerUpManager : MonoBehaviour
 
         // hide the prompt after the player makes a choice
         Debug.Log("Choice prompt hidden");
+        Time.timeScale = 1;
         choicePrompt.SetActive(false);
     }
+/*
+    public void UpdateInventoryUI()
+    {
+        for (int i = 0; i < InventoryManager.instance.inventory.Count; i++)
+        {
+            inventorySlots[i].sprite = InventoryManager.instance.inventory[i].itemSprite;
+            inventorySlots[i].enabled = true;
+        }
+    }
+*/
 }
 

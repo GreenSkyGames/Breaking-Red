@@ -1,13 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
     public GameObject InventoryMenu;
     private bool menuActivated;
-    public List<PowerUp> inventory;  // list power ups
-    public int maxSlots = 3;  // initial inventory size
+    //public List<InventoryItem> inventory;  // list power ups
+    //public int maxSlots = 3;  // initial inventory size
+    public ItemSlot[] itemSlot;
 
     void Update()
     {
@@ -36,32 +38,45 @@ public class InventoryManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        inventory = new List<PowerUp>(maxSlots);  // initialize inventory
+        //inventory = new List<InventoryItem>(maxSlots);  // initialize inventory
     }
 
-    public void AddToInventory(PowerUp powerUp)
+    public void AddToInventory(string itemName, Sprite itemSprite)
     {
-        if (inventory == null)
+        /*
+        if (powerUp == null)
         {
             Debug.LogError("Inventory is null");
-            inventory = new List<PowerUp>(maxSlots);
+            //inventory = new List<InventoryItem>(maxSlots);
+            return;
         }
+    
         if (inventory.Count < maxSlots)  // check if empty slot
         {
-            inventory.Add(powerUp);  // Add the power-up to the inventory
-            Debug.Log("Power-up added to inventory");
+            inventory.Add(new InventoryItem(itemName, itemSprite));  // Add the power-up to the inventory
+            Debug.Log("Item added to inventory");
         }
         else
         {
-            Debug.Log("Inventory full! Cannot add power-up.");
+            Debug.Log("Inventory full! Cannot add item.");
+        }
+        */
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            if(itemSlot[i].isFull == false)
+            {
+                itemSlot[i].AddToInventory(itemName, itemSprite);
+                return;
+            }
         }
     }
 
-    // increase inventory later?
+    /* increase inventory later?
     public void IncreaseInventorySlots(int additionalSlots)
     {
         maxSlots += additionalSlots;
         Debug.Log("Inventory size increased to: " + maxSlots);
     }
+    */
 }
 
