@@ -11,13 +11,21 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I) && menuActivated)
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            ToggleInventory();
+        }
+    }
+
+    private void ToggleInventory()
+    {
+        if(menuActivated)
         {
             Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             menuActivated = false;
         }
-        else if(Input.GetKeyDown(KeyCode.I) && !menuActivated)
+        else if(!menuActivated)
         {
             Time.timeScale = 0;
             InventoryMenu.SetActive(true);
@@ -47,8 +55,8 @@ public class InventoryManager : MonoBehaviour
                 itemSlot[i].UpdateInventoryUI(itemName, itemSprite);
                 return;
             }
-            Debug.Log("Inventory is full!");
         }
+        Debug.Log("Inventory is full!");
     }
 }
 
