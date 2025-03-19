@@ -29,7 +29,7 @@ public class NPCManager : MonoBehaviour
 	public bool facingRight;
 
     public SpriteRenderer enemySR;
-	public int currentHealth = 13;
+	public int currentHealth = 9;
 
     //Start is currently being used to:
 	// - find rigidbody component

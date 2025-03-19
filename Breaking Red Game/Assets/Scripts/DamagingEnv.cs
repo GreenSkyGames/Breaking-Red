@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class DamagingEnv : MonoBehaviour
 {
-    public int damage = 1;
+    public int damage = 2;
     [SerializeField] private float _scaleSpeed;
     [SerializeField] private float _seedHeight;
     [SerializeField] private float _finalHeight;
