@@ -61,7 +61,7 @@ public class InventoryManager : MonoBehaviour
             Debug.Log("Inventory full! Cannot add item.");
         }
         */
-        for (int i = 0; i < itemSlot.Length; i++)
+        for (int i = 0; i < 3; i++)
         {
             if(itemSlot[i].isFull == false)
             {
