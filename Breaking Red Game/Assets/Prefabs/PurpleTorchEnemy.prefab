@@ -335,4 +335,6 @@ MonoBehaviour:
     m_Bits: 64
   myCanvas: {fileID: 0}
   isHostile: 0
-  facingRight: 0
+  facingRight: 1
+  enemySR: {fileID: 0}
+  currentHealth: 13

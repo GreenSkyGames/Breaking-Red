@@ -28,6 +28,9 @@ public class NPCManager : MonoBehaviour
 	public bool isHostile;
 	public bool facingRight;
 
+    public SpriteRenderer enemySR;
+	public int currentHealth = 13;
+
     //Start is currently being used to:
 	// - find rigidbody component
 	// - find animator component
@@ -242,6 +245,35 @@ public class NPCManager : MonoBehaviour
 			ChangeState(EnemyState.Dialogue);
 		}
 	}
+
+
+    public void ChangeHealth(int amount)
+    {
+        currentHealth += amount;
+        Debug.Log("Health " + currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            // Disable rendering and movement, but keep the object active
+            if (enemySR != null)
+            {
+                enemySR.enabled = false;
+            }
+			this.gameObject.SetActive(false);
+
+            // Optionally, you might want to add other game over logic here,
+            // such as displaying a game over screen, triggering events, etc.
+        }
+        else
+        {
+            //if you want to re-enable them when gaining health back, add this, or similar logic.
+            if (enemySR != null && !enemySR.enabled)
+            {
+                enemySR.enabled = true;
+            }
+
+        }
+    }
 
 	//Visualize the range of player detection
 	private void OnDrawGizmosSelected()
