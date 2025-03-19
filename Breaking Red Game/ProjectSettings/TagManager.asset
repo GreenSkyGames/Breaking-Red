@@ -20,6 +20,7 @@ TagManager:
   - PurpleTorchEnemy
   - TheBear
   - BerserkerBrew
+  - TheHiker
   layers:
   - Default
   - TransparentFX

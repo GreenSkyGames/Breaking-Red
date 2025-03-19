@@ -112,3 +112,33 @@ testingtestingtesting
 * ["Why you %$!@-!"]
 
 - -> END
+
+
+
+=== TheHiker ===
+~ Name = "The Hiker"
+
+//Name is {Name}
+
+"My, at least it's a lovely day!"
+
+* ["Hey!  You!  Stop right there!"]
+
+- "Oh, hello there!  Another traveler!"
+
+* ["Who are you?!  What are you doing in the forest?!"]
+
+- "What?  Me?  Well, I went out looking for my Cat, but it's such a nice day out, I decided to go for a walk.  Have you seen The Cat anywhere?"
+
+* ["Your cat?"]
+
+- "Yes, he's a housecat and he got lost recently.  I've looked all over the forest for him, but no one has wanted to help.  I even talked to this old woman, and she... Well.  Let's just say that encounter didn't go very well!"
+
+* ["Do you mean Grandmother?  What did you do to her?!"]
+
+- "Hey now, I don't like that tone!  Look, if you're not going to help me find my Cat, then maybe just leave me alone!"
+
+* [The Hiker refuses to speak further.]
+
+- -> END
+
