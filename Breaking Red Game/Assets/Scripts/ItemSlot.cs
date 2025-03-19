@@ -6,16 +6,16 @@ public class ItemSlot : MonoBehaviour
     // item data
     public string itemName;
     public Sprite itemSprite;
-    public bool isFull;
+    public bool isOccupied = false;
 
     //item slot
     [SerializeField] private Image itemImage;
     
-    public void AddToInventory(string itemName, Sprite itemSprite)
+    public void UpdateInventoryUI(string itemName, Sprite itemSprite)
     {
         this.itemName = itemName;
         this.itemSprite = itemSprite;
-        isFull = true;
+        isOccupied = true;
 
         itemImage.sprite = itemSprite;
     }

@@ -7,8 +7,6 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager instance;
     public GameObject InventoryMenu;
     private bool menuActivated;
-    //public List<InventoryItem> inventory;  // list power ups
-    //public int maxSlots = 3;  // initial inventory size
     public ItemSlot[] itemSlot;
 
     void Update()
@@ -38,45 +36,19 @@ public class InventoryManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        //inventory = new List<InventoryItem>(maxSlots);  // initialize inventory
     }
 
     public void AddToInventory(string itemName, Sprite itemSprite)
     {
-        /*
-        if (powerUp == null)
+        for (int i = 0; i < itemSlot.Length; i++)
         {
-            Debug.LogError("Inventory is null");
-            //inventory = new List<InventoryItem>(maxSlots);
-            return;
-        }
-    
-        if (inventory.Count < maxSlots)  // check if empty slot
-        {
-            inventory.Add(new InventoryItem(itemName, itemSprite));  // Add the power-up to the inventory
-            Debug.Log("Item added to inventory");
-        }
-        else
-        {
-            Debug.Log("Inventory full! Cannot add item.");
-        }
-        */
-        for (int i = 0; i < 3; i++)
-        {
-            if(itemSlot[i].isFull == false)
+            if(itemSlot[i].isOccupied == false)
             {
-                itemSlot[i].AddToInventory(itemName, itemSprite);
+                itemSlot[i].UpdateInventoryUI(itemName, itemSprite);
                 return;
             }
+            Debug.Log("Inventory is full!");
         }
     }
-
-    /* increase inventory later?
-    public void IncreaseInventorySlots(int additionalSlots)
-    {
-        maxSlots += additionalSlots;
-        Debug.Log("Inventory size increased to: " + maxSlots);
-    }
-    */
 }
 

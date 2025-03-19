@@ -49,9 +49,6 @@ public class PowerUp : MonoBehaviour
             {
                 powerUpManager.HandlePowerUpInteraction(this, other.GetComponent<PlayerController>());
             }
-
-            // destroy the power-up object after interaction (it will either be used or stored)
-            //Destroy(gameObject);
         }
     }
 }

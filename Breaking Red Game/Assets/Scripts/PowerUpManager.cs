@@ -52,15 +52,5 @@ public class PowerUpManager : MonoBehaviour
         Time.timeScale = 1;
         choicePrompt.SetActive(false);
     }
-/*
-    public void UpdateInventoryUI()
-    {
-        for (int i = 0; i < InventoryManager.instance.inventory.Count; i++)
-        {
-            inventorySlots[i].sprite = InventoryManager.instance.inventory[i].itemSprite;
-            inventorySlots[i].enabled = true;
-        }
-    }
-*/
 }
 
