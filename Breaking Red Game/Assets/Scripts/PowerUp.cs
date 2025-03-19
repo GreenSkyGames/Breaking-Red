@@ -4,7 +4,6 @@ public class PowerUp : MonoBehaviour
 {
     // Enum to define different types of power-ups
     public enum itemName { PoisonApple, GoldenApple, BerserkerBrew }
-
     public itemName type;  // Type of the power-up
     public float effectAmount;
 

@@ -4,9 +4,26 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
-
+    public GameObject InventoryMenu;
+    private bool menuActivated;
     public List<PowerUp> inventory;  // list power ups
     public int maxSlots = 3;  // initial inventory size
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.I) && menuActivated)
+        {
+            Time.timeScale = 1;
+            InventoryMenu.SetActive(false);
+            menuActivated = false;
+        }
+        else if(Input.GetKeyDown(KeyCode.I) && !menuActivated)
+        {
+            Time.timeScale = 0;
+            InventoryMenu.SetActive(true);
+            menuActivated = true;
+        }
+    }
 
     private void Awake()
     {
