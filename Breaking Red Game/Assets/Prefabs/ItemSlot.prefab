@@ -229,8 +229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: 
   itemSprite: {fileID: 0}
-  isFull: 0
-  itemImage: {fileID: 0}
+  isOccupied: 0
+  itemImage: {fileID: 2549611797929577446}
 --- !u!1 &3392886415373490935
 GameObject:
   m_ObjectHideFlags: 0
