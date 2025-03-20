@@ -29,6 +29,7 @@ public class NPCTestScript : MonoBehaviour
 		//The player position is taken at start.
 		//This acts as the destination for the NPC.
 		Vector2 playerPosition = player.transform.position;
+        player.transform.position = new Vector3(-1, -3.5, 0);
 		Debug.Log(playerPosition);
 
 		//20 seconds are given for the NPC to reach the player.
@@ -42,8 +43,7 @@ public class NPCTestScript : MonoBehaviour
 		if(NPCPosition != playerPosition)
 		{
 			Debug.Log("Collision test completed.");
-		}
-			
+		}			
 
     }
 
