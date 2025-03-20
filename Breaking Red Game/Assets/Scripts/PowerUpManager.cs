@@ -13,7 +13,7 @@ public class PowerUpManager : MonoBehaviour
         if (powerUp.type == PowerUp.itemName.PoisonApple)
         {
             powerUp.ApplyEffect(playerController);
-            Destroy(gameObject);
+            Destroy(powerUp.gameObject);
         }
         else
         {
