@@ -7,7 +7,7 @@ public class PowerUp : MonoBehaviour
     public itemName type;  // Type of the power-up
     public Sprite sprite;
     private InventoryManager inventoryManager;
-    public float effectAmount;
+    public int effectAmount;
 
     void Start()
     {
@@ -16,15 +16,17 @@ public class PowerUp : MonoBehaviour
     // apply effect to the player
     public void ApplyEffect(PlayerController playerController)
     {
+        PlayerHealth playerHealth = playerController.GetComponent<PlayerHealth>();
+        if(playerHealth == null) return;
         switch (type)
         {
             case itemName.PoisonApple:
-                playerController.health -= effectAmount;  // decreases health
+                playerHealth.ChangeHealth(-effectAmount);  // decreases health
                 Debug.Log("Player health decreased");
                 break;
 
             case itemName.GoldenApple:
-                playerController.health += effectAmount;  // increases health
+                playerHealth.ChangeHealth(effectAmount);  // increases health
                 Debug.Log("Player health increased");
                 break;
             
@@ -42,7 +44,7 @@ public class PowerUp : MonoBehaviour
         {
             // play power up sound effect tbd
             //AudioManager.instance.Play("PowerUpSound");
-
+            
             // trigger PowerUpManager to handle the interaction
             PowerUpManager powerUpManager = other.GetComponent<PowerUpManager>();
             if (powerUpManager != null)

@@ -15,8 +15,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void ChangeHealth(int amount)
     {
-        currentHealth += amount;
-        Debug.Log("Health " + currentHealth);
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log($"Health: {currentHealth}");
 
         if (currentHealth <= 0)
         {
@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
                 playerMovement.enabled = false; //disable the player controller script
             }
             UnityEditor.EditorApplication.isPlaying = false;
-
+            Debug.Log("Player has died.");
             // Optionally, you might want to add other game over logic here,
             // such as displaying a game over screen, triggering events, etc.
         }
