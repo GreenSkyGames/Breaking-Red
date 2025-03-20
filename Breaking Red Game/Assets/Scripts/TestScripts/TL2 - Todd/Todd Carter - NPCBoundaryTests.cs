@@ -78,6 +78,7 @@ public class NPCBoundaryTestsScript : MonoBehaviour
 		//Then move player to test point
 		Vector2 playerOriginalPosition = player.transform.position;
         player.transform.position = new Vector2(-1, -3);
+
 		Vector2 playerPosition = player.transform.position;
 		Debug.Log(playerPosition);
 
@@ -161,9 +162,10 @@ public class NPCBoundaryTestsScript : MonoBehaviour
 		}
 					
 		//Deactivate the test wall and return player and NPC to original positions
-		NPCDeathWall.gameObject.SetActive(true);
+		NPCDeathWall.gameObject.SetActive(false);
 		TestTarget.gameObject.GetComponent<NPCManager>().currentHealth = 10;
 		TestTarget.gameObject.SetActive(true);
+
         TestTarget.transform.position = NPCOriginalPosition;
         player.transform.position = playerOriginalPosition;
 
