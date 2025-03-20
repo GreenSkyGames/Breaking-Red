@@ -48,6 +48,11 @@ public class DamagingEnv : MonoBehaviour
         {
             affectedObjects.Add(target);
             StartCoroutine(ApplyDamageOverTime(target));
+        } 
+        else if(collision.CompareTag("Player") && !affectedObjs.Contains(collision.gameObject)) 
+        {
+            affectedObjs.Add(collision.gameObject);
+            StartCoroutine(DamageOverTime(collision.gameObject));
         }
     }
 
@@ -60,6 +65,10 @@ public class DamagingEnv : MonoBehaviour
         {
             affectedObjects.Remove(target);
         }
+        else if (collision.CompareTag("Player") && affectedObjs.Contains(collision.gameObject))
+        {
+            affectedObjs.Remove(collision.gameObject);
+        }
     }
 
 	//This is for damage over time.
@@ -70,6 +79,30 @@ public class DamagingEnv : MonoBehaviour
         {
             target.ChangeHealth(-damage);
             yield return new WaitForSeconds(damageInterval); // Wait for the next frame
+        }
+    }
+
+    //Damage over time for player
+    //public int playerDamage = 4; // Damage per tick
+    public int dmg = 9;
+    public float damageInt = 1f; // Time between damage ticks
+    private HashSet<GameObject> affectedObjs = new HashSet<GameObject>();
+
+    private IEnumerator DamageOverTime(GameObject player)
+    {
+        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+
+        if (playerHealth == null)
+        {
+            Debug.LogError("PlayerManager component missing on player object!");
+            yield break;
+        }
+
+        while (affectedObjs.Contains(player))
+        {
+            playerHealth.ChangeHealth(-dmg);
+
+            yield return new WaitForSeconds(damageInt);
         }
     }
 }
