@@ -20,9 +20,8 @@ using System.Collections;
 	Both tests are in the same coroutine, as they cannot happen concurrently but have to
 	happen one after the next.
 
-	Further, this script is meant to be attached to a clickable button that appears on screen,
-	which is the solution that was presented by the TL3s.  It does not use assemblies as they
-	interact badly with the TextMeshPro and Ink packages, which was not investigated by the TL3s.
+	Further, this script is meant to be activated by a clickable button that appears on screen,
+	which is the solution that was presented by the TL3s.
 
 	This button can be found on Level 1 of the project, as well as the relevant gameObjects
 	such as the two collidable walls.
