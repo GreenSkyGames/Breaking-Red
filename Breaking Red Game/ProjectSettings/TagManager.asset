@@ -21,6 +21,9 @@ TagManager:
   - TheBear
   - BerserkerBrew
   - TheHiker
+  - NPCTestCollisionWall
+  - NPCTestWall
+  - NPCDeathWall
   layers:
   - Default
   - TransparentFX
