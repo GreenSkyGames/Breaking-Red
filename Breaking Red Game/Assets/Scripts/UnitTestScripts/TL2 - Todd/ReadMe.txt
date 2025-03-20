@@ -1,4 +1,4 @@
-README FOR "Todd Carter - NPCBoundaryTests" BOUNDARY TEST AND USAGE
+README FOR "Todd Carter - NPCBoundaryTests" and "Todd Carter - NPCStressTest" BOUNDARY TEST AND USAGE
 
 
 
@@ -25,9 +25,6 @@ message is displayed on the console.
 This button can be found on Level 1 of the project, as well as the relevant gameObjects
 such as the two collidable walls.
 
-There is no stress test.  Apologies for not being able to complete the assignment.
-
-
 
 USAGE:
 
@@ -40,3 +37,25 @@ Then, a button must be made.  "Button - TextMeshPro" under UI in the GameObject 
 Add On Click clickable event to the button, and attach the new game object with the component script.
 
 Set the clickable event to the "NPCTestScript.RunTests" function from the component's function list.
+
+
+
+FOR NPC STRESS TESTING:
+
+This is an attempt at creating a stress test for the project.
+
+It very simply activates a box beneath the testing position.
+
+Then it starts spawning NPCs at that location, one per frame.
+
+Once one of the NPCs is detected having left the boundary, the test ends.
+
+An on-screen button is required for usage.
+
+An on-screen display shows how many NPCs were spawned before one was pushed out of the boundary.
+
+
+STRESS TEST USAGE:
+
+Assuming the buttons and prefabs have already been made, then running the test will be done using 
+the on screen button.
