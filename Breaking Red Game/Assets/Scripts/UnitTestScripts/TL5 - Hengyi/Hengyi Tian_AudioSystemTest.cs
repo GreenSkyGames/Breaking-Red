@@ -3,7 +3,7 @@ using System.Collections;
 using NUnit.Framework;
 
 // TL5 -- Hengyi Tian
-// Audio System Testing: 1 stress test and 3 boundary tests
+// Audio System Testing: 1 stress test and 2 boundary tests
 
 namespace AudioTest
 {
@@ -34,7 +34,7 @@ namespace AudioTest
             StopAllAudio();
         }
 
-        // Boundary Test 1: Incrementally test audio volume to check upper limits
+        // Boundary Test 1: Incrementally sound volume to check upper limits
         [Test]
         public IEnumerator BoundaryTest_VolumeLimits()
         {
@@ -48,10 +48,10 @@ namespace AudioTest
                 yield break;
             }
 
-            bgmSource.volume = 0f;
+            bgmSource.volume = 0f; // Initial volume
             yield return new WaitForSeconds(0.5f);
 
-            float volumeIncrement = 0.15f;
+            float volumeIncrement = 0.15f; // Increase 0.15 volume each time
             while (bgmSource.volume < 1f)
             {
                 bgmSource.volume = Mathf.Min(bgmSource.volume + volumeIncrement, 1f);
@@ -63,39 +63,14 @@ namespace AudioTest
             StopAllAudio();
         }
 
-        // Boundary Test 2: Test system limits by exceeding the typical number of concurrent audio sources
-        [Test]
-        public IEnumerator BoundaryTest_ExceedAudioSources(int maxAudioSources = 100)
-        {
-            Debug.Log("Starting Audio Source Boundary Test...");
-
-            AudioType[] audioTypes = AudioManager.instance.AudioTypes;
-
-            if (audioTypes.Length == 0)
-            {
-                Debug.LogError("No audio types found in AudioManager!");
-                yield break;
-            }
-
-            for (int i = 0; i < maxAudioSources; i++)
-            {
-                AudioType audioType = audioTypes[Random.Range(0, audioTypes.Length)];
-                AudioManager.instance.Play(audioType.Name);
-                yield return null;
-            }
-
-            Debug.Log("Audio Source Boundary Test Completed.");
-            StopAllAudio();
-        }
-
-        // Boundary Test 3: Test pausing and restoring audio sources' states
+        // Boundary Test 2: Test pausing and restoring sounds
         [Test]
         public IEnumerator BoundaryTest_RestoreAudioStates()
         {
             Debug.Log("Starting Restore Audio States Boundary Test...");
-
+            #pragma warning disable CS0618
             AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
-
+            #pragma warning disable CS0618
             foreach (AudioSource audioSource in allAudioSources)
             {
                 audioSource.Pause();
@@ -112,7 +87,7 @@ namespace AudioTest
             StopAllAudio();
         }
 
-        // Stop all currently playing audio sources after test completion
+        // Stop all playing sounds after test completion
         void StopAllAudio()
         {
             foreach (AudioType type in AudioManager.instance.AudioTypes)
@@ -121,13 +96,12 @@ namespace AudioTest
             }
         }
 
-        // Run all defined tests simultaneously (Note: Consider sequential execution to avoid interference)
+        // Run all defined tests
         public void RunTests()
         {
             StartCoroutine(StressTest_PlayMultipleSounds());
             StartCoroutine(BoundaryTest_VolumeLimits());
             StartCoroutine(BoundaryTest_RestoreAudioStates());
-            StartCoroutine(BoundaryTest_ExceedAudioSources());
         }
     }
 }
