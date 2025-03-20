@@ -54,7 +54,7 @@ VAR Name = "Default"
 
 //Name is {Name}
 
-testingtestingtesting
+testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - -> END
 
@@ -141,4 +141,65 @@ testingtestingtesting
 * [The Hiker refuses to speak further.]
 
 - -> END
+
+
+
+
+=== TheHippie ===
+~ Name = "The Hippie"
+
+//Name is {Name}
+
+"What?  What's that red smudge I see... Oh hey!  Is that Little Red?"
+
+* ["Long time no see."]
+
+- "No kidding!  Wow, you've... Actually, you look exactly like I remember, now that I think about it."
+
+* ["You, too.  Glad to see you're well.  Did you hear about Grandmother?"]
+
+- "I did, man.  That's a real bummer.  I'm sorry for your loss, Red, even Grandmother didn't deserve to go out like that."
+
+* ["Thanks.  I'm searching for who did it.  Would you have any leads?"]
+
+* ["Wait, how did you know that?]
+
+"Huh?  Know what?"
+
+    ** ["How did you know that Grandmother was dead?  Who told you?"]
+    
+    "Huh... That's a good point!  Who did tell me!  Oh brother!"
+    
+        *** ["Try to rememeber!  It had to have been recently!"]
+        
+        "Oh!  Uh, then it had to be one of my friends!  They're around here if you go searching for them."
+        
+        **** [Next]
+        
+        "My friend The Fish is over by the lake, he sees all kinds of stuff.  And The Owl is off roosting in his tree, but you know how he is.  And there's this crazy Cat around.  If you ask anyone, ask him!"
+
+        ***** ["The Fish, The Owl, and The Cat, huh.  Alright.  Thank you for helping."]
+
+        "It's all our forest, man, we gotta stick together.  Stay safe out there, Red!  Lotta weirdos around the forest these days!"
+        
+        ****** ["Thanks again!"]
+        
+        -> END
+
+
+
+- "Oh man.  I wish I could help, but I've just been here, doing my thing.  Maybe you can ask my friends?"
+
+* [Next]
+
+- "My friend The Fish is over by the lake, he sees all kinds of stuff.  And The Owl is off roosting in his tree, but you know how he is.  And there's this crazy Cat around.  If you ask anyone, ask him!"
+
+* ["The Fish, The Owl, and The Cat, huh.  Alright.  Thank you for helping."]
+
+- "It's all our forest, man, we gotta stick together.  Stay safe out there, Red!  Lotta weirdos around the forest these days!"
+
+* ["You stay safe as well!"]
+
+- -> END
+
 
