@@ -15,6 +15,7 @@ public class MovingPlatform : terrainObjects
     private Vector2 _prevPos;
 
     private Rigidbody2D _playerRigidbody;
+    private PlatformTest platformTest;
 
     [SerializeField] private Tilemap tilemap;
 
@@ -59,7 +60,15 @@ public class MovingPlatform : terrainObjects
             {
                 tilemap.gameObject.SetActive(false); // Hide the tilemap layer
             }
+
+            // For Testing: Notify the test script that the player entered the platform
+            PlatformTest platformTest = FindFirstObjectByType<PlatformTest>();
+            if (platformTest != null)
+            {
+                platformTest.OnPlayerEnterPlatform();
+            }
         }
+
 
         
     }
@@ -76,6 +85,14 @@ public class MovingPlatform : terrainObjects
             if (tilemap != null && !tilemap.gameObject.activeSelf)
             {
                 tilemap.gameObject.SetActive(true); // Show the tilemap layer
+            }
+
+            //For testing:
+            // Notify the test script that the player exited the platform
+            PlatformTest platformTest = FindFirstObjectByType<PlatformTest>();
+            if (platformTest != null)
+            {
+                platformTest.OnPlayerExitPlatform();
             }
         }
 

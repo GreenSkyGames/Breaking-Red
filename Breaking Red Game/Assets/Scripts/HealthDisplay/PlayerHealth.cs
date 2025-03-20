@@ -2,21 +2,22 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int currentHealth = 3;
-    public int maxHealth = 3;
+    public int currentHealth = 100;
+    public int maxHealth = 100;
 
     public SpriteRenderer playerSr;
     public PlayerController playerMovement; // Assuming this controls movement
 
     void Start()
     {
+        maxHealth = 100;
         currentHealth = maxHealth;
     }
 
     public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log($"Health: {currentHealth}");
+        //Debug.Log($"Health: {currentHealth}");
 
         if (currentHealth <= 0)
         {
