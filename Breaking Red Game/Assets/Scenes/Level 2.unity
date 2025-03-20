@@ -100678,7 +100678,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   ActivatePoint: {fileID: 405607068}
-  health: 100
 --- !u!50 &2028982396
 Rigidbody2D:
   serializedVersion: 5
