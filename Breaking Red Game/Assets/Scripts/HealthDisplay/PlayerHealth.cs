@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log($"Health: {currentHealth}");
+        //Debug.Log($"Health: {currentHealth}");
 
         if (currentHealth <= 0)
         {
