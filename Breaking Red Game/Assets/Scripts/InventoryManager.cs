@@ -58,5 +58,21 @@ public class InventoryManager : MonoBehaviour
         }
         Debug.Log("Inventory is full!");
     }
+
+    public int GetItemCount()
+    {
+        int count = 0;
+
+        // Loop through each slot in the inventory and count the occupied ones
+        foreach (var slot in itemSlot)
+        {
+            if (slot.isOccupied) // If the slot is occupied, increment the count
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }   
 }
 

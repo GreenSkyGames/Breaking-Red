@@ -24,6 +24,17 @@ public class InventoryBoundaryTest : MonoBehaviour
 
         // try adding a fourth item, should be rejected as the inventory is full
         inventoryManager.AddToInventory("Item4", null);  // This should log "Inventory is full!"
+        int totalItems = inventoryManager.GetItemCount();
+        int expectedItemCount = 3;  // still want only 3 items in test after
+
+        if (totalItems == expectedItemCount)
+        {
+            Debug.Log("Inventory Boundary Test Passed: Inventory correctly rejected the fourth item.");
+        }
+        else
+        {
+            Debug.LogError($"Inventory Boundary Test Failed: Expected {expectedItemCount} items, but found {totalItems}.");
+        }
     }
 }
 

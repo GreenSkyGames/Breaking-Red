@@ -4,7 +4,7 @@ public class HealthOverflowTest : MonoBehaviour
 {
     public PlayerController playerController;
 
-    void Start()
+    public void RunHealthOverflowTest()
     {
         if (playerController == null)
         {
@@ -32,6 +32,7 @@ public class HealthOverflowTest : MonoBehaviour
         goldenApple.sprite = null;
 
         goldenApple.ApplyEffect(playerController);
+        Debug.Log($"Health after applying: {playerHealth.currentHealth}");
 
         // check if the health has exceeded the limit (3)
         if (playerHealth.currentHealth > playerHealth.maxHealth)
