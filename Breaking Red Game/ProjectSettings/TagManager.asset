@@ -24,6 +24,7 @@ TagManager:
   - NPCTestCollisionWall
   - NPCTestWall
   - NPCDeathWall
+  - Grove1
   layers:
   - Default
   - TransparentFX
