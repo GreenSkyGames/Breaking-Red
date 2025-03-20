@@ -13,6 +13,7 @@ public class PowerUpManager : MonoBehaviour
         if (powerUp.type == PowerUp.itemName.PoisonApple)
         {
             powerUp.ApplyEffect(playerController);
+            Destroy(gameObject);
         }
         else
         {
@@ -33,6 +34,7 @@ public class PowerUpManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.U))  // 'U' for Use Now
             {
                 powerUp.ApplyEffect(playerController);  // apply the power-up effect
+                Destroy(powerUp.gameObject);
                 inputReceived = true;
             }
             else if (Input.GetKeyDown(KeyCode.L))  // 'L' for Store for Later
