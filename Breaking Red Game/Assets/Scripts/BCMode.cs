@@ -8,6 +8,16 @@ using UnityEngine.UI;
 public class BCMODE : MonoBehaviour
 {
  [SerializeField] private Toggle toggle;
+ private static BCMODE instance; 
+
+ void Awake(){
+    if(instance == null){
+        instance = this; 
+        DontDestroyOnLoad(toggle); //prevent from being destroyed when scenes swtich 
+    }else{
+        Destroy(toggle); //only one instance exists
+    }
+ }
 
  void Start()
  {
@@ -34,5 +44,6 @@ public class BCMODE : MonoBehaviour
 
     PlayerPrefs.SetInt("BCMode", isON ? 1 : 0);
     PlayerPrefs.Save();
+    Debug.Log($"BC Mode toggled: {(isON ? "ON" : "Off")}"); 
  }
 }
