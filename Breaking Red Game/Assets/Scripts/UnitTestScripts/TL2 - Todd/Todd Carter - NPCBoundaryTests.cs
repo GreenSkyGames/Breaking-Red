@@ -26,16 +26,16 @@ using System.Collections;
 	This button can be found on Level 1 of the project, as well as the relevant gameObjects
 	such as the two collidable walls.
 
-	There is no stress test.  Apologies for my failure.	
 
 */
 
 
-public class NPCTestScript : MonoBehaviour
+public class NPCBoundaryTestsScript : MonoBehaviour
 {	
 	private GameObject NPCTestWall;
 	private GameObject NPCDeathWall;
 
+	//Find the testing environmental objects and deactivate them.
 	public void Awake()
 	{
 		NPCTestWall = GameObject.FindGameObjectWithTag("NPCTestWall");
@@ -170,7 +170,7 @@ public class NPCTestScript : MonoBehaviour
     }
 
 
-    public void RunTests()
+    public void RunNPCBoundaryTests()
     {
         StartCoroutine(NPCBoundaryTests());
     }

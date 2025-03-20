@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 1231940742920002264}
   - component: {fileID: 6834397048408610695}
   - component: {fileID: 6273597732280082222}
+  - component: {fileID: 6834017317502949775}
   m_Layer: 7
   m_Name: TheWolf
   m_TagString: TheWolf
@@ -338,3 +339,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueKnotName: TheWolf
+--- !u!114 &6834017317502949775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729365132012887990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb5d7472d46d974184d1d7c7c199c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
