@@ -203,3 +203,14 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 - -> END
 
 
+
+=== TheAxman ===
+~ Name = "The Axman"
+
+//Name is {Name}
+
+Dum dee dum dee dum, swinging my ax, chopping the wood, dum dee dum dee dum...!
+
+- -> END
+
+
