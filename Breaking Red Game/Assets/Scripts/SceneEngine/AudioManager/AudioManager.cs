@@ -32,6 +32,7 @@ public class AudioManager : MonoBehaviour
     {
         foreach (var type in AudioTypes)
         {
+            //type = new AudioTypeBoss();
             type.Source = gameObject.AddComponent<AudioSource>();
 
             type.Source.clip = type.Clip;
