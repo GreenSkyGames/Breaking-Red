@@ -8,7 +8,7 @@ public class DialogueEvents
 {
     public event Action<string> onEnterDialogue;
 	
-	public void EnterDialogue(string knotName)
+	public void enterDialogue(string knotName)
 	{
 		//onEnterDialogue?.Invoke(knotName);
 
@@ -24,7 +24,7 @@ public class DialogueEvents
 
 	public event Action onDialogueStarted;
 
-	public void DialogueStarted()
+	public void dialogueStarted()
 	{
 		//Debug.Log("1st test");
 		if(onDialogueStarted != null)
@@ -36,7 +36,7 @@ public class DialogueEvents
 
 	public event Action onDialogueFinished;
 
-	public void DialogueFinished()
+	public void dialogueFinished()
 	{
 		if(onDialogueFinished != null)
 		{
@@ -46,7 +46,7 @@ public class DialogueEvents
 
 	public event Action<string, List<Choice>, string> onDisplayDialogue;
 
-	public void DisplayDialogue(string dialogueLine, List<Choice> dialogueChoices, string name)
+	public void displayDialogue(string dialogueLine, List<Choice> dialogueChoices, string name)
 	{
 		if(onDisplayDialogue != null)
 		{
@@ -56,7 +56,7 @@ public class DialogueEvents
 
 	public event Action<int> onUpdateChoiceIndex;
 
-	public void UpdateChoiceIndex(int choiceIndex)
+	public void updateChoiceIndex(int choiceIndex)
 	{
 		if(onUpdateChoiceIndex != null)
 		{
@@ -64,23 +64,23 @@ public class DialogueEvents
 		}
 	}
 
-	public event Action startHostility;
+	public event Action onStartHostility;
 
-	public void StartHostility()
+	public void startHostility()
 	{
-		if(startHostility != null)
+		if(onStartHostility != null)
 		{
-			startHostility();
+			onStartHostility();
 		}
 	}
 
-	public event Action stopHostility;
+	public event Action onStopHostility;
 
-	public void StopHostility()
+	public void stopHostility()
 	{
-		if(stopHostility != null)
+		if(onStopHostility != null)
 		{
-			stopHostility();
+			onStopHostility();
 		}
 	}
 }

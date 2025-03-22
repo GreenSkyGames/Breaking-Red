@@ -9,14 +9,14 @@ public class DialoguePanelUI : MonoBehaviour
 {
     private GameObject contentParent;
     private GameObject temp;
-	[SerializeField] private TMP_Text dialogueText;
-	[SerializeField] private TMP_Text nameText;
-	[SerializeField] private DialogueChoiceButton[] choiceButtons;
+	[SerializeField] private TMP_Text _dialogueText;
+	[SerializeField] private TMP_Text _nameText;
+	[SerializeField] private DialogueChoiceButton[] _choiceButtons;
 
 	private void Awake()
 	{
 		//contentParent.SetActive(false);
-		ResetPanel();
+		resetPanel();
 	}
 
 	private void OnEnable()
@@ -34,22 +34,22 @@ public class DialoguePanelUI : MonoBehaviour
 		//These are only subscribed to GameEventsManager when the dang thing is active
 		//Since it's usually not active, these won't work.
 		//So to use DialogueStarted to activate it, it already has to be activated -_-
-		GameEventsManager.instance.dialogueEvents.onDialogueStarted += DialogueStarted;
-		GameEventsManager.instance.dialogueEvents.onDialogueFinished += DialogueFinished;
-		GameEventsManager.instance.dialogueEvents.onDisplayDialogue += DisplayDialogue;
+		GameEventsManager.instance.dialogueEvents.onDialogueStarted += dialogueStarted;
+		GameEventsManager.instance.dialogueEvents.onDialogueFinished += dialogueFinished;
+		GameEventsManager.instance.dialogueEvents.onDisplayDialogue += displayDialogue;
 	}
 
 	private void OnDisable()
 	{
 		if(GameEventsManager.instance != null && GameEventsManager.instance.dialogueEvents != null)
 		{
-			GameEventsManager.instance.dialogueEvents.onDialogueStarted -= DialogueStarted;
-			GameEventsManager.instance.dialogueEvents.onDialogueFinished -= DialogueFinished;
-			GameEventsManager.instance.dialogueEvents.onDisplayDialogue -= DisplayDialogue;
+			GameEventsManager.instance.dialogueEvents.onDialogueStarted -= dialogueStarted;
+			GameEventsManager.instance.dialogueEvents.onDialogueFinished -= dialogueFinished;
+			GameEventsManager.instance.dialogueEvents.onDisplayDialogue -= displayDialogue;
 		}
 	}
 
-	private void DialogueStarted()
+	private void dialogueStarted()
 	{
 		contentParent.SetActive(true);
 		Debug.Log("Weird tag ");
@@ -57,27 +57,27 @@ public class DialoguePanelUI : MonoBehaviour
 		//temp.SetActive(true);
 		//ResetPanel();
 	}
-	private void DialogueFinished()
+	private void dialogueFinished()
 	{
 		contentParent = GameObject.FindWithTag("DialogueBox");
 		//Debug.Log("Weird tag " + temp.tag);
 		contentParent.SetActive(false);
-		ResetPanel();
+		resetPanel();
 	}
 
-	private void DisplayDialogue(string dialogueLine, List<Choice> dialogueChoices, string name)
+	private void displayDialogue(string dialogueLine, List<Choice> dialogueChoices, string name)
 	{
-		dialogueText.text = dialogueLine;
-		nameText.text = name;  //display the name
+		_dialogueText.text = dialogueLine;
+		_nameText.text = name;  //display the name
 
-		if(dialogueChoices.Count > choiceButtons.Length)
+		if(dialogueChoices.Count > _choiceButtons.Length)
 		{
 			Debug.LogError("More dialogue choices("
 				+ dialogueChoices.Count + ") came through than are supported ("
-				+ choiceButtons.Length + ").");
+				+ _choiceButtons.Length + ").");
 		}
 
-		foreach (DialogueChoiceButton choiceButton in choiceButtons)
+		foreach (DialogueChoiceButton choiceButton in _choiceButtons)
 		{
 			choiceButton.gameObject.SetActive(false);
 		}
@@ -87,24 +87,24 @@ public class DialoguePanelUI : MonoBehaviour
 		for(int inkChoiceIndex = 0; inkChoiceIndex < dialogueChoices.Count; inkChoiceIndex++)
 		{
 			Choice dialogueChoice = dialogueChoices[inkChoiceIndex];
-			DialogueChoiceButton choiceButton = choiceButtons[choiceButtonIndex];
+			DialogueChoiceButton choiceButton = _choiceButtons[choiceButtonIndex];
 
 			choiceButton.gameObject.SetActive(true);
-			choiceButton.SetChoiceText(dialogueChoice.text);
-			choiceButton.SetChoiceIndex(inkChoiceIndex);
+			choiceButton.setChoiceText(dialogueChoice.text);
+			choiceButton.setChoiceIndex(inkChoiceIndex);
 
 			if(inkChoiceIndex == 0)
 			{
-				choiceButton.SelectButton();
-				GameEventsManager.instance.dialogueEvents.UpdateChoiceIndex(0);
+				choiceButton.selectButton();
+				GameEventsManager.instance.dialogueEvents.updateChoiceIndex(0);
 			}
 
 			choiceButtonIndex--;
 		}
 	}
 
-	private void ResetPanel()
+	private void resetPanel()
 	{
-		dialogueText.text = "";
+		_dialogueText.text = "";
 	}
 }

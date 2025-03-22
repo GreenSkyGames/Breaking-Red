@@ -11,15 +11,15 @@ public class NPCDialogueTrigger : MonoBehaviour
 	//public Dialogue Dialogue; //Duls
 	//public string Name;
 
-	[SerializeField] private string dialogueKnotName;
+	[SerializeField] private string _dialogueKnotName;
 
-	public void TriggerDialogue()
+	public void triggerDialogue()
 	{
 		//FindFirstObjectByType<DialogueManager>().StartDialogue(Dialogue);
 		//DialogueManager.Instance.StartDialogue(Name, Dialogue.RootNode);
-		if (!dialogueKnotName.Equals(""))
+		if (!_dialogueKnotName.Equals(""))
 		{
-			GameEventsManager.instance.dialogueEvents.EnterDialogue(dialogueKnotName);
+			GameEventsManager.instance.dialogueEvents.enterDialogue(_dialogueKnotName);
 		}
 		else
 		{

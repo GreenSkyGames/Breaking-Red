@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6828714156370195324}
   - component: {fileID: 2242490164481011906}
   - component: {fileID: 2283735591819562610}
-  - component: {fileID: 3405746030245880434}
   - component: {fileID: 5480491743159412761}
   - component: {fileID: 3140227946331660447}
+  - component: {fileID: 7560761179062329581}
   m_Layer: 7
   m_Name: The Hiker
   m_TagString: TheHiker
@@ -219,31 +219,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0012936415, y: -0.043980632}
   m_Size: {x: 0.22864448, y: 0.51581484}
   m_Direction: 0
---- !u!114 &3405746030245880434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52166317189782236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  attackRange: 1
-  attackCooldown: 1
-  playerDetectRange: 5
-  DetectionPoint: {fileID: 996757009794496133}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  myCanvas: {fileID: 0}
-  isHostile: 0
-  facingRight: 0
-  enemySR: {fileID: 0}
-  currentHealth: 9
 --- !u!114 &5480491743159412761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6789b9bfffb2c46a6a340ea4bbe41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueKnotName: TheHiker
+  _dialogueKnotName: TheHiker
 --- !u!114 &3140227946331660447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +252,31 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &7560761179062329581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52166317189782236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  attackRange: 1
+  attackCooldown: 1
+  playerDetectRange: 5
+  detectionPoint: {fileID: 996757009794496133}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  myCanvas: {fileID: 0}
+  isHostile: 0
+  facingRight: 1
+  enemySR: {fileID: 2959500224568323714}
+  currentHealth: 9
 --- !u!1 &858598740541033172
 GameObject:
   m_ObjectHideFlags: 0

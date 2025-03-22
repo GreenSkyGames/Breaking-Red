@@ -8,32 +8,32 @@ public class InkExternalFunctions : MonoBehaviour
 {
 	public GameObject temp;
 
-	public void Bind(Story story)
+	public void bind(Story story)
 	{
 		//Each ink function needs a separate binding.
-		story.BindExternalFunction("StartWolfHostility", (bool activate) => StartWolfHostility(activate));
-		story.BindExternalFunction("StopWolfHostility", (bool activate) => StopWolfHostility(activate));
-		story.BindExternalFunction("StartPurpleTorchEnemyHostility", (bool activate) => StartPurpleTorchEnemyHostility(activate));
-		story.BindExternalFunction("StopPurpleTorchEnemyHostility", (bool activate) => StopPurpleTorchEnemyHostility(activate));
-		story.BindExternalFunction("StartBearHostility", (bool activate) => StartBearHostility(activate));
-		story.BindExternalFunction("StopBearHostility", (bool activate) => StopBearHostility(activate));
+		story.BindExternalFunction("startWolfHostility", (bool activate) => startWolfHostility(activate));
+		story.BindExternalFunction("stopWolfHostility", (bool activate) => stopWolfHostility(activate));
+		story.BindExternalFunction("startPurpleTorchEnemyHostility", (bool activate) => startPurpleTorchEnemyHostility(activate));
+		story.BindExternalFunction("stopPurpleTorchEnemyHostility", (bool activate) => stopPurpleTorchEnemyHostility(activate));
+		story.BindExternalFunction("startBearHostility", (bool activate) => startBearHostility(activate));
+		story.BindExternalFunction("stopBearHostility", (bool activate) => stopBearHostility(activate));
 
 	}
 
-	public void Unbind(Story story)
+	public void unbind(Story story)
 	{
-		story.UnbindExternalFunction("StartWolfHostility");
-		story.UnbindExternalFunction("StopWolfHostility");
-		story.UnbindExternalFunction("StartPurpleTorchEnemyHostility");
-		story.UnbindExternalFunction("StopPurpleTorchEnemyHostility");
-		story.UnbindExternalFunction("StartBearHostility");
-		story.UnbindExternalFunction("StopBearHostility");
+		story.UnbindExternalFunction("startWolfHostility");
+		story.UnbindExternalFunction("stopWolfHostility");
+		story.UnbindExternalFunction("startPurpleTorchEnemyHostility");
+		story.UnbindExternalFunction("stopPurpleTorchEnemyHostility");
+		story.UnbindExternalFunction("startBearHostility");
+		story.UnbindExternalFunction("stopBearHostility");
 
 	}
 
 	//These are mostly for turning NPCs hostile or not.
 	//Calling it as an event turns all of them hostile at once.
-    private void StartWolfHostility(bool activate)
+    private void startWolfHostility(bool activate)
 	{
 		//Debug.Log("Miracle");
 		//GameEventsManager.instance.dialogueEvents.StartHostility();
@@ -41,33 +41,33 @@ public class InkExternalFunctions : MonoBehaviour
 		temp.GetComponent<NPCManager>().onHostility();
 	}
 
-    private void StopWolfHostility(bool activate)
+    private void stopWolfHostility(bool activate)
 	{
 		//Debug.Log("Miracle2");
 		temp = GameObject.FindWithTag("TheWolf");
 		temp.GetComponent<NPCManager>().offHostility();
 	}
 
-    private void StartPurpleTorchEnemyHostility(bool activate)
+    private void startPurpleTorchEnemyHostility(bool activate)
 	{
 		temp = GameObject.FindWithTag("PurpleTorchEnemy");
 		temp.GetComponent<NPCManager>().onHostility();
 	}
 
-    private void StopPurpleTorchEnemyHostility(bool activate)
+    private void stopPurpleTorchEnemyHostility(bool activate)
 	{
 		temp = GameObject.FindWithTag("PurpleTorchEnemy");
 		temp.GetComponent<NPCManager>().offHostility();
 	}
 
-    private void StartBearHostility(bool activate)
+    private void startBearHostility(bool activate)
 	{
 		Debug.Log("Miracle");
 		temp = GameObject.FindWithTag("TheBear");
 		temp.GetComponent<NPCManager>().onHostility();
 	}
 
-    private void StopBearHostility(bool activate)
+    private void stopBearHostility(bool activate)
 	{
 		Debug.Log("Miracle2");
 		temp = GameObject.FindWithTag("TheBear");

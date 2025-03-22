@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
             if (enemies.Length > 0)
             {
                 enemies[0].GetComponent<NPCManager>().displayDialogueBox();
-                enemies[0].GetComponent<NPCDialogueTrigger>().TriggerDialogue();
+                enemies[0].GetComponent<NPCDialogueTrigger>().triggerDialogue();
             }
         }
     }

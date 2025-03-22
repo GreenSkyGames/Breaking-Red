@@ -1,9 +1,9 @@
-EXTERNAL StartWolfHostility(bool)
-EXTERNAL StopWolfHostility(bool)
-EXTERNAL StartPurpleTorchEnemyHostility(bool)
-EXTERNAL StopPurpleTorchEnemyHostility(bool)
-EXTERNAL StartBearHostility(bool)
-EXTERNAL StopBearHostility(bool)
+EXTERNAL startWolfHostility(bool)
+EXTERNAL stopWolfHostility(bool)
+EXTERNAL startPurpleTorchEnemyHostility(bool)
+EXTERNAL stopPurpleTorchEnemyHostility(bool)
+EXTERNAL startBearHostility(bool)
+EXTERNAL stopBearHostility(bool)
 
 
 
@@ -26,7 +26,7 @@ VAR Name = "Default"
     
     ** ["I'm watching you, Wolf!"]
         
-        ~ StopWolfHostility(true)
+        ~ stopWolfHostility(true)
         "And what big eyes you have!"
         
         *** ["I'll be seeing you again!"]
@@ -41,7 +41,7 @@ VAR Name = "Default"
 
         *** ["How dare you!  I'll kill you for that!"]
 
-        ~ StartWolfHostility(true)
+        ~ startWolfHostility(true)
         "You can try, Red!  Show me what you got!"
         
         **** ["Let's go, dirtbag!"]
@@ -106,7 +106,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["Why are you telling me so easily?"]
 
-~ StartBearHostility(true)
+~ startBearHostility(true)
 - "Well, it's not like you're going to get away from me AGAIN, is it?  Not too often a free meal comes to me!"
 
 * ["Why you %$!@-!"]

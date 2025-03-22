@@ -11,23 +11,24 @@ public class DialogueChoiceButton : MonoBehaviour, ISelectHandler
 
 	private int choiceIndex = -1;
 
-	public void SetChoiceText(string choiceTextString)
+	public void setChoiceText(string choiceTextString)
 	{
 		choiceText.text = choiceTextString;
 	}
 
-	public void SetChoiceIndex(int choiceIndex)
+	public void setChoiceIndex(int choiceIndex)
 	{
 		this.choiceIndex = choiceIndex;
 	}
 
-	public void SelectButton()
+	public void selectButton()
 	{
 		button.Select();
 	}
 
 	public void OnSelect(BaseEventData eventData)
 	{
-		GameEventsManager.instance.dialogueEvents.UpdateChoiceIndex(choiceIndex);
+		//dialogueEvents here is a variable under GameEventsManager
+		GameEventsManager.instance.dialogueEvents.updateChoiceIndex(choiceIndex);
 	}
 }

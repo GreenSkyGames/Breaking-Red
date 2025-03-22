@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 691563667995140870}
   - component: {fileID: 5350014535343959427}
   - component: {fileID: 8120501714737714936}
-  - component: {fileID: 8069164262632535030}
+  - component: {fileID: 7638828051661968350}
   m_Layer: 7
   m_Name: PurpleTorchEnemy
   m_TagString: PurpleTorchEnemy
@@ -312,8 +312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6789b9bfffb2c46a6a340ea4bbe41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueKnotName: PurpleTorchEnemy
---- !u!114 &8069164262632535030
+  _dialogueKnotName: PurpleTorchEnemy
+--- !u!114 &7638828051661968350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,19 +322,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4868536043419205611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
   attackRange: 1
   attackCooldown: 1
   playerDetectRange: 5
-  DetectionPoint: {fileID: 6769459427701160004}
+  detectionPoint: {fileID: 6769459427701160004}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
   myCanvas: {fileID: 0}
   isHostile: 0
-  facingRight: 0
-  enemySR: {fileID: 0}
+  facingRight: 1
+  enemySR: {fileID: 3360861414887477054}
   currentHealth: 9

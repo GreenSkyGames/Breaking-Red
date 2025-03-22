@@ -174,8 +174,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 65, y: -95.4}
-  m_SizeDelta: {x: -250, y: -320.69}
+  m_AnchoredPosition: {x: 65, y: -117.93}
+  m_SizeDelta: {x: -250, y: -275.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6825792300120496012
 CanvasRenderer:
@@ -365,7 +365,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: ContinueOrExitStory
+        m_MethodName: continueOrExitStory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -938,7 +938,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 550, y: 21.2469}
+  m_SizeDelta: {x: 550, y: 18.7077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3300350557547450133
 CanvasRenderer:
@@ -1024,7 +1024,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: ContinueOrExitStory
+        m_MethodName: continueOrExitStory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1137,9 +1137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 283f45a744c2e214c8ab57dabd61b7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 1515985124126559467}
-  nameText: {fileID: 3602502470255047296}
-  choiceButtons:
+  _dialogueText: {fileID: 1515985124126559467}
+  _nameText: {fileID: 3602502470255047296}
+  _choiceButtons:
   - {fileID: 5379036658851715265}
   - {fileID: 7685723408708463502}
   - {fileID: 6994082841519425822}
@@ -1317,7 +1317,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 550, y: 21.2469}
+  m_SizeDelta: {x: 550, y: 18.7077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4387795515758876342
 CanvasRenderer:
@@ -1403,7 +1403,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: ContinueOrExitStory
+        m_MethodName: continueOrExitStory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

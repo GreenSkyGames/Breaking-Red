@@ -26,7 +26,7 @@ public class DamagingEnv : MonoBehaviour
 			NPCManager target = collision.gameObject.GetComponent<NPCManager>();
 			if (target != null)
 			{
-				StartCoroutine(ApplyDamageOverTime(target));
+				StartCoroutine(applyDamageOverTime(target));
 			}
         }
     }
@@ -47,7 +47,7 @@ public class DamagingEnv : MonoBehaviour
         if (target != null && !affectedObjects.Contains(target))
         {
             affectedObjects.Add(target);
-            StartCoroutine(ApplyDamageOverTime(target));
+            StartCoroutine(applyDamageOverTime(target));
         } 
         else if(collision.CompareTag("Player") && !affectedObjs.Contains(collision.gameObject)) 
         {
@@ -73,11 +73,11 @@ public class DamagingEnv : MonoBehaviour
 
 	//This is for damage over time.
 	//Currently only affects NPCs (and anything not on the player layer).
-    private IEnumerator ApplyDamageOverTime(NPCManager target)
+    private IEnumerator applyDamageOverTime(NPCManager target)
     {
         while (affectedObjects.Contains(target)) // Apply damage as long as target is in the trigger
         {
-            target.ChangeHealth(-damage);
+            target.changeHealth(-damage);
             yield return new WaitForSeconds(damageInterval); // Wait for the next frame
         }
     }

@@ -22,7 +22,7 @@ public class NPCAttack : MonoBehaviour
 
 	//Check if the player is in attack range by checking the player layer.
 	//If something is found, the hits array is > 0, and damage and knockback are dealt.
-	public void Attack()
+	public void attack()
 	{
 		Collider2D[] hits = Physics2D.OverlapCircleAll(AttackPoint.position, weaponRange, playerLayer);
 

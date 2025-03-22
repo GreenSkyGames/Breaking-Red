@@ -9,46 +9,46 @@ public class DialogueManager : MonoBehaviour
 {
 	public static DialogueManager Instance { get; private set; }
 
-	public GameObject DialogueParent;
-	public TMP_Text DialogueTitleText;
-	public TMP_Text DialogueBodyText;
-	public GameObject responseButtonPrefab;
-	public Transform responseButtonContainer;
+	//public GameObject DialogueParent;
+	//public TMP_Text DialogueTitleText;
+	//public TMP_Text DialogueBodyText;
+	//public GameObject responseButtonPrefab;
+	//public Transform responseButtonContainer;
 
 	//public GameEventsManager gameEventsManager;
 
-	private GameObject temp;
+	private GameObject _dialogueBoxCanvas;
 
-	[SerializeField] private TextAsset inkJson;
-	private bool dialoguePlaying = false;
+	[SerializeField] private TextAsset _inkJson;
+	private bool _dialoguePlaying = false;
 
-	private InkExternalFunctions inkExternalFunctions;
+	private InkExternalFunctions _inkExternalFunctions;
 
-	private Story story;
+	private Story _story;
 
-	private int currentChoiceIndex = -1;
+	private int _currentChoiceIndex = -1;
 
 	private void Awake()
 	{
-		temp = GameObject.FindWithTag("DialogueBox");
-		//Debug.Log("Weird tag: " + temp.tag);
+		_dialogueBoxCanvas = GameObject.FindWithTag("DialogueBox");
+		//Debug.Log("Weird tag: " + _dialogueBoxCanvas.tag);
 
-		story = new Story(inkJson.text); //shapedrain
-		inkExternalFunctions = new InkExternalFunctions();
-		inkExternalFunctions.Bind(story);
+		_story = new Story(_inkJson.text); //shapedrain
+		_inkExternalFunctions = new InkExternalFunctions();
+		_inkExternalFunctions.bind(_story);
 
 		closeDialogue();
 	}
 
 	private void OnDestroy()
 	{
-		inkExternalFunctions.Unbind(story);
+		_inkExternalFunctions.unbind(_story);
 	}
 
 	private void OnEnable()
 	{
-		//temp = GameObject.Find("GameEventsManager");
-		//temp.dialogueEvents.onEnterDialogue += EnterDialogue;
+		//_dialogueBoxCanvas = GameObject.Find("GameEventsManager");
+		//_dialogueBoxCanvas.dialogueEvents.onEnterDialogue += EnterDialogue;
 		StartCoroutine(WaitForGameEventsManager());
 	}
 
@@ -59,45 +59,45 @@ public class DialogueManager : MonoBehaviour
 			yield return null;
 		}
 		//Debug.Log("Enable test");
-		GameEventsManager.instance.dialogueEvents.onEnterDialogue += EnterDialogue;
+		GameEventsManager.instance.dialogueEvents.onEnterDialogue += enterDialogue;
 		//GameEventsManager.instance.inputEvents.onSubmitPressed += SubmitPressed; //useful if using unity input system
-		GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex += UpdateChoiceIndex;
+		GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex += updateChoiceIndex;
 	}
 
 	private void OnDisable()
 	{
 		//Debug.Log("Disable test");
-		GameEventsManager.instance.dialogueEvents.onEnterDialogue -= EnterDialogue;
+		GameEventsManager.instance.dialogueEvents.onEnterDialogue -= enterDialogue;
 		//GameEventsManager.instance.inputEvents.onSubmitPressed -= SubmitPressed;
-		GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex -= UpdateChoiceIndex;
+		GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex -= updateChoiceIndex;
 	}
 
-	private void UpdateChoiceIndex(int choiceIndex)
+	private void updateChoiceIndex(int choiceIndex)
 	{
-		this.currentChoiceIndex = choiceIndex;
+		this._currentChoiceIndex = choiceIndex;
 	}
 
 	//This should perhaps be bound to a Next button
 	//Works as a button
-	public void SubmitPressed()
+	public void submitPressed()
 	{
-		if(!dialoguePlaying)
+		if(!_dialoguePlaying)
 		{
 			return;
 		}
 
-		ContinueOrExitStory();
+		continueOrExitStory();
 	}
 
-	private void EnterDialogue(string knotName)
+	private void enterDialogue(string knotName)
 	{
 		Debug.Log("Entering dialogue for knot name: " + knotName);
 
-		if(dialoguePlaying)
+		if(_dialoguePlaying)
 		{
 			return;
 		}
-		dialoguePlaying = true;
+		_dialoguePlaying = true;
 
 		if (GameEventsManager.instance == null || GameEventsManager.instance.dialogueEvents == null)
 		{
@@ -107,15 +107,15 @@ public class DialogueManager : MonoBehaviour
 
 		//GameEventsManager.instance.dialogueEvents.DialogueStarted();  //Doesn't work, see DialoguePanelUI for reason why
 
-		temp.SetActive(true);
-		//Debug.Log("Weird tag: " + temp.tag); //Better be tagged dialoguebox
+		_dialogueBoxCanvas.SetActive(true);
+		//Debug.Log("Weird tag: " + _dialogueBoxCanvas.tag); //Better be tagged dialoguebox
 		//Debug.Log("Name is " + Name);
 
 		if(!knotName.Equals(""))
 		{
-			story.ChoosePathString(knotName);
+			_story.ChoosePathString(knotName);
 
-			string name = story.variablesState["Name"].ToString();
+			string name = _story.variablesState["Name"].ToString();
 
 			//Debug.Log("Name is " + name);
 		}
@@ -124,70 +124,70 @@ public class DialogueManager : MonoBehaviour
 			Debug.LogWarning("Knot name was the empty string when entering dialogue.");
 		}
 
-		ContinueOrExitStory();
+		continueOrExitStory();
 	}
 
 	//This is currently being done by button click instead of event management
-	public void ContinueOrExitStory()
+	public void continueOrExitStory()
 	{
 
 		//make a choice, if applicable
-		if(story.currentChoices.Count > 0 && currentChoiceIndex != -1)
+		if(_story.currentChoices.Count > 0 && _currentChoiceIndex != -1)
 		{
-			story.ChooseChoiceIndex(currentChoiceIndex);
-			currentChoiceIndex = -1;
+			_story.ChooseChoiceIndex(_currentChoiceIndex);
+			_currentChoiceIndex = -1;
 		}
-		if(story.canContinue)
+		if(_story.canContinue)
 		{
-			string dialogueLine = story.Continue();
+			string dialogueLine = _story.Continue();
 
 			//Acquire the name of the speaker
-			name = story.variablesState["Name"].ToString();
+			name = _story.variablesState["Name"].ToString();
 
 			Debug.Log("Name is " + name);
 
 			Debug.Log(dialogueLine);
 
 			//Handle case where there's an empty line of dialogue
-			while(IsLineBlank(dialogueLine) && story.canContinue)
+			while(isLineBlank(dialogueLine) && _story.canContinue)
 			{
-				dialogueLine = story.Continue();
+				dialogueLine = _story.Continue();
 			}
 
 			//handle case where the last line of dialogue is blank
-			if(IsLineBlank(dialogueLine) && !story.canContinue)
+			if(isLineBlank(dialogueLine) && !_story.canContinue)
 			{
-				ExitDialogue();
+				exitDialogue();
 			}
 			else
 			{
-				GameEventsManager.instance.dialogueEvents.DisplayDialogue(dialogueLine, story.currentChoices, name);
+				GameEventsManager.instance.dialogueEvents.displayDialogue(dialogueLine, _story.currentChoices, name);
 			}
 		}
-		else if (story.currentChoices.Count == 0)
+		else if (_story.currentChoices.Count == 0)
 		{
 			Debug.Log("End of choice path");
 			//StartCoroutine(ExitDialogue());
-			ExitDialogue();
+			exitDialogue();
 		}
 	}
 
-	private void ExitDialogue()
+	private void exitDialogue()
 	{
 		//Makes them end on a different frame
 		//yield return null; //this is to stop a race condition that does not exist in this format
-		GameEventsManager.instance.dialogueEvents.DialogueFinished();
+		GameEventsManager.instance.dialogueEvents.dialogueFinished();
 
 		//GameEventsManager.instance.playerEvents.EnablePlayerMovement();
 
 		Debug.Log("Exiting dialogue.");
 
-		dialoguePlaying = false;
+		_dialoguePlaying = false;
 
-		story.ResetState();
+		_story.ResetState();
 	}
 
-	private bool IsLineBlank(string dialogueLine)
+	private bool isLineBlank(string dialogueLine)
 	{
 		return dialogueLine.Trim().Equals("") || dialogueLine.Trim().Equals("\n");
 	}
@@ -197,17 +197,17 @@ public class DialogueManager : MonoBehaviour
 	//This means the NPC talking will retain the last state given
 	public void closeDialogue()
 	{
-		//temp = GameObject.FindWithTag("DialogueBox");
-		//Debug.Log("Weird tag " + temp.tag);
-		dialoguePlaying = false;
-		temp.SetActive(false);
+		//_dialogueBoxCanvas = GameObject.FindWithTag("DialogueBox");
+		//Debug.Log("Weird tag " + _dialogueBoxCanvas.tag);
+		_dialoguePlaying = false;
+		_dialogueBoxCanvas.SetActive(false);
 		return;
 	}
 
 	public void openDialogue()
 	{
-		//temp = GameObject.FindWithTag("DialogueBox");
-		temp.SetActive(true);
+		//_dialogueBoxCanvas = GameObject.FindWithTag("DialogueBox");
+		_dialogueBoxCanvas.SetActive(true);
 		//return;
 	}
 }

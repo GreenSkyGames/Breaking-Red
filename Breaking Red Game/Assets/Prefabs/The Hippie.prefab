@@ -266,14 +266,14 @@ MonoBehaviour:
   attackRange: 1
   attackCooldown: 1
   playerDetectRange: 5
-  DetectionPoint: {fileID: 1731893782688655199}
+  detectionPoint: {fileID: 1731893782688655199}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
   myCanvas: {fileID: 0}
   isHostile: 0
   facingRight: 0
-  enemySR: {fileID: 0}
+  enemySR: {fileID: 8284152118824693320}
   currentHealth: 9
 --- !u!114 &2588810637753493139
 MonoBehaviour:
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  AttackPoint: {fileID: 0}
+  AttackPoint: {fileID: 6730540636874923104}
   weaponRange: 1
   knockbackForce: 3
   stunTime: 1
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6789b9bfffb2c46a6a340ea4bbe41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueKnotName: TheHippie
+  _dialogueKnotName: TheHippie
 --- !u!1 &6434670458977097524
 GameObject:
   m_ObjectHideFlags: 0
