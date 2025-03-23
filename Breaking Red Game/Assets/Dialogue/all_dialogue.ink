@@ -236,3 +236,14 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 
 - -> END
+
+
+=== TheCat ===
+~ Name = "The Cat"
+
+//Name is {Name}
+
+"Feline placeholder"
+
+
+- -> END
