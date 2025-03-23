@@ -326,7 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _horGoal: 0
   _vertGoal: -12
-  _moveTime: 3
+  _moveTime: 4
   tilemap: {fileID: 0}
 --- !u!50 &40226942
 Rigidbody2D:
