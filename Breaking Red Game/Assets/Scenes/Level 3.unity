@@ -66835,13 +66835,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: The Wizard
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6256853997133323108, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7520109397248299848, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 976821725}
+    - targetCorrespondingSourceObject: {fileID: 7520109397248299848, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 976821728}
   m_SourcePrefab: {fileID: 100100000, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
 --- !u!4 &976821723 stripped
 Transform:
@@ -66875,6 +66879,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &976821726 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6442802640212721683, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
+  m_PrefabInstance: {fileID: 976821722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &976821727 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 331571196971580535, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
+  m_PrefabInstance: {fileID: 976821722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &976821728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976821724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  attackRange: 1
+  attackCooldown: 1
+  playerDetectRange: 5
+  detectionPoint: {fileID: 976821726}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  myCanvas: {fileID: 619725948}
+  isHostile: 0
+  facingRight: 1
+  enemySR: {fileID: 976821727}
+  currentHealth: 9
 --- !u!1 &993779650
 GameObject:
   m_ObjectHideFlags: 0

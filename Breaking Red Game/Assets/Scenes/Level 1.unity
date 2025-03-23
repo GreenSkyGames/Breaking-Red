@@ -11656,14 +11656,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2628100163178820809, guid: 9a55e3277d0c318488ed4e9d6a668044, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1093676329}
-    - target: {fileID: 3841927489145777514, guid: 9a55e3277d0c318488ed4e9d6a668044, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1093676329}
     - target: {fileID: 4021415180829444464, guid: 9a55e3277d0c318488ed4e9d6a668044, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11784,10 +11776,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8782894468494128578, guid: 9a55e3277d0c318488ed4e9d6a668044, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1093676329}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46051,6 +46039,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1913420599}
     m_Modifications:
+    - target: {fileID: 1198003191135877487, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
+      propertyPath: myCanvas
+      value: 
+      objectReference: {fileID: 898566106}
     - target: {fileID: 4783761956478570052, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
       propertyPath: m_LocalPosition.x
       value: 86.91295
@@ -46095,55 +46087,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurpleTorchEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 4868536043419205611, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      propertyPath: m_TagString
-      value: PurpleTorchEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974743231433461337, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      propertyPath: Name
-      value: PurpleTorchEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974743231433461337, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      propertyPath: Dialogue
-      value: 
-      objectReference: {fileID: 11400000, guid: 0c2641bb458617a48b7d4e0f89c3ae24, type: 2}
-    - target: {fileID: 6305068722902045572, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      propertyPath: myCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6305068722902045572, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      propertyPath: DetectionPoint
-      value: 
-      objectReference: {fileID: 1651321473}
-    - target: {fileID: 6305068722902045572, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      propertyPath: playerLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 7638828051661968350, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      propertyPath: myCanvas
-      value: 
-      objectReference: {fileID: 898566106}
-    - target: {fileID: 8069164262632535030, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      propertyPath: myCanvas
-      value: 
-      objectReference: {fileID: 898566106}
-    - target: {fileID: 8893855111234015680, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-      propertyPath: myCanvas
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6305068722902045572, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-    - {fileID: 5974743231433461337, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-    - {fileID: 8893855111234015680, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
---- !u!4 &1651321473 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6769459427701160004, guid: 54d4d49f4f11c1e458c4562f9238e929, type: 3}
-  m_PrefabInstance: {fileID: 1651321472}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1676662732
 GameObject:
   m_ObjectHideFlags: 0
@@ -57812,59 +57760,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1548667244994401002, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: myCanvas
-      value: 
-      objectReference: {fileID: 898566106}
-    - target: {fileID: 3175469785067069841, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: myCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3678474055483349312, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: myCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3678474055483349312, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: DetectionPoint
-      value: 
-      objectReference: {fileID: 1830360923}
-    - target: {fileID: 3678474055483349312, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: playerLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6226005939510379487, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: Name
-      value: The Wolf
-      objectReference: {fileID: 0}
-    - target: {fileID: 6226005939510379487, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: Dialogue
-      value: 
-      objectReference: {fileID: 11400000, guid: 0c2641bb458617a48b7d4e0f89c3ae24, type: 2}
-    - target: {fileID: 6834397048408610695, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: myCanvas
-      value: 
-      objectReference: {fileID: 898566106}
     - target: {fileID: 7729365132012887990, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
       propertyPath: m_Name
       value: TheWolf
       objectReference: {fileID: 0}
-    - target: {fileID: 8094443961451776758, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3678474055483349312, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-    - {fileID: 6226005939510379487, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-    - {fileID: 3175469785067069841, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
+    - target: {fileID: 7794895100903940564, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
+      propertyPath: myCanvas
+      value: 
+      objectReference: {fileID: 898566106}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
---- !u!4 &1830360923 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3572575336149032000, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
-  m_PrefabInstance: {fileID: 1830360922}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1854476824
 GameObject:
   m_ObjectHideFlags: 0

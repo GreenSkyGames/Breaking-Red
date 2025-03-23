@@ -60449,11 +60449,55 @@ PrefabInstance:
       propertyPath: myCanvas
       value: 
       objectReference: {fileID: 173349383}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6455651608044186068, guid: be51862de90f9544584b8c6616ca4c92, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2895991074984511502, guid: be51862de90f9544584b8c6616ca4c92, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5337659938583598120}
   m_SourcePrefab: {fileID: 100100000, guid: be51862de90f9544584b8c6616ca4c92, type: 3}
+--- !u!4 &5337659938583598117 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 16606256073253012, guid: be51862de90f9544584b8c6616ca4c92, type: 3}
+  m_PrefabInstance: {fileID: 5337659938583598116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5337659938583598118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2895991074984511502, guid: be51862de90f9544584b8c6616ca4c92, type: 3}
+  m_PrefabInstance: {fileID: 5337659938583598116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &5337659938583598119 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4245477268345237374, guid: be51862de90f9544584b8c6616ca4c92, type: 3}
+  m_PrefabInstance: {fileID: 5337659938583598116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5337659938583598120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5337659938583598118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  attackRange: 1
+  attackCooldown: 1
+  playerDetectRange: 5
+  detectionPoint: {fileID: 5337659938583598117}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  myCanvas: {fileID: 173349383}
+  isHostile: 0
+  facingRight: 1
+  enemySR: {fileID: 5337659938583598119}
+  currentHealth: 9
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

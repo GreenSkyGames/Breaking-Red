@@ -44,9 +44,10 @@ GameObject:
   - component: {fileID: 2388478403784253096}
   - component: {fileID: 5819732625300346838}
   - component: {fileID: 562075629485727553}
-  - component: {fileID: 6256853997133323108}
   - component: {fileID: 474894384310465257}
   - component: {fileID: 6557004135616810693}
+  - component: {fileID: 5902025740941328346}
+  - component: {fileID: 61837874751144709}
   m_Layer: 7
   m_Name: The Wizard
   m_TagString: TheWizard
@@ -227,31 +228,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.011340173, y: -0.025195923}
   m_Size: {x: 0.31112933, y: 0.58960855}
   m_Direction: 0
---- !u!114 &6256853997133323108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7520109397248299848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  attackRange: 1
-  attackCooldown: 1
-  playerDetectRange: 5
-  detectionPoint: {fileID: 6442802640212721683}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  myCanvas: {fileID: 0}
-  isHostile: 0
-  facingRight: 0
-  enemySR: {fileID: 0}
-  currentHealth: 9
 --- !u!114 &474894384310465257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +261,53 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!95 &5902025740941328346
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7520109397248299848}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6554a0bddc056e64998608542fcdfd9f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &61837874751144709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7520109397248299848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  attackRange: 1
+  attackCooldown: 1
+  playerDetectRange: 5
+  detectionPoint: {fileID: 6442802640212721683}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  myCanvas: {fileID: 0}
+  isHostile: 0
+  facingRight: 1
+  enemySR: {fileID: 331571196971580535}
+  currentHealth: 9
 --- !u!1 &7625330496099179014
 GameObject:
   m_ObjectHideFlags: 0
