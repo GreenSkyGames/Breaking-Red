@@ -209,8 +209,30 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 //Name is {Name}
 
-Dum dee dum dee dum, swinging my ax, chopping the wood, dum dee dum dee dum...!
+"Dum dee dum dee dum, swinging my ax, chopping the wood, dum dee dum dee dum...!  ...Oh? Can I help you with something?"
+
+*["Maybe.  I'm investigating a murder in these woods."]
+
+- "A murder?  Oh my goodness!  How terrible!  Do you have any leads?"
+
+*["I'm working the case.  Have you see or heard anything?"]
+
+- "Oh no, of course not!  All I ever see are these trees that need to be chopped down!  There are houses that need heating!"
+
+*["Understandable.  If I have further questions, I'll come back."]
+
+- "I'm sure this is where I'll be.  These are my woods, after all!  Hohoho...!"
+
 
 - -> END
 
 
+=== TheWizard ===
+~ Name = "The Wizard"
+
+//Name is {Name}
+
+"Wizardly placeholder"
+
+
+- -> END
