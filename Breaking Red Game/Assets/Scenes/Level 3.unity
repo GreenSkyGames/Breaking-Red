@@ -66779,6 +66779,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1590783878}
     m_Modifications:
+    - target: {fileID: 61837874751144709, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
+      propertyPath: myCanvas
+      value: 
+      objectReference: {fileID: 619725948}
     - target: {fileID: 331571196971580535, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
       propertyPath: m_SortingOrder
       value: 10
