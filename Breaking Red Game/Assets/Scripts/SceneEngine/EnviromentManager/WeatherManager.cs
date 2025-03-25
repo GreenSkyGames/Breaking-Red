@@ -34,9 +34,7 @@ public class WeatherManager : MonoBehaviour
         InvokeRepeating("RandomWeather", 0f, 8f);
     }
 
-    // Randomly choose to activate rain or snow
-    
-        public void RandomWeather(){
+    public void RandomWeather(){
         int weatherChoice = myweather.getRandomWeather();
         if (weatherChoice == 0)
         {
@@ -48,7 +46,7 @@ public class WeatherManager : MonoBehaviour
             // Activate snow and deactivate rain
             ActivateSnow();
         }
-        }
+    }
 
     private void ActivateRain()
     {
