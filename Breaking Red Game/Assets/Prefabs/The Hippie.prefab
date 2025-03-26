@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5585528723694353354}
   - component: {fileID: 2588810637753493139}
   - component: {fileID: 4314777880166153226}
-  - component: {fileID: 8670528073448734882}
+  - component: {fileID: 1892255731649277318}
   m_Layer: 7
   m_Name: The Hippie
   m_TagString: TheHippie
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueKnotName: TheHippie
---- !u!114 &8670528073448734882
+--- !u!114 &1892255731649277318
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3550364367757135365}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
+  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
@@ -306,7 +306,7 @@ MonoBehaviour:
   myCanvas: {fileID: 0}
   isHostile: 0
   facingRight: 0
-  enemySR: {fileID: 8284152118824693320}
+  enemySR: {fileID: 0}
   currentHealth: 9
 --- !u!1 &6434670458977097524
 GameObject:
