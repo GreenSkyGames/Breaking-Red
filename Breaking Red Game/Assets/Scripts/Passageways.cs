@@ -14,7 +14,7 @@ public class Passageways : MonoBehaviour
         {
             AudioManager.instance.Play("DoorSound"); // Play the open door sound
 
-            Vector2 newPosition = GetDest();
+            Vector2 newPosition = getDest();
             if(newPosition != Vector2.zero)
             {
                 // Log the tag to check the value
@@ -27,17 +27,17 @@ public class Passageways : MonoBehaviour
                     rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 }
                 //other.transform.position = newPosition;
-                StartCoroutine(TeleportWithFade(other, newPosition, rb));
+                StartCoroutine(teleportWithFade(other, newPosition, rb));
             }
         }
     }
-    private IEnumerator TeleportWithFade(Collider2D player, Vector2 newPosition, Rigidbody2D rb)
+    private IEnumerator teleportWithFade(Collider2D player, Vector2 newPosition, Rigidbody2D rb)
     {
-        yield return StartCoroutine(FadeToBlack(0.5f)); // Fade out
+        yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
         BackgroundMusic.instance.ChangeBackgroundMusic(gameObject.tag); // Change BGM
         player.transform.position = newPosition; // Move player
         yield return new WaitForSeconds(0.3f); // Small delay at black screen
-        yield return StartCoroutine(FadeFromBlack(0.5f)); // Fade back in
+        yield return StartCoroutine(fadeFromBlack(0.5f)); // Fade back in
               
         if (rb != null)
         {
@@ -46,7 +46,7 @@ public class Passageways : MonoBehaviour
         }
     }
 
-    private IEnumerator FadeToBlack(float duration)
+    private IEnumerator fadeToBlack(float duration)
     {
         if (fadePanel == null) yield break;
 
@@ -60,7 +60,7 @@ public class Passageways : MonoBehaviour
         fadePanel.alpha = 1;
     }
 
-    private IEnumerator FadeFromBlack(float duration)
+    private IEnumerator fadeFromBlack(float duration)
     {
         if (fadePanel == null) yield break;
 
@@ -73,7 +73,7 @@ public class Passageways : MonoBehaviour
         }
         fadePanel.alpha = 0;
     }
-    private Vector2 GetDest()
+    private Vector2 getDest()
     {
         switch(gameObject.tag)
         {

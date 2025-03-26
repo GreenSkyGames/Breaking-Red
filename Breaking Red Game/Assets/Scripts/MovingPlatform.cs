@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class MovingPlatform : terrainObjects
+public class MovingPlatform : TerrainObjects
 {
     // Positional offsets for goal
     [SerializeField] private float _horGoal = 0.0f;
@@ -15,7 +15,7 @@ public class MovingPlatform : terrainObjects
     private Vector2 _prevPos;
 
     private Rigidbody2D _playerRigidbody;
-    private PlatformTest platformTest;
+    private PlatformTest _platformTest;
 
     [SerializeField] private Tilemap tilemap;
 
@@ -62,10 +62,10 @@ public class MovingPlatform : terrainObjects
             }
 
             // For Testing: Notify the test script that the player entered the platform
-            PlatformTest platformTest = FindFirstObjectByType<PlatformTest>();
-            if (platformTest != null)
+            PlatformTest _platformTest = FindFirstObjectByType<PlatformTest>();
+            if (_platformTest != null)
             {
-                platformTest.OnPlayerEnterPlatform();
+                _platformTest.OnPlayerEnterPlatform();
             }
         }
 

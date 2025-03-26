@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         if (horizontal > 0 && transform.localScale.x < 0 ||
             horizontal < 0 && transform.localScale.x > 0)
         {
-            Flip();
+            flip();
         }
 
         anim.SetFloat("horizontal", Mathf.Abs(horizontal));
@@ -82,16 +82,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Flip()
+    void flip()
     {
         facingDirection *= -1;
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
-    public void Scales()
+    public void scales()
     {
-        StartCoroutine(ScaleObj());
+        StartCoroutine(scaleObj());
     }
-    IEnumerator ScaleObj() {
+    IEnumerator scaleObj() {
         isScaling = true;
         float elapsedTime = 0f;
         float duration = scaleSpeed;
