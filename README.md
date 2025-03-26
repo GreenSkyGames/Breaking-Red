@@ -16,9 +16,11 @@ Mobile Control Mapping: https://www.youtube.com/watch?v=ruuNwB2h3yA&ab_channel=K
 
 Github with codes and files: https://github.com/JakeG2004/CS383_TL2_Platformer
 
-# TL5 Dynamic Binding
+# TL5 AI
 
-Slide: https://vandalsuidaho-my.sharepoint.com/:b:/g/personal/tian6555_vandals_uidaho_edu/EXQjmGLViRNCqO4eEaCUjwsBIRWLK7-KSMlv4YASxmE07w?e=cUSpFd
+Dynamic Binding Slide: https://vandalsuidaho-my.sharepoint.com/:b:/g/personal/tian6555_vandals_uidaho_edu/EXQjmGLViRNCqO4eEaCUjwsBIRWLK7-KSMlv4YASxmE07w?e=cUSpFd
+
+Ethics Quiz: https://vandalsuidaho-my.sharepoint.com/:p:/g/personal/shre0964_vandals_uidaho_edu/Efd1lZ0PjOZCskU1URhh_VYBsyxdZvYPMHBtMf4gD6tbiQ?e=BO92f2
 
 
 # Dr. BC References
