@@ -50,7 +50,7 @@ public class PlatformTest : MonoBehaviour
             Debug.Log("Layer turned off");
         }
         // Reset player health and position
-        playerHealth.ChangeHealth(100); // Reset health before test
+        playerHealth.changeHealth(100); // Reset health before test
         player.transform.position = platform.transform.position + new Vector3(0, 0, 0); // Spawn player on top of the platform
         Debug.Log("Player spawned on platform at start position.");
 

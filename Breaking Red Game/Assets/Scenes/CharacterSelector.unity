@@ -542,7 +542,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1757479231}
         m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: changeScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -812,7 +812,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1757479231}
         m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
-        m_MethodName: BackOption
+        m_MethodName: backOption
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -945,7 +945,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1757479231}
         m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
-        m_MethodName: NextOption
+        m_MethodName: nextOption
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

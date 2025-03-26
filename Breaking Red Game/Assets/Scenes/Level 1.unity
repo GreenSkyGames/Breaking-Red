@@ -29129,8 +29129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ff9bede834a4f2c8aef759b77c8cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 3
-  maxHealth: 3
+  currentHealth: 30
+  maxHealth: 100
   playerSr: {fileID: 856914895}
   playerMovement: {fileID: 856914892}
 --- !u!114 &856914890

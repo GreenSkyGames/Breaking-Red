@@ -21,12 +21,12 @@ public class PowerUp : MonoBehaviour
         switch (type)
         {
             case itemName.PoisonApple:
-                playerHealth.ChangeHealth(-effectAmount);  // decreases health
+                playerHealth.changeHealth(-effectAmount);  // decreases health
                 Debug.Log("Player health decreased");
                 break;
 
             case itemName.GoldenApple:
-                playerHealth.ChangeHealth(effectAmount);  // increases health
+                playerHealth.changeHealth(effectAmount);  // increases health
                 Debug.Log("Player health increased");
                 break;
             

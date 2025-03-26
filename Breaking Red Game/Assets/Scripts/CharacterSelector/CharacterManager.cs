@@ -1,81 +1,125 @@
+/*
+ * Name:  Mark Eldridge
+ * Role:  Main Character Customization
+ * This file contains the definition for the CharacterManager class.
+ * This class manages the character selection and scene transitions.
+ * It inherits from MonoBehaviour.
+ */
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
-
 
 public class CharacterManager : MonoBehaviour
 {
     public CharacterDatabase characterDB;
     public SpriteRenderer characterSprite;
 
-    private int selectedOption = 0;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private int _selectedOption = 0;
+
+    /*
+     * This function is called before the first frame update.
+     * It initializes the selected character option from PlayerPrefs.
+     */
     void Start()
     {
-        if(!PlayerPrefs.HasKey("selectedOption")){
-            selectedOption = 0;
+        if (!PlayerPrefs.HasKey("selectedOption"))
+        {
+            _selectedOption = 0;
         }
-        else{
-            Load();
+        else
+        {
+            load();
         }
-        UpdateCharacter(selectedOption);
+        updateCharacter(_selectedOption);
     }
 
-    public void NextOption(){
-        // Play the button click
-        AudioManager.instance.Play("ClickSound");
-
-        selectedOption++;
-
-        if(selectedOption >= characterDB.CharacterCount){
-            selectedOption = 0;
-        }
-
-        UpdateCharacter(selectedOption);
-        Save();
-    }
-
-    public void BackOption()
+    /*
+     * This function handles the logic for selecting the next character option.
+     * It increments the selected option, loops back to the first option if necessary,
+     * updates the character, and saves the selection.
+     */
+    public void nextOption()
     {
-        // Play the button click
+        // Play the button click sound
         AudioManager.instance.Play("ClickSound");
 
-        selectedOption--;
+        _selectedOption++;
 
-        if(selectedOption < 0){
-            selectedOption = characterDB.CharacterCount - 1;
+        if (_selectedOption >= characterDB.CharacterCount)
+        {
+            _selectedOption = 0;
         }
 
-        UpdateCharacter(selectedOption);
-        Save();
+        updateCharacter(_selectedOption);
+        save();
     }
 
-    private void UpdateCharacter(int selectedOption){
-        CharacterVariable character = characterDB.GetCharacter(selectedOption);
+    /*
+     * This function handles the logic for selecting the previous character option.
+     * It decrements the selected option, loops back to the last option if necessary,
+     * updates the character, and saves the selection.
+     */
+    public void backOption()
+    {
+        // Play the button click sound
+        AudioManager.instance.Play("ClickSound");
+
+        _selectedOption--;
+
+        if (_selectedOption < 0)
+        {
+            _selectedOption = characterDB.CharacterCount - 1;
+        }
+
+        updateCharacter(_selectedOption);
+        save();
+    }
+
+    /*
+     * This function updates the character sprite based on the selected option.
+     * @param selectedOption The index of the selected character.
+     */
+    private void updateCharacter(int selectedOption)
+    {
+        CharacterVariable character = characterDB.getCharacter(selectedOption);
         characterSprite.sprite = character.characterSprite;
     }
 
-    private void Load()
+    /*
+     * This function loads the selected character option from PlayerPrefs.
+     */
+    private void load()
     {
-        selectedOption = PlayerPrefs.GetInt("selectedOption");
+        _selectedOption = PlayerPrefs.GetInt("selectedOption");
     }
 
-    private void Save()
+    /*
+     * This function saves the selected character option to PlayerPrefs.
+     */
+    private void save()
     {
-        PlayerPrefs.SetInt("selectedOption", selectedOption);
+        PlayerPrefs.SetInt("selectedOption", _selectedOption);
     }
 
-    public void ChangeScene(string sceneID)
+    /*
+     * This function changes the scene.
+     * @param sceneID The name of the scene to load.
+     */
+    public void changeScene(string sceneID)
     {
-        // Play the button click
+        // Play the button click sound
         AudioManager.instance.Play("ClickSound");
         // Fading out the MenuBGM and fading in the CabinBGM
-        StartCoroutine(TransitionToGameScene());
-
+        StartCoroutine(transitionToGameScene());
     }
 
-    private IEnumerator TransitionToGameScene()
+    /*
+     * This coroutine handles the transition to the game scene.
+     * It fades out the menu background music and then loads the game scene.
+     */
+    private IEnumerator transitionToGameScene()
     {
         // Fade out the MenuBGM
         StartCoroutine(AudioManager.instance.FadeOut("MenuBGM", 1.5f));

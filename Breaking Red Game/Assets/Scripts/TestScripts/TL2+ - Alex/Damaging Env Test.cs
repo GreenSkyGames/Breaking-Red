@@ -36,7 +36,7 @@ public class DamagingEnvTest : MonoBehaviour
 
     private IEnumerator RunDamageOverTimeTest()
     {
-        playerHealth.ChangeHealth(100); // Reset player health before testing
+        playerHealth.changeHealth(100); // Reset player health before testing
         Debug.Log("Player health reset to 100.");
 
         // Move player into the testing zone

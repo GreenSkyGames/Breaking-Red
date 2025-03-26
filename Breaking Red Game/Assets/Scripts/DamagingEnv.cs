@@ -17,7 +17,7 @@ public class DamagingEnv : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-damage);
+            collision.gameObject.GetComponent<PlayerHealth>().changeHealth(-damage);
         }        
 
 		if (collision.gameObject.tag != "Player")
@@ -100,7 +100,7 @@ public class DamagingEnv : MonoBehaviour
 
         while (affectedObjs.Contains(player))
         {
-            playerHealth.ChangeHealth(-dmg);
+            playerHealth.changeHealth(-dmg);
 
             yield return new WaitForSeconds(damageInt);
         }

@@ -28,7 +28,7 @@ public class NPCAttack : MonoBehaviour
 
 		if(hits.Length > 0)
 		{
-			hits[0].GetComponent<PlayerHealth>().ChangeHealth(-damage);
+			hits[0].GetComponent<PlayerHealth>().changeHealth(-damage);
             //hits[0].GetComponent<PlayerController>().Knockback(transform, knockbackForce, stunTime);
             
 			// Play attack sound

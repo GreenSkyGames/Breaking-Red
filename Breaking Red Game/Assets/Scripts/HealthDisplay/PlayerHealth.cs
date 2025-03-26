@@ -1,3 +1,12 @@
+/* File Heading Example */
+/*
+ * Name:  Mark Eldridge
+ * Role:   Main Character Customization
+ * This file contains the definition for the PlayerHealth class.
+ * This class manages the player's health.
+ * It inherits from MonoBehaviour.
+ */
+
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -6,15 +15,23 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
 
     public SpriteRenderer playerSr;
-    public PlayerController playerMovement; // Assuming this controls movement
+    public PlayerController playerMovement; // Controls player movement
 
-    void Start()
+    /*
+     * This function is called before the first frame update.
+     * It initializes the player's health.
+     */
+    void start()
     {
         maxHealth = 100;
         currentHealth = maxHealth;
     }
 
-    public void ChangeHealth(int amount)
+    /*
+     * This function changes the player's health by a specified amount.
+     * @param amount The amount to change the player's health by.
+     */
+    public void changeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         //Debug.Log($"Health: {currentHealth}");
@@ -29,16 +46,15 @@ public class PlayerHealth : MonoBehaviour
 
             if (playerMovement != null)
             {
-                playerMovement.enabled = false; //disable the player controller script
+                playerMovement.enabled = false; // Disable player movement
             }
             UnityEditor.EditorApplication.isPlaying = false;
             Debug.Log("Player has died.");
-            // Optionally, you might want to add other game over logic here,
-            // such as displaying a game over screen, triggering events, etc.
+            // Add game over logic here
         }
         else
         {
-            //if you want to re-enable them when gaining health back, add this, or similar logic.
+            // Re-enable if gaining health
             if (playerSr != null && !playerSr.enabled)
             {
                 playerSr.enabled = true;
@@ -51,8 +67,10 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    // Function to re-enable the player (if needed later)
-    public void ReEnablePlayer()
+    /*
+     * This function re-enables the player.
+     */
+    public void reEnablePlayer()
     {
         if (playerSr != null)
         {
