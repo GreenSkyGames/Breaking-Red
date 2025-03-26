@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
-    public GameObject InventoryMenu;
+    public GameObject inventoryMenu;
     private bool menuActivated;
     public ItemSlot[] itemSlot;
 
@@ -22,13 +22,13 @@ public class InventoryManager : MonoBehaviour
         if(menuActivated)
         {
             Time.timeScale = 1;
-            InventoryMenu.SetActive(false);
+            inventoryMenu.SetActive(false);
             menuActivated = false;
         }
         else if(!menuActivated)
         {
             Time.timeScale = 0;
-            InventoryMenu.SetActive(true);
+            inventoryMenu.SetActive(true);
             menuActivated = true;
         }
     }

@@ -10788,7 +10788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f590b2590cf13f4085e98860ba7b768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryMenu: {fileID: 1219515808}
+  inventoryMenu: {fileID: 1219515808}
   itemSlot:
   - {fileID: 2113191244590027748}
   - {fileID: 557241360}
@@ -58649,7 +58649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f590b2590cf13f4085e98860ba7b768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryMenu: {fileID: 1219515808}
+  inventoryMenu: {fileID: 1219515808}
   itemSlot: []
 --- !u!4 &1996931106
 Transform:
