@@ -13,11 +13,11 @@ public class InventoryManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.I))
         {
-            ToggleInventory();
+            toggleInventory();
         }
     }
 
-    private void ToggleInventory()
+    private void toggleInventory()
     {
         if(menuActivated)
         {
@@ -46,20 +46,20 @@ public class InventoryManager : MonoBehaviour
 
     }
 
-    public void AddToInventory(string itemName, Sprite itemSprite)
+    public void addToInventory(string itemName, Sprite itemSprite)
     {
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if(itemSlot[i].isOccupied == false)
             {
-                itemSlot[i].UpdateInventoryUI(itemName, itemSprite);
+                itemSlot[i].updateInventoryUI(itemName, itemSprite);
                 return;
             }
         }
         Debug.Log("Inventory is full!");
     }
 
-    public int GetItemCount()
+    public int getItemCount()
     {
         int count = 0;
 

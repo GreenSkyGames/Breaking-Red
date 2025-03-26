@@ -14,7 +14,7 @@ public class PowerUp : MonoBehaviour
         inventoryManager = InventoryManager.instance;
     }
     // apply effect to the player
-    public void ApplyEffect(PlayerController playerController)
+    public void applyEffect(PlayerController playerController)
     {
         PlayerHealth playerHealth = playerController.GetComponent<PlayerHealth>();
         if(playerHealth == null) return;
@@ -49,7 +49,7 @@ public class PowerUp : MonoBehaviour
             PowerUpManager powerUpManager = other.GetComponent<PowerUpManager>();
             if (powerUpManager != null)
             {
-                powerUpManager.HandlePowerUpInteraction(this, other.GetComponent<PlayerController>());
+                powerUpManager.handlePowerUpInteraction(this, other.GetComponent<PlayerController>());
             }
         }
     }
