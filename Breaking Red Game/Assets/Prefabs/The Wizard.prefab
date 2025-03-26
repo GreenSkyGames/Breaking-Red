@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 474894384310465257}
   - component: {fileID: 6557004135616810693}
   - component: {fileID: 5902025740941328346}
-  - component: {fileID: 61837874751144709}
+  - component: {fileID: 5317714762158171503}
   m_Layer: 7
   m_Name: The Wizard
   m_TagString: TheWizard
@@ -283,7 +283,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &61837874751144709
+--- !u!114 &5317714762158171503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7520109397248299848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
+  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
@@ -305,8 +305,8 @@ MonoBehaviour:
     m_Bits: 64
   myCanvas: {fileID: 0}
   isHostile: 0
-  facingRight: 1
-  enemySR: {fileID: 331571196971580535}
+  facingRight: 0
+  enemySR: {fileID: 0}
   currentHealth: 9
 --- !u!1 &7625330496099179014
 GameObject:

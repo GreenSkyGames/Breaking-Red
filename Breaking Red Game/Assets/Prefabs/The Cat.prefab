@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 529314867518332717}
   - component: {fileID: 2865004416055348020}
   - component: {fileID: 104948869516281668}
-  - component: {fileID: 7222498141633506899}
   - component: {fileID: 4430152414586786346}
   - component: {fileID: 1401320179408736268}
+  - component: {fileID: 5958536976777283597}
   m_Layer: 7
   m_Name: The Cat
   m_TagString: TheCat
@@ -219,31 +219,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.004492442, y: -0.09135692}
   m_Size: {x: 0.3913854, y: 0.5411538}
   m_Direction: 0
---- !u!114 &7222498141633506899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134765855763045823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  attackRange: 1
-  attackCooldown: 1
-  playerDetectRange: 5
-  detectionPoint: {fileID: 6416164032521608940}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  myCanvas: {fileID: 0}
-  isHostile: 0
-  facingRight: 0
-  enemySR: {fileID: 5889827829237335769}
-  currentHealth: 9
 --- !u!114 &4430152414586786346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +252,31 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &5958536976777283597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134765855763045823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  attackRange: 1
+  attackCooldown: 1
+  playerDetectRange: 5
+  detectionPoint: {fileID: 6416164032521608940}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  myCanvas: {fileID: 0}
+  isHostile: 0
+  facingRight: 0
+  enemySR: {fileID: 0}
+  currentHealth: 9
 --- !u!1 &3684297223028477185
 GameObject:
   m_ObjectHideFlags: 0
