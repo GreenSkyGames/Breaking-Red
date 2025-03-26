@@ -23271,7 +23271,7 @@ MonoBehaviour:
   _horGoal: -6
   _vertGoal: 0
   _moveTime: 8
-  tilemap: {fileID: 0}
+  tilemap: {fileID: 1108193309}
 --- !u!50 &675926578
 Rigidbody2D:
   serializedVersion: 5
@@ -28604,9 +28604,9 @@ MonoBehaviour:
   _collisionEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DamagingEnv, Assembly-CSharp
-        m_MethodName: death
+      - m_Target: {fileID: 1142981220}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: scales
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36047,7 +36047,7 @@ MonoBehaviour:
   _horGoal: -6
   _vertGoal: 0
   _moveTime: 8
-  tilemap: {fileID: 0}
+  tilemap: {fileID: 1108193309}
 --- !u!50 &1317520242
 Rigidbody2D:
   serializedVersion: 5
