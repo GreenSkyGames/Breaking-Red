@@ -52,7 +52,7 @@ public class DamagingEnv : MonoBehaviour
         else if(collision.CompareTag("Player") && !affectedObjs.Contains(collision.gameObject)) 
         {
             affectedObjs.Add(collision.gameObject);
-            StartCoroutine(DamageOverTime(collision.gameObject));
+            StartCoroutine(damageOverTime(collision.gameObject));
         }
     }
 
@@ -88,7 +88,7 @@ public class DamagingEnv : MonoBehaviour
     public float damageInt = 1f; // Time between damage ticks
     private HashSet<GameObject> affectedObjs = new HashSet<GameObject>();
 
-    private IEnumerator DamageOverTime(GameObject player)
+    private IEnumerator damageOverTime(GameObject player)
     {
         PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
 

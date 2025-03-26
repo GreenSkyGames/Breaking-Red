@@ -11,10 +11,7 @@ public class PlatformTest : MonoBehaviour
     private Vector3 originalPlatformPos;
     private PlayerHealth playerHealth;
     public Tilemap tilemap;
-    private bool hasPlayerMovedOff = false;
     private float timeOnPlatform = 0f;  // Time the player stays on the platform
-    private float timeMoved = 0f;
-    private float timeToGetOff = 3f;
     private bool hasEnteredPlatform = false;
 
     [SerializeField] private float timeToMoveOff = 8f;  // Time before player is forced off the platform
