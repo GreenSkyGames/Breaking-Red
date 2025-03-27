@@ -19,7 +19,8 @@ public class NPC
 
 
 
-/*
+/* Name: Todd Carter
+ * Role: Team Lead 2 -- Software Architect
  *	This is the script for the NPCManager.
  *	It controls the majority of NPC actions and activities.
  *	This includes combat, swapping animations, and utilizing
