@@ -4,7 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 
-/*
+/* Name: Todd Carter
+ * Role: Team Lead 2 -- Software Architect
+ *
  *	This is the script that handles dialogue events.
  *	This produces a unique class object that contains the data
  *	such as strings for the dialogue to be displayed.

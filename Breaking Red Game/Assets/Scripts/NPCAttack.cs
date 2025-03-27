@@ -1,6 +1,8 @@
 using UnityEngine;
 
-/*
+/* Name: Todd Carter
+ * Role: Team Lead 2 -- Software Architect
+ *
  *	This is the script that handles the NPC's offense attacking.
  *	It takes data from the AttackPoint object that is bound to the NPC,
  *	checks if the player is within that space, and applies damage.

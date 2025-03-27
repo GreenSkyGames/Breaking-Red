@@ -5,7 +5,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-/*
+/* Name: Todd Carter
+ * Role: Team Lead 2 -- Software Architect
+ *
  *	This is the script that handles what is displayed on the dialogue box,
  *	and how the dialogue choice buttons are displayed.
  *

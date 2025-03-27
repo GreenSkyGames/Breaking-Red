@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 
-/*
- * This is the script the connects the NPC with their specific dialogue section in the ink json.
+/* Name: Todd Carter
+ * Role: Team Lead 2 -- Software Architect
+ *
+ *	This is the script the connects the NPC with their specific dialogue section in the ink json.
  *
  * the Knot Name refers to the specific NPC, and is designed to be the same as their tag.
  *
