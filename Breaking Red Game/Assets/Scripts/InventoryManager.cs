@@ -4,9 +4,10 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager sInstance;
     public GameObject inventoryMenu;
     public ItemSlot[] itemSlot;
+    public static InventoryManager sInstance;
+
     private bool menuActivated;
 
     void Update()
@@ -17,33 +18,23 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    private void toggleInventory()
+    // when player collides
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(menuActivated)
+        if (other.CompareTag("Player"))
         {
-            Time.timeScale = 1;
-            inventoryMenu.SetActive(false);
-            menuActivated = false;
-        }
-        else if(!menuActivated)
-        {
-            Time.timeScale = 0;
-            inventoryMenu.SetActive(true);
-            menuActivated = true;
-        }
-    }
+            // play power up sound effect tbd
+            //AudioManager.instance.Play("PowerUpSound");
+            
+            // get powerUp and trigger PowerUpManager to handle the interaction
+            PowerUp powerUp = other.GetComponent<PowerUp>();  
+            PowerUpManager powerUpManager = other.GetComponent<PowerUpManager>();
 
-    private void Awake()
-    {
-        // singleton pattern to ensure one instance of InventoryManager
-        if (sInstance == null)
-        {
-            sInstance = this;
-            DontDestroyOnLoad(this.gameObject);
+            if (powerUpManager != null && powerUp != null)
+            {
+            powerUpManager.handlePowerUpInteraction(powerUp, other.GetComponent<PlayerController>());
+            }
         }
-        else
-            Destroy(gameObject);
-
     }
 
     public void addToInventory(string itemName, Sprite itemSprite)
@@ -74,5 +65,22 @@ public class InventoryManager : MonoBehaviour
 
         return count;
     }   
+
+    private void toggleInventory()
+    {
+        if(menuActivated)
+        {
+            Time.timeScale = 1;
+            inventoryMenu.SetActive(false);
+            menuActivated = false;
+        }
+        else if(!menuActivated)
+        {
+            Time.timeScale = 0;
+            inventoryMenu.SetActive(true);
+            menuActivated = true;
+        }
+    }
 }
+
 

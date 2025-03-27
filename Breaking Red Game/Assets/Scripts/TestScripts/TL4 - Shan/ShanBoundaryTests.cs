@@ -63,7 +63,7 @@ public class ShanBoundaryTests : MonoBehaviour
 
         // apply golden apple (increases health)
         PowerUp goldenApple = new GameObject("GoldenApple").AddComponent<PowerUp>(); // dynamically create PowerUp instance
-        goldenApple.type = PowerUp.itemName.GoldenApple;  // set type to GoldenApple
+        goldenApple.itemType = PowerUp.itemName.GoldenApple;  // set type to GoldenApple
         goldenApple.effectAmount = 5; // set effect amount for health boost
         goldenApple.sprite = null;
 
@@ -91,7 +91,7 @@ public class ShanBoundaryTests : MonoBehaviour
 
         // Create a GoldenApple power-up instance to apply rapidly
         PowerUp goldenApple = new GameObject("GoldenApple").AddComponent<PowerUp>();
-        goldenApple.type = PowerUp.itemName.GoldenApple;
+        goldenApple.itemType = PowerUp.itemName.GoldenApple;
         goldenApple.effectAmount = healthBoostAmount;
         goldenApple.sprite = null;  // No sprite needed for this test
 
