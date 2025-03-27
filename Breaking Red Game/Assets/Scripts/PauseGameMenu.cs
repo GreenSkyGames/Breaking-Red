@@ -1,5 +1,5 @@
-// Liz Beltran 
 // Puase menu script 
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
@@ -10,7 +10,7 @@ using System.Collections.Generic; //
 
 public class PauseGameMenu : MonoBehaviour
 {  
-    public static bool isPaused = false; 
+    public static bool IsPaused = false; 
     // public GameObject pauseMenuUI; 
     public GameObject PauseMenu; // pause menu object to be connected with script 
     public GameObject ResumeButton; 
@@ -19,7 +19,9 @@ public class PauseGameMenu : MonoBehaviour
     private List<AudioSource> allAudioSources = new List<AudioSource>(); // To store all active AudioSources
     private List<bool> audioSourceStates = new List<bool>(); // To store the state, play or pause
 
-    void Start(){
+// Pause menu called => in view, Pause menu uncalled=> not in view 
+    void Start()
+    {
         if (SceneManager.GetActiveScene().name == "PauseMenu")
         {
             PauseMenu.SetActive(true);  // Show menu in PauseMenu scene
@@ -30,10 +32,12 @@ public class PauseGameMenu : MonoBehaviour
         }
         //LoadGame(); COMMENTED OUT FOR GAME TESTING PURPOSES
     }
+
+// How pause menu called, p pressed to either call pause menu or remove it from the screen 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.P)){
-            if (isPaused)
+            if (IsPaused)
             {
                 ResumeGame(); 
             }
@@ -44,7 +48,9 @@ public class PauseGameMenu : MonoBehaviour
         } 
     }
 
-    public void ResumeGame(){
+// When game is resumed ... 
+    public void ResumeGame()
+    {
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 
@@ -53,11 +59,13 @@ public class PauseGameMenu : MonoBehaviour
 
         PauseMenu.SetActive(false); //pause menu goes away 
         Time.timeScale=1f; // resuming the game
-        isPaused = false; //game is not paused
+        IsPaused = false; //game is not paused
         //SceneManager.LoadScene("Level 1");
     }
 
-    void PauseGame(){
+//when game is paused ... 
+    void PauseGame()
+    {
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 
@@ -66,10 +74,11 @@ public class PauseGameMenu : MonoBehaviour
 
         PauseMenu.SetActive(true); //pause menu called 
         Time.timeScale=0f; // pausing the game 
-        isPaused = true; //game is paused
+        IsPaused = true; //game is paused
         //SceneManager.LoadScene("PauseMenu");
     }
 
+// save button on pause menu, save player position 
     public void SaveGame()
     {
         // Play the button click
@@ -91,6 +100,7 @@ public class PauseGameMenu : MonoBehaviour
         }
     }
 
+// load game, previous game state recalled. 
     public void LoadGame()
     {
         // Check if saved data exists
@@ -118,8 +128,9 @@ public class PauseGameMenu : MonoBehaviour
             Debug.Log("No save data to load.");
         }
     }
-
-    public void LoadMenu(){
+// main menu button clicked, function calls the Main menu 
+    public void LoadMenu()
+    {
         // Play the button click
         AudioManager.instance.Play("ClickSound");
         AudioManager.instance.Play("MenuBGM");
@@ -127,7 +138,9 @@ public class PauseGameMenu : MonoBehaviour
         Debug.Log("Loading menu.");
         SceneManager.LoadScene("Start Menu");
     }
-    public void QuitGame(){
+// quit game option clicked. Game quit ... 
+    public void QuitGame()
+    {
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 

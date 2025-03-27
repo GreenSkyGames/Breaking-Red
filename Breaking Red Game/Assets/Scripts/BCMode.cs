@@ -1,4 +1,3 @@
-//Liz Beltran 
 //BC mode script
 
 using System.Runtime.CompilerServices;
@@ -7,24 +6,25 @@ using UnityEngine.UI;
 
 public class BCMODE : MonoBehaviour
 {
- [SerializeField] private Toggle toggle;
- private static BCMODE instance; 
+ [SerializeField] private Toggle _toggle;
+ private static BCMODE _instance; 
 
- void Awake(){
-    if(instance == null){
-        instance = this; 
-        DontDestroyOnLoad(toggle); //prevent from being destroyed when scenes swtich 
+ void Awake()
+ {
+    if(_instance == null){
+        _instance = this; 
+        DontDestroyOnLoad(_toggle); //prevent from being destroyed when scenes swtich 
     }else{
-        Destroy(toggle); //only one instance exists
+        Destroy(_toggle); //only one instance exists
     }
  }
 
  void Start()
  {
-    if(toggle == null)
+    if(_toggle == null)
     {
-        toggle = GetComponent<Toggle>();
-        if(toggle == null)
+        _toggle = GetComponent<Toggle>();
+        if(_toggle == null)
         {
             Debug.LogError("Toggle component not found");
         }
@@ -32,11 +32,12 @@ public class BCMODE : MonoBehaviour
 
     bool savedState = PlayerPrefs.GetInt("BCMode", 0) == 1;
 
-    toggle.isOn = savedState;
+    _toggle.isOn = savedState;
 
-    toggle.onValueChanged.AddListener(OnToggleValueChanged);
+    _toggle.onValueChanged.AddListener(OnToggleValueChanged);
  }
 
+// When the BC togglge is enabled, making sure that the choice is saved for the rest of the game 
  public void OnToggleValueChanged(bool isON)
  {
     // Play the button click

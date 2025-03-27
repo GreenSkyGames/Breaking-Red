@@ -1,4 +1,3 @@
-// Liz Beltran 
 // main menu script 
 
 using UnityEngine.SceneManagement; //to switch scenes 
@@ -14,14 +13,16 @@ public class MainMenu : MonoBehaviour
     public GameObject QuitButton;
     public GameObject StartButton;
 
+// calling the main menu. 
     public void LoadMenu()
     {
         Debug.Log("Loading menu.");
         SceneManager.LoadScene("Start Menu");
     }
 
+// Player decides to resume a previous game 
     public void StartGame()
-    { //when player resumes a previous game 
+    { 
         Debug.Log("Starting a new game");
 
         // Play the button click
@@ -29,6 +30,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("CharacterSelector");
     }
 
+// Player decides to Quit the game 
     public void QuitGame()
     {
         Debug.Log("Quitting game.");
