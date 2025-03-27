@@ -1,12 +1,12 @@
+using Ink.Parsed;
+using UnityEngine;
+
 /*
 * Name: Hengyi Tian
 * Role: TL5-- AI Specialist
 * This file contains the definition for the EnvironmentManager class.
 * It inherits from MonoBehaviour.
 */
-
-using Ink.Parsed;
-using UnityEngine;
 
 // Provides a virtual method that can be overridden to return a random weather condition.
 public class Weather
