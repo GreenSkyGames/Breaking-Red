@@ -11,10 +11,7 @@ public class PlatformTest : MonoBehaviour
     private Vector3 originalPlatformPos;
     private PlayerHealth playerHealth;
     public Tilemap tilemap;
-    private bool hasPlayerMovedOff = false;
     private float timeOnPlatform = 0f;  // Time the player stays on the platform
-    private float timeMoved = 0f;
-    private float timeToGetOff = 3f;
     private bool hasEnteredPlatform = false;
 
     [SerializeField] private float timeToMoveOff = 8f;  // Time before player is forced off the platform
@@ -53,7 +50,7 @@ public class PlatformTest : MonoBehaviour
             Debug.Log("Layer turned off");
         }
         // Reset player health and position
-        playerHealth.ChangeHealth(100); // Reset health before test
+        playerHealth.changeHealth(100); // Reset health before test
         player.transform.position = platform.transform.position + new Vector3(0, 0, 0); // Spawn player on top of the platform
         Debug.Log("Player spawned on platform at start position.");
 

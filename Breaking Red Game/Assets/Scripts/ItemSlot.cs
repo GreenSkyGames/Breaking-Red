@@ -11,7 +11,7 @@ public class ItemSlot : MonoBehaviour
     //item slot
     [SerializeField] private Image itemImage;
     
-    public void UpdateInventoryUI(string itemName, Sprite itemSprite)
+    public void updateInventoryUI(string itemName, Sprite itemSprite)
     {
         this.itemName = itemName;
         this.itemSprite = itemSprite;

@@ -1090,7 +1090,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -1125,10 +1125,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1208,10 +1208,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 3393
-        width: 32
-        height: 48
+        x: 0
+        y: 3392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1230,10 +1230,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_1
       rect:
         serializedVersion: 2
-        x: 81
-        y: 3393
-        width: 30
-        height: 48
+        x: 64
+        y: 3392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1252,10 +1252,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_2
       rect:
         serializedVersion: 2
-        x: 145
-        y: 3393
-        width: 30
-        height: 48
+        x: 128
+        y: 3392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1274,10 +1274,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_3
       rect:
         serializedVersion: 2
-        x: 205
-        y: 3393
-        width: 38
-        height: 48
+        x: 192
+        y: 3392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1296,10 +1296,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_4
       rect:
         serializedVersion: 2
-        x: 262
-        y: 3393
-        width: 52
-        height: 48
+        x: 256
+        y: 3392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1318,10 +1318,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_5
       rect:
         serializedVersion: 2
-        x: 327
-        y: 3393
-        width: 50
-        height: 48
+        x: 320
+        y: 3392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1340,10 +1340,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_6
       rect:
         serializedVersion: 2
-        x: 397
-        y: 3393
-        width: 38
-        height: 48
+        x: 384
+        y: 3392
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1362,10 +1362,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_7
       rect:
         serializedVersion: 2
-        x: 22
-        y: 3329
-        width: 25
-        height: 49
+        x: 0
+        y: 3328
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1384,10 +1384,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_8
       rect:
         serializedVersion: 2
-        x: 84
-        y: 3329
-        width: 27
-        height: 49
+        x: 64
+        y: 3328
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1406,10 +1406,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_9
       rect:
         serializedVersion: 2
-        x: 149
-        y: 3329
-        width: 26
-        height: 49
+        x: 128
+        y: 3328
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1428,10 +1428,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_10
       rect:
         serializedVersion: 2
-        x: 211
-        y: 3329
-        width: 28
-        height: 49
+        x: 192
+        y: 3328
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1450,10 +1450,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_11
       rect:
         serializedVersion: 2
-        x: 273
-        y: 3329
-        width: 35
-        height: 49
+        x: 256
+        y: 3328
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1472,10 +1472,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_12
       rect:
         serializedVersion: 2
-        x: 337
-        y: 3329
-        width: 35
-        height: 49
+        x: 320
+        y: 3328
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1494,10 +1494,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_13
       rect:
         serializedVersion: 2
-        x: 403
-        y: 3329
-        width: 30
-        height: 49
+        x: 384
+        y: 3328
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1516,10 +1516,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_14
       rect:
         serializedVersion: 2
-        x: 16
-        y: 3265
-        width: 32
-        height: 49
+        x: 0
+        y: 3264
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1538,10 +1538,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_15
       rect:
         serializedVersion: 2
-        x: 80
-        y: 3265
-        width: 32
-        height: 49
+        x: 64
+        y: 3264
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1560,10 +1560,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_16
       rect:
         serializedVersion: 2
-        x: 145
-        y: 3265
-        width: 30
-        height: 49
+        x: 128
+        y: 3264
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1582,10 +1582,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_17
       rect:
         serializedVersion: 2
-        x: 205
-        y: 3265
-        width: 38
-        height: 49
+        x: 192
+        y: 3264
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1604,10 +1604,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_18
       rect:
         serializedVersion: 2
-        x: 262
-        y: 3265
-        width: 52
-        height: 49
+        x: 256
+        y: 3264
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1626,10 +1626,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_19
       rect:
         serializedVersion: 2
-        x: 327
-        y: 3265
-        width: 50
-        height: 49
+        x: 320
+        y: 3264
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1648,10 +1648,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_20
       rect:
         serializedVersion: 2
-        x: 398
-        y: 3265
-        width: 36
-        height: 49
+        x: 384
+        y: 3264
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1670,10 +1670,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_21
       rect:
         serializedVersion: 2
-        x: 17
-        y: 3201
-        width: 25
-        height: 49
+        x: 0
+        y: 3200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1692,10 +1692,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_22
       rect:
         serializedVersion: 2
-        x: 81
-        y: 3201
-        width: 27
-        height: 49
+        x: 64
+        y: 3200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1714,10 +1714,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_23
       rect:
         serializedVersion: 2
-        x: 145
-        y: 3201
-        width: 26
-        height: 49
+        x: 128
+        y: 3200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1736,10 +1736,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_24
       rect:
         serializedVersion: 2
-        x: 209
-        y: 3201
-        width: 28
-        height: 49
+        x: 192
+        y: 3200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1758,10 +1758,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_25
       rect:
         serializedVersion: 2
-        x: 268
-        y: 3201
-        width: 35
-        height: 49
+        x: 256
+        y: 3200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1780,10 +1780,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_26
       rect:
         serializedVersion: 2
-        x: 332
-        y: 3201
-        width: 35
-        height: 49
+        x: 320
+        y: 3200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1802,10 +1802,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_27
       rect:
         serializedVersion: 2
-        x: 399
-        y: 3201
-        width: 30
-        height: 49
+        x: 384
+        y: 3200
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1824,10 +1824,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_28
       rect:
         serializedVersion: 2
-        x: 16
-        y: 3137
-        width: 32
-        height: 48
+        x: 0
+        y: 3136
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1846,10 +1846,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_29
       rect:
         serializedVersion: 2
-        x: 83
-        y: 3135
-        width: 28
-        height: 49
+        x: 64
+        y: 3136
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1868,10 +1868,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_30
       rect:
         serializedVersion: 2
-        x: 149
-        y: 3135
-        width: 24
-        height: 50
+        x: 128
+        y: 3136
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1890,10 +1890,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_31
       rect:
         serializedVersion: 2
-        x: 213
-        y: 3135
-        width: 24
-        height: 50
+        x: 192
+        y: 3136
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1912,10 +1912,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_32
       rect:
         serializedVersion: 2
-        x: 278
-        y: 3135
-        width: 24
-        height: 49
+        x: 256
+        y: 3136
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1934,10 +1934,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_33
       rect:
         serializedVersion: 2
-        x: 342
-        y: 3135
-        width: 24
-        height: 49
+        x: 320
+        y: 3136
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1956,10 +1956,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_34
       rect:
         serializedVersion: 2
-        x: 406
-        y: 3135
-        width: 24
-        height: 49
+        x: 384
+        y: 3136
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1978,10 +1978,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_35
       rect:
         serializedVersion: 2
-        x: 469
-        y: 3135
-        width: 24
-        height: 50
+        x: 448
+        y: 3136
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2000,10 +2000,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_36
       rect:
         serializedVersion: 2
-        x: 22
-        y: 3073
-        width: 25
-        height: 49
+        x: 0
+        y: 3072
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2022,10 +2022,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_37
       rect:
         serializedVersion: 2
-        x: 82
-        y: 3073
-        width: 29
-        height: 49
+        x: 64
+        y: 3072
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2044,10 +2044,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_38
       rect:
         serializedVersion: 2
-        x: 146
-        y: 3073
-        width: 29
-        height: 49
+        x: 128
+        y: 3072
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2066,10 +2066,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_39
       rect:
         serializedVersion: 2
-        x: 213
-        y: 3073
-        width: 27
-        height: 49
+        x: 192
+        y: 3072
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2088,10 +2088,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_40
       rect:
         serializedVersion: 2
-        x: 270
-        y: 3073
-        width: 31
-        height: 49
+        x: 256
+        y: 3072
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2110,10 +2110,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_41
       rect:
         serializedVersion: 2
-        x: 331
-        y: 3073
-        width: 34
-        height: 49
+        x: 320
+        y: 3072
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2132,10 +2132,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_42
       rect:
         serializedVersion: 2
-        x: 398
-        y: 3073
-        width: 31
-        height: 49
+        x: 384
+        y: 3072
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2154,10 +2154,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_43
       rect:
         serializedVersion: 2
-        x: 469
-        y: 3073
-        width: 27
-        height: 49
+        x: 448
+        y: 3072
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2176,10 +2176,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_44
       rect:
         serializedVersion: 2
-        x: 16
-        y: 3009
-        width: 32
-        height: 49
+        x: 0
+        y: 3008
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2198,10 +2198,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_45
       rect:
         serializedVersion: 2
-        x: 82
-        y: 3010
-        width: 26
-        height: 48
+        x: 64
+        y: 3008
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2220,10 +2220,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_46
       rect:
         serializedVersion: 2
-        x: 148
-        y: 3010
-        width: 24
-        height: 48
+        x: 128
+        y: 3008
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2242,10 +2242,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_47
       rect:
         serializedVersion: 2
-        x: 209
-        y: 3010
-        width: 27
-        height: 48
+        x: 192
+        y: 3008
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2264,10 +2264,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_48
       rect:
         serializedVersion: 2
-        x: 276
-        y: 3010
-        width: 24
-        height: 47
+        x: 256
+        y: 3008
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2286,10 +2286,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_49
       rect:
         serializedVersion: 2
-        x: 340
-        y: 3010
-        width: 24
-        height: 47
+        x: 320
+        y: 3008
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2308,10 +2308,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_50
       rect:
         serializedVersion: 2
-        x: 404
-        y: 3010
-        width: 24
-        height: 47
+        x: 384
+        y: 3008
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2330,10 +2330,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_51
       rect:
         serializedVersion: 2
-        x: 465
-        y: 3010
-        width: 27
-        height: 48
+        x: 448
+        y: 3008
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2352,10 +2352,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_52
       rect:
         serializedVersion: 2
-        x: 17
-        y: 2945
-        width: 25
-        height: 49
+        x: 0
+        y: 2944
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2374,10 +2374,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_53
       rect:
         serializedVersion: 2
-        x: 81
-        y: 2945
-        width: 29
-        height: 49
+        x: 64
+        y: 2944
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2396,10 +2396,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_54
       rect:
         serializedVersion: 2
-        x: 145
-        y: 2945
-        width: 29
-        height: 49
+        x: 128
+        y: 2944
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2418,10 +2418,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_55
       rect:
         serializedVersion: 2
-        x: 208
-        y: 2945
-        width: 27
-        height: 49
+        x: 192
+        y: 2944
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2440,10 +2440,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_56
       rect:
         serializedVersion: 2
-        x: 275
-        y: 2945
-        width: 31
-        height: 49
+        x: 256
+        y: 2944
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2462,10 +2462,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_57
       rect:
         serializedVersion: 2
-        x: 339
-        y: 2945
-        width: 34
-        height: 49
+        x: 320
+        y: 2944
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2484,10 +2484,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_58
       rect:
         serializedVersion: 2
-        x: 403
-        y: 2945
-        width: 31
-        height: 49
+        x: 384
+        y: 2944
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2506,10 +2506,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_59
       rect:
         serializedVersion: 2
-        x: 464
-        y: 2945
-        width: 27
-        height: 49
+        x: 448
+        y: 2944
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2528,10 +2528,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_60
       rect:
         serializedVersion: 2
-        x: 16
-        y: 2882
-        width: 32
-        height: 48
+        x: 0
+        y: 2880
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2550,10 +2550,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_61
       rect:
         serializedVersion: 2
-        x: 80
-        y: 2882
-        width: 32
-        height: 48
+        x: 64
+        y: 2880
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2572,10 +2572,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_62
       rect:
         serializedVersion: 2
-        x: 144
-        y: 2881
-        width: 32
-        height: 49
+        x: 128
+        y: 2880
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2594,10 +2594,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_63
       rect:
         serializedVersion: 2
-        x: 208
+        x: 192
         y: 2880
-        width: 31
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2616,10 +2616,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_64
       rect:
         serializedVersion: 2
-        x: 272
-        y: 2881
-        width: 32
-        height: 49
+        x: 256
+        y: 2880
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2638,10 +2638,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_65
       rect:
         serializedVersion: 2
-        x: 336
-        y: 2882
-        width: 32
-        height: 48
+        x: 320
+        y: 2880
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2660,10 +2660,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_66
       rect:
         serializedVersion: 2
-        x: 400
-        y: 2881
-        width: 32
-        height: 49
+        x: 384
+        y: 2880
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2682,10 +2682,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_67
       rect:
         serializedVersion: 2
-        x: 465
+        x: 448
         y: 2880
-        width: 31
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2704,10 +2704,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_68
       rect:
         serializedVersion: 2
-        x: 528
-        y: 2881
-        width: 32
-        height: 49
+        x: 512
+        y: 2880
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2726,10 +2726,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_69
       rect:
         serializedVersion: 2
-        x: 22
-        y: 2817
-        width: 25
-        height: 49
+        x: 0
+        y: 2816
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2748,10 +2748,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_70
       rect:
         serializedVersion: 2
-        x: 82
-        y: 2817
-        width: 29
-        height: 48
+        x: 64
+        y: 2816
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2770,10 +2770,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_71
       rect:
         serializedVersion: 2
-        x: 148
-        y: 2818
-        width: 27
-        height: 48
+        x: 128
+        y: 2816
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2792,10 +2792,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_72
       rect:
         serializedVersion: 2
-        x: 214
-        y: 2818
-        width: 25
-        height: 48
+        x: 192
+        y: 2816
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2814,10 +2814,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_73
       rect:
         serializedVersion: 2
-        x: 277
-        y: 2817
-        width: 26
-        height: 49
+        x: 256
+        y: 2816
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2836,10 +2836,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_74
       rect:
         serializedVersion: 2
-        x: 339
-        y: 2817
-        width: 30
-        height: 48
+        x: 320
+        y: 2816
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2858,10 +2858,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_75
       rect:
         serializedVersion: 2
-        x: 406
-        y: 2817
-        width: 25
-        height: 49
+        x: 384
+        y: 2816
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2880,10 +2880,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_76
       rect:
         serializedVersion: 2
-        x: 470
-        y: 2817
-        width: 25
-        height: 49
+        x: 448
+        y: 2816
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2902,10 +2902,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_77
       rect:
         serializedVersion: 2
-        x: 534
-        y: 2817
-        width: 25
-        height: 49
+        x: 512
+        y: 2816
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2924,10 +2924,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_78
       rect:
         serializedVersion: 2
-        x: 16
-        y: 2753
-        width: 32
-        height: 49
+        x: 0
+        y: 2752
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2946,10 +2946,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_79
       rect:
         serializedVersion: 2
-        x: 80
-        y: 2753
-        width: 32
-        height: 49
+        x: 64
+        y: 2752
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2968,10 +2968,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_80
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 2752
-        width: 32
-        height: 50
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2990,10 +2990,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_81
       rect:
         serializedVersion: 2
-        x: 209
+        x: 192
         y: 2752
-        width: 31
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3012,10 +3012,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_82
       rect:
         serializedVersion: 2
-        x: 272
+        x: 256
         y: 2752
-        width: 32
-        height: 50
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3034,10 +3034,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_83
       rect:
         serializedVersion: 2
-        x: 336
-        y: 2753
-        width: 32
-        height: 49
+        x: 320
+        y: 2752
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3056,10 +3056,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_84
       rect:
         serializedVersion: 2
-        x: 400
+        x: 384
         y: 2752
-        width: 32
-        height: 50
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3078,10 +3078,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_85
       rect:
         serializedVersion: 2
-        x: 464
+        x: 448
         y: 2752
-        width: 31
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3100,10 +3100,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_86
       rect:
         serializedVersion: 2
-        x: 528
+        x: 512
         y: 2752
-        width: 32
-        height: 50
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3122,10 +3122,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_87
       rect:
         serializedVersion: 2
-        x: 17
-        y: 2689
-        width: 25
-        height: 49
+        x: 0
+        y: 2688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3144,10 +3144,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_88
       rect:
         serializedVersion: 2
-        x: 81
-        y: 2689
-        width: 29
-        height: 48
+        x: 64
+        y: 2688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3166,10 +3166,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_89
       rect:
         serializedVersion: 2
-        x: 145
-        y: 2690
-        width: 27
-        height: 48
+        x: 128
+        y: 2688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3188,10 +3188,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_90
       rect:
         serializedVersion: 2
-        x: 209
-        y: 2690
-        width: 25
-        height: 48
+        x: 192
+        y: 2688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3210,10 +3210,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_91
       rect:
         serializedVersion: 2
-        x: 273
-        y: 2689
-        width: 26
-        height: 49
+        x: 256
+        y: 2688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3232,10 +3232,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_92
       rect:
         serializedVersion: 2
-        x: 335
-        y: 2689
-        width: 30
-        height: 48
+        x: 320
+        y: 2688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3254,10 +3254,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_93
       rect:
         serializedVersion: 2
-        x: 401
-        y: 2689
-        width: 25
-        height: 49
+        x: 384
+        y: 2688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3276,10 +3276,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_94
       rect:
         serializedVersion: 2
-        x: 465
-        y: 2689
-        width: 25
-        height: 49
+        x: 448
+        y: 2688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3298,10 +3298,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_95
       rect:
         serializedVersion: 2
-        x: 529
-        y: 2689
-        width: 25
-        height: 49
+        x: 512
+        y: 2688
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3320,10 +3320,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_96
       rect:
         serializedVersion: 2
-        x: 16
-        y: 2625
-        width: 32
-        height: 48
+        x: 0
+        y: 2624
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3342,10 +3342,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_97
       rect:
         serializedVersion: 2
-        x: 82
+        x: 64
         y: 2624
-        width: 28
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3364,10 +3364,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_98
       rect:
         serializedVersion: 2
-        x: 147
+        x: 128
         y: 2624
-        width: 27
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3386,10 +3386,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_99
       rect:
         serializedVersion: 2
-        x: 210
+        x: 192
         y: 2624
-        width: 29
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3408,10 +3408,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_100
       rect:
         serializedVersion: 2
-        x: 273
+        x: 256
         y: 2624
-        width: 38
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3430,10 +3430,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_101
       rect:
         serializedVersion: 2
-        x: 337
+        x: 320
         y: 2624
-        width: 41
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3452,10 +3452,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_102
       rect:
         serializedVersion: 2
-        x: 22
-        y: 2561
-        width: 25
-        height: 49
+        x: 0
+        y: 2560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3474,10 +3474,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_103
       rect:
         serializedVersion: 2
-        x: 80
-        y: 2561
-        width: 29
-        height: 47
+        x: 64
+        y: 2560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3496,10 +3496,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_104
       rect:
         serializedVersion: 2
-        x: 147
-        y: 2561
-        width: 26
-        height: 49
+        x: 128
+        y: 2560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3518,10 +3518,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_105
       rect:
         serializedVersion: 2
-        x: 202
-        y: 2561
-        width: 36
-        height: 49
+        x: 192
+        y: 2560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3540,10 +3540,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_106
       rect:
         serializedVersion: 2
-        x: 263
-        y: 2561
-        width: 38
-        height: 49
+        x: 256
+        y: 2560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3562,10 +3562,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_107
       rect:
         serializedVersion: 2
-        x: 330
-        y: 2561
-        width: 35
-        height: 49
+        x: 320
+        y: 2560
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3584,10 +3584,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_108
       rect:
         serializedVersion: 2
-        x: 16
-        y: 2497
-        width: 32
-        height: 49
+        x: 0
+        y: 2496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3606,10 +3606,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_109
       rect:
         serializedVersion: 2
-        x: 82
-        y: 2497
-        width: 28
-        height: 49
+        x: 64
+        y: 2496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3628,10 +3628,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_110
       rect:
         serializedVersion: 2
-        x: 146
-        y: 2497
-        width: 28
-        height: 47
+        x: 128
+        y: 2496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3650,10 +3650,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_111
       rect:
         serializedVersion: 2
-        x: 211
-        y: 2497
-        width: 28
-        height: 48
+        x: 192
+        y: 2496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3672,10 +3672,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_112
       rect:
         serializedVersion: 2
-        x: 275
-        y: 2497
-        width: 37
-        height: 49
+        x: 256
+        y: 2496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3694,10 +3694,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_113
       rect:
         serializedVersion: 2
-        x: 338
-        y: 2497
-        width: 41
-        height: 49
+        x: 320
+        y: 2496
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3716,10 +3716,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_114
       rect:
         serializedVersion: 2
-        x: 17
-        y: 2433
-        width: 25
-        height: 49
+        x: 0
+        y: 2432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3738,10 +3738,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_115
       rect:
         serializedVersion: 2
-        x: 83
-        y: 2433
-        width: 29
-        height: 47
+        x: 64
+        y: 2432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3760,10 +3760,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_116
       rect:
         serializedVersion: 2
-        x: 147
-        y: 2433
-        width: 26
-        height: 49
+        x: 128
+        y: 2432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3782,10 +3782,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_117
       rect:
         serializedVersion: 2
-        x: 210
-        y: 2433
-        width: 36
-        height: 49
+        x: 192
+        y: 2432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3804,10 +3804,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_118
       rect:
         serializedVersion: 2
-        x: 275
-        y: 2433
-        width: 38
-        height: 49
+        x: 256
+        y: 2432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3826,10 +3826,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_119
       rect:
         serializedVersion: 2
-        x: 339
-        y: 2433
-        width: 35
-        height: 49
+        x: 320
+        y: 2432
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3848,10 +3848,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_120
       rect:
         serializedVersion: 2
-        x: 15
-        y: 2369
-        width: 32
-        height: 48
+        x: 0
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3870,10 +3870,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_121
       rect:
         serializedVersion: 2
-        x: 82
-        y: 2367
-        width: 28
-        height: 49
+        x: 64
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3892,10 +3892,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_122
       rect:
         serializedVersion: 2
-        x: 148
-        y: 2367
-        width: 24
-        height: 50
+        x: 128
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3914,10 +3914,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_123
       rect:
         serializedVersion: 2
-        x: 211
-        y: 2367
-        width: 24
-        height: 50
+        x: 192
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3936,10 +3936,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_124
       rect:
         serializedVersion: 2
-        x: 275
-        y: 2367
-        width: 29
-        height: 50
+        x: 256
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3958,10 +3958,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_125
       rect:
         serializedVersion: 2
-        x: 339
-        y: 2367
-        width: 27
-        height: 50
+        x: 320
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3980,10 +3980,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_126
       rect:
         serializedVersion: 2
-        x: 403
-        y: 2367
-        width: 28
-        height: 50
+        x: 384
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4002,10 +4002,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_127
       rect:
         serializedVersion: 2
-        x: 467
-        y: 2367
-        width: 29
-        height: 50
+        x: 448
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4024,10 +4024,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_128
       rect:
         serializedVersion: 2
-        x: 531
-        y: 2367
-        width: 30
-        height: 50
+        x: 512
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4046,10 +4046,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_129
       rect:
         serializedVersion: 2
-        x: 595
-        y: 2367
-        width: 29
-        height: 50
+        x: 576
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4068,10 +4068,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_130
       rect:
         serializedVersion: 2
-        x: 659
-        y: 2367
-        width: 24
-        height: 50
+        x: 640
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4090,10 +4090,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_131
       rect:
         serializedVersion: 2
-        x: 723
-        y: 2367
-        width: 24
-        height: 50
+        x: 704
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4112,10 +4112,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_132
       rect:
         serializedVersion: 2
-        x: 787
-        y: 2367
-        width: 24
-        height: 50
+        x: 768
+        y: 2368
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4134,10 +4134,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_133
       rect:
         serializedVersion: 2
-        x: 23
-        y: 2305
-        width: 25
-        height: 49
+        x: 0
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4156,10 +4156,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_134
       rect:
         serializedVersion: 2
-        x: 83
-        y: 2305
-        width: 29
-        height: 49
+        x: 64
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4178,10 +4178,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_135
       rect:
         serializedVersion: 2
-        x: 142
-        y: 2305
-        width: 34
-        height: 49
+        x: 128
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4200,10 +4200,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_136
       rect:
         serializedVersion: 2
-        x: 204
-        y: 2305
-        width: 37
-        height: 49
+        x: 192
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4222,10 +4222,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_137
       rect:
         serializedVersion: 2
-        x: 268
-        y: 2305
-        width: 37
-        height: 49
+        x: 256
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4244,10 +4244,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_138
       rect:
         serializedVersion: 2
-        x: 331
-        y: 2305
-        width: 37
-        height: 49
+        x: 320
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4266,10 +4266,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_139
       rect:
         serializedVersion: 2
-        x: 395
-        y: 2305
-        width: 37
-        height: 49
+        x: 384
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4288,10 +4288,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_140
       rect:
         serializedVersion: 2
-        x: 460
-        y: 2305
-        width: 38
-        height: 49
+        x: 448
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4310,10 +4310,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_141
       rect:
         serializedVersion: 2
-        x: 524
-        y: 2305
-        width: 40
-        height: 49
+        x: 512
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4332,10 +4332,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_142
       rect:
         serializedVersion: 2
-        x: 588
-        y: 2305
-        width: 37
-        height: 49
+        x: 576
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4354,10 +4354,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_143
       rect:
         serializedVersion: 2
-        x: 652
-        y: 2305
-        width: 36
-        height: 49
+        x: 640
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4376,10 +4376,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_144
       rect:
         serializedVersion: 2
-        x: 716
-        y: 2305
-        width: 36
-        height: 49
+        x: 704
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4398,10 +4398,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_145
       rect:
         serializedVersion: 2
-        x: 780
-        y: 2305
-        width: 36
-        height: 49
+        x: 768
+        y: 2304
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4420,10 +4420,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_146
       rect:
         serializedVersion: 2
-        x: 15
-        y: 2241
-        width: 32
-        height: 49
+        x: 0
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4442,10 +4442,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_147
       rect:
         serializedVersion: 2
-        x: 81
-        y: 2242
-        width: 27
-        height: 48
+        x: 64
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4464,10 +4464,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_148
       rect:
         serializedVersion: 2
-        x: 145
-        y: 2242
-        width: 26
-        height: 48
+        x: 128
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4486,10 +4486,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_149
       rect:
         serializedVersion: 2
-        x: 209
-        y: 2241
-        width: 26
-        height: 49
+        x: 192
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4508,10 +4508,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_150
       rect:
         serializedVersion: 2
-        x: 274
-        y: 2241
-        width: 25
-        height: 49
+        x: 256
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4530,10 +4530,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_151
       rect:
         serializedVersion: 2
-        x: 338
-        y: 2241
-        width: 25
-        height: 49
+        x: 320
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4552,10 +4552,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_152
       rect:
         serializedVersion: 2
-        x: 402
-        y: 2241
-        width: 25
-        height: 49
+        x: 384
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4574,10 +4574,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_153
       rect:
         serializedVersion: 2
-        x: 465
-        y: 2241
-        width: 26
-        height: 49
+        x: 448
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4596,10 +4596,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_154
       rect:
         serializedVersion: 2
-        x: 529
-        y: 2241
-        width: 26
-        height: 49
+        x: 512
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4618,10 +4618,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_155
       rect:
         serializedVersion: 2
-        x: 594
-        y: 2241
-        width: 25
-        height: 49
+        x: 576
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4640,10 +4640,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_156
       rect:
         serializedVersion: 2
-        x: 657
-        y: 2241
-        width: 26
-        height: 49
+        x: 640
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4662,10 +4662,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_157
       rect:
         serializedVersion: 2
-        x: 723
-        y: 2241
-        width: 24
-        height: 49
+        x: 704
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4684,10 +4684,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_158
       rect:
         serializedVersion: 2
-        x: 785
-        y: 2241
-        width: 26
-        height: 49
+        x: 768
+        y: 2240
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4706,10 +4706,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_159
       rect:
         serializedVersion: 2
-        x: 16
-        y: 2177
-        width: 25
-        height: 49
+        x: 0
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4728,10 +4728,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_160
       rect:
         serializedVersion: 2
-        x: 80
-        y: 2177
-        width: 29
-        height: 49
+        x: 64
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4750,10 +4750,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_161
       rect:
         serializedVersion: 2
-        x: 144
-        y: 2177
-        width: 34
-        height: 49
+        x: 128
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4772,10 +4772,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_162
       rect:
         serializedVersion: 2
-        x: 207
-        y: 2177
-        width: 37
-        height: 49
+        x: 192
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4794,10 +4794,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_163
       rect:
         serializedVersion: 2
-        x: 271
-        y: 2177
-        width: 37
-        height: 49
+        x: 256
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4816,10 +4816,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_164
       rect:
         serializedVersion: 2
-        x: 336
-        y: 2177
-        width: 37
-        height: 49
+        x: 320
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4838,10 +4838,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_165
       rect:
         serializedVersion: 2
-        x: 400
-        y: 2177
-        width: 37
-        height: 49
+        x: 384
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4860,10 +4860,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_166
       rect:
         serializedVersion: 2
-        x: 462
-        y: 2177
-        width: 38
-        height: 49
+        x: 448
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4882,10 +4882,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_167
       rect:
         serializedVersion: 2
-        x: 524
-        y: 2177
-        width: 40
-        height: 49
+        x: 512
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4904,10 +4904,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_168
       rect:
         serializedVersion: 2
-        x: 591
-        y: 2177
-        width: 37
-        height: 49
+        x: 576
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4926,10 +4926,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_169
       rect:
         serializedVersion: 2
-        x: 656
-        y: 2177
-        width: 36
-        height: 49
+        x: 640
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4948,10 +4948,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_170
       rect:
         serializedVersion: 2
-        x: 720
-        y: 2177
-        width: 36
-        height: 49
+        x: 704
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4970,10 +4970,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_171
       rect:
         serializedVersion: 2
-        x: 784
-        y: 2177
-        width: 36
-        height: 49
+        x: 768
+        y: 2176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4992,10 +4992,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_172
       rect:
         serializedVersion: 2
-        x: 16
-        y: 2113
-        width: 32
-        height: 49
+        x: 0
+        y: 2112
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5014,10 +5014,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_173
       rect:
         serializedVersion: 2
-        x: 81
-        y: 2113
-        width: 33
-        height: 48
+        x: 64
+        y: 2112
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5036,10 +5036,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_174
       rect:
         serializedVersion: 2
-        x: 146
-        y: 2113
-        width: 32
-        height: 41
+        x: 128
+        y: 2112
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5058,10 +5058,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_175
       rect:
         serializedVersion: 2
-        x: 210
-        y: 2114
-        width: 32
-        height: 36
+        x: 192
+        y: 2112
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5080,10 +5080,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_176
       rect:
         serializedVersion: 2
-        x: 274
-        y: 2114
-        width: 33
-        height: 33
+        x: 256
+        y: 2112
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5102,10 +5102,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_177
       rect:
         serializedVersion: 2
-        x: 337
+        x: 320
         y: 2112
-        width: 36
-        height: 37
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5124,10 +5124,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_178
       rect:
         serializedVersion: 2
-        x: 19
-        y: 2050
-        width: 28
-        height: 51
+        x: 0
+        y: 2048
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5146,10 +5146,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_179
       rect:
         serializedVersion: 2
-        x: 83
-        y: 2049
-        width: 28
-        height: 51
+        x: 64
+        y: 2048
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5168,10 +5168,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_180
       rect:
         serializedVersion: 2
-        x: 145
-        y: 2053
-        width: 29
-        height: 49
+        x: 128
+        y: 2048
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5190,10 +5190,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_181
       rect:
         serializedVersion: 2
-        x: 209
-        y: 2050
-        width: 28
-        height: 51
+        x: 192
+        y: 2048
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5212,10 +5212,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_182
       rect:
         serializedVersion: 2
-        x: 273
-        y: 2049
-        width: 28
-        height: 51
+        x: 256
+        y: 2048
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5234,10 +5234,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_183
       rect:
         serializedVersion: 2
-        x: 338
-        y: 2053
-        width: 29
-        height: 49
+        x: 320
+        y: 2048
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5256,10 +5256,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_184
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1985
-        width: 32
-        height: 48
+        x: 0
+        y: 1984
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5278,10 +5278,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_185
       rect:
         serializedVersion: 2
-        x: 80
-        y: 1985
-        width: 32
-        height: 49
+        x: 64
+        y: 1984
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5300,10 +5300,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_186
       rect:
         serializedVersion: 2
-        x: 22
-        y: 1921
-        width: 25
-        height: 49
+        x: 0
+        y: 1920
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5322,10 +5322,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_187
       rect:
         serializedVersion: 2
-        x: 86
-        y: 1921
-        width: 25
-        height: 50
+        x: 64
+        y: 1920
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5344,10 +5344,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_188
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1857
-        width: 32
-        height: 49
+        x: 0
+        y: 1856
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5366,10 +5366,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_189
       rect:
         serializedVersion: 2
-        x: 80
-        y: 1857
-        width: 32
-        height: 50
+        x: 64
+        y: 1856
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5388,10 +5388,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_190
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1793
-        width: 25
-        height: 49
+        x: 0
+        y: 1792
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5410,10 +5410,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_191
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1793
-        width: 25
-        height: 50
+        x: 64
+        y: 1792
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5432,10 +5432,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_192
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1729
-        width: 32
-        height: 47
+        x: 0
+        y: 1728
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5454,10 +5454,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_193
       rect:
         serializedVersion: 2
-        x: 79
-        y: 1729
-        width: 34
-        height: 45
+        x: 64
+        y: 1728
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5476,10 +5476,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_194
       rect:
         serializedVersion: 2
-        x: 144
-        y: 1730
-        width: 32
-        height: 50
+        x: 128
+        y: 1728
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5498,10 +5498,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_195
       rect:
         serializedVersion: 2
-        x: 208
-        y: 1737
-        width: 33
-        height: 45
+        x: 192
+        y: 1728
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5520,10 +5520,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_196
       rect:
         serializedVersion: 2
-        x: 265
-        y: 1733
-        width: 46
-        height: 45
+        x: 256
+        y: 1728
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5542,10 +5542,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_197
       rect:
         serializedVersion: 2
-        x: 22
-        y: 1665
-        width: 25
-        height: 49
+        x: 0
+        y: 1664
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5564,10 +5564,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_198
       rect:
         serializedVersion: 2
-        x: 83
-        y: 1665
-        width: 26
-        height: 46
+        x: 64
+        y: 1664
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5586,10 +5586,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_199
       rect:
         serializedVersion: 2
-        x: 145
-        y: 1667
-        width: 31
-        height: 48
+        x: 128
+        y: 1664
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5608,10 +5608,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_200
       rect:
         serializedVersion: 2
-        x: 212
-        y: 1668
-        width: 31
-        height: 49
+        x: 192
+        y: 1664
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5630,10 +5630,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_201
       rect:
         serializedVersion: 2
-        x: 276
-        y: 1665
-        width: 36
-        height: 48
+        x: 256
+        y: 1664
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5652,10 +5652,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_202
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1601
-        width: 32
-        height: 49
+        x: 320
+        y: 1664
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5674,10 +5674,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_203
       rect:
         serializedVersion: 2
-        x: 80
-        y: 1601
-        width: 32
-        height: 46
+        x: 0
+        y: 1600
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5696,10 +5696,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_204
       rect:
         serializedVersion: 2
-        x: 145
-        y: 1603
-        width: 29
-        height: 47
+        x: 64
+        y: 1600
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5718,10 +5718,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_205
       rect:
         serializedVersion: 2
-        x: 206
-        y: 1607
-        width: 33
-        height: 46
+        x: 128
+        y: 1600
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5740,10 +5740,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_206
       rect:
         serializedVersion: 2
-        x: 264
-        y: 1604
-        width: 48
-        height: 45
+        x: 192
+        y: 1600
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5762,10 +5762,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_207
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1537
-        width: 25
-        height: 49
+        x: 256
+        y: 1600
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5784,10 +5784,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_208
       rect:
         serializedVersion: 2
-        x: 83
-        y: 1537
-        width: 26
-        height: 46
+        x: 320
+        y: 1600
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5806,10 +5806,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_209
       rect:
         serializedVersion: 2
-        x: 144
-        y: 1539
-        width: 31
-        height: 48
+        x: 0
+        y: 1536
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5828,10 +5828,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_210
       rect:
         serializedVersion: 2
-        x: 205
-        y: 1540
-        width: 31
-        height: 49
+        x: 64
+        y: 1536
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5850,10 +5850,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_211
       rect:
         serializedVersion: 2
-        x: 264
-        y: 1537
-        width: 36
-        height: 48
+        x: 128
+        y: 1536
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5872,10 +5872,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_212
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1473
-        width: 30
-        height: 39
+        x: 192
+        y: 1536
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5894,10 +5894,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_213
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1473
-        width: 30
-        height: 40
+        x: 256
+        y: 1536
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5916,10 +5916,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_214
       rect:
         serializedVersion: 2
-        x: 145
-        y: 1483
-        width: 30
-        height: 39
+        x: 0
+        y: 1472
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5938,10 +5938,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_215
       rect:
         serializedVersion: 2
-        x: 14
-        y: 1410
-        width: 33
-        height: 40
+        x: 64
+        y: 1472
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5960,10 +5960,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_216
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1409
-        width: 30
-        height: 41
+        x: 128
+        y: 1472
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5982,10 +5982,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_217
       rect:
         serializedVersion: 2
-        x: 140
-        y: 1411
-        width: 32
-        height: 47
+        x: 0
+        y: 1408
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6004,10 +6004,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_218
       rect:
         serializedVersion: 2
-        x: 19
-        y: 1345
-        width: 29
-        height: 47
+        x: 64
+        y: 1408
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6026,10 +6026,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_219
       rect:
         serializedVersion: 2
-        x: 80
-        y: 1345
-        width: 30
-        height: 42
+        x: 128
+        y: 1408
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6048,10 +6048,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_220
       rect:
         serializedVersion: 2
-        x: 146
-        y: 1345
-        width: 28
-        height: 51
+        x: 0
+        y: 1344
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6070,10 +6070,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_221
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1282
-        width: 33
-        height: 39
+        x: 64
+        y: 1344
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6092,10 +6092,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_222
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1281
-        width: 30
-        height: 40
+        x: 128
+        y: 1344
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6114,10 +6114,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_223
       rect:
         serializedVersion: 2
-        x: 148
-        y: 1283
-        width: 32
-        height: 47
+        x: 0
+        y: 1280
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6136,10 +6136,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_224
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1217
-        width: 30
-        height: 48
+        x: 64
+        y: 1280
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6158,10 +6158,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_225
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1217
-        width: 30
-        height: 48
+        x: 128
+        y: 1280
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6180,10 +6180,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_226
       rect:
         serializedVersion: 2
-        x: 135
-        y: 1217
-        width: 50
-        height: 50
+        x: 0
+        y: 1216
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6202,10 +6202,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_227
       rect:
         serializedVersion: 2
-        x: 22
-        y: 1153
-        width: 25
-        height: 49
+        x: 64
+        y: 1216
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6224,10 +6224,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_228
       rect:
         serializedVersion: 2
-        x: 86
-        y: 1153
-        width: 25
-        height: 49
+        x: 128
+        y: 1216
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6246,10 +6246,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_229
       rect:
         serializedVersion: 2
-        x: 149
-        y: 1153
-        width: 37
-        height: 51
+        x: 0
+        y: 1152
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6268,10 +6268,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_230
       rect:
         serializedVersion: 2
-        x: 15
-        y: 1089
-        width: 34
-        height: 49
+        x: 64
+        y: 1152
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6290,10 +6290,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_231
       rect:
         serializedVersion: 2
-        x: 82
-        y: 1089
-        width: 28
-        height: 49
+        x: 128
+        y: 1152
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6312,10 +6312,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_232
       rect:
         serializedVersion: 2
-        x: 135
-        y: 1089
-        width: 50
-        height: 51
+        x: 0
+        y: 1088
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6334,10 +6334,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_233
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1025
-        width: 25
-        height: 49
+        x: 64
+        y: 1088
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6356,10 +6356,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_234
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1025
-        width: 25
-        height: 49
+        x: 128
+        y: 1088
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6378,10 +6378,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_235
       rect:
         serializedVersion: 2
-        x: 134
-        y: 1025
-        width: 37
-        height: 51
+        x: 0
+        y: 1024
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6400,10 +6400,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_236
       rect:
         serializedVersion: 2
-        x: 19
-        y: 962
-        width: 25
-        height: 48
+        x: 64
+        y: 1024
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6422,10 +6422,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_237
       rect:
         serializedVersion: 2
-        x: 84
-        y: 959
-        width: 25
-        height: 50
+        x: 128
+        y: 1024
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6444,10 +6444,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_238
       rect:
         serializedVersion: 2
-        x: 147
-        y: 959
-        width: 25
-        height: 51
+        x: 0
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6466,10 +6466,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_239
       rect:
         serializedVersion: 2
-        x: 211
-        y: 959
-        width: 27
-        height: 53
+        x: 64
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6488,10 +6488,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_240
       rect:
         serializedVersion: 2
-        x: 276
-        y: 962
-        width: 25
-        height: 48
+        x: 128
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6510,10 +6510,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_241
       rect:
         serializedVersion: 2
-        x: 339
-        y: 959
-        width: 25
-        height: 50
+        x: 192
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6532,10 +6532,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_242
       rect:
         serializedVersion: 2
-        x: 404
-        y: 959
-        width: 25
-        height: 51
+        x: 256
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6554,10 +6554,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_243
       rect:
         serializedVersion: 2
-        x: 466
-        y: 959
-        width: 27
-        height: 53
+        x: 320
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6576,10 +6576,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_244
       rect:
         serializedVersion: 2
-        x: 17
-        y: 897
-        width: 31
-        height: 48
+        x: 384
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6598,10 +6598,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_245
       rect:
         serializedVersion: 2
-        x: 84
-        y: 896
-        width: 25
-        height: 48
+        x: 448
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6620,10 +6620,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_246
       rect:
         serializedVersion: 2
-        x: 148
+        x: 0
         y: 896
-        width: 25
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6642,10 +6642,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_247
       rect:
         serializedVersion: 2
-        x: 209
-        y: 900
-        width: 31
-        height: 47
+        x: 64
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6664,10 +6664,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_248
       rect:
         serializedVersion: 2
-        x: 272
-        y: 897
-        width: 32
-        height: 48
+        x: 128
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6686,10 +6686,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_249
       rect:
         serializedVersion: 2
-        x: 340
+        x: 192
         y: 896
-        width: 25
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6708,10 +6708,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_250
       rect:
         serializedVersion: 2
-        x: 404
+        x: 256
         y: 896
-        width: 25
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6730,10 +6730,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_251
       rect:
         serializedVersion: 2
-        x: 465
-        y: 898
-        width: 31
-        height: 49
+        x: 320
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6752,10 +6752,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_252
       rect:
         serializedVersion: 2
-        x: 20
-        y: 831
-        width: 24
-        height: 50
+        x: 384
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6774,10 +6774,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_253
       rect:
         serializedVersion: 2
-        x: 83
-        y: 831
-        width: 26
-        height: 49
+        x: 448
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6796,10 +6796,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_254
       rect:
         serializedVersion: 2
-        x: 146
-        y: 832
-        width: 27
-        height: 49
+        x: 512
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6818,10 +6818,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_255
       rect:
         serializedVersion: 2
-        x: 212
-        y: 835
-        width: 24
-        height: 48
+        x: 0
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6840,10 +6840,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_256
       rect:
         serializedVersion: 2
-        x: 276
-        y: 831
-        width: 24
-        height: 50
+        x: 64
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6862,10 +6862,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_257
       rect:
         serializedVersion: 2
-        x: 339
-        y: 831
-        width: 26
-        height: 49
+        x: 128
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6884,10 +6884,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_258
       rect:
         serializedVersion: 2
-        x: 403
+        x: 192
         y: 832
-        width: 27
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6906,10 +6906,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_259
       rect:
         serializedVersion: 2
-        x: 468
-        y: 835
-        width: 24
-        height: 48
+        x: 256
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6928,10 +6928,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_260
       rect:
         serializedVersion: 2
-        x: 16
-        y: 769
-        width: 31
-        height: 48
+        x: 320
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6950,10 +6950,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_261
       rect:
         serializedVersion: 2
-        x: 83
-        y: 768
-        width: 25
-        height: 48
+        x: 384
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6972,10 +6972,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_262
       rect:
         serializedVersion: 2
-        x: 147
-        y: 768
-        width: 25
-        height: 49
+        x: 448
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6994,10 +6994,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_263
       rect:
         serializedVersion: 2
-        x: 208
-        y: 772
-        width: 31
-        height: 47
+        x: 512
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7016,10 +7016,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_264
       rect:
         serializedVersion: 2
-        x: 272
-        y: 769
-        width: 32
-        height: 48
+        x: 0
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7038,10 +7038,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_265
       rect:
         serializedVersion: 2
-        x: 339
+        x: 64
         y: 768
-        width: 25
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7060,10 +7060,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_266
       rect:
         serializedVersion: 2
-        x: 403
+        x: 128
         y: 768
-        width: 25
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7082,10 +7082,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_267
       rect:
         serializedVersion: 2
-        x: 464
-        y: 770
-        width: 31
-        height: 49
+        x: 192
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7104,10 +7104,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_268
       rect:
         serializedVersion: 2
-        x: 20
-        y: 705
-        width: 27
-        height: 48
+        x: 256
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7126,10 +7126,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_269
       rect:
         serializedVersion: 2
-        x: 84
-        y: 705
-        width: 27
-        height: 46
+        x: 320
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7148,10 +7148,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_270
       rect:
         serializedVersion: 2
-        x: 18
-        y: 641
-        width: 28
-        height: 49
+        x: 384
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7170,10 +7170,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_271
       rect:
         serializedVersion: 2
-        x: 81
-        y: 641
-        width: 29
-        height: 47
+        x: 448
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7192,10 +7192,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_272
       rect:
         serializedVersion: 2
-        x: 20
-        y: 576
-        width: 25
-        height: 51
+        x: 512
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7214,10 +7214,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_273
       rect:
         serializedVersion: 2
-        x: 84
-        y: 576
-        width: 25
-        height: 49
+        x: 0
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7236,10 +7236,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_274
       rect:
         serializedVersion: 2
-        x: 18
-        y: 513
-        width: 28
-        height: 49
+        x: 64
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7258,10 +7258,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_275
       rect:
         serializedVersion: 2
-        x: 82
-        y: 513
-        width: 29
-        height: 47
+        x: 256
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7280,10 +7280,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_276
       rect:
         serializedVersion: 2
-        x: 19
-        y: 448
-        width: 25
-        height: 46
+        x: 384
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7302,10 +7302,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_277
       rect:
         serializedVersion: 2
-        x: 82
-        y: 449
-        width: 32
-        height: 49
+        x: 448
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7324,10 +7324,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_278
       rect:
         serializedVersion: 2
-        x: 142
-        y: 449
-        width: 27
-        height: 48
+        x: 0
+        y: 640
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7346,10 +7346,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_279
       rect:
         serializedVersion: 2
-        x: 206
-        y: 449
-        width: 27
-        height: 47
+        x: 64
+        y: 640
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7368,10 +7368,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_280
       rect:
         serializedVersion: 2
-        x: 270
-        y: 449
-        width: 27
-        height: 47
+        x: 0
+        y: 576
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7390,10 +7390,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_281
       rect:
         serializedVersion: 2
-        x: 334
-        y: 449
-        width: 27
-        height: 47
+        x: 64
+        y: 576
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7412,10 +7412,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_282
       rect:
         serializedVersion: 2
-        x: 402
-        y: 449
-        width: 32
-        height: 49
+        x: 0
+        y: 512
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7434,10 +7434,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_283
       rect:
         serializedVersion: 2
-        x: 461
-        y: 449
-        width: 28
-        height: 47
+        x: 64
+        y: 512
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7456,10 +7456,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_284
       rect:
         serializedVersion: 2
-        x: 526
-        y: 449
-        width: 28
-        height: 48
+        x: 0
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7478,10 +7478,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_285
       rect:
         serializedVersion: 2
-        x: 596
-        y: 449
-        width: 32
-        height: 49
+        x: 64
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7500,10 +7500,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_286
       rect:
         serializedVersion: 2
-        x: 662
-        y: 449
-        width: 34
-        height: 49
+        x: 128
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7522,10 +7522,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_287
       rect:
         serializedVersion: 2
-        x: 726
-        y: 449
-        width: 34
-        height: 49
+        x: 192
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7544,10 +7544,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_288
       rect:
         serializedVersion: 2
-        x: 790
-        y: 449
-        width: 34
-        height: 49
+        x: 256
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7566,10 +7566,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_289
       rect:
         serializedVersion: 2
-        x: 19
-        y: 385
-        width: 38
-        height: 50
+        x: 320
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7588,10 +7588,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_290
       rect:
         serializedVersion: 2
-        x: 76
-        y: 385
-        width: 34
-        height: 48
+        x: 384
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7610,10 +7610,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_291
       rect:
         serializedVersion: 2
-        x: 138
-        y: 385
-        width: 33
-        height: 47
+        x: 448
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7632,10 +7632,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_292
       rect:
         serializedVersion: 2
-        x: 202
-        y: 385
-        width: 33
-        height: 47
+        x: 512
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7654,10 +7654,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_293
       rect:
         serializedVersion: 2
-        x: 266
-        y: 385
-        width: 33
-        height: 47
+        x: 576
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7676,10 +7676,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_294
       rect:
         serializedVersion: 2
-        x: 330
-        y: 385
-        width: 33
-        height: 47
+        x: 640
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7698,10 +7698,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_295
       rect:
         serializedVersion: 2
-        x: 396
-        y: 385
-        width: 34
-        height: 48
+        x: 704
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7720,10 +7720,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_296
       rect:
         serializedVersion: 2
-        x: 462
-        y: 385
-        width: 28
-        height: 47
+        x: 768
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7742,10 +7742,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_297
       rect:
         serializedVersion: 2
-        x: 528
-        y: 385
-        width: 28
-        height: 47
+        x: 0
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7764,10 +7764,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_298
       rect:
         serializedVersion: 2
-        x: 594
-        y: 385
-        width: 30
-        height: 49
+        x: 64
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7786,10 +7786,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_299
       rect:
         serializedVersion: 2
-        x: 659
-        y: 385
-        width: 33
-        height: 50
+        x: 128
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7808,10 +7808,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_300
       rect:
         serializedVersion: 2
-        x: 723
-        y: 385
-        width: 33
-        height: 50
+        x: 192
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7830,10 +7830,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_301
       rect:
         serializedVersion: 2
-        x: 787
-        y: 385
-        width: 33
-        height: 50
+        x: 256
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7852,10 +7852,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_302
       rect:
         serializedVersion: 2
-        x: 13
-        y: 320
-        width: 28
-        height: 51
+        x: 320
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7874,10 +7874,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_303
       rect:
         serializedVersion: 2
-        x: 80
-        y: 320
-        width: 31
-        height: 49
+        x: 384
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7896,10 +7896,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_304
       rect:
         serializedVersion: 2
-        x: 151
-        y: 320
-        width: 26
-        height: 49
+        x: 448
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7918,10 +7918,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_305
       rect:
         serializedVersion: 2
-        x: 216
-        y: 320
-        width: 25
-        height: 49
+        x: 512
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7940,10 +7940,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_306
       rect:
         serializedVersion: 2
-        x: 280
-        y: 320
-        width: 25
-        height: 49
+        x: 576
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7962,10 +7962,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_307
       rect:
         serializedVersion: 2
-        x: 344
-        y: 320
-        width: 25
-        height: 49
+        x: 640
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7984,10 +7984,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_308
       rect:
         serializedVersion: 2
-        x: 400
-        y: 320
-        width: 31
-        height: 49
+        x: 704
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8006,10 +8006,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_309
       rect:
         serializedVersion: 2
-        x: 474
-        y: 320
-        width: 24
-        height: 49
+        x: 768
+        y: 384
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8028,10 +8028,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_310
       rect:
         serializedVersion: 2
-        x: 535
+        x: 0
         y: 320
-        width: 24
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8050,10 +8050,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_311
       rect:
         serializedVersion: 2
-        x: 590
+        x: 64
         y: 320
-        width: 30
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8072,10 +8072,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_312
       rect:
         serializedVersion: 2
-        x: 648
+        x: 128
         y: 320
-        width: 35
-        height: 52
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8094,10 +8094,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_313
       rect:
         serializedVersion: 2
-        x: 712
+        x: 192
         y: 320
-        width: 35
-        height: 52
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8116,10 +8116,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_314
       rect:
         serializedVersion: 2
-        x: 776
+        x: 256
         y: 320
-        width: 35
-        height: 52
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8138,10 +8138,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_315
       rect:
         serializedVersion: 2
-        x: 7
-        y: 257
-        width: 38
-        height: 50
+        x: 320
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8160,10 +8160,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_316
       rect:
         serializedVersion: 2
-        x: 82
-        y: 257
-        width: 34
-        height: 48
+        x: 384
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8182,10 +8182,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_317
       rect:
         serializedVersion: 2
-        x: 149
-        y: 257
-        width: 33
-        height: 47
+        x: 448
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8204,10 +8204,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_318
       rect:
         serializedVersion: 2
-        x: 213
-        y: 257
-        width: 33
-        height: 47
+        x: 512
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8226,10 +8226,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_319
       rect:
         serializedVersion: 2
-        x: 277
-        y: 257
-        width: 33
-        height: 47
+        x: 576
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8248,10 +8248,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_320
       rect:
         serializedVersion: 2
-        x: 341
-        y: 257
-        width: 33
-        height: 47
+        x: 640
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8270,10 +8270,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_321
       rect:
         serializedVersion: 2
-        x: 402
-        y: 257
-        width: 34
-        height: 48
+        x: 704
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8292,10 +8292,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_322
       rect:
         serializedVersion: 2
-        x: 470
-        y: 257
-        width: 29
-        height: 47
+        x: 768
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8314,10 +8314,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_323
       rect:
         serializedVersion: 2
-        x: 532
-        y: 257
-        width: 28
-        height: 47
+        x: 0
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8336,10 +8336,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_324
       rect:
         serializedVersion: 2
-        x: 592
-        y: 257
-        width: 30
-        height: 49
+        x: 64
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8358,10 +8358,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_325
       rect:
         serializedVersion: 2
-        x: 652
-        y: 257
-        width: 33
-        height: 50
+        x: 128
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8380,10 +8380,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_326
       rect:
         serializedVersion: 2
-        x: 716
-        y: 257
-        width: 33
-        height: 50
+        x: 192
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8402,10 +8402,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_327
       rect:
         serializedVersion: 2
-        x: 780
-        y: 257
-        width: 33
-        height: 50
+        x: 256
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8424,10 +8424,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_328
       rect:
         serializedVersion: 2
-        x: 19
-        y: 192
-        width: 25
-        height: 46
+        x: 320
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8446,10 +8446,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_329
       rect:
         serializedVersion: 2
-        x: 82
-        y: 193
-        width: 32
-        height: 49
+        x: 384
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8468,10 +8468,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_330
       rect:
         serializedVersion: 2
-        x: 144
-        y: 194
-        width: 26
-        height: 49
+        x: 448
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8490,10 +8490,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_331
       rect:
         serializedVersion: 2
-        x: 208
-        y: 195
-        width: 25
-        height: 49
+        x: 512
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8512,10 +8512,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_332
       rect:
         serializedVersion: 2
-        x: 272
-        y: 195
-        width: 25
-        height: 49
+        x: 576
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8534,10 +8534,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_333
       rect:
         serializedVersion: 2
-        x: 338
-        y: 193
-        width: 32
-        height: 49
+        x: 640
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8556,10 +8556,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_334
       rect:
         serializedVersion: 2
-        x: 19
-        y: 129
-        width: 38
-        height: 50
+        x: 704
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8578,10 +8578,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_335
       rect:
         serializedVersion: 2
-        x: 76
-        y: 129
-        width: 34
-        height: 48
+        x: 768
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8600,10 +8600,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_336
       rect:
         serializedVersion: 2
-        x: 136
-        y: 129
-        width: 33
-        height: 47
+        x: 0
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8622,10 +8622,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_337
       rect:
         serializedVersion: 2
-        x: 192
-        y: 129
-        width: 39
-        height: 47
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8644,10 +8644,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_338
       rect:
         serializedVersion: 2
-        x: 256
-        y: 129
-        width: 39
-        height: 47
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8666,10 +8666,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_339
       rect:
         serializedVersion: 2
-        x: 332
-        y: 129
-        width: 34
-        height: 48
+        x: 192
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8688,10 +8688,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_340
       rect:
         serializedVersion: 2
-        x: 13
-        y: 64
-        width: 28
-        height: 51
+        x: 256
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8710,10 +8710,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_341
       rect:
         serializedVersion: 2
-        x: 80
-        y: 64
-        width: 31
-        height: 49
+        x: 320
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8732,10 +8732,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_342
       rect:
         serializedVersion: 2
-        x: 151
-        y: 64
-        width: 24
-        height: 48
+        x: 576
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8754,10 +8754,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_343
       rect:
         serializedVersion: 2
-        x: 215
-        y: 64
-        width: 25
-        height: 48
+        x: 640
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8776,10 +8776,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_344
       rect:
         serializedVersion: 2
-        x: 279
-        y: 64
-        width: 25
-        height: 48
+        x: 704
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8798,10 +8798,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_345
       rect:
         serializedVersion: 2
-        x: 336
-        y: 64
-        width: 31
-        height: 49
+        x: 768
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8820,10 +8820,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_346
       rect:
         serializedVersion: 2
-        x: 7
-        y: 1
-        width: 38
-        height: 50
+        x: 0
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8842,10 +8842,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_347
       rect:
         serializedVersion: 2
-        x: 82
-        y: 1
-        width: 34
-        height: 48
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8864,10 +8864,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_348
       rect:
         serializedVersion: 2
-        x: 151
-        y: 1
-        width: 33
-        height: 47
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8886,10 +8886,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_349
       rect:
         serializedVersion: 2
-        x: 217
-        y: 1
-        width: 39
-        height: 47
+        x: 192
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8908,10 +8908,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_350
       rect:
         serializedVersion: 2
-        x: 281
-        y: 1
-        width: 39
-        height: 47
+        x: 256
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8930,10 +8930,10 @@ TextureImporter:
       name: TheAxmanNoWeapon_351
       rect:
         serializedVersion: 2
-        x: 338
-        y: 1
-        width: 34
-        height: 48
+        x: 320
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8948,11 +8948,297 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_352
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aed8f129cb636547b65fdb15aacca0d
+      internalID: -1440217304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_353
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f13795e6567a94bad451911fe7957b
+      internalID: 1145760118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_354
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d90ddb6bb73db24a99d6ec17fe9a872
+      internalID: 541284335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_355
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd15e1157ab9ec499ff12dcce7a58eb
+      internalID: -799676160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_356
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db2b402cbc52a145b63505626df298b
+      internalID: -648729065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_357
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1b2bf4df88af34783bde7dd2ba4066
+      internalID: 684321039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_358
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a0f3e1983089d4a8cf7cb1a46b3d4d
+      internalID: -1896288408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_359
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8be37e8ccd914c448f854e660b84f92
+      internalID: -1585359001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_360
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c105da1db48f24293564af8d2cc1dc
+      internalID: 1458138370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_361
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95b12a13fd734e41a879c4cfd9cc452
+      internalID: 1827924774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_362
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf39f86a52b322b44ae2f532903b8e2d
+      internalID: 1730759092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_363
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec53a26682bd0a47b42124e54c842c0
+      internalID: -730900362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheAxmanNoWeapon_364
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da436fa431d352d4687f269779bc0bac
+      internalID: -38711917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 429e407e23818a041a3be5fd87d0b32d
     internalID: 0
     vertices: []
     indices: 
@@ -9244,7 +9530,20 @@ TextureImporter:
       TheAxmanNoWeapon_35: -3694330636805876032
       TheAxmanNoWeapon_350: -2726399228659297702
       TheAxmanNoWeapon_351: -7246532095776958439
+      TheAxmanNoWeapon_352: -1440217304
+      TheAxmanNoWeapon_353: 1145760118
+      TheAxmanNoWeapon_354: 541284335
+      TheAxmanNoWeapon_355: -799676160
+      TheAxmanNoWeapon_356: -648729065
+      TheAxmanNoWeapon_357: 684321039
+      TheAxmanNoWeapon_358: -1896288408
+      TheAxmanNoWeapon_359: -1585359001
       TheAxmanNoWeapon_36: 2406033083198878144
+      TheAxmanNoWeapon_360: 1458138370
+      TheAxmanNoWeapon_361: 1827924774
+      TheAxmanNoWeapon_362: 1730759092
+      TheAxmanNoWeapon_363: -730900362
+      TheAxmanNoWeapon_364: -38711917
       TheAxmanNoWeapon_37: -440852618527793192
       TheAxmanNoWeapon_38: 2180121679041796685
       TheAxmanNoWeapon_39: 6287757798493681970

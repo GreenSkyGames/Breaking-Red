@@ -11,22 +11,22 @@ public class PowerUp : MonoBehaviour
 
     void Start()
     {
-        inventoryManager = InventoryManager.instance;
+        inventoryManager = InventoryManager.sInstance;
     }
     // apply effect to the player
-    public void ApplyEffect(PlayerController playerController)
+    public void applyEffect(PlayerController playerController)
     {
         PlayerHealth playerHealth = playerController.GetComponent<PlayerHealth>();
         if(playerHealth == null) return;
         switch (type)
         {
             case itemName.PoisonApple:
-                playerHealth.ChangeHealth(-effectAmount);  // decreases health
+                playerHealth.changeHealth(-effectAmount);  // decreases health
                 Debug.Log("Player health decreased");
                 break;
 
             case itemName.GoldenApple:
-                playerHealth.ChangeHealth(effectAmount);  // increases health
+                playerHealth.changeHealth(effectAmount);  // increases health
                 Debug.Log("Player health increased");
                 break;
             
@@ -49,7 +49,7 @@ public class PowerUp : MonoBehaviour
             PowerUpManager powerUpManager = other.GetComponent<PowerUpManager>();
             if (powerUpManager != null)
             {
-                powerUpManager.HandlePowerUpInteraction(this, other.GetComponent<PlayerController>());
+                powerUpManager.handlePowerUpInteraction(this, other.GetComponent<PlayerController>());
             }
         }
     }

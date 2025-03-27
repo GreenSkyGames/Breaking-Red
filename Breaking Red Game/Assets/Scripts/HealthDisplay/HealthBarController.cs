@@ -1,6 +1,11 @@
-﻿// /*
-//  *  Author: ariel oliveira [o.arielg@gmail.com]
-//  */
+﻿/* File Heading Example */
+/*
+ * Name:  Mark Eldridge
+ * Role:   Main Character Customization
+ * This file contains the definition for the HealthBarController class.
+ * This class controls the health bar display.
+ * It inherits from MonoBehaviour.
+ */
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,10 +19,14 @@ public class HealthBarController : MonoBehaviour
     public Sprite fullHeart;
     public Image[] hearts;
 
-    public PlayerHealth playerHealth; //allows for communication between scripts
+    public PlayerHealth playerHealth; // Allows communication between scripts
 
-    void Update(){
-
+    /*
+     * This function updates the health bar display.
+     * It is called every frame.
+     */
+    void Update()
+    {
         health = playerHealth.currentHealth;
         maxHealth = playerHealth.maxHealth;
 
@@ -25,20 +34,19 @@ public class HealthBarController : MonoBehaviour
         {
             if (i < health)
             {
-                //hearts[i].gameObject.SetActive(true); // Corrected: Added parentheses
                 hearts[i].sprite = fullHeart;
             }
-            else{
+            else
+            {
                 hearts[i].sprite = emptyHeart;
             }
             if (i < maxHealth)
             {
-                hearts[i].gameObject.SetActive(true); // Corrected: Added parentheses
-                //hearts[i].sprite = emptyHeart;
+                hearts[i].gameObject.SetActive(true);
             }
             else
             {
-                hearts[i].gameObject.SetActive(false); // Corrected: Added parentheses
+                hearts[i].gameObject.SetActive(false);
             }
         }
     }
@@ -50,24 +58,34 @@ public class HealthBarController : MonoBehaviour
 //     public Transform heartsParent;
 //     public GameObject heartContainerPrefab;
 
-//     private void Start()
+//     /*
+//      * This function is called before the first frame update.
+//      * It initializes the heart containers and updates the hearts HUD.
+//      */
+//     void start()
 //     {
-//         // Should I use lists? Maybe :)
+//         // Consider using lists here
 //         heartContainers = new GameObject[(int)PlayerStats.Instance.MaxTotalHealth];
 //         heartFills = new Image[(int)PlayerStats.Instance.MaxTotalHealth];
 
-//         PlayerStats.Instance.onHealthChangedCallback += UpdateHeartsHUD;
-//         InstantiateHeartContainers();
-//         UpdateHeartsHUD();
+//         PlayerStats.Instance.onHealthChangedCallback += updateHeartsHUD;
+//         instantiateHeartContainers();
+//         updateHeartsHUD();
 //     }
 
-//     public void UpdateHeartsHUD()
+//     /*
+//      * This function updates the hearts HUD.
+//      */
+//     public void updateHeartsHUD()
 //     {
-//         SetHeartContainers();
-//         SetFilledHearts();
+//         setHeartContainers();
+//         setFilledHearts();
 //     }
 
-//     void SetHeartContainers()
+//     /*
+//      * This function sets the heart containers.
+//      */
+//     void setHeartContainers()
 //     {
 //         for (int i = 0; i < heartContainers.Length; i++)
 //         {
@@ -82,7 +100,10 @@ public class HealthBarController : MonoBehaviour
 //         }
 //     }
 
-//     void SetFilledHearts()
+//     /*
+//      * This function sets the filled hearts.
+//      */
+//     void setFilledHearts()
 //     {
 //         for (int i = 0; i < heartFills.Length; i++)
 //         {
@@ -103,7 +124,10 @@ public class HealthBarController : MonoBehaviour
 //         }
 //     }
 
-//     void InstantiateHeartContainers()
+//     /*
+//      * This function instantiates the heart containers.
+//      */
+//     void instantiateHeartContainers()
 //     {
 //         for (int i = 0; i < PlayerStats.Instance.MaxTotalHealth; i++)
 //         {

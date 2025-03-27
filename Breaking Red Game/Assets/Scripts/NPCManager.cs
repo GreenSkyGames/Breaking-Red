@@ -4,13 +4,35 @@ using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 
+
+
+/*
+public class NPC
+{
+	public virtual bool nonHostile
+	{
+		return false;
+	}
+
+}
+*/
+
+
+
+/*
+ *	This is the script for the NPCManager.
+ *	It controls the majority of NPC actions and activities.
+ *	This includes combat, swapping animations, and utilizing
+ *	the dialogueBox canvas that is assigned through the editor.
+ *
+*/
 public class NPCManager : MonoBehaviour
 {
 	public float speed = 2;
 	public float attackRange = 1;
 	public float attackCooldown = 1;
 	public float playerDetectRange = 5;
-	public Transform DetectionPoint;
+	public Transform detectionPoint;
 	//public Transform attackPoint;
 	public LayerMask playerLayer;
 	//private bool isChasing;
@@ -39,15 +61,16 @@ public class NPCManager : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
-		ChangeState(EnemyState.Idle);
+		changeState(EnemyState.Idle);
     }
 
+	//OnEnable is being used to create a delay that ensures the GameEventsManager has started first.
 	private void OnEnable()
 	{
 		StartCoroutine(WaitForGameEventsManager());
 	}
 
-	//This activates these functions for ALL examples of NPCManager
+	//Once the GameEventsManager has started, these functions can be subscribed as events.
 	private IEnumerator WaitForGameEventsManager()
 	{
 		while(GameEventsManager.instance == null || GameEventsManager.instance.dialogueEvents == null)
@@ -55,16 +78,17 @@ public class NPCManager : MonoBehaviour
 			yield return null;
 		}
 		//Debug.Log("Hostility enable test");
-		GameEventsManager.instance.dialogueEvents.startHostility += onHostility;
-		GameEventsManager.instance.dialogueEvents.stopHostility += offHostility;
+		GameEventsManager.instance.dialogueEvents.onStartHostility += onHostility;
+		GameEventsManager.instance.dialogueEvents.onStopHostility += offHostility;
 	}
 
+	//When an NPC is disabled, the functions are removed as events.
 	private void OnDisable()
 	{
 		if(GameEventsManager.instance != null && GameEventsManager.instance.dialogueEvents != null)
 		{
-			GameEventsManager.instance.dialogueEvents.startHostility -= onHostility;
-			GameEventsManager.instance.dialogueEvents.stopHostility -= offHostility;			
+			GameEventsManager.instance.dialogueEvents.onStartHostility -= onHostility;
+			GameEventsManager.instance.dialogueEvents.onStopHostility -= offHostility;			
 		}
 	}
 
@@ -90,12 +114,12 @@ public class NPCManager : MonoBehaviour
 			}
 			else
 			{
-				ChangeState(EnemyState.Idle); //Change to idle if not hostile
+				changeState(EnemyState.Idle); //Change to idle if not hostile
 				rb.linearVelocity = Vector2.zero; //kill billiards effect
 
 				if(enemyState == EnemyState.Dialogue)
 				{
-					//ChangeState(EnemyState.Idle);
+					//changeState(EnemyState.Idle);
 					//isHostile = false;
 					rb.linearVelocity = Vector2.zero;
 				}
@@ -103,7 +127,7 @@ public class NPCManager : MonoBehaviour
 
 			if(enemyState == EnemyState.Chasing)
 			{
-				Chase();
+				chase();
 			}
 			else if(enemyState == EnemyState.Attacking)
 			{
@@ -113,25 +137,29 @@ public class NPCManager : MonoBehaviour
     }
 
 	//Quality of life functions for changing hostility.
+	//Swap hostility
 	public void switchHostility()
 	{
 		isHostile = !isHostile;
 	}
+	//Turn off hostility
 	public void offHostility()
 	{
 		isHostile = false;
 	}
+	//Turn on hostility
 	public void onHostility()
 	{
 		isHostile = true;
 	}
+	//Set hostility
 	public void setHostility(bool activate)
 	{
 		isHostile = activate;
 	}
 
 	//Chase handles both direction of the NPC and the flipping their animation (for now).
-	void Chase()
+	void chase()
 	{
 		//NOTE:  THIS IS FOR ENEMIES THAT FACE RIGHT.
 		//facingDirection NEEDS TO BE SIGN CHANGED FOR THOSE THAT FACE LEFT.
@@ -141,7 +169,7 @@ public class NPCManager : MonoBehaviour
 			if(player.position.x > transform.position.x && facingDirection == 1 ||
 				player.position.x < transform.position.x && facingDirection == -1)
 			{
-				Flip();
+				flip();
 			}
 		}
 		else
@@ -149,7 +177,7 @@ public class NPCManager : MonoBehaviour
 			if(player.position.x > transform.position.x && facingDirection == -1 ||
 				player.position.x < transform.position.x && facingDirection == 1)
 			{
-				Flip();
+				flip();
 			}
 		}
 		Vector2 direction = (player.position - transform.position).normalized;
@@ -159,7 +187,7 @@ public class NPCManager : MonoBehaviour
 	}
 
 	//Flips the enemy animation.
-	void Flip()
+	void flip()
 	{
 		facingDirection *= -1;
 		transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
@@ -171,7 +199,7 @@ public class NPCManager : MonoBehaviour
 		//isHostile = true;
 		//Detect if there are collsions and put them in the hits array.
 		//Only checks the player's layer, so won't detect other objects.
-		Collider2D[] hits = Physics2D.OverlapCircleAll(DetectionPoint.position, playerDetectRange, playerLayer);
+		Collider2D[] hits = Physics2D.OverlapCircleAll(detectionPoint.position, playerDetectRange, playerLayer);
 	
 		//If there are collisions
 		if(hits.Length > 0)
@@ -182,16 +210,16 @@ public class NPCManager : MonoBehaviour
 			if(Vector2.Distance(transform.position, player.position) <= attackRange && attackCooldownTimer <= 0)
 			{
 				attackCooldownTimer = attackCooldown;
-				ChangeState(EnemyState.Attacking);
+				changeState(EnemyState.Attacking);
 			}
 			else if(Vector2.Distance(transform.position, player.position) > attackRange && enemyState != EnemyState.Attacking)
 			{
-				ChangeState(EnemyState.Chasing);
+				changeState(EnemyState.Chasing);
 			}
 		}
 		else
 		{
-			ChangeState(EnemyState.Idle);
+			changeState(EnemyState.Idle);
 			//After changing state to idle, kill momentum so as to prevent billiards effect
 			rb.linearVelocity = Vector2.zero;
 		}
@@ -200,7 +228,7 @@ public class NPCManager : MonoBehaviour
 	//Change the animations from idle to chasing to attacking.
 	//To change out of attack animation back to Idle,
 	//an event has been attached to the attack animation itself on the final frame.
-	public void ChangeState(EnemyState newState)
+	public void changeState(EnemyState newState)
 	{
 		//Exit the current animation.
 		if(enemyState == EnemyState.Idle || enemyState == EnemyState.Dialogue)
@@ -236,18 +264,18 @@ public class NPCManager : MonoBehaviour
 		if(myCanvas.gameObject.activeSelf == true)
 		{
 			//myCanvas.gameObject.SetActive(false);
-			ChangeState(EnemyState.Idle);
+			changeState(EnemyState.Idle);
 		}
 		else
 		{
 			//Debug.Log("Test.");
 			//myCanvas.gameObject.SetActive(true);
-			ChangeState(EnemyState.Dialogue);
+			changeState(EnemyState.Dialogue);
 		}
 	}
 
-
-    public void ChangeHealth(int amount)
+	//changeHealth() alters the NPCs health by the passed amount.
+    public void changeHealth(int amount)
     {
         currentHealth += amount;
         Debug.Log("Health " + currentHealth);
@@ -279,7 +307,7 @@ public class NPCManager : MonoBehaviour
 	private void OnDrawGizmosSelected()
 	{
 		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere(DetectionPoint.position, playerDetectRange);
+		Gizmos.DrawWireSphere(detectionPoint.position, playerDetectRange);
 		//Gizmos.DrawWireSphere(attackPoint.position, attackRange);
 	}
 }

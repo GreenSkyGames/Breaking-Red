@@ -4,31 +4,31 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager instance;
-    public GameObject InventoryMenu;
-    private bool menuActivated;
+    public static InventoryManager sInstance;
+    public GameObject inventoryMenu;
     public ItemSlot[] itemSlot;
+    private bool menuActivated;
 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.I))
         {
-            ToggleInventory();
+            toggleInventory();
         }
     }
 
-    private void ToggleInventory()
+    private void toggleInventory()
     {
         if(menuActivated)
         {
             Time.timeScale = 1;
-            InventoryMenu.SetActive(false);
+            inventoryMenu.SetActive(false);
             menuActivated = false;
         }
         else if(!menuActivated)
         {
             Time.timeScale = 0;
-            InventoryMenu.SetActive(true);
+            inventoryMenu.SetActive(true);
             menuActivated = true;
         }
     }
@@ -36,9 +36,9 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         // singleton pattern to ensure one instance of InventoryManager
-        if (instance == null)
+        if (sInstance == null)
         {
-            instance = this;
+            sInstance = this;
             DontDestroyOnLoad(this.gameObject);
         }
         else
@@ -46,20 +46,20 @@ public class InventoryManager : MonoBehaviour
 
     }
 
-    public void AddToInventory(string itemName, Sprite itemSprite)
+    public void addToInventory(string itemName, Sprite itemSprite)
     {
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if(itemSlot[i].isOccupied == false)
             {
-                itemSlot[i].UpdateInventoryUI(itemName, itemSprite);
+                itemSlot[i].updateInventoryUI(itemName, itemSprite);
                 return;
             }
         }
         Debug.Log("Inventory is full!");
     }
 
-    public int GetItemCount()
+    public int getItemCount()
     {
         int count = 0;
 

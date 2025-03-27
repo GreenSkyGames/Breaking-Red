@@ -45,9 +45,9 @@ GameObject:
   - component: {fileID: 6839119246694384882}
   - component: {fileID: 7193007682048078737}
   - component: {fileID: 9126699552684470736}
-  - component: {fileID: 4597765298623683198}
   - component: {fileID: 7196851346905317494}
   - component: {fileID: 3083057588950925639}
+  - component: {fileID: 168697267689558691}
   m_Layer: 7
   m_Name: TheBear
   m_TagString: TheBear
@@ -64,7 +64,7 @@ Transform:
   m_GameObject: {fileID: 6128396763578966539}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 76.54032, y: 6.18, z: 0.09251358}
+  m_LocalPosition: {x: 88.228226, y: -47.448868, z: 0.18502717}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -250,29 +250,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4597765298623683198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6128396763578966539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  attackRange: 1
-  attackCooldown: 1
-  playerDetectRange: 5
-  DetectionPoint: {fileID: 1305255603190529075}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  myCanvas: {fileID: 0}
-  isHostile: 0
-  facingRight: 0
 --- !u!114 &7196851346905317494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +282,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6789b9bfffb2c46a6a340ea4bbe41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueKnotName: TheBear
+  _dialogueKnotName: TheBear
+--- !u!114 &168697267689558691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128396763578966539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  attackRange: 1
+  attackCooldown: 1
+  playerDetectRange: 5
+  detectionPoint: {fileID: 1305255603190529075}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  myCanvas: {fileID: 0}
+  isHostile: 0
+  facingRight: 0
+  enemySR: {fileID: 0}
+  currentHealth: 9
 --- !u!1 &8282045201769422700
 GameObject:
   m_ObjectHideFlags: 0

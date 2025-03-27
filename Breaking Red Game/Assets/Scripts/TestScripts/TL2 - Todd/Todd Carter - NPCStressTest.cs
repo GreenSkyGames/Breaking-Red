@@ -93,6 +93,7 @@ public class NPCStressTestScript : MonoBehaviour
 				}
 
 				TestTarget.transform.position = NPCOriginalPosition;
+				NPCStressWall.gameObject.SetActive(false);
 
 				break;
 			}

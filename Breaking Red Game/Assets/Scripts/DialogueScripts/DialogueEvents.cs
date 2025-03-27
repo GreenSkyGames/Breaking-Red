@@ -4,17 +4,22 @@ using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 
+/*
+ *	This is the script that handles dialogue events.
+ *	This produces a unique class object that contains the data
+ *	such as strings for the dialogue to be displayed.
+ *	
+ *	Being events, each of these must be subscribed by other scripts.
+ *
+*/
 public class DialogueEvents
 {
     public event Action<string> onEnterDialogue;
 	
-	public void EnterDialogue(string knotName)
-	{
-		//onEnterDialogue?.Invoke(knotName);
-
-		//Debug.Log("Test " + onEnterDialogue);
-		//Debug.Log("1st Test " + knotName);
-		
+	//On entering dialogue, the knotName is used to identify
+	//the location on the .ink document.
+	public void enterDialogue(string knotName)
+	{		
 		if (onEnterDialogue != null)
 		{
 			//Debug.Log("2nd Test " + knotName);
@@ -24,19 +29,21 @@ public class DialogueEvents
 
 	public event Action onDialogueStarted;
 
-	public void DialogueStarted()
+	//This activates the dialogue system.
+	public void dialogueStarted()
 	{
 		//Debug.Log("1st test");
 		if(onDialogueStarted != null)
 		{
-			//Debug.Log("2nd test"); //This is not working for whatever flipass reason
+			//Debug.Log("2nd test");
 			onDialogueStarted.Invoke();
 		}
 	}
 
 	public event Action onDialogueFinished;
 
-	public void DialogueFinished()
+	//This ends the dialogue system.
+	public void dialogueFinished()
 	{
 		if(onDialogueFinished != null)
 		{
@@ -46,7 +53,8 @@ public class DialogueEvents
 
 	public event Action<string, List<Choice>, string> onDisplayDialogue;
 
-	public void DisplayDialogue(string dialogueLine, List<Choice> dialogueChoices, string name)
+	//This sends the variables out to be displayed.
+	public void displayDialogue(string dialogueLine, List<Choice> dialogueChoices, string name)
 	{
 		if(onDisplayDialogue != null)
 		{
@@ -56,7 +64,8 @@ public class DialogueEvents
 
 	public event Action<int> onUpdateChoiceIndex;
 
-	public void UpdateChoiceIndex(int choiceIndex)
+	//This updates the choice index number for the next choice location in the .ink.
+	public void updateChoiceIndex(int choiceIndex)
 	{
 		if(onUpdateChoiceIndex != null)
 		{
@@ -64,23 +73,25 @@ public class DialogueEvents
 		}
 	}
 
-	public event Action startHostility;
+	public event Action onStartHostility;
 
-	public void StartHostility()
+	//This event activates the hostility in an NPC.
+	public void startHostility()
 	{
-		if(startHostility != null)
+		if(onStartHostility != null)
 		{
-			startHostility();
+			onStartHostility();
 		}
 	}
 
-	public event Action stopHostility;
+	public event Action onStopHostility;
 
-	public void StopHostility()
+	//This event deactivates the hostility in an NPC.
+	public void stopHostility()
 	{
-		if(stopHostility != null)
+		if(onStopHostility != null)
 		{
-			stopHostility();
+			onStopHostility();
 		}
 	}
 }

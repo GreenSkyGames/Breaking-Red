@@ -7,10 +7,10 @@ public class ShanBoundaryTests : MonoBehaviour
     public int numberOfTests = 1000;  // Number of rapid health changes to simulate
     public int healthBoostAmount = 1;  // Amount the Golden Apple boosts health by
 
-    void RunInventoryBoundaryTest()
+    void runInventoryBoundaryTest()
     {
         // get the InventoryManager instance
-        inventoryManager = InventoryManager.instance;
+        inventoryManager = InventoryManager.sInstance;
 
         if (inventoryManager == null)
         {
@@ -21,13 +21,13 @@ public class ShanBoundaryTests : MonoBehaviour
         // Test 1: Add 4 items to the inventory
         Debug.Log("Running Inventory Capacity Test");
 
-        inventoryManager.AddToInventory("Item1", null);  // Add first item
-        inventoryManager.AddToInventory("Item2", null);  // Add second item
-        inventoryManager.AddToInventory("Item3", null);  // Add third item
+        inventoryManager.addToInventory("Item1", null);  // Add first item
+        inventoryManager.addToInventory("Item2", null);  // Add second item
+        inventoryManager.addToInventory("Item3", null);  // Add third item
 
         // try adding a fourth item, should be rejected as the inventory is full
-        inventoryManager.AddToInventory("Item4", null);  // This should log "Inventory is full!"
-        int totalItems = inventoryManager.GetItemCount();
+        inventoryManager.addToInventory("Item4", null);  // This should log "Inventory is full!"
+        int totalItems = inventoryManager.getItemCount();
         int expectedItemCount = 3;  // still want only 3 items in test after
 
         if (totalItems == expectedItemCount)
@@ -40,7 +40,7 @@ public class ShanBoundaryTests : MonoBehaviour
         }
     }
 
-    public void RunHealthOverflowTest()
+    public void runHealthOverflowTest()
     {
         if (playerController == null)
         {
@@ -59,7 +59,7 @@ public class ShanBoundaryTests : MonoBehaviour
         Debug.Log("Running Health Overflow Test");
 
         // set the player's health to 3 (max health)
-        playerHealth.ChangeHealth(3);
+        playerHealth.changeHealth(3);
 
         // apply golden apple (increases health)
         PowerUp goldenApple = new GameObject("GoldenApple").AddComponent<PowerUp>(); // dynamically create PowerUp instance
@@ -67,7 +67,7 @@ public class ShanBoundaryTests : MonoBehaviour
         goldenApple.effectAmount = 5; // set effect amount for health boost
         goldenApple.sprite = null;
 
-        goldenApple.ApplyEffect(playerController);
+        goldenApple.applyEffect(playerController);
         Debug.Log($"Health after applying: {playerHealth.currentHealth}");
 
         // check if the health has exceeded the limit (3)
@@ -81,7 +81,7 @@ public class ShanBoundaryTests : MonoBehaviour
         }
     }
 
-    void RunStressTest()
+    void runStressTest()
     {
         if (playerController == null)
         {
@@ -100,7 +100,7 @@ public class ShanBoundaryTests : MonoBehaviour
 
         for (int i = 0; i < numberOfTests; i++)
         {
-            goldenApple.ApplyEffect(playerController);  // Apply the Golden Apple effect
+            goldenApple.applyEffect(playerController);  // Apply the Golden Apple effect
         }
 
         // After stress test, check health and print the result
@@ -117,11 +117,11 @@ public class ShanBoundaryTests : MonoBehaviour
         }
     }
 
-    public void RunShanTests()
+    public void runShanTests()
     {
-        RunInventoryBoundaryTest();
-        RunHealthOverflowTest();
-        RunStressTest();
+        runInventoryBoundaryTest();
+        runHealthOverflowTest();
+        runStressTest();
     }
 }
 

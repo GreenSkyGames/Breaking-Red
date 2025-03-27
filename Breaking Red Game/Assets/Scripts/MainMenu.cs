@@ -1,12 +1,13 @@
 // main menu script 
 
+using UnityEngine;
 using UnityEngine.SceneManagement; //to switch scenes 
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.InputSystem; 
 using System.Collections; 
 using System.Collections.Generic;
-using UnityEngine;
+
 
 public class MainMenu : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class MainMenu : MonoBehaviour
     }
 
 // Player decides to resume a previous game 
+    //Starts the game when the start game button is pressed
     public void StartGame()
     { 
         Debug.Log("Starting a new game");
@@ -31,6 +33,8 @@ public class MainMenu : MonoBehaviour
     }
 
 // Player decides to Quit the game 
+    
+    //Quits the game when the button is trigerred for quitgame
     public void QuitGame()
     {
         Debug.Log("Quitting game.");

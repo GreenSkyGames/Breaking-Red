@@ -25,6 +25,10 @@ TagManager:
   - NPCTestWall
   - NPCDeathWall
   - Grove1
+  - TheHippie
+  - TheAxman
+  - TheWizard
+  - TheCat
   layers:
   - Default
   - TransparentFX

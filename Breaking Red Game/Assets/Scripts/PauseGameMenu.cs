@@ -36,6 +36,7 @@ public class PauseGameMenu : MonoBehaviour
 // How pause menu called, p pressed to either call pause menu or remove it from the screen 
     void Update()
     {
+        //Toggle pause state when 'P' is pressed
         if(Input.GetKeyDown(KeyCode.P)){
             if (IsPaused)
             {
@@ -47,10 +48,9 @@ public class PauseGameMenu : MonoBehaviour
             }
         } 
     }
-
-// When game is resumed ... 
-    public void ResumeGame()
-    {
+    
+    //resumes the game when the player presses the resume game button in the pause menu
+    public void ResumeGame(){
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 
@@ -63,9 +63,8 @@ public class PauseGameMenu : MonoBehaviour
         //SceneManager.LoadScene("Level 1");
     }
 
-//when game is paused ... 
-    void PauseGame()
-    {
+    //Function to pause the game
+    void PauseGame(){
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 
@@ -78,10 +77,10 @@ public class PauseGameMenu : MonoBehaviour
         //SceneManager.LoadScene("PauseMenu");
     }
 
-// save button on pause menu, save player position 
+    //save game when the player chooses to save the game
     public void SaveGame()
     {
-        // Play the button click
+        // Play the button click sound
         AudioManager.instance.Play("ClickSound");
 
         // Assume that you're saving player's position
@@ -100,7 +99,7 @@ public class PauseGameMenu : MonoBehaviour
         }
     }
 
-// load game, previous game state recalled. 
+    //Load the Game if the player presses the loadgame button
     public void LoadGame()
     {
         // Check if saved data exists
@@ -128,9 +127,9 @@ public class PauseGameMenu : MonoBehaviour
             Debug.Log("No save data to load.");
         }
     }
-// main menu button clicked, function calls the Main menu 
-    public void LoadMenu()
-    {
+
+    //Loads the menu screen when the load menu button is clicked
+    public void LoadMenu(){
         // Play the button click
         AudioManager.instance.Play("ClickSound");
         AudioManager.instance.Play("MenuBGM");
@@ -138,9 +137,9 @@ public class PauseGameMenu : MonoBehaviour
         Debug.Log("Loading menu.");
         SceneManager.LoadScene("Start Menu");
     }
-// quit game option clicked. Game quit ... 
-    public void QuitGame()
-    {
+
+    //Quits the game when the player presses to quit the game
+    public void QuitGame(){
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 
