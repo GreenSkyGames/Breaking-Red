@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using Ink.Runtime;
 
 
-
 /*
 public class NPC
 {
@@ -16,7 +15,6 @@ public class NPC
 
 }
 */
-
 
 
 /* Name: Todd Carter

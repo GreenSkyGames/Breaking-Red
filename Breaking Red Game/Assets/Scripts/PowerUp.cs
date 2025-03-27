@@ -14,12 +14,12 @@ public class PowerUp : MonoBehaviour
     public itemName itemType;  // type of the power-up
     public Sprite sprite;
 
-    private InventoryManager inventoryManager;
+    private InventoryManager _inventoryManager;
 
     /* This function just gets the InventoryManager instance */
     void Start()
     {
-        inventoryManager = InventoryManager.sInstance;
+        _inventoryManager = InventoryManager.sInstance;
     }
 
     /* This function reacts when the Player collides with a power-up

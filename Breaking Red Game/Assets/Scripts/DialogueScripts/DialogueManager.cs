@@ -5,7 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 using Ink.Runtime;
 
-/*
+/* Name: Todd Carter
+ * Role: Team Lead 2 -- Software Architect
+ *
  *	This is the script for the dialogue manager, which is an object
  *	that enables the flow of data between the NPC and the player using
  *	the .ink json file.

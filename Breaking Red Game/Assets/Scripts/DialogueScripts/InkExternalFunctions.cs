@@ -4,8 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 
-/*
- * This is the script file that contains the functions which are then bound to the ink json file.
+/* Name: Todd Carter
+ * Role: Team Lead 2 -- Software Architect
+ *
+ *	This is the script file that contains the functions which are then bound to the ink json file.
  * These enable the usage of these methods through the ink file after they have been bound.
  *
  * This means these are the functions that will let NPCs have behaviors as a result of dialogue choices.
