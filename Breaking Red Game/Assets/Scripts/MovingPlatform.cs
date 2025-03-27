@@ -1,3 +1,10 @@
+/*Name: Alex Senst
+ * Role: Team Lead 2+ -- Software Architect
+ * 
+ * This file contains the definition for the MovingPlatform class
+ * This class is used to generate the movement of platforms within the game
+ * It inherets from the TerrainObjects class
+ */
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -19,6 +26,7 @@ public class MovingPlatform : TerrainObjects
 
     [SerializeField] private Tilemap tilemap;
 
+    //This sets the initial positions for all necessary variables in the scene
     void Start()
     {
         // Initialize starting position and calculate goal position
@@ -27,6 +35,9 @@ public class MovingPlatform : TerrainObjects
         _prevPos = _startPos;
     }
 
+    /*This updates once per frame
+     * Each time it updates, it moves the platform between specified locations at a constant speed
+     * If a player steps on the platform it continues moving while also moving the player with it*/
     void Update()
     {
         // Calculate interpolation factor using Mathf.PingPong for smooth back-and-forth motion
@@ -50,7 +61,9 @@ public class MovingPlatform : TerrainObjects
         _prevPos = currentPosition; // Update the previous position
     }
 
-    // Detect when the player steps onto the platform
+    /* This function detects if a player is in contact with or grounded on top of the platform
+     * If the player is on top of the platform, it turns off the boundary layer that triggers death while they're in contact
+     * It also notifies the testing script PlatformTest that the player got on the platform by calling OnPlayerEnterPlatform()*/
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
@@ -73,7 +86,9 @@ public class MovingPlatform : TerrainObjects
         
     }
 
-    // Detect when the player leaves the platform
+    /* This code detects when the player loses contact with the platform or leaves the platform
+     * If the player is no longer on the platform, it turns on the boundary layer that triggers death once again
+     It also notifies the testing script PlatformTest that the player got off of the platform by calling OnPlayerExitPlatform()*/
     private void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))

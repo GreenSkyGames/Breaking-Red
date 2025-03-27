@@ -36044,8 +36044,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f617cb365f9e0409201e29d4e50ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _horGoal: -6
-  _vertGoal: 0
+  _horGoal: 0
+  _vertGoal: -6
   _moveTime: 8
   tilemap: {fileID: 1108193309}
 --- !u!50 &1317520242

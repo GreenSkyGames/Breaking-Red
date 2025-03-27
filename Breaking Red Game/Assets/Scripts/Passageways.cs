@@ -1,20 +1,28 @@
+/*Name: Alex Senst
+ * Role: Team Lead 2+ -- Software Architect
+ * 
+ * This file contains the definition for the Passageways Class
+ * This class allows transitions between places in the level and between levels
+ * It inherets from TerrainObjects
+ */
 using System.Collections;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Passageways : MonoBehaviour
+public class Passageways : TerrainObjects
 {
     public CanvasGroup fadePanel;
+    /* This code checks the tag of an object when it collides with a passageway and plays a sound upon impact if it is a player
+     * It also chooses the next destination to transport the user to based on the current tag of the passageway and sends that to the getDestination function*/
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger!");
         if(other.CompareTag("Player"))
         {
             AudioManager.instance.Play("DoorSound"); // Play the open door sound
 
-            Vector2 newPosition = getDest();
+            Vector2 newPosition = getDestination();
             if(newPosition != Vector2.zero)
             {
                 // Log the tag to check the value
@@ -31,6 +39,11 @@ public class Passageways : MonoBehaviour
             }
         }
     }
+    /* This code sets up an Enumerator function that will allow a teleporting effect betweeen locations with a canvas that temporarily makes the player fade to black
+     * It begins the Coroutine fadeToBlack for half a second at first, sets a small delay for how long the screen remains black, then returns to normal
+     * It also changes the player's position during the time the screen is black to provide smooth movements
+     * It utilizes the ChangeBackgroundMUsic function as well to create a specific sound for passageway movement
+     * */
     private IEnumerator teleportWithFade(Collider2D player, Vector2 newPosition, Rigidbody2D rb)
     {
         yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
@@ -45,7 +58,8 @@ public class Passageways : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
-
+    /* This sets an enumerator to cause the screen to fade to a black panel naturally for a moment in the game
+     * It applies the Lerp function from the math library to cause the natural fade out for a specific elapsed time*/
     private IEnumerator fadeToBlack(float duration)
     {
         if (fadePanel == null) yield break;
@@ -60,6 +74,8 @@ public class Passageways : MonoBehaviour
         fadePanel.alpha = 1;
     }
 
+    /* This sets an enumerator to cause the screen to return back to normal from a black panel naturally in the game
+     * It applies the Lerp function from the math library to cause the natural fade in for a specific elapsed time*/
     private IEnumerator fadeFromBlack(float duration)
     {
         if (fadePanel == null) yield break;
@@ -73,7 +89,9 @@ public class Passageways : MonoBehaviour
         }
         fadePanel.alpha = 0;
     }
-    private Vector2 getDest()
+    /* This function determines where a player should go based on the tag of the passageway they make contact with
+     * It returns a value back to the original OnTriggerEnter2D function from above and properly changes the scenes as necessary for some levels*/
+    private Vector2 getDestination()
     {
         switch(gameObject.tag)
         {
