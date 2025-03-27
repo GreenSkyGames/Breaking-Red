@@ -49,7 +49,7 @@ public class DialogueManager : MonoBehaviour
 		_inkExternalFunctions = new InkExternalFunctions();
 		_inkExternalFunctions.bind(_story);
 
-		closeDialogue();
+		//closeDialogue();
 	}
 
 	//When the dialogue manager is destroyed, the functions are unbound.
@@ -127,7 +127,11 @@ public class DialogueManager : MonoBehaviour
 
 		//GameEventsManager.instance.dialogueEvents.DialogueStarted();  //Doesn't work, see DialoguePanelUI for reason why
 
+
+		//This is where the dialogue box is intially activated.
 		_dialogueBoxCanvas.SetActive(true);
+
+
 		//Debug.Log("Weird tag: " + _dialogueBoxCanvas.tag); //Better be tagged dialoguebox
 		//Debug.Log("Name is " + Name);
 

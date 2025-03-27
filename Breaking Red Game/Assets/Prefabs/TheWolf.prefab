@@ -332,10 +332,9 @@ MonoBehaviour:
   detectionPoint: {fileID: 3572575336149032000}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
-  myCanvas: {fileID: 2140644491550386675, guid: 9a55e3277d0c318488ed4e9d6a668044, type: 3}
+    m_Bits: 64
   isHostile: 0
-  facingRight: 0
+  facingRight: 1
   enemySR: {fileID: 8094443961451776758}
   currentHealth: 9
 --- !u!114 &2954421103497549009

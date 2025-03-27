@@ -37,7 +37,8 @@ public class NPCManager : MonoBehaviour
 	public LayerMask playerLayer;
 	//private bool isChasing;
 
-	public Canvas myCanvas;
+	//private Canvas myCanvas;
+	private GameObject myCanvas;
 
 	private float attackCooldownTimer;
 	private int facingDirection = -1;
@@ -62,6 +63,12 @@ public class NPCManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 		changeState(EnemyState.Idle);
+
+		myCanvas = GameObject.Find("DialogueBoxCanvas");
+
+		//myCanvas = temp.gameObject.GetComponent<Canvas>();
+
+		Debug.Log("myCanvas tag is " + myCanvas.tag);
     }
 
 	//OnEnable is being used to create a delay that ensures the GameEventsManager has started first.
@@ -80,6 +87,7 @@ public class NPCManager : MonoBehaviour
 		//Debug.Log("Hostility enable test");
 		GameEventsManager.instance.dialogueEvents.onStartHostility += onHostility;
 		GameEventsManager.instance.dialogueEvents.onStopHostility += offHostility;
+		myCanvas.gameObject.SetActive(false);
 	}
 
 	//When an NPC is disabled, the functions are removed as events.
@@ -261,6 +269,7 @@ public class NPCManager : MonoBehaviour
 	//Now to stop the enemy from attacking at the same time...
 	public void displayDialogueBox()
 	{
+		Debug.Log("myCanvas is: " + myCanvas.tag);
 		if(myCanvas.gameObject.activeSelf == true)
 		{
 			//myCanvas.gameObject.SetActive(false);
