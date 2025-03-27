@@ -1,82 +1,89 @@
+/*
+* Name: Hengyi Tian
+* Role: TL5-- AI Specialist
+* This file contains the definition for the EnvironmentManager class.
+* It inherits from MonoBehaviour.
+*/
+
 using Ink.Parsed;
 using UnityEngine;
 
-/*
- * Name:  Hengyi Tian
- * Role:   TL5 -- AI Specialist
- * This file contains the definition for the EnvironmentManager class.
- * It inherits from MonoBehaviour.
- */
+// Provides a virtual method that can be overridden to return a random weather condition.
 public class Weather
 {
-    public virtual int getRandomWeather()
-    //public int getRandomWeather()
+    // Virtual function to get random weather value
+    public virtual int v_getRandomWeather()
     {
         return 0;
     }
-    
 }
+
+// Derived class that overrides the virtual weather function to return a randomly generated weather value.
 public class RandomWeather : Weather
 {
-    public override int getRandomWeather()
-    //public int getRandomWeather()
+    public override int v_getRandomWeather()
     {
         return Random.Range(0, 2);  // 0 = rain, 1 = snow
     }
 }
 
+// Random weather updates and change visual effects accordingly.
 public class WeatherManager : MonoBehaviour
 {
-    public GameObject rainEffect;  // Rain particle effect
-    public GameObject snowEffect;  // Snow particle effect
-    Weather myweather;
+    public GameObject rainEffect;    // Rain particle effect
+    public GameObject snowEffect;    // Snow particle effect
+
+    private Weather _myWeather;      // Weather instance used to get current weather condition
+
     private void Start()
     {
-        myweather = new RandomWeather();
-        // Randomly choose weather at the start
-        RandomWeather();
+        _myWeather = new RandomWeather();
 
-        // Change weather every 8 seconds
-        InvokeRepeating("RandomWeather", 0f, 8f);
+        updateWeather();  // Set initial weather
+
+        InvokeRepeating(nameof(updateWeather), 0f, 8f); // Change weather every 8 seconds
     }
 
-    public void RandomWeather(){
-        int weatherChoice = myweather.getRandomWeather();
+    // Randomly selects a weather type (rain or snow) and activates the its visual effect.
+    public void updateWeather()
+    {
+        int weatherChoice = _myWeather.v_getRandomWeather();
+
         if (weatherChoice == 0)
         {
-            // Activate rain and deactivate snow
-            ActivateRain();
+            activateRain();
         }
         else
         {
-            // Activate snow and deactivate rain
-            ActivateSnow();
+            activateSnow();
         }
     }
 
-    private void ActivateRain()
+    // Activates rain effect and deactivates snow effect.
+    private void activateRain()
     {
         if (rainEffect != null)
         {
-            rainEffect.SetActive(true);  // Activate rain
+            rainEffect.SetActive(true);
         }
 
         if (snowEffect != null)
         {
-            snowEffect.SetActive(false);  // Deactivate snow
+            snowEffect.SetActive(false);
         }
     }
 
-    private void ActivateSnow()
+    // Activates snow effect and deactivates rain effect.
+    private void activateSnow()
     {
         if (snowEffect != null)
         {
-            snowEffect.SetActive(true);  // Activate snow
+            snowEffect.SetActive(true);
         }
 
         if (rainEffect != null)
         {
-            rainEffect.SetActive(false);  // Deactivate rain
+            rainEffect.SetActive(false);
         }
     }
 }
