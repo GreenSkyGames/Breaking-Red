@@ -15,7 +15,7 @@ public class InventoryManager : MonoBehaviour
     public ItemSlot[] itemSlot;
     public static InventoryManager sInstance;
 
-    private bool menuActivated;
+    private bool _menuActivated;
 
     /* This function updates the scene by toggling the inventory if the player clicks I
      *	It only uses the function toggleInventory() */
@@ -82,17 +82,17 @@ public class InventoryManager : MonoBehaviour
      * Uses built in Unity function SetActive() */
     private void toggleInventory()
     {
-        if(menuActivated) // if I clicked when menu is on, turn it off
+        if(_menuActivated) // if I clicked when menu is on, turn it off
         {
             Time.timeScale = 1;
             inventoryMenu.SetActive(false);
-            menuActivated = false;
+            _menuActivated = false;
         }
-        else if(!menuActivated) // if I clicked when menu is off, turn it on
+        else if(!_menuActivated) // if I clicked when menu is off, turn it on
         {
             Time.timeScale = 0;
             inventoryMenu.SetActive(true);
-            menuActivated = true;
+            _menuActivated = true;
         }
     }
 }
