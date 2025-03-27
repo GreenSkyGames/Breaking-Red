@@ -80965,6 +80965,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2135958100}
     m_Modifications:
+    - target: {fileID: -1957824645482550690, guid: 178f38a0413a2b44aa9e585efb216073, type: 3}
+      propertyPath: fadePanel
+      value: 
+      objectReference: {fileID: 1880488026}
     - target: {fileID: -1229886268489971916, guid: 178f38a0413a2b44aa9e585efb216073, type: 3}
       propertyPath: fadePanel
       value: 
@@ -89064,6 +89068,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2135958100}
     m_Modifications:
+    - target: {fileID: -1957824645482550690, guid: 178f38a0413a2b44aa9e585efb216073, type: 3}
+      propertyPath: fadePanel
+      value: 
+      objectReference: {fileID: 1880488026}
     - target: {fileID: -1229886268489971916, guid: 178f38a0413a2b44aa9e585efb216073, type: 3}
       propertyPath: fadePanel
       value: 
