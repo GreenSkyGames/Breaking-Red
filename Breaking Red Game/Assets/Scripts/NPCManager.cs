@@ -4,6 +4,28 @@ using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 
+
+
+/*
+public class NPC
+{
+	public virtual bool nonHostile
+	{
+		return false;
+	}
+
+}
+*/
+
+
+
+/*
+ *	This is the script for the NPCManager.
+ *	It controls the majority of NPC actions and activities.
+ *	This includes combat, swapping animations, and utilizing
+ *	the dialogueBox canvas that is assigned through the editor.
+ *
+*/
 public class NPCManager : MonoBehaviour
 {
 	public float speed = 2;
@@ -42,12 +64,13 @@ public class NPCManager : MonoBehaviour
 		changeState(EnemyState.Idle);
     }
 
+	//OnEnable is being used to create a delay that ensures the GameEventsManager has started first.
 	private void OnEnable()
 	{
 		StartCoroutine(WaitForGameEventsManager());
 	}
 
-	//This activates these functions for ALL examples of NPCManager
+	//Once the GameEventsManager has started, these functions can be subscribed as events.
 	private IEnumerator WaitForGameEventsManager()
 	{
 		while(GameEventsManager.instance == null || GameEventsManager.instance.dialogueEvents == null)
@@ -59,6 +82,7 @@ public class NPCManager : MonoBehaviour
 		GameEventsManager.instance.dialogueEvents.onStopHostility += offHostility;
 	}
 
+	//When an NPC is disabled, the functions are removed as events.
 	private void OnDisable()
 	{
 		if(GameEventsManager.instance != null && GameEventsManager.instance.dialogueEvents != null)
@@ -246,7 +270,7 @@ public class NPCManager : MonoBehaviour
 		}
 	}
 
-
+	//changeHealth() alters the NPCs health by the passed amount.
     public void changeHealth(int amount)
     {
         currentHealth += amount;

@@ -4,10 +4,18 @@ using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 
+/*
+ * This is the script file that contains the functions which are then bound to the ink json file.
+ * These enable the usage of these methods through the ink file after they have been bound.
+ *
+ * This means these are the functions that will let NPCs have behaviors as a result of dialogue choices.
+ *
+*/
 public class InkExternalFunctions : MonoBehaviour
 {
 	public GameObject temp;
 
+	//Function to bind the methods.
 	public void bind(Story story)
 	{
 		//Each ink function needs a separate binding.
@@ -20,6 +28,7 @@ public class InkExternalFunctions : MonoBehaviour
 
 	}
 
+	//Function to unbind the methods.
 	public void unbind(Story story)
 	{
 		story.UnbindExternalFunction("startWolfHostility");
@@ -41,6 +50,7 @@ public class InkExternalFunctions : MonoBehaviour
 		temp.GetComponent<NPCManager>().onHostility();
 	}
 
+	//Turn off The Wolf hostility
     private void stopWolfHostility(bool activate)
 	{
 		//Debug.Log("Miracle2");
@@ -48,18 +58,21 @@ public class InkExternalFunctions : MonoBehaviour
 		temp.GetComponent<NPCManager>().offHostility();
 	}
 
+	//Turn on the Purple Torch Enemy hostility
     private void startPurpleTorchEnemyHostility(bool activate)
 	{
 		temp = GameObject.FindWithTag("PurpleTorchEnemy");
 		temp.GetComponent<NPCManager>().onHostility();
 	}
 
+	//Turn off the Purple Torch Enemy hostility
     private void stopPurpleTorchEnemyHostility(bool activate)
 	{
 		temp = GameObject.FindWithTag("PurpleTorchEnemy");
 		temp.GetComponent<NPCManager>().offHostility();
 	}
 
+	//Turn on The Bear hostility
     private void startBearHostility(bool activate)
 	{
 		Debug.Log("Miracle");
@@ -67,6 +80,7 @@ public class InkExternalFunctions : MonoBehaviour
 		temp.GetComponent<NPCManager>().onHostility();
 	}
 
+	//Turn off The Bear hostility
     private void stopBearHostility(bool activate)
 	{
 		Debug.Log("Miracle2");

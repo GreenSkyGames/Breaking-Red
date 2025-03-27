@@ -5,6 +5,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+ *	This is the script that handles what is displayed on the dialogue box,
+ *	and how the dialogue choice buttons are displayed.
+ *
+*/
 public class DialoguePanelUI : MonoBehaviour
 {
     private GameObject contentParent;
@@ -13,17 +18,20 @@ public class DialoguePanelUI : MonoBehaviour
 	[SerializeField] private TMP_Text _nameText;
 	[SerializeField] private DialogueChoiceButton[] _choiceButtons;
 
+	//On Awake, the panel is reset, just in case.
 	private void Awake()
 	{
 		//contentParent.SetActive(false);
 		resetPanel();
 	}
 
+	//On enable, a coroutine is started for timing.
 	private void OnEnable()
 	{
 		StartCoroutine(WaitForGameEventsManager());
 	}
 
+	//The coroutine makes sure the methods are only subscribed to the event manager after the manager is active.
 	private IEnumerator WaitForGameEventsManager()
 	{
 		while(GameEventsManager.instance == null || GameEventsManager.instance.dialogueEvents == null)
@@ -39,6 +47,7 @@ public class DialoguePanelUI : MonoBehaviour
 		GameEventsManager.instance.dialogueEvents.onDisplayDialogue += displayDialogue;
 	}
 
+	//Disabling the panel unsubscribes the methods from the manager.
 	private void OnDisable()
 	{
 		if(GameEventsManager.instance != null && GameEventsManager.instance.dialogueEvents != null)
@@ -49,14 +58,17 @@ public class DialoguePanelUI : MonoBehaviour
 		}
 	}
 
+	//A method to activate the dialogue box canvas.
 	private void dialogueStarted()
 	{
 		contentParent.SetActive(true);
-		Debug.Log("Weird tag ");
+		//Debug.Log("Weird tag ");
 		//temp = GameObject.FindWithTag("DialogueBox");
 		//temp.SetActive(true);
 		//ResetPanel();
 	}
+
+	//A method to deactivate the dialogue box when finished.
 	private void dialogueFinished()
 	{
 		contentParent = GameObject.FindWithTag("DialogueBox");
@@ -65,6 +77,9 @@ public class DialoguePanelUI : MonoBehaviour
 		resetPanel();
 	}
 
+	//This is the method that displays the dialogue on the box.
+	//It receives the string for dialogue, the list of choices, and the string for name
+	// and incorporates them into the dialogue panel text box.
 	private void displayDialogue(string dialogueLine, List<Choice> dialogueChoices, string name)
 	{
 		_dialogueText.text = dialogueLine;
@@ -103,6 +118,7 @@ public class DialoguePanelUI : MonoBehaviour
 		}
 	}
 
+	//Method to clear the text on the panel.
 	private void resetPanel()
 	{
 		_dialogueText.text = "";

@@ -5,6 +5,12 @@ using UnityEngine.UI;
 using TMPro;
 using Ink.Runtime;
 
+/*
+ *	This is the script for the dialogue manager, which is an object
+ *	that enables the flow of data between the NPC and the player using
+ *	the .ink json file.
+ *	
+*/
 public class DialogueManager : MonoBehaviour
 {
 	public static DialogueManager Instance { get; private set; }
@@ -28,6 +34,12 @@ public class DialogueManager : MonoBehaviour
 
 	private int _currentChoiceIndex = -1;
 
+	//On Awake, the diaogue box, the ink json file, and the inkExternal functions
+	//are all found.
+	//
+	//Further, the inkExternalFunctions are bound, which allows the .ink file to use functions.
+	//
+	//Lastly, the dialogue box is closed, just in case it is open. 
 	private void Awake()
 	{
 		_dialogueBoxCanvas = GameObject.FindWithTag("DialogueBox");
@@ -40,11 +52,13 @@ public class DialogueManager : MonoBehaviour
 		closeDialogue();
 	}
 
+	//When the dialogue manager is destroyed, the functions are unbound.
 	private void OnDestroy()
 	{
 		_inkExternalFunctions.unbind(_story);
 	}
 
+	//When the manager is enabled, a coroutine is started for the sake of timing.
 	private void OnEnable()
 	{
 		//_dialogueBoxCanvas = GameObject.Find("GameEventsManager");
@@ -52,6 +66,8 @@ public class DialogueManager : MonoBehaviour
 		StartCoroutine(WaitForGameEventsManager());
 	}
 
+	//Waiting for the GameEventsManager ensures the correct functions are available.
+	//This then subscribes the functions to the event manager.
 	private IEnumerator WaitForGameEventsManager()
 	{
 		while(GameEventsManager.instance == null)
@@ -64,6 +80,7 @@ public class DialogueManager : MonoBehaviour
 		GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex += updateChoiceIndex;
 	}
 
+	//When disabled, the functions are unsubscribed from the manager.
 	private void OnDisable()
 	{
 		//Debug.Log("Disable test");
@@ -72,11 +89,13 @@ public class DialogueManager : MonoBehaviour
 		GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex -= updateChoiceIndex;
 	}
 
+	//A simple method to update the choice index for displaying the correct choice.
 	private void updateChoiceIndex(int choiceIndex)
 	{
 		this._currentChoiceIndex = choiceIndex;
 	}
 
+	//submitPressed advances the dialoge using continueOrExitStory()
 	//This should perhaps be bound to a Next button
 	//Works as a button
 	public void submitPressed()
@@ -89,6 +108,7 @@ public class DialogueManager : MonoBehaviour
 		continueOrExitStory();
 	}
 
+	//This starts the dialogue using the knot name to locate the dialogue in the ink json.
 	private void enterDialogue(string knotName)
 	{
 		Debug.Log("Entering dialogue for knot name: " + knotName);
@@ -127,6 +147,7 @@ public class DialogueManager : MonoBehaviour
 		continueOrExitStory();
 	}
 
+	//This advances the dialogue to the next step of the index.
 	//This is currently being done by button click instead of event management
 	public void continueOrExitStory()
 	{
@@ -172,6 +193,7 @@ public class DialogueManager : MonoBehaviour
 		}
 	}
 
+	//A method to safely exit the dialogue sequence.
 	private void exitDialogue()
 	{
 		//Makes them end on a different frame
@@ -187,12 +209,13 @@ public class DialogueManager : MonoBehaviour
 		_story.ResetState();
 	}
 
+	//Simple method to check if a line of dialogue is empty.
 	private bool isLineBlank(string dialogueLine)
 	{
 		return dialogueLine.Trim().Equals("") || dialogueLine.Trim().Equals("\n");
 	}
 
-
+	//A reliable means to close the dialogue box.
 	//If this is used by the canvas button, it will not inherit currentNPC
 	//This means the NPC talking will retain the last state given
 	public void closeDialogue()
@@ -204,6 +227,7 @@ public class DialogueManager : MonoBehaviour
 		return;
 	}
 
+	//A reliable means to open the dialogue box.
 	public void openDialogue()
 	{
 		//_dialogueBoxCanvas = GameObject.FindWithTag("DialogueBox");
