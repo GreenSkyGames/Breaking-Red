@@ -1,6 +1,12 @@
 using Ink.Parsed;
 using UnityEngine;
 
+/*
+ * Name:  Hengyi Tian
+ * Role:   TL5 -- AI Specialist
+ * This file contains the definition for the EnvironmentManager class.
+ * It inherits from MonoBehaviour.
+ */
 public class Weather
 {
     public virtual int getRandomWeather()
