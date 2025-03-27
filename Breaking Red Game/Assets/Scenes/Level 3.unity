@@ -80477,17 +80477,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1590783878}
     m_Modifications:
+    - target: {fileID: 4430379740713531272, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
+      propertyPath: myCanvas
+      value: 
+      objectReference: {fileID: 619725948}
     - target: {fileID: 5317714762158171503, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
       propertyPath: myCanvas
       value: 
       objectReference: {fileID: 619725948}
     - target: {fileID: 7070319663285406009, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80.59601
+      value: 87.59
       objectReference: {fileID: 0}
     - target: {fileID: 7070319663285406009, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -43.295135
+      value: -77.35
       objectReference: {fileID: 0}
     - target: {fileID: 7070319663285406009, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -80961,6 +80965,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2135958100}
     m_Modifications:
+    - target: {fileID: -1229886268489971916, guid: 178f38a0413a2b44aa9e585efb216073, type: 3}
+      propertyPath: fadePanel
+      value: 
+      objectReference: {fileID: 1880488026}
     - target: {fileID: 5414550908084049350, guid: 178f38a0413a2b44aa9e585efb216073, type: 3}
       propertyPath: m_Name
       value: TestRunnerMaze
@@ -89056,6 +89064,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2135958100}
     m_Modifications:
+    - target: {fileID: -1229886268489971916, guid: 178f38a0413a2b44aa9e585efb216073, type: 3}
+      propertyPath: fadePanel
+      value: 
+      objectReference: {fileID: 1880488026}
     - target: {fileID: 5414550908084049350, guid: 178f38a0413a2b44aa9e585efb216073, type: 3}
       propertyPath: m_Name
       value: TestRunnerLvl4

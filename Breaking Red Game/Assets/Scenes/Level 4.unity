@@ -9251,6 +9251,10 @@ PrefabInstance:
       propertyPath: myCanvas
       value: 
       objectReference: {fileID: 1083986790}
+    - target: {fileID: 6134068312372966504, guid: 02c8b07b06de24a48b7e1971e46310fd, type: 3}
+      propertyPath: myCanvas
+      value: 
+      objectReference: {fileID: 1083986790}
     - target: {fileID: 8048961054867401538, guid: 02c8b07b06de24a48b7e1971e46310fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47.6
@@ -11967,6 +11971,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1229886268489971916, guid: 178f38a0413a2b44aa9e585efb216073, type: 3}
+      propertyPath: fadePanel
+      value: 
+      objectReference: {fileID: 1548774294}
     - target: {fileID: 5414550908084049350, guid: 178f38a0413a2b44aa9e585efb216073, type: 3}
       propertyPath: m_Name
       value: Door to L4 (1)
