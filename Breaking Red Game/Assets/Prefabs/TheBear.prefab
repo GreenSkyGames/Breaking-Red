@@ -302,8 +302,7 @@ MonoBehaviour:
   detectionPoint: {fileID: 1305255603190529075}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
-  myCanvas: {fileID: 2140644491550386675, guid: 9a55e3277d0c318488ed4e9d6a668044, type: 3}
+    m_Bits: 64
   isHostile: 0
   facingRight: 0
   enemySR: {fileID: 4036877050532623419}
