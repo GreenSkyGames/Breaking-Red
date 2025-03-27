@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 104948869516281668}
   - component: {fileID: 4430152414586786346}
   - component: {fileID: 1401320179408736268}
-  - component: {fileID: 5958536976777283597}
+  - component: {fileID: 1430918819088531860}
   m_Layer: 7
   m_Name: The Cat
   m_TagString: TheCat
@@ -252,7 +252,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &5958536976777283597
+--- !u!114 &1430918819088531860
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 134765855763045823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
@@ -271,11 +271,11 @@ MonoBehaviour:
   detectionPoint: {fileID: 6416164032521608940}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 64
-  myCanvas: {fileID: 0}
+    m_Bits: 0
+  myCanvas: {fileID: 2140644491550386675, guid: 9a55e3277d0c318488ed4e9d6a668044, type: 3}
   isHostile: 0
   facingRight: 0
-  enemySR: {fileID: 0}
+  enemySR: {fileID: 5889827829237335769}
   currentHealth: 9
 --- !u!1 &3684297223028477185
 GameObject:
