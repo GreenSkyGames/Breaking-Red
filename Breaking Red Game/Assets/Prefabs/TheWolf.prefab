@@ -79,8 +79,8 @@ GameObject:
   - component: {fileID: 6834017317502949775}
   - component: {fileID: 1231940742920002264}
   - component: {fileID: 6273597732280082222}
-  - component: {fileID: 4547230974554357218}
   - component: {fileID: -8190280063649045483}
+  - component: {fileID: 2432405789508634634}
   m_Layer: 7
   m_Name: TheWolf
   m_TagString: TheWolf
@@ -327,31 +327,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueKnotName: TheWolf
---- !u!114 &4547230974554357218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7729365132012887990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  attackRange: 1
-  attackCooldown: 1
-  playerDetectRange: 5
-  detectionPoint: {fileID: 3572575336149032000}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  myCanvas: {fileID: 2140644491550386675, guid: 9a55e3277d0c318488ed4e9d6a668044, type: 3}
-  isHostile: 0
-  facingRight: 0
-  enemySR: {fileID: 8094443961451776758}
-  currentHealth: 9
 --- !u!114 &-8190280063649045483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,3 +340,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueKnotName: 
+--- !u!114 &2432405789508634634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729365132012887990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  attackRange: 1
+  attackCooldown: 1
+  playerDetectRange: 5
+  detectionPoint: {fileID: 3572575336149032000}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  myCanvas: {fileID: 0}
+  isHostile: 0
+  facingRight: 0
+  enemySR: {fileID: 0}
+  currentHealth: 9

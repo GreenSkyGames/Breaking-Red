@@ -1175,7 +1175,6 @@ GameObject:
   - component: {fileID: 1169710118}
   - component: {fileID: 1169710117}
   - component: {fileID: 1169710116}
-  - component: {fileID: 1169710122}
   - component: {fileID: 1169710121}
   - component: {fileID: 1169710120}
   m_Layer: 5
@@ -1281,7 +1280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e63bc1687fc44709517aae86db3cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggle: {fileID: 413776455}
+  _toggle: {fileID: 413776455}
 --- !u!114 &1169710121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,18 +1295,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuitButton: {fileID: 1727121393}
   StartButton: {fileID: 296529776}
---- !u!114 &1169710122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169710115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c697438e0b9214e8c3c3bbf2c96b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1369328471
 GameObject:
   m_ObjectHideFlags: 0

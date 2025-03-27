@@ -29,6 +29,7 @@ TagManager:
   - TheAxman
   - TheWizard
   - TheCat
+  - NPCStressWall
   layers:
   - Default
   - TransparentFX
@@ -38,7 +39,7 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - 
+  - Trees
   - 
   - 
   - 
