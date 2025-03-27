@@ -137,18 +137,22 @@ public class NPCManager : MonoBehaviour
     }
 
 	//Quality of life functions for changing hostility.
+	//Swap hostility
 	public void switchHostility()
 	{
 		isHostile = !isHostile;
 	}
+	//Turn off hostility
 	public void offHostility()
 	{
 		isHostile = false;
 	}
+	//Turn on hostility
 	public void onHostility()
 	{
 		isHostile = true;
 	}
+	//Set hostility
 	public void setHostility(bool activate)
 	{
 		isHostile = activate;
