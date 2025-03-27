@@ -50,13 +50,13 @@ public class InventoryManager : MonoBehaviour
     {
         for (int i = 0; i < itemSlot.Length; i++)
         {
-            if(itemSlot[i].isOccupied == false)
+            if(itemSlot[i] != null && itemSlot[i].isOccupied == false)
             {
                 itemSlot[i].updateInventoryUI(itemName, itemSprite);
                 return;
             }
         }
-        Debug.Log("Inventory is full!");
+        Debug.Log("Inventory is full or slot invalid!");
     }
 
     /* This function loops through each slot in inventory and counts occupied ones 

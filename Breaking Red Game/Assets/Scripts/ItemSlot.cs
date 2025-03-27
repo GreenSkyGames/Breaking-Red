@@ -21,6 +21,11 @@ public class ItemSlot : MonoBehaviour
      * If an item is added, it makes isOccupied true */
     public void updateInventoryUI(string itemName, Sprite itemSprite)
     {
+        if (itemImage == null) // Check if the image is null (destroyed)
+        {
+            Debug.LogWarning("Item image is missing or has been destroyed!");
+            return; // Prevent further execution if the itemImage is null
+        }
         this.itemName = itemName;
         this.itemSprite = itemSprite;
         isOccupied = true;

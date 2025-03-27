@@ -19,6 +19,11 @@ public class PowerUpManager : MonoBehaviour
      * For others, SetActive() for the choice prompt is set to true and a coroutine starts and uses waitForPlayerInput() */
     public void handlePowerUpInteraction(PowerUp powerUp, PlayerController playerController)
     {
+        if (powerUp == null) // Check if powerUp object is null before proceeding
+        {
+            Debug.LogWarning("PowerUp object is null!");
+            return;
+        }
         /* poison apple applies immediately */
         if (powerUp.itemType == PowerUp.itemName.PoisonApple)
         {
