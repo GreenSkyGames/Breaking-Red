@@ -1,5 +1,4 @@
-﻿/* File Heading Example */
-/*
+﻿/*
  * Name:  Mark Eldridge
  * Role:   Main Character Customization
  * This file contains the definition for the HealthBarController class.
