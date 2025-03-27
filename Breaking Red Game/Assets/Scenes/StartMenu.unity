@@ -1431,6 +1431,13 @@ MonoBehaviour:
     Volume: 0.4
     Pitch: 1
     Loop: 0
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 8d97fd5d1ab1a414f85bf0d270312403, type: 3}
+    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: FireSound
+    Volume: 0.4
+    Pitch: 1
+    Loop: 0
   allAudioSources: []
   audioSourceStates: 
 --- !u!4 &1369328473

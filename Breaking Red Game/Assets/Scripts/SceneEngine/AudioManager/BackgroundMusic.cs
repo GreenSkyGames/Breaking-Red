@@ -45,10 +45,12 @@ public class BackgroundMusic : MonoBehaviour
                 StartCoroutine(AudioManager.instance.FadeOut("L1BGM", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeOut("WolfSound", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeIn("CabinBGM", 1.0f)); // Fade in level 1.1 music
+                StartCoroutine(AudioManager.instance.FadeIn("FireSound", 1.0f));
                 break;
 
             case "IL1":
                 StartCoroutine(AudioManager.instance.FadeOut("CabinBGM", 1.0f));
+                StartCoroutine(AudioManager.instance.FadeOut("FireSound", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeIn("L1BGM", 1.0f)); // Fade in level 1 music
                 StartCoroutine(AudioManager.instance.FadeIn("WolfSound", 1.0f));
                 break;
