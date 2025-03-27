@@ -14,7 +14,7 @@ public class NPCStressTestActorScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {		
 		//Check for the testing barrier
-        if (NPCStressWall == null)
+        /*if (NPCStressWall == null)
         {
             Debug.LogError("NPCDeathWall GameObject not found. Ensure it has the 'NPCDeathWall' tag.");
         }
@@ -24,6 +24,6 @@ public class NPCStressTestActorScript : MonoBehaviour
             Debug.Log(gameObject.name + " has exited the boundary!");
 
 			NPCStressWall.gameObject.GetComponent<NPCStressTestScript>().StopSpawning();
-        }
+        }*/ //COMMENTED OUT FOR TESTING
     }
 }
