@@ -30,6 +30,7 @@ TagManager:
   - TheWizard
   - TheCat
   - NPCStressWall
+  - IL2
   layers:
   - Default
   - TransparentFX

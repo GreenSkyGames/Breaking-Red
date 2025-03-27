@@ -7,7 +7,7 @@ public class NPCStressTestActorScript : MonoBehaviour
 	//Find the testing environmental objects and deactivate them.
 	public void Awake()
 	{
-		NPCStressWall = FindObjectOfType<NPCStressTestScript>();
+		NPCStressWall = FindAnyObjectByType<NPCStressTestScript>();
 	}
 
 	//When collision detected, break out of the for loop to stop spawning.

@@ -105,6 +105,8 @@ public class Passageways : TerrainObjects
             case "L2":
                 SceneManager.LoadScene("Level 2");
                 return new Vector2(-19.7f, -21.2f);
+            case "IL2":
+                return new Vector2(60, -47);
             case "L3":
                 SceneManager.LoadScene("Level 3");
                 return new Vector2(-19.7f, -21.2f);
