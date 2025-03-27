@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager instance;
+    public static InventoryManager sInstance;
     public GameObject inventoryMenu;
-    private bool menuActivated;
     public ItemSlot[] itemSlot;
+    private bool menuActivated;
 
     void Update()
     {
@@ -36,9 +36,9 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         // singleton pattern to ensure one instance of InventoryManager
-        if (instance == null)
+        if (sInstance == null)
         {
-            instance = this;
+            sInstance = this;
             DontDestroyOnLoad(this.gameObject);
         }
         else

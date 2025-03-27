@@ -10,7 +10,7 @@ public class ShanBoundaryTests : MonoBehaviour
     void runInventoryBoundaryTest()
     {
         // get the InventoryManager instance
-        inventoryManager = InventoryManager.instance;
+        inventoryManager = InventoryManager.sInstance;
 
         if (inventoryManager == null)
         {

@@ -40,7 +40,7 @@ public class PowerUpManager : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.L))  // 'L' for Store for Later
             {
                 // add to inventory for later use
-                InventoryManager.instance.addToInventory(powerUp.type.ToString(), powerUp.sprite);
+                InventoryManager.sInstance.addToInventory(powerUp.type.ToString(), powerUp.sprite);
                 Debug.Log("Item added to inventory");
                 Destroy(powerUp.gameObject);
                 inputReceived = true;

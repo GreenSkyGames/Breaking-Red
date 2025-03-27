@@ -11,7 +11,7 @@ public class PowerUp : MonoBehaviour
 
     void Start()
     {
-        inventoryManager = InventoryManager.instance;
+        inventoryManager = InventoryManager.sInstance;
     }
     // apply effect to the player
     public void applyEffect(PlayerController playerController)
