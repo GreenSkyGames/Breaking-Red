@@ -46,6 +46,8 @@ public class PowerUpManager : MonoBehaviour
     private IEnumerator waitForPlayerInput(PowerUp powerUp, PlayerController playerController)
     {
         bool inputReceived = false;
+                
+        StartCoroutine(AudioManager.instance.PauseAllAudioSources()); // Pause all audio sources
 
         while (!inputReceived)
         {
@@ -71,6 +73,8 @@ public class PowerUpManager : MonoBehaviour
         /* hide the prompt after the player makes a choice */
         Debug.Log("Choice prompt hidden");
         Time.timeScale = 1;
+
+        StartCoroutine(AudioManager.instance.RestoreAudioStates()); // Restore all audio sources
         choicePrompt.SetActive(false);
     }
 }
