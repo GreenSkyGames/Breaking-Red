@@ -5,16 +5,26 @@ using System.Collections.Generic;
 using Ink.Runtime;
 
 
-/*
+//Simple class to set up example of dynamic binding
+//This virtual should set the NPCs to be hostile.
 public class NPC
 {
-	public virtual bool nonHostile
+	public virtual bool setNonHostile()
 	{
-		return false;
+		return true;
 	}
 
 }
-*/
+
+//This override should set the NPCs to be nonhostile.
+//This guarantees they won't be hostile at first.
+public class setNPC : NPC
+{
+	public override bool setNonHostile()
+	{
+		return false;
+	}
+}
 
 
 /* Name: Todd Carter
@@ -53,6 +63,10 @@ public class NPCManager : MonoBehaviour
     public SpriteRenderer enemySR;
 	public int currentHealth = 9;
 
+	private List<GameObject> _clueList = new List<GameObject>();
+
+	private NPC _npc;
+
     //Start is currently being used to:
 	// - find rigidbody component
 	// - find animator component
@@ -65,9 +79,12 @@ public class NPCManager : MonoBehaviour
 
 		myCanvas = GameObject.Find("DialogueBoxCanvas");
 
-		//myCanvas = temp.gameObject.GetComponent<Canvas>();
+		//Debug.Log("myCanvas tag is " + myCanvas.tag);
 
-		Debug.Log("myCanvas tag is " + myCanvas.tag);
+		//Here is the usage of the dynamic binding.
+		_npc = new setNPC();
+		bool hostility = _npc.setNonHostile();
+		setHostility(hostility);
     }
 
 	//OnEnable is being used to create a delay that ensures the GameEventsManager has started first.
@@ -162,6 +179,9 @@ public class NPCManager : MonoBehaviour
 	//Set hostility
 	public void setHostility(bool activate)
 	{
+		//dynamic thing happens here?
+		
+
 		isHostile = activate;
 	}
 
