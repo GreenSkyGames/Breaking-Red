@@ -9,15 +9,9 @@ using UnityEngine;
 
 public class TerrainObjects : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Vector3 spawnPos;
+    public virtual void Spawn()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        transform.position = spawnPos;
     }
 }
