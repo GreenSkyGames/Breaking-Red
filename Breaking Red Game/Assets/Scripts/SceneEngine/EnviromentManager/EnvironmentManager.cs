@@ -1,11 +1,12 @@
 using UnityEngine;
 
 /*
- * Name:  Hengyi Tian
- * Role:   TL5 -- AI Specialist
+ * Name: Hengyi Tian
+ * Role: TL5-- AI Specialist
  * This file contains the definition for the EnvironmentManager class.
  * It inherits from MonoBehaviour.
  */
+
 public class EnvironmentManager : MonoBehaviour
 {
     private static EnvironmentManager instance;

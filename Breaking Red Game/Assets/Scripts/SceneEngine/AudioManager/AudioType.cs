@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+/*
+ * Name: Hengyi Tian
+ * Role: TL5-- AI Specialist
+ * This file contains the definition for the EnvironmentManager class.
+ * It inherits from MonoBehaviour.
+ */
+
 [System.Serializable]
 public class AudioType
 {

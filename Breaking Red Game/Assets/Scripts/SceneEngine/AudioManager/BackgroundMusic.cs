@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
+/*
+ * Name: Hengyi Tian
+ * Role: TL5-- AI Specialist
+ * This file contains the definition for the EnvironmentManager class.
+ * It inherits from MonoBehaviour.
+ */
 public class BackgroundMusic : MonoBehaviour
 {
     public static BackgroundMusic instance;
