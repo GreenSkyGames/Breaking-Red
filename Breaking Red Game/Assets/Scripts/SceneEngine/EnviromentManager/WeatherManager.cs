@@ -69,7 +69,6 @@ public class WeatherManager : MonoBehaviour
         {
             rainEffect.SetActive(true); // Show rain effect
         }
-
         if (snowEffect != null)
         {
             snowEffect.SetActive(false); // Hide snow effect
@@ -83,7 +82,6 @@ public class WeatherManager : MonoBehaviour
         {
             snowEffect.SetActive(true); // Show snow effect
         }
-
         if (rainEffect != null)
         {
             rainEffect.SetActive(false); // Hide rain effect

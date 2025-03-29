@@ -20,7 +20,7 @@ public class Passageways : TerrainObjects
     {
         if(other.CompareTag("Player"))
         {
-            AudioManager.instance.Play("DoorSound"); // Play the open door sound
+            AudioManager.sinstance.Play("DoorSound"); // Play the open door sound
 
             Vector2 newPosition = getDestination();
             if(newPosition != Vector2.zero)

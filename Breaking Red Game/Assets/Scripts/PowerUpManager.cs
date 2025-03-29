@@ -27,7 +27,7 @@ public class PowerUpManager : MonoBehaviour
         /* poison apple applies immediately */
         if (powerUp.itemType == PowerUp.itemName.PoisonApple)
         {
-            AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
+            AudioManager.sinstance.Play("PowerUpSound"); // play power up sound effect
             powerUp.applyEffect(playerController);
             Destroy(powerUp.gameObject);
         }
@@ -48,21 +48,21 @@ public class PowerUpManager : MonoBehaviour
     {
         bool inputReceived = false;
                 
-        StartCoroutine(AudioManager.instance.PauseAllAudioSources()); // Pause all audio sources
+        StartCoroutine(AudioManager.sinstance.pauseAllAudioSources()); // Pause all audio sources
 
         while (!inputReceived)
         {
             Time.timeScale = 0;
             if (Input.GetKeyDown(KeyCode.U))  // 'U' for Use Now
             {
-                AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
+                AudioManager.sinstance.Play("PowerUpSound"); // play power up sound effect
                 powerUp.applyEffect(playerController);  // apply the power-up effect
                 Destroy(powerUp.gameObject);
                 inputReceived = true;
             }
             else if (Input.GetKeyDown(KeyCode.L))  // 'L' for Store for Later
             {
-                AudioManager.instance.Play("ClickSound"); // play power up sound effect
+                AudioManager.sinstance.Play("ClickSound"); // play power up sound effect
                 /* add to inventory for later use */
                 InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite);
                 Debug.Log("Item added to inventory");
@@ -77,7 +77,7 @@ public class PowerUpManager : MonoBehaviour
         Debug.Log("Choice prompt hidden");
         Time.timeScale = 1;
 
-        StartCoroutine(AudioManager.instance.RestoreAudioStates()); // Restore all audio sources
+        StartCoroutine(AudioManager.sinstance.restoreAudioStates()); // Restore all audio sources
         choicePrompt.SetActive(false);
     }
 }

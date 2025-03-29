@@ -43,7 +43,7 @@ public class CharacterManager : MonoBehaviour
     public void nextOption()
     {
         // Play the button click sound
-        AudioManager.instance.Play("ClickSound");
+        AudioManager.sinstance.Play("ClickSound");
 
         _selectedOption++;
 
@@ -64,7 +64,7 @@ public class CharacterManager : MonoBehaviour
     public void backOption()
     {
         // Play the button click sound
-        AudioManager.instance.Play("ClickSound");
+        AudioManager.sinstance.Play("ClickSound");
 
         _selectedOption--;
 
@@ -110,7 +110,7 @@ public class CharacterManager : MonoBehaviour
     public void changeScene(string sceneID)
     {
         // Play the button click sound
-        AudioManager.instance.Play("ClickSound");
+        AudioManager.sinstance.Play("ClickSound");
         // Fading out the MenuBGM and fading in the CabinBGM
         StartCoroutine(transitionToGameScene());
     }
@@ -122,7 +122,7 @@ public class CharacterManager : MonoBehaviour
     private IEnumerator transitionToGameScene()
     {
         // Fade out the MenuBGM
-        StartCoroutine(AudioManager.instance.FadeOut("MenuBGM", 1.5f));
+        StartCoroutine(AudioManager.sinstance.fadeOut("MenuBGM", 1.5f));
         yield return new WaitForSeconds(1.5f);
 
         SceneManager.LoadScene("Level 1");

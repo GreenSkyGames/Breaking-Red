@@ -52,10 +52,10 @@ public class PauseGameMenu : MonoBehaviour
     //resumes the game when the player presses the resume game button in the pause menu
     public void ResumeGame(){
         // Play the button click
-        AudioManager.instance.Play("ClickSound");
+        AudioManager.sinstance.Play("ClickSound");
 
         // Restore all audio sources
-        StartCoroutine(AudioManager.instance.RestoreAudioStates());
+        StartCoroutine(AudioManager.sinstance.restoreAudioStates());
 
         PauseMenu.SetActive(false); //pause menu goes away 
         Time.timeScale=1f; // resuming the game
@@ -66,10 +66,10 @@ public class PauseGameMenu : MonoBehaviour
     //Function to pause the game
     void PauseGame(){
         // Play the button click
-        AudioManager.instance.Play("ClickSound");
+        AudioManager.sinstance.Play("ClickSound");
 
         // Pause all audio sources and save their states
-        StartCoroutine(AudioManager.instance.PauseAllAudioSources());
+        StartCoroutine(AudioManager.sinstance.pauseAllAudioSources());
 
         PauseMenu.SetActive(true); //pause menu called 
         Time.timeScale=0f; // pausing the game 
@@ -81,7 +81,7 @@ public class PauseGameMenu : MonoBehaviour
     public void SaveGame()
     {
         // Play the button click sound
-        AudioManager.instance.Play("ClickSound");
+        AudioManager.sinstance.Play("ClickSound");
 
         // Assume that you're saving player's position
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -131,8 +131,8 @@ public class PauseGameMenu : MonoBehaviour
     //Loads the menu screen when the load menu button is clicked
     public void LoadMenu(){
         // Play the button click
-        AudioManager.instance.Play("ClickSound");
-        AudioManager.instance.Play("MenuBGM");
+        AudioManager.sinstance.Play("ClickSound");
+        AudioManager.sinstance.Play("MenuBGM");
 
         Debug.Log("Loading menu.");
         SceneManager.LoadScene("Start Menu");
@@ -141,7 +141,7 @@ public class PauseGameMenu : MonoBehaviour
     //Quits the game when the player presses to quit the game
     public void QuitGame(){
         // Play the button click
-        AudioManager.instance.Play("ClickSound");
+        AudioManager.sinstance.Play("ClickSound");
 
         Debug.Log("Quitting game."); 
         Application.Quit();//quitting the game 
