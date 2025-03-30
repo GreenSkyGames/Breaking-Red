@@ -28,7 +28,10 @@ public class PowerUp : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {            
+        {
+            // play power up sound effect tbd
+            //AudioManager.instance.Play("PowerUpSound");
+            
             PowerUpManager powerUpManager = other.GetComponent<PowerUpManager>(); // uses PowerUpManager script
 
             if (powerUpManager != null)

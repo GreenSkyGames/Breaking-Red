@@ -15,7 +15,7 @@ namespace AudioTest
         {
             Debug.Log("Starting Stress Test for Audio System...");
 
-            AudioType[] audioTypes = AudioManager.sinstance.audioTypes;
+            AudioType[] audioTypes = AudioManager.instance.AudioTypes;
 
             if (audioTypes.Length == 0)
             {
@@ -26,7 +26,7 @@ namespace AudioTest
             for (int i = 0; i < numSounds; i++)
             {
                 AudioType audioType = audioTypes[Random.Range(0, audioTypes.Length)];
-                AudioManager.sinstance.Play(audioType.Name);
+                AudioManager.instance.Play(audioType.Name);
                 yield return null;
             }
 
@@ -40,7 +40,7 @@ namespace AudioTest
         {
             Debug.Log("Starting Volume Boundary Test...");
 
-            AudioSource bgmSource = AudioManager.sinstance.getAudioSource("MenuBGM");
+            AudioSource bgmSource = AudioManager.instance.GetAudioSource("MenuBGM");
 
             if (bgmSource == null)
             {
@@ -90,9 +90,9 @@ namespace AudioTest
         // Stop all playing sounds after test completion
         void StopAllAudio()
         {
-            foreach (AudioType type in AudioManager.sinstance.audioTypes)
+            foreach (AudioType type in AudioManager.instance.AudioTypes)
             {
-                AudioManager.sinstance.Stop(type.Name);
+                AudioManager.instance.Stop(type.Name);
             }
         }
 

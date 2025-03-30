@@ -28,7 +28,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Starting a new game");
 
         // Play the button click
-        AudioManager.sinstance.Play("ClickSound");
+        AudioManager.instance.Play("ClickSound");
         SceneManager.LoadScene("CharacterSelector");
     }
 
@@ -40,6 +40,6 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quitting game.");
         Application.Quit();//quitting the game 
         UnityEditor.EditorApplication.isPlaying = false;
-        AudioManager.sinstance.Play("ClickSound"); // Play sound on button click
+        AudioManager.instance.Play("ClickSound"); // Play sound on button click
     }
 }

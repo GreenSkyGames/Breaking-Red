@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!isPlayingFootstep) // If the footstep sound is not playing, then play the sound
             {
-                AudioManager.sinstance.Play("FootstepSound");
+                AudioManager.instance.Play("FootstepSound");
 
                 isPlayingFootstep = true; // Mark sound is playing
             }
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
         {
             if (isPlayingFootstep)
             {
-                AudioManager.sinstance.Stop("FootstepSound");
+                AudioManager.instance.Stop("FootstepSound");
                 isPlayingFootstep = false;
             }
         }

@@ -39,7 +39,7 @@ public class NPCAttack : MonoBehaviour
             //hits[0].GetComponent<PlayerController>().Knockback(transform, knockbackForce, stunTime);
             
 			// Play attack sound
-			AudioManager.sinstance.Play("AttackSound");
+			AudioManager.instance.Play("AttackSound");
         }
 	}
 
