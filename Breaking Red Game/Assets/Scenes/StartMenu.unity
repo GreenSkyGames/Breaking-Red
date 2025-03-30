@@ -1355,14 +1355,14 @@ MonoBehaviour:
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 2d2be9ad9f9294fda8292aefe64d92ee, type: 3}
+    Clip: {fileID: 8300000, guid: 27392ddbb9f7fe8428c09ea2f1c238d2, type: 3}
     Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: L3BGM
-    Volume: 0.1
+    Volume: 0.05
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 7c1b7bbc412834d24b0900b6768572e6, type: 3}
+    Clip: {fileID: 8300000, guid: 25b3cb67fec663e4a89ae9b3181cb13b, type: 3}
     Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: L4BGM
     Volume: 0.1
@@ -1376,27 +1376,6 @@ MonoBehaviour:
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 4a0d04ae017589c45a785134a254ecf4, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: FootstepSound
-    Volume: 0.6
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: b1334dbf63b8b12469d492e285f8003d, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: DoorSound
-    Volume: 0.8
-    Pitch: 1
-    Loop: 0
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 944a79fd13fc691439853a3fe6d011d6, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: PassagewaySound
-    Volume: 0.6
-    Pitch: 1
-    Loop: 0
-  - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: adec86daeff9c914ebcad89840070648, type: 3}
     Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: WolfSound
@@ -1408,6 +1387,41 @@ MonoBehaviour:
     Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: BatSound
     Volume: 0.5
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: b12cfdbd548160a4885adf36d2eb1eaa, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: LightingSound
+    Volume: 1
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 27392ddbb9f7fe8428c09ea2f1c238d2, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: JungleSound
+    Volume: 0.4
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: e470a07023367354fbfd9030367d50ab, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: FrogSound
+    Volume: 0.4
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: a6c623c3ca85e644b80fba553b48b9fb, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: WindSound
+    Volume: 1
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 8d97fd5d1ab1a414f85bf0d270312403, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: FireSound
+    Volume: 0.6
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
@@ -1432,10 +1446,24 @@ MonoBehaviour:
     Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 8d97fd5d1ab1a414f85bf0d270312403, type: 3}
+    Clip: {fileID: 8300000, guid: 4a0d04ae017589c45a785134a254ecf4, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: FireSound
-    Volume: 0.4
+    Name: FootstepSound
+    Volume: 0.6
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: b1334dbf63b8b12469d492e285f8003d, type: 3}
+    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: DoorSound
+    Volume: 0.8
+    Pitch: 1
+    Loop: 0
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 944a79fd13fc691439853a3fe6d011d6, type: 3}
+    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: PassagewaySound
+    Volume: 0.6
     Pitch: 1
     Loop: 0
   allAudioSources: []
