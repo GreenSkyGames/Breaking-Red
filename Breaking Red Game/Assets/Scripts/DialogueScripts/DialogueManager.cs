@@ -210,7 +210,7 @@ public class DialogueManager : MonoBehaviour
 
 		Debug.Log("Exiting dialogue.");
 
-		_dialoguePlaying = false;
+        _dialoguePlaying = false;
 
 		_story.ResetState();
 	}
@@ -230,7 +230,10 @@ public class DialogueManager : MonoBehaviour
 		//Debug.Log("Weird tag " + _dialogueBoxCanvas.tag);
 		_dialoguePlaying = false;
 		_dialogueBoxCanvas.SetActive(false);
-		return;
+
+        AudioManager.instance.Play("ClickSound"); // Play the button click
+
+        return;
 	}
 
 	//A reliable means to open the dialogue box.
