@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 3504766694106217985}
   - component: {fileID: 6047547675888626893}
   - component: {fileID: 5506178328897580478}
-  - component: {fileID: 6455651608044186068}
   - component: {fileID: 1787229165066388686}
   - component: {fileID: 4454416054723716138}
   - component: {fileID: 1756066512159113487}
+  - component: {fileID: 8755454103593887204}
   m_Layer: 7
   m_Name: The Axman
   m_TagString: TheAxman
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 4053504014638052938, guid: 7a9b964d3d7c1e942965239e60a5fee2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -197,31 +197,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.018396828, y: 0.0012264169}
   m_Size: {x: 0.21320629, y: 0.4924528}
   m_Direction: 0
---- !u!114 &6455651608044186068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2895991074984511502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db7ace8b176f5b4093116fbf549cde1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  attackRange: 1
-  attackCooldown: 1
-  playerDetectRange: 5
-  detectionPoint: {fileID: 16606256073253012}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  myCanvas: {fileID: 0}
-  isHostile: 0
-  facingRight: 0
-  enemySR: {fileID: 0}
-  currentHealth: 9
 --- !u!114 &1787229165066388686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +252,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8755454103593887204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2895991074984511502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2d4c74851b2f94a9d1609710a21d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  attackRange: 1
+  attackCooldown: 1
+  playerDetectRange: 5
+  detectionPoint: {fileID: 16606256073253012}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  isHostile: 0
+  facingRight: 1
+  enemySR: {fileID: 4245477268345237374}
+  currentHealth: 9
 --- !u!1 &7155840962864940638
 GameObject:
   m_ObjectHideFlags: 0

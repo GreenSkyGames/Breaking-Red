@@ -2,13 +2,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/* Name: Shan Peck
+*	Role: Team Lead 4 -- Project Manager
+*	
+*	This file contains the definition for the InventoryManager class
+*   It manages showing inventory and adding things to it
+*	It inherits from MonoBehaviour */
+
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager sInstance;
     public GameObject inventoryMenu;
     public ItemSlot[] itemSlot;
-    private bool menuActivated;
+    public static InventoryManager sInstance;
 
+    private bool _menuActivated;
+
+    /* This function updates the scene by toggling the inventory if the player clicks I
+     *	It only uses the function toggleInventory() */
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.I))
@@ -17,56 +27,47 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    private void toggleInventory()
-    {
-        if(menuActivated)
-        {
-            Time.timeScale = 1;
-            inventoryMenu.SetActive(false);
-            menuActivated = false;
-        }
-        else if(!menuActivated)
-        {
-            Time.timeScale = 0;
-            inventoryMenu.SetActive(true);
-            menuActivated = true;
-        }
-    }
-
+    /* This functions function sets the instance of InventoryManager
+     * Singleton pattern to ensure one instance of InventoryManager */
     private void Awake()
     {
-        // singleton pattern to ensure one instance of InventoryManager
         if (sInstance == null)
         {
-            sInstance = this;
+            sInstance = this;  // set the instance
             DontDestroyOnLoad(this.gameObject);
         }
         else
-            Destroy(gameObject);
-
+        {
+            Destroy(gameObject);  // prevent duplicates
+        }
     }
 
+    /* This function adds an item to the inventory using its name and sprite
+     * It looks at the item slots I created in UI b/c I attached them in Inspector
+     * Checks if there is an unoccupied slot and if not, put the item in
+     * Uses isOccupied bool and updateInventoryUI() from ItemSlot script */
     public void addToInventory(string itemName, Sprite itemSprite)
     {
         for (int i = 0; i < itemSlot.Length; i++)
         {
-            if(itemSlot[i].isOccupied == false)
+            if(itemSlot[i] != null && itemSlot[i].isOccupied == false)
             {
                 itemSlot[i].updateInventoryUI(itemName, itemSprite);
                 return;
             }
         }
-        Debug.Log("Inventory is full!");
+        Debug.Log("Inventory is full or slot invalid!");
     }
 
+    /* This function loops through each slot in inventory and counts occupied ones 
+     * Is currently only used by boundary test */
     public int getItemCount()
     {
         int count = 0;
 
-        // Loop through each slot in the inventory and count the occupied ones
         foreach (var slot in itemSlot)
         {
-            if (slot.isOccupied) // If the slot is occupied, increment the count
+            if (slot.isOccupied) // if the slot is occupied, increment the count
             {
                 count++;
             }
@@ -74,5 +75,26 @@ public class InventoryManager : MonoBehaviour
 
         return count;
     }   
+
+    /* This function toggles the inventory by turned the menu on or off
+     * Uses InventoryMenu object and bool menuActivated
+     * The game time is paused when inventory is on 
+     * Uses built in Unity function SetActive() */
+    private void toggleInventory()
+    {
+        if(_menuActivated) // if I clicked when menu is on, turn it off
+        {
+            Time.timeScale = 1;
+            inventoryMenu.SetActive(false);
+            _menuActivated = false;
+        }
+        else if(!_menuActivated) // if I clicked when menu is off, turn it on
+        {
+            Time.timeScale = 0;
+            inventoryMenu.SetActive(true);
+            _menuActivated = true;
+        }
+    }
 }
+
 

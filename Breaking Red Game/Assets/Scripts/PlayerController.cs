@@ -1,3 +1,10 @@
+/*Name: Alex Senst
+ * Role: Team Lead 2+ -- Software Architect
+ * 
+ * This file contains the code for the PlayerController class
+ * The class handles the basic player movements and interactions with NPC's
+ * It also contains a dramatic death sequence if the player falls off the map
+ * It inherets from MonoBehaviour */
 using System.Collections;
 using UnityEditor.Tilemaps;
 using UnityEngine;
@@ -23,10 +30,14 @@ public class PlayerController : MonoBehaviour
 
     private bool isPlayingFootstep = false;
 
+    /* The update function is called once per frame
+     * It checks if the player interacts with an NPC and reacts if the player has
+     * It interacts with the displayDialogueBox() function and the triggerDialogue() function */
     private void Update()
     {
-        if (Input.GetButtonDown("PlayerActivate")) //This is set to the "f" key currently
+        if (Input.GetButtonDown("PlayerActivate")) //Set to F
         {
+			//Debug.Log("test");
             //This checks if there is an enemy in range of the ActivatePoint gameobject that is bound to the player.
             Collider2D[] enemies = Physics2D.OverlapCircleAll(ActivatePoint.position, activateRange, enemyLayer);
             //If it finds enemies, they're on the list.  If there is an enemy, it displays its dialogue box.
@@ -34,11 +45,17 @@ public class PlayerController : MonoBehaviour
             {
                 enemies[0].GetComponent<NPCManager>().displayDialogueBox();
                 enemies[0].GetComponent<NPCDialogueTrigger>().triggerDialogue();
+				Debug.Log("NPC tag is: " + enemies[0].tag);  //Something going wrong specifically on level 3...
             }
         }
     }
 
-    // Update is called once per frame
+    /*Fixed update updates at intervals
+     * This function checks if the player is currently falling and slows their velocity and stops their collider box as well as their sprite-renderer from affecting other objects
+     * It also flips the direction of the player if they begin moving in the opposite direction
+     * Additionally it plays footsteps if the player is moving
+     * It accomplishes all this by using the flip function to change its direction and the play and stop functions from the AudioManager to play or stop playing the music
+     */
     void FixedUpdate()
     {
         if (isScaling)
@@ -82,15 +99,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /*Handles the actual flipping of the player
+     * Changes the direction the player is turned and reverses their x local scale value 
+     * This function is called by the FixedUpdate() function to flip the player */
     void flip()
     {
         facingDirection *= -1;
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
+    /* Calls the scaleObject CoRoutine
+     * This is used by the game to react when a player steps over an edge*/
     public void scales()
     {
         StartCoroutine(scaleObj());
     }
+    /* This function actually scales the object size down
+     * This function slowly transforms the object by making it get smaller and smaller until it disappears using math's Lerp function
+     * It also quit's the application after this happens as a natural quit to the game*/
     IEnumerator scaleObj() {
         isScaling = true;
         float elapsedTime = 0f;

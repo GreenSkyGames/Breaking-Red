@@ -5,7 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 using Ink.Runtime;
 
-/*
+/* Name: Todd Carter
+ * Role: Team Lead 2 -- Software Architect
+ *
  *	This is the script for the dialogue manager, which is an object
  *	that enables the flow of data between the NPC and the player using
  *	the .ink json file.
@@ -49,7 +51,7 @@ public class DialogueManager : MonoBehaviour
 		_inkExternalFunctions = new InkExternalFunctions();
 		_inkExternalFunctions.bind(_story);
 
-		closeDialogue();
+		//closeDialogue();
 	}
 
 	//When the dialogue manager is destroyed, the functions are unbound.
@@ -127,7 +129,11 @@ public class DialogueManager : MonoBehaviour
 
 		//GameEventsManager.instance.dialogueEvents.DialogueStarted();  //Doesn't work, see DialoguePanelUI for reason why
 
+
+		//This is where the dialogue box is intially activated.
 		_dialogueBoxCanvas.SetActive(true);
+
+
 		//Debug.Log("Weird tag: " + _dialogueBoxCanvas.tag); //Better be tagged dialoguebox
 		//Debug.Log("Name is " + Name);
 
@@ -204,7 +210,7 @@ public class DialogueManager : MonoBehaviour
 
 		Debug.Log("Exiting dialogue.");
 
-		_dialoguePlaying = false;
+        _dialoguePlaying = false;
 
 		_story.ResetState();
 	}
@@ -224,7 +230,10 @@ public class DialogueManager : MonoBehaviour
 		//Debug.Log("Weird tag " + _dialogueBoxCanvas.tag);
 		_dialoguePlaying = false;
 		_dialogueBoxCanvas.SetActive(false);
-		return;
+
+        AudioManager.instance.Play("ClickSound"); // Play the button click
+
+        return;
 	}
 
 	//A reliable means to open the dialogue box.

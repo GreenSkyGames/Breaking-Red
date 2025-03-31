@@ -17,20 +17,16 @@ public class PlayerHealth : MonoBehaviour
     public SpriteRenderer playerSr;
     public PlayerController playerMovement; // Controls player movement
 
-    /*
-     * This function is called before the first frame update.
-     * It initializes the player's health.
-     */
+    /* This function is called before the first frame update.
+     * It initializes the player's health. */
     void start()
     {
         maxHealth = 100;
         currentHealth = maxHealth;
     }
 
-    /*
-     * This function changes the player's health by a specified amount.
-     * @param amount The amount to change the player's health by.
-     */
+    /* This function changes the player's health by a specified amount.
+     * @param amount The amount to change the player's health by. */
     public void changeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
@@ -67,9 +63,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    /*
-     * This function re-enables the player.
-     */
+    /* This function re-enables the player. */
     public void reEnablePlayer()
     {
         if (playerSr != null)

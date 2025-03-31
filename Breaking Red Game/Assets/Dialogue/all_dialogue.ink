@@ -4,11 +4,19 @@ EXTERNAL startPurpleTorchEnemyHostility(bool)
 EXTERNAL stopPurpleTorchEnemyHostility(bool)
 EXTERNAL startBearHostility(bool)
 EXTERNAL stopBearHostility(bool)
+EXTERNAL startWizardHostility(bool)
+EXTERNAL stopWizardHostility(bool)
 
 
 
 -> TheWolf
 -> PurpleTorchEnemy
+-> TheHippie
+-> TheHiker
+-> TheBear
+-> TheWizard
+-> TheAxman
+-> TheCat
 
 VAR Name = "Default"
 
@@ -230,9 +238,55 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 === TheWizard ===
 ~ Name = "The Wizard"
 
-//Name is {Name}
+//Name is {The Wizard}
 
-"Wizardly placeholder"
+"Well, well.  Little Red Riding Hood.  You've come a long way to see me."
+
+* ["What happened between you and Grandmother?"]
+
+- "No time to catch up, eh?  You've been gone from the forest for years."
+
+* ["Just tell me what happened, Wizard."]
+
+- "I don't see what business it is of yours, Red.  You left the forest."]
+
+* ["It's my business since Grandmother was murdered."]
+
+- "...W-What?  Murdered?!"
+
+* ["Like you don't know?  You have a crystal ball!"]
+
+- "This... That's not...  Red, I think you should go.  I... I would rather be alone right now."
+
+* ["Fat chance.  Tell me what happened.  Right now."]
+
+"I will tell you nothing with that tone, Red.  I have no reason to help you now."
+
+    ** ["You think I'm just going to leave?"]
+    
+    "I will not help you, Red.  Leave me be."
+    
+        *** ["...Fine.  But if I find out you had something to do with it, I'm coming back!"]
+        
+        -> END
+        
+- "I will tell you nothing with that tone, Red.  I have no reason to help you now."
+
+* ["Fine.  But at least tell me what you know.  I need to find the killer."]
+
+- "I cannot tell you what I do not know, Red.  This... is the first I am hearing of this."
+
+* ["Then what CAN you do?"]
+
+- "...Leave me be, Red.  This is not your forest anymore."]
+
+* ["I'm not leaving."]
+
+- "I'm not asking, Red.  Leave.  Or I will make you."
+
+~ startWizardHostility(true)
+
+* ["You think you have what it takes, old man?  Let's go!"]
 
 
 - -> END
@@ -241,9 +295,12 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 === TheCat ===
 ~ Name = "The Cat"
 
-//Name is {Name}
+//Name is {The Cat}
 
-"Feline placeholder"
+"...Where did that Fish go... It was just there..."
+
+* ["Hey, Cat!  What are you doing here?"]
+
 
 
 - -> END

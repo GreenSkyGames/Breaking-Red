@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2283735591819562610}
   - component: {fileID: 5480491743159412761}
   - component: {fileID: 3140227946331660447}
-  - component: {fileID: 7560761179062329581}
+  - component: {fileID: 2427469778145037705}
   m_Layer: 7
   m_Name: The Hiker
   m_TagString: TheHiker
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 5677332815507638130, guid: 9bcffc29d035689438a59341d1fecfef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &7560761179062329581
+--- !u!114 &2427469778145037705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -272,7 +272,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  myCanvas: {fileID: 0}
   isHostile: 0
   facingRight: 1
   enemySR: {fileID: 2959500224568323714}

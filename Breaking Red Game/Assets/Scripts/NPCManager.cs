@@ -5,21 +5,30 @@ using System.Collections.Generic;
 using Ink.Runtime;
 
 
-
-/*
+//Simple class to set up example of dynamic binding
+//This virtual should set the NPCs to be hostile.
 public class NPC
 {
-	public virtual bool nonHostile
+	public virtual bool setNonHostile()
 	{
-		return false;
+		return true;
 	}
 
 }
-*/
+
+//This override should set the NPCs to be nonhostile.
+//This guarantees they won't be hostile at first.
+public class setNPC : NPC
+{
+	public override bool setNonHostile()
+	{
+		return false;
+	}
+}
 
 
-
-/*
+/* Name: Todd Carter
+ * Role: Team Lead 2 -- Software Architect
  *	This is the script for the NPCManager.
  *	It controls the majority of NPC actions and activities.
  *	This includes combat, swapping animations, and utilizing
@@ -37,7 +46,8 @@ public class NPCManager : MonoBehaviour
 	public LayerMask playerLayer;
 	//private bool isChasing;
 
-	public Canvas myCanvas;
+	//private Canvas myCanvas;
+	private GameObject myCanvas;
 
 	private float attackCooldownTimer;
 	private int facingDirection = -1;
@@ -53,6 +63,10 @@ public class NPCManager : MonoBehaviour
     public SpriteRenderer enemySR;
 	public int currentHealth = 9;
 
+	private List<GameObject> _clueList = new List<GameObject>();
+
+	private NPC _npc;
+
     //Start is currently being used to:
 	// - find rigidbody component
 	// - find animator component
@@ -62,6 +76,15 @@ public class NPCManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 		changeState(EnemyState.Idle);
+
+		myCanvas = GameObject.Find("DialogueBoxCanvas");
+
+		//Debug.Log("myCanvas tag is " + myCanvas.tag);
+
+		//Here is the usage of the dynamic binding.
+		_npc = new setNPC();
+		bool hostility = _npc.setNonHostile();
+		setHostility(hostility);
     }
 
 	//OnEnable is being used to create a delay that ensures the GameEventsManager has started first.
@@ -80,6 +103,7 @@ public class NPCManager : MonoBehaviour
 		//Debug.Log("Hostility enable test");
 		GameEventsManager.instance.dialogueEvents.onStartHostility += onHostility;
 		GameEventsManager.instance.dialogueEvents.onStopHostility += offHostility;
+		myCanvas.gameObject.SetActive(false);
 	}
 
 	//When an NPC is disabled, the functions are removed as events.
@@ -155,6 +179,9 @@ public class NPCManager : MonoBehaviour
 	//Set hostility
 	public void setHostility(bool activate)
 	{
+		//dynamic thing happens here?
+		
+
 		isHostile = activate;
 	}
 
@@ -261,6 +288,7 @@ public class NPCManager : MonoBehaviour
 	//Now to stop the enemy from attacking at the same time...
 	public void displayDialogueBox()
 	{
+		Debug.Log("myCanvas is: " + myCanvas.tag);
 		if(myCanvas.gameObject.activeSelf == true)
 		{
 			//myCanvas.gameObject.SetActive(false);

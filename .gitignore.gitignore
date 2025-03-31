@@ -71,3 +71,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+/Breaking Red Game/Logs
+/Breaking Red Game/UserSettings
+/Breaking Red Game/UserSettings/Layouts
+Breaking Red Game/Logs/shadercompiler-UnityShaderCompiler.exe-0.log
+Breaking Red Game/UserSettings/Layouts/default-6000.dwlt
+Breaking Red Game/UserSettings/EditorUserSettings.asset
+Breaking Red Game/Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset

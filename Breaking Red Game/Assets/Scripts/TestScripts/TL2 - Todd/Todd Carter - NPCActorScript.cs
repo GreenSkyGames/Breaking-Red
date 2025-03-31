@@ -7,14 +7,14 @@ public class NPCStressTestActorScript : MonoBehaviour
 	//Find the testing environmental objects and deactivate them.
 	public void Awake()
 	{
-		NPCStressWall = FindObjectOfType<NPCStressTestScript>();
+		NPCStressWall = FindAnyObjectByType<NPCStressTestScript>();
 	}
 
 	//When collision detected, break out of the for loop to stop spawning.
     private void OnTriggerExit2D(Collider2D other)
     {		
 		//Check for the testing barrier
-        if (NPCStressWall == null)
+        /*if (NPCStressWall == null)
         {
             Debug.LogError("NPCDeathWall GameObject not found. Ensure it has the 'NPCDeathWall' tag.");
         }
@@ -24,6 +24,6 @@ public class NPCStressTestActorScript : MonoBehaviour
             Debug.Log(gameObject.name + " has exited the boundary!");
 
 			NPCStressWall.gameObject.GetComponent<NPCStressTestScript>().StopSpawning();
-        }
+        }*/ //COMMENTED OUT FOR TESTING
     }
 }

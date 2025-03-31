@@ -3,7 +3,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-/*
+/* Name: Todd Carter
+ * Role: Team Lead 2 -- Software Architect
+ *
  *	This is the script for the dialogue choice buttons.
  *	
  *  These methods set the text in accordance the choices from the
@@ -33,7 +35,9 @@ public class DialogueChoiceButton : MonoBehaviour, ISelectHandler
 	//This sets the action for selecting the button.
 	public void selectButton()
 	{
-		button.Select();
+        button.Select();
+		
+		AudioManager.instance.Play("ClickSound"); // Play the button click
 	}
 
 	//This determines what happens when the button selects,

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d2be9ad9f9294fda8292aefe64d92ee
+guid: 27392ddbb9f7fe8428c09ea2f1c238d2
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
@@ -22,8 +22,8 @@ AudioImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 221545
-  packageName: Adventure Music and SFX
-  packageVersion: 1.0
-  assetPath: Assets/WhatSoundsNice/Adventure Music & SFX/Music/Loops/crisis_loop.wav
-  uploadId: 498390
+  productId: 180413
+  packageName: Nature Sound FX
+  packageVersion: 2.0
+  assetPath: Assets/Nature Sound FX/Jungle/Jungle (4).wav
+  uploadId: 422812
