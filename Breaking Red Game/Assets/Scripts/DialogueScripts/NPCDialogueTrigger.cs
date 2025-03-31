@@ -20,16 +20,26 @@ public class NPCDialogueTrigger : MonoBehaviour
 	//public string Name;
 
 	[SerializeField] private string _dialogueKnotName;
+    [SerializeField] private AudioClip dialogueClip;  // The audio clip corresponding to the NPC's dialogue.
 
-	//This method assigns the dialogue section to the GameEventsManager using dialogueEvents.
-	public void triggerDialogue()
+    private void Start()
+    {
+        // Add the NPC's dialogue clip to the DialogueSound manager using the NPC's name (_dialogueKnotName)
+        DialogueSound.instance.AddNpcDialogueClip(_dialogueKnotName, dialogueClip);
+    }
+
+    //This method assigns the dialogue section to the GameEventsManager using dialogueEvents.
+    public void triggerDialogue()
 	{
 		//FindFirstObjectByType<DialogueManager>().StartDialogue(Dialogue);
 		//DialogueManager.Instance.StartDialogue(Name, Dialogue.RootNode);
 		if (!_dialogueKnotName.Equals(""))
 		{
 			GameEventsManager.instance.dialogueEvents.enterDialogue(_dialogueKnotName);
-		}
+
+            // Play the NPC's dialogue audio
+            DialogueSound.instance.PlayDialogueSound(_dialogueKnotName);
+        }
 		else
 		{
 			//do what you were doing previously or something else

@@ -9399,6 +9399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: The Cat
       objectReference: {fileID: 0}
+    - target: {fileID: 4430152414586786346, guid: 02c8b07b06de24a48b7e1971e46310fd, type: 3}
+      propertyPath: dialogueClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 066defc4fd6100b4f8580fd4de5e9a34, type: 3}
     - target: {fileID: 5958536976777283597, guid: 02c8b07b06de24a48b7e1971e46310fd, type: 3}
       propertyPath: myCanvas
       value: 

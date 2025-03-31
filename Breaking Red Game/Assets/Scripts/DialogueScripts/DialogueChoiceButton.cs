@@ -35,7 +35,9 @@ public class DialogueChoiceButton : MonoBehaviour, ISelectHandler
 	//This sets the action for selecting the button.
 	public void selectButton()
 	{
-		button.Select();
+        button.Select();
+		
+		AudioManager.instance.Play("ClickSound"); // Play the button click
 	}
 
 	//This determines what happens when the button selects,

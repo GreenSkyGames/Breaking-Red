@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: The Axman
       objectReference: {fileID: 0}
+    - target: {fileID: 4454416054723716138, guid: be51862de90f9544584b8c6616ca4c92, type: 3}
+      propertyPath: dialogueClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eba7a5ff68e4168409f8d78f8ccfb65a, type: 3}
     - target: {fileID: 5912211532765405569, guid: be51862de90f9544584b8c6616ca4c92, type: 3}
       propertyPath: m_LocalPosition.x
       value: 84.25492
@@ -23334,6 +23338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f617cb365f9e0409201e29d4e50ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPos: {x: 0, y: 0, z: 0}
   _horGoal: -6
   _vertGoal: 0
   _moveTime: 3
@@ -36264,6 +36269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f617cb365f9e0409201e29d4e50ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPos: {x: 0, y: 0, z: 0}
   _horGoal: 0
   _vertGoal: -6
   _moveTime: 8

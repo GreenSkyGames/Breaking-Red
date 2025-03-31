@@ -85519,6 +85519,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 474894384310465257, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
+      propertyPath: dialogueClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eba7a5ff68e4168409f8d78f8ccfb65a, type: 3}
     - target: {fileID: 4430379740713531272, guid: 9e245367952c6e44da2f38e50e3f262c, type: 3}
       propertyPath: myCanvas
       value: 
