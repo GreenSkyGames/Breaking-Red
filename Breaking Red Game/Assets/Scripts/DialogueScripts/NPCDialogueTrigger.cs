@@ -25,7 +25,7 @@ public class NPCDialogueTrigger : MonoBehaviour
     private void Start()
     {
         // Add the NPC's dialogue clip to the DialogueSound manager using the NPC's name (_dialogueKnotName)
-        DialogueSound.instance.AddNpcDialogueClip(_dialogueKnotName, dialogueClip);
+        //DialogueSound.instance.AddNpcDialogueClip(_dialogueKnotName, dialogueClip);
     }
 
     //This method assigns the dialogue section to the GameEventsManager using dialogueEvents.
