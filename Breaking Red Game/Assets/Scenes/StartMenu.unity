@@ -1175,7 +1175,6 @@ GameObject:
   - component: {fileID: 1169710118}
   - component: {fileID: 1169710117}
   - component: {fileID: 1169710116}
-  - component: {fileID: 1169710122}
   - component: {fileID: 1169710121}
   - component: {fileID: 1169710120}
   m_Layer: 5
@@ -1281,7 +1280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e63bc1687fc44709517aae86db3cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _toggle: {fileID: 0}
+  _toggle: {fileID: 413776455}
 --- !u!114 &1169710121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,18 +1295,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuitButton: {fileID: 1727121393}
   StartButton: {fileID: 296529776}
---- !u!114 &1169710122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169710115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c697438e0b9214e8c3c3bbf2c96b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1369328471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,14 +1355,14 @@ MonoBehaviour:
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 2d2be9ad9f9294fda8292aefe64d92ee, type: 3}
+    Clip: {fileID: 8300000, guid: 27392ddbb9f7fe8428c09ea2f1c238d2, type: 3}
     Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: L3BGM
-    Volume: 0.1
+    Volume: 0.05
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 7c1b7bbc412834d24b0900b6768572e6, type: 3}
+    Clip: {fileID: 8300000, guid: 25b3cb67fec663e4a89ae9b3181cb13b, type: 3}
     Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: L4BGM
     Volume: 0.1
@@ -1389,27 +1376,6 @@ MonoBehaviour:
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 4a0d04ae017589c45a785134a254ecf4, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: FootstepSound
-    Volume: 0.6
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: b1334dbf63b8b12469d492e285f8003d, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: DoorSound
-    Volume: 0.8
-    Pitch: 1
-    Loop: 0
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 944a79fd13fc691439853a3fe6d011d6, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: PassagewaySound
-    Volume: 0.6
-    Pitch: 1
-    Loop: 0
-  - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: adec86daeff9c914ebcad89840070648, type: 3}
     Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: WolfSound
@@ -1421,6 +1387,41 @@ MonoBehaviour:
     Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: BatSound
     Volume: 0.5
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: b12cfdbd548160a4885adf36d2eb1eaa, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: LightingSound
+    Volume: 1
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 27392ddbb9f7fe8428c09ea2f1c238d2, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: JungleSound
+    Volume: 0.4
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: e470a07023367354fbfd9030367d50ab, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: FrogSound
+    Volume: 0.4
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: a6c623c3ca85e644b80fba553b48b9fb, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: WindSound
+    Volume: 1
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 8d97fd5d1ab1a414f85bf0d270312403, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: FireSound
+    Volume: 0.6
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
@@ -1442,6 +1443,27 @@ MonoBehaviour:
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: ClickSound
     Volume: 0.4
+    Pitch: 1
+    Loop: 0
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 4a0d04ae017589c45a785134a254ecf4, type: 3}
+    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: FootstepSound
+    Volume: 0.6
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: b1334dbf63b8b12469d492e285f8003d, type: 3}
+    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: DoorSound
+    Volume: 0.8
+    Pitch: 1
+    Loop: 0
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 944a79fd13fc691439853a3fe6d011d6, type: 3}
+    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: PassagewaySound
+    Volume: 0.6
     Pitch: 1
     Loop: 0
   allAudioSources: []
@@ -1582,8 +1604,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43, y: 96}
-  m_SizeDelta: {x: 845.7819, y: 305.5577}
+  m_AnchoredPosition: {x: 15, y: 96}
+  m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1635064983
 MonoBehaviour:
@@ -1632,8 +1654,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1670,7 +1692,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 158.44574}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

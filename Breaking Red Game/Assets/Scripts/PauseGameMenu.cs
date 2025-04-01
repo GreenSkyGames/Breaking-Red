@@ -1,46 +1,35 @@
-// Pause menu script 
+// Puase menu script 
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.InputSystem; 
-using System.Collections; 
-using System.Collections.Generic; 
+//using System.Collections; 
+using System.Collections.Generic; // 
 
-public class PauseManager : MonoBehaviour
+public class PauseGameMenu : MonoBehaviour
 {  
-    public static bool IsPaused = false; //indicates whether paused or not 
+    public static bool IsPaused = false; 
+    // public GameObject pauseMenuUI; 
     public GameObject PauseMenu; // pause menu object to be connected with script 
-    public static PauseManager Instance; 
-    public GameObject ResumeButton; //represents the resume button 
-    public GameObject MenuButton; //represents the menu button 
-    public string pauseMenuSceneName = "PauseMenu"; 
+    public GameObject ResumeButton; 
+    public GameObject MenuButton;
 
     private List<AudioSource> allAudioSources = new List<AudioSource>(); // To store all active AudioSources
     private List<bool> audioSourceStates = new List<bool>(); // To store the state, play or pause
 
-    //making sure game objects dont get destroyed when switching scenes 
-    private void Awake() 
-    {
-        // one instance of the pause manager. 
-        if(Instance == null)
-        {
-            Instance = this; 
-            DontDestroyOnLoad(gameObject); 
-            Debug.Log("PauseManager Initialized"); 
-        }
-        else
-        {
-            Debug.LogWarning("Duplicate PauseManager found. Destroying this instance... "); 
-            Destroy(gameObject); 
-        }
-    }
-
 // Pause menu called => in view, Pause menu uncalled=> not in view 
     void Start()
     {
-        Debug.Log("Pause Manager script is running ..."); 
+        if (SceneManager.GetActiveScene().name == "PauseMenu")
+        {
+            PauseMenu.SetActive(true);  // Show menu in PauseMenu scene
+        }
+        else
+        {
+            PauseMenu.SetActive(false); // Hide menu in other scenes
+        }
         //LoadGame(); COMMENTED OUT FOR GAME TESTING PURPOSES
     }
 
@@ -49,35 +38,29 @@ public class PauseManager : MonoBehaviour
     {
         //Toggle pause state when 'P' is pressed
         if(Input.GetKeyDown(KeyCode.P)){
-            Debug.Log("P was pressed!");
-            if (IsPaused)  
+            if (IsPaused)
             {
-                IsPaused = false; 
-                ResumeGame(); // if already paused then resume game. 
+                ResumeGame(); 
             }
             else
             {
-                IsPaused = true; 
-                PauseGame(); //if not paused already then pause game 
+                PauseGame(); 
             }
         } 
     }
     
     //resumes the game when the player presses the resume game button in the pause menu
     public void ResumeGame(){
-        Debug.Log("Resume called ... "); 
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 
         // Restore all audio sources
         StartCoroutine(AudioManager.instance.RestoreAudioStates());
 
+        PauseMenu.SetActive(false); //pause menu goes away 
         Time.timeScale=1f; // resuming the game
-        // IsPaused = false; //game is not paused 
-        SceneManager.UnloadSceneAsync(pauseMenuSceneName); // remove the pause menu scene
-        SceneManager.SetActiveScene(SceneManager.GetSceneAt(0)); 
-        Debug.Log("Game Resumed");  
-        // SceneManager.LoadScene("Level 1"); // after unpaused, moved to level 1
+        IsPaused = false; //game is not paused
+        //SceneManager.LoadScene("Level 1");
     }
 
     //Function to pause the game
@@ -87,11 +70,11 @@ public class PauseManager : MonoBehaviour
 
         // Pause all audio sources and save their states
         StartCoroutine(AudioManager.instance.PauseAllAudioSources());
- 
+
+        PauseMenu.SetActive(true); //pause menu called 
         Time.timeScale=0f; // pausing the game 
-        // IsPaused = true; //game is paused 
-        SceneManager.LoadScene(1, LoadSceneMode.Additive);
-        Debug.Log("Calling the pause menu scene"); 
+        IsPaused = true; //game is paused
+        //SceneManager.LoadScene("PauseMenu");
     }
 
     //save game when the player chooses to save the game
