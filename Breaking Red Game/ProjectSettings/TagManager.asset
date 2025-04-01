@@ -32,6 +32,8 @@ TagManager:
   - NPCStressWall
   - IL2
   - IL3
+  - TheFish
+  - TheOwl
   layers:
   - Default
   - TransparentFX
