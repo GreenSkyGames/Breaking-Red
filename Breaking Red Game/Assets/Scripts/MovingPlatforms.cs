@@ -11,11 +11,11 @@ using UnityEngine.Tilemaps;
 public class MovingPlatform : TerrainObjects
 {
     // Positional offsets for goal
-    [SerializeField] private float _horGoal = 0.0f;
-    [SerializeField] private float _vertGoal = 0.0f;
+    [SerializeField] protected float pHorGoal = 0.0f;
+    [SerializeField] protected float pVertGoal = 0.0f;
 
     // Target movement time
-    [SerializeField] private float _moveTime = 1.0f;
+    [SerializeField] protected float pMoveTime = 1.0f;
 
     private Vector2 _startPos;
     private Vector2 _goalPos;
@@ -31,7 +31,7 @@ public class MovingPlatform : TerrainObjects
     {
         // Initialize starting position and calculate goal position
         _startPos = transform.position;
-        _goalPos = new Vector2(_startPos.x + _horGoal, _startPos.y + _vertGoal);
+        _goalPos = new Vector2(_startPos.x + pHorGoal, _startPos.y + pVertGoal);
         _prevPos = _startPos;
     }
 
@@ -41,7 +41,7 @@ public class MovingPlatform : TerrainObjects
     void Update()
     {
         // Calculate interpolation factor using Mathf.PingPong for smooth back-and-forth motion
-        float t = Mathf.PingPong(Time.time / _moveTime, 1.0f);
+        float t = Mathf.PingPong(Time.time / pMoveTime, 1.0f);
 
         // Interpolate position between start and goal
         Vector2 currentPosition = Vector2.Lerp(_startPos, _goalPos, t);

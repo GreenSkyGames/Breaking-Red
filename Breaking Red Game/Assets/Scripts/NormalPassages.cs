@@ -11,12 +11,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Passageways : TerrainObjects
+public class NormalPassage : TerrainObjects
 {
     public CanvasGroup fadePanel;
     /* This code checks the tag of an object when it collides with a passageway and plays a sound upon impact if it is a player
      * It also chooses the next destination to transport the user to based on the current tag of the passageway and sends that to the getDestination function*/
-    private void OnTriggerEnter2D(Collider2D other)
+    public virtual void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
