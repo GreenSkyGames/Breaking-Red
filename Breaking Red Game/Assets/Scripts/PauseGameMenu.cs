@@ -13,8 +13,8 @@ public class PauseGameMenu : MonoBehaviour
     public static bool IsPaused = false; 
     // public GameObject pauseMenuUI; 
     public GameObject PauseMenu; // pause menu object to be connected with script 
-    public GameObject ResumeButton; 
-    public GameObject MenuButton;
+    // public GameObject ResumeButton; 
+    // public GameObject MenuButton;
 
     private List<AudioSource> allAudioSources = new List<AudioSource>(); // To store all active AudioSources
     private List<bool> audioSourceStates = new List<bool>(); // To store the state, play or pause
@@ -50,7 +50,8 @@ public class PauseGameMenu : MonoBehaviour
     }
     
     //resumes the game when the player presses the resume game button in the pause menu
-    public void ResumeGame(){
+    public void ResumeGame()
+    {
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 
@@ -64,7 +65,8 @@ public class PauseGameMenu : MonoBehaviour
     }
 
     //Function to pause the game
-    void PauseGame(){
+    void PauseGame()
+    {
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 
@@ -74,7 +76,6 @@ public class PauseGameMenu : MonoBehaviour
         PauseMenu.SetActive(true); //pause menu called 
         Time.timeScale=0f; // pausing the game 
         IsPaused = true; //game is paused
-        //SceneManager.LoadScene("PauseMenu");
     }
 
     //save game when the player chooses to save the game
@@ -129,7 +130,8 @@ public class PauseGameMenu : MonoBehaviour
     }
 
     //Loads the menu screen when the load menu button is clicked
-    public void LoadMenu(){
+    public void LoadMenu()
+    {
         // Play the button click
         AudioManager.instance.Play("ClickSound");
         AudioManager.instance.Play("MenuBGM");
@@ -139,13 +141,20 @@ public class PauseGameMenu : MonoBehaviour
     }
 
     //Quits the game when the player presses to quit the game
-    public void QuitGame(){
+    public void QuitGame()
+    {
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 
         Debug.Log("Quitting game."); 
         Application.Quit();//quitting the game 
         UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+// player can view inventory from pause menu 
+    public void ViewInventory()
+    {
+        Debug.Log("Viewing inventory..."); 
     }
 
 }
