@@ -40,12 +40,13 @@ public class PlayerController : MonoBehaviour
 			//Debug.Log("test");
             //This checks if there is an enemy in range of the ActivatePoint gameobject that is bound to the player.
             Collider2D[] enemies = Physics2D.OverlapCircleAll(ActivatePoint.position, activateRange, enemyLayer);
+			//Debug.Log("Button test");
             //If it finds enemies, they're on the list.  If there is an enemy, it displays its dialogue box.
             if (enemies.Length > 0)
             {
                 enemies[0].GetComponent<NPCManager>().displayDialogueBox();
                 enemies[0].GetComponent<NPCDialogueTrigger>().triggerDialogue();
-				Debug.Log("NPC tag is: " + enemies[0].tag);  //Something going wrong specifically on level 3...
+				//Debug.Log("NPC tag is: " + enemies[0].tag);
             }
         }
     }
