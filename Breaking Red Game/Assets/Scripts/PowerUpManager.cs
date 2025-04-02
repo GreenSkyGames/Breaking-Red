@@ -28,7 +28,7 @@ public class PowerUpManager : MonoBehaviour
         if (powerUp.itemType == PowerUp.itemName.PoisonApple)
         {
             AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
-            powerUp.applyEffect(playerController);
+            powerUp.v_applyEffect(playerController);
             Destroy(powerUp.gameObject);
         }
         else
@@ -56,7 +56,7 @@ public class PowerUpManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.U))  // 'U' for Use Now
             {
                 AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
-                powerUp.applyEffect(playerController);  // apply the power-up effect
+                powerUp.v_applyEffect(playerController);  // apply the power-up effect
                 Destroy(powerUp.gameObject);
                 inputReceived = true;
             }
