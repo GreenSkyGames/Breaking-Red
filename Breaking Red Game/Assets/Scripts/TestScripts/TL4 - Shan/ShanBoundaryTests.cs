@@ -67,7 +67,7 @@ public class ShanBoundaryTests : MonoBehaviour
         goldenApple.effectAmount = 5; // set effect amount for health boost
         goldenApple.sprite = null;
 
-        goldenApple.applyEffect(playerController);
+        goldenApple.v_applyEffect(playerController);
         Debug.Log($"Health after applying: {playerHealth.currentHealth}");
 
         // check if the health has exceeded the limit (3)
@@ -100,7 +100,7 @@ public class ShanBoundaryTests : MonoBehaviour
 
         for (int i = 0; i < numberOfTests; i++)
         {
-            goldenApple.applyEffect(playerController);  // Apply the Golden Apple effect
+            goldenApple.v_applyEffect(playerController);  // Apply the Golden Apple effect
         }
 
         // After stress test, check health and print the result

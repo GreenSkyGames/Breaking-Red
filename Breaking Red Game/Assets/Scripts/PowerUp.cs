@@ -43,35 +43,48 @@ public class PowerUp : MonoBehaviour
 
     /* This function details the effects of each power-up based on name
      * Uses changeHealth() from PlayerHealth script and given effectAmount */
-    public void applyEffect(PlayerController playerController)
+    public virtual void v_applyEffect(PlayerController playerController)
+    {
+       Debug.Log("Base power-up effect");
+    }
+}
+
+public class PoisonApple : PowerUp
+{
+    public override void v_applyEffect(PlayerController playerController)
     {
         PlayerHealth playerHealth = playerController.GetComponent<PlayerHealth>();
-        if(playerHealth == null)
+        if (playerHealth != null)
         {
-            return;
-        }
-        switch (itemType)
-        {
-            case itemName.PoisonApple:
-                playerHealth.changeHealth(-effectAmount);  // decreases health
-                Debug.Log($"Player health decreased = {playerHealth.currentHealth}");
-                break;
-
-            case itemName.GoldenApple:
-                playerHealth.changeHealth(effectAmount);  // increases health
-                Debug.Log($"Player health increased = {playerHealth.currentHealth}");
-                break;
-            
-            case itemName.BerserkerBrew:
-                //playerController.attackPower += effectAmount;
-                Debug.Log("Player attack power increased");
-                break;
-
-            default:
-                Debug.Log("No effect applied.");
-                break;
+            playerHealth.changeHealth(-effectAmount);  // Decreases health
+            Debug.Log($"Poison Apple: Player health decreased = {playerHealth.currentHealth}");
         }
     }
 }
 
+public class GoldenApple : PowerUp
+{
+    public override void v_applyEffect(PlayerController playerController)
+    {
+        PlayerHealth playerHealth = playerController.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            playerHealth.changeHealth(effectAmount);  // Increases health
+            Debug.Log($"Golden Apple: Player health increased = {playerHealth.currentHealth}");
+        }
+    }
+}
 
+public class BerserkerBrew : PowerUp
+{
+    public int attackBoost = 5; // Adjust as needed
+
+    public override void v_applyEffect(PlayerController playerController)
+    {
+        if (playerController != null)
+        {
+            //playerController.attackPower += attackBoost;
+            //Debug.Log($"Berserker Brew: Attack Power increased to {playerController.attackPower}");
+        }
+    }
+}
