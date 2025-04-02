@@ -995,19 +995,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 838034775}
     m_Modifications:
     - target: {fileID: 2998659679183467603, guid: f83b1c11b2399a94180e0f06de7718f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5391693
+      value: 7.6
       objectReference: {fileID: 0}
     - target: {fileID: 2998659679183467603, guid: f83b1c11b2399a94180e0f06de7718f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.167164
+      value: -21.5
       objectReference: {fileID: 0}
     - target: {fileID: 2998659679183467603, guid: f83b1c11b2399a94180e0f06de7718f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.09251358
+      value: 0.18502717
       objectReference: {fileID: 0}
     - target: {fileID: 2998659679183467603, guid: f83b1c11b2399a94180e0f06de7718f9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1046,6 +1046,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f83b1c11b2399a94180e0f06de7718f9, type: 3}
+--- !u!4 &81964940 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2998659679183467603, guid: f83b1c11b2399a94180e0f06de7718f9, type: 3}
+  m_PrefabInstance: {fileID: 81964939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &83562638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6936,9 +6941,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  _horGoal: 0
-  _vertGoal: -5
-  _moveTime: 3
+  pHorGoal: 0
+  pVertGoal: 0
+  pMoveTime: 1
   tilemap: {fileID: 1348085507}
 --- !u!50 &459147072
 Rigidbody2D:
@@ -7846,9 +7851,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  _horGoal: -20
-  _vertGoal: 0
-  _moveTime: 8
+  pHorGoal: 0
+  pVertGoal: 0
+  pMoveTime: 1
   tilemap: {fileID: 1348085507}
 --- !u!50 &548142255
 Rigidbody2D:
@@ -10246,9 +10251,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  _horGoal: 0
-  _vertGoal: -6
-  _moveTime: 2
+  pHorGoal: 0
+  pVertGoal: 0
+  pMoveTime: 1
   tilemap: {fileID: 1348085507}
 --- !u!50 &819714083
 Rigidbody2D:
@@ -10922,6 +10927,7 @@ Transform:
   m_Children:
   - {fileID: 769124705}
   - {fileID: 8632596845319548377}
+  - {fileID: 81964940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &840225150
@@ -12973,9 +12979,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  _horGoal: 0
-  _vertGoal: -14
-  _moveTime: 5
+  pHorGoal: 0
+  pVertGoal: 0
+  pMoveTime: 1
   tilemap: {fileID: 1348085507}
 --- !u!50 &949400874
 Rigidbody2D:
@@ -14009,9 +14015,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  _horGoal: 8
-  _vertGoal: 0
-  _moveTime: 3
+  pHorGoal: 0
+  pVertGoal: 0
+  pMoveTime: 1
   tilemap: {fileID: 1348085507}
 --- !u!50 &1019909324
 Rigidbody2D:
@@ -20153,9 +20159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  _horGoal: -6
-  _vertGoal: 0
-  _moveTime: 3
+  pHorGoal: 0
+  pVertGoal: 0
+  pMoveTime: 1
   tilemap: {fileID: 1348085507}
 --- !u!50 &1236845143
 Rigidbody2D:
@@ -75679,9 +75685,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  _horGoal: 0
-  _vertGoal: 4
-  _moveTime: 2
+  pHorGoal: 0
+  pVertGoal: 0
+  pMoveTime: 1
   tilemap: {fileID: 1348085507}
 --- !u!50 &1598064767
 Rigidbody2D:
@@ -87206,4 +87212,3 @@ SceneRoots:
   - {fileID: 459147074}
   - {fileID: 1019909326}
   - {fileID: 1598064769}
-  - {fileID: 81964939}
