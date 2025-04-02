@@ -114,6 +114,8 @@ public class NPCManager : MonoBehaviour
 			GameEventsManager.instance.dialogueEvents.onStartHostility -= onHostility;
 			GameEventsManager.instance.dialogueEvents.onStopHostility -= offHostility;			
 		}
+
+		//Debug.Log("Death test!" + gameObject.tag);
 	}
 
     //Update is being used to:

@@ -23,7 +23,6 @@ VAR Name = "Default"
 === TheWolf ===
 ~ Name = "The Wolf"
 
-
 "Is that... Little Red Riding Hood?  In these woods again?  I thought you knew better than to come around here!"
 
 * ["I should have known I'd find your mangy hide here, Wolf!"]
@@ -64,7 +63,7 @@ VAR Name = "Default"
 
 testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
-- -> END
+-> END
 
 
 
@@ -119,7 +118,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["Why you %$!@-!"]
 
-- -> END
+-> END
 
 
 
@@ -148,7 +147,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * [The Hiker refuses to speak further.]
 
-- -> END
+-> END
 
 
 
@@ -208,7 +207,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["You stay safe as well!"]
 
-- -> END
+-> END
 
 
 
@@ -232,13 +231,11 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 - "I'm sure this is where I'll be.  These are my woods, after all!  Hohoho...!"
 
 
-- -> END
+-> END
 
 
 === TheWizard ===
 ~ Name = "The Wizard"
-
-//Name is {The Wizard}
 
 "Well, well.  Little Red Riding Hood.  You've come a long way to see me."
 
@@ -258,7 +255,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - "This... That's not...  Red, I think you should go.  I... I would rather be alone right now."
 
-* ["Fat chance.  Tell me what happened.  Right now."]
+*["Fine.  But at least tell me what you know."]
 
 "I will tell you nothing with that tone, Red.  I have no reason to help you now."
 
@@ -270,9 +267,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
         
         -> END
         
-- "I will tell you nothing with that tone, Red.  I have no reason to help you now."
-
-* ["Fine.  But at least tell me what you know.  I need to find the killer."]
+*["Fat chance.  Tell me what happened.  Right now."]   
 
 - "I cannot tell you what I do not know, Red.  This... is the first I am hearing of this."
 
@@ -284,12 +279,16 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - "I'm not asking, Red.  Leave.  Or I will make you."
 
-~ startWizardHostility(true)
-
 * ["You think you have what it takes, old man?  Let's go!"]
 
+~ startWizardHostility(true)
 
-- -> END
+- "Impertinent fool!"
+
+* [Fight]
+
+
+-> END
 
 
 === TheCat ===
@@ -301,6 +300,90 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["Hey, Cat!  What are you doing here?"]
 
+-> END
 
 
-- -> END
+=== TheFish ===
+~ Name = "The Fish"
+
+//Name is {The Fish}
+
+"Boy, this water is great!  I sure do love being alive!"
+
+* ["Hey, Fish!  Stop right there!"]
+
+-> END
+
+
+=== TheOwl ===
+~ Name = "The Owl"
+
+//Name is {The Hunter}
+
+"Oh my stars above!  If it isn't Little Red Riding Hood!  WhatEVER brings you beneath my tree of our glorious forest once more?"
+
+* ["I'm not here to chat, Owl."]
+
+* ["I need information, Owl."]
+
+"Oh my lands afar!  Well, I would just be tickled pink to help you out!  Whatever can I do?"
+
+    ** ["Owl, someone killed Grandmother.  Have you seen anyone suspicious?"]
+    
+    "KILLED Grandmother, you say?  Oh my poor heart, suddenly so stricken!  WHOever could have done such a thing?"]
+            
+            *** ["Do you know something, Owl?!"]
+            
+                "I know many things, Little Red!  I am a wise and knowledgeable old owl after all!  All the secrets of the forest are mine!"
+                
+                    *** ["Then you better start talking, Owl!"]
+                    
+                        "Talking?  What of, Little Red?  There are so many topics to choose from!"
+                        
+                            **** ["Wha- About Grandmother!  Tell me who killed her!"]
+                            
+                                "Oh my words that flow from mine own tongue!  Perhaps your search for who killed her is but a search for the death of your own soul?"
+                                
+                                    ***** ["Owl, talk, or I start swinging."]
+                                    
+                                        "Upon this path of vengeance, would you truly slay the innocent?  How horrible!  What incentive have I to speak my mind now?"
+                                        
+                                            ****** ["I'm going to turn you into cat food, Owl.  Hold still!"]
+                                            
+                                            -> END
+                                            
+
+- "We are all but spirited children of our mother forest, aren't we, Red?  You know I do so love to use the glorious gift of gab!"
+
+    ** ["I am aware.  Someone killed Grandmother, Owl."]
+                            
+        "Oh my words that flow from mine own tongue!  Perhaps your search for who killed her is but a search for the death of your own soul?"
+            
+            *** ["I see you haven't changed, Owl."]
+                
+                "My friend and dearest ally, Little Red Riding Hood, most fearsome of all the predators of the forest!  Whatever do you meant?"
+                
+                    **** ["Do you know anything or not, Owl?"]
+                    
+                        
+                        
+        
+        
+
+
+
+-> END
+
+
+=== TheHunter ===
+~ Name = "The Hunter"
+
+//Name is {The Hunter}
+
+"AGH, I just HATE animals!  WHY are they still ALIVE?!"
+
+* ["Uh, you okay there?"]
+
+-> END
+
+
