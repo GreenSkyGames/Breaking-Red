@@ -11,4 +11,5 @@ using UnityEngine;
 public class CharacterVariable
 {
     public Sprite characterSprite;
+    public string characterName;
 }
