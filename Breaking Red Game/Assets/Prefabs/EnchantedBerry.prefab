@@ -104,6 +104,7 @@ MonoBehaviour:
   effectAmount: 5
   itemType: 3
   sprite: {fileID: 5120123312992085104, guid: adf677bc7a1a70541b707e0af75bd130, type: 3}
+  itemDescription: This berry brings you back to your senses.
 --- !u!58 &7331427344749047541
 CircleCollider2D:
   m_ObjectHideFlags: 0
