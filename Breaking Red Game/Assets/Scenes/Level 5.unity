@@ -13958,8 +13958,7 @@ Transform:
   m_LocalPosition: {x: 30.47, y: -23.73, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1819131552}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &398096491
@@ -23339,9 +23338,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  _horGoal: -6
-  _vertGoal: 0
-  _moveTime: 3
+  pHorGoal: 0
+  pVertGoal: 0
+  pMoveTime: 1
   tilemap: {fileID: 1108193309}
 --- !u!50 &675926578
 Rigidbody2D:
@@ -34302,7 +34301,8 @@ Transform:
   m_LocalPosition: {x: 30.47, y: -23.73, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1819131552}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1175758373
@@ -36270,9 +36270,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  _horGoal: 0
-  _vertGoal: -6
-  _moveTime: 8
+  pHorGoal: 0
+  pVertGoal: 0
+  pMoveTime: 1
   tilemap: {fileID: 1108193309}
 --- !u!50 &1317520242
 Rigidbody2D:
@@ -57796,7 +57796,7 @@ Transform:
   - {fileID: 897531410}
   - {fileID: 1575248802}
   - {fileID: 2097958524}
-  m_Father: {fileID: 394206561}
+  m_Father: {fileID: 1174861797}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1831084031
 GameObject:

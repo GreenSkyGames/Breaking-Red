@@ -283,6 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueKnotName: TheBear
+  dialogueClip: {fileID: 8300000, guid: 18fe2a7b609a5d34cb99481a82702e12, type: 3}
 --- !u!114 &7240846001714190255
 MonoBehaviour:
   m_ObjectHideFlags: 0
