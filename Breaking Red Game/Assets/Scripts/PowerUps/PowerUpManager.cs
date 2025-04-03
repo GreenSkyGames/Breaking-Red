@@ -25,10 +25,11 @@ public class PowerUpManager : MonoBehaviour
             return;
         }
         /* poison apple applies immediately */
-        if (powerUp.itemType == PowerUp.itemName.PoisonApple)
+        if (powerUp is PoisonApple)
         {
             AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
-            powerUp.v_applyEffect(playerController);
+            PoisonApple poisonApple = (PoisonApple)powerUp;
+            poisonApple.v_applyEffect(playerController);
             Destroy(powerUp.gameObject);
         }
         else
@@ -53,19 +54,35 @@ public class PowerUpManager : MonoBehaviour
         while (!inputReceived)
         {
             Time.timeScale = 0;
-            if (Input.GetKeyDown(KeyCode.U))  // 'U' for Use Now
+
+            // When the player presses 'U' (Use Now)
+            if (Input.GetKeyDown(KeyCode.U))
             {
                 AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
-                powerUp.v_applyEffect(playerController);  // apply the power-up effect
+                
+                // Now we check the type of power-up and apply its effect
+                if (powerUp is GoldenApple)
+                {
+                    GoldenApple goldenApple = (GoldenApple)powerUp;
+                    goldenApple.v_applyEffect(playerController);  // Calls the GoldenApple-specific method
+                }
+                else if (powerUp is BerserkerBrew)
+                {
+                    BerserkerBrew berserkerBrew = (BerserkerBrew)powerUp;
+                    berserkerBrew.v_applyEffect(playerController);  // Calls the BerserkerBrew-specific method
+                }
+                else
+                {
+                    powerUp.v_applyEffect(playerController);  // Calls the base method for other power-ups
+                }
+
                 Destroy(powerUp.gameObject);
                 inputReceived = true;
             }
             else if (Input.GetKeyDown(KeyCode.L))  // 'L' for Store for Later
             {
-                AudioManager.instance.Play("ClickSound"); // play power up sound effect
-                /* add to inventory for later use */
-                InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite);
-                Debug.Log("Item added to inventory");
+                AudioManager.instance.Play("ClickSound"); // play click sound effect
+                InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite); // add to inventory
                 Destroy(powerUp.gameObject);
                 inputReceived = true;
             }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 769141403472885555}
   - component: {fileID: 3299407560366568022}
   - component: {fileID: 1905332742465573914}
-  - component: {fileID: 3383215181221822018}
+  - component: {fileID: -2412670145981420379}
   m_Layer: 0
   m_Name: PoisonApple
   m_TagString: PoisonApple
@@ -125,7 +125,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.49999997
---- !u!114 &3383215181221822018
+--- !u!114 &-2412670145981420379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,9 +134,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 677105971085509955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b49c9ad8150a584585256085eb21cd4, type: 3}
+  m_Script: {fileID: 11500000, guid: e0470e958683f1f4a9c4ef513e4ffc72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  sprite: {fileID: 7993419710334276356, guid: 26fb21a57d725ef43ba2c4a5a9107ea1, type: 3}
   effectAmount: 10
+  itemType: 0
+  sprite: {fileID: 7993419710334276356, guid: 26fb21a57d725ef43ba2c4a5a9107ea1, type: 3}

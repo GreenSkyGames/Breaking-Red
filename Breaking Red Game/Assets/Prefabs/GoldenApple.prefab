@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5436517387190661972}
   - component: {fileID: 2010022311945005936}
   - component: {fileID: 9089214040569482688}
-  - component: {fileID: 7795887877805647013}
+  - component: {fileID: 1481867218649157406}
   m_Layer: 0
   m_Name: GoldenApple
   m_TagString: GoldenApple
@@ -125,7 +125,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1.59
---- !u!114 &7795887877805647013
+--- !u!114 &1481867218649157406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,9 +134,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4703042138113513351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b49c9ad8150a584585256085eb21cd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ffbb4f481826314eab4510d12e7c983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectAmount: 1
   itemType: 1
   sprite: {fileID: -6699131238817029377, guid: 078df8d4f8af7ce4fad828454b3a81a2, type: 3}
-  effectAmount: 1

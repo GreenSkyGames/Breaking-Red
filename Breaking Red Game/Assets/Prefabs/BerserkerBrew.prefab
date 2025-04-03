@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 76801945016335925}
   - component: {fileID: 6383969620914019972}
   - component: {fileID: 6933203623082116499}
+  - component: {fileID: -6469975344189650752}
   m_Layer: 0
   m_Name: BerserkerBrew
   m_TagString: BerserkerBrew
@@ -141,3 +142,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.000001899898, y: -0.03429956}
   m_Size: {x: 0.54, y: 0.6885992}
   m_Direction: 0
+--- !u!114 &-6469975344189650752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378629658583778911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f3cf4f4e664fb499401f3625deb179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectAmount: 5
+  itemType: 2
+  sprite: {fileID: -5805156128971586636, guid: b6d5e74f01c81c04b9509a1acf766303, type: 3}
+  attackBoost: 5
