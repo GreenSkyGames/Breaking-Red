@@ -30,6 +30,11 @@ public class PlayerController : MonoBehaviour
 
     private bool isPlayingFootstep = false;
 
+    // Attack variables
+    public Transform attackPoint; // Where the attack hitbox will be
+    public float attackRange = 0.5f;
+    public LayerMask attackLayer; // What layers can be attacked
+
     /* The update function is called once per frame
      * It checks if the player interacts with an NPC and reacts if the player has
      * It interacts with the displayDialogueBox() function and the triggerDialogue() function */
@@ -48,6 +53,12 @@ public class PlayerController : MonoBehaviour
                 enemies[0].GetComponent<NPCDialogueTrigger>().triggerDialogue();
 				//Debug.Log("NPC tag is: " + enemies[0].tag);
             }
+        }
+
+        // Attack
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Attack();
         }
     }
 
@@ -98,6 +109,30 @@ public class PlayerController : MonoBehaviour
                 isPlayingFootstep = false;
             }
         }
+    }
+
+    void Attack()
+    {
+        // Play attack animation
+        anim.SetTrigger("Attack");
+
+        // Detect enemies in range of attack
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, attackLayer);
+
+        // Damage them
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("We hit " + enemy.name);
+            //Add damage here.
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
     /*Handles the actual flipping of the player

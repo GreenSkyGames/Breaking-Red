@@ -101,7 +101,7 @@ public class NormalPassage : TerrainObjects
             case "IL1":
                 return new Vector2(-1, -0.5f);
             case "IL1.1":
-                return new Vector2(-83.5f, -17.4f);
+                return new Vector2(-110, -14.5f);
             case "L2":
                 SceneManager.LoadScene("Level 2");
                 return new Vector2(-19.7f, -21.2f);
