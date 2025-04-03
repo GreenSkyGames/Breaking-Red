@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueKnotName: PurpleTorchEnemy
+  dialogueClip: {fileID: 8300000, guid: ce2ace989d60c20419c74c074f435ff0, type: 3}
 --- !u!114 &362930114479679749
 MonoBehaviour:
   m_ObjectHideFlags: 0

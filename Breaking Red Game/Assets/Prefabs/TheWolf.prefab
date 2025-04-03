@@ -350,3 +350,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueKnotName: TheWolf
+  dialogueClip: {fileID: 8300000, guid: 3650a22bebc4d5146b687aeb08be059d, type: 3}

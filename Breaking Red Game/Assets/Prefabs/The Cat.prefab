@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueKnotName: TheCat
+  dialogueClip: {fileID: 8300000, guid: 066defc4fd6100b4f8580fd4de5e9a34, type: 3}
 --- !u!114 &1401320179408736268
 MonoBehaviour:
   m_ObjectHideFlags: 0

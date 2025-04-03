@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueKnotName: TheHunter
-  dialogueClip: {fileID: 0}
+  dialogueClip: {fileID: 8300000, guid: eba7a5ff68e4168409f8d78f8ccfb65a, type: 3}
 --- !u!114 &8426791226344203431
 MonoBehaviour:
   m_ObjectHideFlags: 0
