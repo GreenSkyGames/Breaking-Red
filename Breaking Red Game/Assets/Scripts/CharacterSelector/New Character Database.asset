@@ -13,9 +13,21 @@ MonoBehaviour:
   m_Name: New Character Database
   m_EditorClassIdentifier: 
   character:
-  - characterSprite: {fileID: -1611747480817944096, guid: 7623ca17e416b477ea12a1db5a20603c, type: 3}
-  - characterSprite: {fileID: -5175576261771318116, guid: 1a7d0c389efde4c94a8378364f9d1d59, type: 3}
-  - characterSprite: {fileID: 3522080991238194152, guid: ea218093698f04622af1afef6209d246, type: 3}
-  - characterSprite: {fileID: 8209467795375629189, guid: 86bfd2e239994421f9e792e9296321dd, type: 3}
-  - characterSprite: {fileID: 2743649428269083790, guid: c41ac255c0ff243f48490e1b0b05523e, type: 3}
-  - characterSprite: {fileID: 7405455439096646916, guid: fe7b4632b49f348ce9c0509450c89a34, type: 3}
+  - characterPrefab: {fileID: 8849911227503075234, guid: c8be6bfea972445c7be65539da31f9c0, type: 3}
+    animatorController: {fileID: 9100000, guid: 62da1a2fb4ecc460f9e6914e575a59d9, type: 2}
+    characterName: Red
+  - characterPrefab: {fileID: 8849911227503075234, guid: ff8c6f8326fc74a478783643afaedd0e, type: 3}
+    animatorController: {fileID: 9100000, guid: 54303f593580c40e69704fbee7780f65, type: 2}
+    characterName: Blue
+  - characterPrefab: {fileID: 8849911227503075234, guid: e9aa205bbe9664f049568d5ec850d485, type: 3}
+    animatorController: {fileID: 9100000, guid: 0b247181d9d2e4703b8bb27adb3b8a3d, type: 2}
+    characterName: Purple
+  - characterPrefab: {fileID: 8849911227503075234, guid: 14adda95bbb0546998b195acb6c340a7, type: 3}
+    animatorController: {fileID: 9100000, guid: 935fe870b085e442bbf9096c3e776bbc, type: 2}
+    characterName: Yellow
+  - characterPrefab: {fileID: 8849911227503075234, guid: 36c8ff547917c4c1d8da9d05c0526ef0, type: 3}
+    animatorController: {fileID: 9100000, guid: eb0890f7e3c414276a7e70a2925fe1ea, type: 2}
+    characterName: Green
+  - characterPrefab: {fileID: 8849911227503075234, guid: 10c62fb9faf354bf9acc585051ee3e58, type: 3}
+    animatorController: {fileID: 9100000, guid: fcee93e77cfc94cfaab593797fa43ebe, type: 2}
+    characterName: Black

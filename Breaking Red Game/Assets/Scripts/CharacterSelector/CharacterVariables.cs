@@ -10,6 +10,8 @@ using UnityEngine;
 [System.Serializable]
 public class CharacterVariable
 {
-    public Sprite characterSprite;
+    public GameObject characterPrefab; // Added prefab
+    public RuntimeAnimatorController animatorController; // Added animator controller
+    //public Sprite characterSprite;
     public string characterName;
 }

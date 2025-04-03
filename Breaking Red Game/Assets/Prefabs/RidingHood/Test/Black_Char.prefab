@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1579810112441307124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975773308809415854}
+  m_Layer: 7
+  m_Name: AttackPointB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1975773308809415854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579810112441307124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6026593324020256280}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7106398384909494749
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,7 +79,7 @@ GameObject:
   - component: {fileID: 7979292521135610977}
   - component: {fileID: 1422726985948165968}
   m_Layer: 6
-  m_Name: Player
+  m_Name: Black_Char
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,10 +95,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -109.5, y: -14.2, z: 0}
-  m_LocalScale: {x: 11.5, y: 11.5, z: 1}
+  m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 820001522684523795}
+  - {fileID: 1975773308809415854}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6399434693797903750
@@ -114,7 +146,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -1611747480817944096, guid: 7623ca17e416b477ea12a1db5a20603c, type: 3}
+  m_Sprite: {fileID: 7405455439096646916, guid: fe7b4632b49f348ce9c0509450c89a34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -216,7 +248,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   ActivatePoint: {fileID: 820001522684523795}
-  attackPoint: {fileID: 0}
+  attackPoint: {fileID: 1975773308809415854}
   attackRange: 0.5
   attackLayer:
     serializedVersion: 2
@@ -231,7 +263,7 @@ Animator:
   m_GameObject: {fileID: 8849911227503075234}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 62da1a2fb4ecc460f9e6914e575a59d9, type: 2}
+  m_Controller: {fileID: 9100000, guid: fcee93e77cfc94cfaab593797fa43ebe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
