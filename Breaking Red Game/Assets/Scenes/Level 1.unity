@@ -33235,10 +33235,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4760786667496072898, guid: 6ab50299acf9ecb4199d3d1c81fa2d5a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8849911227503075234, guid: 6ab50299acf9ecb4199d3d1c81fa2d5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1120237715}
   m_SourcePrefab: {fileID: 100100000, guid: 6ab50299acf9ecb4199d3d1c81fa2d5a, type: 3}
 --- !u!4 &1120237712 stripped
 Transform:
@@ -33250,12 +33254,31 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7437709376220296197, guid: 6ab50299acf9ecb4199d3d1c81fa2d5a, type: 3}
   m_PrefabInstance: {fileID: 1120237711}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1120237714}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e63373a87687154f9c8ad7f3eaa9ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1120237714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8849911227503075234, guid: 6ab50299acf9ecb4199d3d1c81fa2d5a, type: 3}
+  m_PrefabInstance: {fileID: 1120237711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1120237715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120237714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df4c87f35b2575428ab4e18319c4b3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choicePrompt: {fileID: 4473551636228838907}
+  inventorySlots: []
 --- !u!1 &1147074600
 GameObject:
   m_ObjectHideFlags: 0
@@ -33446,7 +33469,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4703042138113513351, guid: 8ecf3f6ec7834f14589fc6aaa39df2a0, type: 3}
       propertyPath: m_Name
-      value: GoldenApple (2)
+      value: GoldenApple
       objectReference: {fileID: 0}
     - target: {fileID: 5436517387190661972, guid: 8ecf3f6ec7834f14589fc6aaa39df2a0, type: 3}
       propertyPath: m_LocalPosition.x
