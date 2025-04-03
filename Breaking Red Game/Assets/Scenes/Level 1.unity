@@ -88791,7 +88791,7 @@ PrefabInstance:
     - target: {fileID: 2954421103497549009, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
       propertyPath: dialogueClip
       value: 
-      objectReference: {fileID: 8300000, guid: c30154de50a9f2c4cac2efe16917c4aa, type: 3}
+      objectReference: {fileID: 8300000, guid: 3650a22bebc4d5146b687aeb08be059d, type: 3}
     - target: {fileID: 6963960534032874365, guid: 54153c69d8a59a246b7b066c6f683239, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.043
