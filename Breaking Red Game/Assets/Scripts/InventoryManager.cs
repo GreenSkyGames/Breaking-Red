@@ -46,13 +46,13 @@ public class InventoryManager : MonoBehaviour
      * It looks at the item slots I created in UI b/c I attached them in Inspector
      * Checks if there is an unoccupied slot and if not, put the item in
      * Uses isOccupied bool and updateInventoryUI() from ItemSlot script */
-    public void addToInventory(string itemName, Sprite itemSprite)
+    public void addToInventory(string itemName, Sprite itemSprite, string itemDescription)
     {
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if(itemSlot[i] != null && itemSlot[i].isOccupied == false)
             {
-                itemSlot[i].updateInventoryUI(itemName, itemSprite);
+                itemSlot[i].updateInventoryUI(itemName, itemSprite, itemDescription);
                 return;
             }
         }
@@ -93,6 +93,15 @@ public class InventoryManager : MonoBehaviour
             Time.timeScale = 0;
             inventoryMenu.SetActive(true);
             _menuActivated = true;
+        }
+    }
+
+    public void DeselectAllSlots()
+    {
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            itemSlot[i].selectedShader.SetActive(false);
+            itemSlot[i].thisItemSelected = false;
         }
     }
 }

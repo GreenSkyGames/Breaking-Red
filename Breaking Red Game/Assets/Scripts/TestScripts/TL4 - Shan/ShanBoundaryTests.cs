@@ -21,12 +21,12 @@ public class ShanBoundaryTests : MonoBehaviour
         // Test 1: Add 4 items to the inventory
         Debug.Log("Running Inventory Capacity Test");
 
-        inventoryManager.addToInventory("Item1", null);  // Add first item
-        inventoryManager.addToInventory("Item2", null);  // Add second item
-        inventoryManager.addToInventory("Item3", null);  // Add third item
+        inventoryManager.addToInventory("Item1", null, null);  // Add first item
+        inventoryManager.addToInventory("Item2", null, null);  // Add second item
+        inventoryManager.addToInventory("Item3", null, null);  // Add third item
 
         // try adding a fourth item, should be rejected as the inventory is full
-        inventoryManager.addToInventory("Item4", null);  // This should log "Inventory is full!"
+        inventoryManager.addToInventory("Item4", null, null);  // This should log "Inventory is full!"
         int totalItems = inventoryManager.getItemCount();
         int expectedItemCount = 3;  // still want only 3 items in test after
 

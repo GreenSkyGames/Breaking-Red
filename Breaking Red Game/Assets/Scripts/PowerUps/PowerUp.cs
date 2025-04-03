@@ -13,6 +13,8 @@ public class PowerUp : MonoBehaviour
     public enum itemName { PoisonApple, GoldenApple, BerserkerBrew, EnchantedBerry } // enum has power-up types
     public itemName itemType;  // type of the power-up
     public Sprite sprite;
+    
+    [TextArea] public string itemDescription;
 
     private InventoryManager _inventoryManager;
 

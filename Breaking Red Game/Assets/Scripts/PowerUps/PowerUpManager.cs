@@ -87,7 +87,7 @@ public class PowerUpManager : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.L))  // 'L' for Store for Later
             {
                 AudioManager.instance.Play("ClickSound"); // play click sound effect
-                InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite); // add to inventory
+                InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite, powerUp.itemDescription); // add to inventory
                 Destroy(powerUp.gameObject);
                 inputReceived = true;
             }
