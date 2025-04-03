@@ -71,6 +71,11 @@ public class PowerUpManager : MonoBehaviour
                     BerserkerBrew berserkerBrew = (BerserkerBrew)powerUp;
                     berserkerBrew.v_applyEffect(playerController);  // Calls the BerserkerBrew-specific method
                 }
+                else if (powerUp is EnchantedBerry)
+                {
+                    EnchantedBerry enchantedBerry = (EnchantedBerry)powerUp;
+                    enchantedBerry.v_applyEffect(playerController);
+                }
                 else
                 {
                     powerUp.v_applyEffect(playerController);  // Calls the base method for other power-ups

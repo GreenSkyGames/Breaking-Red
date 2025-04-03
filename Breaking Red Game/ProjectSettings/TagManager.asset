@@ -35,6 +35,7 @@ TagManager:
   - TheFish
   - TheOwl
   - TheHunter
+  - EnchantedBerry
   layers:
   - Default
   - TransparentFX

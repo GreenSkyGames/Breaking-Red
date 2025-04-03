@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EnchantedBerry 1_0: 5120123312992085104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
