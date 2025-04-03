@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueKnotName: TheOwl
-  dialogueClip: {fileID: 0}
+  dialogueClip: {fileID: 8300000, guid: 47a0be04244d07e40842c45f33657f98, type: 3}
 --- !u!114 &7253420871700685084
 MonoBehaviour:
   m_ObjectHideFlags: 0

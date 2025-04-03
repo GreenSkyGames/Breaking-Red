@@ -338,4 +338,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueKnotName: TheFish
-  dialogueClip: {fileID: 0}
+  dialogueClip: {fileID: 8300000, guid: 4af550bc56426394b8ea113336a127c2, type: 3}
