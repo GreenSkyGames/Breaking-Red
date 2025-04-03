@@ -21,10 +21,11 @@ public class InventoryManager : MonoBehaviour
      *	It only uses the function toggleInventory() */
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             toggleInventory();
         }
+
     }
 
     /* This functions function sets the instance of InventoryManager
@@ -40,6 +41,8 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(gameObject);  // prevent duplicates
         }
+
+
     }
 
     /* This function adds an item to the inventory using its name and sprite
@@ -82,7 +85,7 @@ public class InventoryManager : MonoBehaviour
      * Uses built in Unity function SetActive() */
     private void toggleInventory()
     {
-        if(_menuActivated) // if I clicked when menu is on, turn it off
+        if (_menuActivated) // if I clicked when menu is on, turn it off
         {
             Time.timeScale = 1;
             inventoryMenu.SetActive(false);
