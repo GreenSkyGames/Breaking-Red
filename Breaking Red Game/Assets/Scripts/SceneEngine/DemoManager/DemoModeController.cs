@@ -1,61 +1,99 @@
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
 
 public class DemoModeController : MonoBehaviour
 {
-    public VideoPlayer videoPlayer;      // Reference to the VideoPlayer component that plays the demo video
-    public float idleTimeLimit = 30f;    // The time limit (in seconds) before the demo video starts, when the player is idle
-    private float idleTime = 0f;         // Tracks the amount of idle time (no player input)
-    private bool isDemoModeActive = false;  // Flag to check whether demo mode is active or not
+    public VideoPlayer videoPlayer;
+    public GameObject videoCanvas;          // Canvas that contains RawImage
+    public float idleTimeLimit = 30f;
+    public float fadeDuration = 0.5f;         // Duration of fade in/out
+
+    private float idleTime = 0f;
+    private bool isDemoModeActive = false;
+    private CanvasGroup canvasGroup;
+
+    void Start()
+    {
+        // Get the CanvasGroup component from the videoCanvas
+        if (videoCanvas != null)
+        {
+            canvasGroup = videoCanvas.GetComponent<CanvasGroup>();
+            canvasGroup.alpha = 0f;
+            videoCanvas.SetActive(false);
+        }
+    }
 
     void Update()
     {
-        // Check if any key or mouse button is pressed
-        if (Input.anyKey || Input.GetMouseButton(0))  // Checks for both keyboard or mouse input
+        if (Input.anyKey || Input.GetMouseButton(0))
         {
-            // If demo mode is active, stop it and return to the game
             if (isDemoModeActive)
             {
                 StopDemoMode();
             }
-            idleTime = 0f;  // Reset the idle time when there is player input
+            idleTime = 0f;
         }
         else
         {
-            idleTime += Time.deltaTime;  // Increment idle time if no player input is detected
+            idleTime += Time.deltaTime;
         }
 
-        // If the idle time exceeds the limit, start the demo mode
         if (idleTime >= idleTimeLimit && !isDemoModeActive)
         {
-            StartDemoMode();  // Begin playing the demo video after the idle period
+            StartDemoMode();
         }
     }
 
-    // Starts the demo mode by playing the demo video
     void StartDemoMode()
     {
-        isDemoModeActive = true;  // Mark that demo mode is active
-        videoPlayer.Play();  // Play the demo video
+        isDemoModeActive = true;
+        videoCanvas.SetActive(true);
+        videoPlayer.Play();
+        Time.timeScale = 0f;
 
-        // Add an event listener to detect when the video ends
         videoPlayer.loopPointReached += OnVideoEnd;
+
+        // Fade in
+        StartCoroutine(FadeCanvas(0f, 1f));
     }
 
-    // Stops the demo mode and returns the player to the game
     void StopDemoMode()
     {
-        isDemoModeActive = false;  // Mark demo mode as inactive
-        videoPlayer.Stop();  // Stop playing the demo video
+        isDemoModeActive = false;
+        videoPlayer.Stop();
+        videoPlayer.loopPointReached -= OnVideoEnd;
+        Time.timeScale = 1f;
 
-        // Resume the game after demo mode
-        Time.timeScale = 1f;  // Restore the game time (in case it was paused during demo mode)
+        // Fade out and then disable canvas
+        StartCoroutine(FadeCanvas(1f, 0f, disableAfterFade: true));
     }
 
-    // Callback method when the video reaches its end
     void OnVideoEnd(VideoPlayer vp)
     {
-        StopDemoMode();  // Stop demo mode and return to the game when the video ends
+        StopDemoMode();
+    }
+
+    IEnumerator FadeCanvas(float from, float to, bool disableAfterFade = false)
+    {
+        float timer = 0f;
+        while (timer < fadeDuration)
+        {
+            timer += Time.unscaledDeltaTime;
+            float alpha = Mathf.Lerp(from, to, timer / fadeDuration);
+            if (canvasGroup != null)
+                canvasGroup.alpha = alpha;
+            yield return null;
+        }
+
+        if (canvasGroup != null)
+            canvasGroup.alpha = to;
+
+        if (disableAfterFade && videoCanvas != null)
+        {
+            videoCanvas.SetActive(false);
+        }
     }
 }
