@@ -6942,8 +6942,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
   pHorGoal: 0
-  pVertGoal: 0
-  pMoveTime: 1
+  pVertGoal: -5
+  pMoveTime: 3
   tilemap: {fileID: 1348085507}
 --- !u!50 &459147072
 Rigidbody2D:
@@ -7851,9 +7851,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  pHorGoal: 0
+  pHorGoal: -20
   pVertGoal: 0
-  pMoveTime: 1
+  pMoveTime: 8
   tilemap: {fileID: 1348085507}
 --- !u!50 &548142255
 Rigidbody2D:
@@ -10252,8 +10252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
   pHorGoal: 0
-  pVertGoal: 0
-  pMoveTime: 1
+  pVertGoal: -6
+  pMoveTime: 2
   tilemap: {fileID: 1348085507}
 --- !u!50 &819714083
 Rigidbody2D:
@@ -11373,6 +11373,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5149731233409516146, guid: 6ab50299acf9ecb4199d3d1c81fa2d5a, type: 3}
+      propertyPath: choicePrompt
+      value: 
+      objectReference: {fileID: 1621756241}
     - target: {fileID: 6026593324020256280, guid: 6ab50299acf9ecb4199d3d1c81fa2d5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3
@@ -13053,8 +13057,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
   pHorGoal: 0
-  pVertGoal: 0
-  pMoveTime: 1
+  pVertGoal: -14
+  pMoveTime: 5
   tilemap: {fileID: 1348085507}
 --- !u!50 &949400874
 Rigidbody2D:
@@ -14088,9 +14092,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  pHorGoal: 0
+  pHorGoal: 8
   pVertGoal: 0
-  pMoveTime: 1
+  pMoveTime: 3
   tilemap: {fileID: 1348085507}
 --- !u!50 &1019909324
 Rigidbody2D:
@@ -20232,9 +20236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
-  pHorGoal: 0
+  pHorGoal: -6
   pVertGoal: 0
-  pMoveTime: 1
+  pMoveTime: 3
   tilemap: {fileID: 1348085507}
 --- !u!50 &1236845143
 Rigidbody2D:
@@ -75759,8 +75763,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPos: {x: 0, y: 0, z: 0}
   pHorGoal: 0
-  pVertGoal: 0
-  pMoveTime: 1
+  pVertGoal: 4
+  pMoveTime: 2
   tilemap: {fileID: 1348085507}
 --- !u!50 &1598064767
 Rigidbody2D:
@@ -76809,6 +76813,11 @@ PrefabInstance:
 --- !u!224 &1621756240 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1801208003063713154, guid: 8e947b540e1fdab4490afdb47f1f1b0a, type: 3}
+  m_PrefabInstance: {fileID: 1621756239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1621756241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4349595612354833007, guid: 8e947b540e1fdab4490afdb47f1f1b0a, type: 3}
   m_PrefabInstance: {fileID: 1621756239}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1626992081
