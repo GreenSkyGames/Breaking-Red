@@ -6,16 +6,19 @@
  * It also contains a dramatic death sequence if the player falls off the map
  * It inherets from MonoBehaviour */
 using System.Collections;
+using UnityEditor.Rendering.LookDev;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public CanvasGroup fadePanel;
     [SerializeField] private float _speed = 5;
     public float scaleSpeed = 2.0f;
     public float seedHeight = 1.0f;
-    public float finalHeight = 0f;
+    public float shrunkHeight = 0f;
     public bool isScaling = false;
     public int facingDirection = 1;
     public Rigidbody2D rb;
@@ -152,23 +155,51 @@ public class PlayerController : MonoBehaviour
     /* This function actually scales the object size down
      * This function slowly transforms the object by making it get smaller and smaller until it disappears using math's Lerp function
      * It also quit's the application after this happens as a natural quit to the game*/
+
+    private IEnumerator fadeToBlack(float duration)
+    {
+        if (fadePanel == null) yield break;
+
+        float elapsed = 0;
+        while (elapsed < duration)
+        {
+            fadePanel.alpha = Mathf.Lerp(0, 1, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        fadePanel.alpha = 1;
+        SceneManager.LoadScene("GameOver");
+    }
+
     IEnumerator scaleObj() {
         isScaling = true;
         float elapsedTime = 0f;
         float duration = scaleSpeed;
         Debug.Log("isScaling: " + isScaling);
+
+        Vector3 startScale = transform.localScale;
+        float direction = Mathf.Sign(startScale.x); // +1 or -1 depending on facing
+        Vector3 targetScale = new Vector3(shrunkHeight * direction, shrunkHeight, startScale.z);
+
         while (elapsedTime < duration)
         {
-            float t = elapsedTime / duration; // Normalized time (0 to 1)
-            float newScale = Mathf.Lerp(seedHeight, finalHeight, t);
-            transform.localScale = new Vector3(newScale, newScale, 1);
+            //float t = elapsedTime / duration; // Normalized time (0 to 1)
+            //float newScale = Mathf.Lerp(seedHeight, finalHeight, t);
+            float t = elapsedTime / duration;
+            t = 1f - Mathf.Pow(1f - t, 3); // ease-out cubic
+            //float newScale = Mathf.Lerp(Mathf.Abs(startScale), shrunkHeight, t);
+            //transform.localScale = new Vector3(newScale, newScale, 1);
+            transform.localScale = Vector3.Lerp(startScale, targetScale, t);
+
 
             elapsedTime += Time.deltaTime; // Increment elapsed time
+            Debug.Log("elapsed time: " + elapsedTime + " duration: " + duration);
             yield return null; // Wait for the next frame
         }
+        yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
         Debug.Log("Player died moving over an edge!");
-        Application.Quit();//quitting the game 
-        UnityEditor.EditorApplication.isPlaying = false;
+        //Application.Quit();//quitting the game 
+        //UnityEditor.EditorApplication.isPlaying = false;
         //float newScale = Mathf.Lerp(_seedHeight, _finalHeight, Time.deltaTime / _scaleSpeed);
         //transform.localScale = new Vector3(newScale, newScale, 1);
     }
