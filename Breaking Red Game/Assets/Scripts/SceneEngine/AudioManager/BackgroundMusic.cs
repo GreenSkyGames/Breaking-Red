@@ -63,14 +63,14 @@ public class BackgroundMusic : MonoBehaviour
                 StartCoroutine(AudioManager.instance.FadeIn("L1BGM", 1.0f)); // Fade in level 1 music
                 StartCoroutine(AudioManager.instance.FadeIn("WolfSound", 1.0f));
                 break;
-            case "Level 2":
+            case "L2":
                 StartCoroutine(AudioManager.instance.FadeOut("L1BGM", 1.0f)); // Fade out last scene music
                 StartCoroutine(AudioManager.instance.FadeOut("WolfSound", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeIn("L2BGM", 1.0f)); // Fade in level 2 music
                 StartCoroutine(AudioManager.instance.FadeIn("WolfSound", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeIn("BatSound", 1.0f));
                 break;
-            case "Level 3":
+            case "L3":
                 StartCoroutine(AudioManager.instance.FadeOut("L2BGM", 1.0f)); // Fade out last scene music
                 StartCoroutine(AudioManager.instance.FadeOut("WolfSound", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeOut("BatSound", 1.0f));
@@ -78,13 +78,13 @@ public class BackgroundMusic : MonoBehaviour
                 StartCoroutine(AudioManager.instance.FadeIn("WindSound", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeIn("LightingSound", 1.5f));
                 break;
-            case "Level 4":
+            case "L4":
                 StartCoroutine(AudioManager.instance.FadeOut("L3BGM", 1.0f)); // Fade out last scene music
                 StartCoroutine(AudioManager.instance.FadeOut("WindSound", 1.0f));
                 StartCoroutine(AudioManager.instance.FadeIn("L4BGM", 1.0f));  // Fade in level 4 music
                 StartCoroutine(AudioManager.instance.FadeIn("FrogSound", 1.5f));
                 break;
-            case "Level 5":
+            case "L5":
                 StartCoroutine(AudioManager.instance.FadeOut("L4BGM", 1.0f)); // Fade out last scene music
                 StartCoroutine(AudioManager.instance.FadeOut("FrogSound", 1.5f));
                 StartCoroutine(AudioManager.instance.FadeIn("L5BGM", 1.0f));  // Fade in level 5 music

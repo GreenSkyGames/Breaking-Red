@@ -96,29 +96,32 @@ public class NormalPassage : TerrainObjects
         switch(gameObject.tag)
         {
             case "L1":
-                SceneManager.LoadScene("Level 1");
-                return new Vector2(-19.7f, -21.2f);
+                //SceneManager.LoadScene("Level 1");
+                return new Vector2(10.5f, -8.43f);
             case "IL1":
                 return new Vector2(-1, -0.5f);
             case "IL1.1":
                 return new Vector2(-110, -14.5f);
             case "L2":
-                SceneManager.LoadScene("Level 2");
-                return new Vector2(-19.7f, -21.2f);
+                //SceneManager.LoadScene("Level 2");
+                //return new Vector2(-19.7f, -21.2f);
+                return new Vector2(79.71f, -24.84f);
             case "IL2":
-                return new Vector2(133, -11);
+                return new Vector2(181.2f, -14.6f);
             case "L3":
-                SceneManager.LoadScene("Level 3");
-                return new Vector2(-19.7f, -21.2f);
+                //SceneManager.LoadScene("Level 3");
+                return new Vector2(296.16f, -1.03f); 
+                //return new Vector2(-19.7f, -21.2f);
             case "IL3":
-                return new Vector2(33.5f, -62);
+                return new Vector2(317.29f, -61.84f);
             case "L4":
-                SceneManager.LoadScene("Level 4");
-                return new Vector2(-19.7f, -21.2f);
+                //SceneManager.LoadScene("Level 4");
+                //return new Vector2(-19.7f, -21.2f);
+                return new Vector2(223.76f, -69.58f);
             case "L5":
-                SceneManager.LoadScene("Level 5");
-
-                return new Vector2(-19.7f, -21.2f);
+                //SceneManager.LoadScene("Level 5");
+                //return new Vector2(-19.7f, -21.2f);
+                return new Vector2(30.36f, -117.72f);
             default:
                 Debug.LogWarning("No destination set for tag: " + gameObject.tag);
                 return Vector2.zero;
