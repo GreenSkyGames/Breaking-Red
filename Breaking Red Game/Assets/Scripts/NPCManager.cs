@@ -70,6 +70,9 @@ public class NPCManager : MonoBehaviour
 	private GameObject door; //The doors they can open, assigned by tag
 	public GameObject lootPrefab; //Assign their loot to their prefab
 
+	public bool metPlayer = false;
+	private DialogueManager dialogueManager;
+
     //Start is currently being used to:
 	// - find rigidbody component
 	// - find animator component
@@ -81,6 +84,8 @@ public class NPCManager : MonoBehaviour
 		changeState(EnemyState.Idle);
 
 		myCanvas = GameObject.Find("DialogueBoxCanvas");
+
+		dialogueManager = FindObjectOfType<DialogueManager>();
 
 		//Debug.Log("myCanvas tag is " + myCanvas.tag);
 
@@ -166,6 +171,7 @@ public class NPCManager : MonoBehaviour
 					//changeState(EnemyState.Idle);
 					//isHostile = false;
 					rb.linearVelocity = Vector2.zero;
+					metPlayer = true;
 				}
 			}
 
@@ -210,6 +216,18 @@ public class NPCManager : MonoBehaviour
     {
         Instantiate(lootPrefab, transform.position, Quaternion.identity);
     }
+
+	//Function to add NPC tag to the clue list in DialogueManager
+	public void gatherClue()
+	{
+		Debug.Log("Clue gather test" + dialogueManager.tag);
+		if(dialogueManager != null)
+		{
+			dialogueManager.AddClue(gameObject.tag);
+		}
+	}
+
+
 
 	//Chase handles both direction of the NPC and the flipping their animation (for now).
 	void chase()

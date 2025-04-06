@@ -6,6 +6,7 @@
  * It also contains a dramatic death sequence if the player falls off the map
  * It inherets from MonoBehaviour */
 using System.Collections;
+using System.Collections.Generic;
 using UnityEditor.Rendering.LookDev;
 using UnityEditor.Tilemaps;
 using UnityEngine;
@@ -36,8 +37,8 @@ public class PlayerController : MonoBehaviour
     // Attack variables
     public Transform attackPoint; // Where the attack hitbox will be
     public float attackRange = 0.5f;
-    public int attackDamage = 1;
     public LayerMask attackLayer; // What layers can be attacked
+    public int attackDamage = 1;
 
     /* The update function is called once per frame
      * It checks if the player interacts with an NPC and reacts if the player has
@@ -56,6 +57,7 @@ public class PlayerController : MonoBehaviour
                 enemies[0].GetComponent<NPCManager>().displayDialogueBox();
                 enemies[0].GetComponent<NPCDialogueTrigger>().triggerDialogue();
 				//Debug.Log("NPC tag is: " + enemies[0].tag);
+
             }
         }
 
@@ -65,6 +67,8 @@ public class PlayerController : MonoBehaviour
             Attack();
         }
     }
+
+
 
     /*Fixed update updates at intervals
      * This function checks if the player is currently falling and slows their velocity and stops their collider box as well as their sprite-renderer from affecting other objects

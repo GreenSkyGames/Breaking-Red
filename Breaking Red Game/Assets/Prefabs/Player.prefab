@@ -201,10 +201,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e63373a87687154f9c8ad7f3eaa9ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadePanel: {fileID: 0}
   _speed: 5
   scaleSpeed: 2
   seedHeight: 1
-  finalHeight: 0
+  shrunkHeight: 0
   isScaling: 0
   facingDirection: 1
   rb: {fileID: 3886835313773532522}
@@ -216,6 +217,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   ActivatePoint: {fileID: 820001522684523795}
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  attackDamage: 1
 --- !u!95 &6048510446368128549
 Animator:
   serializedVersion: 7

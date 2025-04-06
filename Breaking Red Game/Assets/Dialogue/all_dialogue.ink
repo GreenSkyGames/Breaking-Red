@@ -6,7 +6,8 @@ EXTERNAL startBearHostility(bool)
 EXTERNAL stopBearHostility(bool)
 EXTERNAL startWizardHostility(bool)
 EXTERNAL stopWizardHostility(bool)
-
+EXTERNAL startHunterHostility(bool)
+EXTERNAL stopHunterHostility(bool)
 
 
 -> TheWolf
@@ -17,6 +18,10 @@ EXTERNAL stopWizardHostility(bool)
 -> TheWizard
 -> TheAxman
 -> TheCat
+-> TheFish
+-> TheOwl
+-> TheHunter
+
 
 VAR Name = "Default"
 
@@ -383,6 +388,63 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 "AGH, I just HATE animals!  WHY are they still ALIVE?!"
 
 * ["Uh, you okay there?"]
+
+- "Oh great, look who it is!  Everyone's favorite treehugger, Little Red Riding Hood!"
+
+* ["What are you doing in these woods?"]
+
+* ["Who are you?"]
+
+"What does it matter to YOU?  These forests are open to everyone that knows how to jump!"
+
+    ** ["It matters a lot!  There's blood everywhere!"]
+    
+    "What are you some kind of detective now, as well as the big big forest girl?"
+    
+        *** ["I think you should start talking."]
+        
+        "Eat my shorts."
+        
+            **** ["...Really?"]
+            
+            -> END
+
+
+
+
+- "What does it LOOK like?  These ANIMALS are just running around EVERYWHERE!  Being ALIVE!  Someone has to stop them!"
+
+* ["That's... insane.  Do you need help of some kind?"]
+
+- "SCREW YOU, Red!  I don't need help from you!  I didn't need help from Grandmother neither!"
+
+* ["Grandmother?  What?  Do you know something?"]
+
+- "You and her can both jump off a cliff, that's what I know!  That old biddy, putting up "No Hunting" signs all over the forest!  Whose side does she think she's on?"
+
+* ["..."]
+
+- "Not like the Wizard or that worthless Hippie can save us from the animals!  If all of you lazy tree-huggers weren't in the way, then I could finally kill ALL the animals!"
+
+* ["Just calm down!"]
+
+* ["Obviously I'm not going to let you do that!"]
+
+    "What are you going to do to stop me?  I don't hunt humans, just like I told the Axman!"
+    
+        ** ["The Axman?  What did he say?"]
+        
+            "No!  I ain't saying another word!  Why don't you buzz off already, like a fly off these corpses!"
+            
+                *** [The Hunter refuses to speak further.]
+                
+                    -> END
+
+
+- "I'll show you calm!"
+~ startHunterHostility(true)
+
+* [End]
 
 -> END
 

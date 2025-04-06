@@ -251,10 +251,10 @@ MonoBehaviour:
   ActivatePoint: {fileID: 820001522684523795}
   attackPoint: {fileID: 7917157232262961954}
   attackRange: 0.5
-  attackDamage: 1
   attackLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
+  attackDamage: 1
 --- !u!95 &6048510446368128549
 Animator:
   serializedVersion: 7

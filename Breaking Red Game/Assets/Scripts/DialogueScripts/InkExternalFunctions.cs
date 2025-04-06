@@ -29,6 +29,8 @@ public class InkExternalFunctions : MonoBehaviour
 		story.BindExternalFunction("stopBearHostility", (bool activate) => stopBearHostility(activate));
 		story.BindExternalFunction("startWizardHostility", (bool activate) => startWizardHostility(activate));
 		story.BindExternalFunction("stopWizardHostility", (bool activate) => stopWizardHostility(activate));
+		story.BindExternalFunction("startHunterHostility", (bool activate) => startHunterHostility(activate));
+		story.BindExternalFunction("stopHunterHostility", (bool activate) => stopHunterHostility(activate));
 
 	}
 
@@ -43,6 +45,8 @@ public class InkExternalFunctions : MonoBehaviour
 		story.UnbindExternalFunction("stopBearHostility");
 		story.UnbindExternalFunction("startWizardHostility");
 		story.UnbindExternalFunction("stopWizardHostility");
+		story.UnbindExternalFunction("startHunterHostility");
+		story.UnbindExternalFunction("stopHunterHostility");
 
 	}
 
@@ -107,6 +111,22 @@ public class InkExternalFunctions : MonoBehaviour
 	{
 		Debug.Log("Miracle2");
 		temp = GameObject.FindWithTag("TheWizard");
+		temp.GetComponent<NPCManager>().offHostility();
+	}
+
+	//Turn on The Hunter hostility
+    private void startHunterHostility(bool activate)
+	{
+		Debug.Log("Miracle");
+		temp = GameObject.FindWithTag("TheHunter");
+		temp.GetComponent<NPCManager>().onHostility();
+	}
+
+	//Turn off The Hunter hostility
+    private void stopHunterHostility(bool activate)
+	{
+		Debug.Log("Miracle2");
+		temp = GameObject.FindWithTag("TheHunter");
 		temp.GetComponent<NPCManager>().offHostility();
 	}
 }

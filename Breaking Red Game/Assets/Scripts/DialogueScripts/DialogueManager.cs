@@ -36,6 +36,8 @@ public class DialogueManager : MonoBehaviour
 
 	private int _currentChoiceIndex = -1;
 
+	private List<string> cluesGathered = new List<string>();
+
 	//On Awake, the diaogue box, the ink json file, and the inkExternal functions
 	//are all found.
 	//
@@ -242,5 +244,15 @@ public class DialogueManager : MonoBehaviour
 		//_dialogueBoxCanvas = GameObject.FindWithTag("DialogueBox");
 		_dialogueBoxCanvas.SetActive(true);
 		//return;
+	}
+
+	//Function to add enemy tag to the clue list
+	public void AddClue(string clueTag)
+	{
+		if (!cluesGathered.Contains(clueTag))
+		{
+			cluesGathered.Add(clueTag);
+			Debug.Log("Added clue: " + clueTag);
+		}
 	}
 }
