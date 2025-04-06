@@ -17,7 +17,7 @@ public class SlidingDoor : MovingPlatform
     }
 
     // Moves the door in one direction and then disables it
-    private void OneWay()
+    public void OneWay()
     {
         StartCoroutine(MoveAndDisable());
     }

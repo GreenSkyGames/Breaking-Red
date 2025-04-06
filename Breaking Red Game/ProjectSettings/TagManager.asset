@@ -36,6 +36,8 @@ TagManager:
   - TheOwl
   - TheHunter
   - EnchantedBerry
+  - WolfDoorNorth
+  - WolfDoorSouth
   layers:
   - Default
   - TransparentFX

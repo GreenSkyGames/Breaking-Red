@@ -67,6 +67,9 @@ public class NPCManager : MonoBehaviour
 
 	private NPC _npc;
 
+	private GameObject door; //The doors they can open, assigned by tag
+	public GameObject lootPrefab; //Assign their loot to their prefab
+
     //Start is currently being used to:
 	// - find rigidbody component
 	// - find animator component
@@ -113,6 +116,21 @@ public class NPCManager : MonoBehaviour
 		{
 			GameEventsManager.instance.dialogueEvents.onStartHostility -= onHostility;
 			GameEventsManager.instance.dialogueEvents.onStopHostility -= offHostility;			
+		}
+
+		//System for making enemies affect terrain on death:
+		if(gameObject.tag == "TheWolf")
+		{
+			door = GameObject.FindWithTag("WolfDoorNorth");
+			door.GetComponent<SlidingDoor>().OneWay();
+			door = GameObject.FindWithTag("WolfDoorSouth");
+			door.GetComponent<SlidingDoor>().OneWay();
+		}
+		//Example of how to make different enemies drop items on death:
+		if(gameObject.tag == "PurpleTorchEnemy")
+		{
+			//Item drop here
+			gameObject.GetComponent<NPCManager>().DropLoot();
 		}
 
 		//Debug.Log("Death test!" + gameObject.tag);
@@ -186,6 +204,12 @@ public class NPCManager : MonoBehaviour
 
 		isHostile = activate;
 	}
+
+	//Spawns loot at enemy location
+	public void DropLoot()
+    {
+        Instantiate(lootPrefab, transform.position, Quaternion.identity);
+    }
 
 	//Chase handles both direction of the NPC and the flipping their animation (for now).
 	void chase()
