@@ -1,5 +1,5 @@
 using UnityEngine;
-//using Cinemachine;
+using Unity.Cinemachine;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -39,16 +39,16 @@ public class PlayerManager : MonoBehaviour
                 }
 
                 // Update Cinemachine target
-                // CinemachineVirtualCamera vcam = FindObjectOfType<CinemachineVirtualCamera>();
-                // if (vcam != null)
-                // {
-                //     vcam.Follow = player.transform;
-                //     vcam.LookAt = player.transform;
-                // }
-                // else
-                // {
-                //     Debug.LogError("Cinemachine Virtual Camera not found.");
-                // }
+                CinemachineCamera vcam = FindFirstObjectByType<CinemachineCamera>();
+                if (vcam != null)
+                {
+                    vcam.Follow = player.transform;
+                    vcam.LookAt = player.transform;
+                }
+                else
+                {
+                    Debug.LogError("Cinemachine Virtual Camera not found.");
+                }
             }
             else
             {

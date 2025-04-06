@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1589354565357320059}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 0, z: 0}
+  m_LocalPosition: {x: 0.03, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -95,7 +95,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -109.5, y: -14.2, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 1}
+  m_LocalScale: {x: 11.5, y: 11.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 820001522684523795}
@@ -233,10 +233,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e63373a87687154f9c8ad7f3eaa9ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadePanel: {fileID: 0}
   _speed: 5
   scaleSpeed: 2
   seedHeight: 1
-  finalHeight: 0
+  shrunkHeight: 0
   isScaling: 0
   facingDirection: 1
   rb: {fileID: 3886835313773532522}
@@ -250,6 +251,7 @@ MonoBehaviour:
   ActivatePoint: {fileID: 820001522684523795}
   attackPoint: {fileID: 549827731382143977}
   attackRange: 0.5
+  attackDamage: 1
   attackLayer:
     serializedVersion: 2
     m_Bits: 0

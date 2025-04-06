@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Breaking-Red2.sln"
+    "dotnet.defaultSolution": "Breaking-Red4.sln"
 }
