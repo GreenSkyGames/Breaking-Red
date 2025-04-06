@@ -80,6 +80,7 @@ public class DialogueEvents
 	//This event activates the hostility in an NPC.
 	public void startHostility()
 	{
+		Debug.Log("startHostility in dialogue events test: ");
 		if(onStartHostility != null)
 		{
 			onStartHostility();

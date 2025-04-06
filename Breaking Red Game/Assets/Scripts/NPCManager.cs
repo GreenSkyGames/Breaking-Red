@@ -108,7 +108,7 @@ public class NPCManager : MonoBehaviour
 		{
 			yield return null;
 		}
-		//Debug.Log("Hostility enable test");
+		Debug.Log("Hostility enable test" + gameObject.tag);
 		GameEventsManager.instance.dialogueEvents.onStartHostility += onHostility;
 		GameEventsManager.instance.dialogueEvents.onStopHostility += offHostility;
 		myCanvas.gameObject.SetActive(false);
@@ -119,6 +119,7 @@ public class NPCManager : MonoBehaviour
 	{
 		if(GameEventsManager.instance != null && GameEventsManager.instance.dialogueEvents != null)
 		{
+			Debug.Log("Hostility disable test" + gameObject.tag);
 			GameEventsManager.instance.dialogueEvents.onStartHostility -= onHostility;
 			GameEventsManager.instance.dialogueEvents.onStopHostility -= offHostility;			
 		}

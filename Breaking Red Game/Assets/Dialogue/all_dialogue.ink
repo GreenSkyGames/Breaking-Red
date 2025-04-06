@@ -442,9 +442,10 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 
 - "I'll show you calm!"
-~ startHunterHostility(true)
 
 * [End]
+
+~ startHunterHostility(true)
 
 -> END
 
