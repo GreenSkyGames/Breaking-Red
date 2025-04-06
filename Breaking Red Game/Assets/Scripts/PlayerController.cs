@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     // Attack variables
     public Transform attackPoint; // Where the attack hitbox will be
     public float attackRange = 0.5f;
+    public int attackDamage = 1;
     public LayerMask attackLayer; // What layers can be attacked
 
     /* The update function is called once per frame
@@ -126,7 +127,9 @@ public class PlayerController : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("We hit " + enemy.name);
-            //Add damage here.
+
+            //This is for calling enemy damage:
+			enemy.GetComponent<NPCManager>().changeHealth(-attackDamage);
         }
     }
 
