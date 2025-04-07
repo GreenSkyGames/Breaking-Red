@@ -1,5 +1,11 @@
 // Game over screen and victory screens! 
 
+/* Name: Liz Beltran 
+ * Role: Team Lead 6 --Version Control Manager
+ *	This is the script for the --- .
+ *
+*/
+
 using UnityEngine;
 using System.Collections; 
 using System.Collections.Generic;

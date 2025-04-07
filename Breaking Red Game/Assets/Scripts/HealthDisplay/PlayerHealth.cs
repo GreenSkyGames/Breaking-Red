@@ -8,6 +8,7 @@
  */
 
 using UnityEngine;
+using UnityEngine.SceneManagement; //to change scenes when game over 
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -44,9 +45,9 @@ public class PlayerHealth : MonoBehaviour
             {
                 playerMovement.enabled = false; // Disable player movement
             }
-            UnityEditor.EditorApplication.isPlaying = false;
+            // UnityEditor.EditorApplication.isPlaying = false;
             Debug.Log("Player has died.");
-            // Add game over logic here
+            SceneManager.LoadScene("GameOver"); //calling game over screen 
         }
         else
         {

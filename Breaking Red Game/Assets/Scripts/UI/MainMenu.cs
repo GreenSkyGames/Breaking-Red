@@ -1,9 +1,10 @@
 // main menu script 
 
-/*
-Liz Beltran 
-TL6 
-*/ 
+/* Name: Liz Beltran 
+ * Role: Team Lead 6 --Version Control Manager
+ *	This is the script for the --- .
+ *
+*/
 
 using UnityEngine;
 using UnityEngine.SceneManagement; //to switch scenes 

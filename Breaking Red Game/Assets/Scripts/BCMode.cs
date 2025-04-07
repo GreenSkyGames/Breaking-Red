@@ -1,5 +1,11 @@
 //BC mode script
 
+/* Name: Liz Beltran 
+ * Role: Team Lead 6 --Version Control Manager
+ *	This is the script for the --- .
+ *
+*/
+
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;

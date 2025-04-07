@@ -9,6 +9,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement; //change scenes when character dies 
 
 public class DamagingEnv : TerrainObjects
 {
@@ -46,8 +47,9 @@ public class DamagingEnv : TerrainObjects
     //This is a simple death function meant for any time a player loses enough health that the game is over, exiting the application via Application.Quit()
     public void death()
     {
-        Application.Quit();//quitting the game 
-        UnityEditor.EditorApplication.isPlaying = false;
+        SceneManager.LoadScene("GameOver"); //calls game over screen 
+        // Application.Quit();//quitting the game 
+        // UnityEditor.EditorApplication.isPlaying = false;
     }
 
     /* This code detects if either a player or another being in the game comes into contact with a damaging environment variable via a trigger as opposed to a collision
