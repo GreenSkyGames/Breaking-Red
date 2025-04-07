@@ -1,5 +1,10 @@
 // main menu script 
 
+/*
+Liz Beltran 
+TL6 
+*/ 
+
 using UnityEngine;
 using UnityEngine.SceneManagement; //to switch scenes 
 using UnityEngine.EventSystems;
@@ -18,7 +23,7 @@ public class MainMenu : MonoBehaviour
     public void LoadMenu()
     {
         Debug.Log("Loading menu.");
-        SceneManager.LoadScene("Start Menu");
+        SceneManager.LoadScene("StartMenu");
     }
 
 // Player decides to resume a previous game 
@@ -40,6 +45,12 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quitting game.");
         Application.Quit();//quitting the game 
         UnityEditor.EditorApplication.isPlaying = false;
+        AudioManager.instance.Play("ClickSound"); // Play sound on button click
+    }
+
+    public void SeeCredits(){
+        Debug.Log("Seeing Credits...."); 
+        SceneManager.LoadScene("Credits"); //credits scene 
         AudioManager.instance.Play("ClickSound"); // Play sound on button click
     }
 }

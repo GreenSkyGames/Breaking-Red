@@ -11,11 +11,7 @@ using System.Collections.Generic; //
 public class PauseGameMenu : MonoBehaviour
 {  
     public static bool IsPaused = false; 
-    // public GameObject pauseMenuUI; 
     public GameObject PauseMenu; // pause menu object to be connected with script 
-    // public GameObject ResumeButton; 
-    // public GameObject MenuButton;
-
     private List<AudioSource> allAudioSources = new List<AudioSource>(); // To store all active AudioSources
     private List<bool> audioSourceStates = new List<bool>(); // To store the state, play or pause
 
