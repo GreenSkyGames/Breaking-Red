@@ -13,6 +13,7 @@ public class PowerUpManager : MonoBehaviour
 {
     public GameObject choicePrompt;  // Use Now or Store for Later UI
     public Image[] inventorySlots;
+    //public PlayerHealth playerHealth;
 
     /* This function shows the choicePrompt for all except poison apple
      * For poison apple, applyEffect() is used
@@ -36,7 +37,7 @@ public class PowerUpManager : MonoBehaviour
         {
             /* for other power-ups, prompt the player with a choice */
             choicePrompt.SetActive(true);  // show the UI prompt
-            StartCoroutine(waitForPlayerInput(powerUp, playerController));  // wait for player's input
+            StartCoroutine(_waitForPlayerInput(powerUp, playerController));  // wait for player's input
         }
     }
 
@@ -45,7 +46,7 @@ public class PowerUpManager : MonoBehaviour
      * If U, applyEffect() is used
      * If L, addToInventory() is used
      * Choice prompt is hidden after the player makes a choice and time resume */
-    private IEnumerator waitForPlayerInput(PowerUp powerUp, PlayerController playerController)
+    private IEnumerator _waitForPlayerInput(PowerUp powerUp, PlayerController playerController)
     {
         bool inputReceived = false;
 
@@ -58,6 +59,16 @@ public class PowerUpManager : MonoBehaviour
             // When the player presses 'U' (Use Now)
             if (Input.GetKeyDown(KeyCode.U))
             {
+                /*
+                if(playerHealth.currentHealth >= playerHealth.maxHealth)
+                {
+                    //messageText.text = "Your health is already full!";
+                    yield return new WaitForSecondsRealtime(2f);
+                    Time.timeScale = 1;
+                    choicePrompt.SetActive(false);
+                    yield break;
+                }
+                */
                 AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
                 
                 // Now we check the type of power-up and apply its effect
