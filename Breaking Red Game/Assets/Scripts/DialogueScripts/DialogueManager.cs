@@ -247,7 +247,7 @@ public class DialogueManager : MonoBehaviour
 	}
 
 	//Function to add enemy tag to the clue list
-	public void AddClue(string clueTag)
+	public void addClue(string clueTag)
 	{
 		if (!cluesGathered.Contains(clueTag))
 		{

@@ -8,6 +8,7 @@ EXTERNAL startWizardHostility(bool)
 EXTERNAL stopWizardHostility(bool)
 EXTERNAL startHunterHostility(bool)
 EXTERNAL stopHunterHostility(bool)
+EXTERNAL addHunterClue(bool)
 
 
 -> TheWolf
@@ -495,6 +496,8 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
             "No!  I ain't saying another word!  Why don't you buzz off already, like a fly off these corpses!"
             
                 *** [The Hunter refuses to speak further.]
+                
+                ~ addHunterClue(true)
                 
                     -> END
 

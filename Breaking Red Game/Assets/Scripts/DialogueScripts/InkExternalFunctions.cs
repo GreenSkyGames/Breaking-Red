@@ -31,6 +31,7 @@ public class InkExternalFunctions : MonoBehaviour
 		story.BindExternalFunction("stopWizardHostility", (bool activate) => stopWizardHostility(activate));
 		story.BindExternalFunction("startHunterHostility", (bool activate) => startHunterHostility(activate));
 		story.BindExternalFunction("stopHunterHostility", (bool activate) => stopHunterHostility(activate));
+		story.BindExternalFunction("addHunterClue", (bool activate) => addHunterClue(activate));
 
 	}
 
@@ -47,31 +48,18 @@ public class InkExternalFunctions : MonoBehaviour
 		story.UnbindExternalFunction("stopWizardHostility");
 		story.UnbindExternalFunction("startHunterHostility");
 		story.UnbindExternalFunction("stopHunterHostility");
+		story.UnbindExternalFunction("addHunterClue");
 
 	}
 
-	//Turn on The Hunter hostility
-    private void startHunterHostility(bool activate)
-	{
-		Debug.Log("Miracle");
-		temp = GameObject.FindWithTag("TheHunter");
-		temp.GetComponent<NPCManager>().onHostility();
-	}
 
-	//Turn off The Hunter hostility
-    private void stopHunterHostility(bool activate)
-	{
-		Debug.Log("Miracle2");
-		temp = GameObject.FindWithTag("TheHunter");
-		temp.GetComponent<NPCManager>().offHostility();
-	}
 
 	//These are mostly for turning NPCs hostile or not.
 	//Calling it as an event turns all of them hostile at once.
     private void startWolfHostility(bool activate)
 	{
 		//Debug.Log("Miracle");
-		//GameEventsManager.instance.dialogueEvents.StartHostility();
+		//GameEventsManager.instance.dialogueEvents.startHostility(); //This line requires testing
 		temp = GameObject.FindWithTag("TheWolf");
 		temp.GetComponent<NPCManager>().onHostility();
 	}
@@ -101,7 +89,6 @@ public class InkExternalFunctions : MonoBehaviour
 	//Turn on The Bear hostility
     private void startBearHostility(bool activate)
 	{
-		Debug.Log("Miracle");
 		temp = GameObject.FindWithTag("TheBear");
 		temp.GetComponent<NPCManager>().onHostility();
 	}
@@ -109,7 +96,6 @@ public class InkExternalFunctions : MonoBehaviour
 	//Turn off The Bear hostility
     private void stopBearHostility(bool activate)
 	{
-		Debug.Log("Miracle2");
 		temp = GameObject.FindWithTag("TheBear");
 		temp.GetComponent<NPCManager>().offHostility();
 	}
@@ -128,5 +114,30 @@ public class InkExternalFunctions : MonoBehaviour
 		Debug.Log("Miracle2");
 		temp = GameObject.FindWithTag("TheWizard");
 		temp.GetComponent<NPCManager>().offHostility();
+	}
+
+	//Turn on The Hunter hostility
+    private void startHunterHostility(bool activate)
+	{
+		//Debug.Log("Miracle");
+		temp = GameObject.FindWithTag("TheHunter");
+		temp.GetComponent<NPCManager>().onHostility();
+	}
+
+	//Turn off The Hunter hostility
+    private void stopHunterHostility(bool activate)
+	{
+		//Debug.Log("Miracle2");
+		temp = GameObject.FindWithTag("TheHunter");
+		temp.GetComponent<NPCManager>().offHostility();
+	}
+
+
+	//Add 'TheHunter' to clue list:
+    private void addHunterClue(bool activate)
+	{
+		temp = GameObject.FindWithTag("TheHunter");
+		Debug.Log("Ink Clue Test" + temp.tag);
+		temp.GetComponent<NPCManager>().gatherClue();
 	}
 }

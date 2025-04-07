@@ -111,6 +111,7 @@ public class NPCManager : MonoBehaviour
 		Debug.Log("Hostility enable test" + gameObject.tag);
 		GameEventsManager.instance.dialogueEvents.onStartHostility += onHostility;
 		GameEventsManager.instance.dialogueEvents.onStopHostility += offHostility;
+		//GameEventsManager.instance.dialogueEvents.onGatherClue += gatherClue;
 		myCanvas.gameObject.SetActive(false);
 	}
 
@@ -121,7 +122,8 @@ public class NPCManager : MonoBehaviour
 		{
 			Debug.Log("Hostility disable test" + gameObject.tag);
 			GameEventsManager.instance.dialogueEvents.onStartHostility -= onHostility;
-			GameEventsManager.instance.dialogueEvents.onStopHostility -= offHostility;			
+			GameEventsManager.instance.dialogueEvents.onStopHostility -= offHostility;	
+			//GameEventsManager.instance.dialogueEvents.onGatherClue -= gatherClue;		
 		}
 
 		//System for making enemies affect terrain on death:
@@ -219,12 +221,13 @@ public class NPCManager : MonoBehaviour
     }
 
 	//Function to add NPC tag to the clue list in DialogueManager
+	//Subscribe this as an event, then bind it through InkExternalFunctions
 	public void gatherClue()
 	{
-		Debug.Log("Clue gather test" + dialogueManager.tag);
 		if(dialogueManager != null)
 		{
-			dialogueManager.AddClue(gameObject.tag);
+			Debug.Log("Clue gather test" + dialogueManager.tag);
+			dialogueManager.addClue(gameObject.tag);
 		}
 	}
 

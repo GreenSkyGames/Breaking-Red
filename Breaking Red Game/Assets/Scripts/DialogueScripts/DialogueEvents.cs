@@ -97,4 +97,15 @@ public class DialogueEvents
 			onStopHostility();
 		}
 	}
+
+	public event Action onGatherClue;
+
+	//This event adds the NPC tag to the list in dialogue manager.
+	public void gatherClue()
+	{
+		if(onGatherClue != null)
+		{
+			onGatherClue();
+		}
+	}
 }
