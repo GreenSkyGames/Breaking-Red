@@ -352,7 +352,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
     
     ** ["You should have thought of that before being born a fish."]
     
-        "Oh, I have.  I really, really have!  Yipes!"
+        "Oh don't I wish!  Yipes!"
         
             *** [End]
         
