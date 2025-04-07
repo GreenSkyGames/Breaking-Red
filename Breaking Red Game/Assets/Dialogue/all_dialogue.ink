@@ -305,6 +305,31 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["Hey, Cat!  What are you doing here?"]
 
+- "Ugh, ANOTHER human.  What do YOU want?"
+
+* ["There's been a murder in this forest."]
+
+- "What, another one?"
+
+* ["Another one?  What do you know?"]
+
+- "Whoa, hold up there, Human!  What I know isn't free.  What are you going to give me, if you want my help?"
+
+* ["What do you want?"]
+
+* ["How about I give you a knuckle sandwich?"]
+
+    "How rude!"
+    
+    ** [The offended Cat turns away and refuses to speak further.]
+    
+        -> END
+
+
+- "Well, since you're being so generous and offering, why don't you get me something to eat?  There was a juicy Fish around right around here, and I'm partial to a bit of Owl, too!"
+
+* ["...I'll consider it."]
+
 -> END
 
 
@@ -316,6 +341,37 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 "Boy, this water is great!  I sure do love being alive!"
 
 * ["Hey, Fish!  Stop right there!"]
+
+"Hello, Human!  You're not going to kill me, are you?"
+
+* ["Kill you?  Why would I?"]
+
+* ["Yeah, I might."]
+
+    "Oh... Please don't?"
+    
+    ** ["You should have thought of that before being born a fish."]
+    
+        "Oh, I have.  I really, really have!  Yipes!"
+        
+            *** [End]
+        
+            //Fish run away, if possible
+        
+            -> END
+
+
+- "Well, the last human with a stick I saw was all covered in blood, and I think they probably just killed someone.  So I got worried when I saw you!"
+
+* ["You saw a human with a stick, covered in blood?"]
+
+- "I saw a human with a brown thing in their hands!  Probably a human...  Are you going to kill me?"
+
+* ["Only if I need to."]
+
+- "Well, that doesn't make me feel very good!"
+
+* [End]
 
 -> END
 
@@ -370,12 +426,14 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
                 
                     **** ["Do you know anything or not, Owl?"]
                     
+                        "You underestimate me dear Red!  I know so many, many things!  How could I ever reply to such a question so easily as the sands of time flow?"
                         
-                        
-        
-        
-
-
+                            ***** ["I swear to God, Owl, if you know something..."]
+                            
+                                "You speak to a genius, dear Red!  Of COURSE I know things!  It is YOU who is not being specific!"
+                                
+                                ****** ["Not being... You know what, never mind."]
+                                
 
 -> END
 
