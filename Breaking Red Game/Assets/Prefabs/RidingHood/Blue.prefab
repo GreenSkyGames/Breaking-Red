@@ -305,5 +305,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df4c87f35b2575428ab4e18319c4b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choicePrompt: {fileID: 0}
+  choicePrompt: {fileID: 4349595612354833007, guid: 8e947b540e1fdab4490afdb47f1f1b0a, type: 3}
   inventorySlots: []
