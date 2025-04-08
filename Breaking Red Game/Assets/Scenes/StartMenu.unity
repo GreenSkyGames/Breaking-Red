@@ -1458,11 +1458,11 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: b1334dbf63b8b12469d492e285f8003d, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: DoorSound
-    Volume: 0.8
+    Volume: 0.6
     Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: b1334dbf63b8b12469d492e285f8003d, type: 3}
+    Clip: {fileID: 8300000, guid: 58cd3443f865c3e4cb49d2cdbd8c1a90, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: PassagewaySound
     Volume: 0.6

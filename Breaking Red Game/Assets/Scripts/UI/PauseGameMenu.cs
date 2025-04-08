@@ -83,7 +83,7 @@ public class PauseGameMenu : MonoBehaviour
         AudioManager.instance.Play("ClickSound");
 
         // Pause all audio sources and save their states
-        // StartCoroutine(AudioManager.instance.PauseAllAudioSources());
+        StartCoroutine(AudioManager.instance.PauseAllAudioSources());
     }
 
     //save game when the player chooses to save the game
