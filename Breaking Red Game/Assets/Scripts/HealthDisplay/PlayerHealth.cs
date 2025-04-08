@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
 
     /* This function is called before the first frame update.
      * It initializes the player's health. */
-    void start()
+    void Start()
     {
         maxHealth = 100;
         currentHealth = maxHealth;

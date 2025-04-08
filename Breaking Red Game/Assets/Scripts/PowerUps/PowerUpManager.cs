@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;  // Add this if it's not already at the top
+using TMPro;
 
 /* Name: Shan Peck
 *	Role: Team Lead 4 -- Project Manager
@@ -14,7 +15,10 @@ public class PowerUpManager : MonoBehaviour
 {
     public GameObject choicePrompt;  // Use Now or Store for Later UI
     public Image[] inventorySlots;
-    //public PlayerHealth playerHealth;
+    [SerializeField] private TextMeshProUGUI messageText;
+    [SerializeField] private CanvasGroup healthMessageGroup;
+
+    private PlayerHealth _playerHealth;
 
     void Start()
     {
@@ -29,6 +33,15 @@ public class PowerUpManager : MonoBehaviour
                 choicePrompt = t.gameObject;
                 Debug.Log("choicePrompt found: " + choicePrompt.name);
                 return;
+            }
+        }
+        if (healthMessageGroup == null)
+        {
+            GameObject msg = GameObject.Find("HealthMessage");
+            if (msg != null)
+            {
+                healthMessageGroup = msg.GetComponent<CanvasGroup>();
+                messageText = msg.GetComponent<TextMeshProUGUI>();
             }
         }
     }
@@ -60,6 +73,10 @@ public class PowerUpManager : MonoBehaviour
         {
             Debug.LogWarning("PowerUp object is null!");
             return;
+        }
+        if (_playerHealth == null)
+        {
+            _playerHealth = playerController.GetComponent<PlayerHealth>();
         }
         /* poison apple applies immediately */
         if (powerUp is PoisonApple)
@@ -94,37 +111,37 @@ public class PowerUpManager : MonoBehaviour
 
             // When the player presses 'U' (Use Now)
             if (Input.GetKeyDown(KeyCode.U))
-            {
-                /*
-                if(playerHealth.currentHealth >= playerHealth.maxHealth)
-                {
-                    //messageText.text = "Your health is already full!";
-                    yield return new WaitForSecondsRealtime(2f);
-                    Time.timeScale = 1;
-                    choicePrompt.SetActive(false);
-                    yield break;
-                }
-                */
-                AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
-                
+            {   
                 // Now we check the type of power-up and apply its effect
                 if (powerUp is GoldenApple)
                 {
+                    if (_playerHealth != null && _playerHealth.currentHealth >= _playerHealth.maxHealth)
+                    {
+                        messageText.text = "Your health is already full!";
+                        choicePrompt.SetActive(false);
+                        StartCoroutine(ShowHealthMessage());
+                        yield break;
+                    }
+
+                    AudioManager.instance.Play("PowerUpSound");
                     GoldenApple goldenApple = (GoldenApple)powerUp;
-                    goldenApple.v_applyEffect(playerController);  // Calls the GoldenApple-specific method
+                    goldenApple.v_applyEffect(playerController);
                 }
                 else if (powerUp is BerserkerBrew)
                 {
+                    AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
                     BerserkerBrew berserkerBrew = (BerserkerBrew)powerUp;
                     berserkerBrew.v_applyEffect(playerController);  // Calls the BerserkerBrew-specific method
                 }
                 else if (powerUp is EnchantedBerry)
                 {
+                    AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
                     EnchantedBerry enchantedBerry = (EnchantedBerry)powerUp;
                     enchantedBerry.v_applyEffect(playerController);
                 }
                 else
                 {
+                    AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
                     powerUp.v_applyEffect(playerController);  // Calls the base method for other power-ups
                 }
 
@@ -148,6 +165,16 @@ public class PowerUpManager : MonoBehaviour
 
         StartCoroutine(AudioManager.instance.RestoreAudioStates()); // Restore all audio sources
         choicePrompt.SetActive(false);
+    }
+    private IEnumerator ShowHealthMessage()
+    {
+        Debug.Log("Turning on message");
+        healthMessageGroup.alpha = 1f;
+        yield return new WaitForSecondsRealtime(2f);
+        healthMessageGroup.alpha = 0f;
+        Time.timeScale = 1;
+        choicePrompt.SetActive(false);
+        StartCoroutine(AudioManager.instance.RestoreAudioStates());
     }
 }
 
