@@ -2,8 +2,8 @@
 
 /* Name: Liz Beltran 
  * Role: Team Lead 6 --Version Control Manager
- *	This is the script for the --- .
- *
+ *	This is the script for the Pause Menu, which defines the following behaviors:
+ *  Resume, Save game, main menu, and quit game
 */ 
 
 using UnityEngine;
@@ -11,8 +11,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.InputSystem; 
-//using System.Collections; 
-using System.Collections.Generic; // 
+using System.Collections; 
+using System.Collections.Generic; 
 
 public class PauseGameMenu : MonoBehaviour
 {  
@@ -54,30 +54,32 @@ public class PauseGameMenu : MonoBehaviour
     //resumes the game when the player presses the resume game button in the pause menu
     public void ResumeGame()
     {
+        PauseMenu.SetActive(false); //pause menu goes away 
+        Time.timeScale=1f; // resuming the game
+        IsPaused = false; //game is not paused
+
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 
         // Restore all audio sources
         StartCoroutine(AudioManager.instance.RestoreAudioStates());
 
-        PauseMenu.SetActive(false); //pause menu goes away 
-        Time.timeScale=1f; // resuming the game
-        IsPaused = false; //game is not paused
+
         //SceneManager.LoadScene("Level 1");
     }
 
     //Function to pause the game
     void PauseGame()
     {
+        PauseMenu.SetActive(true); //pause menu called 
+        Time.timeScale = 0f; // pausing the game freezing time
+        IsPaused = true; //game is paused
+
         // Play the button click
         AudioManager.instance.Play("ClickSound");
 
         // Pause all audio sources and save their states
         StartCoroutine(AudioManager.instance.PauseAllAudioSources());
-
-        PauseMenu.SetActive(true); //pause menu called 
-        Time.timeScale=0f; // pausing the game 
-        IsPaused = true; //game is paused
     }
 
     //save game when the player chooses to save the game
@@ -139,7 +141,7 @@ public class PauseGameMenu : MonoBehaviour
         AudioManager.instance.Play("MenuBGM");
 
         Debug.Log("Loading menu.");
-        SceneManager.LoadScene("Start Menu");
+        SceneManager.LoadScene("StartMenu");
     }
 
     //Quits the game when the player presses to quit the game
