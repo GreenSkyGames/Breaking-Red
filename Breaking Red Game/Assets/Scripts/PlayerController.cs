@@ -224,13 +224,14 @@ public class PlayerController : MonoBehaviour
 
 
             elapsedTime += Time.deltaTime; // Increment elapsed time
-            Debug.Log("elapsed time: " + elapsedTime + " duration: " + duration);
+            //Debug.Log("elapsed time: " + elapsedTime + " duration: " + duration);
             yield return null; // Wait for the next frame
         }
         //yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
         Debug.Log("Player died moving over an edge!");
+        SceneManager.LoadScene("GameOver");
         //Application.Quit();//quitting the game 
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         //float newScale = Mathf.Lerp(_seedHeight, _finalHeight, Time.deltaTime / _scaleSpeed);
         //transform.localScale = new Vector3(newScale, newScale, 1);
     }
