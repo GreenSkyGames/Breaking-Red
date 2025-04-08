@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;  // Add this if it's not already at the top
 
 /* Name: Shan Peck
 *	Role: Team Lead 4 -- Project Manager
@@ -14,6 +15,45 @@ public class PowerUpManager : MonoBehaviour
     public GameObject choicePrompt;  // Use Now or Store for Later UI
     public Image[] inventorySlots;
     //public PlayerHealth playerHealth;
+
+    void Start()
+    {
+        // Search all root objects in the scene (including inactive)
+        GameObject[] rootObjects = SceneManager.GetActiveScene().GetRootGameObjects();
+
+        foreach (GameObject obj in rootObjects)
+        {
+            Transform t = FindInChildren(obj.transform, "choicePrompt");
+            if (t != null)
+            {
+                choicePrompt = t.gameObject;
+                Debug.Log("choicePrompt found: " + choicePrompt.name);
+                return;
+            }
+        }
+        if (!choicePrompt)
+        {
+            Debug.LogError("Still can't find choicePrompt. Double-check the spelling.");
+        }
+    }
+
+    // Recursive function to find by name (even inactive)
+    Transform FindInChildren(Transform parent, string name)
+    {
+        foreach (Transform child in parent)
+        {
+            if (child.name == name)
+            {
+                return child;
+            }
+            Transform found = FindInChildren(child, name);
+            if (found != null)
+            {
+                return found;
+            }
+        }
+        return null;
+    }
 
     /* This function shows the choicePrompt for all except poison apple
      * For poison apple, applyEffect() is used

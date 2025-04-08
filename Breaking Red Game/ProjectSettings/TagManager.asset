@@ -38,6 +38,7 @@ TagManager:
   - EnchantedBerry
   - WolfDoorNorth
   - WolfDoorSouth
+  - choicePrompt
   layers:
   - Default
   - TransparentFX
