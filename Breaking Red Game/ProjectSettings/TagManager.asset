@@ -41,6 +41,7 @@ TagManager:
   - choicePrompt
   - Boundary
   - MovingPlatform
+  - Ground
   layers:
   - Default
   - TransparentFX

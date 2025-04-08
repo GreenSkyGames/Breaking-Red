@@ -7,6 +7,7 @@
  * It inherets from MonoBehaviour */
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEditor.Rendering.LookDev;
 using UnityEditor.Tilemaps;
 using UnityEngine;
@@ -119,6 +120,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     private bool isOnPlatform = false;  // Flag to check if the player is on a platform
+    private bool isOnBoundary = false;  // Flag to check if the player is on a boundary
 
     // When player enters the platform's area (trigger zone)
     private void OnTriggerEnter2D(Collider2D other)
@@ -128,9 +130,10 @@ public class PlayerController : MonoBehaviour
             isOnPlatform = true;
             Debug.Log("Player is on the platform");
         }
-        else if (other.CompareTag("Boundary") && !isOnPlatform)
+        else if (other.CompareTag("Boundary"))
         {
-            scales();  // Trigger scales if not on the platform
+            isOnBoundary = true;
+            Debug.Log("Player is on the boundary");
         }
     }
 
@@ -141,8 +144,19 @@ public class PlayerController : MonoBehaviour
         {
             isOnPlatform = false;
             Debug.Log("Player is no longer on the platform");
+
+            // Check if player is now on the boundary layer after stepping off the platform
+            if (isOnBoundary)
+            {
+                scales();
+            }
+        }
+        else if (other.CompareTag("Boundary"))
+        {
+            isOnBoundary = false;  // Ensure the player isn't marked on the boundary if they leave
         }
     }
+
     void Attack()
     {
         // Play attack animation

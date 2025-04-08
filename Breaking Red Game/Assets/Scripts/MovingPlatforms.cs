@@ -38,7 +38,7 @@ public class MovingPlatform : TerrainObjects
     /*This updates once per frame
      * Each time it updates, it moves the platform between specified locations at a constant speed
      * If a player steps on the platform it continues moving while also moving the player with it*/
-    void Update()
+    /*void Update()
     {
         // Calculate interpolation factor using Mathf.PingPong for smooth back-and-forth motion
         float t = Mathf.PingPong(Time.time / pMoveTime, 1.0f);
@@ -55,11 +55,33 @@ public class MovingPlatform : TerrainObjects
             /*Vector2 playerVel = _playerRigidbody.linearVelocity;
             playerVel.x = platformVelocity.x;
             _playerRigidbody.linearVelocity = playerVel;*/
+    /*_playerRigidbody.position += platformVelocity * Time.deltaTime;
+}
+
+_prevPos = currentPosition; // Update the previous position
+}*/
+
+    void Update()
+    {
+        // Calculate interpolation factor using Mathf.PingPong and apply SmoothStep for easing
+        float t = Mathf.PingPong(Time.time / pMoveTime, 1.0f);
+        float easedT = Mathf.SmoothStep(0.0f, 1.0f, t);  // Apply smoothing function to create a slower speed at the ends
+
+        // Interpolate position between start and goal using the eased time
+        Vector2 currentPosition = Vector2.Lerp(_startPos, _goalPos, easedT);
+        transform.position = currentPosition;
+
+        // Calculate platform velocity and apply it to the player if they're on the platform
+        Vector2 platformVelocity = (currentPosition - _prevPos) / Time.deltaTime;
+
+        if (_playerRigidbody != null)
+        {
             _playerRigidbody.position += platformVelocity * Time.deltaTime;
         }
 
         _prevPos = currentPosition; // Update the previous position
     }
+
 
     /* This function detects if a player is in contact with or grounded on top of the platform
      * If the player is on top of the platform, it turns off the boundary layer that triggers death while they're in contact
