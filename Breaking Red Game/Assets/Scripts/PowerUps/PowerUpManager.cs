@@ -31,10 +31,6 @@ public class PowerUpManager : MonoBehaviour
                 return;
             }
         }
-        if (!choicePrompt)
-        {
-            Debug.LogError("Still can't find choicePrompt. Double-check the spelling.");
-        }
     }
 
     // Recursive function to find by name (even inactive)
