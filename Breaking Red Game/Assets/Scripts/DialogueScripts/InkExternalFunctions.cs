@@ -38,6 +38,7 @@ public class InkExternalFunctions : MonoBehaviour
 		story.BindExternalFunction("addBearClue", (bool activate) => addBearClue(activate));
 		story.BindExternalFunction("addFishClue", (bool activate) => addFishClue(activate));
 		story.BindExternalFunction("addAxmanClue", (bool activate) => addAxmanClue(activate));
+		story.BindExternalFunction("addCatClue", (bool activate) => addCatClue(activate));
 		story.BindExternalFunction("checkAxmanClues", (bool activate) => checkAxmanClues(activate));
 
 	}
@@ -61,6 +62,7 @@ public class InkExternalFunctions : MonoBehaviour
 		story.UnbindExternalFunction("addWizardClue");
 		story.UnbindExternalFunction("addBearClue");
 		story.UnbindExternalFunction("addFishClue");
+		story.UnbindExternalFunction("addCatClue");
 		story.UnbindExternalFunction("addAxmanClue");
 		story.UnbindExternalFunction("checkAxmanClues");
 
@@ -207,6 +209,13 @@ public class InkExternalFunctions : MonoBehaviour
 		temp.GetComponent<NPCManager>().gatherClue();
 	}
 
+	//Add 'TheCat' to clue list:
+    private void addCatClue(bool activate)
+	{
+		temp = GameObject.FindWithTag("TheCat");
+		Debug.Log("Ink Clue Test" + temp.tag);
+		temp.GetComponent<NPCManager>().gatherClue();
+	}
 
 
 //The function for the Axman to check the clue list

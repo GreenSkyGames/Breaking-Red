@@ -9,6 +9,14 @@ EXTERNAL stopWizardHostility(bool)
 EXTERNAL startHunterHostility(bool)
 EXTERNAL stopHunterHostility(bool)
 EXTERNAL addHunterClue(bool)
+EXTERNAL addHikerClue(bool)
+EXTERNAL addHippieClue(bool)
+EXTERNAL addWizardClue(bool)
+EXTERNAL addBearClue(bool)
+EXTERNAL addFishClue(bool)
+EXTERNAL addAxmanClue(bool)
+EXTERNAL addCatClue(bool)
+EXTERNAL checkAxmanClues(bool)
 
 
 -> TheWolf
@@ -115,6 +123,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["The Hunter, the Axman, the Hiker, the Hippie, and the Wizard, huh.]
 
+~ addBearClue(true)
 - "Yeah, bunch of weirdo humans.  Bet you anything it was one of them that did it."
 
 * ["Why are you telling me so easily?"]
@@ -147,7 +156,10 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - "Yes, he's a housecat and he got lost recently.  I've looked all over the forest for him, but no one has wanted to help.  I even talked to this old woman, and she... Well.  Let's just say that encounter didn't go very well!"
 
+
 * ["Do you mean Grandmother?  What did you do to her?!"]
+
+~addHikerClue(true)
 
 - "Hey now, I don't like that tone!  Look, if you're not going to help me find my Cat, then maybe just leave me alone!"
 
@@ -208,6 +220,8 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 - "My friend The Fish is over by the lake, he sees all kinds of stuff.  And The Owl is off roosting in his tree, but you know how he is.  And there's this crazy Cat around.  If you ask anyone, ask him!"
 
 * ["The Fish, The Owl, and The Cat, huh.  Alright.  Thank you for helping."]
+
+~addHippieClue(true)
 
 - "It's all our forest, man, we gotta stick together.  Stay safe out there, Red!  Lotta weirdos around the forest these days!"
 
@@ -368,8 +382,10 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - "I saw a human with a brown thing in their hands!  Probably a human...  Are you going to kill me?"
 
+
 * ["Only if I need to."]
 
+~addFishClue(true)
 - "Well, that doesn't make me feel very good!"
 
 * [End]
