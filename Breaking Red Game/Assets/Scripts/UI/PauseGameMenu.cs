@@ -21,12 +21,7 @@ public class PauseGameMenu : MonoBehaviour
     private List<AudioSource> allAudioSources = new List<AudioSource>(); // To store all active AudioSources
     private List<bool> audioSourceStates = new List<bool>(); // To store the state, play or pause
 
-    void Awake()
-    {
-        DontDestroyOnLoad(PauseMenu);
-    }
-
-    // Pause menu called => in view, Pause menu uncalled=> not in view 
+// Pause menu called => in view, Pause menu uncalled=> not in view 
     void Start()
     {
         if (SceneManager.GetActiveScene().name == "PauseMenu")
