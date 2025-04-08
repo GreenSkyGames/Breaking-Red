@@ -1430,7 +1430,7 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 314fe71168cacfb45a079c97c2748b0f, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: AttackSound
-    Volume: 0.4
+    Volume: 0.1
     Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
@@ -1472,14 +1472,14 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: c6b596fd07a14a64b89285b6f079b167, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: GameoverSound
-    Volume: 0.6
+    Volume: 0.1
     Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 3830029b89ea7a04992156c6adbc327c, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: VictorySound
-    Volume: 0.6
+    Volume: 0.1
     Pitch: 1
     Loop: 0
   allAudioSources: []
