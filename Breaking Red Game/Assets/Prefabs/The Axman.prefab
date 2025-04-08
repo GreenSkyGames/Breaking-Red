@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueKnotName: TheAxman
-  dialogueClip: {fileID: 8300000, guid: eba7a5ff68e4168409f8d78f8ccfb65a, type: 3}
+  dialogueClip: {fileID: 8300000, guid: 7cb5c5322756dee4f8f73d470b349769, type: 3}
 --- !u!95 &1756066512159113487
 Animator:
   serializedVersion: 7
@@ -277,6 +277,8 @@ MonoBehaviour:
   facingRight: 1
   enemySR: {fileID: 4245477268345237374}
   currentHealth: 9
+  lootPrefab: {fileID: 0}
+  metPlayer: 0
 --- !u!1 &7155840962864940638
 GameObject:
   m_ObjectHideFlags: 0
