@@ -118,7 +118,24 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Check if the player collides with the boundary (you can use tag or layer)
+        if (collision.gameObject.CompareTag("Boundary"))
+        {
+            scales(); // Call the scales method to trigger the scaling
+        }
+    }
 
+    // OR If you're using triggers (Collider2D set to IsTrigger), you can use OnTriggerEnter2D
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // Check if the player enters the boundary trigger area
+        if (other.CompareTag("Boundary"))
+        {
+            scales(); // Call the scales method to trigger the scaling
+        }
+    }
     void Attack()
     {
         // Play attack animation
@@ -163,7 +180,7 @@ public class PlayerController : MonoBehaviour
      * This function slowly transforms the object by making it get smaller and smaller until it disappears using math's Lerp function
      * It also quit's the application after this happens as a natural quit to the game*/
 
-    private IEnumerator fadeToBlack(float duration)
+    /*private IEnumerator fadeToBlack(float duration)
     {
         if (fadePanel == null) yield break;
 
@@ -176,7 +193,7 @@ public class PlayerController : MonoBehaviour
         }
         fadePanel.alpha = 1;
         SceneManager.LoadScene("GameOver");
-    }
+    }*/
 
     IEnumerator scaleObj() {
         isScaling = true;
@@ -203,10 +220,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("elapsed time: " + elapsedTime + " duration: " + duration);
             yield return null; // Wait for the next frame
         }
-        yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
+        //yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
         Debug.Log("Player died moving over an edge!");
         //Application.Quit();//quitting the game 
-        //UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
         //float newScale = Mathf.Lerp(_seedHeight, _finalHeight, Time.deltaTime / _scaleSpeed);
         //transform.localScale = new Vector3(newScale, newScale, 1);
     }

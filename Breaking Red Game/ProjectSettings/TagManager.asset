@@ -39,6 +39,7 @@ TagManager:
   - WolfDoorNorth
   - WolfDoorSouth
   - choicePrompt
+  - Boundary
   layers:
   - Default
   - TransparentFX
