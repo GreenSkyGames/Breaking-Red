@@ -57,7 +57,7 @@ public class NPCManager : MonoBehaviour
 	private Transform player;
 	private Animator anim;
 
-	public bool isHostile;
+	public bool isHostile = false;
 	public bool facingRight;
 
     public SpriteRenderer enemySR;
@@ -217,11 +217,13 @@ public class NPCManager : MonoBehaviour
 	//Turn off hostility
 	public void offHostility()
 	{
+		Debug.Log("Hostility off test.");
 		isHostile = false;
 	}
 	//Turn on hostility
 	public void onHostility()
 	{
+		Debug.Log("Hostility on test.");
 		isHostile = true;
 	}
 	//Set hostility

@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 3083057588950925639}
   - component: {fileID: 7240846001714190255}
   m_Layer: 7
-  m_Name: TheBear
+  m_Name: The Bear
   m_TagString: TheBear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -308,6 +308,8 @@ MonoBehaviour:
   facingRight: 0
   enemySR: {fileID: 4036877050532623419}
   currentHealth: 9
+  lootPrefab: {fileID: 0}
+  metPlayer: 0
 --- !u!1 &8282045201769422700
 GameObject:
   m_ObjectHideFlags: 0
