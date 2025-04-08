@@ -307,3 +307,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choicePrompt: {fileID: 0}
   inventorySlots: []
+  messageText: {fileID: 1525343573158087886, guid: 99a42104db8352d459e9b63c1bd4c920, type: 3}

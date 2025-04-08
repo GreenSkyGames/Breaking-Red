@@ -90,6 +90,7 @@ public class InkExternalFunctions : MonoBehaviour
 	{
 		//Debug.Log("Miracle2");
 		temp = GameObject.FindWithTag("TheWolf");
+		Debug.Log("Miracle for "+ temp.tag);
 		temp.GetComponent<NPCManager>().offHostility();
 	}
 
@@ -111,12 +112,14 @@ public class InkExternalFunctions : MonoBehaviour
     private void startBearHostility(bool activate)
 	{
 		temp = GameObject.FindWithTag("TheBear");
+		Debug.Log("Miracle for "+ temp.tag);
 		temp.GetComponent<NPCManager>().onHostility();
 	}
 
 	//Turn off The Bear hostility
     private void stopBearHostility(bool activate)
 	{
+		Debug.Log("Miracle2");
 		temp = GameObject.FindWithTag("TheBear");
 		temp.GetComponent<NPCManager>().offHostility();
 	}
@@ -124,8 +127,8 @@ public class InkExternalFunctions : MonoBehaviour
 	//Turn on The Wizard hostility
     private void startWizardHostility(bool activate)
 	{
-		Debug.Log("Miracle");
 		temp = GameObject.FindWithTag("TheWizard");
+		Debug.Log("Miracle for "+ temp.tag);
 		temp.GetComponent<NPCManager>().onHostility();
 	}
 
@@ -140,8 +143,8 @@ public class InkExternalFunctions : MonoBehaviour
 	//Turn on The Hunter hostility
     private void startHunterHostility(bool activate)
 	{
-		//Debug.Log("Miracle");
 		temp = GameObject.FindWithTag("TheHunter");
+		Debug.Log("Miracle for "+ temp.tag);
 		temp.GetComponent<NPCManager>().onHostility();
 	}
 
@@ -158,6 +161,7 @@ public class InkExternalFunctions : MonoBehaviour
 	{
 		//Debug.Log("Miracle");
 		temp = GameObject.FindWithTag("TheAxman");
+		Debug.Log("Miracle for "+ temp.tag);
 		temp.GetComponent<NPCManager>().onHostility();
 	}
 
@@ -240,11 +244,11 @@ public class InkExternalFunctions : MonoBehaviour
 
 //The function for the Axman to check the clue list
 
-    private void checkAxmanClues(bool activate)
+    private bool checkAxmanClues(bool activate)
 	{
 		temp = GameObject.FindWithTag("TheAxman");
 		Debug.Log("Ink Check Clue Test" + temp.tag);
-		temp.GetComponent<NPCManager>().checkClues();
+		return temp.GetComponent<NPCManager>().checkClues();
 	}
 
 }

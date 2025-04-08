@@ -239,7 +239,9 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 //Name is {Name}
 
 { checkAxmanClues(true):
+    "Clue testing dialogue."
     -> enough_clues_found
+    
 }
 
 "Dum dee dum dee dum, swinging my ax, chopping the wood, dum dee dum dee dum...!  ...Oh? Can I help you with something?"
@@ -258,6 +260,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 
 -> END
+
 
 === enough_clues_found ===
 
@@ -555,7 +558,8 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 - "I'll show you calm!"
 
 * [End]
-
+                
+~ addHunterClue(true)
 ~ startHunterHostility(true)
 
 -> END

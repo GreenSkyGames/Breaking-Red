@@ -162,6 +162,8 @@ public class PlayerController : MonoBehaviour
         // Play attack animation
         anim.SetTrigger("Attack");
 
+        AudioManager.instance.Play("AttackSound"); // play attacking sound effect
+
         // Detect enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, attackLayer);
 
@@ -241,6 +243,13 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("elapsed time: " + elapsedTime + " duration: " + duration);
             yield return null; // Wait for the next frame
         }
+
+        // play game over sound effect
+        AudioManager.instance.Play("GameoverSound"); 
+        
+        // Pause all audio sources and save their states
+        StartCoroutine(AudioManager.instance.PauseAllAudioSources());
+
         //yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
         Debug.Log("Player died moving over an edge!");
         SceneManager.LoadScene("GameOver");

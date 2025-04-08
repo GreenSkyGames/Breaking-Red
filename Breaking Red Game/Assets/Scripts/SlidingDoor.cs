@@ -19,6 +19,9 @@ public class SlidingDoor : MovingPlatform
     // Moves the door in one direction and then disables it
     public void OneWay()
     {
+        // Play the passway sound when the door starts moving
+        AudioManager.instance.Play("PassagewaySound");
+
         StartCoroutine(MoveAndDisable());
     }
 
