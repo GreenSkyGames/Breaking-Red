@@ -63,7 +63,7 @@ public class NPCManager : MonoBehaviour
     public SpriteRenderer enemySR;
 	public int currentHealth = 9;
 
-	private List<GameObject> _clueList = new List<GameObject>();
+	private List<string> _clueList = new List<string>();
 
 	private NPC _npc;
 
@@ -248,6 +248,19 @@ public class NPCManager : MonoBehaviour
 			Debug.Log("Clue gather test" + dialogueManager.tag);
 			dialogueManager.addClue(gameObject.tag);
 		}
+	}
+
+	//Function to check the clue count
+	//If it has passed the threshold set in dialogue manager, this returns true.
+	//If it is true, then the Axman should move into different dialogue.
+	public bool checkClues()
+	{
+		if(dialogueManager != null)
+		{
+			Debug.Log("Clue check test" + dialogueManager.tag);
+			return dialogueManager.checkClues();
+		}
+		return false;
 	}
 
 

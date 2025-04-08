@@ -8,7 +8,17 @@ EXTERNAL startWizardHostility(bool)
 EXTERNAL stopWizardHostility(bool)
 EXTERNAL startHunterHostility(bool)
 EXTERNAL stopHunterHostility(bool)
+EXTERNAL startAxmanHostility(bool)
+EXTERNAL stopAxmanHostility(bool)
 EXTERNAL addHunterClue(bool)
+EXTERNAL addHikerClue(bool)
+EXTERNAL addHippieClue(bool)
+EXTERNAL addWizardClue(bool)
+EXTERNAL addBearClue(bool)
+EXTERNAL addFishClue(bool)
+EXTERNAL addAxmanClue(bool)
+EXTERNAL addCatClue(bool)
+EXTERNAL checkAxmanClues(bool)
 
 
 -> TheWolf
@@ -115,6 +125,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["The Hunter, the Axman, the Hiker, the Hippie, and the Wizard, huh.]
 
+~ addBearClue(true)
 - "Yeah, bunch of weirdo humans.  Bet you anything it was one of them that did it."
 
 * ["Why are you telling me so easily?"]
@@ -147,7 +158,10 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - "Yes, he's a housecat and he got lost recently.  I've looked all over the forest for him, but no one has wanted to help.  I even talked to this old woman, and she... Well.  Let's just say that encounter didn't go very well!"
 
+
 * ["Do you mean Grandmother?  What did you do to her?!"]
+
+~addHikerClue(true)
 
 - "Hey now, I don't like that tone!  Look, if you're not going to help me find my Cat, then maybe just leave me alone!"
 
@@ -181,7 +195,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
     ** ["How did you know that Grandmother was dead?  Who told you?"]
     
-    "Huh... That's a good point!  Who did tell me!  Oh brother!"
+    "Huh... That's a good point!  Who did tell me!  Oh brother!  They said the guy did it with a weapon, too!  Crazy!"
     
         *** ["Try to rememeber!  It had to have been recently!"]
         
@@ -209,6 +223,8 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["The Fish, The Owl, and The Cat, huh.  Alright.  Thank you for helping."]
 
+~addHippieClue(true)
+
 - "It's all our forest, man, we gotta stick together.  Stay safe out there, Red!  Lotta weirdos around the forest these days!"
 
 * ["You stay safe as well!"]
@@ -221,6 +237,10 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 ~ Name = "The Axman"
 
 //Name is {Name}
+
+{ checkAxmanClues(true):
+    -> enough_clues_found
+}
 
 "Dum dee dum dee dum, swinging my ax, chopping the wood, dum dee dum dee dum...!  ...Oh? Can I help you with something?"
 
@@ -238,6 +258,34 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 
 -> END
+
+=== enough_clues_found ===
+
+"...Dum dee... dum..."
+
+*["You.  It was YOU, wasn't it?!  TELL ME!"]
+
+- "...You already know, don't you?  I can tell."
+
+*["I know enough.  Why?!  Why did you do it?!"]
+
+- "..."
+
+*[Next]
+
+- "You... stupid girl!  You think this is a GAME?!  You think this forest is all for FUN?!  You and your Grandmother!  Always getting in the way!  Telling us what we can and can't do!"
+
+*[Next]
+
+- "Well, these aren't YOUR trees, Red!  Thes are MY TREES, RED!  And I told that to Grandmother!  And now!  I'm going to tell you too!"
+
+~startAxmanHostility(true)
+
+*[Fight!]
+
+
+-> END
+
 
 
 === TheWizard ===
@@ -368,8 +416,10 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - "I saw a human with a brown thing in their hands!  Probably a human...  Are you going to kill me?"
 
+
 * ["Only if I need to."]
 
+~addFishClue(true)
 - "Well, that doesn't make me feel very good!"
 
 * [End]

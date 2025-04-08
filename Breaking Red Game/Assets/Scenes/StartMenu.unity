@@ -1367,7 +1367,7 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 25b3cb67fec663e4a89ae9b3181cb13b, type: 3}
     Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: L4BGM
-    Volume: 0.1
+    Volume: 0.05
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
@@ -1427,7 +1427,7 @@ MonoBehaviour:
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: bc5a2b7e1aa854877a8ba7ca3edd06d4, type: 3}
+    Clip: {fileID: 8300000, guid: 314fe71168cacfb45a079c97c2748b0f, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: AttackSound
     Volume: 0.4
@@ -1462,9 +1462,23 @@ MonoBehaviour:
     Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 944a79fd13fc691439853a3fe6d011d6, type: 3}
+    Clip: {fileID: 8300000, guid: b1334dbf63b8b12469d492e285f8003d, type: 3}
     Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: PassagewaySound
+    Volume: 0.6
+    Pitch: 1
+    Loop: 0
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: c6b596fd07a14a64b89285b6f079b167, type: 3}
+    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: GameoverSound
+    Volume: 0.6
+    Pitch: 1
+    Loop: 0
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 3830029b89ea7a04992156c6adbc327c, type: 3}
+    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: VictorySound
     Volume: 0.6
     Pitch: 1
     Loop: 0

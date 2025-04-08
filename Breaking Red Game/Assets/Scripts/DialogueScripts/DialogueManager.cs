@@ -255,4 +255,16 @@ public class DialogueManager : MonoBehaviour
 			Debug.Log("Added clue: " + clueTag);
 		}
 	}
+
+    public bool checkClues()
+    {
+		if(cluesGathered.Count >= 5)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+    }
 }
