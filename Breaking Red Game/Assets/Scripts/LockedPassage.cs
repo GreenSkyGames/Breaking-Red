@@ -7,6 +7,7 @@ public class LockedPassage : NormalPassage
     [SerializeField] private bool isUnlocked = false; // Determines if the passageway is accessible
     [SerializeField] private CanvasGroup doorOverlay; // Blocks visibility until unlocked
     [SerializeField] private SlidingDoor slidingDoor; // Reference to the SlidingDoor script
+    [SerializeField] private SlidingDoor slidingDoor2; // Reference to the SlidingDoor script
 
     private void Start()
     {
@@ -53,6 +54,10 @@ public class LockedPassage : NormalPassage
         if (slidingDoor != null)
         {
             slidingDoor.UnlockDoor(); // Set the sliding door's unlocked bool to true
+        }
+        if (slidingDoor2 != null)
+        {
+            slidingDoor2.UnlockDoor(); // Set the sliding door's unlocked bool to true
         }
     }
 

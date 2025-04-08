@@ -40,6 +40,7 @@ TagManager:
   - WolfDoorSouth
   - choicePrompt
   - Boundary
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

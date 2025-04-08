@@ -126,16 +126,35 @@ public class NPCManager : MonoBehaviour
 			//GameEventsManager.instance.dialogueEvents.onGatherClue -= gatherClue;		
 		}
 
-		//System for making enemies affect terrain on death:
-		if(gameObject.tag == "TheWolf")
-		{
-			door = GameObject.FindWithTag("WolfDoorNorth");
-			door.GetComponent<SlidingDoor>().OneWay();
-			door = GameObject.FindWithTag("WolfDoorSouth");
-			door.GetComponent<SlidingDoor>().OneWay();
-		}
-		//Example of how to make different enemies drop items on death:
-		if(gameObject.tag == "PurpleTorchEnemy")
+        //System for making enemies affect terrain on death:
+        if (gameObject.CompareTag("TheWolf"))
+        {
+            Debug.Log("TheWolf has been disabled.");
+
+            // Find door with tag "L2"
+            GameObject door = GameObject.FindWithTag("L2");
+
+            // Check if the door is found
+            if (door != null)
+            {
+                Debug.Log("Found L2 door.");
+                var lockedPassage = door.GetComponent<LockedPassage>();
+                if (lockedPassage != null)
+                {
+                    lockedPassage.revealPassageway();
+                }
+                else
+                {
+                    Debug.LogWarning("LockedPassage component is missing from the door.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("L2 door not found.");
+            }
+        }
+        //Example of how to make different enemies drop items on death:
+        if (gameObject.tag == "PurpleTorchEnemy")
 		{
 			//Item drop here
 			gameObject.GetComponent<NPCManager>().DropLoot();

@@ -118,22 +118,29 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private bool isOnPlatform = false;  // Flag to check if the player is on a platform
+
+    // When player enters the platform's area (trigger zone)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the player collides with the boundary (you can use tag or layer)
-        if (collision.gameObject.CompareTag("Boundary"))
+        if (other.CompareTag("MovingPlatform"))
         {
-            scales(); // Call the scales method to trigger the scaling
+            isOnPlatform = true;
+            Debug.Log("Player is on the platform");
+        }
+        else if (other.CompareTag("Boundary") && !isOnPlatform)
+        {
+            scales();  // Trigger scales if not on the platform
         }
     }
 
-    // OR If you're using triggers (Collider2D set to IsTrigger), you can use OnTriggerEnter2D
-    private void OnTriggerEnter2D(Collider2D other)
+    // When the player exits the platform's trigger area
+    private void OnTriggerExit2D(Collider2D other)
     {
-        // Check if the player enters the boundary trigger area
-        if (other.CompareTag("Boundary"))
+        if (other.CompareTag("MovingPlatform"))
         {
-            scales(); // Call the scales method to trigger the scaling
+            isOnPlatform = false;
+            Debug.Log("Player is no longer on the platform");
         }
     }
     void Attack()
