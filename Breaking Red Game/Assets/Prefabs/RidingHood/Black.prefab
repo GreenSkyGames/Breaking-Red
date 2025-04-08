@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 7437709376220296197}
   - component: {fileID: 6048510446368128549}
   - component: {fileID: 7979292521135610977}
-  - component: {fileID: 1422726985948165968}
+  - component: {fileID: 946014514971488006}
   m_Layer: 6
   m_Name: Black
   m_TagString: Player
@@ -293,7 +293,7 @@ MonoBehaviour:
   maxHealth: 100
   playerSr: {fileID: 6399434693797903750}
   playerMovement: {fileID: 7437709376220296197}
---- !u!114 &1422726985948165968
+--- !u!114 &946014514971488006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
