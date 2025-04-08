@@ -40,6 +40,7 @@ public class PauseGameMenu : MonoBehaviour
     {
         //Toggle pause state when 'P' is pressed
         if(Input.GetKeyDown(KeyCode.P)){
+            Debug.Log("P was pressed"); 
             if (IsPaused)
             {
                 ResumeGame(); 
@@ -54,9 +55,11 @@ public class PauseGameMenu : MonoBehaviour
     //resumes the game when the player presses the resume game button in the pause menu
     public void ResumeGame()
     {
+
         PauseMenu.SetActive(false); //pause menu goes away 
         Time.timeScale=1f; // resuming the game
         IsPaused = false; //game is not paused
+        Debug.Log("Game has resumed."); 
 
         // Play the button click
         AudioManager.instance.Play("ClickSound");
@@ -69,11 +72,12 @@ public class PauseGameMenu : MonoBehaviour
     }
 
     //Function to pause the game
-    void PauseGame()
+    public void PauseGame()
     {
         PauseMenu.SetActive(true); //pause menu called 
         Time.timeScale = 0f; // pausing the game freezing time
         IsPaused = true; //game is paused
+        Debug.Log("Game is paused."); 
 
         // Play the button click
         AudioManager.instance.Play("ClickSound");
@@ -136,6 +140,7 @@ public class PauseGameMenu : MonoBehaviour
     //Loads the menu screen when the load menu button is clicked
     public void LoadMenu()
     {
+        PauseMenu.SetActive(false); //removing the pause menu from the background
         // Play the button click
         AudioManager.instance.Play("ClickSound");
         AudioManager.instance.Play("MenuBGM");
