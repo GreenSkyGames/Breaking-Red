@@ -8,6 +8,8 @@ EXTERNAL startWizardHostility(bool)
 EXTERNAL stopWizardHostility(bool)
 EXTERNAL startHunterHostility(bool)
 EXTERNAL stopHunterHostility(bool)
+EXTERNAL startAxmanHostility(bool)
+EXTERNAL stopAxmanHostility(bool)
 EXTERNAL addHunterClue(bool)
 EXTERNAL addHikerClue(bool)
 EXTERNAL addHippieClue(bool)
@@ -193,7 +195,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
     ** ["How did you know that Grandmother was dead?  Who told you?"]
     
-    "Huh... That's a good point!  Who did tell me!  Oh brother!"
+    "Huh... That's a good point!  Who did tell me!  Oh brother!  They said the guy did it with a weapon, too!  Crazy!"
     
         *** ["Try to rememeber!  It had to have been recently!"]
         
@@ -236,6 +238,10 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 //Name is {Name}
 
+{ checkAxmanClues(true):
+    -> enough_clues_found
+}
+
 "Dum dee dum dee dum, swinging my ax, chopping the wood, dum dee dum dee dum...!  ...Oh? Can I help you with something?"
 
 *["Maybe.  I'm investigating a murder in these woods."]
@@ -252,6 +258,34 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 
 -> END
+
+=== enough_clues_found ===
+
+"...Dum dee... dum..."
+
+*["You.  It was YOU, wasn't it?!  TELL ME!"]
+
+- "...You already know, don't you?  I can tell."
+
+*["I know enough.  Why?!  Why did you do it?!"]
+
+- "..."
+
+*[Next]
+
+- "You... stupid girl!  You think this is a GAME?!  You think this forest is all for FUN?!  You and your Grandmother!  Always getting in the way!  Telling us what we can and can't do!"
+
+*[Next]
+
+- "Well, these aren't YOUR trees, Red!  Thes are MY TREES, RED!  And I told that to Grandmother!  And now!  I'm going to tell you too!"
+
+~startAxmanHostility(true)
+
+*[Fight!]
+
+
+-> END
+
 
 
 === TheWizard ===
