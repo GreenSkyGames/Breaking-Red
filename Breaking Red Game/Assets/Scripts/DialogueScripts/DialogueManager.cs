@@ -260,10 +260,13 @@ public class DialogueManager : MonoBehaviour
     {
 		if(cluesGathered.Count >= 5)
 		{
+			Debug.Log("Collected clues: " + string.Join(", ", cluesGathered));
+			Debug.Log("Check clues success");
 			return true;
 		}
 		else
 		{
+			Debug.Log("Check clues failure");
 			return false;
 		}
     }
