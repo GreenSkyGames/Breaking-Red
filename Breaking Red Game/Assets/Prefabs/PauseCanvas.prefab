@@ -804,7 +804,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioTypes: []
-  allAudioSources: []
+  allAudioSources:
+  - {fileID: 0}
   audioSourceStates: 
 --- !u!1 &6645615622411846857
 GameObject:
