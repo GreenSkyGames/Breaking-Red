@@ -121,7 +121,7 @@ public class NormalPassage : TerrainObjects
             case "L5":
                 //SceneManager.LoadScene("Level 5");
                 //return new Vector2(-19.7f, -21.2f);
-                return new Vector2(30.36f, -119.6f);
+                return new Vector2(22.71f, -118.4f);
             default:
                 Debug.LogWarning("No destination set for tag: " + gameObject.tag);
                 return Vector2.zero;
