@@ -73,6 +73,8 @@ public class NPCManager : MonoBehaviour
 	public bool metPlayer = false;
 	private DialogueManager dialogueManager;
 
+	private GameObject playerObj;
+
     //Start is currently being used to:
 	// - find rigidbody component
 	// - find animator component
@@ -86,6 +88,8 @@ public class NPCManager : MonoBehaviour
 		myCanvas = GameObject.Find("DialogueBoxCanvas");
 
 		dialogueManager = FindObjectOfType<DialogueManager>();
+
+		playerObj = GameObject.FindWithTag("Player");
 
 		//Debug.Log("myCanvas tag is " + myCanvas.tag);
 
@@ -126,6 +130,7 @@ public class NPCManager : MonoBehaviour
 			//GameEventsManager.instance.dialogueEvents.onGatherClue -= gatherClue;		
 		}
 
+
         //System for making enemies affect terrain on death:
         if (gameObject.CompareTag("TheWolf"))
         {
@@ -153,6 +158,7 @@ public class NPCManager : MonoBehaviour
                 Debug.LogWarning("L2 door not found.");
             }
         }
+
         //Example of how to make different enemies drop items on death:
         if (gameObject.tag == "PurpleTorchEnemy")
 		{
@@ -392,6 +398,9 @@ public class NPCManager : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+			//This is for updating the killList on the player object:
+			playerObj.GetComponent<PlayerController>().addKill(gameObject.tag);
+
             // Disable rendering and movement, but keep the object active
             if (enemySR != null)
             {

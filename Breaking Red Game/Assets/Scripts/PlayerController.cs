@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask attackLayer; // What layers can be attacked
     public int attackDamage = 1;
 
+	private List<string> killList = new List<string>();
+
     /* The update function is called once per frame
      * It checks if the player interacts with an NPC and reacts if the player has
      * It interacts with the displayDialogueBox() function and the triggerDialogue() function */
@@ -257,4 +259,14 @@ public class PlayerController : MonoBehaviour
         //float newScale = Mathf.Lerp(_seedHeight, _finalHeight, Time.deltaTime / _scaleSpeed);
         //transform.localScale = new Vector3(newScale, newScale, 1);
     }
+
+	//Function to add enemy tag to the clue list
+	public void addKill(string killTag)
+	{
+		if (!killList.Contains(killTag))
+		{
+			killList.Add(killTag);
+			Debug.Log("All kills: " + string.Join(", ", killList));
+		}
+	}
 }
