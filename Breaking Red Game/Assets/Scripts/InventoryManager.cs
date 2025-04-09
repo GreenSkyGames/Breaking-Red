@@ -11,6 +11,7 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
+    public int effectAmount;
     public GameObject inventoryMenu;
     public ItemSlot[] itemSlot;
     public static InventoryManager sInstance;
@@ -19,6 +20,7 @@ public class InventoryManager : MonoBehaviour
     public Sprite emptySprite;
 
     private bool _menuActivated;
+    private PlayerController playerController;
 
     /* This function updates the scene by toggling the inventory if the player clicks I
      *	It only uses the function toggleInventory() */
@@ -30,7 +32,16 @@ public class InventoryManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.U))
         {
-            useSelectedItem();
+            // Assuming this script is attached to the inventory manager, and the player is a separate object
+            GameObject player = GameObject.FindWithTag("Player");  // Use tag to find the player GameObject
+            if (player != null)
+            {
+                useSelectedItem(player.GetComponent<PlayerController>());  // Get the PlayerController component attached to the Player GameObject
+            }
+            else
+            {
+                Debug.LogError("Player GameObject not found. Make sure the player has the 'Player' tag.");
+            }
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -117,31 +128,48 @@ public class InventoryManager : MonoBehaviour
             itemSlot[i].selectedShader.SetActive(false);
             itemSlot[i].thisItemSelected = false;
         }
-        selectedSlot = null;
     }
 
-    public void useSelectedItem()
+    public void useSelectedItem(PlayerController playerController)
     {
         if (selectedSlot != null && selectedSlot.isOccupied)
         {
-            string itemName = selectedSlot.itemName;
-        
-            // Find the PowerUp type based on the item name
-            PowerUp itemToUse = FindPowerUpByName(itemName);
-        
-            if (itemToUse != null && powerUpManager != null)
+            if (selectedSlot != null && selectedSlot.isOccupied)
             {
-                powerUpManager.ApplyPowerUpEffect(itemToUse, selectedSlot.gameObject.GetComponent<PlayerController>());
-                removeFromInventory();  // Remove the item from inventory after use
+                string itemName = selectedSlot.itemName;  // Get the item name from the selected slot
+                ApplyPowerUpEffect(itemName, playerController);  // Apply the power-up effect based on the selected item
+                removeFromInventory();
             }
             else
             {
-                Debug.Log("No matching PowerUp found for: " + itemName);
+                Debug.LogWarning("No item selected or item is empty.");
             }
         }
-        else
+    }
+
+    private void ApplyPowerUpEffect(string itemName, PlayerController playerController)
+    {
+        switch (itemName)
         {
-            Debug.Log("No item selected to use.");
+            case "GoldenApple":
+                Debug.Log("Applying Golden Apple effect");
+                PlayerHealth playerHealth = playerController.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
+                {
+                    playerHealth.changeHealth(effectAmount);  // Increases health
+                }
+                break;
+            case "BerserkerBrew":
+                Debug.Log("Applying Berserker Brew effect");
+                //playerController.attackPower += effectAmount;
+                break;
+            case "EnchantedBerry":
+                Debug.Log("Applying Enchanted Berry effect");
+                //playerController.sanity += effectAmount;
+                break;
+            default:
+                Debug.LogWarning("Unknown power-up: " + itemName);
+                break;
         }
     }
 
@@ -171,22 +199,6 @@ public class InventoryManager : MonoBehaviour
         {
             Debug.Log("No item selected to remove.");
         }
-    }
-
-    private PowerUp FindPowerUpByName(string itemName)
-    {
-        // Loop through your power-up definitions (assuming they are stored or defined somewhere)
-        PowerUp[] allPowerUps = FindObjectsOfType<PowerUp>();  // Find all power-ups in the scene
-
-        foreach (PowerUp powerUp in allPowerUps)
-        {
-            if (powerUp.itemType.ToString() == itemName)
-            {
-                return powerUp;
-            }
-        }
-
-        return null; // Return null if no matching PowerUp is found
     }
 }
 
