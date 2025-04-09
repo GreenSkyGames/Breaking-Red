@@ -71,7 +71,7 @@ public class PowerUpManager : MonoBehaviour
         }
         return null;
     }
-
+/*
     public void ApplyPowerUpEffect(PowerUp powerUp, PlayerController playerController)
     {
         if (powerUp == null || playerController == null)
@@ -108,6 +108,7 @@ public class PowerUpManager : MonoBehaviour
         // Play sound after applying effect
         AudioManager.instance.Play("PowerUpSound");
     }
+    */
 
     /* This function shows the choicePrompt for all except poison apple
      * For poison apple, applyEffect() is used
