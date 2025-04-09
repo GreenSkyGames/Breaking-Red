@@ -37,6 +37,7 @@ public class DialogueManager : MonoBehaviour
 	private int _currentChoiceIndex = -1;
 
 	private List<string> cluesGathered = new List<string>();
+	public List<string> killList = new List<string>();
 
 	//On Awake, the diaogue box, the ink json file, and the inkExternal functions
 	//are all found.
@@ -270,4 +271,18 @@ public class DialogueManager : MonoBehaviour
 			return false;
 		}
     }
+
+	//Function to add enemy tag to the clue list
+	//
+	//This runs twice, but the if() catches duplicates.
+	public void addKill(string killTag)
+	{
+		Debug.Log("Test All kills: " + string.Join(", ", killList));
+
+		if (!killList.Contains(killTag))
+		{
+			Debug.Log("All kills: " + string.Join(", ", killList));
+			killList.Add(killTag);
+		}
+	}
 }

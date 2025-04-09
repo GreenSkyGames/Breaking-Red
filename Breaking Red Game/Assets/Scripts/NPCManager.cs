@@ -398,19 +398,22 @@ public class NPCManager : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-			//This is for updating the killList on the player object:
-			playerObj.GetComponent<PlayerController>().addKill(gameObject.tag);
+			//Debug.Log("Death Test: " + gameObject.tag);
 
-            // Update killed scene image
-            SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
-            sceneManager.UpdateSceneImage();
+			//This is for updating the killList on the player object:
+			dialogueManager.addKill(gameObject.tag);
 
             // Disable rendering and movement, but keep the object active
             if (enemySR != null)
             {
                 enemySR.enabled = false;
             }
+
 			this.gameObject.SetActive(false);
+
+            // Update killed scene image
+            SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
+            sceneManager.UpdateSceneImage();
 
             // Optionally, you might want to add other game over logic here,
             // such as displaying a game over screen, triggering events, etc.
