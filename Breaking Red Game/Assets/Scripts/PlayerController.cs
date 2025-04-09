@@ -267,6 +267,6 @@ public class PlayerController : MonoBehaviour
 		{
 			killList.Add(killTag);
 			Debug.Log("All kills: " + string.Join(", ", killList));
-		}
+        }
 	}
 }

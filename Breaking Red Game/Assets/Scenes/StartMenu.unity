@@ -1378,6 +1378,13 @@ MonoBehaviour:
     Pitch: 1
     Loop: 1
   - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 1728c429aebdf412ab76d617e40d8845, type: 3}
+    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: VictorySound
+    Volume: 0.1
+    Pitch: 1
+    Loop: 1
+  - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: adec86daeff9c914ebcad89840070648, type: 3}
     Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: WolfSound
@@ -1476,10 +1483,10 @@ MonoBehaviour:
     Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 1728c429aebdf412ab76d617e40d8845, type: 3}
-    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: VictorySound
-    Volume: 0.1
+    Clip: {fileID: 8300000, guid: 95da7b86a404c864fb8050a9e0b0b8b4, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: KillSound
+    Volume: 1
     Pitch: 1
     Loop: 0
   allAudioSources: []

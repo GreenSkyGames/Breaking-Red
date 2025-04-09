@@ -419,8 +419,8 @@ public class NPCManager : MonoBehaviour
 			//This currently is breaking this function as well:
 
             // Update killed scene image
-            //SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
-            //sceneManager.UpdateSceneImage();
+            SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
+            sceneManager.UpdateSceneImage();
 
             // Optionally, you might want to add other game over logic here,
             // such as displaying a game over screen, triggering events, etc.
