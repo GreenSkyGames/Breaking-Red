@@ -42,6 +42,7 @@ TagManager:
   - Boundary
   - MovingPlatform
   - Ground
+  - HealthMessage
   layers:
   - Default
   - TransparentFX
