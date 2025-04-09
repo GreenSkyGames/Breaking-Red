@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 9018394183626640338}
   videoCanvas: {fileID: 3609745134876614188}
-  idleTimeLimit: 5
+  idleTimeLimit: 30
   fadeDuration: 0.5
 --- !u!1 &3609745134876614188
 GameObject:

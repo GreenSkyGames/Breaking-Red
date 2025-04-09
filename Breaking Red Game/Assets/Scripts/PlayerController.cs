@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask attackLayer; // What layers can be attacked
     public int attackDamage = 1;
 
-	private List<string> killList = new List<string>();
+	public List<string> killList = new List<string>();
 
     /* The update function is called once per frame
      * It checks if the player interacts with an NPC and reacts if the player has

@@ -401,6 +401,10 @@ public class NPCManager : MonoBehaviour
 			//This is for updating the killList on the player object:
 			playerObj.GetComponent<PlayerController>().addKill(gameObject.tag);
 
+            // Update killed scene image
+            SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
+            sceneManager.UpdateSceneImage();
+
             // Disable rendering and movement, but keep the object active
             if (enemySR != null)
             {

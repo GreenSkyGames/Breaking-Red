@@ -163,6 +163,9 @@ public class PauseGameMenu : MonoBehaviour
 // player can view inventory from pause menu 
     public void ViewInventory()
     {
+        // Play the button click
+        AudioManager.instance.Play("ClickSound");
+
         Debug.Log("Viewing inventory..."); 
     }
 
