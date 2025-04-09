@@ -416,8 +416,6 @@ public class NPCManager : MonoBehaviour
 
 			this.gameObject.SetActive(false);
 
-			//This currently is breaking this function as well:
-
             // Update killed scene image
             SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
             sceneManager.UpdateSceneImage();
