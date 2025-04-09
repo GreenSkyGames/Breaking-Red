@@ -72,6 +72,43 @@ public class PowerUpManager : MonoBehaviour
         return null;
     }
 
+    public void ApplyPowerUpEffect(PowerUp powerUp, PlayerController playerController)
+    {
+        if (powerUp == null || playerController == null)
+        {
+            Debug.LogWarning("Invalid PowerUp or PlayerController.");
+            return;
+        }
+
+        if (powerUp is GoldenApple)
+        {
+            GoldenApple goldenApple = (GoldenApple)powerUp;
+            goldenApple.v_applyEffect(playerController);
+        }
+        else if (powerUp is BerserkerBrew)
+        {
+            BerserkerBrew berserkerBrew = (BerserkerBrew)powerUp;
+            berserkerBrew.v_applyEffect(playerController);
+        }
+        else if (powerUp is EnchantedBerry)
+        {
+            EnchantedBerry enchantedBerry = (EnchantedBerry)powerUp;
+            enchantedBerry.v_applyEffect(playerController);
+        }
+        else if (powerUp is PoisonApple)
+        {
+            PoisonApple poisonApple = (PoisonApple)powerUp;
+            poisonApple.v_applyEffect(playerController);
+        }
+        else
+        {
+            Debug.LogWarning("Unknown PowerUp type: " + powerUp.GetType());
+        }
+
+        // Play sound after applying effect
+        AudioManager.instance.Play("PowerUpSound");
+    }
+
     /* This function shows the choicePrompt for all except poison apple
      * For poison apple, applyEffect() is used
      * For others, SetActive() for the choice prompt is set to true and a coroutine starts and uses waitForPlayerInput() */

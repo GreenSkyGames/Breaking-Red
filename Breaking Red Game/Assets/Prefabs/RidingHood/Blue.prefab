@@ -255,6 +255,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   attackDamage: 1
+  killList: []
 --- !u!95 &6048510446368128549
 Animator:
   serializedVersion: 7
@@ -289,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ff9bede834a4f2c8aef759b77c8cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 30
+  currentHealth: 100
   maxHealth: 100
   playerSr: {fileID: 6399434693797903750}
   playerMovement: {fileID: 7437709376220296197}
@@ -307,3 +308,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choicePrompt: {fileID: 0}
   inventorySlots: []
+  messageText: {fileID: 0}
+  healthMessageGroup: {fileID: 0}
