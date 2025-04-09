@@ -21,6 +21,8 @@ EXTERNAL addCatClue(bool)
 EXTERNAL checkAxmanClues(bool)
 
 
+//This are diverts to the various knots.
+//Each knot represents the dialogue for one NPC.
 -> TheWolf
 -> PurpleTorchEnemy
 -> TheHippie
@@ -33,9 +35,24 @@ EXTERNAL checkAxmanClues(bool)
 -> TheOwl
 -> TheHunter
 
+//This variable appears on the Name box beside the dialogue box.
 
 VAR Name = "Default"
 
+
+//This is the general template for NPC knots.
+=== PurpleTorchEnemy ===
+~ Name = "Purple Torch Enemy"
+
+//Name is {Name}
+
+testingtestingtestingLEAVE ME ALONEtestingtestingtesting
+
+-> END
+
+
+//TheWolf dialogue demonstrates a simple choice
+//that results in hostility being activated or deactivated.
 === TheWolf ===
 ~ Name = "The Wolf"
 
@@ -72,18 +89,11 @@ VAR Name = "Default"
         -> END
 
 
-=== PurpleTorchEnemy ===
-~ Name = "Purple Torch Enemy"
-
-//Name is {Name}
-
-testingtestingtestingLEAVE ME ALONEtestingtestingtesting
-
--> END
-
 
 //The Bear's dialogue was mangled during testing.
-//It still works, but it's ugly.
+//
+//This is what has to be done to not use the - symbol
+//to separate the choices.
 === TheBear ===
 ~ Name = "The Bear"
 
@@ -185,17 +195,17 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - "No kidding!  Wow, you've... Actually, you look exactly like I remember, now that I think about it."
 
-* ["You, too.  Glad to see you're well.  Did you hear about Grandmother?"]
+* ["Glad to see you're well.  Did you hear about Grandmother?"]
 
 - "I did, man.  That's a real bummer.  I'm sorry for your loss, Red, even Grandmother didn't deserve to go out like that."
 
-* ["Thanks.  I'm searching for who did it.  Would you have any leads?"]
+* ["I'm searching for who did it.  Would you have any leads?"]
 
 * ["Wait, how did you know that?]
 
 "Huh?  Know what?"
 
-    ** ["How did you know that Grandmother was dead?  Who told you?"]
+    ** ["How did you know she was dead?  Who told you?"]
     
     "Huh... That's a good point!  Who did tell me!  Oh brother!  They said the guy did it with a weapon, too!  Crazy!"
     
@@ -204,10 +214,12 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
         "Oh!  Uh, then it had to be one of my friends!  They're around here if you go searching for them."
         
         **** [Next]
+
+        ~addHippieClue(true)
         
         "My friend The Fish is over by the lake, he sees all kinds of stuff.  And The Owl is off roosting in his tree, but you know how he is.  And there's this crazy Cat around.  If you ask anyone, ask him!"
 
-        ***** ["The Fish, The Owl, and The Cat, huh.  Alright.  Thank you for helping."]
+        ***** ["The Fish, The Owl, and The Cat.  Ok.  Thank you."]
 
         "It's all our forest, man, we gotta stick together.  Stay safe out there, Red!  Lotta weirdos around the forest these days!"
         
@@ -223,7 +235,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - "My friend The Fish is over by the lake, he sees all kinds of stuff.  And The Owl is off roosting in his tree, but you know how he is.  And there's this crazy Cat around.  If you ask anyone, ask him!"
 
-* ["The Fish, The Owl, and The Cat, huh.  Alright.  Thank you for helping."]
+* ["The Fish, The Owl, and The Cat.  Ok.  Thank you."]
 
 ~addHippieClue(true)
 
@@ -285,6 +297,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 *["We'll see about that!"]
 
 ~startAxmanHostility(true)
+
 - "I'll KILL you!!!"
 
 *[Fight!]
@@ -397,7 +410,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["Hey, Fish!  Stop right there!"]
 
-"Hello, Human!  You're not going to kill me, are you?"
+- "Hello, Human!  You're not going to kill me, are you?"
 
 * ["Kill you?  Why would I?"]
 
@@ -420,12 +433,12 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["You saw a human with a stick, covered in blood?"]
 
-- "I saw a human with a brown thing in their hands!  Probably a human...  Are you going to kill me?"
-
+- "I saw a human with a brown thing, pointy thing in their hands!  Probably a human...  Are you going to kill me?"
 
 * ["Only if I need to."]
 
 ~addFishClue(true)
+
 - "Well, that doesn't make me feel very good!"
 
 * [End]
@@ -491,7 +504,6 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
                                 
                                 ****** ["Not being... You know what, never mind."]
                                 
-
 -> END
 
 
@@ -523,8 +535,6 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
             **** ["...Really?"]
             
             -> END
-
-
 
 
 - "What does it LOOK like?  These ANIMALS are just running around EVERYWHERE!  Being ALIVE!  Someone has to stop them!"
