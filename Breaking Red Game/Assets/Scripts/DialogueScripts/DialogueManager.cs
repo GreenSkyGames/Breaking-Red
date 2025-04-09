@@ -54,8 +54,16 @@ public class DialogueManager : MonoBehaviour
 		_inkExternalFunctions = new InkExternalFunctions();
 		_inkExternalFunctions.bind(_story);
 
-		//closeDialogue();
-	}
+        //closeDialogue();
+        
+		if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
 
 	//When the dialogue manager is destroyed, the functions are unbound.
 	private void OnDestroy()
