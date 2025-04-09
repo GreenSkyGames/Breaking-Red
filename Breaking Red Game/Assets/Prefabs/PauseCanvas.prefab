@@ -1060,6 +1060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 7728468981454945642}
+  inventoryMenu: {fileID: 692521755672166692, guid: 9aed94761b9fc0a4085c732faf2e7d80, type: 3}
 --- !u!114 &8765581659891910341
 MonoBehaviour:
   m_ObjectHideFlags: 0

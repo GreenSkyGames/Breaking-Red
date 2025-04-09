@@ -20,7 +20,9 @@ public class PauseGameMenu : MonoBehaviour
     public GameObject PauseMenu; // pause menu object to be connected with script 
     private List<AudioSource> allAudioSources = new List<AudioSource>(); // To store all active AudioSources
     private List<bool> audioSourceStates = new List<bool>(); // To store the state, play or pause
-
+    private bool _menuActivated; //inventory manager being activated? 
+    public GameObject inventoryMenu; //inventory manager object 
+    
 // Pause menu called => in view, Pause menu uncalled=> not in view 
     void Start()
     {
@@ -165,8 +167,19 @@ public class PauseGameMenu : MonoBehaviour
     {
         // Play the button click
         AudioManager.instance.Play("ClickSound");
-
         Debug.Log("Viewing inventory..."); 
+        if (_menuActivated) // if I clicked when menu is on, turn it off
+        {
+            Time.timeScale = 1;
+            inventoryMenu.SetActive(false);
+            _menuActivated = false;
+        }
+        else if(!_menuActivated) // if I clicked when menu is off, turn it on
+        {
+            Time.timeScale = 0;
+            inventoryMenu.SetActive(true);
+            _menuActivated = true;
+        }
     }
 
 }
