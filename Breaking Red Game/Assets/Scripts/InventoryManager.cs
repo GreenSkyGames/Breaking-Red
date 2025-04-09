@@ -101,6 +101,19 @@ public class InventoryManager : MonoBehaviour
         return count;
     }   
 
+    public int checkCollectibles()
+    {
+        bool isCollectible = false;
+        foreach (var slot in itemSlot)
+        {
+            if (slot.itemName == "OwlsWing" || slot.itemName == "CanofTuna")
+            {
+                isCollectible = true;
+            }
+        }
+        return isCollectible ? 1 : 0;
+    }
+
     /* This function toggles the inventory by turned the menu on or off
      * Uses InventoryMenu object and bool menuActivated
      * The game time is paused when inventory is on 
