@@ -43,6 +43,7 @@ TagManager:
   - MovingPlatform
   - Ground
   - HealthMessage
+  - PlayerClone
   layers:
   - Default
   - TransparentFX

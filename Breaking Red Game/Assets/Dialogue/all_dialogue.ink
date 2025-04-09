@@ -82,58 +82,60 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 -> END
 
 
-
+//The Bear's dialogue was mangled during testing.
+//It still works, but it's ugly.
 === TheBear ===
 ~ Name = "The Bear"
 
 //Name is {Name}
 
-- "..."
+"..."
 
 * ["Hey!  Hey, Bear!"]
 
-- "Huh?  Who's that calling me?"
+"Huh?  Who's that calling me?"
 
 //bearApproach() if possible
-* [Next]
+** [Next]
 
-- "Whoa!  It's Little Red Riding Hood!  You're back?"
+"Whoa!  It's Little Red Riding Hood!  You're back?"
 
-* ["Don't play dumb with me, Bear!"]
+*** ["Don't play dumb with me, Bear!"]
 
-- "Who's playin'?  It's been a long time, Red, surely you're not still mad?"
+"Who's playin'?  It's been a long time, Red, surely you're not still mad?"
 
-* ["Mad?  MAD?  I'm FURIOUS!"]
+**** ["Mad?  MAD?  I'm FURIOUS!"]
 
-- "Whoa, what?  Just because of a little honey?  It's not like I killed anyone.  Uh.  Recently, that is."
+"Whoa, what?  Just because of a little honey?  It's not like I killed anyone.  Uh.  Recently, that is."
 
-* ["So WHO KILLED GRANDMOTHER?!"]
+***** ["So WHO KILLED GRANDMOTHER?!"]
 
-- "...Whoa.  The old bag finally kicked it?  Hah!  I thought the forest was busier lately!  I bet one of those humans got her!"
+"...Whoa.  The old bag finally kicked it?  Hah!  I thought the forest was busier lately!  I bet one of those humans got her!"
 
-* ["If you didn't, then WHO?  TALK, Bear!"]
+****** ["If you didn't, then WHO?  TALK, Bear!"]
 
-- "Huh, well, smart money is on the Hunter, if you ask me.  He's been killing all over the forest."
+"Huh, well, smart money is on the Hunter, if you ask me.  He's been killing all over the forest."
 
-* [Next]
+******* [Next]
 
-- "Then there's the Axman, but he just hates trees.  And there's that weird Hiker wandering around, and that chatty Hippie."
+"Then there's the Axman, but he just hates trees.  And there's that weird Hiker wandering around, and that chatty Hippie."
 
-* [Next]
+******** [Next]
 
-- "And you remember the Wizard.  He and Grandmother had a big fight a while back, really tore up the forest."
+"And you remember the Wizard.  He and Grandmother had a big fight a while back, really tore up the forest."
 
-* ["The Hunter, the Axman, the Hiker, the Hippie, and the Wizard, huh.]
+********* ["The Hunter, the Axman, the Hiker, the Hippie, and the Wizard, huh.]
 
 ~ addBearClue(true)
-- "Yeah, bunch of weirdo humans.  Bet you anything it was one of them that did it."
+"Yeah, bunch of weirdo humans.  Bet you anything it was one of them that did it."
 
-* ["Why are you telling me so easily?"]
+********** ["Why are you telling me so easily?"]
+
 
 ~ startBearHostility(true)
-- "Well, it's not like you're going to get away from me AGAIN, is it?  Not too often a free meal comes to me!"
+"Well, it's not like you're going to get away from me AGAIN, is it?  Not too often a free meal comes to me!"
 
-* ["Why you %$!@-!"]
+*********** ["Why you %$!@-!"]
 
 -> END
 
@@ -239,9 +241,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 //Name is {Name}
 
 { checkAxmanClues(true):
-    "Clue testing dialogue."
     -> enough_clues_found
-    
 }
 
 "Dum dee dum dee dum, swinging my ax, chopping the wood, dum dee dum dee dum...!  ...Oh? Can I help you with something?"

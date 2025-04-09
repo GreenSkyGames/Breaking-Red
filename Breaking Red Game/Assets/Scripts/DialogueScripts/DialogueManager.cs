@@ -281,8 +281,8 @@ public class DialogueManager : MonoBehaviour
 
 		if (!killList.Contains(killTag))
 		{
-			Debug.Log("All kills: " + string.Join(", ", killList));
 			killList.Add(killTag);
+			Debug.Log("All kills: " + string.Join(", ", killList));
 		}
 	}
 }

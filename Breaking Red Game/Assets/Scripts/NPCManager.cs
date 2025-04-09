@@ -218,27 +218,24 @@ public class NPCManager : MonoBehaviour
 	//Swap hostility
 	public void switchHostility()
 	{
-		isHostile = !isHostile;
+		this.isHostile = !isHostile;
 	}
 	//Turn off hostility
 	public void offHostility()
 	{
 		Debug.Log("Hostility off test.");
-		isHostile = false;
+		this.isHostile = false;
 	}
 	//Turn on hostility
 	public void onHostility()
 	{
 		Debug.Log("Hostility on test.");
-		isHostile = true;
+		this.isHostile = true;
 	}
 	//Set hostility
 	public void setHostility(bool activate)
 	{
-		//dynamic thing happens here?
-		
-
-		isHostile = activate;
+		this.isHostile = activate;
 	}
 
 	//Spawns loot at enemy location
@@ -411,9 +408,11 @@ public class NPCManager : MonoBehaviour
 
 			this.gameObject.SetActive(false);
 
+			//This currently is breaking this function as well:
+
             // Update killed scene image
-            SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
-            sceneManager.UpdateSceneImage();
+            //SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
+            //sceneManager.UpdateSceneImage();
 
             // Optionally, you might want to add other game over logic here,
             // such as displaying a game over screen, triggering events, etc.
