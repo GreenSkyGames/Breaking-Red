@@ -24,7 +24,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public TMP_Text ItemNameText;
     public TMP_Text itemDescriptionText;
 
-    [SerializeField] private Image itemImage; // item slot
+    public Image itemImage; // item slot
     private InventoryManager inventoryManager;
     
     private void Start()
@@ -68,6 +68,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         ItemNameText.text = itemName;
         itemDescriptionText.text = itemDescription;
         itemDescriptionImage.sprite = itemSprite;
+
+        inventoryManager.selectedSlot = this;
 
     }
 

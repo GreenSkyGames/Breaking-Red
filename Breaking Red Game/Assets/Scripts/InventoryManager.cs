@@ -14,6 +14,9 @@ public class InventoryManager : MonoBehaviour
     public GameObject inventoryMenu;
     public ItemSlot[] itemSlot;
     public static InventoryManager sInstance;
+    public ItemSlot selectedSlot;
+    public PowerUpManager powerUpManager;
+    public Sprite emptySprite;
 
     private bool _menuActivated;
 
@@ -24,6 +27,14 @@ public class InventoryManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             toggleInventory();
+        }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            useSelectedItem();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            removeFromInventory();
         }
 
     }
@@ -106,6 +117,76 @@ public class InventoryManager : MonoBehaviour
             itemSlot[i].selectedShader.SetActive(false);
             itemSlot[i].thisItemSelected = false;
         }
+        selectedSlot = null;
+    }
+
+    public void useSelectedItem()
+    {
+        if (selectedSlot != null && selectedSlot.isOccupied)
+        {
+            string itemName = selectedSlot.itemName;
+        
+            // Find the PowerUp type based on the item name
+            PowerUp itemToUse = FindPowerUpByName(itemName);
+        
+            if (itemToUse != null && powerUpManager != null)
+            {
+                powerUpManager.ApplyPowerUpEffect(itemToUse, selectedSlot.gameObject.GetComponent<PlayerController>());
+                removeFromInventory();  // Remove the item from inventory after use
+            }
+            else
+            {
+                Debug.Log("No matching PowerUp found for: " + itemName);
+            }
+        }
+        else
+        {
+            Debug.Log("No item selected to use.");
+        }
+    }
+
+    public void removeFromInventory()
+    {
+        if (selectedSlot != null && selectedSlot.isOccupied)
+        {
+            // Clear the item's data
+            selectedSlot.itemName = "";
+            selectedSlot.itemSprite = null;
+            selectedSlot.itemDescription = "";
+            selectedSlot.isOccupied = false;
+            selectedSlot.itemImage.sprite = emptySprite;
+
+            // Hide selection shader & clear selection
+            selectedSlot.selectedShader.SetActive(false);
+            selectedSlot.thisItemSelected = false;
+
+            // Clear description UI
+            selectedSlot.ItemNameText.text = "";
+            selectedSlot.itemDescriptionText.text = "";
+            selectedSlot.itemDescriptionImage.sprite = null;
+
+            selectedSlot = null;
+        }
+        else
+        {
+            Debug.Log("No item selected to remove.");
+        }
+    }
+
+    private PowerUp FindPowerUpByName(string itemName)
+    {
+        // Loop through your power-up definitions (assuming they are stored or defined somewhere)
+        PowerUp[] allPowerUps = FindObjectsOfType<PowerUp>();  // Find all power-ups in the scene
+
+        foreach (PowerUp powerUp in allPowerUps)
+        {
+            if (powerUp.itemType.ToString() == itemName)
+            {
+                return powerUp;
+            }
+        }
+
+        return null; // Return null if no matching PowerUp is found
     }
 }
 
