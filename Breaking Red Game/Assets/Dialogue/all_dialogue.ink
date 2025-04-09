@@ -282,7 +282,10 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - "Well, these aren't YOUR trees, Red!  Thes are MY TREES, RED!  And I told that to Grandmother!  And now!  I'm going to tell you too!"
 
+*["We'll see about that!"]
+
 ~startAxmanHostility(true)
+- "I'll KILL you!!!"
 
 *[Fight!]
 
