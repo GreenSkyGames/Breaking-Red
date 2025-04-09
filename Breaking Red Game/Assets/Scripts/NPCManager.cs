@@ -159,6 +159,14 @@ public class NPCManager : MonoBehaviour
             }
         }
 
+		//This catches the death of the Axman.
+		//The final victory screen can be triggered here.
+        if (gameObject.CompareTag("TheAxman"))
+        {
+            Debug.Log("TheAxman has been disabled.  Victory!");
+
+        }
+
         //Example of how to make different enemies drop items on death:
         if (gameObject.tag == "PurpleTorchEnemy")
 		{
