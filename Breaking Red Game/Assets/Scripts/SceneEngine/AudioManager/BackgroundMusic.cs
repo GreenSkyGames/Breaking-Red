@@ -89,6 +89,14 @@ public class BackgroundMusic : MonoBehaviour
                 StartCoroutine(AudioManager.instance.FadeOut("FrogSound", 1.5f));
                 StartCoroutine(AudioManager.instance.FadeIn("L5BGM", 1.0f));  // Fade in level 5 music
                 break;
+            case "GameOver":
+                StartCoroutine(AudioManager.instance.PauseAllAudioSources());
+                StartCoroutine(AudioManager.instance.FadeIn("GameoverSound", 1.0f));  // Fade in level 5 music
+                break;
+            case "Victory":
+                StartCoroutine(AudioManager.instance.PauseAllAudioSources());
+                StartCoroutine(AudioManager.instance.FadeIn("VictorySound", 1.0f));  // Fade in level 5 music
+                break;
 
             // Add more cases for other levels as needed
 

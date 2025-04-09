@@ -244,11 +244,10 @@ public class PlayerController : MonoBehaviour
             yield return null; // Wait for the next frame
         }
 
+        StartCoroutine(AudioManager.instance.PauseAllAudioSources());
+
         // play game over sound effect
         AudioManager.instance.Play("GameoverSound"); 
-        
-        // Pause all audio sources and save their states
-        StartCoroutine(AudioManager.instance.PauseAllAudioSources());
 
         //yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
         Debug.Log("Player died moving over an edge!");
