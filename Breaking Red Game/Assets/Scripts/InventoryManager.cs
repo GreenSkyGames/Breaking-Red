@@ -156,7 +156,7 @@ public class InventoryManager : MonoBehaviour
                 PlayerHealth playerHealth = playerController.GetComponent<PlayerHealth>();
                 if (playerHealth != null)
                 {
-                    playerHealth.changeHealth(effectAmount);  // Increases health
+                    playerHealth.changeHealth(10);  // Increases health
                 }
                 break;
             case "BerserkerBrew":
