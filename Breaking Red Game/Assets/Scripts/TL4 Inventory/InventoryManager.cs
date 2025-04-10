@@ -136,6 +136,9 @@ public class InventoryManager : MonoBehaviour
                 slot.itemDescriptionImage.sprite = null;
             }
         }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 
