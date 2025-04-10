@@ -6,12 +6,28 @@
  * It inherets from MonoBehavior
  */
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class TerrainObjects : MonoBehaviour
 {
+    public virtual void Interact()
+    {
+        Debug.Log("Terrain object interacts");
+    }
     public Vector3 spawnPos;
-    public virtual void Spawn()
+
+    public string spriteName;
+    
+    public TerrainObjects(Vector3 pos, string sprite)
+    {
+        spawnPos = pos;
+        spriteName = sprite;
+
+    }
+    
+    /*public virtual void Spawn()
     {
         transform.position = spawnPos;
-    }
+        GetComponent<SpriteRenderer>().sprite = terrainSprite;
+    }*/
 }
