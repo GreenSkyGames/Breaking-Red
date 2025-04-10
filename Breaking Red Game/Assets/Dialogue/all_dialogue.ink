@@ -433,6 +433,8 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["I'm going to kill him!"]
 
+~ addCatClue(true)
+
 - "Alrighty, you do that then.  I'm gonna stay here, in front of this fire..."
 
 * [End]
