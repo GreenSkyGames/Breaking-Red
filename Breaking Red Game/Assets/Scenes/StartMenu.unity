@@ -1329,7 +1329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioTypes:
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 5e32be3d951da484b98be46de4a570de, type: 3}
+    Clip: {fileID: 8300000, guid: 5a19ca0207eb07346a64ade6023fe3b1, type: 3}
     Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: MenuBGM
     Volume: 0.1
