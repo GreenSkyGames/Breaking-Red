@@ -415,8 +415,8 @@ public class NPCManager : MonoBehaviour
             SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
             sceneManager.UpdateSceneImage();
 
-			//Example of how to make different enemies drop items on death:
-			if (gameObject.tag == "PurpleTorchEnemy")
+            //Example of how to make different enemies drop items on death:
+            if (gameObject.tag == "PurpleTorchEnemy")
 			{
 				//Item drop here
 				gameObject.GetComponent<NPCManager>().DropLoot();
