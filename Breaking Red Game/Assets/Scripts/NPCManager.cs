@@ -77,6 +77,8 @@ public class NPCManager : MonoBehaviour
 
 	private GameObject playerObj;
 
+	private bool hasDropped = false;
+
     //Start is currently being used to:
 	// - find rigidbody component
 	// - find animator component
@@ -89,8 +91,8 @@ public class NPCManager : MonoBehaviour
 
 		myCanvas = GameObject.Find("DialogueBoxCanvas");
 
-		dialogueManager = FindObjectOfType<DialogueManager>();
-		inventoryManager = FindObjectOfType<InventoryManager>();
+		dialogueManager = FindAnyObjectByType<DialogueManager>();
+		inventoryManager = FindAnyObjectByType<InventoryManager>();
 
 		playerObj = GameObject.FindWithTag("Player");
 
@@ -134,45 +136,6 @@ public class NPCManager : MonoBehaviour
 		}
 
 
-        //System for making enemies affect terrain on death:
-        if (gameObject.CompareTag("TheWolf"))
-        {
-            Debug.Log("TheWolf has been disabled.");
-
-            // Find door with tag "L2"
-            GameObject door = GameObject.FindWithTag("L2");
-
-            // Check if the door is found
-            if (door != null)
-            {
-                Debug.Log("Found L2 door.");
-                var lockedPassage = door.GetComponent<LockedPassage>();
-                if (lockedPassage != null)
-                {
-                    lockedPassage.revealPassageway();
-                }
-                else
-                {
-                    Debug.LogWarning("LockedPassage component is missing from the door.");
-                }
-            }
-            else
-            {
-                Debug.LogWarning("L2 door not found.");
-            }
-        }
-
-		//This catches the death of the Axman.
-		//The final victory screen can be triggered here.
-        if (gameObject.CompareTag("TheAxman"))
-        {
-            Debug.Log("TheAxman has been disabled.  Victory!");
-			//Triggering the victory screen 
-			// SceneManager.LoadScene("Victory"); // player wins the game! 
-
-        }
-
-		//Debug.Log("Death test!" + gameObject.tag);
 	}
 
     //Update is being used to:
@@ -433,20 +396,69 @@ public class NPCManager : MonoBehaviour
             //Example of how to make different enemies drop items on death:
             if (gameObject.tag == "PurpleTorchEnemy")
 			{
+				if (hasDropped) return;
+				hasDropped = true;
 				//Item drop here
 				gameObject.GetComponent<NPCManager>().DropLoot();
 			}
 
             if (gameObject.tag == "TheFish")
 			{
+				//This if() stops a second item from dropping
+				//This is a quick fix for what is probably a coroutine problem
+				if (hasDropped) return;
+				hasDropped = true;
+
 				//Item drop here
 				gameObject.GetComponent<NPCManager>().DropLoot();
 			}
             if (gameObject.tag == "TheOwl")
 			{
+				if (hasDropped) return;
+				hasDropped = true;
 				//Item drop here
 				gameObject.GetComponent<NPCManager>().DropLoot();
 			}
+
+			//System for making enemies affect terrain on death:
+			if (gameObject.CompareTag("TheWolf"))
+			{
+				Debug.Log("TheWolf has been disabled.");
+
+				// Find door with tag "L2"
+				GameObject door = GameObject.FindWithTag("L2");
+
+				// Check if the door is found
+				if (door != null)
+				{
+					Debug.Log("Found L2 door.");
+					var lockedPassage = door.GetComponent<LockedPassage>();
+					if (lockedPassage != null)
+					{
+						lockedPassage.revealPassageway();
+					}
+					else
+					{
+						Debug.LogWarning("LockedPassage component is missing from the door.");
+					}
+				}
+				else
+				{
+					Debug.LogWarning("L2 door not found.");
+				}
+			}
+
+			//This catches the death of the Axman.
+			//The final victory screen can be triggered here.
+			if (gameObject.CompareTag("TheAxman"))
+			{
+				Debug.Log("TheAxman has been disabled.  Victory!");
+				//Triggering the victory screen 
+				SceneManager.LoadScene("Victory"); // player wins the game! 
+
+			}
+
+			//Debug.Log("Death test!" + gameObject.tag);
 
             // Optionally, you might want to add other game over logic here,
             // such as displaying a game over screen, triggering events, etc.
