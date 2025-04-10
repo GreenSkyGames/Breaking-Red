@@ -20,7 +20,7 @@ public class Level1 : LevelLoader
     }
     private void CreateNormalPassage(string spriteName, Vector3 position)
     {
-        //GameObject obj = Object.Instantiate(Resources.Load<GameObject>("NormalPassagePrefab"), position, Quaternion.identity);
+        GameObject obj = Object.Instantiate(Resources.Load<GameObject>("NormalPassagePrefab"), position, Quaternion.identity);
         var passage = obj.GetComponent<NormalPassage>();
         passage.spriteName = spriteName;
         passage.SetSprite(spriteName);
@@ -28,7 +28,7 @@ public class Level1 : LevelLoader
 
     private void CreateLockedPassage(string spriteName, Vector3 position)
     {
-        //GameObject obj = Object.Instantiate(Resources.Load<GameObject>("LockedPassagePrefab"), position, Quaternion.identity);
+        GameObject obj = Object.Instantiate(Resources.Load<GameObject>("LockedPassagePrefab"), position, Quaternion.identity);
         var passage = obj.GetComponent<LockedPassage>();
         passage.spriteName = spriteName;
         passage.SetSprite(spriteName);
@@ -36,7 +36,7 @@ public class Level1 : LevelLoader
 
     private void CreateDamagingEnv(string spriteName, Vector3 position)
     {
-        //GameObject obj = Object.Instantiate(Resources.Load<GameObject>("DamagingEnvPrefab"), position, Quaternion.identity);
+        GameObject obj = Object.Instantiate(Resources.Load<GameObject>("DamagingEnvPrefab"), position, Quaternion.identity);
         var env = obj.GetComponent<DamagingEnv>();
         env.spriteName = spriteName;
         env.SetSprite(spriteName);

@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
     public float shrunkHeight = 0f;
     public bool isScaling = false;
     public int facingDirection = 1;
-    private bool _teleported = false;
     public Rigidbody2D rb;
     public CapsuleCollider2D Collider;
     public SpriteRenderer spriteRenderer;
@@ -72,11 +71,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Teleported()
-    {
-        _teleported = true;
-    }
-
     /*Fixed update updates at intervals
      * This function checks if the player is currently falling and slows their velocity and stops their collider box as well as their sprite-renderer from affecting other objects
      * It also flips the direction of the player if they begin moving in the opposite direction
@@ -85,7 +79,6 @@ public class PlayerController : MonoBehaviour
      */
     void FixedUpdate()
     {
-        _teleported = false;
         if (isScaling)
         {
             rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, Time.deltaTime * scaleSpeed);
@@ -139,8 +132,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag("IL2") || other.CompareTag("L2") || other.CompareTag("L3") || other.CompareTag("IL3") || other.CompareTag("L4") || other.CompareTag("L5"))
         {
+            Debug.Log("Tag: " + other);
             isOnBoundary = false;
-            Debug.Log("teleported");
         }
         else if (other.CompareTag("Boundary"))
         {
