@@ -274,6 +274,8 @@ MonoBehaviour:
   facingRight: 1
   enemySR: {fileID: 6160632467157839589}
   currentHealth: 9
+  lootPrefab: {fileID: 9058630431597116965, guid: 03ad48e2af5818446b2e61eb21bd490a, type: 3}
+  metPlayer: 0
 --- !u!114 &2775063527854739706
 MonoBehaviour:
   m_ObjectHideFlags: 0

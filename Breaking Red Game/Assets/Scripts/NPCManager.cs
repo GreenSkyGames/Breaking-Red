@@ -73,6 +73,7 @@ public class NPCManager : MonoBehaviour
 
 	public bool metPlayer = false;
 	private DialogueManager dialogueManager;
+	private InventoryManager inventoryManager;
 
 	private GameObject playerObj;
 
@@ -89,6 +90,7 @@ public class NPCManager : MonoBehaviour
 		myCanvas = GameObject.Find("DialogueBoxCanvas");
 
 		dialogueManager = FindObjectOfType<DialogueManager>();
+		inventoryManager = FindObjectOfType<InventoryManager>();
 
 		playerObj = GameObject.FindWithTag("Player");
 
@@ -272,6 +274,18 @@ public class NPCManager : MonoBehaviour
 		return false;
 	}
 
+	//This should check the player inventory for the Owl's Wing and/or the Can of Tuna
+	public bool checkCollectibles()
+	{
+		if(inventoryManager != null)
+		{
+			Debug.Log("Item check test" + inventoryManager.tag);
+			return inventoryManager.checkCollectibles();
+		}
+		return false;
+	}
+
+
 
 
 	//Chase handles both direction of the NPC and the flipping their animation (for now).
@@ -418,6 +432,17 @@ public class NPCManager : MonoBehaviour
 
             //Example of how to make different enemies drop items on death:
             if (gameObject.tag == "PurpleTorchEnemy")
+			{
+				//Item drop here
+				gameObject.GetComponent<NPCManager>().DropLoot();
+			}
+
+            if (gameObject.tag == "TheFish")
+			{
+				//Item drop here
+				gameObject.GetComponent<NPCManager>().DropLoot();
+			}
+            if (gameObject.tag == "TheOwl")
 			{
 				//Item drop here
 				gameObject.GetComponent<NPCManager>().DropLoot();

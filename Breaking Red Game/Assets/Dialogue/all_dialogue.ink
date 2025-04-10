@@ -143,6 +143,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 
 ~ startBearHostility(true)
+
 "Well, it's not like you're going to get away from me AGAIN, is it?  Not too often a free meal comes to me!"
 
 *********** ["Why you %$!@-!"]
@@ -394,7 +395,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
         -> END
 
 
-- "Well, since you're being so generous and offering, why don't you get me something to eat?  There was a juicy Fish around right around here, and I'm partial to a bit of Owl, too!"
+- "Well, since you're being so generous and offering, why don't you get me something to eat?  There was a juicy Fish right around here, and I'm partial to a bit of Owl, too!"
 
 * ["...I'll consider it."]
 

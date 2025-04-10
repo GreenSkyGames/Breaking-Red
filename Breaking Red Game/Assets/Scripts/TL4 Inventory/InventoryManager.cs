@@ -101,7 +101,7 @@ public class InventoryManager : MonoBehaviour
         return count;
     }   
 
-    public int checkCollectibles()
+    public bool checkCollectibles()
     {
         bool isCollectible = false;
         foreach (var slot in itemSlot)
@@ -111,7 +111,7 @@ public class InventoryManager : MonoBehaviour
                 isCollectible = true;
             }
         }
-        return isCollectible ? 1 : 0;
+        return isCollectible ? true : false;
     }
 
     /* This function toggles the inventory by turned the menu on or off

@@ -42,6 +42,7 @@ public class InkExternalFunctions : MonoBehaviour
 		story.BindExternalFunction("addAxmanClue", (bool activate) => addAxmanClue(activate));
 		story.BindExternalFunction("addCatClue", (bool activate) => addCatClue(activate));
 		story.BindExternalFunction("checkAxmanClues", (bool activate) => checkAxmanClues(activate));
+		story.BindExternalFunction("checkCatCollectibles", (bool activate) => checkCatCollectibles(activate));
 
 	}
 
@@ -69,6 +70,7 @@ public class InkExternalFunctions : MonoBehaviour
 		story.UnbindExternalFunction("addCatClue");
 		story.UnbindExternalFunction("addAxmanClue");
 		story.UnbindExternalFunction("checkAxmanClues");
+		story.UnbindExternalFunction("checkCatCollectibles");
 
 	}
 
@@ -242,6 +244,7 @@ public class InkExternalFunctions : MonoBehaviour
 	}
 
 
+
 //The function for the Axman to check the clue list
 
     private bool checkAxmanClues(bool activate)
@@ -251,4 +254,14 @@ public class InkExternalFunctions : MonoBehaviour
 		return temp.GetComponent<NPCManager>().checkClues();
 	}
 
+
+
+//The function for the Cat to check the player's inventory
+
+    private bool checkCatCollectibles(bool activate)
+	{
+		temp = GameObject.FindWithTag("TheCat");
+		Debug.Log("Ink Item Check Test for: " + temp.tag);
+		return temp.GetComponent<NPCManager>().checkCollectibles();
+	}
 }
