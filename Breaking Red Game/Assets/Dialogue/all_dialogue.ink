@@ -135,7 +135,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 "And you remember the Wizard.  He and Grandmother had a big fight a while back, really tore up the forest."
 
-********* ["The Hunter, the Axman, the Hiker, the Hippie, and the Wizard.]
+********* ["The Hunter, Axman, Hiker, Hippie, and Wizard, huh.]
 
 ~ addBearClue(true)
 "Yeah, bunch of weirdo humans.  Bet you anything it was one of them that did it."
@@ -335,6 +335,8 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 - "This... That's not...  Red, I think you should go.  I... I would rather be alone right now."
 
 *["Fine.  But at least tell me what you know."]
+        
+*["Fat chance.  Tell me what happened.  Right now."] 
 
 "I will tell you nothing with that tone, Red.  I have no reason to help you now."
 
@@ -343,17 +345,62 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
     "I will not help you, Red.  Leave me be."
     
         *** ["...Fine.  But if I find out you had something to do with it, I'm coming back!"]
-        ~ addWizardClue(true)
         
         -> END
-        
-*["Fat chance.  Tell me what happened.  Right now."]   
+  
 
 - "I cannot tell you what I do not know, Red.  This... is the first I am hearing of this."
 
 * ["Then what CAN you do?"]
 
-- "...Leave me be, Red.  This is not your forest anymore."]
+- "...Fine, I understand what you ask.  I shall use my powers to search for answers."]
+
+* ["Thank you."]
+
+- "I look... into the mists... I see..."
+
+* [Next]
+
+- "I see..."
+
+* [Next]
+
+- "I see..."
+
+* [Next]
+
+- "I see..."
+
+* [Next]
+
+- "I see..."
+
+* [Next]
+
+- "I see..."
+
+* ["WHAT DO YOU SEE ALREADY"]
+
+- "I see... a man!  A human man!  He wields a weapon of destruction!  There, in Grandmother's house, he struck!"
+        
+~ addWizardClue(true)
+
+* [The Wizard slumps.]
+
+- "That's all I saw."
+
+* ["That's it?"]
+
+* ["That's better than nothing.  Thank you."]
+
+"It was... all I could do, Red.  Good luck.  And stay safe."
+
+    ** [End]
+    
+    -> END
+    
+
+- "...Leave me be, Red.  This is not your forest anymore."
 
 * ["I'm not leaving."]
 
@@ -378,7 +425,6 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 { checkCatCollectibles(true):
     -> food_delivered
 }
-
 
 
 //Name is {The Cat}
@@ -417,7 +463,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 === food_delivered ===
 
-"Ooh, you brought the good stuff!  Give it here!"
+"Ooh, you brought the good stuff!  I can smell it!  Give it here!"
 
 *[Sounds of crunching]
 

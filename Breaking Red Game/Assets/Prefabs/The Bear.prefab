@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41656782f118fc47afaf197375f074a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 10
   AttackPoint: {fileID: 7083909359612608921}
   weaponRange: 1
   knockbackForce: 3
