@@ -114,10 +114,6 @@ public class InventoryManager : MonoBehaviour
         return isCollectible ? true : false;
     }
 
-
-
-
-
     /* This function toggles the inventory by turned the menu on or off
      * Uses InventoryMenu object and bool menuActivated
      * The game time is paused when inventory is on 

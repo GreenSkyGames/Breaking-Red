@@ -19,7 +19,6 @@ EXTERNAL addFishClue(bool)
 EXTERNAL addAxmanClue(bool)
 EXTERNAL addCatClue(bool)
 EXTERNAL checkAxmanClues(bool)
-EXTERNAL checkCatCollectibles(bool)
 
 
 //This are diverts to the various knots.
@@ -371,11 +370,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 //Name is {The Cat}
 
-{ checkCatCollectibles(true):
-    -> food_delivered
-}
-
-"...Where did that Owl go... It was just there..."
+"...Where did that Fish go... It was just there..."
 
 * ["Hey, Cat!  What are you doing here?"]
 
@@ -405,22 +400,6 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 * ["...I'll consider it."]
 
 -> END
-
-
-
-
-=== food_delivered ===
-
-"Oh, I can smell it!  You've got the good stuff!  Gimme!"
-
-
-
-
-
-
-
--> END
-
 
 
 === TheFish ===
