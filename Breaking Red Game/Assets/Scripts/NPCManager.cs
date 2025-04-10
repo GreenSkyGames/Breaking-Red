@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
+using UnityEngine.SceneManagement; //to change scenes when game over 
 
 
 //Simple class to set up example of dynamic binding
