@@ -36,6 +36,8 @@ public class LevelManager : MonoBehaviour
         foreach (TerrainObjects obj in level.terrainList)
         {
             GameObject go = new GameObject("TerrainObject");
+            go.transform.parent = levelParent;
+
             go.transform.position = obj.position;
             SpriteRenderer renderer = go.AddComponent<SpriteRenderer>();
             renderer.sprite = Resources.Load<Sprite>("Sprites/" + obj.spriteName);
