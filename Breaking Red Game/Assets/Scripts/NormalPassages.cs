@@ -16,19 +16,15 @@ public class NormalPassage : TerrainObjects
     public CanvasGroup fadePanel;
     public GameObject passagePrefab;
 
-    public NormalPassage(Vector3 pos, string sprite) : base(pos, sprite)
+    /*public NormalPassage(Vector3 pos, string sprite) : base(pos, sprite)
     {
         GameObject passageInstance = Instantiate(passagePrefab, position, Quaternion.identity);
         passageInstance.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(sprite);
         fadePanel = passageInstance.GetComponent<CanvasGroup>();
-    }
+    }*/
     /* This code checks the tag of an object when it collides with a passageway and plays a sound upon impact if it is a player
      * It also chooses the next destination to transport the user to based on the current tag of the passageway and sends that to the getDestination function*/
     public virtual void OnTriggerEnter2D(Collider2D other)
-    {
-        Interact(other);
-    }
-    public override void Interact(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {

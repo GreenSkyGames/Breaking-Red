@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
     {
         
     }*/
+    /*
     public Transform levelParent;
     private void Start()
     {
@@ -48,5 +49,25 @@ public class LevelManager : MonoBehaviour
                 go.AddComponent<NormalPassage>();
             }
         }
+    }*/
+
+    public LevelLoader levelLoader;
+    public GameObject player;
+
+    private void Start()
+    {
+        levelLoader = new Level1();
+        levelLoader.LoadLevel();
+        InitializeLevel();
+    }
+
+    void InitializeLevel()
+    {
+        //Instantiate TerrainObjects here
+    }
+
+    void LoadTerrainObjects()
+    {
+        //Code to instantiate TerrainObjects from the LevelLoader
     }
 }

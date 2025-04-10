@@ -10,10 +10,10 @@ using UnityEngine.Tilemaps;
 
 public class MovingPlatform : TerrainObjects
 {
-    public MovingPlatform(Vector3 pos, string sprite) : base(pos, sprite)
+    /*public MovingPlatform(Vector3 pos, string sprite) : base(pos, sprite)
     {
         Debug.Log("moving platform initializer");
-    }
+    }*/
 
     // Positional offsets for goal
     [SerializeField] protected float pHorGoal = 0.0f;
