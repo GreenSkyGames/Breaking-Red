@@ -122,6 +122,7 @@ public class PlayerController : MonoBehaviour
     private bool isOnPlatform = false;  // Flag to check if the player is on a platform
     private bool isOnBoundary = false;  // Flag to check if the player is on a boundary
     private bool justTeleported = false;
+    private bool grounded = true;
     // When player enters the platform's area (trigger zone)
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -134,16 +135,24 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("inside level checker: " + other);
             isOnBoundary = false;
-            isOnPlatform = true;
+            //isOnPlatform = true;
             justTeleported = true;
             StartCoroutine(ResetTeleportFlag());
         }
+        else if (other.CompareTag("Ground"))
+        {
+            //isOnBoundary = false;
+            grounded = true;
+        }
         else if (other.CompareTag("Boundary"))
         {
+            grounded = false;
             isOnBoundary = true;
             Debug.Log("Player is on the boundary");
-            if (!isOnPlatform && !justTeleported)
+            Debug.Log("onPlatform: " + isOnPlatform + " and teleported: " + justTeleported + " and grounded" + grounded);
+            if (!isOnPlatform && !justTeleported && !grounded)
             {
+                Debug.Log("Scaling for some reason? onPlatform: " + isOnPlatform + " and teleported: " + justTeleported + " and grounded" + grounded);
                 scales();
             }
         }
@@ -151,7 +160,9 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator ResetTeleportFlag()
     {
-        yield return new WaitForSeconds(0.5f);
+        Debug.Log("ResettingFlag");
+        yield return new WaitForSeconds(2f);
+        Debug.Log("Flag Rest");
         justTeleported = false;
     }
 
@@ -164,7 +175,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player is no longer on the platform");
 
             // Check if player is now on the boundary layer after stepping off the platform
-            if (isOnBoundary && !justTeleported)
+            if (isOnBoundary && !justTeleported && !grounded)
             {
                 Debug.Log("justTeleportedexit: " + justTeleported);
                 scales();

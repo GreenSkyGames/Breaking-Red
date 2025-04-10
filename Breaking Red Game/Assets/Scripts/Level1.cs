@@ -15,12 +15,19 @@ public class Level1 : LevelLoader
 
         CreateLockedPassage("cavetiles_2107", new Vector3(94.26f, 4.343f, 0));
 
+        CreateDamagingEnv("Furniture_39", new Vector3(-110.5f, -10.703f, 0));
+
         CreateSlidingDoor("Tree_45", new Vector3(6.62f, 1.422f, 0), -2f, 1f);
         CreateSlidingDoor("Tree_45", new Vector3(6.58f, -0.417f, 0), 2f, 1f);
     }
     private void CreateNormalPassage(string spriteName, Vector3 position)
     {
-        GameObject obj = Object.Instantiate(Resources.Load<GameObject>("NormalPassagePrefab"), position, Quaternion.identity);
+        GameObject prefab = Resources.Load<GameObject>("LevelPrefabs/NormalPassage");
+        if (prefab == null)
+        {
+            Debug.LogError("Not found in Resources/LevelPrefabs");
+        }
+        GameObject obj = Object.Instantiate(Resources.Load<GameObject>("LevelPrefabs/NormalPassagePrefab"), position, Quaternion.identity);
         var passage = obj.GetComponent<NormalPassage>();
         passage.spriteName = spriteName;
         passage.SetSprite(spriteName);
@@ -28,7 +35,7 @@ public class Level1 : LevelLoader
 
     private void CreateLockedPassage(string spriteName, Vector3 position)
     {
-        GameObject obj = Object.Instantiate(Resources.Load<GameObject>("LockedPassagePrefab"), position, Quaternion.identity);
+        GameObject obj = Object.Instantiate(Resources.Load<GameObject>("LevelPrefabs/LockedPassagePrefab"), position, Quaternion.identity);
         var passage = obj.GetComponent<LockedPassage>();
         passage.spriteName = spriteName;
         passage.SetSprite(spriteName);
@@ -36,7 +43,7 @@ public class Level1 : LevelLoader
 
     private void CreateDamagingEnv(string spriteName, Vector3 position)
     {
-        GameObject obj = Object.Instantiate(Resources.Load<GameObject>("DamagingEnvPrefab"), position, Quaternion.identity);
+        GameObject obj = Object.Instantiate(Resources.Load<GameObject>("LevelPrefabs/DamagingEnvPrefab"), position, Quaternion.identity);
         var env = obj.GetComponent<DamagingEnv>();
         env.spriteName = spriteName;
         env.SetSprite(spriteName);
@@ -44,11 +51,11 @@ public class Level1 : LevelLoader
         
     private void CreateSlidingDoor(string spriteName, Vector3 position, float verticalGoal, float moveTime)
     {
-        GameObject obj = Object.Instantiate(Resources.Load<GameObject>("SlidingDoorPrefab"), position, Quaternion.identity);
+        GameObject obj = Object.Instantiate(Resources.Load<GameObject>("LevelPrefabs/SlidingDoorPrefab"), position, Quaternion.identity);
         var door = obj.GetComponent<SlidingDoor>();
         door.spriteName = spriteName;
         door.SetSprite(spriteName);
-                /* Vector3 goal = new Vector3(position.x, position.y + verticalGoal, position.z);
+        /* Vector3 goal = new Vector3(position.x, position.y + verticalGoal, position.z);
         door.startPosition = position;
         door.endPosition = goal;
         door.speed = Mathf.Abs(verticalGoal / moveTime);*/
