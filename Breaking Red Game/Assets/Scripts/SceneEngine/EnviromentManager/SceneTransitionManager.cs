@@ -56,7 +56,7 @@ public class SceneTransitionManager : MonoBehaviour
 
         StartCoroutine(AudioManager.instance.FadeIn("KillSound", 1.0f));
 
-        StartCoroutine(HideImageAfterDelay(4f));
+        StartCoroutine(HideImageAfterDelay(3.5f));
     }
 
     // Display the scene image with fade-in effect
