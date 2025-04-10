@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a38bf506e9c4f2544a72fb0e6ed05550
+guid: 26bf3697777ab184eb51108bab849ac9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -855298285791758126
-    second: 1_0
+      213: -8022317073333284825
+    second: RedShoes_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1_0
+      name: RedShoes_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1408
-        height: 792
+        x: 94
+        y: 125
+        width: 362
+        height: 292
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d8b16a9dbe5124f0800000000000000
-      internalID: -855298285791758126
+      spriteID: 7201b6830210ba090800000000000000
+      internalID: -8022317073333284825
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      1_0: -855298285791758126
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
