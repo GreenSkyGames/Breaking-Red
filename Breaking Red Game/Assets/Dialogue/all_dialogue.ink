@@ -76,7 +76,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - "You've been gone from these woods for too long, Red!  You don't know how things work around here anymore!"
 
-    ** ["I know enough about you!  You always had it in for Grandmother!"]
+    ** ["I know enough! You always had it in for Grandmother!"]
 
     "So what if I did?  What, did someone finally whack the old broad?"
 
@@ -135,7 +135,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 "And you remember the Wizard.  He and Grandmother had a big fight a while back, really tore up the forest."
 
-********* ["The Hunter, the Axman, the Hiker, the Hippie, and the Wizard, huh.]
+********* ["The Hunter, the Axman, the Hiker, the Hippie, and the Wizard.]
 
 ~ addBearClue(true)
 "Yeah, bunch of weirdo humans.  Bet you anything it was one of them that did it."
@@ -170,7 +170,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["Your cat?"]
 
-- "Yes, he's a housecat and he got lost recently.  I've looked all over the forest for him, but no one has wanted to help.  I even talked to this old woman, and she... Well.  Let's just say that encounter didn't go very well!"
+- "Yes, he's a housecat and he got lost recently.  I've looked all over the forest for him!  I even talked to this old woman, and she... Well.  Let's just say that encounter didn't go very well!"
 
 
 * ["Do you mean Grandmother?  What did you do to her?!"]
@@ -270,7 +270,11 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 *["Understandable.  If I have further questions, I'll come back."]
 
+~ addAxmanClue(true)
+
 - "I'm sure this is where I'll be.  These are my woods, after all!  Hohoho...!"
+
+*[End]
 
 
 -> END
@@ -339,6 +343,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
     "I will not help you, Red.  Leave me be."
     
         *** ["...Fine.  But if I find out you had something to do with it, I'm coming back!"]
+        ~ addWizardClue(true)
         
         -> END
         
