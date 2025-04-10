@@ -155,7 +155,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void DeselectAllSlots()
+    public void deselectAllSlots()
     {
         for (int i = 0; i < itemSlot.Length; i++)
         {
@@ -171,7 +171,7 @@ public class InventoryManager : MonoBehaviour
             if (selectedSlot != null && selectedSlot.isOccupied)
             {
                 string itemName = selectedSlot.itemName;  // Get the item name from the selected slot
-                ApplyPowerUpEffect(itemName, playerController);  // Apply the power-up effect based on the selected item
+                applyPowerUpEffect(itemName, playerController);  // Apply the power-up effect based on the selected item
                 removeFromInventory();
             }
             else
@@ -181,7 +181,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    private void ApplyPowerUpEffect(string itemName, PlayerController playerController)
+    private void applyPowerUpEffect(string itemName, PlayerController playerController)
     {
         switch (itemName)
         {
