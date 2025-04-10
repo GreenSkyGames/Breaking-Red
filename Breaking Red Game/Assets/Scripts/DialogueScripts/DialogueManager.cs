@@ -267,7 +267,7 @@ public class DialogueManager : MonoBehaviour
 
     public bool checkClues()
     {
-		if(cluesGathered.Count >= 5)
+		if(cluesGathered.Count >= 5 || cluesGathered.Contains("TheCat"))
 		{
 			Debug.Log("Collected clues: " + string.Join(", ", cluesGathered));
 			Debug.Log("Check clues success");

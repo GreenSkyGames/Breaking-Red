@@ -111,7 +111,6 @@ public class InventoryManager : MonoBehaviour
                 isCollectible = true;
             }
         }
-        return isCollectible ? true : false;
         foreach (var slot in itemSlot)
         {
             if (slot.isOccupied && ((slot.itemName == "OwlsWing") || (slot.itemName == "CanOfTuna")))
@@ -133,6 +132,7 @@ public class InventoryManager : MonoBehaviour
                 slot.itemDescriptionImage.sprite = null;
             }
         }
+        return isCollectible ? true : false;
     }
 
     /* This function toggles the inventory by turned the menu on or off
