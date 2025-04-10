@@ -179,6 +179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectAmount: 0
-  itemType: 5
+  itemType: 8
   sprite: {fileID: -3924118577205823429, guid: 2d02f3cfb69eff4409aa4d39b13eec0a, type: 3}
   itemDescription: Canned fish? Sounds like the perfect thing to befriend a cat with...

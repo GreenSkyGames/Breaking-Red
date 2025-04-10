@@ -192,6 +192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectAmount: 0
-  itemType: 4
+  itemType: 7
   sprite: {fileID: 673542822009294, guid: f5edb80f8fa1fa148b3f76b12bca7e7d, type: 3}
   itemDescription: The wing of an owl? Hmm... the cat might like this.

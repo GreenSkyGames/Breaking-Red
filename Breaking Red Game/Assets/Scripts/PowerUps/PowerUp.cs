@@ -10,7 +10,7 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     public int effectAmount;
-    public enum itemName { PoisonApple, GoldenApple, BerserkerBrew, EnchantedBerry, OwlsWing, CanOfTuna } // enum has power-up types
+    public enum itemName { PoisonApple, GoldenApple, BerserkerBrew, EnchantedBerry, RedShoes, StoryBook, SecretScroll, OwlsWing, CanOfTuna } // enum has power-up types
     public itemName itemType;  // type of the power-up
     public Sprite sprite;
     
