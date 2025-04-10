@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
     }
     private bool isOnPlatform = false;  // Flag to check if the player is on a platform
     private bool isOnBoundary = false;  // Flag to check if the player is on a boundary
-
+    private bool justTeleported = false;
     // When player enters the platform's area (trigger zone)
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -132,18 +132,27 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag("IL2") || other.CompareTag("L2") || other.CompareTag("L3") || other.CompareTag("IL3") || other.CompareTag("L4") || other.CompareTag("L5"))
         {
-            Debug.Log("Tag: " + other);
+            Debug.Log("inside level checker: " + other);
             isOnBoundary = false;
+            isOnPlatform = true;
+            justTeleported = true;
+            StartCoroutine(ResetTeleportFlag());
         }
         else if (other.CompareTag("Boundary"))
         {
             isOnBoundary = true;
             Debug.Log("Player is on the boundary");
-            if (!isOnPlatform)
+            if (!isOnPlatform && !justTeleported)
             {
                 scales();
             }
         }
+    }
+
+    private IEnumerator ResetTeleportFlag()
+    {
+        yield return new WaitForSeconds(0.5f);
+        justTeleported = false;
     }
 
     // When the player exits the platform's trigger area
@@ -155,8 +164,9 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player is no longer on the platform");
 
             // Check if player is now on the boundary layer after stepping off the platform
-            if (isOnBoundary)
+            if (isOnBoundary && !justTeleported)
             {
+                Debug.Log("justTeleportedexit: " + justTeleported)
                 scales();
             }
         }
