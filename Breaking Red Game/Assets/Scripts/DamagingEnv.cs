@@ -22,6 +22,11 @@ public class DamagingEnv : TerrainObjects
 	public float damageInterval = 0.75f;
 	private HashSet<NPCManager> affectedObjects = new HashSet<NPCManager>();
 
+    public DamagingEnv(Vector3 pos, string sprite) : base(pos, sprite)
+    {
+        // Initialization specific to NormalPassage
+    }
+
     /* This code detects if either a player or another being in the game comes into contact with a damaging environment variable
      * Once a creature comes in contact with it, it detects whether or not that being was a player or not, reactively changing their health in different ways respectively
      * If it is a player, the health of that player is immediately changed and subtracted by the damage amount

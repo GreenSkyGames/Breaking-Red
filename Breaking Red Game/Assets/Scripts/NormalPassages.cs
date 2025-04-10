@@ -14,9 +14,18 @@ using UnityEngine.UI;
 public class NormalPassage : TerrainObjects
 {
     public CanvasGroup fadePanel;
+
+    public NormalPassage(Vector3 pos, string sprite) : base(pos, sprite)
+    {
+        fadePanel = GetComponent<CanvasGroup>();
+    }
     /* This code checks the tag of an object when it collides with a passageway and plays a sound upon impact if it is a player
      * It also chooses the next destination to transport the user to based on the current tag of the passageway and sends that to the getDestination function*/
     public virtual void OnTriggerEnter2D(Collider2D other)
+    {
+        Interact(other);
+    }
+    public override void Interact(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
@@ -93,7 +102,22 @@ public class NormalPassage : TerrainObjects
      * It returns a value back to the original OnTriggerEnter2D function from above and properly changes the scenes as necessary for some levels*/
     private Vector2 getDestination()
     {
-        switch(gameObject.tag)
+        switch (gameObject.tag)
+        {
+            case "L1": return new Vector2(10.5f, -8.43f);
+            case "IL1": return new Vector2(-1, -0.5f);
+            case "IL1.1": return new Vector2(-110, -14.5f);
+            case "L2": return new Vector2(79.71f, -24.84f);
+            case "IL2": return new Vector2(181.2f, -14.6f);
+            case "L3": return new Vector2(287.23f, -0.26f);
+            case "IL3": return new Vector2(317.29f, -61.84f);
+            case "L4": return new Vector2(215.56f, -68.95f);
+            case "L5": return new Vector2(31.13f, -118.4f);
+            default:
+                Debug.LogWarning("No destination set for tag: " + gameObject.tag);
+                return Vector2.zero;
+        }
+        /*switch(gameObject.tag)
         {
             case "L1":
                 //SceneManager.LoadScene("Level 1");
@@ -125,6 +149,6 @@ public class NormalPassage : TerrainObjects
             default:
                 Debug.LogWarning("No destination set for tag: " + gameObject.tag);
                 return Vector2.zero;
-        }
+        }*/
     }
 }

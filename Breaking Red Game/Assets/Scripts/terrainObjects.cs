@@ -10,19 +10,18 @@ using UnityEngine.UIElements;
 
 public class TerrainObjects : MonoBehaviour
 {
-    public virtual void Interact()
-    {
-        Debug.Log("Terrain object interacts");
-    }
-    public Vector3 spawnPos;
-
+    public Vector3 position;
     public string spriteName;
-    
+
     public TerrainObjects(Vector3 pos, string sprite)
     {
-        spawnPos = pos;
+        position = pos;
         spriteName = sprite;
+    }
 
+    public virtual void Interact(Collider2D other)
+    {
+        Debug.Log("Terrain object interacts");
     }
     
     /*public virtual void Spawn()

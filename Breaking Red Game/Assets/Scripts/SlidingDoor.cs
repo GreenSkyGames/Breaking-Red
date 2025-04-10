@@ -7,6 +7,11 @@ public class SlidingDoor : MovingPlatform
 
     private bool _moved = false; // Ensures the door only moves once
 
+    public SlidingDoor(Vector3 pos, string sprite) : base(pos, sprite)
+    {
+        // Initialization specific to NormalPassage
+    }
+
     void Update()
     {
         if (_unlocked && !_moved)
