@@ -94,6 +94,12 @@ public class PowerUpManager : MonoBehaviour
             poisonApple.v_applyEffect(playerController);
             Destroy(powerUp.gameObject);
         }
+        else if (powerUp.itemType == PowerUp.itemName.OwlsWing || powerUp.itemType == PowerUp.itemName.CanOfTuna)
+        {
+            AudioManager.instance.Play("PowerUpSound");
+            InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite, powerUp.itemDescription); // add to inventory
+            Destroy(powerUp.gameObject);
+        }
         else
         {
             /* for other power-ups, prompt the player with a choice */
