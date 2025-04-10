@@ -106,12 +106,37 @@ public class InventoryManager : MonoBehaviour
         bool isCollectible = false;
         foreach (var slot in itemSlot)
         {
-            if (slot.itemName == "OwlsWing" || slot.itemName == "CanofTuna")
+            if (slot.itemName == "OwlsWing" || slot.itemName == "CanOfTuna")
             {
                 isCollectible = true;
             }
         }
+<<<<<<< Updated upstream
         return isCollectible ? true : false;
+=======
+        return isCollectible ? 1 : 0;
+        foreach (var slot in itemSlot)
+        {
+            if (slot.isOccupied && ((slot.itemName == "OwlsWing") || (slot.itemName == "CanOfTuna")))
+            {
+                // Clear the item's data
+                slot.itemName = "";
+                slot.itemSprite = null;
+                slot.itemDescription = "";
+                slot.isOccupied = false;
+                slot.itemImage.sprite = emptySprite;
+
+                // Hide selection shader
+                slot.selectedShader.SetActive(false);
+                slot.thisItemSelected = false;
+
+                // Clear description UI if it happens to be showing this item
+                slot.ItemNameText.text = "";
+                slot.itemDescriptionText.text = "";
+                slot.itemDescriptionImage.sprite = null;
+            }
+        }
+>>>>>>> Stashed changes
     }
 
     /* This function toggles the inventory by turned the menu on or off
