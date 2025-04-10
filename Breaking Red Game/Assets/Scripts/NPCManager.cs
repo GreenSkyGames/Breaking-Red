@@ -168,7 +168,7 @@ public class NPCManager : MonoBehaviour
         {
             Debug.Log("TheAxman has been disabled.  Victory!");
 			//Triggering the victory screen 
-			SceneManager.LoadScene("Victory"); // player wins the game! 
+			// SceneManager.LoadScene("Victory"); // player wins the game! 
 
         }
 
