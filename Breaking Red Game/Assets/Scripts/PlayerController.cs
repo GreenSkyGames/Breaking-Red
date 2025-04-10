@@ -283,7 +283,8 @@ public class PlayerController : MonoBehaviour
 
         //yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
         Debug.Log("Player died moving over an edge!");
-        SceneManager.LoadScene("GameOver");
+        // SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver"); 
         //Application.Quit();//quitting the game 
         //UnityEditor.EditorApplication.isPlaying = false;
         //float newScale = Mathf.Lerp(_seedHeight, _finalHeight, Time.deltaTime / _scaleSpeed);
