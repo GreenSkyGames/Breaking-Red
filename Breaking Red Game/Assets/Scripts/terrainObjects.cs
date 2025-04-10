@@ -41,20 +41,20 @@ public class TerrainObjects : MonoBehaviour
     public void SetSprite(string spriteName)
     {
         //Load and set the sprite based on spriteName
-        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        /*SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         if (renderer != null)
         {
             renderer = gameObject.AddComponent<SpriteRenderer>();
-        }
+        }*/
 
-        Sprite sprite = Resources.Load<Sprite>(spriteName);
+        Sprite sprite = Resources.Load<Sprite>($"LevelSprites/{spriteName}");
         if (sprite != null)
         {
-            renderer.sprite = sprite;
+            GetComponent<SpriteRenderer>().sprite = sprite;
         }
         else
         {
-            Debug.LogWarning($"Sprite '{name} not found in Resources!");
+            Debug.LogWarning($"Sprite '{spriteName} not found in Resources!");
         }
 
     }

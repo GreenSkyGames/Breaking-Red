@@ -104,8 +104,8 @@ public class NormalPassage : TerrainObjects
         switch (gameObject.tag)
         {
             case "L1": return new Vector2(10.5f, -8.43f);
-            case "IL1": return new Vector2(-1, -0.5f);
-            case "IL1.1": return new Vector2(-110, -14.5f);
+            case "IL1": return new Vector2(-1, -1f);
+            case "IL1.1": return new Vector2(-107.66f, -17.32f);
             case "L2": return new Vector2(79.71f, -24.84f);
             case "IL2": return new Vector2(181.2f, -14.6f);
             case "L3": return new Vector2(287.23f, -0.26f);

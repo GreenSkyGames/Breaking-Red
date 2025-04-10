@@ -61,7 +61,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         levelLoader = new Level1();
-        levelLoader.LoadLevel();
+        levelLoader.LoadLevel(normalPassagePrefab);
         InitializeLevel();
     }
 

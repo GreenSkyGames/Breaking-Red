@@ -18,5 +18,5 @@ public abstract class LevelLoader
         Debug.Log("Error: auto Load level 1");
     }*/
 
-    public abstract void LoadLevel();
+    public abstract void LoadLevel(GameObject prefab);
 };
