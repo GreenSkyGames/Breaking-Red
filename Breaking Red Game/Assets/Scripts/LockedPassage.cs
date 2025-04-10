@@ -9,10 +9,10 @@ public class LockedPassage : NormalPassage
     [SerializeField] private SlidingDoor slidingDoor; // Reference to the SlidingDoor script
     [SerializeField] private SlidingDoor slidingDoor2; // Reference to the SlidingDoor script
 
-    public LockedPassage(Vector3 pos, string sprite) : base(pos, sprite)
+    /*public LockedPassage(Vector3 pos, string sprite) : base(pos, sprite)
     {
         // Initialization specific to LockedPassage
-    }
+    }*/
 
     private void Start()
     {

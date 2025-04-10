@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 
 public class TerrainObjects : MonoBehaviour
 {
-    public Vector3 position;
+    /*public Vector3 position;
     public string spriteName;
 
     public TerrainObjects(Vector3 pos, string sprite)
@@ -22,11 +22,24 @@ public class TerrainObjects : MonoBehaviour
     public virtual void Interact(Collider2D other)
     {
         Debug.Log("Terrain object interacts");
-    }
-    
+    }*/
+
     /*public virtual void Spawn()
     {
         transform.position = spawnPos;
         GetComponent<SpriteRenderer>().sprite = terrainSprite;
     }*/
+
+    public Vector3 position;
+    public string spriteName;
+
+    public void Spawn(Vector3 position)
+    {
+        this.position = position;
+    }
+
+    public void SetSprite(string spriteName)
+    {
+        //Load and set the sprite based on spriteName
+    }
 }
