@@ -167,13 +167,6 @@ public class NPCManager : MonoBehaviour
 
         }
 
-        //Example of how to make different enemies drop items on death:
-        if (gameObject.tag == "PurpleTorchEnemy")
-		{
-			//Item drop here
-			gameObject.GetComponent<NPCManager>().DropLoot();
-		}
-
 		//Debug.Log("Death test!" + gameObject.tag);
 	}
 
@@ -416,11 +409,16 @@ public class NPCManager : MonoBehaviour
 
 			this.gameObject.SetActive(false);
 
-			//This currently is breaking this function as well:
-
             // Update killed scene image
             SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
             sceneManager.UpdateSceneImage();
+
+			//Example of how to make different enemies drop items on death:
+			if (gameObject.tag == "PurpleTorchEnemy")
+			{
+				//Item drop here
+				gameObject.GetComponent<NPCManager>().DropLoot();
+			}
 
             // Optionally, you might want to add other game over logic here,
             // such as displaying a game over screen, triggering events, etc.

@@ -37,7 +37,7 @@ public class SceneTransitionManager : MonoBehaviour
     public void UpdateSceneImage()
     {
         // Get the number of NPCs killed by the player
-        int npcKillCount = playerController.killList.Count;
+        int npcKillCount = DialogueManager.Instance.killList.Count;
         Debug.Log("Killed NPC count: " + npcKillCount);  // Debug log to check if kill count is increasing
 
         // Choose a different image based on the kill count
@@ -56,7 +56,7 @@ public class SceneTransitionManager : MonoBehaviour
 
         StartCoroutine(AudioManager.instance.FadeIn("KillSound", 1.0f));
 
-        StartCoroutine(HideImageAfterDelay(5f));
+        StartCoroutine(HideImageAfterDelay(3.5f));
     }
 
     // Display the scene image with fade-in effect
