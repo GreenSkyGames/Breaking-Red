@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
             // Check if player is now on the boundary layer after stepping off the platform
             if (isOnBoundary && !justTeleported)
             {
-                Debug.Log("justTeleportedexit: " + justTeleported)
+                Debug.Log("justTeleportedexit: " + justTeleported);
                 scales();
             }
         }
