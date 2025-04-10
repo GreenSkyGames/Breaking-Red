@@ -246,6 +246,11 @@ public class PlayerController : MonoBehaviour
 
         while (elapsedTime < duration)
         {
+            StartCoroutine(AudioManager.instance.PauseAllAudioSources());
+
+            // play game over sound effect
+            AudioManager.instance.Play("GameoverSound");
+
             //float t = elapsedTime / duration; // Normalized time (0 to 1)
             //float newScale = Mathf.Lerp(seedHeight, finalHeight, t);
             float t = elapsedTime / duration;
@@ -260,10 +265,7 @@ public class PlayerController : MonoBehaviour
             yield return null; // Wait for the next frame
         }
 
-        StartCoroutine(AudioManager.instance.PauseAllAudioSources());
-
-        // play game over sound effect
-        AudioManager.instance.Play("GameoverSound"); 
+        
 
         //yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
         Debug.Log("Player died moving over an edge!");

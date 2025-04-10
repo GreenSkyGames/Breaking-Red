@@ -68,7 +68,6 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         ItemNameText.text = itemName;
         itemDescriptionText.text = itemDescription;
         itemDescriptionImage.sprite = itemSprite;
-
         inventoryManager.selectedSlot = this;
 
     }

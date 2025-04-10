@@ -1,110 +1,110 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;  // For scene loading
 using System.Collections;
 
 public class SceneTransitionManager : MonoBehaviour
 {
-    // Array to store 7 images (Make sure the images are imported and dragged to the Inspector)
-    public Sprite[] sceneImages;
+    public Sprite[] sceneImages;    // Images for different kill counts
+    public Image sceneImage;        // UI image component
 
-    // UI Image component used to display the image
-    public Image sceneImage;
-
-    // CanvasGroup component for controlling transparency
-    private CanvasGroup canvasGroup;
-
-    // Reference to PlayerController to get the player's kill count
-    private PlayerController playerController;
+    private CanvasGroup canvasGroup;  // For fading effects
 
     void Start()
     {
-        // Get the PlayerController component
-        playerController = FindObjectOfType<PlayerController>();
-        // Debug.Log("Player's Kill List Count: " + playerController.killList.Count);
-
-        // Initialize CanvasGroup to control opacity
+        // Get or add CanvasGroup
         canvasGroup = sceneImage.GetComponent<CanvasGroup>();
         if (canvasGroup == null)
         {
-            canvasGroup = sceneImage.gameObject.AddComponent<CanvasGroup>();  // Add CanvasGroup if not already attached
+            canvasGroup = sceneImage.gameObject.AddComponent<CanvasGroup>();
         }
 
-        // Initially hide the scene image
-        sceneImage.gameObject.SetActive(false);
+        sceneImage.gameObject.SetActive(false);  // Hide initially
     }
 
-    // This method updates the scene image based on the number of NPCs killed by the player
     public void UpdateSceneImage()
     {
-        // Get the number of NPCs killed by the player
-        int npcKillCount = DialogueManager.Instance.killList.Count;
-        Debug.Log("Killed NPC count: " + npcKillCount);  // Debug log to check if kill count is increasing
+        StartCoroutine(HandleSceneTransition());
+    }
 
-        // Choose a different image based on the kill count
+    private IEnumerator HandleSceneTransition()
+    {
+        // Get the current kill count
+        int npcKillCount = DialogueManager.Instance.killList.Count;
+        Debug.Log("Killed NPC count: " + npcKillCount);
+
+        // Step 1: Choose and play different sounds based on kill count
+        if (npcKillCount < 7)
+        {
+            yield return StartCoroutine(AudioManager.instance.FadeIn("KillSound", 1.0f));
+        }
+        else
+        {
+            yield return StartCoroutine(AudioManager.instance.FadeIn("MadSound", 1.0f));
+        }
+
+        // Step 2: Set the appropriate scene image
         if (npcKillCount >= 0 && npcKillCount < sceneImages.Length)
         {
             sceneImage.sprite = sceneImages[npcKillCount];
         }
         else
         {
-            // If the kill count is greater than 6, show the last image
             sceneImage.sprite = sceneImages[sceneImages.Length - 1];
         }
 
-        // Show the image with smooth fade-in
-        ShowImageWithFade();
-
-        StartCoroutine(AudioManager.instance.FadeIn("KillSound", 1.0f));
-
-        StartCoroutine(HideImageAfterDelay(3.5f));
-    }
-
-    // Display the scene image with fade-in effect
-    private void ShowImageWithFade()
-    {
+        // Step 3: Fade in the image
         sceneImage.gameObject.SetActive(true);
-        StartCoroutine(FadeInImage());
+        yield return StartCoroutine(FadeInImage());
+
+        // Step 4: Wait for a moment
+        yield return new WaitForSeconds(2f);
+
+        // Step 5: Fade out the image
+        yield return StartCoroutine(FadeOutImage());
+
+        // Step 6: Decide whether to continue the game or go to GameOver
+        if (npcKillCount >= 7)
+        {
+            Debug.Log("Player became mad!");
+            SceneManager.LoadScene("GameOver");
+        }
+        else
+        {
+            Debug.Log("Player continues the game.");
+        }
     }
 
-    // Coroutine to gradually increase image opacity (fade-in effect)
+    // Fade in the image
     private IEnumerator FadeInImage()
     {
         float time = 0f;
-        float fadeDuration = 1f; // Duration of the fade-in effect
+        float fadeDuration = 1f;
 
         while (time < fadeDuration)
         {
-            canvasGroup.alpha = Mathf.Lerp(0f, 1f, time / fadeDuration);  // Gradually increase alpha from 0 to 1
+            canvasGroup.alpha = Mathf.Lerp(0f, 1f, time / fadeDuration);
             time += Time.deltaTime;
             yield return null;
         }
 
-        canvasGroup.alpha = 1f;  // Ensure fully visible at the end
+        canvasGroup.alpha = 1f;
     }
 
-    // Hide the image after the specified delay (3 seconds)
-    private IEnumerator HideImageAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);  // Wait for the specified time
-
-        // Hide the scene image with fade-out effect
-        StartCoroutine(FadeOutImage());
-    }
-
-    // Coroutine to gradually decrease image opacity (fade-out effect)
+    // Fade out the image
     private IEnumerator FadeOutImage()
     {
         float time = 0f;
-        float fadeDuration = 1f; // Duration of the fade-out effect
+        float fadeDuration = 1f;
 
         while (time < fadeDuration)
         {
-            canvasGroup.alpha = Mathf.Lerp(1f, 0f, time / fadeDuration);  // Gradually decrease alpha from 1 to 0
+            canvasGroup.alpha = Mathf.Lerp(1f, 0f, time / fadeDuration);
             time += Time.deltaTime;
             yield return null;
         }
 
-        canvasGroup.alpha = 0f;  // Ensure fully hidden at the end
-        sceneImage.gameObject.SetActive(false);  // Hide the image after fading out
+        canvasGroup.alpha = 0f;
+        sceneImage.gameObject.SetActive(false);
     }
 }

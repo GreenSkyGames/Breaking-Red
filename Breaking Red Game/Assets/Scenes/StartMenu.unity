@@ -1483,9 +1483,16 @@ MonoBehaviour:
     Pitch: 1
     Loop: 0
   - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 95da7b86a404c864fb8050a9e0b0b8b4, type: 3}
+    Clip: {fileID: 8300000, guid: 7cb5c5322756dee4f8f73d470b349769, type: 3}
     Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
     Name: KillSound
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 16586fb40603fa14e91cd5feaf56de42, type: 3}
+    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
+    Name: MadSound
     Volume: 1
     Pitch: 1
     Loop: 0

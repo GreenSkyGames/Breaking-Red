@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
+using UnityEngine.SceneManagement; //to change scenes when game over 
 
 
 //Simple class to set up example of dynamic binding
@@ -164,6 +165,8 @@ public class NPCManager : MonoBehaviour
         if (gameObject.CompareTag("TheAxman"))
         {
             Debug.Log("TheAxman has been disabled.  Victory!");
+			//Triggering the victory screen 
+			SceneManager.LoadScene("Victory"); // player wins the game! 
 
         }
 
@@ -413,8 +416,8 @@ public class NPCManager : MonoBehaviour
             SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
             sceneManager.UpdateSceneImage();
 
-			//Example of how to make different enemies drop items on death:
-			if (gameObject.tag == "PurpleTorchEnemy")
+            //Example of how to make different enemies drop items on death:
+            if (gameObject.tag == "PurpleTorchEnemy")
 			{
 				//Item drop here
 				gameObject.GetComponent<NPCManager>().DropLoot();
