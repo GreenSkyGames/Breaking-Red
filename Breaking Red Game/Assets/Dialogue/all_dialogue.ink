@@ -382,10 +382,10 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 * ["WHAT DO YOU SEE ALREADY"]
 
 - "I see... a man!  A human man!  He wields a weapon of destruction!  There, in Grandmother's house, he struck!"
-        
-~ addWizardClue(true)
 
 * [The Wizard slumps.]
+
+~ addWizardClue(true)
 
 - "That's all I saw."
 
