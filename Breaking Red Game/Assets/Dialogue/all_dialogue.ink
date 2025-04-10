@@ -19,6 +19,7 @@ EXTERNAL addFishClue(bool)
 EXTERNAL addAxmanClue(bool)
 EXTERNAL addCatClue(bool)
 EXTERNAL checkAxmanClues(bool)
+EXTERNAL checkCatCollectibles(bool)
 
 
 //This are diverts to the various knots.
@@ -368,9 +369,16 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 === TheCat ===
 ~ Name = "The Cat"
 
+
+{ checkCatCollectibles(true):
+    -> food_delivered
+}
+
+
+
 //Name is {The Cat}
 
-"...Where did that Fish go... It was just there..."
+"...Where did that Owl go... It was just there..."
 
 * ["Hey, Cat!  What are you doing here?"]
 
@@ -400,6 +408,37 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 * ["...I'll consider it."]
 
 -> END
+
+
+=== food_delivered ===
+
+"Ooh, you brought the good stuff!  Give it here!"
+
+*[Sounds of crunching]
+
+- "Mm, oh yeah, that's the stuff.  So do you want to like, scratch my back or something?"
+
+*["I want to know who murdered Grandmother."]
+
+
+- "Oh, right.  That.  The old woman who got the chop."
+
+*["Tell me what you know!"]
+
+- "Fine, fine, but only because that was such a tasty treat.  It was another human, an ugly male with a red bandana, carrying an axe."
+
+*["Do you mean the Axman?"]
+
+- "Sure, whatever.  He was pretty happy afterwards, humming and singing to himself when he walked off into the forest.
+
+* ["I'm going to kill him!"]
+
+- "Alrighty, you do that then.  I'm gonna stay here, in front of this fire..."
+
+* [End]
+
+-> END
+
 
 
 === TheFish ===
