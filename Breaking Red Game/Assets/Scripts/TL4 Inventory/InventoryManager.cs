@@ -111,10 +111,7 @@ public class InventoryManager : MonoBehaviour
                 isCollectible = true;
             }
         }
-<<<<<<< Updated upstream
         return isCollectible ? true : false;
-=======
-        return isCollectible ? 1 : 0;
         foreach (var slot in itemSlot)
         {
             if (slot.isOccupied && ((slot.itemName == "OwlsWing") || (slot.itemName == "CanOfTuna")))
@@ -136,10 +133,6 @@ public class InventoryManager : MonoBehaviour
                 slot.itemDescriptionImage.sprite = null;
             }
         }
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     }
 
     /* This function toggles the inventory by turned the menu on or off
