@@ -76,7 +76,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 - "You've been gone from these woods for too long, Red!  You don't know how things work around here anymore!"
 
-    ** ["I know enough about you!  You always had it in for Grandmother!"]
+    ** ["I know enough! You always had it in for Grandmother!"]
 
     "So what if I did?  What, did someone finally whack the old broad?"
 
@@ -135,7 +135,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 "And you remember the Wizard.  He and Grandmother had a big fight a while back, really tore up the forest."
 
-********* ["The Hunter, the Axman, the Hiker, the Hippie, and the Wizard, huh.]
+********* ["The Hunter, Axman, Hiker, Hippie, and Wizard, huh.]
 
 ~ addBearClue(true)
 "Yeah, bunch of weirdo humans.  Bet you anything it was one of them that did it."
@@ -170,7 +170,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 * ["Your cat?"]
 
-- "Yes, he's a housecat and he got lost recently.  I've looked all over the forest for him, but no one has wanted to help.  I even talked to this old woman, and she... Well.  Let's just say that encounter didn't go very well!"
+- "Yes, he's a housecat and he got lost recently.  I've looked all over the forest for him!  I even talked to this old woman, and she... Well.  Let's just say that encounter didn't go very well!"
 
 
 * ["Do you mean Grandmother?  What did you do to her?!"]
@@ -270,7 +270,11 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 *["Understandable.  If I have further questions, I'll come back."]
 
+~ addAxmanClue(true)
+
 - "I'm sure this is where I'll be.  These are my woods, after all!  Hohoho...!"
+
+*[End]
 
 
 -> END
@@ -331,6 +335,8 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 - "This... That's not...  Red, I think you should go.  I... I would rather be alone right now."
 
 *["Fine.  But at least tell me what you know."]
+        
+*["Fat chance.  Tell me what happened.  Right now."] 
 
 "I will tell you nothing with that tone, Red.  I have no reason to help you now."
 
@@ -341,14 +347,60 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
         *** ["...Fine.  But if I find out you had something to do with it, I'm coming back!"]
         
         -> END
-        
-*["Fat chance.  Tell me what happened.  Right now."]   
+  
 
 - "I cannot tell you what I do not know, Red.  This... is the first I am hearing of this."
 
 * ["Then what CAN you do?"]
 
-- "...Leave me be, Red.  This is not your forest anymore."]
+- "...Fine, I understand what you ask.  I shall use my powers to search for answers."]
+
+* ["Thank you."]
+
+- "I look... into the mists... I see..."
+
+* [Next]
+
+- "I see..."
+
+* [Next]
+
+- "I see..."
+
+* [Next]
+
+- "I see..."
+
+* [Next]
+
+- "I see..."
+
+* [Next]
+
+- "I see..."
+
+* ["WHAT DO YOU SEE ALREADY"]
+
+- "I see... a man!  A human man!  He wields a weapon of destruction!  There, in Grandmother's house, he struck!"
+        
+~ addWizardClue(true)
+
+* [The Wizard slumps.]
+
+- "That's all I saw."
+
+* ["That's it?"]
+
+* ["That's better than nothing.  Thank you."]
+
+"It was... all I could do, Red.  Good luck.  And stay safe."
+
+    ** [End]
+    
+    -> END
+    
+
+- "...Leave me be, Red.  This is not your forest anymore."
 
 * ["I'm not leaving."]
 
@@ -373,7 +425,6 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 { checkCatCollectibles(true):
     -> food_delivered
 }
-
 
 
 //Name is {The Cat}
@@ -412,7 +463,7 @@ testingtestingtestingLEAVE ME ALONEtestingtestingtesting
 
 === food_delivered ===
 
-"Ooh, you brought the good stuff!  Give it here!"
+"Ooh, you brought the good stuff!  I can smell it!  Give it here!"
 
 *[Sounds of crunching]
 

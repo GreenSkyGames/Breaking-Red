@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41656782f118fc47afaf197375f074a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 9999999
   AttackPoint: {fileID: 353383225269774245}
   weaponRange: 1
   knockbackForce: 3
@@ -277,6 +277,8 @@ MonoBehaviour:
   facingRight: 0
   enemySR: {fileID: 5889827829237335769}
   currentHealth: 9
+  lootPrefab: {fileID: 0}
+  metPlayer: 0
 --- !u!1 &3684297223028477185
 GameObject:
   m_ObjectHideFlags: 0
