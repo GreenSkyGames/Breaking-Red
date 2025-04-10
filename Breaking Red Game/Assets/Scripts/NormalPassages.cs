@@ -110,8 +110,8 @@ public class NormalPassage : TerrainObjects
             case "IL2": return new Vector2(181.2f, -14.6f);
             case "L3": return new Vector2(287.23f, -0.26f);
             case "IL3": return new Vector2(317.29f, -61.84f);
-            case "L4": return new Vector2(215.56f, -68.95f);
-            case "L5": return new Vector2(22.95f, -119.37f);
+            case "L4": return new Vector2(221.87f, -70.49f);
+            case "L5": return new Vector2(30.21f, -118.86f);
             default:
                 Debug.LogWarning("No destination set for tag: " + gameObject.tag);
                 return Vector2.zero;
