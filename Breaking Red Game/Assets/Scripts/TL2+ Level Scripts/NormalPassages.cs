@@ -25,6 +25,9 @@ public class NormalPassage : TerrainObjects
      * It also chooses the next destination to transport the user to based on the current tag of the passageway and sends that to the getDestination function*/
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
+        interact(other);
+    }
+    public override void interact(Collider2D other) { 
         if(other.CompareTag("Player"))
         {
             string passageTag = this.tag;

@@ -71,7 +71,7 @@ public class LevelManager : MonoBehaviour
     {
         if(Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
             return;
         }
         Instance = this;
@@ -84,7 +84,7 @@ public class LevelManager : MonoBehaviour
         //InitializeLevel();
     }
 
-    public void TryLoadLevelFromTag(string tag)
+    public void tryLoadLevel(string tag)
     {
         if (!loadedLevels.ContainsKey(tag) || !loadedLevels[tag])
         {

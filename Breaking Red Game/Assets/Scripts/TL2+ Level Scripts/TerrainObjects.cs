@@ -38,7 +38,7 @@ public class TerrainObjects : MonoBehaviour
         this.position = position;
     }
 
-    public void SetSprite(string spriteName)
+    public void setSprite(string spriteName)
     {
         //Load and set the sprite based on spriteName
         /*SpriteRenderer renderer = GetComponent<SpriteRenderer>();
@@ -56,6 +56,9 @@ public class TerrainObjects : MonoBehaviour
         {
             Debug.LogWarning($"Sprite '{spriteName} not found in Resources!");
         }
-
+    }
+    public virtual void interact(Collider2D other)
+    {
+        Debug.Log("Default terrain object interaction");
     }
 }
