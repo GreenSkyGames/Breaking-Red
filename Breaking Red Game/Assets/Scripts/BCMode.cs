@@ -45,9 +45,23 @@ public class BCMODE : MonoBehaviour
         _toggle.onValueChanged.AddListener(OnToggleValueChanged); 
 
         //setting initial behavior 
-        _behavior = _toggle.isOn ? new BCModeBehavior() : new BCModeBehavior(); 
+        _behavior = _toggle.isOn ? new BCModeBehavior() : new ModeBehavior(); 
 
         RunBehavior(); // both bindings used here, when the screen is first initialized 
+
+        //Oral Exam 
+        Debug.Log("----------Experimenting for ORAL EXAM------------"); 
+        //1. Dynamically bound method 
+        ModeBehavior behavior = new BCModeBehavior(); 
+        behavior.Execute(); 
+
+        //2. dynamic type 
+        ModeBehavior behavior1 = new ModeBehavior(); 
+        behavior1.Execute(); 
+
+        //3. static bound method 
+        ModeBehavior behavior2 = new ModeBehavior(); 
+        behavior.Describe("Awesome");
     }
 
     // When the BC togglge is enabled, making sure that the choice is saved for the rest of the game 
@@ -70,9 +84,12 @@ public class BCMODE : MonoBehaviour
     void RunBehavior()
     {
         Debug.Log("RunBehavior() was called"); 
+
+        Debug.Log("DYNAMIC Execute was called"); 
         _behavior.Execute(); //dynamic
 
-        _behavior.Describe("Static Binding used here."); //static 
+        Debug.Log("STATIC Describe Was called"); 
+        _behavior.Describe("Static Binding used here."); //static  
 
     }
 
@@ -91,7 +108,7 @@ public class BCMODE : MonoBehaviour
 
     public class BCModeBehavior: ModeBehavior
     {
-        public override void Execute()
+        public override void Execute() //this is supposed to be dynamic 
         {
             Debug.Log("Executing BC Mode ... Specific Behavior"); 
         }

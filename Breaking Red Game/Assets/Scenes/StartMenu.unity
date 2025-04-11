@@ -549,7 +549,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1169710120}
+        m_TargetAssemblyTypeName: BCMODE, Assembly-CSharp
+        m_MethodName: OnToggleValueChanged
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &519420028
 GameObject:
@@ -1282,7 +1294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e63bc1687fc44709517aae86db3cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _toggle: {fileID: 413776455}
+  _toggle: {fileID: 0}
 --- !u!114 &1169710121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1295,8 +1307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5880e1a39ff4ef3a757b26e38a975f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuitButton: {fileID: 1727121393}
-  StartButton: {fileID: 296529776}
 --- !u!1 &1369328471
 GameObject:
   m_ObjectHideFlags: 0
