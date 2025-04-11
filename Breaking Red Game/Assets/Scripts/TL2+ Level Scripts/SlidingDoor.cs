@@ -30,6 +30,14 @@ public class SlidingDoor : MovingPlatform
         StartCoroutine(MoveAndDisable());
     }
 
+    public void SetMoveGoals(float horGoal, float vertGoal, float moveTime)
+    {
+        pHorGoal = horGoal;
+        pVertGoal = vertGoal;
+        pMoveTime = moveTime;
+    }
+
+
     private System.Collections.IEnumerator MoveAndDisable()
     {
         Vector2 startPosition = transform.position;

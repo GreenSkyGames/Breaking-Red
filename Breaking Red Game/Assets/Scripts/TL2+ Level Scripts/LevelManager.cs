@@ -58,6 +58,7 @@ public class LevelManager : MonoBehaviour
     public GameObject lockedPassagePrefab;
     public GameObject damagingEnvPrefab;
     public GameObject movingPlatformPrefab;
+    public GameObject movingPlatformTilePrefab;
     public GameObject slidingDoorPrefab;
     private Dictionary<string, bool> loadedLevels = new Dictionary<string, bool>();
     public static LevelManager Instance
@@ -87,6 +88,7 @@ public class LevelManager : MonoBehaviour
     {
         if (!loadedLevels.ContainsKey(tag) || !loadedLevels[tag])
         {
+            Debug.Log("Loading " + tag);
             LoadLevel(tag);
         }
     }
@@ -100,12 +102,13 @@ public class LevelManager : MonoBehaviour
                 levelLoader = new Level1();
                 break;
             case "L2":
+                Debug.Log("Successfully Loaded Level 2");
                 levelLoader = new Level2();
                 break;
         }
         if (levelLoader != null)
         {
-            levelLoader.LoadLevel(normalPassagePrefab, lockedPassagePrefab, damagingEnvPrefab, movingPlatformPrefab, slidingDoorPrefab);
+            levelLoader.LoadLevel(normalPassagePrefab, lockedPassagePrefab, damagingEnvPrefab, movingPlatformPrefab, movingPlatformTilePrefab, slidingDoorPrefab);
             loadedLevels[levelTag] = true;
         }
         else

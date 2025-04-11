@@ -87,7 +87,7 @@ public class LockedPassage : NormalPassage
 
     private IEnumerator FadeOutDoorOverlay()
     {
-        if (doorOverlay == null) yield break;
+        if (doorOverlayInstance == null) yield break;
         float duration = 1.5f;
         float elapsed = 0;
 
@@ -99,7 +99,7 @@ public class LockedPassage : NormalPassage
         }
 
         doorOverlayInstance.alpha = 0;
-        doorOverlay.gameObject.SetActive(false); // Fully invisible, deactivate object
+        doorOverlayInstance.gameObject.SetActive(false); // Fully invisible, deactivate object
         if (slidingDoor1 != null)
         {
             slidingDoor1.GetComponent<SlidingDoor>().UnlockDoor(); // Set the sliding door's unlocked bool to true

@@ -1,29 +1,56 @@
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
+using JetBrains.Annotations;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class Level2 : LevelLoader
 {
-    public GameObject normalPassagePrefab;
+    /*public GameObject normalPassagePrefab;
     public GameObject lockedPassagePrefab;
     public GameObject damagingEnvPrefab;
-    public GameObject slidingDoorPrefab;
-    public override void LoadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject slidingDoorPrefab)
+    public GameObject slidingDoorPrefab;*/
+    public GameObject movingPlatformTilePrefab;
+    public override void LoadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab)
     {
-        //NormalPassage normalPassage = NormalPassage();
-        //normalPassage.Spawn(new Vector3(287.33f, -4.88f, 0), "cavetiles_2107")
-        //terrainList.Add(new NormalPassage(new Vector3(287.33f, -4.88f, 0f), "Cavetiles_2107"));
+        var tileOffsets = new System.Collections.Generic.List<Vector2>();
+        AddRectTiles(tileOffsets, -3, 11, -4, -1);    // Base platform
+        AddRectTiles(tileOffsets, 5, 11, 0, 5);       // Raised section
+        AddRectTiles(tileOffsets, 12, 15, 1, 5);      // Top-right section
+        AddRectTiles(tileOffsets, 16, 17, 3, 5);      // Tiny end piece
 
-
-        /*CreateNormalPassage(normalPassagePrefab, "House_tileset_30", new Vector3(-107.5f, -18.700003f, 0), "IL1");
-        CreateNormalPassage(normalPassagePrefab, "House_Red_4", new Vector3(-1.5003f, 0.29983f, 0), "IL1.1");
-        CreateNormalPassage(normalPassagePrefab, "House_red_5", new Vector3(-0.5003f, 0.29983f, 0), "IL1.1");
-
-        CreateLockedPassage(lockedPassagePrefab, "cavetiles_2107", new Vector3(94.26f, 4.343f, 0));
-
-        CreateDamagingEnv(damagingEnvPrefab, "Furniture_39", new Vector3(-110.5f, -10.703f, 0));
-
-        CreateSlidingDoor(slidingDoorPrefab, "Tree_45", new Vector3(6.62f, 1.422f, 0), -2f, 1f);
-        CreateSlidingDoor(slidingDoorPrefab, "Tree_45", new Vector3(6.58f, -0.417f, 0), 2f, 1f);*/
-        CreateNormalPassage(normalPassagePrefab, "House_tileset_30", new Vector3(81.7f, -24.3f, 0), "IL1");
+        CreateCompositePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(13.465f, 0.9112f, 0f), tileOffsets, 19f, 0f, 7f);
     }
+
+    private void AddRectTiles(System.Collections.Generic.List<Vector2> list, int xMin, int xMax, int yMin, int yMax)
+    {
+        for (int x = xMin; x <= xMax; x++)
+        {
+            for (int y = yMin; y <= yMax; y++)
+            {
+                list.Add(new Vector2(x, y));
+            }
+        }
+    }
+
+
+    public GameObject CreateCompositePlatform(GameObject platformPrefab, GameObject tilePrefab, Vector3 worldPosition, System.Collections.Generic.List<Vector2> tileOffsets, float moveX, float moveY, float moveTime)
+    {
+        GameObject platform = GameObject.Instantiate(platformPrefab, worldPosition, Quaternion.identity);
+
+        MovingPlatform mp = platform.GetComponent<MovingPlatform>();
+        if (mp != null)
+        {
+            mp.SetMovementGoals(moveX, moveY, moveTime);
+        }
+
+        foreach (Vector2 offset in tileOffsets)
+        {
+            GameObject tile = GameObject.Instantiate(tilePrefab, platform.transform);
+            tile.transform.localPosition = new Vector3(offset.x, offset.y, 0);
+        }
+
+        return platform;
+    }
+
 }

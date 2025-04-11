@@ -10,10 +10,6 @@ using UnityEngine.Tilemaps;
 
 public class MovingPlatform : TerrainObjects
 {
-    /*public MovingPlatform(Vector3 pos, string sprite) : base(pos, sprite)
-    {
-        Debug.Log("moving platform initializer");
-    }*/
 
     // Positional offsets for goal
     [SerializeField] protected float pHorGoal = 0.0f;
@@ -30,6 +26,14 @@ public class MovingPlatform : TerrainObjects
     private PlatformTest _platformTest;
 
     [SerializeField] private Tilemap tilemap;
+
+    public void SetMovementGoals(float horGoal, float vertGoal, float moveTime)
+    {
+        pHorGoal = horGoal;
+        pVertGoal = vertGoal;
+        pMoveTime = moveTime;
+    }
+
 
     //This sets the initial positions for all necessary variables in the scene
     void Start()

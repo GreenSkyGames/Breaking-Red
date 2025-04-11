@@ -106,13 +106,15 @@ public class NormalPassage : TerrainObjects
     {
         switch (gameObject.tag)
         {
-            case "L1": 
+            case "L1":
+                Debug.Log("Back to Level 1");
                 return new Vector2(10.5f, -8.43f);
             case "IL1": 
                 return new Vector2(-1, -1f);
             case "IL1.1": 
                 return new Vector2(-107.66f, -17.32f);
-            case "L2": 
+            case "L2":
+                Debug.Log("Moved to Level 2");
                 return new Vector2(79.71f, -24.84f);
             case "IL2": 
                 return new Vector2(181.2f, -14.6f);
