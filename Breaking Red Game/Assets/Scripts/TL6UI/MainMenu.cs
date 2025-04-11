@@ -88,3 +88,4 @@ public class MainMenu : MonoBehaviour
         // AudioManager.instance.Play("ClickSound"); // Play sound on button click
     }
 }
+ 
