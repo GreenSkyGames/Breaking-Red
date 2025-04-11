@@ -10,23 +10,27 @@ using UnityEngine.Tilemaps;
 
 public class MovingPlatform : TerrainObjects
 {
-    private MovingPlatformData _data = new MovingPlatformData();
+    protected MovingPlatformData pData = new MovingPlatformData();
 
     public void SetMovementGoals(float horGoal, float vertGoal, float moveTime)
     {
-        _data.horGoal = horGoal;
-        _data.vertGoal = vertGoal;
-        _data.moveTime = moveTime;
+        pData.setHorGoal(horGoal);
+        pData.setVertGoal(vertGoal);
+        pData.setMoveTime(moveTime);
     }
 
 
     //This sets the initial positions for all necessary variables in the scene
     void Start()
     {
+        pData.setStartPos(transform.position);
+        Vector2 goal = new Vector2(pData.getStartPos().x + pData.getHorGoal(), pData.getStartPos().y + pData.getVertGoal());
+        pData.setGoalPos(goal);
+        pData.setPrevPos(pData.getStartPos());
         // Initialize starting position and calculate goal position
-        _data.startPos = transform.position;
-        _data.goalPos = new Vector2(_data.startPos.x + _data.horGoal, _data.startPos.y + _data.vertGoal);
-        _data.prevPos = _data.startPos;
+        //pData.startPos = transform.position;
+        //pData.goalPos = new Vector2(pData.startPos.x + pData.horGoal, pData.startPos.y + pData.vertGoal);
+        //pData.prevPos = pData.startPos;
     }
 
     /*This updates once per frame
@@ -58,22 +62,22 @@ _prevPos = currentPosition; // Update the previous position
     void Update()
     {
         // Calculate interpolation factor using Mathf.PingPong and apply SmoothStep for easing
-        float t = Mathf.PingPong(Time.time / _data.moveTime, 1.0f);
+        float t = Mathf.PingPong(Time.time / pData.getMoveTime(), 1.0f);
         float easedT = Mathf.SmoothStep(0.0f, 1.0f, t);  // Apply smoothing function to create a slower speed at the ends
 
         // Interpolate position between start and goal using the eased time
-        Vector2 currentPosition = Vector2.Lerp(_data.startPos, _data.goalPos, easedT);
+        Vector2 currentPosition = Vector2.Lerp(pData.getStartPos(), pData.getGoalPos(), easedT);
         transform.position = currentPosition;
 
         // Calculate platform velocity and apply it to the player if they're on the platform
-        Vector2 platformVelocity = (currentPosition - _data.prevPos) / Time.deltaTime;
+        Vector2 platformVelocity = (currentPosition - pData.getPrevPos()) / Time.deltaTime;
 
-        if (_data.playerRigidbody != null)
+        if (pData.getPlayerRigidbody() != null)
         {
-            _data.playerRigidbody.position += platformVelocity * Time.deltaTime;
+            pData.getPlayerRigidbody().position += platformVelocity * Time.deltaTime;
         }
 
-        _data.prevPos = currentPosition; // Update the previous position
+        pData.setPrevPos(currentPosition); // Update the previous position
     }
 
 
@@ -84,17 +88,19 @@ _prevPos = currentPosition; // Update the previous position
     {
         if (collider.CompareTag("Player"))
         {
-            _data.playerRigidbody = collider.GetComponent<Rigidbody2D>();
+            pData.setPlayerRigidbody(collider.GetComponent<Rigidbody2D>());
             /*if (tilemap != null && tilemap.gameObject.activeSelf)
             {
                 tilemap.gameObject.SetActive(false); // Hide the tilemap layer
             }*/
 
             // For Testing: Notify the test script that the player entered the platform
-            _data.platformTest = FindFirstObjectByType<PlatformTest>();
-            if (_data.platformTest != null)
+            //pData.platformTest = FindFirstObjectByType<PlatformTest>();
+            PlatformTest test = FindFirstObjectByType<PlatformTest>();
+            if (test != null)
             {
-                _data.platformTest.OnPlayerEnterPlatform();
+                pData.setPlatformTest(test);
+                test.OnPlayerEnterPlatform();
             }
         }
 
@@ -109,9 +115,9 @@ _prevPos = currentPosition; // Update the previous position
     {
         if (collider.CompareTag("Player"))
         {
-            if (collider.GetComponent<Rigidbody2D>() == _data.playerRigidbody)
+            if (collider.GetComponent<Rigidbody2D>() == pData.getPlayerRigidbody())
             {
-                _data.playerRigidbody = null;
+                pData.setPlayerRigidbody(null);
             }
             /*if (tilemap != null && !tilemap.gameObject.activeSelf)
             {
@@ -120,9 +126,9 @@ _prevPos = currentPosition; // Update the previous position
 
             //For testing:
             // Notify the test script that the player exited the platform
-            if (_data.platformTest != null)
+            if (pData.getPlatformTest() != null)
             {
-                _data.platformTest.OnPlayerExitPlatform();
+                pData.getPlatformTest().OnPlayerExitPlatform();
             }
         }
 

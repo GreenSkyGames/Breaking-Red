@@ -32,21 +32,21 @@ public class SlidingDoor : MovingPlatform
 
     public void SetMoveGoals(float horGoal, float vertGoal, float moveTime)
     {
-        pHorGoal = horGoal;
-        pVertGoal = vertGoal;
-        pMoveTime = moveTime;
+        pData.setHorGoal(horGoal);
+        pData.setVertGoal(vertGoal);
+        pData.setMoveTime(moveTime);
     }
 
 
     private System.Collections.IEnumerator MoveAndDisable()
     {
         Vector2 startPosition = transform.position;
-        Vector2 targetPosition = new Vector2(startPosition.x + pHorGoal, startPosition.y + pVertGoal);
+        Vector2 targetPosition = new Vector2(startPosition.x + pData.getHorGoal(), startPosition.y + pData.getVertGoal());
         float elapsedTime = 0f;
 
-        while (elapsedTime < pMoveTime)
+        while (elapsedTime < pData.getMoveTime())
         {
-            transform.position = Vector2.Lerp(startPosition, targetPosition, elapsedTime / pMoveTime);
+            transform.position = Vector2.Lerp(startPosition, targetPosition, elapsedTime / pData.getMoveTime());
             elapsedTime += Time.deltaTime * _speed;
             yield return null;
         }

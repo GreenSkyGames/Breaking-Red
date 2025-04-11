@@ -7,14 +7,14 @@ public abstract class LevelLoader
     {
         GameObject obj = Object.Instantiate(prefab, position, Quaternion.Euler(0f, 0f, rotationZ));
         obj.tag = tag;
-        obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
+        obj.GetComponent<TerrainObjects>().setSprite(spriteName);
     }
 
     protected void CreateLockedPassage(GameObject prefab, string spriteName, Vector3 position, GameObject door1, GameObject door2, string tag)
     {
         GameObject obj = Object.Instantiate(prefab, position, Quaternion.identity);
         obj.tag = tag;
-        obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
+        obj.GetComponent<TerrainObjects>().setSprite(spriteName);
         LockedPassage passage = obj.GetComponent<LockedPassage>();
         if (passage != null)
         {
@@ -25,13 +25,13 @@ public abstract class LevelLoader
     protected void CreateDamagingEnv(GameObject prefab, string spriteName, Vector3 position, float rotationZ = 0f)
     {
         GameObject obj = Object.Instantiate(prefab, position, Quaternion.Euler(0f, 0f, rotationZ));
-        obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
+        obj.GetComponent<TerrainObjects>().setSprite(spriteName);
     }
 
     protected GameObject CreateSlidingDoor(GameObject prefab, string spriteName, Vector3 position, float horGoal, float vertGoal, float moveTime)
     {
         GameObject obj = Object.Instantiate(prefab, position, Quaternion.identity);
-        obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
+        obj.GetComponent<TerrainObjects>().setSprite(spriteName);
         //obj.GetComponent<SlidingDoor>().Initialize(verticalGoal, moveTime);
         SlidingDoor slidingDoor = obj.GetComponent<SlidingDoor>();
         if (slidingDoor != null)
