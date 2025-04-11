@@ -15,6 +15,7 @@ using Ink.Runtime;
 */
 public class DialogueManager : MonoBehaviour
 {
+	public ClueInventory clueInventory;
 	public static DialogueManager Instance { get; private set; }
 
 	//public GameObject DialogueParent;
@@ -36,7 +37,7 @@ public class DialogueManager : MonoBehaviour
 
 	private int _currentChoiceIndex = -1;
 
-	private List<string> cluesGathered = new List<string>();
+	public List<string> cluesGathered = new List<string>();
 	public List<string> killList = new List<string>();
 
 	//On Awake, the diaogue box, the ink json file, and the inkExternal functions
@@ -263,6 +264,7 @@ public class DialogueManager : MonoBehaviour
 			cluesGathered.Add(clueTag);
 			Debug.Log("Added clue: " + clueTag);
 		}
+		clueInventory.v_getInventorySize(cluesGathered.Count);
 	}
 
     public bool checkClues()
