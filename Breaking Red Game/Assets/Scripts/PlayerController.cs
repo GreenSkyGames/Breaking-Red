@@ -17,7 +17,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public CanvasGroup fadePanel;
-    [SerializeField] private float _speed = 5;
+    public float _speed = 5.0f;
     public float scaleSpeed = 2.0f;
     public float seedHeight = 1.0f;
     public float shrunkHeight = 0f;
