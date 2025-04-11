@@ -14,7 +14,6 @@ using UnityEngine.UI;
 public class NormalPassage : TerrainObjects
 {
     public CanvasGroup fadePanel;
-    public LevelLoader levelLoader;
 
     /*public NormalPassage(Vector3 pos, string sprite) : base(pos, sprite)
     {
@@ -30,13 +29,7 @@ public class NormalPassage : TerrainObjects
         {
             AudioManager.instance.Play("DoorSound"); // Play the open door sound
 
-            string passageTag = gameObject.tag;
-
-            LevelLoader nextLevel = levelLoader.GetNextLevel(passageTag);
-            bool isSameLevel = levelLoader.LevelID == nextLevel.LevelID;
-
-            //Vector2 newPosition = getDestination();
-            Vector2 newPosition = levelLoader.GetTagPosition(passageTag);
+            Vector2 newPosition = getDestination();
             if(newPosition != Vector2.zero)
             {
                 // Log the tag to check the value
@@ -47,12 +40,6 @@ public class NormalPassage : TerrainObjects
                 {
                     rb.linearVelocity = Vector2.zero;
                     rb.constraints = RigidbodyConstraints2D.FreezeAll;
-                }
-
-                if (!isSameLevel)
-                {
-                    LevelLoader loaded = LevelManager.GetOrCreateLevel(nextLevel);
-                    levelLoader = loaded;
                 }
 
                 //other.transform.position = newPosition;
@@ -112,7 +99,7 @@ public class NormalPassage : TerrainObjects
     }
     /* This function determines where a player should go based on the tag of the passageway they make contact with
      * It returns a value back to the original OnTriggerEnter2D function from above and properly changes the scenes as necessary for some levels*/
-    /*private Vector2 getDestination()
+    private Vector2 getDestination()
     {
         switch (gameObject.tag)
         {
@@ -137,7 +124,7 @@ public class NormalPassage : TerrainObjects
             default:
                 Debug.LogWarning("No destination set for tag: " + gameObject.tag);
                 return Vector2.zero;
-        }*/
+        }
         /*switch(gameObject.tag)
         {
             case "L1":
@@ -170,6 +157,6 @@ public class NormalPassage : TerrainObjects
             default:
                 Debug.LogWarning("No destination set for tag: " + gameObject.tag);
                 return Vector2.zero;
-        }
-    }*/
+        }*/
+    }
 }

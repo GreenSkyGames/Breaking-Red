@@ -7,21 +7,16 @@ public class Level4 : LevelLoader
     public GameObject lockedPassagePrefab;
     public GameObject damagingEnvPrefab;
     public GameObject slidingDoorPrefab;
-
-    public LevelLoader GetNextLevel(string tag)
-    {
-        return this;
-    }
-    public override void LoadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject slidingDoorPrefab)
+    public override void LoadLevel(GameObject prefab)
     {
         //NormalPassage normalPassage = NormalPassage();
         //normalPassage.Spawn(new Vector3(287.33f, -4.88f, 0), "cavetiles_2107")
         //terrainList.Add(new NormalPassage(new Vector3(287.33f, -4.88f, 0f), "Cavetiles_2107"));
 
 
-        CreateNormalPassage(normalPassagePrefab, "House_tileset_30", new Vector3(-107.5f, -18.700003f, 0), "IL1");
-        CreateNormalPassage(normalPassagePrefab, "House_Red_4", new Vector3(-1.5003f, 0.29983f, 0), "IL1.1");
-        CreateNormalPassage(normalPassagePrefab, "House_red_5", new Vector3(-0.5003f, 0.29983f, 0), "IL1.1");
+        CreateNormalPassage(prefab, "House_tileset_30", new Vector3(-107.5f, -18.700003f, 0), "IL1");
+        CreateNormalPassage(prefab, "House_Red_4", new Vector3(-1.5003f, 0.29983f, 0), "IL1.1");
+        CreateNormalPassage(prefab, "House_red_5", new Vector3(-0.5003f, 0.29983f, 0), "IL1.1");
 
         CreateLockedPassage(lockedPassagePrefab, "cavetiles_2107", new Vector3(94.26f, 4.343f, 0));
 
@@ -46,7 +41,7 @@ public class Level4 : LevelLoader
         /*var passage = obj.GetComponent<LockedPassage>();
         passage.spriteName = spriteName;
         passage.SetSprite(spriteName);*/
-        obj.GetComponent <TerrainObjects>().SetSprite(spriteName);
+        obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
     }
 
     private void CreateDamagingEnv(GameObject prefab, string spriteName, Vector3 position)
@@ -57,7 +52,7 @@ public class Level4 : LevelLoader
         env.SetSprite(spriteName);*/
         obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
     }
-        
+
     private void CreateSlidingDoor(GameObject prefab, string spriteName, Vector3 position, float verticalGoal, float moveTime)
     {
         GameObject obj = Object.Instantiate(prefab, position, Quaternion.identity);
