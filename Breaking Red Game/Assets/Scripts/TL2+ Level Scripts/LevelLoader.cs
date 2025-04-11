@@ -1,18 +1,24 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Xml;
 
 public abstract class LevelLoader
 {
-    public abstract void LoadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject slidingDoorPrefab);
+    public virtual void LoadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject slidingDoorPrefab)
+    {
+        Debug.Log("Default Level Loader used");
+    }
     public virtual LevelLoader GetNextLevel(string tag)
     {
-        if(tag == "IL1.1")
+        switch (tag)
         {
-            return new Level1();
-        }
-        else
-        {
-            return new Level1();
+            case "IL1": 
+                return new Level1();
+            case "L2": 
+                return new Level2();
+            default: 
+                Debug.LogWarning("Unknown level tag: " + tag); 
+                return this;
         }
     }
 };

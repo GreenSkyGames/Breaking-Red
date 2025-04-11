@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -58,6 +60,21 @@ public class LevelManager : MonoBehaviour
     public GameObject damagingEnvPrefab;
     public GameObject slidingDoorPrefab;
 
+    private static Dictionary<string, LevelLoader> loadedLevels = new Dictionary<string, LevelLoader>();
+
+    public static LevelLoader GetOrCreateLevel(LevelLoader requestedLevel)
+    {
+        string levelID = requestedLevel.LevelID;
+        if (loadedLevels.ContainsKey(levelID))
+        {
+            return loadedLevels[levelID];
+        }
+        else
+        {
+            loadedLevels[levelID] = requestedLevel;
+            return requestedLevel;
+        }
+    }
     private void Start()
     {
         levelLoader = new Level1();

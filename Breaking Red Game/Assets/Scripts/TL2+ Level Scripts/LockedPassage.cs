@@ -14,7 +14,6 @@ public class LockedPassage : NormalPassage
         // Initialization specific to LockedPassage
     }*/
 
-    private bool wolfDead = false;
     private void Start()
     {
         if (doorOverlay != null)
