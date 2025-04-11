@@ -55,52 +55,50 @@ public class Level2 : LevelLoader
         CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(149.38f, -8.97f, 0f), I3toI4, 18f, 0f, 7f);
 
         var L2toL4 = new System.Collections.Generic.List<Vector2>();
-        AddRectTiles(L2toL4, -3, 11, -4, -1);
-        AddRectTiles(L2toL4, 5, 11, 0, 5);
-        AddRectTiles(L2toL4, 12, 15, 1, 5);
-        AddRectTiles(L2toL4, 16, 17, 3, 5);
+        AddRectTiles(L2toL4, -3, -3, 0, 2);
+        AddRectTiles(L2toL4, -2, -1, -1, 3);
+        AddRectTiles(L2toL4, 0, 2, 0, 3);
+        AddRectTiles(L2toL4, 3, 3, 1, 3);
 
-        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(149.38f, -8.97f, 0f), L2toL4, 18f, 0f, 7f);
+        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(76.113f, -45.34f, 0f), L2toL4, 0f, -10f, 4f);
 
         var I3toI4T = new System.Collections.Generic.List<Vector2>();
-        AddRectTiles(I3toI4T, -3, 11, -4, -1);
-        AddRectTiles(I3toI4T, 5, 11, 0, 5);
-        AddRectTiles(I3toI4T, 12, 15, 1, 5);
-        AddRectTiles(I3toI4T, 16, 17, 3, 5);
+        AddRectTiles(I3toI4T, -3, -1, -4, 2);
+        AddRectTiles(I3toI4T, 0, 5, -4, 0);
+        AddRectTiles(I3toI4T, 2, 5, -9, -5);
 
-        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(149.38f, -8.97f, 0f), I3toI4T, 18f, 0f, 7f);
+        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(67.113f, -3.349f, 0f), I3toI4T, 0f, -10f, 4f);
 
         var I1toI2 = new System.Collections.Generic.List<Vector2>();
-        AddRectTiles(I1toI2, -3, 11, -4, -1);
-        AddRectTiles(I1toI2, 5, 11, 0, 5);
-        AddRectTiles(I1toI2, 12, 15, 1, 5);
-        AddRectTiles(I1toI2, 16, 17, 3, 5);
+        AddRectTiles(I1toI2, -3, -2, -2, 2);
+        AddRectTiles(I1toI2, -1, 1, -4, 2);
+        AddRectTiles(I1toI2, 0, 2, 3, 4);
+        AddRectTiles(I1toI2, 2, 3, -1, 2);
 
-        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(149.38f, -8.97f, 0f), I1toI2, 18f, 0f, 7f);
+        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(-31.78f, -14.34f, 0f), I1toI2, 8f, 9f, 4f);
 
         var L2toL3 = new System.Collections.Generic.List<Vector2>();
-        AddRectTiles(L2toL3, -3, 11, -4, -1);
-        AddRectTiles(L2toL3, 5, 11, 0, 5);
-        AddRectTiles(L2toL3, 12, 15, 1, 5);
-        AddRectTiles(L2toL3, 16, 17, 3, 5);
+        AddRectTiles(L2toL3, -3, -2, -1, 3);
+        AddRectTiles(L2toL3, -1, 3, -1, 1);
 
-        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(149.38f, -8.97f, 0f), L2toL3, 18f, 0f, 7f);
+        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(90.113f, -28.34f, 0f), L2toL3, 10f, 0f, 4f);
 
         var I2toI3 = new System.Collections.Generic.List<Vector2>();
-        AddRectTiles(I2toI3, -3, 11, -4, -1);
-        AddRectTiles(I2toI3, 5, 11, 0, 5);
-        AddRectTiles(I2toI3, 12, 15, 1, 5);
-        AddRectTiles(I2toI3, 16, 17, 3, 5);
+        AddRectTiles(I2toI3, -3, -2, -2, 2);
+        AddRectTiles(I2toI3, -1, -1, -3, 2);
+        AddRectTiles(I2toI3, 0, 3, 0, 3);
 
-        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(149.38f, -8.97f, 0f), I2toI3, 18f, 0f, 7f);
+        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(-18.93f, 9.501f, 0f), I2toI3, 23f, 0f, 11f);
 
         var I1toI4 = new System.Collections.Generic.List<Vector2>();
-        AddRectTiles(I1toI4, -3, 11, -4, -1);
-        AddRectTiles(I1toI4, 5, 11, 0, 5);
-        AddRectTiles(I1toI4, 12, 15, 1, 5);
-        AddRectTiles(I1toI4, 16, 17, 3, 5);
+        AddRectTiles(I1toI4, -3, 0, -5, 3);
+        AddRectTiles(I1toI4, -1, 10, 4, 5);
+        AddRectTiles(I1toI4, 1, 10, -2, 3);
+        AddRectTiles(I1toI4, 4, 7, 6, 8);
+        AddRectTiles(I1toI4, 6, 10, -4, -3);
+        AddRectTiles(I1toI4, 11, 12, -3, 5);
 
-        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(149.38f, -8.97f, 0f), I1toI4, 18f, 0f, 7f);
+        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(-17.88f, -34.34f, 0f), I1toI4, 60f, 0f, 20f);
 
     }
 
