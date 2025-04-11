@@ -15,7 +15,6 @@ public class PowerUpManager : MonoBehaviour
 {
     public GameObject choicePrompt;  // Use Now or Store for Later UI
     public Image[] inventorySlots;
-    public TextMeshProUGUI messageText;
     public CanvasGroup healthMessageGroup;
     public CanvasGroup inventoryFullGroup;
 
@@ -36,23 +35,6 @@ public class PowerUpManager : MonoBehaviour
                 return;
             }
         }
-        // Attempt to find HealthMessage text and canvas group
-        if (healthMessageGroup == null)
-        {
-            GameObject group = GameObject.Find("HealthMessagePanel");
-            if (group != null)
-                healthMessageGroup = group.GetComponent<CanvasGroup>();
-        }
-
-        if (messageText == null)
-        {
-            GameObject msg = GameObject.Find("HealthMessageText");
-            if (msg != null)
-                messageText = msg.GetComponent<TextMeshProUGUI>();
-        }
-
-        if (healthMessageGroup == null || messageText == null)
-            Debug.LogWarning("Health message UI elements not found in scene!");
     }
 
     // Recursive function to find by name (even inactive)
@@ -139,8 +121,7 @@ public class PowerUpManager : MonoBehaviour
                 {
                     if (_playerHealth != null && _playerHealth.currentHealth >= _playerHealth.maxHealth)
                     {
-                        ShowHealthWarning("Your health is already full!");
-                        break;
+                        StartCoroutine(showHealthMessage());
                     }
 
                     AudioManager.instance.Play("PowerUpSound");
@@ -200,16 +181,12 @@ public class PowerUpManager : MonoBehaviour
         StartCoroutine(AudioManager.instance.RestoreAudioStates()); // Restore all audio sources
         choicePrompt.SetActive(false);
     }
-    private void ShowHealthWarning(string message)
-    {
-        if (messageText != null) messageText.text = message;
-        if (healthMessageGroup != null)
-            StartCoroutine(ShowHealthMessage());
-    }
-    private IEnumerator ShowHealthMessage()
+
+    private IEnumerator showHealthMessage()
     {
         Debug.Log("Turning on message");
         healthMessageGroup.alpha = 1f;
+        healthMessageGroup.blocksRaycasts = true;
         yield return new WaitForSecondsRealtime(1.5f);
         healthMessageGroup.alpha = 0f;
         Time.timeScale = 1;
@@ -221,10 +198,10 @@ public class PowerUpManager : MonoBehaviour
     {
         if (inventoryFullGroup != null)
         {
-            inventoryFullGroup.alpha = 1;
+            inventoryFullGroup.alpha = 1f;
             inventoryFullGroup.blocksRaycasts = true;
             yield return new WaitForSeconds(2f);  // How long to show message
-            inventoryFullGroup.alpha = 0;
+            inventoryFullGroup.alpha = 0f;
             inventoryFullGroup.blocksRaycasts = false;
         }
     }
