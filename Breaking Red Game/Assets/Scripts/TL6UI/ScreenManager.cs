@@ -20,6 +20,7 @@ public class UIScreenManager : MonoBehaviour
     public void LoadMenu()
     {
         Debug.Log("Loading menu.");
+        AudioManager.instance.Play("ClickSound"); // Play sound on button click
         SceneManager.LoadScene(0); //start menu at build profile 0 
     } 
 
@@ -36,7 +37,8 @@ public class UIScreenManager : MonoBehaviour
     public void Restart()
     {
         //Figure out logistics later 
-        Debug.Log("Will restart at beginning of level you died at. TBD"); 
+        Debug.Log("Will restart at beginning of level you died at. TBD");
+        AudioManager.instance.Play("ClickSound"); // Play sound on button click
     }
 
 }

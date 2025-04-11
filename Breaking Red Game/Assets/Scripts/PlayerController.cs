@@ -17,7 +17,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public CanvasGroup fadePanel;
-    public float _speed = 5.0f;
+    public float speed = 5.0f;
     public float scaleSpeed = 2.0f;
     public float seedHeight = 1.0f;
     public float shrunkHeight = 0f;
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("horizontal", Mathf.Abs(horizontal));
         anim.SetFloat("vertical", Mathf.Abs(vertical));
 
-        rb.linearVelocity = new Vector2(horizontal, vertical) * _speed;
+        rb.linearVelocity = new Vector2(horizontal, vertical) * speed;
 
         // Check if the player is moving and play footstep sound
         if (horizontal != 0 || vertical != 0)
@@ -173,11 +173,10 @@ public class PlayerController : MonoBehaviour
         {
             isOnPlatform = false;
             Debug.Log("Player is no longer on the platform");
-
             // Check if player is now on the boundary layer after stepping off the platform
             if (isOnBoundary && !justTeleported && !grounded)
             {
-                Debug.Log("justTeleportedexit: " + justTeleported);
+                Debug.Log("onBoundary: " + isOnBoundary + " teleported: " + justTeleported + " grounded: " + grounded + " platform: " + isOnPlatform);
                 scales();
             }
         }

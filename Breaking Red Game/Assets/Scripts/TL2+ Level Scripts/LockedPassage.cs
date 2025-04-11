@@ -5,20 +5,50 @@ using UnityEngine.UI;
 public class LockedPassage : NormalPassage
 {
     [SerializeField] private bool isUnlocked = false; // Determines if the passageway is accessible
-    [SerializeField] private CanvasGroup doorOverlay; // Blocks visibility until unlocked
-    [SerializeField] private SlidingDoor slidingDoor; // Reference to the SlidingDoor script
-    [SerializeField] private SlidingDoor slidingDoor2; // Reference to the SlidingDoor script
+    [SerializeField] private GameObject doorOverlay; // Blocks visibility until unlocked
+    //[SerializeField] private SlidingDoor slidingDoor; // Reference to the SlidingDoor script
+    //[SerializeField] private SlidingDoor slidingDoor2; // Reference to the SlidingDoor script
 
+    private CanvasGroup doorOverlayInstance;
+    private GameObject slidingDoor1;
+    private GameObject slidingDoor2;
     /*public LockedPassage(Vector3 pos, string sprite) : base(pos, sprite)
     {
         // Initialization specific to LockedPassage
     }*/
 
+    public void AssignSlidingDoors(GameObject door1, GameObject door2)
+    {
+        slidingDoor1 = door1;
+        slidingDoor2 = door2;
+    }
+
     private void Start()
     {
+        /*if (doorOverlay != null)
+        {
+            doorOverlay.gameObject.SetActive(true);
+            doorOverlay.alpha = 1; // Fully visible (blocking passageway)
+        }*/
         if (doorOverlay != null)
         {
-            doorOverlay.alpha = 1; // Fully visible (blocking passageway)
+            GameObject overlay = Instantiate(doorOverlay, transform); // Parent it to this object
+            doorOverlayInstance = overlay.GetComponent<CanvasGroup>();
+
+            if (doorOverlayInstance != null)
+            {
+                doorOverlayInstance.alpha = 1f;
+                overlay.SetActive(true);
+                Debug.Log("Door overlay instantiated and visible.");
+            }
+            else
+            {
+                Debug.LogWarning("Instantiated doorOverlay is missing CanvasGroup!");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("doorOverlayPrefab is not assigned!");
         }
     }
 
@@ -57,26 +87,26 @@ public class LockedPassage : NormalPassage
 
     private IEnumerator FadeOutDoorOverlay()
     {
-        if (doorOverlay == null) yield break;
+        if (doorOverlayInstance == null) yield break;
         float duration = 1.5f;
         float elapsed = 0;
 
         while (elapsed < duration)
         {
-            doorOverlay.alpha = Mathf.Lerp(1, 0, elapsed / duration);
+            doorOverlayInstance.alpha = Mathf.Lerp(1, 0, elapsed / duration);
             elapsed += Time.deltaTime;
             yield return null;
         }
 
-        doorOverlay.alpha = 0;
-        doorOverlay.gameObject.SetActive(false); // Fully invisible, deactivate object
-        if (slidingDoor != null)
+        doorOverlayInstance.alpha = 0;
+        doorOverlayInstance.gameObject.SetActive(false); // Fully invisible, deactivate object
+        if (slidingDoor1 != null)
         {
-            slidingDoor.UnlockDoor(); // Set the sliding door's unlocked bool to true
+            slidingDoor1.GetComponent<SlidingDoor>().UnlockDoor(); // Set the sliding door's unlocked bool to true
         }
         if (slidingDoor2 != null)
         {
-            slidingDoor2.UnlockDoor(); // Set the sliding door's unlocked bool to true
+            slidingDoor2.GetComponent<SlidingDoor>().UnlockDoor(); // Set the sliding door's unlocked bool to true
         }
     }
 

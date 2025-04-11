@@ -12,7 +12,9 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public int effectAmount;
+    public int maxInventorySize;
     public GameObject inventoryMenu;
+    public ClueInventory clueInventory;
     public ItemSlot[] itemSlot;
     public static InventoryManager sInstance;
     public ItemSlot selectedSlot;
@@ -21,6 +23,13 @@ public class InventoryManager : MonoBehaviour
 
     private bool _menuActivated;
     private PlayerController playerController;
+    private DialogueManager dialogueManager;
+
+    void Start()
+    {
+        int cluesGathered = FindObjectOfType<DialogueManager>().cluesGathered.Count;
+        int maxInventorySize = clueInventory.v_getInventorySize(cluesGathered);
+    }
 
     /* This function updates the scene by toggling the inventory if the player clicks I
      *	It only uses the function toggleInventory() */
@@ -71,17 +80,21 @@ public class InventoryManager : MonoBehaviour
      * It looks at the item slots I created in UI b/c I attached them in Inspector
      * Checks if there is an unoccupied slot and if not, put the item in
      * Uses isOccupied bool and updateInventoryUI() from ItemSlot script */
-    public void addToInventory(string itemName, Sprite itemSprite, string itemDescription)
+    public bool addToInventory(string itemName, Sprite itemSprite, string itemDescription)
     {
-        for (int i = 0; i < itemSlot.Length; i++)
+        if (itemSlot.Length <= maxInventorySize)
         {
-            if(itemSlot[i] != null && itemSlot[i].isOccupied == false)
+            for (int i = 0; i < itemSlot.Length; i++)
             {
-                itemSlot[i].updateInventoryUI(itemName, itemSprite, itemDescription);
-                return;
+                if(itemSlot[i] != null && itemSlot[i].isOccupied == false)
+                {
+                    itemSlot[i].updateInventoryUI(itemName, itemSprite, itemDescription);
+                    return true;
+                }
             }
         }
         Debug.Log("Inventory is full or slot invalid!");
+        return false;
     }
 
     /* This function loops through each slot in inventory and counts occupied ones 
@@ -195,11 +208,14 @@ public class InventoryManager : MonoBehaviour
                 break;
             case "BerserkerBrew":
                 Debug.Log("Applying Berserker Brew effect");
-                //playerController.attackPower += effectAmount;
+                playerController.attackDamage += 1;
                 break;
             case "EnchantedBerry":
                 Debug.Log("Applying Enchanted Berry effect");
                 //playerController.sanity += effectAmount;
+                break;
+            case "RedShoes":
+                playerController.speed += 2.0f;
                 break;
             default:
                 Debug.LogWarning("Unknown power-up: " + itemName);

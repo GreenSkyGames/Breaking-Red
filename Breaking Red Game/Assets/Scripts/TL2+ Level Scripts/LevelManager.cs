@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -55,13 +56,64 @@ public class LevelManager : MonoBehaviour
     public GameObject player;
     public GameObject normalPassagePrefab;
     public GameObject lockedPassagePrefab;
-    public GameObject damaingEnvPrefab;
+    public GameObject damagingEnvPrefab;
+    public GameObject movingPlatformPrefab;
+    public GameObject movingPlatformTilePrefab;
     public GameObject slidingDoorPrefab;
+    private Dictionary<string, bool> loadedLevels = new Dictionary<string, bool>();
+    public static LevelManager Instance
+    {
+        get;
+        private set;
+    }
 
+    private void Awake()
+    {
+        if(Instance != null && Instance != this)
+        {
+            Destroy(this);
+            return;
+        }
+        Instance = this;
+    }
     private void Start()
     {
-        levelLoader = new Level1();
-        levelLoader.LoadLevel(normalPassagePrefab);
+        LoadLevel("L1");
+        //levelLoader = new Level1();
+        //levelLoader.LoadLevel(normalPassagePrefab, lockedPassagePrefab, damagingEnvPrefab, movingPlatformPrefab, slidingDoorPrefab);
         //InitializeLevel();
+    }
+
+    public void TryLoadLevelFromTag(string tag)
+    {
+        if (!loadedLevels.ContainsKey(tag) || !loadedLevels[tag])
+        {
+            Debug.Log("Loading " + tag);
+            LoadLevel(tag);
+        }
+    }
+
+    private void LoadLevel(string levelTag)
+    {
+        LevelLoader levelLoader = null;
+        switch (levelTag)
+        {
+            case "L1":
+                levelLoader = new Level1();
+                break;
+            case "L2":
+                Debug.Log("Successfully Loaded Level 2");
+                levelLoader = new Level2();
+                break;
+        }
+        if (levelLoader != null)
+        {
+            levelLoader.LoadLevel(normalPassagePrefab, lockedPassagePrefab, damagingEnvPrefab, movingPlatformPrefab, movingPlatformTilePrefab, slidingDoorPrefab);
+            loadedLevels[levelTag] = true;
+        }
+        else
+        {
+            Debug.LogWarning($"No loader defined for leveltag: {levelTag}");
+        }
     }
 }

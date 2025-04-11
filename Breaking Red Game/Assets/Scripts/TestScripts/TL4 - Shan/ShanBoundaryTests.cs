@@ -58,8 +58,8 @@ public class ShanBoundaryTests : MonoBehaviour
         // Test 2: Check health overflow
         Debug.Log("Running Health Overflow Test");
 
-        // set the player's health to 3 (max health)
-        playerHealth.changeHealth(3);
+        // set the player's health to 100 (max health)
+        playerHealth.changeHealth(100);
 
         // apply golden apple (increases health)
         PowerUp goldenApple = new GameObject("GoldenApple").AddComponent<PowerUp>(); // dynamically create PowerUp instance

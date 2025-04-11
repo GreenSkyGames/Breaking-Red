@@ -4,6 +4,7 @@
  * Role: Team Lead 6 --Version Control Manager
  *	This is the script for the Pause Menu, which defines the following behaviors:
  *  Resume, Save game, main menu, and quit game
+ * in this script I will be utilizing the facade pattern and singleton pattern. 
 */ 
 
 using UnityEngine;
@@ -16,28 +17,47 @@ using System.Collections.Generic;
 
 public class PauseGameMenu : MonoBehaviour
 {  
-    public static bool IsPaused = false; 
+    public static bool IsPaused = false; //indicate whether game is paused or not 
     public GameObject PauseMenu; // pause menu object to be connected with script 
     private List<AudioSource> allAudioSources = new List<AudioSource>(); // To store all active AudioSources
     private List<bool> audioSourceStates = new List<bool>(); // To store the state, play or pause
     private bool _menuActivated; //inventory manager being activated? 
     public GameObject inventoryMenu; //inventory manager object 
-    
-// Pause menu called => in view, Pause menu uncalled=> not in view 
+    public static PauseGameMenu instance; 
+    private GameUIFacade facade; 
+    public Button inventoryButton; 
+
+    // Pause menu called => in view, Pause menu uncalled=> not in view 
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "PauseMenu")
-        {
-            PauseMenu.SetActive(true);  // Show menu in PauseMenu scene
-        }
-        else
-        {
-            PauseMenu.SetActive(false); // Hide menu in other scenes
-        }
+        // facade = new GameUIFacade(); 
+        //initializing pause menu state 
+        PauseMenu.SetActive(false); 
+        IsPaused = false; 
+        Time.timeScale = 1f; //ensure time is running on scene start
         //LoadGame(); COMMENTED OUT FOR GAME TESTING PURPOSES
+
+        if (inventoryButton != null)
+        {
+            inventoryButton.onClick.AddListener(ViewInventory);
+        } 
     }
 
-// How pause menu called, p pressed to either call pause menu or remove it from the screen 
+    // Singleton Pattern 
+    // https://refactoring.guru/design-patterns/singleton 
+    void Awake()
+    {
+        if (instance != null && instance !=this)
+        {
+            Destroy(gameObject); // prevent duplicates 
+            return; 
+        }
+
+        instance = this; 
+        DontDestroyOnLoad(gameObject); 
+    }
+
+    // How pause menu called, p pressed to either call pause menu or remove it from the screen 
     void Update()
     {
         //Toggle pause state when 'P' is pressed
@@ -65,12 +85,10 @@ public class PauseGameMenu : MonoBehaviour
 
         // Play the button click
         AudioManager.instance.Play("ClickSound");
-
+        // facade.PlayClickSound(); 
         // Restore all audio sources
         StartCoroutine(AudioManager.instance.RestoreAudioStates());
-
-
-        //SceneManager.LoadScene("Level 1");
+        // SceneManager.LoadScene("Level 1");
     }
 
     //Function to pause the game
@@ -83,6 +101,7 @@ public class PauseGameMenu : MonoBehaviour
 
         // Play the button click
         AudioManager.instance.Play("ClickSound");
+        // facade.PlayClickSound(); 
 
         // Pause all audio sources and save their states
         StartCoroutine(AudioManager.instance.PauseAllAudioSources());
@@ -93,6 +112,7 @@ public class PauseGameMenu : MonoBehaviour
     {
         // Play the button click sound
         AudioManager.instance.Play("ClickSound");
+        // facade.PlayClickSound(); 
 
         // Assume that you're saving player's position
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -142,13 +162,19 @@ public class PauseGameMenu : MonoBehaviour
     //Loads the menu screen when the load menu button is clicked
     public void LoadMenu()
     {
-        PauseMenu.SetActive(false); //removing the pause menu from the background
+        //reset pause state before loading menu 
+        Time.timeScale = 1f; 
+        IsPaused = false; 
+
+        // PauseMenu.SetActive(false); //removing the pause menu from the background
         // Play the button click
         AudioManager.instance.Play("ClickSound");
+        // facade.PlayClickSound(); 
         AudioManager.instance.Play("MenuBGM");
 
         Debug.Log("Loading menu.");
         SceneManager.LoadScene("StartMenu");
+        // facade.LoadScene("StartMenu"); 
     }
 
     //Quits the game when the player presses to quit the game
@@ -156,10 +182,12 @@ public class PauseGameMenu : MonoBehaviour
     {
         // Play the button click
         AudioManager.instance.Play("ClickSound");
+        // facade.PlayClickSound(); 
 
         Debug.Log("Quitting game."); 
         Application.Quit();//quitting the game 
         UnityEditor.EditorApplication.isPlaying = false;
+        // facade.QuitApp(); 
     }
 
 // player can view inventory from pause menu 
@@ -168,18 +196,13 @@ public class PauseGameMenu : MonoBehaviour
         // Play the button click
         AudioManager.instance.Play("ClickSound");
         Debug.Log("Viewing inventory..."); 
-        if (_menuActivated) // if I clicked when menu is on, turn it off
-        {
-            Time.timeScale = 1;
-            inventoryMenu.SetActive(false);
-            _menuActivated = false;
-        }
-        else if(!_menuActivated) // if I clicked when menu is off, turn it on
-        {
-            Time.timeScale = 0;
-            inventoryMenu.SetActive(true);
-            _menuActivated = true;
-        }
+
+        _menuActivated = !_menuActivated;
+        Time.timeScale = _menuActivated ? 0 : 1;
+
+        inventoryMenu.SetActive(_menuActivated);
+        PauseMenu.SetActive(!_menuActivated); //taking down pause menu when inventory pulled up. 
     }
 
 }
+ 

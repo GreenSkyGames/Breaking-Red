@@ -2,8 +2,9 @@
 
 /* Name: Liz Beltran 
  * Role: Team Lead 6 --Version Control Manager
- *	This is the script for the --- .
- *
+ *	This is the script for BC Mode. This script focuses on the
+ * BC Mode option being saved and remembered for the rest of the game 
+ * and also to minimize player damage in the game. 
 */
 
 using System.Runtime.CompilerServices;
@@ -12,46 +13,105 @@ using UnityEngine.UI;
 
 public class BCMODE : MonoBehaviour
 {
- [SerializeField] private Toggle _toggle;
- private static BCMODE _instance; 
+    [SerializeField] private Toggle _toggle;
+    private static BCMODE _instance; 
+    public static BCMODE Instance => _instance; 
+    private ModeBehavior _behavior; 
 
- void Awake()
- {
-    if(_instance == null){
-        _instance = this; 
-        DontDestroyOnLoad(_toggle); //prevent from being destroyed when scenes swtich 
-    }else{
-        Destroy(_toggle); //only one instance exists
-    }
- }
-
- void Start()
- {
-    if(_toggle == null)
+    void Awake()
     {
-        _toggle = GetComponent<Toggle>();
-        if(_toggle == null)
-        {
-            Debug.LogError("Toggle component not found");
+        if(_instance == null){
+            _instance = this; 
+            DontDestroyOnLoad(_toggle); //prevent from being destroyed when scenes swtich 
+        }else{
+            Destroy(_toggle); //only one instance exists
         }
     }
 
-    bool savedState = PlayerPrefs.GetInt("BCMode", 0) == 1;
+    void Start()
+    {
+        if(_toggle == null)
+        {
+            _toggle = GetComponent<Toggle>();
+            if(_toggle == null)
+            {
+                Debug.LogError("Toggle component not found");
+            }
+        }
 
-    _toggle.isOn = savedState;
+        bool savedState = PlayerPrefs.GetInt("BCMode", 0) == 1;
 
-    _toggle.onValueChanged.AddListener(OnToggleValueChanged);
- }
+        _toggle.isOn = savedState;
+        _toggle.onValueChanged.AddListener(OnToggleValueChanged); 
 
-// When the BC togglge is enabled, making sure that the choice is saved for the rest of the game 
- public void OnToggleValueChanged(bool isON)
- {
-    // Play the button click
-    AudioManager.instance.Play("ClickSound");
+        //setting initial behavior 
+        _behavior = _toggle.isOn ? new BCModeBehavior() : new ModeBehavior(); 
 
-    PlayerPrefs.SetInt("BCMode", isON ? 1 : 0);
-    PlayerPrefs.Save();
-    Debug.Log($"BC Mode toggled: {(isON ? "ON" : "Off")}"); 
- }
+        RunBehavior(); // both bindings used here, when the screen is first initialized 
+
+        //Oral Exam 
+        Debug.Log("----------Experimenting for ORAL EXAM------------"); 
+        //1. Dynamically bound method 
+        ModeBehavior behavior = new BCModeBehavior(); 
+        behavior.Execute(); 
+
+        //2. dynamic type 
+        ModeBehavior behavior1 = new ModeBehavior(); 
+        behavior1.Execute(); 
+
+        //3. static bound method 
+        ModeBehavior behavior2 = new ModeBehavior(); 
+        behavior.Describe("Awesome");
+    }
+
+    // When the BC togglge is enabled, making sure that the choice is saved for the rest of the game 
+    public void OnToggleValueChanged(bool isON)
+    {
+        // Play the button click
+        AudioManager.instance.Play("ClickSound");
+
+        PlayerPrefs.SetInt("BCMode", isON ? 1 : 0);
+        PlayerPrefs.Save();
+
+        //switching bahavior using dynamic binding 
+        _behavior = isON? new BCModeBehavior() : new ModeBehavior(); 
+        Debug.Log($"BC Mode toggled: {(isON ? "ON" : "Off")}"); 
+
+        RunBehavior(); //both methods used here, when toggle is changed 
+    }
+
+    //static and dynamic binding in use 
+    void RunBehavior()
+    {
+        Debug.Log("RunBehavior() was called"); 
+
+        Debug.Log("DYNAMIC Execute was called"); 
+        _behavior.Execute(); //dynamic
+
+        Debug.Log("STATIC Describe Was called"); 
+        _behavior.Describe("Static Binding used here."); //static  
+
+    }
+
+    public class ModeBehavior
+    {
+        public virtual void Execute() //dynamic 
+        {
+            Debug.Log("Default BC Mode Behavior");
+        } 
+
+        public void Describe(string description) //static 
+        {
+            Debug.Log("Description: " + description ); 
+        }
+    }
+
+    public class BCModeBehavior: ModeBehavior
+    {
+        public override void Execute() //this is supposed to be dynamic 
+        {
+            Debug.Log("Executing BC Mode ... Specific Behavior"); 
+        }
+    }
 }
 

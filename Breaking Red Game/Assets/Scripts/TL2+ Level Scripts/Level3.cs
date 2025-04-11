@@ -1,5 +1,8 @@
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
+using JetBrains.Annotations;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class Level3 : LevelLoader
 {
@@ -7,64 +10,42 @@ public class Level3 : LevelLoader
     public GameObject lockedPassagePrefab;
     public GameObject damagingEnvPrefab;
     public GameObject slidingDoorPrefab;
-    public override void LoadLevel(GameObject prefab)
+    public GameObject movingPlatformTilePrefab;
+    public override void LoadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab)
     {
-        //NormalPassage normalPassage = NormalPassage();
-        //normalPassage.Spawn(new Vector3(287.33f, -4.88f, 0), "cavetiles_2107")
-        //terrainList.Add(new NormalPassage(new Vector3(287.33f, -4.88f, 0f), "Cavetiles_2107"));
+        //CreateNormalPassage(normalPassagePrefab, "House_tileset_30", new Vector2(-0.83f, -3.14f), "L2");
+        //GameObject door1 = CreateSlidingDoor(slidingDoorPrefab, "Tree_45", new Vector3(9.3881f, -7.380007f, 0), 0, 2f, 1f);
+        //GameObject door2 = CreateSlidingDoor(slidingDoorPrefab, "Tree_45", new Vector3(9.3881f, -9.220007f, 0), 0, -2f, 1f);
+        //CreateLockedPassage(lockedPassagePrefab, "cavetiles_2107", new Vector3(11.4997f, -8.70017f, 0), door1, door2, "L2");
+        //CreateDamagingEnv(damagingEnvPrefab, "Furniture_39", new Vector3(-110.5f, -10.703f, 0));
+        CreateNormalPassage(normalPassagePrefab, "", new Vector2(283.3861f, 0.01999998f), "L2");
+        CreateNormalPassage(normalPassagePrefab, "", new Vector2(283.386f, -1f), "L3");
+        CreateNormalPassage(normalPassagePrefab, "", new Vector2(277.1261f, -25.92f), "L4");
+        CreateNormalPassage(normalPassagePrefab, "", new Vector2(277.1261f, -26.92f), "L4");
+        CreateNormalPassage(normalPassagePrefab, "cavetiles_2107", new Vector2(364.266f, 13.3f), "S2");
+
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(346.4f, -7.74f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(346.4f, -7.23f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(346.4f, -6.72f, 0));
+        var L3toL2 = new System.Collections.Generic.List<Vector2>();
+        AddRectTiles(L3toL2, -3, -2, -1, 3);
+        AddRectTiles(L3toL2, -1, 3, -1, 1);
+
+        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(283.3561f, 0.2499995f, 0f), L3toL2, 7f, 0f, 4f);
+
+        var I2toI3 = new System.Collections.Generic.List<Vector2>();
+        AddRectTiles(I2toI3, -3, 3, 0, 1);
+        AddRectTiles(I2toI3, 0, 3, -2, -1);
+
+        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(302.3161f, -29.73f, 0f), I2toI3, 8f, 0f, 4f);
+
+        var L3toL4 = new System.Collections.Generic.List<Vector2>();
+        AddRectTiles(L3toL4, -3, 0 , -1, 2);
+        AddRectTiles(L3toL4, -3, -2, 3, 4);
+
+        CreatePlatform(movingPlatformPrefab, movingPlatformTilePrefab, new Vector3(285.3361f, -26.723f, 0f), L3toL4, -7f, 0f, 3f);
+}
 
 
-        CreateNormalPassage(prefab, "House_tileset_30", new Vector3(-107.5f, -18.700003f, 0), "IL1");
-        CreateNormalPassage(prefab, "House_Red_4", new Vector3(-1.5003f, 0.29983f, 0), "IL1.1");
-        CreateNormalPassage(prefab, "House_red_5", new Vector3(-0.5003f, 0.29983f, 0), "IL1.1");
 
-        CreateLockedPassage(lockedPassagePrefab, "cavetiles_2107", new Vector3(94.26f, 4.343f, 0));
-
-        CreateDamagingEnv(damagingEnvPrefab, "Furniture_39", new Vector3(-110.5f, -10.703f, 0));
-
-        CreateSlidingDoor(slidingDoorPrefab, "Tree_45", new Vector3(6.62f, 1.422f, 0), -2f, 1f);
-        CreateSlidingDoor(slidingDoorPrefab, "Tree_45", new Vector3(6.58f, -0.417f, 0), 2f, 1f);
-    }
-    private void CreateNormalPassage(GameObject prefab, string spriteName, Vector3 position, string tag)
-    {
-        GameObject obj = GameObject.Instantiate(prefab, position, Quaternion.identity);
-        /*var passage = obj.GetComponent<NormalPassage>();
-        passage.spriteName = spriteName;
-        passage.SetSprite(spriteName);*/
-        obj.tag = tag;
-        obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
-    }
-
-    private void CreateLockedPassage(GameObject prefab, string spriteName, Vector3 position)
-    {
-        GameObject obj = Object.Instantiate(prefab, position, Quaternion.identity);
-        /*var passage = obj.GetComponent<LockedPassage>();
-        passage.spriteName = spriteName;
-        passage.SetSprite(spriteName);*/
-        obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
-    }
-
-    private void CreateDamagingEnv(GameObject prefab, string spriteName, Vector3 position)
-    {
-        GameObject obj = Object.Instantiate(prefab, position, Quaternion.identity);
-        /*var env = obj.GetComponent<DamagingEnv>();
-        env.spriteName = spriteName;
-        env.SetSprite(spriteName);*/
-        obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
-    }
-
-    private void CreateSlidingDoor(GameObject prefab, string spriteName, Vector3 position, float verticalGoal, float moveTime)
-    {
-        GameObject obj = Object.Instantiate(prefab, position, Quaternion.identity);
-        /*var door = obj.GetComponent<SlidingDoor>();
-        door.spriteName = spriteName;
-        door.SetSprite(spriteName);*/
-        obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
-        //obj.GetComponent<SlidingDoor>().Initialize(verticalGoal, moveTime);
-
-        /* Vector3 goal = new Vector3(position.x, position.y + verticalGoal, position.z);
-        door.startPosition = position;
-        door.endPosition = goal;
-        door.speed = Mathf.Abs(verticalGoal / moveTime);*/
-    }
 }

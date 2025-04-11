@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2014968903321024682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2023838142385224001}
+  m_Layer: 0
+  m_Name: BackgroundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2023838142385224001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014968903321024682}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 88.07462, y: 126.75382, z: -1.1326844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2617569839262238684}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8666072439473113202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2617569839262238684}
+  - component: {fileID: 2597320751687261981}
+  m_Layer: 0
+  m_Name: KilledSceneTransitionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2617569839262238684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666072439473113202}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 740.0769, y: 409.37192, z: -0.14982176}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2023838142385224001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2597320751687261981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666072439473113202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb800d1a485fb844bd5388c92b11a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneImages:
+  - {fileID: -855298285791758126, guid: a38bf506e9c4f2544a72fb0e6ed05550, type: 3}
+  - {fileID: -855298285791758126, guid: a38bf506e9c4f2544a72fb0e6ed05550, type: 3}
+  - {fileID: 6937817954938267909, guid: 437cf00caf759d445a8dc0ea40291321, type: 3}
+  - {fileID: -6470460504253458178, guid: 2b32553a5a3b0b24fb36fafd45fbc9fc, type: 3}
+  - {fileID: -4178046375966092550, guid: a88ebdd9ce3ac474db5f14f7646af382, type: 3}
+  - {fileID: 4130640169021434097, guid: 47f0a9b372dc42440b8a222990655005, type: 3}
+  - {fileID: 3465286685962602723, guid: c1ce5a0de08190c4e844fb5457fcfdf2, type: 3}
+  - {fileID: 7028616704906629411, guid: ffbc04fc270091f4586ba8609fd6a186, type: 3}
+  sceneImage: {fileID: 0}

@@ -549,7 +549,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1169710120}
+        m_TargetAssemblyTypeName: BCMODE, Assembly-CSharp
+        m_MethodName: OnToggleValueChanged
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &519420028
 GameObject:
@@ -1282,7 +1294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e63bc1687fc44709517aae86db3cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _toggle: {fileID: 413776455}
+  _toggle: {fileID: 0}
 --- !u!114 &1169710121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,236 +1305,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a5880e1a39ff4ef3a757b26e38a975f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  QuitButton: {fileID: 1727121393}
-  StartButton: {fileID: 296529776}
---- !u!1 &1369328471
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1369328473}
-  - component: {fileID: 1369328472}
-  - component: {fileID: 1369328474}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1369328472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369328471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c65513ef6b32094fbf400708ede1dbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioTypes:
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 5a19ca0207eb07346a64ade6023fe3b1, type: 3}
-    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: MenuBGM
-    Volume: 0.1
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 01b0e0369b9d548bdb5bf561d71e5eb5, type: 3}
-    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: CabinBGM
-    Volume: 0.1
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: de1945b6e693c464ca22565af47171c6, type: 3}
-    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: L1BGM
-    Volume: 0.1
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 5d1f1f52ce078494588ef5d6408dc298, type: 3}
-    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: L2BGM
-    Volume: 0.1
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 27392ddbb9f7fe8428c09ea2f1c238d2, type: 3}
-    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: L3BGM
-    Volume: 0.05
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 25b3cb67fec663e4a89ae9b3181cb13b, type: 3}
-    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: L4BGM
-    Volume: 0.05
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: e781ea34af79d7843a6c39f44ec3feeb, type: 3}
-    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: L5BGM
-    Volume: 0.1
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 1728c429aebdf412ab76d617e40d8845, type: 3}
-    Group: {fileID: -7956535215782314095, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: VictorySound
-    Volume: 0.1
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: adec86daeff9c914ebcad89840070648, type: 3}
-    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: WolfSound
-    Volume: 0.4
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 17e0cf03063fa0b4cb4e96d6b787547a, type: 3}
-    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: BatSound
-    Volume: 0.5
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: b12cfdbd548160a4885adf36d2eb1eaa, type: 3}
-    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: LightingSound
-    Volume: 1
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 27392ddbb9f7fe8428c09ea2f1c238d2, type: 3}
-    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: JungleSound
-    Volume: 0.4
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: e470a07023367354fbfd9030367d50ab, type: 3}
-    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: FrogSound
-    Volume: 0.4
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: a6c623c3ca85e644b80fba553b48b9fb, type: 3}
-    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: WindSound
-    Volume: 1
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 8d97fd5d1ab1a414f85bf0d270312403, type: 3}
-    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: FireSound
-    Volume: 0.6
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 314fe71168cacfb45a079c97c2748b0f, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: AttackSound
-    Volume: 0.1
-    Pitch: 1
-    Loop: 0
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: f0304227573024abb878a0435f77db98, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: PowerUpSound
-    Volume: 0.4
-    Pitch: 1
-    Loop: 0
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: ddbf2d5a074b23241badf0d07173cc9a, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: ClickSound
-    Volume: 0.4
-    Pitch: 1
-    Loop: 0
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 4a0d04ae017589c45a785134a254ecf4, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: FootstepSound
-    Volume: 0.6
-    Pitch: 1
-    Loop: 1
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: b1334dbf63b8b12469d492e285f8003d, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: DoorSound
-    Volume: 0.6
-    Pitch: 1
-    Loop: 0
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 58cd3443f865c3e4cb49d2cdbd8c1a90, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: PassagewaySound
-    Volume: 0.6
-    Pitch: 1
-    Loop: 0
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: c6b596fd07a14a64b89285b6f079b167, type: 3}
-    Group: {fileID: -4900041733953332563, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: GameoverSound
-    Volume: 0.1
-    Pitch: 1
-    Loop: 0
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 7cb5c5322756dee4f8f73d470b349769, type: 3}
-    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: KillSound
-    Volume: 1
-    Pitch: 1
-    Loop: 0
-  - Source: {fileID: 0}
-    Clip: {fileID: 8300000, guid: 16586fb40603fa14e91cd5feaf56de42, type: 3}
-    Group: {fileID: 2850972191581501137, guid: e5d183f19d160e246b719276ead7aa16, type: 2}
-    Name: MadSound
-    Volume: 1
-    Pitch: 1
-    Loop: 0
-  allAudioSources: []
-  audioSourceStates: 
---- !u!4 &1369328473
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369328471}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1369328474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369328471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896ee7b9e5f14154fb55bcb0d02ce0c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1421020328
@@ -2566,6 +2348,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135403444}
   m_CullTransparentMesh: 1
+--- !u!1001 &5847194717622571777
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6139511163870779996, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139511163870779996, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139511163870779996, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139511163870779996, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139511163870779996, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139511163870779996, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139511163870779996, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139511163870779996, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139511163870779996, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139511163870779996, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956424157783918600, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5dc8d028d8b458145b3fbabb72c082bd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2574,5 +2413,5 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1169710119}
   - {fileID: 1696974162}
-  - {fileID: 1369328473}
+  - {fileID: 5847194717622571777}
   - {fileID: 834038451}
