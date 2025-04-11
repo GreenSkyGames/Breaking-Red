@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 public abstract class LevelLoader
 {
-    protected void CreateNormalPassage(GameObject prefab, string spriteName, Vector3 position, string tag)
+    protected void CreateNormalPassage(GameObject prefab, string spriteName, Vector3 position, string tag, float rotationZ = 0f)
     {
-        GameObject obj = Object.Instantiate(prefab, position, Quaternion.identity);
+        GameObject obj = Object.Instantiate(prefab, position, Quaternion.Euler(0f, 0f, rotationZ));
         obj.tag = tag;
         obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
     }
@@ -22,9 +22,9 @@ public abstract class LevelLoader
         }
     }
 
-    protected void CreateDamagingEnv(GameObject prefab, string spriteName, Vector3 position)
+    protected void CreateDamagingEnv(GameObject prefab, string spriteName, Vector3 position, float rotationZ = 0f)
     {
-        GameObject obj = Object.Instantiate(prefab, position, Quaternion.identity);
+        GameObject obj = Object.Instantiate(prefab, position, Quaternion.Euler(0f, 0f, rotationZ));
         obj.GetComponent<TerrainObjects>().SetSprite(spriteName);
     }
 
@@ -44,5 +44,44 @@ public abstract class LevelLoader
         door.speed = Mathf.Abs(verticalGoal / moveTime);*/
         return obj;
     }
+
+    public virtual void AddRectTiles(List<Vector2> list, int xMin, int xMax, int yMin, int yMax)
+    {
+        for (int x = xMin; x <= xMax; x++)
+        {
+            for (int y = yMin; y <= yMax; y++)
+            {
+                list.Add(new Vector2(x, y));
+            }
+        }
+    }
+
+
+    public virtual GameObject CreatePlatform(GameObject platformPrefab, GameObject tilePrefab, Vector3 worldPosition, System.Collections.Generic.List<Vector2> tileOffsets, float moveX, float moveY, float moveTime)
+    {
+        GameObject platform = GameObject.Instantiate(platformPrefab, worldPosition, Quaternion.identity);
+
+        MovingPlatform mp = platform.GetComponent<MovingPlatform>();
+        if (mp != null)
+        {
+            mp.SetMovementGoals(moveX, moveY, moveTime);
+        }
+
+        foreach (Vector2 offset in tileOffsets)
+        {
+            GameObject tile = GameObject.Instantiate(tilePrefab, platform.transform);
+            tile.transform.localPosition = new Vector3(offset.x, offset.y, 0);
+
+            tile.tag = "MovingPlatform";
+
+            if (tile.GetComponent<Collider2D>() == null)
+            {
+                tile.AddComponent<BoxCollider2D>();
+            }
+        }
+
+        return platform;
+    }
+
     public abstract void LoadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab);
 };
