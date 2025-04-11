@@ -6,8 +6,8 @@ public class BerserkerBrew : PowerUp
     {
         if (playerController != null)
         {
-            //playerController.attackPower += effectAmount;
-            //Debug.Log($"Berserker Brew: Attack Power increased to {playerController.attackPower}");
+            playerController.attackDamage += effectAmount;
+            Debug.Log($"Berserker Brew: Attack damage increased to {playerController.attackDamage}");
         }
     }
 }

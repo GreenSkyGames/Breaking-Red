@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f3cf4f4e664fb499401f3625deb179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectAmount: 5
+  effectAmount: 1
   itemType: 2
   sprite: {fileID: -5805156128971586636, guid: b6d5e74f01c81c04b9509a1acf766303, type: 3}
-  itemDescription: 
+  itemDescription: Suddenly I feel so strong! I could kill anything! MWAHAHAHA
