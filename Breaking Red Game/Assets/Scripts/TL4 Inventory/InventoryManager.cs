@@ -12,6 +12,7 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public int effectAmount;
+    public int maxInventorySize = 3;
     public GameObject inventoryMenu;
     public ItemSlot[] itemSlot;
     public static InventoryManager sInstance;
@@ -71,17 +72,21 @@ public class InventoryManager : MonoBehaviour
      * It looks at the item slots I created in UI b/c I attached them in Inspector
      * Checks if there is an unoccupied slot and if not, put the item in
      * Uses isOccupied bool and updateInventoryUI() from ItemSlot script */
-    public void addToInventory(string itemName, Sprite itemSprite, string itemDescription)
+    public bool addToInventory(string itemName, Sprite itemSprite, string itemDescription)
     {
-        for (int i = 0; i < itemSlot.Length; i++)
+        if (itemSlot.Length <= maxInventorySize)
         {
-            if(itemSlot[i] != null && itemSlot[i].isOccupied == false)
+            for (int i = 0; i < itemSlot.Length; i++)
             {
-                itemSlot[i].updateInventoryUI(itemName, itemSprite, itemDescription);
-                return;
+                if(itemSlot[i] != null && itemSlot[i].isOccupied == false)
+                {
+                    itemSlot[i].updateInventoryUI(itemName, itemSprite, itemDescription);
+                    return true;
+                }
             }
         }
         Debug.Log("Inventory is full or slot invalid!");
+        return false;
     }
 
     /* This function loops through each slot in inventory and counts occupied ones 
