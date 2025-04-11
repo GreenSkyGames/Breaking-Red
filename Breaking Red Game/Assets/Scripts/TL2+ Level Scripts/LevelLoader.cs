@@ -60,7 +60,7 @@ public abstract class LevelLoader
     public virtual GameObject CreatePlatform(GameObject platformPrefab, GameObject tilePrefab, Vector3 worldPosition, System.Collections.Generic.List<Vector2> tileOffsets, float moveX, float moveY, float moveTime)
     {
         GameObject platform = GameObject.Instantiate(platformPrefab, worldPosition, Quaternion.identity);
-
+        platform.tag = "MovingPlatform";
         MovingPlatform mp = platform.GetComponent<MovingPlatform>();
         if (mp != null)
         {
@@ -72,7 +72,7 @@ public abstract class LevelLoader
             GameObject tile = GameObject.Instantiate(tilePrefab, platform.transform);
             tile.transform.localPosition = new Vector3(offset.x, offset.y, 0);
 
-            tile.tag = "MovingPlatform";
+            //tile.tag = "MovingPlatform";
 
             if (tile.GetComponent<Collider2D>() == null)
             {
