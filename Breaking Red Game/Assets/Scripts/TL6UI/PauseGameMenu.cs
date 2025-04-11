@@ -25,6 +25,7 @@ public class PauseGameMenu : MonoBehaviour
     public GameObject inventoryMenu; //inventory manager object 
     public static PauseGameMenu instance; 
     private GameUIFacade facade; 
+    public Button inventoryButton; 
 
     // Pause menu called => in view, Pause menu uncalled=> not in view 
     void Start()
@@ -35,6 +36,11 @@ public class PauseGameMenu : MonoBehaviour
         IsPaused = false; 
         Time.timeScale = 1f; //ensure time is running on scene start
         //LoadGame(); COMMENTED OUT FOR GAME TESTING PURPOSES
+
+        if (inventoryButton != null)
+        {
+            inventoryButton.onClick.AddListener(ViewInventory);
+        } 
     }
 
     // Singleton Pattern 
@@ -190,18 +196,12 @@ public class PauseGameMenu : MonoBehaviour
         // Play the button click
         AudioManager.instance.Play("ClickSound");
         Debug.Log("Viewing inventory..."); 
-        if (_menuActivated) // if I clicked when menu is on, turn it off
-        {
-            Time.timeScale = 1;
-            inventoryMenu.SetActive(false);
-            _menuActivated = false;
-        }
-        else if(!_menuActivated) // if I clicked when menu is off, turn it on
-        {
-            Time.timeScale = 0;
-            inventoryMenu.SetActive(true);
-            _menuActivated = true;
-        }
+
+        _menuActivated = !_menuActivated;
+        Time.timeScale = _menuActivated ? 0 : 1;
+
+        inventoryMenu.SetActive(_menuActivated);
+        PauseMenu.SetActive(!_menuActivated); //taking down pause menu when inventory pulled up. 
     }
 
 }

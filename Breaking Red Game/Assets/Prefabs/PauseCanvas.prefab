@@ -957,6 +957,7 @@ GameObject:
   - component: {fileID: 6125748363041411371}
   - component: {fileID: 6015947133173552448}
   - component: {fileID: 8765581659891910341}
+  - component: {fileID: 7819046174410248465}
   m_Layer: 0
   m_Name: PauseCanvas
   m_TagString: Untagged
@@ -1061,6 +1062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 7728468981454945642}
   inventoryMenu: {fileID: 692521755672166692, guid: 9aed94761b9fc0a4085c732faf2e7d80, type: 3}
+  inventoryButton: {fileID: 433141825691958732}
 --- !u!114 &8765581659891910341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,6 +1079,25 @@ MonoBehaviour:
   allAudioSources:
   - {fileID: 0}
   audioSourceStates: 
+--- !u!114 &7819046174410248465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5380646680694276872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f590b2590cf13f4085e98860ba7b768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectAmount: 0
+  maxInventorySize: 0
+  inventoryMenu: {fileID: 692521755672166692, guid: 9aed94761b9fc0a4085c732faf2e7d80, type: 3}
+  itemSlot: []
+  selectedSlot: {fileID: 0}
+  powerUpManager: {fileID: 0}
+  emptySprite: {fileID: 0}
 --- !u!1 &6645615622411846857
 GameObject:
   m_ObjectHideFlags: 0

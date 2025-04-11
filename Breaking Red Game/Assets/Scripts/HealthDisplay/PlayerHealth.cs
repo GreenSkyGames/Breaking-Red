@@ -18,12 +18,17 @@ public class PlayerHealth : MonoBehaviour
     public SpriteRenderer playerSr;
     public PlayerController playerMovement; // Controls player movement
 
+    private bool bcMode = false; //bc mode 
+
     /* This function is called before the first frame update.
      * It initializes the player's health. */
     void Start()
     {
         maxHealth = 100;
         currentHealth = maxHealth;
+
+        //update BC mode 
+        UpdateBCMode(); //Liz 
     }
 
     /* This function changes the player's health by a specified amount.
@@ -45,9 +50,17 @@ public class PlayerHealth : MonoBehaviour
             {
                 playerMovement.enabled = false; // Disable player movement
             }
-            // UnityEditor.EditorApplication.isPlaying = false;
-            Debug.Log("Player has died.");
-            SceneManager.LoadScene("GameOver"); //calling game over screen 
+
+            if(!bcMode) //if BC mode not enabled then 
+            {
+                // UnityEditor.EditorApplication.isPlaying = false;
+                Debug.Log("Player has died.");
+                SceneManager.LoadScene("GameOver"); //calling game over screen 
+            }
+            else //if BC mode is enabled 
+            {
+                currentHealth = maxHealth; // BC is invinvible 
+            }
         }
         else
         {
@@ -77,5 +90,9 @@ public class PlayerHealth : MonoBehaviour
             playerMovement.enabled = true;
         }
         currentHealth = maxHealth;
+    }
+
+    private void UpdateBCMode(){
+        bcMode = PlayerPrefs.GetInt("BCMode", 0) == 1;
     }
 }

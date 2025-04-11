@@ -40,8 +40,6 @@ public class GameUIFacade
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject QuitButton;
-    public GameObject StartButton;
     private GameUIFacade facade; 
 
     private void Awake()
