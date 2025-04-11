@@ -3,32 +3,26 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class NPCSpawnerTests
+public class NPCSpawnerTests : MonoBehaviour
 {
     GameObject npcPrefab;
+    GameObject playerPrefab;
     Vector2 spawnPosition = Vector2.zero;
 
     [UnitySetUp]
     public IEnumerator SetUp()
     {
         //Create a basic NPC prefab placeholder for testing
-        npcPrefab = new GameObject("TheWolf");
-        //npcPrefab.AddComponent<NPCManager>(); // optional: your NPC script
+        //GameObject npc = new GameObject("NPC");
+		
+		npcPrefab = Resources.Load<GameObject>("NPCPrefabs/TheWolf");
+		playerPrefab = Resources.Load<GameObject>("NPCPrefabs/Player");
+		
+        //playerPrefab = GameObject.FindWithTag("Player");
+        //npcPrefab.AddComponent<NPCManager>(); //NPCManager already part of prefab
         yield return null;
     }
 
-    [UnityTearDown]
-    public IEnumerator TearDown()
-    {
-        // Destroy all remaining test objects
-        foreach (var npc in GameObject.FindGameObjectsWithTag("TheWolf"))
-        {
-            Object.DestroyImmediate(npc);
-        }
-
-        Object.DestroyImmediate(npcPrefab);
-        yield return null;
-    }
 
 	//Quick test to spawn multiple enemies in the same location.
     [UnityTest]
@@ -60,9 +54,12 @@ public class NPCSpawnerTests
 	[UnityTest]
 	public IEnumerator NPCMovesTowardPlayer_UntilCollisionOrCloseEnough()
 	{
+		//Create NPC object
 		GameObject npc = GameObject.Instantiate(npcPrefab, new Vector2(-5, 0), Quaternion.identity);
-		GameObject player = GameObject.CreatePrimitive(PrimitiveType.Capsule); //Temporary player placeholder
-		player.transform.position = Vector2.zero;
+		
+        //Create Player GameObject
+		GameObject player = GameObject.Instantiate(playerPrefab, new Vector2(0, 0), Quaternion.identity);
+        player.transform.position = new Vector2(5f, 0f);
 
 		float speed = 2f;
 		float closeEnoughDistance = 0.5f;
@@ -101,67 +98,53 @@ public class NPCSpawnerTests
 	
 	//A unit test that spawns an obstacle between player and enemy to block them.
 	//This should always fail, by design.
-	[UnityTest]
-	public IEnumerator NPCBlockedByObstacle_DoesNotReachPlayer()
-	{
-		// Spawn the player and NPC
+    [UnityTest]
+    public IEnumerator NPCBlockedByObstacle2D_DoesNotReachPlayer_DesignedToFail()
+    {
+        //Create NPC GameObject
 		GameObject npc = GameObject.Instantiate(npcPrefab, new Vector2(-5, 0), Quaternion.identity);
-		GameObject player = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-		player.transform.position = new Vector2(5, 0);
+		
+        //Create Player GameObject
+		GameObject player = GameObject.Instantiate(playerPrefab, new Vector2(0, 0), Quaternion.identity);		
+        player.transform.position = new Vector2(5f, 0f);
 
-		// Add colliders and rigidbodies for collision detection
-		npc.AddComponent<Rigidbody>().isKinematic = true;
-		npc.AddComponent<CapsuleCollider>();
-		player.AddComponent<CapsuleCollider>();
-		player.AddComponent<Rigidbody>().isKinematic = true;
+        //Create an Obstacle between them
+        GameObject obstacle = new GameObject("Obstacle");
+        obstacle.transform.position = new Vector2(0f, 0f);
+        BoxCollider2D obstacleCol = obstacle.AddComponent<BoxCollider2D>();
+        obstacleCol.size = new Vector2(2f, 2f);
+        Rigidbody2D obstacleRb = obstacle.AddComponent<Rigidbody2D>();
+        obstacleRb.bodyType = RigidbodyType2D.Static;
 
-		// Add obstacle directly between them
-		GameObject obstacle = GameObject.CreatePrimitive(PrimitiveType.Cube);
-		obstacle.transform.position = new Vector2(0, 0);
-		obstacle.transform.localScale = new Vector2(1, 3);
-		obstacle.AddComponent<BoxCollider>();
-		obstacle.AddComponent<Rigidbody>().isKinematic = true;
+        float speed = 3f;
+        float closeEnoughDistance = 0.5f;
+        float timeout = 5f;
+        float elapsed = 0f;
+        bool reachedPlayer = false;
 
-		float speed = 2f;
-		float closeEnoughDistance = 0.5f;
-		float timeout = 5f;
-		float elapsed = 0f;
+        while (elapsed < timeout)
+        {
+            if (npc == null || player == null) break;
 
-		bool reachedPlayer = false;
+            Vector3 direction = (player.transform.position - npc.transform.position).normalized;
+			npc.transform.position += direction * speed * Time.deltaTime;
 
-		while (elapsed < timeout)
-		{
-			if (npc == null || player == null) break;
+            float distance = Vector2.Distance(npc.transform.position, player.transform.position);
+            if (distance <= closeEnoughDistance)
+            {
+                reachedPlayer = true;
+                break;
+            }
 
-			Vector3 direction = (player.transform.position - npc.transform.position).normalized;
-			Vector3 nextPosition = npc.transform.position + direction * speed * Time.deltaTime;
+            elapsed += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate(); //Sync with 2D physics
+        }
 
-			// Do a raycast to simulate blocked movement (since we're not using full physics)
-			if (!Physics.Linecast(npc.transform.position, nextPosition))
-			{
-				npc.transform.position = nextPosition;
-			}
+        Assert.IsFalse(reachedPlayer, "NPC unexpectedly reached the player despite a blocking obstacle.");
 
-			float distance = Vector2.Distance(npc.transform.position, player.transform.position);
-			if (distance <= closeEnoughDistance)
-			{
-				reachedPlayer = true;
-				break;
-			}
-
-			elapsed += Time.deltaTime;
-			yield return null;
-		}
-
-		Assert.IsFalse(reachedPlayer, "NPC unexpectedly reached the player despite obstacle in the way.");
-
-		// Clean up
-		GameObject.Destroy(npc);
-		GameObject.Destroy(player);
-		GameObject.Destroy(obstacle);
-
-		yield return null;
-	}
-
-
+        //Clean up
+        GameObject.DestroyImmediate(npc);
+        GameObject.DestroyImmediate(player);
+        GameObject.DestroyImmediate(obstacle);
+    }
 }
