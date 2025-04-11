@@ -7,7 +7,7 @@ public class Level1 : LevelLoader
     public GameObject lockedPassagePrefab;
     public GameObject damagingEnvPrefab;
     public GameObject slidingDoorPrefab;*/
-    public override void LoadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab)
+    public override void loadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab)
     {
         //NormalPassage normalPassage = NormalPassage();
         //normalPassage.Spawn(new Vector3(287.33f, -4.88f, 0), "cavetiles_2107")

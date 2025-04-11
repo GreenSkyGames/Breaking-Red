@@ -108,7 +108,7 @@ public class LevelManager : MonoBehaviour
         }
         if (levelLoader != null)
         {
-            levelLoader.LoadLevel(normalPassagePrefab, lockedPassagePrefab, damagingEnvPrefab, movingPlatformPrefab, movingPlatformTilePrefab, slidingDoorPrefab);
+            levelLoader.loadLevel(normalPassagePrefab, lockedPassagePrefab, damagingEnvPrefab, movingPlatformPrefab, movingPlatformTilePrefab, slidingDoorPrefab);
             loadedLevels[levelTag] = true;
         }
         else

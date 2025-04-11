@@ -11,7 +11,7 @@ public class Level2 : LevelLoader
     public GameObject damagingEnvPrefab;
     public GameObject slidingDoorPrefab;
     public GameObject movingPlatformTilePrefab;
-    public override void LoadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab)
+    public override void loadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab)
     {
         //CreateNormalPassage(normalPassagePrefab, "House_tileset_30", new Vector2(-0.83f, -3.14f), "L2");
         //GameObject door1 = CreateSlidingDoor(slidingDoorPrefab, "Tree_45", new Vector3(9.3881f, -7.380007f, 0), 0, 2f, 1f);
@@ -102,6 +102,12 @@ public class Level2 : LevelLoader
 
     }
 
-    
+    public new void StaticMethod(GameObject lockedPassagePrefab)
+    {
+        Vector3 position = new Vector3(-3.5003f, -10.29983f, 0);
+        GameObject obj = Object.Instantiate(lockedPassagePrefab, position, Quaternion.identity);
+        obj.tag = "IL1.1";
+        obj.GetComponent<TerrainObjects>().setSprite("House_tileset_30");
+    }
 
 }

@@ -83,5 +83,33 @@ public abstract class LevelLoader
         return platform;
     }
 
-    public abstract void LoadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab);
+    public virtual void loadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab)
+    {
+        // This will auto-generate Level 1 when dynamically bound
+        Debug.Log("Dynamically binding to LoadLevel: Loading Level 1.");
+
+        // Creating Level 1 objects
+        CreateNormalPassage(normalPassagePrefab, "House_tileset_30", new Vector3(-107.5f, -18.700003f, 0), "IL1");
+        CreateNormalPassage(normalPassagePrefab, "House_Red_4", new Vector3(-1.5003f, 0.29983f, 0), "IL1.1");
+        CreateNormalPassage(normalPassagePrefab, "House_red_5", new Vector3(-0.5003f, 0.29983f, 0), "IL1.1");
+
+        // Example objects for Level 1
+        GameObject door1 = CreateSlidingDoor(slidingDoorPrefab, "Tree_45", new Vector3(9.3881f, -7.380007f, 0), 0, 2f, 1f);
+        GameObject door2 = CreateSlidingDoor(slidingDoorPrefab, "Tree_45", new Vector3(9.3881f, -9.220007f, 0), 0, -2f, 1f);
+
+        CreateLockedPassage(lockedPassagePrefab, "cavetiles_2107", new Vector3(11.4997f, -8.70017f, 0), door1, door2, "L2");
+        CreateDamagingEnv(damagingEnvPrefab, "Furniture_39", new Vector3(-110.5f, -10.703f, 0));
+
+        // Additional Level 1 creations could go here...
+        Debug.Log("Level 1 objects created.");
+    }
+
+    public void staticMethod(GameObject lockedPassagePrefab)
+    {
+        Vector3 position = new Vector3(-0.5003f, -10.29983f, 0);
+        GameObject obj = Object.Instantiate(lockedPassagePrefab, position, Quaternion.identity);
+        obj.tag = "L2";
+        obj.GetComponent<TerrainObjects>().setSprite("cavetiles_2107");
+    }
+
 };
