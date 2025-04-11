@@ -17,6 +17,7 @@ public class PowerUpManager : MonoBehaviour
     public Image[] inventorySlots;
     public TextMeshProUGUI messageText;
     public CanvasGroup healthMessageGroup;
+    public CanvasGroup inventoryFullGroup;
 
     private PlayerHealth _playerHealth;
 
@@ -96,9 +97,16 @@ public class PowerUpManager : MonoBehaviour
         }
         else if (powerUp.itemType == PowerUp.itemName.OwlsWing || powerUp.itemType == PowerUp.itemName.CanOfTuna)
         {
-            AudioManager.instance.Play("PowerUpSound");
-            InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite, powerUp.itemDescription); // add to inventory
-            Destroy(powerUp.gameObject);
+            bool isAdded = InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite, powerUp.itemDescription);
+            if (isAdded)
+            {
+                AudioManager.instance.Play("PowerUpSound");
+                Destroy(powerUp.gameObject);
+            }
+            else
+            {
+                StartCoroutine(showInventoryFullMessage());
+            }
         }
         else
         {
@@ -168,10 +176,18 @@ public class PowerUpManager : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.L))  // 'L' for Store for Later
             {
-                AudioManager.instance.Play("ClickSound"); // play click sound effect
-                InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite, powerUp.itemDescription); // add to inventory
-                Destroy(powerUp.gameObject);
-                inputReceived = true;
+                bool isAdded = InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite, powerUp.itemDescription);
+                if (isAdded)
+                {
+                    AudioManager.instance.Play("ClickSound"); // play click sound effect
+                    Destroy(powerUp.gameObject);
+                    inputReceived = true;
+                }
+                else
+                {
+                    inputReceived = true;
+                    StartCoroutine(showInventoryFullMessage());
+                }
             }
 
             yield return null;
@@ -199,6 +215,18 @@ public class PowerUpManager : MonoBehaviour
         Time.timeScale = 1;
         choicePrompt.SetActive(false);
         StartCoroutine(AudioManager.instance.RestoreAudioStates());
+    }
+
+    private IEnumerator showInventoryFullMessage()
+    {
+        if (inventoryFullGroup != null)
+        {
+            inventoryFullGroup.alpha = 1;
+            inventoryFullGroup.blocksRaycasts = true;
+            yield return new WaitForSeconds(2f);  // How long to show message
+            inventoryFullGroup.alpha = 0;
+            inventoryFullGroup.blocksRaycasts = false;
+        }
     }
 }
 
