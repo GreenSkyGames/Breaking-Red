@@ -51,6 +51,10 @@ public class BackgroundMusic : MonoBehaviour
         
         switch (tag) // Play new music based on the tag
         {
+            case "StartMenu":
+                StartCoroutine(AudioManager.instance.PauseAllAudioSources());
+                StartCoroutine(AudioManager.instance.FadeIn("MenuBGM", 1.0f));  // Fade in main menu music
+                break;
             case "IL1.1":
                 StartCoroutine(AudioManager.instance.FadeOut("L1BGM", 1.0f)); // Fade out last scene music
                 StartCoroutine(AudioManager.instance.FadeOut("WolfSound", 1.0f));
@@ -91,11 +95,11 @@ public class BackgroundMusic : MonoBehaviour
                 break;
             case "GameOver":
                 StartCoroutine(AudioManager.instance.PauseAllAudioSources());
-                StartCoroutine(AudioManager.instance.FadeIn("GameoverSound", 1.0f));  // Fade in level 5 music
+                StartCoroutine(AudioManager.instance.FadeIn("GameoverSound", 1.0f));  // Fade in game over music
                 break;
             case "Victory":
                 StartCoroutine(AudioManager.instance.PauseAllAudioSources());
-                StartCoroutine(AudioManager.instance.FadeIn("VictorySound", 1.0f));  // Fade in level 5 music
+                StartCoroutine(AudioManager.instance.FadeIn("VictorySound", 1.0f));  // Fade in victory music
                 break;
 
             // Add more cases for other levels as needed

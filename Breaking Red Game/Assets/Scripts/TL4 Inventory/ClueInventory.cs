@@ -9,7 +9,7 @@ public class ClueInventory: InventoryBase
         {
             return 5;
         }
-        else if (cluesGathered >= 3)
+        else if (cluesGathered >= 2)
         {
             return 4;
         }

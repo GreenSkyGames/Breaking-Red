@@ -15,7 +15,7 @@ using Ink.Runtime;
 */
 public class DialogueManager : MonoBehaviour
 {
-	public ClueInventory clueInventory;
+	public ClueInventoryUIManager clueInventoryUIManager;
 	public static DialogueManager Instance { get; private set; }
 
 	//public GameObject DialogueParent;
@@ -262,9 +262,10 @@ public class DialogueManager : MonoBehaviour
 		if (!cluesGathered.Contains(clueTag))
 		{
 			cluesGathered.Add(clueTag);
+			clueInventoryUIManager.cluesGathered = cluesGathered.Count;
+			clueInventoryUIManager.updateSlotVisibility();
 			Debug.Log("Added clue: " + clueTag);
 		}
-		clueInventory.v_getInventorySize(cluesGathered.Count);
 	}
 
     public bool checkClues()
