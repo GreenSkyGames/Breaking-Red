@@ -150,8 +150,5 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   spriteName: 
   fadePanel: {fileID: 0}
-  passagePrefab: {fileID: 0}
   isUnlocked: 0
-  doorOverlay: {fileID: 0}
-  slidingDoor: {fileID: 0}
-  slidingDoor2: {fileID: 0}
+  doorOverlay: {fileID: 5389576429954943758, guid: 308793e93123aaf40aa461a2551b3f74, type: 3}

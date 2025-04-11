@@ -17,7 +17,7 @@ public class DamagingEnv : TerrainObjects
     [SerializeField] private float _seedHeight;
     [SerializeField] private float _finalHeight;
 
-    public int damage = 2;
+    private int damage = 10;
     public float damagePerSecond = 10f;
 	public float damageInterval = 0.75f;
 	private HashSet<NPCManager> affectedObjects = new HashSet<NPCManager>();
@@ -102,7 +102,7 @@ public class DamagingEnv : TerrainObjects
         }
     }
 
-    public int dmg = 9; //Damage over time for player
+    private int dmg = 9; //Damage over time for player
     public float damageInt = 1f; // Time between damage ticks
     private HashSet<GameObject> affectedObjs = new HashSet<GameObject>();
 
@@ -110,6 +110,7 @@ public class DamagingEnv : TerrainObjects
       * The function takes in a player object and decreases their health at set intervals indefinitely whiel they are still considered in contact with the damaging object*/
     private IEnumerator damageOverTime(GameObject player)
     {
+        Debug.Log("Started damage coroutine");
         PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
 
         if (playerHealth == null)

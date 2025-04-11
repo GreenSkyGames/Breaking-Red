@@ -27,6 +27,9 @@ public class NormalPassage : TerrainObjects
     {
         if(other.CompareTag("Player"))
         {
+            string passageTag = this.tag;
+            Debug.Log($"Player entered passage with tag: {passageTag}");
+            LevelManager.Instance.TryLoadLevelFromTag(passageTag);
             AudioManager.instance.Play("DoorSound"); // Play the open door sound
 
             Vector2 newPosition = getDestination();
