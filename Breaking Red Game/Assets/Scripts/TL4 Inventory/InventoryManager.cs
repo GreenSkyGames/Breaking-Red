@@ -12,8 +12,9 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public int effectAmount;
-    public int maxInventorySize = 3;
+    public int maxInventorySize;
     public GameObject inventoryMenu;
+    public ClueInventory clueInventory;
     public ItemSlot[] itemSlot;
     public static InventoryManager sInstance;
     public ItemSlot selectedSlot;
@@ -22,6 +23,13 @@ public class InventoryManager : MonoBehaviour
 
     private bool _menuActivated;
     private PlayerController playerController;
+    private DialogueManager dialogueManager;
+
+    void Start()
+    {
+        int cluesGathered = FindObjectOfType<DialogueManager>().cluesGathered.Count;
+        int maxInventorySize = clueInventory.v_getInventorySize(cluesGathered);
+    }
 
     /* This function updates the scene by toggling the inventory if the player clicks I
      *	It only uses the function toggleInventory() */
