@@ -97,9 +97,8 @@ public class NPCSpawnerTests : MonoBehaviour
 	
 	
 	//A unit test that spawns an obstacle between player and enemy to block them.
-	//This should always fail, by design.
     [UnityTest]
-    public IEnumerator NPCBlockedByObstacle2D_DoesNotReachPlayer_DesignedToFail()
+    public IEnumerator NPCBlockedByObstacle2D_DoesNotReachPlayer()
     {
         //Create NPC GameObject
 		GameObject npc = GameObject.Instantiate(npcPrefab, new Vector2(-5, 0), Quaternion.identity);
