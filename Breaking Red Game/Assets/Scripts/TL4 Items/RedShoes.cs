@@ -6,8 +6,8 @@ public class RedShoes : PowerUp
     {
         if (playerController != null)
         {
-            playerController._speed += effectAmount;
-            Debug.Log($"Speed increased to {playerController._speed}");
+            playerController.speed += effectAmount;
+            Debug.Log($"Speed increased to {playerController.speed}");
         }
     }
 }

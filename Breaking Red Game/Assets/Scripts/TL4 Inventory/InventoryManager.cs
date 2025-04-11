@@ -208,11 +208,14 @@ public class InventoryManager : MonoBehaviour
                 break;
             case "BerserkerBrew":
                 Debug.Log("Applying Berserker Brew effect");
-                //playerController.attackPower += effectAmount;
+                playerController.attackDamage += 1;
                 break;
             case "EnchantedBerry":
                 Debug.Log("Applying Enchanted Berry effect");
                 //playerController.sanity += effectAmount;
+                break;
+            case "RedShoes":
+                playerController.speed += 2.0f;
                 break;
             default:
                 Debug.LogWarning("Unknown power-up: " + itemName);

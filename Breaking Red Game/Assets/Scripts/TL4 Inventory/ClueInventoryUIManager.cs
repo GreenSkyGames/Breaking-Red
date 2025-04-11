@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class ClueInventoryUIManager : MonoBehaviour
 {
-    public GameObject[] itemSlots; // Assigned in Unity
-    private ClueInventory clueInventory; // No need to drag in Inspector
+    public GameObject[] itemSlots; // add in inspector
+    private ClueInventory clueInventory; // don't need to drag
     public int cluesGathered;
 
     void Start()
     {
-        clueInventory = new ClueInventory(); // Initialize it manually
+        clueInventory = new ClueInventory(); // initializw
         updateSlotVisibility();
     }
 
