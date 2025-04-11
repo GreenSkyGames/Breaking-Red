@@ -151,6 +151,12 @@ public class PowerUpManager : MonoBehaviour
                     EnchantedBerry enchantedBerry = (EnchantedBerry)powerUp;
                     enchantedBerry.v_applyEffect(playerController);
                 }
+                else if (powerUp is RedShoes)
+                {
+                    AudioManager.instance.Play("PowerUpSound");
+                    RedShoes redShoes = (RedShoes)powerUp;
+                    redShoes.v_applyEffect(playerController);
+                }
                 else
                 {
                     AudioManager.instance.Play("PowerUpSound"); // play power up sound effect

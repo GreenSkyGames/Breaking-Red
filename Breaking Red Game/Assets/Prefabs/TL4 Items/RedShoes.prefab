@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7849364402472899688}
   - component: {fileID: 4701778907058675543}
   - component: {fileID: 2847567780997417539}
-  - component: {fileID: 984881903209739418}
+  - component: {fileID: -5241785839943787281}
   m_Layer: 0
   m_Name: RedShoes
   m_TagString: Untagged
@@ -164,7 +164,7 @@ PolygonCollider2D:
       - {x: 0.87, y: -1.39}
       - {x: 1, y: -1.25}
   m_UseDelaunayMesh: 0
---- !u!114 &984881903209739418
+--- !u!114 &-5241785839943787281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,10 +173,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5832446241312731884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b49c9ad8150a584585256085eb21cd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 140d32e71fdb3fd4f823a59703ad1dfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectAmount: 0
+  effectAmount: 2
   itemType: 4
   sprite: {fileID: -8022317073333284825, guid: 26bf3697777ab184eb51108bab849ac9, type: 3}
-  itemDescription: 
+  itemDescription: Woah! Did the wind just get stronger or did I just get faster?
