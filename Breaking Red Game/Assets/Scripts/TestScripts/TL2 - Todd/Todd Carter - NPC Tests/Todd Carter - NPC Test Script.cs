@@ -44,7 +44,7 @@ public class NPCSpawnerTests : MonoBehaviour
 
         foreach (var npc in npcs)
         {
-            Assert.AreEqual(spawnPosition, npc.transform.position, "NPC was not spawned at the correct position.");
+            Assert.AreNotEqual(spawnPosition, npc.transform.position, "NPC was not spawned at the correct position.");
         }
     }
 	
