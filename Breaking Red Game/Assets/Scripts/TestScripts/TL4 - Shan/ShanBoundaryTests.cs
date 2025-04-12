@@ -62,12 +62,12 @@ public class ShanBoundaryTests : MonoBehaviour
         playerHealth.changeHealth(100);
 
         // apply golden apple (increases health)
-        PowerUp goldenApple = new GameObject("GoldenApple").AddComponent<PowerUp>(); // dynamically create PowerUp instance
-        goldenApple.itemType = PowerUp.itemName.GoldenApple;  // set type to GoldenApple
+        PowerUpTemplate goldenApple = new GameObject("GoldenApple").AddComponent<PowerUpTemplate>(); // dynamically create PowerUp instance
+        goldenApple.itemType = PowerUpTemplate.itemName.GoldenApple;  // set type to GoldenApple
         goldenApple.effectAmount = 5; // set effect amount for health boost
         goldenApple.sprite = null;
 
-        goldenApple.v_applyEffect(playerController);
+        goldenApple.applyEffect(playerController);
         Debug.Log($"Health after applying: {playerHealth.currentHealth}");
 
         // check if the health has exceeded the limit (3)
@@ -90,8 +90,8 @@ public class ShanBoundaryTests : MonoBehaviour
         }
 
         // Create a GoldenApple power-up instance to apply rapidly
-        PowerUp goldenApple = new GameObject("GoldenApple").AddComponent<PowerUp>();
-        goldenApple.itemType = PowerUp.itemName.GoldenApple;
+        PowerUpTemplate goldenApple = new GameObject("GoldenApple").AddComponent<PowerUpTemplate>();
+        goldenApple.itemType = PowerUpTemplate.itemName.GoldenApple;
         goldenApple.effectAmount = healthBoostAmount;
         goldenApple.sprite = null;  // No sprite needed for this test
 
@@ -100,7 +100,7 @@ public class ShanBoundaryTests : MonoBehaviour
 
         for (int i = 0; i < numberOfTests; i++)
         {
-            goldenApple.v_applyEffect(playerController);  // Apply the Golden Apple effect
+            goldenApple.applyEffect(playerController);  // Apply the Golden Apple effect
         }
 
         // After stress test, check health and print the result

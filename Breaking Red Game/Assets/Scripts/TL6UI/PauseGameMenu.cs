@@ -29,8 +29,7 @@ public class PauseGameMenu : MonoBehaviour
 
     // Pause menu called => in view, Pause menu uncalled=> not in view 
     void Start()
-    {
-        // facade = new GameUIFacade(); 
+    { 
         //initializing pause menu state 
         PauseMenu.SetActive(false); 
         IsPaused = false; 
@@ -85,7 +84,7 @@ public class PauseGameMenu : MonoBehaviour
 
         // Play the button click
         AudioManager.instance.Play("ClickSound");
-        // facade.PlayClickSound(); 
+
         // Restore all audio sources
         StartCoroutine(AudioManager.instance.RestoreAudioStates());
         // SceneManager.LoadScene("Level 1");
@@ -101,7 +100,6 @@ public class PauseGameMenu : MonoBehaviour
 
         // Play the button click
         AudioManager.instance.Play("ClickSound");
-        // facade.PlayClickSound(); 
 
         // Pause all audio sources and save their states
         StartCoroutine(AudioManager.instance.PauseAllAudioSources());
@@ -112,7 +110,6 @@ public class PauseGameMenu : MonoBehaviour
     {
         // Play the button click sound
         AudioManager.instance.Play("ClickSound");
-        // facade.PlayClickSound(); 
 
         // Assume that you're saving player's position
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -168,13 +165,11 @@ public class PauseGameMenu : MonoBehaviour
 
         // PauseMenu.SetActive(false); //removing the pause menu from the background
         // Play the button click
-        AudioManager.instance.Play("ClickSound");
-        // facade.PlayClickSound(); 
+        AudioManager.instance.Play("ClickSound"); 
         AudioManager.instance.Play("MenuBGM");
 
         Debug.Log("Loading menu.");
         SceneManager.LoadScene("StartMenu");
-        // facade.LoadScene("StartMenu"); 
     }
 
     //Quits the game when the player presses to quit the game
@@ -182,12 +177,10 @@ public class PauseGameMenu : MonoBehaviour
     {
         // Play the button click
         AudioManager.instance.Play("ClickSound");
-        // facade.PlayClickSound(); 
 
         Debug.Log("Quitting game."); 
         Application.Quit();//quitting the game 
-        UnityEditor.EditorApplication.isPlaying = false;
-        // facade.QuitApp(); 
+        UnityEditor.EditorApplication.isPlaying = false; 
     }
 
 // player can view inventory from pause menu 
