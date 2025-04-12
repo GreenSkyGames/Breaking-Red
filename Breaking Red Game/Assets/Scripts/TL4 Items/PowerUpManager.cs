@@ -129,6 +129,7 @@ public class PowerUpManager : MonoBehaviour
                         AudioManager.instance.Play("PowerUpSound");
                         GoldenApple goldenApple = (GoldenApple)powerUp;
                         goldenApple.applyEffect(playerController);
+                        Destroy(powerUp.gameObject);
                     }
                 }
                 else if (powerUp is BerserkerBrew)
@@ -136,18 +137,21 @@ public class PowerUpManager : MonoBehaviour
                     AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
                     BerserkerBrew berserkerBrew = (BerserkerBrew)powerUp;
                     berserkerBrew.applyEffect(playerController);  // Calls the BerserkerBrew-specific method
+                    Destroy(powerUp.gameObject);
                 }
                 else if (powerUp is EnchantedBerry)
                 {
                     AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
                     EnchantedBerry enchantedBerry = (EnchantedBerry)powerUp;
                     enchantedBerry.applyEffect(playerController);
+                    Destroy(powerUp.gameObject);
                 }
                 else if (powerUp is RedShoes)
                 {
                     AudioManager.instance.Play("PowerUpSound");
                     RedShoes redShoes = (RedShoes)powerUp;
                     redShoes.applyEffect(playerController);
+                    Destroy(powerUp.gameObject);
                 }
                 else
                 {
@@ -155,7 +159,6 @@ public class PowerUpManager : MonoBehaviour
                     powerUp.applyEffect(playerController);  // Calls the base method for other power-ups
                 }
 
-                Destroy(powerUp.gameObject);
                 inputReceived = true;
             }
             else if (Input.GetKeyDown(KeyCode.L))  // 'L' for Store for Later
