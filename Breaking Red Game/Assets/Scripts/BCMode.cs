@@ -47,21 +47,7 @@ public class BCMODE : MonoBehaviour
         //setting initial behavior 
         _behavior = _toggle.isOn ? new BCModeBehavior() : new ModeBehavior(); 
 
-        RunBehavior(); // both bindings used here, when the screen is first initialized 
-
-        //Oral Exam 
-        Debug.Log("----------Experimenting for ORAL EXAM------------"); 
-        //1. Dynamically bound method 
-        ModeBehavior behavior = new BCModeBehavior(); 
-        behavior.Execute(); 
-
-        //2. dynamic type 
-        ModeBehavior behavior1 = new ModeBehavior(); 
-        behavior1.Execute(); 
-
-        //3. static bound method 
-        ModeBehavior behavior2 = new ModeBehavior(); 
-        behavior.Describe("Awesome");
+        RunBehavior(); // both bindings used here, when the screen is first initialized  
     }
 
     // When the BC togglge is enabled, making sure that the choice is saved for the rest of the game 
@@ -83,34 +69,50 @@ public class BCMODE : MonoBehaviour
     //static and dynamic binding in use 
     void RunBehavior()
     {
-        Debug.Log("RunBehavior() was called"); 
-
-        Debug.Log("DYNAMIC Execute was called"); 
+        Debug.Log("RunBehavior() was called"); //sanity check to know when function is called 
+        Debug.Log("RB: DYNAMIC Execute() was called"); 
         _behavior.Execute(); //dynamic
 
-        Debug.Log("STATIC Describe Was called"); 
+        Debug.Log("RB: STATIC Describe() Was called"); 
         _behavior.Describe("Static Binding used here."); //static  
+
+        //Oral Exam 
+        Debug.Log("--------------Experimenting for ORAL EXAM---------------"); 
+        ModeBehavior _behavior1 = new ModeBehavior(); 
+        ModeBehavior _behavior2 = new BCModeBehavior(); 
+
+        //1. Dynamically bound method  
+        _behavior1.Execute(); // this calls the overridden method in BCModeBehavior
+        // output: 
+
+        //2. dynamic type  
+        _behavior2.Execute(); // calls the base class method 
+        // output: 
+
+        //3. static bound method 
+        _behavior2.Describe("Awesome"); //still cals the base class method
 
     }
 
     public class ModeBehavior
     {
-        public virtual void Execute() //dynamic 
+        public virtual void Execute() // function to be overwritten later 
         {
-            Debug.Log("Default BC Mode Behavior");
+            Debug.Log("ModeBehavior: Default BC Mode Behavior with virtual");
         } 
 
-        public void Describe(string description) //static 
+        public void Describe(string description) //static function 
         {
-            Debug.Log("Description: " + description ); 
+            Debug.Log("ModeBehavior: Description: " + description ); 
         }
     }
 
-    public class BCModeBehavior: ModeBehavior
+    public class BCModeBehavior: ModeBehavior // inhertits from ModeBehavior 
     {
-        public override void Execute() //this is supposed to be dynamic 
+        // override OR virtual 
+        public override void Execute() // dynamic, replaces the Execute() 
         {
-            Debug.Log("Executing BC Mode ... Specific Behavior"); 
+            Debug.Log("BCModeBehavior: Executing BC Mode ... Dynamic Binding with override. "); 
         }
     }
 }
