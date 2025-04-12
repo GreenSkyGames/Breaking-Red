@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class GoldenApple : PowerUp
+public class GoldenApple : PowerUpTemplate
 {
-    public override void v_applyEffect(PlayerController playerController)
+    public override void applyEffect(PlayerController playerController)
     {
         PlayerHealth playerHealth = playerController.GetComponent<PlayerHealth>();
         if (playerHealth != null)

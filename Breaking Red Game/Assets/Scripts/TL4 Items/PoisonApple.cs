@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class PoisonApple : PowerUp
+public class PoisonApple : PowerUpTemplate
 {
-    public override void v_applyEffect(PlayerController playerController)
+    public override void applyEffect(PlayerController playerController)
     {
         PlayerHealth playerHealth = playerController.GetComponent<PlayerHealth>();
         if (playerHealth != null)

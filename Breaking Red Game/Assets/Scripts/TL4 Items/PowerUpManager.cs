@@ -58,7 +58,7 @@ public class PowerUpManager : MonoBehaviour
     /* This function shows the choicePrompt for all except poison apple
      * For poison apple, applyEffect() is used
      * For others, SetActive() for the choice prompt is set to true and a coroutine starts and uses waitForPlayerInput() */
-    public void handlePowerUpInteraction(PowerUp powerUp, PlayerController playerController)
+    public void handlePowerUpInteraction(PowerUpTemplate powerUp, PlayerController playerController)
     {
         if (powerUp == null) // Check if powerUp object is null before proceeding
         {
@@ -74,10 +74,10 @@ public class PowerUpManager : MonoBehaviour
         {
             AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
             PoisonApple poisonApple = (PoisonApple)powerUp;
-            poisonApple.v_applyEffect(playerController);
+            poisonApple.applyEffect(playerController);
             Destroy(powerUp.gameObject);
         }
-        else if (powerUp.itemType == PowerUp.itemName.OwlsWing || powerUp.itemType == PowerUp.itemName.CanOfTuna)
+        else if (powerUp is OwlsWing || powerUp is CanOfTuna)
         {
             bool isAdded = InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite, powerUp.itemDescription);
             if (isAdded)
@@ -89,6 +89,7 @@ public class PowerUpManager : MonoBehaviour
             {
                 StartCoroutine(showInventoryFullMessage());
             }
+            return;
         }
         else
         {
@@ -103,7 +104,7 @@ public class PowerUpManager : MonoBehaviour
      * If U, applyEffect() is used
      * If L, addToInventory() is used
      * Choice prompt is hidden after the player makes a choice and time resume */
-    private IEnumerator _waitForPlayerInput(PowerUp powerUp, PlayerController playerController)
+    private IEnumerator _waitForPlayerInput(PowerUpTemplate powerUp, PlayerController playerController)
     {
         bool inputReceived = false;
 
@@ -123,33 +124,35 @@ public class PowerUpManager : MonoBehaviour
                     {
                         StartCoroutine(showHealthMessage());
                     }
-
-                    AudioManager.instance.Play("PowerUpSound");
-                    GoldenApple goldenApple = (GoldenApple)powerUp;
-                    goldenApple.v_applyEffect(playerController);
+                    else
+                    {
+                        AudioManager.instance.Play("PowerUpSound");
+                        GoldenApple goldenApple = (GoldenApple)powerUp;
+                        goldenApple.applyEffect(playerController);
+                    }
                 }
                 else if (powerUp is BerserkerBrew)
                 {
                     AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
                     BerserkerBrew berserkerBrew = (BerserkerBrew)powerUp;
-                    berserkerBrew.v_applyEffect(playerController);  // Calls the BerserkerBrew-specific method
+                    berserkerBrew.applyEffect(playerController);  // Calls the BerserkerBrew-specific method
                 }
                 else if (powerUp is EnchantedBerry)
                 {
                     AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
                     EnchantedBerry enchantedBerry = (EnchantedBerry)powerUp;
-                    enchantedBerry.v_applyEffect(playerController);
+                    enchantedBerry.applyEffect(playerController);
                 }
                 else if (powerUp is RedShoes)
                 {
                     AudioManager.instance.Play("PowerUpSound");
                     RedShoes redShoes = (RedShoes)powerUp;
-                    redShoes.v_applyEffect(playerController);
+                    redShoes.applyEffect(playerController);
                 }
                 else
                 {
                     AudioManager.instance.Play("PowerUpSound"); // play power up sound effect
-                    powerUp.v_applyEffect(playerController);  // Calls the base method for other power-ups
+                    powerUp.applyEffect(playerController);  // Calls the base method for other power-ups
                 }
 
                 Destroy(powerUp.gameObject);

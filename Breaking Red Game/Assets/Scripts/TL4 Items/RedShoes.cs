@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class RedShoes : PowerUp
+public class RedShoes : PowerUpTemplate
 {
-    public override void v_applyEffect(PlayerController playerController)
+    public override void applyEffect(PlayerController playerController)
     {
         if (playerController != null)
         {
