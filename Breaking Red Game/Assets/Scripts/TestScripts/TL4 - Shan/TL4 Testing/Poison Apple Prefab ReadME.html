@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poison Apple Prefab</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+
+    .text-content {
+      max-width: 800px;
+    }
+
+    .floating-video {
+      position: fixed;
+      top: 40px;
+      left: 300px; /* Change to left: 40px to pin it to the left */
+      width: 350px;
+      z-index: 100;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .floating-video video {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 5px;
+    }
+
+    .stars {
+      font-size: 1.2em;
+      color: black;
+    }
+
+    .meta, .description, .components, .setup, .requirements {
+      margin: 20px 0;
+    }
+
+    ul {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Video -->
+  <div class="floating-video">
+    <video controls>
+      <source src="Poison Apple.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Main Text Content -->
+  <div class="text-content">
+    <h1>Poison Apple</h1>
+    <div class="stars">★★★★★ (60,816 reviews)</div>
+
+    <div class="meta">
+      <p><strong>Author:</strong> Shan Peck</p>
+      <p><strong>Price:</strong> $0.99</p>
+      <p><strong>Version:</strong> 1.0</p>
+    </div>
+
+    <div class="description">
+      <p><strong>Description:</strong> This prefab represents a harmful Poison Apple item in Unity. It includes essential components for collision detection and effects.</p>
+    </div>
+
+    <div class="components">
+      <p><strong>Components:</strong></p>
+      <ul>
+        <li><strong>Transform:</strong> Customize scale of the Poison Apple to any size.</li>
+        <li><strong>Poison Apple Script:</strong> Controls the Poison Apple’s effect, which is decreasing player health.
+          <ul>
+            <li>Attach the Poison Apple script and select Poison Apple as the Item Type to make the effects occur.</li>
+            <li>Customize effect amount to change the amount of health that the player loses from the Poison Apple.</li>
+          </ul>
+        </li>
+        <li><strong>Sprite Renderer:</strong> Displays the Poison Apple’s sprite.
+          <ul>
+            <li>Customize the Sprite Renderer component’s Sprite field to change the Poison Apple’s appearance.</li>
+            <li>Ensure that the sorting layer and order in layer are set appropriately to display correctly in your game’s environment.</li>
+          </ul>
+        </li>
+        <li><strong>Circle Collider 2D:</strong> Provides a collision boundary around the Poison Apple.
+          <ul>
+            <li>Set IsTrigger to true so that the item reacts to colliding with the Player.</li>
+            <li>Set the radius to match the size of the Poison Apple sprite for accurate collision detection.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="setup">
+      <p><strong>Setup Instructions:</strong> Drag the Poison Apple prefab into the scene. Ensure the Poison Apple script employs appropriate effects. Resize to your liking with the Transform scale field. Adjust the Circle Collider 2D to ensure accurate collision detection with the Player. Test the Poison Apple in play mode to confirm behavior.</p>
+    </div>
+
+    <div class="requirements">
+      <p><strong>Requirements:</strong> Unity 6000.0.38f1 or later</p>
+    </div>
+  </div>
+</body>
+</html>
+
