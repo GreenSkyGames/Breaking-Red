@@ -28,147 +28,58 @@ using UnityEngine;
 
 public class Level1 : LevelLoader
 {
-    interface ILevelComponent
+    public override void loadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab)
     {
-        void Build(LevelLoader loader,
-                   GameObject normalPassagePrefab,
-                   GameObject lockedPassagePrefab,
-                   GameObject damagingEnvPrefab,
-                   GameObject movingPlatformPrefab,
-                   GameObject movingPlatformTilePrefab,
-                   GameObject slidingDoorPrefab);
+        LevelBuilder builder = new LevelBuilder();
+        BuildLevel(builder); // Step 1: blueprint creation
+        LoadBlueprint(builder.GetInstructions()); // Step 2: actual instantiation handled by base
     }
 
-    class NormalPassageComponent : ILevelComponent
+    private void BuildLevel(ILevelBlueprintBuilder builder)
     {
-        Vector3 position;
-        string sprite;
-        string label;
+        // Add normal passages
+        builder.AddNormalPassage("House_tileset_30", new Vector3(-107.5f, -18.700003f, 0), "IL1");
+        builder.AddNormalPassage("House_Red_4", new Vector3(-1.5003f, 0.29983f, 0), "IL1.1");
+        builder.AddNormalPassage("House_red_5", new Vector3(-0.5003f, 0.29983f, 0), "IL1.1");
+        // builder.AddNormalPassage("House_tileset_30", new Vector2(-0.83f, -3.14f), "L2"); // Optional: commented in original
 
-        public NormalPassageComponent(string sprite, Vector3 position, string label)
-        {
-            this.sprite = sprite;
-            this.position = position;
-            this.label = label;
-        }
+        // Create doors and locked passage
+        GameObject door1 = CreateSlidingDoor(null, "Tree_45", new Vector3(9.3881f, -7.380007f, 0), 0, 2f, 1f);
+        GameObject door2 = CreateSlidingDoor(null, "Tree_45", new Vector3(9.3881f, -9.220007f, 0), 0, -2f, 1f);
 
-        public void Build(LevelLoader loader,
-                          GameObject normalPassagePrefab,
-                          GameObject lockedPassagePrefab,
-                          GameObject damagingEnvPrefab,
-                          GameObject movingPlatformPrefab,
-                          GameObject movingPlatformTilePrefab,
-                          GameObject slidingDoorPrefab)
-        {
-            ((Level1)loader).CreateNormalPassage(normalPassagePrefab, sprite, position, label);
-        }
+        builder.AddLockedPassage("cavetiles_2107", new Vector3(11.4997f, -8.70017f, 0), door1, door2, "L2");
+
+        // Add damaging environment
+        builder.AddDamagingEnv("Furniture_39", new Vector3(-110.5f, -10.703f, 0));
     }
 
-    class SlidingDoorComponent : ILevelComponent
+    private void LoadBlueprint(List<LevelBuilder.TerrainInstruction> instructions)
     {
-        string sprite;
-        Vector3 position;
-        float moveX, moveY, speed;
-        public GameObject doorResult; // stores the created door
-
-        public SlidingDoorComponent(string sprite, Vector3 position, float moveX, float moveY, float speed)
+        foreach (var instr in instructions)
         {
-            this.sprite = sprite;
-            this.position = position;
-            this.moveX = moveX;
-            this.moveY = moveY;
-            this.speed = speed;
-        }
+            switch (instr.type)
+            {
+                case "NormalPassage":
+                    CreateNormalPassage(null, instr.sprite, instr.position, instr.levelID);
+                    break;
 
-        public void Build(LevelLoader loader,
-                          GameObject normalPassagePrefab,
-                          GameObject lockedPassagePrefab,
-                          GameObject damagingEnvPrefab,
-                          GameObject movingPlatformPrefab,
-                          GameObject movingPlatformTilePrefab,
-                          GameObject slidingDoorPrefab)
-        {
-            doorResult = ((Level1)loader).CreateSlidingDoor(slidingDoorPrefab, sprite, position, moveX, moveY, speed);
-        }
-    }
+                case "LockedPassage":
+                    CreateLockedPassage(null, instr.sprite, instr.position, instr.door1, instr.door2, instr.levelID);
+                    break;
 
-    class LockedPassageComponent : ILevelComponent
-    {
-        string sprite, label;
-        Vector3 position;
-        SlidingDoorComponent door1Ref, door2Ref;
+                case "DamagingEnv":
+                    CreateDamagingEnv(null, instr.sprite, instr.position);
+                    break;
 
-        public LockedPassageComponent(string sprite, Vector3 position, SlidingDoorComponent door1, SlidingDoorComponent door2, string label)
-        {
-            this.sprite = sprite;
-            this.position = position;
-            this.door1Ref = door1;
-            this.door2Ref = door2;
-            this.label = label;
-        }
+                case "SlidingDoor":
+                    CreateSlidingDoor(null, instr.sprite, instr.position, instr.moveX, instr.moveY, instr.moveTime);
+                    break;
 
-        public void Build(LevelLoader loader,
-                          GameObject normalPassagePrefab,
-                          GameObject lockedPassagePrefab,
-                          GameObject damagingEnvPrefab,
-                          GameObject movingPlatformPrefab,
-                          GameObject movingPlatformTilePrefab,
-                          GameObject slidingDoorPrefab)
-        {
-            ((Level1)loader).CreateLockedPassage(lockedPassagePrefab, sprite, position, door1Ref.doorResult, door2Ref.doorResult, label);
-        }
-    }
-
-    class DamagingEnvComponent : ILevelComponent
-    {
-        string sprite;
-        Vector3 position;
-
-        public DamagingEnvComponent(string sprite, Vector3 position)
-        {
-            this.sprite = sprite;
-            this.position = position;
-        }
-
-        public void Build(LevelLoader loader,
-                          GameObject normalPassagePrefab,
-                          GameObject lockedPassagePrefab,
-                          GameObject damagingEnvPrefab,
-                          GameObject movingPlatformPrefab,
-                          GameObject movingPlatformTilePrefab,
-                          GameObject slidingDoorPrefab)
-        {
-            ((Level1)loader).CreateDamagingEnv(damagingEnvPrefab, sprite, position);
-        }
-    }
-
-    public override void loadLevel(GameObject normalPassagePrefab,
-                                   GameObject lockedPassagePrefab,
-                                   GameObject damagingEnvPrefab,
-                                   GameObject movingPlatformPrefab,
-                                   GameObject movingPlatformTilePrefab,
-                                   GameObject slidingDoorPrefab)
-    {
-        // Build the components list
-        var components = new List<ILevelComponent>();
-
-        components.Add(new NormalPassageComponent("House_tileset_30", new Vector3(-107.5f, -18.700003f, 0), "IL1"));
-        components.Add(new NormalPassageComponent("House_Red_4", new Vector3(-1.5003f, 0.29983f, 0), "IL1.1"));
-        components.Add(new NormalPassageComponent("House_red_5", new Vector3(-0.5003f, 0.29983f, 0), "IL1.1"));
-
-        var door1 = new SlidingDoorComponent("Tree_45", new Vector3(9.3881f, -7.380007f, 0), 0, 2f, 1f);
-        var door2 = new SlidingDoorComponent("Tree_45", new Vector3(9.3881f, -9.220007f, 0), 0, -2f, 1f);
-        components.Add(door1);
-        components.Add(door2);
-
-        components.Add(new LockedPassageComponent("cavetiles_2107", new Vector3(11.4997f, -8.70017f, 0), door1, door2, "L2"));
-
-        components.Add(new DamagingEnvComponent("Furniture_39", new Vector3(-110.5f, -10.703f, 0)));
-
-        // Execute all component builds
-        foreach (var c in components)
-        {
-            c.Build(this, normalPassagePrefab, lockedPassagePrefab, damagingEnvPrefab, movingPlatformPrefab, movingPlatformTilePrefab, slidingDoorPrefab);
+                case "MovingPlatform":
+                    CreatePlatform(null, null, instr.position, instr.tileOffsets, instr.moveX, instr.moveY, instr.moveTime);
+                    break;
+            }
         }
     }
 }
+

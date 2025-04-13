@@ -10,28 +10,22 @@ using UnityEngine.UIElements;
 
 public class TerrainObjects : MonoBehaviour
 {
-    /*public Vector3 position;
-    public string spriteName;
-
-    public TerrainObjects(Vector3 pos, string sprite)
-    {
-        position = pos;
-        spriteName = sprite;
-    }
-
-    public virtual void Interact(Collider2D other)
-    {
-        Debug.Log("Terrain object interacts");
-    }*/
-
-    /*public virtual void Spawn()
-    {
-        transform.position = spawnPos;
-        GetComponent<SpriteRenderer>().sprite = terrainSprite;
-    }*/
-
     public Vector3 position;
     public string spriteName;
+
+    public virtual GameObject Build(GameObject prefab)
+    {
+        GameObject obj = Instantiate(prefab, position, Quaternion.identity);
+        TerrainObjects terrain = obj.GetComponent<TerrainObjects>();
+        if(terrain == null)
+        {
+            terrain = obj.AddComponent<TerrainObjects>();
+        }
+        terrain.position = position;
+        terrain.spriteName = spriteName;
+
+        return obj;
+    }
 
     public void Spawn(Vector3 position)
     {
@@ -41,12 +35,7 @@ public class TerrainObjects : MonoBehaviour
     public void setSprite(string spriteName)
     {
         //Load and set the sprite based on spriteName
-        /*SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        if (renderer != null)
-        {
-            renderer = gameObject.AddComponent<SpriteRenderer>();
-        }*/
-
+        this.spriteName = spriteName;
         Sprite sprite = Resources.Load<Sprite>($"LevelSprites/{spriteName}");
         if (sprite != null)
         {

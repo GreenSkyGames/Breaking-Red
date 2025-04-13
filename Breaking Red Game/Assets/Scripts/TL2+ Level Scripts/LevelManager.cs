@@ -100,6 +100,7 @@ public class LevelManager : MonoBehaviour
         {
             case "L1":
                 levelLoader = new Level1();
+
                 break;
             case "L2":
                 Debug.Log("Successfully Loaded Level 2");
