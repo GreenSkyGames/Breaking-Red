@@ -53,7 +53,6 @@ public class LevelManager : MonoBehaviour
     }*/
 
     public LevelLoader levelLoader;
-    public GameObject player;
     public GameObject normalPassagePrefab;
     public GameObject lockedPassagePrefab;
     public GameObject damagingEnvPrefab;
