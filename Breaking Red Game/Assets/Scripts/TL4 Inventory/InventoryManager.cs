@@ -16,7 +16,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject inventoryMenu;
     public ClueInventory clueInventory;
     public ItemSlot[] itemSlot;
-    public static InventoryManager sInstance;
+    private static InventoryManager _sInstance;
     public ItemSlot selectedSlot;
     public PowerUpManager powerUpManager;
     public Sprite emptySprite;
@@ -60,7 +60,7 @@ public class InventoryManager : MonoBehaviour
     }
 
     /* This functions function sets the instance of InventoryManager
-     * Singleton pattern to ensure one instance of InventoryManager */
+     * Singleton pattern to ensure one instance of InventoryManager 
     private void Awake()
     {
         if (sInstance == null)
@@ -74,6 +74,24 @@ public class InventoryManager : MonoBehaviour
         }
 
 
+    }*/
+
+    private InventoryManager(){}
+    public static InventoryManager sInstance
+    {
+        get
+        {
+            if (_sInstance == null)
+            {
+                _sInstance =FindObjectOfType<InventoryManager>();
+                if (_sInstance == null)
+                {
+                    GameObject newManager = new GameObject("InventoryManager");
+                    _sInstance = newManager.AddComponent<InventoryManager>();
+                }
+            }
+            return _sInstance;
+        }
     }
 
     /* This function adds an item to the inventory using its name and sprite
