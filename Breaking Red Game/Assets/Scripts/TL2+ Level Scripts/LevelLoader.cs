@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public abstract class LevelLoader
+public class LevelLoader
 {
     protected void CreateNormalPassage(GameObject prefab, string spriteName, Vector3 position, string tag, float rotationZ = 0f)
     {
@@ -60,10 +60,11 @@ public abstract class LevelLoader
     public virtual GameObject CreatePlatform(GameObject platformPrefab, GameObject tilePrefab, Vector3 worldPosition, System.Collections.Generic.List<Vector2> tileOffsets, float moveX, float moveY, float moveTime)
     {
         GameObject platform = GameObject.Instantiate(platformPrefab, worldPosition, Quaternion.identity);
-        platform.tag = "MovingPlatform";
         MovingPlatform mp = platform.GetComponent<MovingPlatform>();
         if (mp != null)
         {
+            mp.tag = "MovingPlatform";
+            Debug.Log("tag set to " + mp.tag);
             mp.SetMovementGoals(moveX, moveY, moveTime);
         }
 
@@ -72,7 +73,7 @@ public abstract class LevelLoader
             GameObject tile = GameObject.Instantiate(tilePrefab, platform.transform);
             tile.transform.localPosition = new Vector3(offset.x, offset.y, 0);
 
-            //tile.tag = "MovingPlatform";
+            tile.tag = "MovingPlatform";
 
             if (tile.GetComponent<Collider2D>() == null)
             {

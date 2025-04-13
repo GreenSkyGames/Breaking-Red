@@ -25,8 +25,6 @@ public class MovingPlatform : TerrainObjects
     private Rigidbody2D _playerRigidbody;
     private PlatformTest _platformTest;
 
-    [SerializeField] private Tilemap tilemap;
-
     public void SetMovementGoals(float horGoal, float vertGoal, float moveTime)
     {
         pHorGoal = horGoal;
@@ -100,10 +98,10 @@ _prevPos = currentPosition; // Update the previous position
         if (collider.CompareTag("Player"))
         {
             _playerRigidbody = collider.GetComponent<Rigidbody2D>();
-            if (tilemap != null && tilemap.gameObject.activeSelf)
+            /*if (tilemap != null && tilemap.gameObject.activeSelf)
             {
                 tilemap.gameObject.SetActive(false); // Hide the tilemap layer
-            }
+            }*/
 
             // For Testing: Notify the test script that the player entered the platform
             PlatformTest _platformTest = FindFirstObjectByType<PlatformTest>();
@@ -128,10 +126,10 @@ _prevPos = currentPosition; // Update the previous position
             {
                 _playerRigidbody = null;
             }
-            if (tilemap != null && !tilemap.gameObject.activeSelf)
+            /*if (tilemap != null && !tilemap.gameObject.activeSelf)
             {
                 tilemap.gameObject.SetActive(true); // Show the tilemap layer
-            }
+            }*/
 
             //For testing:
             // Notify the test script that the player exited the platform

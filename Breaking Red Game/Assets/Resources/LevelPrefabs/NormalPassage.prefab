@@ -103,8 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
   spriteName: 
-  fadePanel: {fileID: 0}
-  passagePrefab: {fileID: 0}
+  fadePanel: {fileID: 6297348796795660399, guid: c7f0bb25cbb2c794ea028c551eebb699, type: 3}
 --- !u!61 &2491933063600645029
 BoxCollider2D:
   m_ObjectHideFlags: 0

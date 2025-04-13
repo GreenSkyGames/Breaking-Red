@@ -129,30 +129,24 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("MovingPlatform"))
         {
             isOnPlatform = true;
-            Debug.Log("Player is on the platform");
         }
         else if (other.CompareTag("IL2") || other.CompareTag("L2") || other.CompareTag("L3") || other.CompareTag("IL3") || other.CompareTag("L4") || other.CompareTag("L5"))
         {
-            Debug.Log("inside level checker: " + other);
             isOnBoundary = false;
-            //isOnPlatform = true;
+            isOnPlatform = true;
             justTeleported = true;
             StartCoroutine(ResetTeleportFlag());
         }
         else if (other.CompareTag("Ground"))
         {
-            //isOnBoundary = false;
             grounded = true;
         }
         else if (other.CompareTag("Boundary"))
         {
-            grounded = false;
+            //grounded = false;
             isOnBoundary = true;
-            Debug.Log("Player is on the boundary");
-            Debug.Log("onPlatform: " + isOnPlatform + " and teleported: " + justTeleported + " and grounded" + grounded);
             if (!isOnPlatform && !justTeleported && !grounded)
             {
-                Debug.Log("Scaling for some reason? onPlatform: " + isOnPlatform + " and teleported: " + justTeleported + " and grounded" + grounded);
                 scales();
             }
         }
@@ -160,9 +154,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator ResetTeleportFlag()
     {
-        Debug.Log("ResettingFlag");
         yield return new WaitForSeconds(2f);
-        Debug.Log("Flag Rest");
         justTeleported = false;
     }
 
@@ -172,13 +164,15 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("MovingPlatform"))
         {
             isOnPlatform = false;
-            Debug.Log("Player is no longer on the platform");
             // Check if player is now on the boundary layer after stepping off the platform
-            if (isOnBoundary && !justTeleported && !grounded)
+            /*if (isOnBoundary && !justTeleported && !grounded)
             {
                 Debug.Log("onBoundary: " + isOnBoundary + " teleported: " + justTeleported + " grounded: " + grounded + " platform: " + isOnPlatform);
                 scales();
-            }
+            }*/
+        }
+        else if(other.CompareTag("Ground")){
+            grounded = false;
         }
         else if (other.CompareTag("Boundary"))
         {

@@ -13,14 +13,31 @@ using UnityEngine.UI;
 
 public class NormalPassage : TerrainObjects
 {
-    public CanvasGroup fadePanel;
-
-    /*public NormalPassage(Vector3 pos, string sprite) : base(pos, sprite)
+    [SerializeField] private GameObject fadePanel;
+    private CanvasGroup fadePanelInstance;
+    protected virtual void Start()
     {
-        GameObject passageInstance = Instantiate(passagePrefab, position, Quaternion.identity);
-        passageInstance.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(sprite);
-        fadePanel = passageInstance.GetComponent<CanvasGroup>();
-    }*/
+        if (fadePanel != null)
+        {
+            GameObject overlay = Instantiate(fadePanel, transform); // Parent it to this object
+            fadePanelInstance = overlay.GetComponent<CanvasGroup>();
+
+            if (fadePanelInstance != null)
+            {
+                fadePanelInstance.alpha = 0f;
+                overlay.SetActive(true);
+                Debug.Log("Fade panel instantiated and ready.");
+            }
+            else
+            {
+                Debug.LogWarning("Instantiated fadePanel is missing CanvasGroup!");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("fadePanelPrefab is not assigned!");
+        }
+    }
     /* This code checks the tag of an object when it collides with a passageway and plays a sound upon impact if it is a player
      * It also chooses the next destination to transport the user to based on the current tag of the passageway and sends that to the getDestination function*/
     public virtual void OnTriggerEnter2D(Collider2D other)
@@ -60,6 +77,7 @@ public class NormalPassage : TerrainObjects
      * */
     private IEnumerator teleportWithFade(Collider2D player, Vector2 newPosition, Rigidbody2D rb)
     {
+        Debug.Log("teleporting with fade");
         yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
         BackgroundMusic.instance.ChangeBackgroundMusic(gameObject.tag); // Change BGM
         player.transform.position = newPosition; // Move player
@@ -76,32 +94,32 @@ public class NormalPassage : TerrainObjects
      * It applies the Lerp function from the math library to cause the natural fade out for a specific elapsed time*/
     private IEnumerator fadeToBlack(float duration)
     {
-        if (fadePanel == null) yield break;
+        if (fadePanelInstance== null) yield break;
 
         float elapsed = 0;
         while (elapsed < duration)
         {
-            fadePanel.alpha = Mathf.Lerp(0, 1, elapsed / duration);
+            fadePanelInstance.alpha = Mathf.Lerp(0, 1, elapsed / duration);
             elapsed += Time.deltaTime;
             yield return null;
         }
-        fadePanel.alpha = 1;
+        fadePanelInstance.alpha = 1;
     }
 
     /* This sets an enumerator to cause the screen to return back to normal from a black panel naturally in the game
      * It applies the Lerp function from the math library to cause the natural fade in for a specific elapsed time*/
     private IEnumerator fadeFromBlack(float duration)
     {
-        if (fadePanel == null) yield break;
+        if (fadePanelInstance== null) yield break;
 
         float elapsed = 0;
         while (elapsed < duration)
         {
-            fadePanel.alpha = Mathf.Lerp(1, 0, elapsed / duration);
+            fadePanelInstance.alpha = Mathf.Lerp(1, 0, elapsed / duration);
             elapsed += Time.deltaTime;
             yield return null;
         }
-        fadePanel.alpha = 0;
+        fadePanelInstance.alpha = 0;
     }
     /* This function determines where a player should go based on the tag of the passageway they make contact with
      * It returns a value back to the original OnTriggerEnter2D function from above and properly changes the scenes as necessary for some levels*/

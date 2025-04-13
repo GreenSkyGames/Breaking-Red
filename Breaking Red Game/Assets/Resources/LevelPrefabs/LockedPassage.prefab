@@ -149,6 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
   spriteName: 
-  fadePanel: {fileID: 0}
+  fadePanel: {fileID: 6297348796795660399, guid: c7f0bb25cbb2c794ea028c551eebb699, type: 3}
   isUnlocked: 0
   doorOverlay: {fileID: 5389576429954943758, guid: 308793e93123aaf40aa461a2551b3f74, type: 3}

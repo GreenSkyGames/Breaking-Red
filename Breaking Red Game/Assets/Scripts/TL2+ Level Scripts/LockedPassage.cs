@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,13 +24,9 @@ public class LockedPassage : NormalPassage
         slidingDoor2 = door2;
     }
 
-    private void Start()
+    protected override void Start()
     {
-        /*if (doorOverlay != null)
-        {
-            doorOverlay.gameObject.SetActive(true);
-            doorOverlay.alpha = 1; // Fully visible (blocking passageway)
-        }*/
+        base.Start();
         if (doorOverlay != null)
         {
             GameObject overlay = Instantiate(doorOverlay, transform); // Parent it to this object

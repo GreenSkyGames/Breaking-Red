@@ -6,11 +6,6 @@ using static UnityEditor.PlayerSettings;
 
 public class Level2 : LevelLoader
 {
-    public GameObject normalPassagePrefab;
-    public GameObject lockedPassagePrefab;
-    public GameObject damagingEnvPrefab;
-    public GameObject slidingDoorPrefab;
-    public GameObject movingPlatformTilePrefab;
     public override void loadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab)
     {
         //CreateNormalPassage(normalPassagePrefab, "House_tileset_30", new Vector2(-0.83f, -3.14f), "L2");
@@ -29,22 +24,22 @@ public class Level2 : LevelLoader
         CreateNormalPassage(normalPassagePrefab, "cavetiles_2107", new Vector2(78.35967f, -25.06817f), "L1", 180f);
         CreateNormalPassage(normalPassagePrefab, "cavetiles_179", new Vector2(185.2867f, 66.96183f), "S1");
 
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(32.78864f, 38.74082f, 0));
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(32.05822f, 38.02554f, 0));
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(33.36012f, 37.98012f, 0));
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(31.38456f, 37.23834f, 0));
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(34.63929f, 37.09453f, 0));
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(55.88639f, 28.8788f, 0));
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(55.68f, 28.219f, 0));
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(55.64f, 27.555f, 0));
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(55.94f, 26.84f, 0));
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(77.965f, 35.28f, 0), -90f);
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(77.243f, -35.28f, 0), -90f);
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(76.52f, 35.28f, 0), -90f);
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(154.11f, 49.06f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(153.3796f, 48.34472f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(154.6815f, 48.2993f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(152.7059f, 47.55753f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(155.9606f, 47.41371f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(177.2077f, 39.19798f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(177.0039f, 38.53856f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(176.968f, 37.87915f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(177.2677f, 37.15979f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(199.29f, 45.6f, 0), -90f);
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(198.57f, 45.6f, 0), -90f);
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(197.85f, 45.6f, 0), -90f);
 
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(25.34f, 48.65f, 0));
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(25.274f, 49.44f, 0));
-        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(-24.95f, 50.29f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(146.6695f, 58.96919f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(146.5954f, 59.76537f, 0));
+        CreateDamagingEnv(damagingEnvPrefab, "2_0", new Vector3(146.2807f, 60.61709f, 0));
 
         var I3toI4 = new System.Collections.Generic.List<Vector2>();
         AddRectTiles(I3toI4, -3, 11, -4, -1);
