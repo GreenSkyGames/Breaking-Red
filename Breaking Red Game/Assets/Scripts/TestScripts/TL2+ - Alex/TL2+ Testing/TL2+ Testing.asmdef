@@ -1,0 +1,6 @@
+{
+    "name": "TL2+Testing",
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}

@@ -152,6 +152,5 @@ MonoBehaviour:
   pHorGoal: 0
   pVertGoal: 2
   pMoveTime: 1
-  tilemap: {fileID: 0}
   _unlocked: 0
   _speed: 1
