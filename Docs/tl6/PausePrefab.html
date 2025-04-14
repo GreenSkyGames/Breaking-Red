@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pause Menu Asset - Liz Beltran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .price {
+      font-size: 1.2em;
+      color: #27ae60;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .note {
+      font-style: italic;
+      color: #777;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .icon {
+      width: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Unity Pause Menu Asset</h1>
+
+  <div class="section">
+    <strong>Author:</strong> Liz Beltran<br>
+    <strong>Version:</strong> 1.0<br>
+    <strong class="price">$20.00</strong>
+  </div>
+
+  <div class="section">
+    <h2>Description</h2>
+    <p>This asset provides a ready-to-use pause menu for your Unity game. It eliminates the need to build a pause menu from scratch and helps you streamline your in-game UI experience.</p>
+    <p>The recording below displays the Pause Menu behavior and how it looks like in the context of the game "Breaking Red"</p>
+    <img src="LB_PauseRecording.mov" alt="Pause Menu Recording">
+  </div>
+
+  <div class="section">
+    <h2>Components</h2>
+    <ul>
+      <li><img class="icon" src="images/icons/resume.png" alt=""> <strong>Resume Game:</strong> Un-pauses the game and returns to gameplay.</li>
+      <li><img class="icon" src="images/icons/menu.png" alt=""> <strong>Main Menu:</strong> Navigates the user back to the main menu screen.</li>
+      <li><img class="icon" src="images/icons/save.png" alt=""> <strong>Save Game:</strong> Triggers the game-saving functionality. <span class="note">(Requires a separate save system integration.)</span></li>
+      <li><img class="icon" src="images/icons/inventory.png" alt=""> <strong>Inventory:</strong> Opens the player’s inventory.</li>
+      <li><img class="icon" src="images/icons/quit.png" alt=""> <strong>Quit Game:</strong> Exits the game application.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Setup Instructions</h2>
+    <ul>
+      <li><img class="icon" src="images/icons/unity.png" alt=""> Connect a PauseMenu script to the Pause menu canvas prefab through the inspector. The script should include the behaviors for the following buttons: Resume, Main Menu, Save, Inventory, Quit Game. </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Requirements</h2>
+    <ul>
+      <li><img class="icon" src="images/icons/unity.png" alt=""> Unity 6000.0.38f1 or later.</li>
+      <li><strong>Input:</strong> Unity Input System or legacy Input Manager.</li>
+      <li>Save and inventory system for full button functionality.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Usage</h2>
+    <ul>
+      <li>Press the assigned pause key to bring up the menu.</li>
+      <li>Menu UI is built with Unity’s Canvas, Panel, and Buttons for easy editing.</li>
+    </ul>
+  </div>
+</body>
+</html>
+
