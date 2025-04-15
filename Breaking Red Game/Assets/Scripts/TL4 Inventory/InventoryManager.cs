@@ -14,7 +14,7 @@ public class InventoryManager : MonoBehaviour
     public int effectAmount;
     public int maxInventorySize;
     public GameObject inventoryMenu;
-    public ClueInventory clueInventory;
+    public ClueInventoryUIManager clueInventoryUIManager;
     public ItemSlot[] itemSlot;
     private static InventoryManager _sInstance;
     public ItemSlot selectedSlot;
@@ -27,9 +27,16 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        int cluesGathered = FindObjectOfType<DialogueManager>().cluesGathered.Count;
-        int maxInventorySize = clueInventory.v_getInventorySize(cluesGathered);
+        Invoke("CheckClueSize", 0.3f); // wait a frame for safety
     }
+
+    void CheckClueSize()
+    {
+        maxInventorySize = clueInventoryUIManager.GetCurrentClueInventorySize();
+        Debug.Log("Clue inventory size: " + maxInventorySize);
+    }
+
+
 
     /* This function updates the scene by toggling the inventory if the player clicks I
      *	It only uses the function toggleInventory() */
@@ -56,7 +63,6 @@ public class InventoryManager : MonoBehaviour
         {
             removeFromInventory();
         }
-
     }
 
     /* This functions function sets the instance of InventoryManager
@@ -100,6 +106,10 @@ public class InventoryManager : MonoBehaviour
      * Uses isOccupied bool and updateInventoryUI() from ItemSlot script */
     public bool addToInventory(string itemName, Sprite itemSprite, string itemDescription)
     {
+        Debug.Log($"maxInventory = " + maxInventorySize);
+        /*for(int i = 0; i < itemSlot.Length; i++){
+            Debug.Log($"Item slot: " + itemSlot[i] + "\n");
+        }
         if (itemSlot.Length <= maxInventorySize)
         {
             for (int i = 0; i < itemSlot.Length; i++)
@@ -109,6 +119,16 @@ public class InventoryManager : MonoBehaviour
                     itemSlot[i].updateInventoryUI(itemName, itemSprite, itemDescription);
                     return true;
                 }
+            }
+        }*/
+        // Iterate through only the currently available active slots (up to maxInventorySize)
+        for (int i = 0; i < maxInventorySize; i++)
+        {
+            if (itemSlot[i] != null && itemSlot[i].isOccupied == false)
+            {
+                // Update the inventory UI for the first available slot
+                itemSlot[i].updateInventoryUI(itemName, itemSprite, itemDescription);
+                return true; // Successfully added item to the inventory
             }
         }
         Debug.Log("Inventory is full or slot invalid!");

@@ -1,0 +1,58 @@
+<html>
+
+<h2>The Riding Hood Readme File</h2>
+<video width="320" height="240" controls>
+    <source src="Riding-Hood-Pt1.mov" type="video/mp4">
+</video>
+<video width="320" height="240" controls>
+    <source src="Riding-Hood-Pt2.mov" type="video/mp4">
+</video>
+
+<div><b>Description:</b> In the CharacterSelection scene the user picks Riding Hood's color. <br><br>
+</div>
+
+<div>
+    <b>Components:</b>
+    <ol>
+        <li>Sprite Renderer<br>
+            On layer level 5 to ensure Riding Hood can be seen.<br></li>
+
+        <li>Animator<br>
+            Controls Riding Hoods animation from Idle, Walking, and Attacking.<br></li>
+
+        <li>Rigidbody 2D<br>
+            Unity's built-in physics manager.<br>
+        <li>Capsule Collider 2D<br>
+            Provides a boundary for collision, giving Riding Hood physics.</li>
+
+            
+        <li>Character Selection Test<br>
+            Testing Next Button, Back Button, and Spamming these Buttons<br></li>        
+        <li>Character Manager<br>
+            Controls the Next Button, Back Button, and Play Button before transitioning to the Level 1 Scene<br>
+            Saves the selected Riding Hood for the user.<br></li>
+        <li>Player Manager<br>
+            Ensures that the Riding Hood picked by the user is properly placed into environment in Level 1 Scene.<br>
+            Since Riding Hood is a prefab, the VirtualCinemachine Camera is found and made to target Riding Hood movements.<br>
+        </li>
+        <li>Player Health<br>
+            The activation script when the Player is attacked.<br>
+            This activated the HealthBarUI to adjust acordingly.<br>
+        </li>
+    </ol>
+</div>
+
+<div><b>Setup Instructions: </b><br>
+Drag the Player Manager script into the Player Game Object.<br>
+Check that the default prefab, Red, is working with the environment.<br>
+Ensure each of the prefabs are the same and work accordingly with the environment
+</div>
+<br>
+
+<div><b>Requirements: </b><br>
+    Unity 6000.0.38f1<br>
+    TextMeshPro<br>
+    Ink Unity Integration<br>
+</div>
+
+</html>

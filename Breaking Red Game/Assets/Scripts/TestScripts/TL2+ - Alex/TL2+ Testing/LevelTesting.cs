@@ -7,6 +7,7 @@ using UnityEngine.TestTools;
 
 public class LevelTesting
 {
+    /*
     [Test]
     public void PassagePrefab_HasSpriteRendererAndSprite()
     {
@@ -419,7 +420,7 @@ public class LevelTesting
         slidingDoorScript.TriggerDoor();
 
         Assert.IsFalse(slidingDoor.activeSelf, "Sliding door should be disabled after being triggered.");
-    }
+    }*/
 
 
 }

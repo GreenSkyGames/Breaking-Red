@@ -8,8 +8,13 @@ public class ClueInventoryUIManager : MonoBehaviour
 
     void Start()
     {
-        inventoryBase = new ClueInventory(); // initializw
+        inventoryBase = new ClueInventory(); // initialize
         updateSlotVisibility();
+    }
+
+    public int GetCurrentClueInventorySize()
+    {
+        return inventoryBase.v_getInventorySize(cluesGathered);
     }
 
     public void updateSlotVisibility()
@@ -20,5 +25,7 @@ public class ClueInventoryUIManager : MonoBehaviour
         {
             itemSlots[i].SetActive(i < size);
         }
+        InventoryManager.sInstance.maxInventorySize = size;
+        Debug.Log($"changed maxInventorySize to " + InventoryManager.sInstance.maxInventorySize);
     }
 }
