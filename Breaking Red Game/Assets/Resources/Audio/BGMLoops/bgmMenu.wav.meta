@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e32be3d951da484b98be46de4a570de
+guid: 01b0e0369b9d548bdb5bf561d71e5eb5
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
@@ -25,5 +25,5 @@ AssetOrigin:
   productId: 221545
   packageName: Adventure Music and SFX
   packageVersion: 1.0
-  assetPath: Assets/WhatSoundsNice/Adventure Music & SFX/Music/Showcase/resolution.wav
+  assetPath: Assets/WhatSoundsNice/Adventure Music & SFX/Music/Loops/resolution_loop.wav
   uploadId: 498390
