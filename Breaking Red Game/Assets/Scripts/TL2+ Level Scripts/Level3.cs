@@ -6,11 +6,6 @@ using static UnityEditor.PlayerSettings;
 
 public class Level3 : LevelLoader
 {
-    public GameObject normalPassagePrefab;
-    public GameObject lockedPassagePrefab;
-    public GameObject damagingEnvPrefab;
-    public GameObject slidingDoorPrefab;
-    public GameObject movingPlatformTilePrefab;
     public override void loadLevel(GameObject normalPassagePrefab, GameObject lockedPassagePrefab, GameObject damagingEnvPrefab, GameObject movingPlatformPrefab, GameObject movingPlatformTilePrefab, GameObject slidingDoorPrefab)
     {
         //CreateNormalPassage(normalPassagePrefab, "House_tileset_30", new Vector2(-0.83f, -3.14f), "L2");

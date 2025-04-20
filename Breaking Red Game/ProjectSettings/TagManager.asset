@@ -24,7 +24,6 @@ TagManager:
   - NPCTestCollisionWall
   - NPCTestWall
   - NPCDeathWall
-  - Grove1
   - TheHippie
   - TheAxman
   - TheWizard
@@ -44,6 +43,16 @@ TagManager:
   - Ground
   - HealthMessage
   - PlayerClone
+  - S2
+  - S3
+  - S4
+  - S2.1
+  - S3.1
+  - S4.1
+  - Blue1
+  - Red1
+  - Blue2
+  - MazeShortcut
   layers:
   - Default
   - TransparentFX

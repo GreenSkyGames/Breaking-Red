@@ -147,42 +147,29 @@ public class NormalPassage : TerrainObjects
                 return new Vector2(221.87f, -70.49f);
             case "L5": 
                 return new Vector2(30.21f, -118.86f);
+            case "S2":
+                return new Vector2(187.36f, 88.64f);
+            case "S2.1":
+                return new Vector2(185.32f, 65.57f);
+            case "S3":
+                return new Vector2(385.33f, 27.76f);
+            case "S3.1":
+                return new Vector2(363.18f, 13.53f);
+            case "S4":
+                return new Vector2(83.93f, -71.44f);
+            case "S4.1":
+                return new Vector2(116.85f, -62.64f);
+            case "Blue1":
+                return new Vector2(317.29f, -76.46f);
+            case "Red1":
+                return new Vector2(307.27f, -94.46f);
+            case "Blue2":
+                return new Vector2(299.291f, -81.82f);
+            case "MazeShortcut":
+                return new Vector2(289.87f, -86.6f);
             default:
                 Debug.LogWarning("No destination set for tag: " + gameObject.tag);
                 return Vector2.zero;
         }
-        /*switch(gameObject.tag)
-        {
-            case "L1":
-                //SceneManager.LoadScene("Level 1");
-                return new Vector2(10.5f, -8.43f);
-            case "IL1":
-                return new Vector2(-1, -0.5f);
-            case "IL1.1":
-                return new Vector2(-110, -14.5f);
-            case "L2":
-                //SceneManager.LoadScene("Level 2");
-                //return new Vector2(-19.7f, -21.2f);
-                return new Vector2(79.71f, -24.84f);
-            case "IL2":
-                return new Vector2(181.2f, -14.6f);
-            case "L3":
-                //SceneManager.LoadScene("Level 3");
-                return new Vector2(287.23f, -0.26f); 
-                //return new Vector2(-19.7f, -21.2f);
-            case "IL3":
-                return new Vector2(317.29f, -61.84f);
-            case "L4":
-                //SceneManager.LoadScene("Level 4");
-                //return new Vector2(-19.7f, -21.2f);
-                return new Vector2(215.56f, -68.95f);
-            case "L5":
-                //SceneManager.LoadScene("Level 5");
-                //return new Vector2(-19.7f, -21.2f);
-                return new Vector2(31.13f, -118.4f);
-            default:
-                Debug.LogWarning("No destination set for tag: " + gameObject.tag);
-                return Vector2.zero;
-        }*/
     }
 }
