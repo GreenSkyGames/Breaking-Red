@@ -40,7 +40,6 @@ public class DamagingEnv : TerrainObjects
 
 		if (collision.gameObject.tag != "Player")
         {
-            //collision.gameObject.GetComponent<NPCManager>().ChangeHealth(-damage);
 			NPCManager target = collision.gameObject.GetComponent<NPCManager>();
 			if (target != null)
 			{
