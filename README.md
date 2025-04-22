@@ -18,12 +18,13 @@ Github with codes and files: https://github.com/JakeG2004/CS383_TL2_Platformer
 
 # TL5 AI
 
-1. Dynamic Binding
+Videos: https://vandalsuidaho-my.sharepoint.com/:f:/g/personal/tian6555_vandals_uidaho_edu/EkTATuJyWsFNp8dhVm7r5g0BzRt8telzlVhxXAbw1DVU5Q?e=npeoMh
 
-  - Slides: https://vandalsuidaho-my.sharepoint.com/:b:/g/personal/tian6555_vandals_uidaho_edu/EXQjmGLViRNCqO4eEaCUjwsBIRWLK7-KSMlv4YASxmE07w?e=cUSpFd
-  - Video: https://vandalsuidaho-my.sharepoint.com/:v:/g/personal/tian6555_vandals_uidaho_edu/EcBOe4tn7dJFnLmBOiqcF3IBKqhMPrvuxHetu2bDCjLQCQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dLWJh0
+1. Dynamic Binding: https://vandalsuidaho-my.sharepoint.com/:b:/g/personal/tian6555_vandals_uidaho_edu/EXQjmGLViRNCqO4eEaCUjwsBIRWLK7-KSMlv4YASxmE07w?e=cUSpFd
 
 2. Ethics Quiz: https://vandalsuidaho-my.sharepoint.com/:p:/g/personal/shre0964_vandals_uidaho_edu/Efd1lZ0PjOZCskU1URhh_VYBsyxdZvYPMHBtMf4gD6tbiQ?e=BO92f2
+  
+4. AI Introduction: https://vandalsuidaho-my.sharepoint.com/:f:/g/personal/tian6555_vandals_uidaho_edu/EkTATuJyWsFNp8dhVm7r5g0BzRt8telzlVhxXAbw1DVU5Q?e=npeoMh
 
 
 # Dr. BC References
