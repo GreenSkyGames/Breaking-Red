@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Audio Manager by Hengyi Tian</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
+
+    p, ul, li {
+      font-size: 16px;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    code {
+      background-color: #f0f0f0;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Video -->
+  <video controls autoplay muted>
+    <source src="Prefab_AudioManager.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Main Title -->
+  <div class="title">Audio Manager</div>
+
+  <!-- Subtitle Info -->
+  <div class="subtitle">★★★★★ (408 reviews)</div>
+  <div class="subtitle">Author: Hengyi Tian</div>
+  <div class="subtitle">$ 24.99</div>
+  <div class="subtitle">Version: 3.0</div>
+
+  <!-- Description -->
+  <div class="section-title">Description:</div>
+  <p>
+    This asset provides a powerful and flexible Audio Manager system that allows you to add background music, 
+    environmental music, and sound effects. It supports fade in and fade out effects, pause or resume logic, 
+    and fully customizable settings like volume, pitch, loop, and mixer group.
+  </p>
+
+  <!-- Included Items -->
+  <div class="section-title">Included in this asset:</div>
+  <ul>
+    <li>AudioManager Prefab</li>
+    <li>AudioManager Class Script</li>
+    <li>AudioType Class Script (Custom class to store audio clip information, such as names, loop, volume, and so on)</li>
+  </ul>
+  
+
+  <!-- Features -->
+  <div class="section-title">Features:</div>
+  <ul>
+    <li>
+      Easy add unlimited audio clips with no repeated code. Using 
+      <code>AudioManager.instance.Play("clipName")</code> to play music and sound effects anytime.
+    </li>
+    <li>Pause, Stop, or Resume audio by name</li>
+    <li>Loop support &amp; Unity Mixer Group integration</li>
+  </ul>
+
+  <!-- Requirements -->
+  <div class="section-title">Requirements: <span style="font-weight: normal;">Unity 66000.0.38f1 or later</span></div>
+
+</body>
+</html>
