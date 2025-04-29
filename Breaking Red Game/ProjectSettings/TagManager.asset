@@ -53,6 +53,7 @@ TagManager:
   - Red1
   - Blue2
   - MazeShortcut
+  - BCBridge
   layers:
   - Default
   - TransparentFX

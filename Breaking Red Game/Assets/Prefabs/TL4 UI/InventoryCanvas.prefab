@@ -118,6 +118,7 @@ MonoBehaviour:
   effectAmount: 0
   maxInventorySize: 3
   inventoryMenu: {fileID: 4331936281671265976}
+  clueInventoryUIManager: {fileID: 0}
   itemSlot:
   - {fileID: 0}
   - {fileID: 0}

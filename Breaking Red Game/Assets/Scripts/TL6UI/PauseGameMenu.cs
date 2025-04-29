@@ -25,7 +25,8 @@ public class PauseGameMenu : MonoBehaviour
     public GameObject inventoryMenu; //inventory manager object 
     public static PauseGameMenu instance; 
     private GameUIFacade facade; 
-    public Button inventoryButton; 
+    public Button inventoryButton;
+
 
     // Pause menu called => in view, Pause menu uncalled=> not in view 
     void Start()

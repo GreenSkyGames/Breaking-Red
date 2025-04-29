@@ -25,6 +25,9 @@ public class MovingPlatform : TerrainObjects
     private Rigidbody2D _playerRigidbody;
     private PlatformTest _platformTest;
 
+    private bool _bcMode = false; //bc mode variable 
+    private GameObject[] bridgeTiles; //represents the new tiles that will from the bridge, will appear/disappear with BCToggle 
+
     public void SetMovementGoals(float horGoal, float vertGoal, float moveTime)
     {
         pHorGoal = horGoal;
@@ -40,6 +43,8 @@ public class MovingPlatform : TerrainObjects
         _startPos = transform.position;
         _goalPos = new Vector2(_startPos.x + pHorGoal, _startPos.y + pVertGoal);
         _prevPos = _startPos;
+
+        bridgeTiles = GameObject.FindGameObjectsWithTag("BCBridge"); //new tiles tagged with this
     }
 
     /*This updates once per frame
@@ -70,6 +75,18 @@ _prevPos = currentPosition; // Update the previous position
 
     void Update()
     {
+        //checking if BCMode is enabled 
+        if(!_bcMode)
+        {
+            //Platforms shouldnt move and the bcmode platform tiles will show, 
+            // forming a bridge for BC to use and not fall to death 
+            EnableBCPlatforms(); 
+        }
+        else
+        {
+            DisableBCPlatforms(); //bcmode bridge shouldnt be seen by the player 
+
+        } 
         // Calculate interpolation factor using Mathf.PingPong and apply SmoothStep for easing
         float t = Mathf.PingPong(Time.time / pMoveTime, 1.0f);
         float easedT = Mathf.SmoothStep(0.0f, 1.0f, t);  // Apply smoothing function to create a slower speed at the ends
@@ -139,7 +156,28 @@ _prevPos = currentPosition; // Update the previous position
                 platformTest.OnPlayerExitPlatform();
             }
         }
+    }
 
+    //Disable the platforms with BCBridge, when the game is not in BCMode 
+    public void DisableBCPlatforms()
+    {
+        foreach (GameObject tile in bridgeTiles)
+        {
+            tile.SetActive(false); 
+        }
+    }
 
+    //Enable the BCBridge Tiles to form a bridge when BCMode activated 
+    public void EnableBCPlatforms()
+    {
+        foreach (GameObject tile in bridgeTiles)
+        {
+            tile.SetActive(true); 
+        }
+    }
+
+    private void UpdateBCMode()
+    {
+        _bcMode = PlayerPrefs.GetInt("BCMode, 0") == 1; 
     }
 }
