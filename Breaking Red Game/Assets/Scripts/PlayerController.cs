@@ -241,49 +241,60 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene("GameOver");
     }*/
 
-    IEnumerator scaleObj() {
-        isScaling = true;
-        float elapsedTime = 0f;
-        float duration = scaleSpeed;
-        Debug.Log("isScaling: " + isScaling);
-
-        Vector3 startScale = transform.localScale;
-        float direction = Mathf.Sign(startScale.x); // +1 or -1 depending on facing
-        Vector3 targetScale = new Vector3(shrunkHeight * direction, shrunkHeight, startScale.z);
-
-        while (elapsedTime < duration)
-        {
-            StartCoroutine(AudioManager.instance.PauseAllAudioSources());
-
-            // play game over sound effect
-            AudioManager.instance.Play("GameoverSound");
-
-            //float t = elapsedTime / duration; // Normalized time (0 to 1)
-            //float newScale = Mathf.Lerp(seedHeight, finalHeight, t);
-            float t = elapsedTime / duration;
-            t = 1f - Mathf.Pow(1f - t, 3); // ease-out cubic
-            //float newScale = Mathf.Lerp(Mathf.Abs(startScale), shrunkHeight, t);
-            //transform.localScale = new Vector3(newScale, newScale, 1);
-            transform.localScale = Vector3.Lerp(startScale, targetScale, t);
-
-
-            elapsedTime += Time.deltaTime; // Increment elapsed time
-            //Debug.Log("elapsed time: " + elapsedTime + " duration: " + duration);
-            yield return null; // Wait for the next frame
+    IEnumerator scaleObj()
+    {
+        if (BCMODE.Instance != null) {
+            Debug.Log("Instance set");
         }
+        if(BCMODE.Instance.IsBCModeActive())
+        {
+            Debug.Log("BC Mode Is On So Scaling Is Off");
+        }
+        else
+        {
+            Debug.Log("BC Mode isn't on for some reason");
+            isScaling = true;
+            float elapsedTime = 0f;
+            float duration = scaleSpeed;
+            Debug.Log("isScaling: " + isScaling);
 
-        
+            Vector3 startScale = transform.localScale;
+            float direction = Mathf.Sign(startScale.x); // +1 or -1 depending on facing
+            Vector3 targetScale = new Vector3(shrunkHeight * direction, shrunkHeight, startScale.z);
 
-        //yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
-        Debug.Log("Player died moving over an edge!");
-        // SceneManager.LoadScene("GameOver");
-        SceneManager.LoadScene("GameOver"); 
-        //Application.Quit();//quitting the game 
-        //UnityEditor.EditorApplication.isPlaying = false;
-        //float newScale = Mathf.Lerp(_seedHeight, _finalHeight, Time.deltaTime / _scaleSpeed);
-        //transform.localScale = new Vector3(newScale, newScale, 1);
+            while (elapsedTime < duration)
+            {
+                StartCoroutine(AudioManager.instance.PauseAllAudioSources());
+
+                // play game over sound effect
+                AudioManager.instance.Play("GameoverSound");
+
+                //float t = elapsedTime / duration; // Normalized time (0 to 1)
+                //float newScale = Mathf.Lerp(seedHeight, finalHeight, t);
+                float t = elapsedTime / duration;
+                t = 1f - Mathf.Pow(1f - t, 3); // ease-out cubic
+                //float newScale = Mathf.Lerp(Mathf.Abs(startScale), shrunkHeight, t);
+                //transform.localScale = new Vector3(newScale, newScale, 1);
+                transform.localScale = Vector3.Lerp(startScale, targetScale, t);
+
+
+                elapsedTime += Time.deltaTime; // Increment elapsed time
+                //Debug.Log("elapsed time: " + elapsedTime + " duration: " + duration);
+                yield return null; // Wait for the next frame
+            }
+
+
+
+            //yield return StartCoroutine(fadeToBlack(0.5f)); // Fade out
+            Debug.Log("Player died moving over an edge!");
+            // SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOver");
+            //Application.Quit();//quitting the game 
+            //UnityEditor.EditorApplication.isPlaying = false;
+            //float newScale = Mathf.Lerp(_seedHeight, _finalHeight, Time.deltaTime / _scaleSpeed);
+            //transform.localScale = new Vector3(newScale, newScale, 1);
+        }
     }
-
 	//Function to add enemy tag to the clue list
 	public void addKill(string killTag)
 	{

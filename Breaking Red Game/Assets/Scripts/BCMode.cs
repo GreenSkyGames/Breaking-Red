@@ -14,6 +14,7 @@ using UnityEngine.UI;
 public class BCMODE : MonoBehaviour
 {
     [SerializeField] private Toggle _toggle;
+    private bool _BCModeActive;
     private static BCMODE _instance; 
     public static BCMODE Instance => _instance; 
     // private ModeBehavior _behavior; 
@@ -38,11 +39,14 @@ public class BCMODE : MonoBehaviour
                 Debug.LogError("Toggle component not found");
             }
         }
+        _toggle.onValueChanged.AddListener(OnToggleValueChanged);
+        // FORCE it OFF first
+        PlayerPrefs.SetInt("BCMode", 0);
+        PlayerPrefs.Save();
 
-        bool savedState = PlayerPrefs.GetInt("BCMode", 0) == 1;
+        // Now set the toggle to match
+        _toggle.isOn = false;
 
-        _toggle.isOn = savedState;
-        _toggle.onValueChanged.AddListener(OnToggleValueChanged); 
 
         //setting initial behavior 
         //_behavior = _toggle.isOn ? new BCModeBehavior() : new ModeBehavior(); 
@@ -51,6 +55,8 @@ public class BCMODE : MonoBehaviour
     }
 
     //CODE USED FOR THE ORAL EXAM: DYNAMIC AND STATIC BINDING 
+    
+    //Public function to get the state of the toggle
 
     // When the BC toggle is enabled, making sure that the choice is saved for the rest of the game 
     public void OnToggleValueChanged(bool isON)
@@ -61,13 +67,18 @@ public class BCMODE : MonoBehaviour
         PlayerPrefs.SetInt("BCMode", isON ? 1 : 0);
         PlayerPrefs.Save();
 
+        _BCModeActive = isON;
+
         //switching bahavior using dynamic binding 
         //_behavior = isON? new BCModeBehavior() : new ModeBehavior(); 
         Debug.Log($"BC Mode toggled: {(isON ? "ON" : "Off")}"); 
 
         // RunBehavior(); //both methods used here, when toggle is changed 
     }
-
+    public bool IsBCModeActive()
+    {
+        return _BCModeActive;
+    }
     // //static and dynamic binding in use 
     // void RunBehavior()
     // {

@@ -35,8 +35,16 @@ public class PlayerHealth : MonoBehaviour
      * @param amount The amount to change the player's health by. */
     public void changeHealth(int amount)
     {
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        //Debug.Log($"Health: {currentHealth}");
+        if (bcMode)
+        {
+            Debug.Log("BC Mode on, player isn't taking damage!");
+        }
+        else
+        {
+            Debug.Log("BC Mode not on");
+            currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+            //Debug.Log($"Health: {currentHealth}");
+        }
 
         if (currentHealth <= 0)
         {
