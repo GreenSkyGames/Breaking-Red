@@ -956,7 +956,6 @@ GameObject:
   - component: {fileID: 6527527856260203222}
   - component: {fileID: 6125748363041411371}
   - component: {fileID: 6015947133173552448}
-  - component: {fileID: 8765581659891910341}
   - component: {fileID: 7819046174410248465}
   m_Layer: 5
   m_Name: PauseCanvas
@@ -1065,22 +1064,6 @@ MonoBehaviour:
   inventoryMenu: {fileID: 692521755672166692, guid: 9aed94761b9fc0a4085c732faf2e7d80, type: 3}
   inventoryButton: {fileID: 433141825691958732}
   pauseButton: {fileID: 0}
---- !u!114 &8765581659891910341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5380646680694276872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c65513ef6b32094fbf400708ede1dbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioTypes: []
-  allAudioSources:
-  - {fileID: 0}
-  audioSourceStates: 
 --- !u!114 &7819046174410248465
 MonoBehaviour:
   m_ObjectHideFlags: 0
