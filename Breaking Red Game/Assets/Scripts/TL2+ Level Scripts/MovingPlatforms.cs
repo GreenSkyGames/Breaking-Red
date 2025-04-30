@@ -19,7 +19,7 @@ public class MovingPlatform : TerrainObjects
     // Target movement time
     [SerializeField] protected float pMoveTime = 1.0f;
 
-    private Vector2 _startPos;
+    private Vector2 _startPos; 
     private Vector2 _goalPos;
     private Vector2 _prevPos;
 
@@ -76,18 +76,21 @@ _prevPos = currentPosition; // Update the previous position
 
     void Update()
     {
+        UpdateBCMode(); 
         //checking if BCMode is enabled 
-        if(!_bcMode)
+        if(_bcMode) // if bcmode is enabled 
         {
             //Platforms shouldnt move and the bcmode platform tiles will show, 
             // forming a bridge for BC to use and not fall to death 
-            EnableBCPlatforms(); 
+            EnableBCPlatforms();  
+            return; //return so that the regular platforms do not move. 
         }
         else
         {
             DisableBCPlatforms(); //bcmode bridge shouldnt be seen by the player 
 
         } 
+
         // Calculate interpolation factor using Mathf.PingPong and apply SmoothStep for easing
         float t = Mathf.PingPong(Time.time / pMoveTime, 1.0f);
         float easedT = Mathf.SmoothStep(0.0f, 1.0f, t);  // Apply smoothing function to create a slower speed at the ends
@@ -121,8 +124,6 @@ _prevPos = currentPosition; // Update the previous position
                 _tilemap.gameObject.SetActive(false); // Hide the tilemap layer
             }
         }
-
-
 
     }
 
@@ -164,6 +165,7 @@ _prevPos = currentPosition; // Update the previous position
 
     private void UpdateBCMode()
     {
-        _bcMode = PlayerPrefs.GetInt("BCMode, 0") == 1; 
+        _bcMode = PlayerPrefs.GetInt("BCMode", 0) == 1;
+        PlayerPrefs.Save();  
     }
 }
