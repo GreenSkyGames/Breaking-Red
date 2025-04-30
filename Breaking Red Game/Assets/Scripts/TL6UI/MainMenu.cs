@@ -41,6 +41,7 @@ public class GameUIFacade
 public class MainMenu : MonoBehaviour
 {
     private GameUIFacade facade; 
+    // public GameObject pauseMenuPrefab; // connecting it to the pause menu
 
     private void Awake()
     {
@@ -60,10 +61,15 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     { 
         Debug.Log("Starting a new game");
-
         // Play the button click
         // AudioManager.instance.Play("ClickSound");
         facade.PlayClickSound(); 
+
+        // //instantiating pause menu from beginning === debugging so it works from start menu and not just level 1 
+        // if (PauseGameMenu.instance == null && pauseMenuPrefab != null)
+        // {
+        //     Instantiate(pauseMenuPrefab); // creates the pause menu once
+        // } 
         // SceneManager.LoadScene("CharacterSelector");
         facade.LoadScene("CharacterSelector"); 
     }
