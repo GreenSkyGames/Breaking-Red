@@ -18,7 +18,7 @@ public class LevelLoader
         LockedPassage passage = obj.GetComponent<LockedPassage>();
         if (passage != null)
         {
-            passage.AssignSlidingDoors(door1, door2);
+            //passage.AssignSlidingDoors(door1, door2);
         }
     }
 

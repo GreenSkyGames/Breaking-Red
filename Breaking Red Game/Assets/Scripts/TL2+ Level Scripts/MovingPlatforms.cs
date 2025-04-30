@@ -14,6 +14,7 @@ public class MovingPlatform : TerrainObjects
     // Positional offsets for goal
     [SerializeField] protected float pHorGoal = 0.0f;
     [SerializeField] protected float pVertGoal = 0.0f;
+    [SerializeField] private Tilemap _tilemap;
 
     // Target movement time
     [SerializeField] protected float pMoveTime = 1.0f;
@@ -115,16 +116,9 @@ _prevPos = currentPosition; // Update the previous position
         if (collider.CompareTag("Player"))
         {
             _playerRigidbody = collider.GetComponent<Rigidbody2D>();
-            /*if (tilemap != null && tilemap.gameObject.activeSelf)
+            if (_tilemap != null && _tilemap.gameObject.activeSelf)
             {
-                tilemap.gameObject.SetActive(false); // Hide the tilemap layer
-            }*/
-
-            // For Testing: Notify the test script that the player entered the platform
-            PlatformTest _platformTest = FindFirstObjectByType<PlatformTest>();
-            if (_platformTest != null)
-            {
-                _platformTest.OnPlayerEnterPlatform();
+                _tilemap.gameObject.SetActive(false); // Hide the tilemap layer
             }
         }
 
@@ -143,17 +137,9 @@ _prevPos = currentPosition; // Update the previous position
             {
                 _playerRigidbody = null;
             }
-            /*if (tilemap != null && !tilemap.gameObject.activeSelf)
+            if (_tilemap != null && !_tilemap.gameObject.activeSelf)
             {
-                tilemap.gameObject.SetActive(true); // Show the tilemap layer
-            }*/
-
-            //For testing:
-            // Notify the test script that the player exited the platform
-            PlatformTest platformTest = FindFirstObjectByType<PlatformTest>();
-            if (platformTest != null)
-            {
-                platformTest.OnPlayerExitPlatform();
+                _tilemap.gameObject.SetActive(true); // Show the tilemap layer
             }
         }
     }

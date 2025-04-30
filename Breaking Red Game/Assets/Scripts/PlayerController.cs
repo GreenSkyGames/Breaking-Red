@@ -119,18 +119,22 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
     private bool isOnPlatform = false;  // Flag to check if the player is on a platform
     private bool isOnBoundary = false;  // Flag to check if the player is on a boundary
     private bool justTeleported = false;
     private bool grounded = true;
+    // When the player exits the platform's trigger area
+
     // When player enters the platform's area (trigger zone)
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("MovingPlatform"))
         {
+            Debug.Log("Moving Platform checked on?");
             isOnPlatform = true;
         }
-        else if (other.CompareTag("IL2") || other.CompareTag("L2") || other.CompareTag("L3") || other.CompareTag("IL3") || other.CompareTag("L4") || other.CompareTag("L5"))
+        else if (other.CompareTag("IL2") || other.CompareTag("L3") || other.CompareTag("IL3") || other.CompareTag("L4") || other.CompareTag("L5"))
         {
             isOnBoundary = false;
             isOnPlatform = true;
@@ -143,7 +147,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag("Boundary"))
         {
-            //grounded = false;
+            Debug.Log("on platform: " + isOnPlatform + " teleported: " + justTeleported + " grounded: " + grounded);
+            grounded = false;
             isOnBoundary = true;
             if (!isOnPlatform && !justTeleported && !grounded)
             {
@@ -151,14 +156,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
-    private IEnumerator ResetTeleportFlag()
-    {
-        yield return new WaitForSeconds(2f);
-        justTeleported = false;
-    }
-
-    // When the player exits the platform's trigger area
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("MovingPlatform"))
@@ -171,14 +168,24 @@ public class PlayerController : MonoBehaviour
                 scales();
             }*/
         }
-        else if(other.CompareTag("Ground")){
+        if(other.CompareTag("Ground")){
+
             grounded = false;
+            Debug.Log("Grounded " + grounded);
         }
         else if (other.CompareTag("Boundary"))
         {
             isOnBoundary = false;  // Ensure the player isn't marked on the boundary if they leave
         }
     }
+    
+    private IEnumerator ResetTeleportFlag()
+    {
+        yield return new WaitForSeconds(2f);
+        justTeleported = false;
+    }
+
+
 
     void Attack()
     {
@@ -243,16 +250,13 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator scaleObj()
     {
-        if (BCMODE.Instance != null) {
-            Debug.Log("Instance set");
-        }
-        if(BCMODE.Instance.IsBCModeActive())
+        if (BCMODE.Instance.IsBCModeActive())
         {
             Debug.Log("BC Mode Is On So Scaling Is Off");
         }
         else
         {
-            Debug.Log("BC Mode isn't on for some reason");
+            Debug.Log("BC Mode: " + BCMODE.Instance.IsBCModeActive());
             isScaling = true;
             float elapsedTime = 0f;
             float duration = scaleSpeed;

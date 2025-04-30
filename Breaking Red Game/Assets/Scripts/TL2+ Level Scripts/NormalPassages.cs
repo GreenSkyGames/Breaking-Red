@@ -19,13 +19,15 @@ public class NormalPassage : TerrainObjects
     {
         if (fadePanel != null)
         {
-            GameObject overlay = Instantiate(fadePanel, transform); // Parent it to this object
-            fadePanelInstance = overlay.GetComponent<CanvasGroup>();
+            //GameObject overlay = Instantiate(fadePanel, transform); // Parent it to this object
+            //fadePanelInstance = overlay.GetComponent<CanvasGroup>();
+            fadePanelInstance = fadePanel.GetComponent<CanvasGroup>();
 
             if (fadePanelInstance != null)
             {
                 fadePanelInstance.alpha = 0f;
-                overlay.SetActive(true);
+                //overlay.SetActive(true);
+                fadePanel.SetActive(true);
                 Debug.Log("Fade panel instantiated and ready.");
             }
             else
@@ -46,7 +48,7 @@ public class NormalPassage : TerrainObjects
         {
             string passageTag = this.tag;
             Debug.Log($"Player entered passage with tag: {passageTag}");
-            LevelManager.Instance.tryLoadLevel(passageTag);
+            //LevelManager.Instance.tryLoadLevel(passageTag);
             AudioManager.instance.Play("DoorSound"); // Play the open door sound
 
             Vector2 newPosition = getDestination();
