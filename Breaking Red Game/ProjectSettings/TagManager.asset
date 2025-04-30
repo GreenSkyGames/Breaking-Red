@@ -54,6 +54,9 @@ TagManager:
   - Blue2
   - MazeShortcut
   - BCBridge
+  - L4.1
+  - L2.1
+  - L4.2
   layers:
   - Default
   - TransparentFX
