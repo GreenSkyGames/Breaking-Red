@@ -17,18 +17,33 @@ using System.Collections.Generic;
 
 public class PauseGameMenu : MonoBehaviour
 {  
-    public static bool IsPaused = false; //indicate whether game is paused or not 
-    public GameObject PauseMenuUI; // just the pause menu panel
-    public GameObject PauseMenu; //whole canvas  
+    public static bool IsPaused = false; //indicate whether game is paused or not  
     private List<AudioSource> allAudioSources = new List<AudioSource>(); // To store all active AudioSources
     private List<bool> audioSourceStates = new List<bool>(); // To store the state, play or pause
     private bool _menuActivated; //inventory manager being activated? 
+    public static PauseGameMenu instance; //singleton 
+    private GameUIFacade facade; //pattern 
+    public GameObject PauseMenuUI; // just the pause menu panel
+    public GameObject PauseMenu; //whole canvas 
     public GameObject inventoryMenu; //inventory manager object 
-    public static PauseGameMenu instance; 
-    private GameUIFacade facade; //pattern
     public Button inventoryButton;
-    public Button pauseButton; 
 
+    // Singleton Pattern 
+    // https://refactoring.guru/design-patterns/singleton 
+    private void Awake()
+    {    
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); // Ensures pause menu persists across scenes
+            Debug.Log("pause menu instance initialized.");
+        }
+        else
+        {
+            Destroy(gameObject); // Destroy duplicate pause menu if one already exists
+            return;
+        }
+    } 
 
     // Pause menu called => in view, Pause menu uncalled=> not in view 
     void Start()
@@ -42,43 +57,11 @@ public class PauseGameMenu : MonoBehaviour
         if (inventoryButton != null)
         {
             inventoryButton.onClick.AddListener(ViewInventory);
+            // Play the button click
+            AudioManager.instance.Play("ClickSound");
+
             Debug.Log("Inventory butoon clicked!"); 
         } 
-
-        if (pauseButton != null)
-        {
-            pauseButton.onClick.RemoveAllListeners(); // getting rid of all old listeners 
-            pauseButton.onClick.AddListener(() =>
-            {
-                Debug.Log("Pause Button Clicked"); 
-
-                if (IsPaused)
-                {
-                    ResumeGame();
-                }
-                else
-                {
-                    PauseGame();
-                } 
-            });
-        }
-    }
-
-    // Singleton Pattern 
-    // https://refactoring.guru/design-patterns/singleton 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject); // Ensures pause menu persists across scenes
-            Debug.Log("pause menu instance initialized.");
-        }
-        else
-        {
-            Destroy(gameObject); // Destroy duplicate pause menu if one already exists
-            return;
-        }
     }
 
     // How pause menu called, p pressed to either call pause menu or remove it from the screen 
@@ -89,9 +72,9 @@ public class PauseGameMenu : MonoBehaviour
             return;
 
         //Toggle pause state when 'P' is pressed
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.P) || (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame))
         {
-            Debug.Log("P was pressed"); 
+            Debug.Log("P / button was pressed"); 
 
             if (PauseMenuUI == null)
             {
