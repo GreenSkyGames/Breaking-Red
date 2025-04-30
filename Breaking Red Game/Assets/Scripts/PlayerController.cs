@@ -13,6 +13,7 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem; //mobile controls 
 
 public class PlayerController : MonoBehaviour
 {
@@ -65,7 +66,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Attack
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || (Gamepad.current != null && Gamepad.current.buttonWest.wasPressedThisFrame))
         {
             Attack();
         }
@@ -88,6 +89,20 @@ public class PlayerController : MonoBehaviour
         }
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+
+        //mobile controls 
+        if(Gamepad.current != null){
+            //player movement tied to joystick 
+            if (Gamepad.current != null)
+            {
+                Vector2 inputVector = Gamepad.current.leftStick.ReadValue();
+                if (inputVector != Vector2.zero)
+                {
+                    horizontal = inputVector.x;
+                    vertical = inputVector.y;
+                }
+            }
+        }
 
         if (horizontal > 0 && transform.localScale.x < 0 ||
             horizontal < 0 && transform.localScale.x > 0)

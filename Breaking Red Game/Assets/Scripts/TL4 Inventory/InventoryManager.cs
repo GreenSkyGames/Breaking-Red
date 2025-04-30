@@ -288,6 +288,13 @@ public class InventoryManager : MonoBehaviour
             Debug.Log("No item selected to remove.");
         }
     }
+
+    // Call the toggleInventory method to open or close the inventory menu, just like pressing the 'I' key
+    public void OnInventoryButtonClick()
+    {
+        AudioManager.instance.Play("ClickSound"); // Play the button click
+        toggleInventory();  // Executes the same functionality as the 'I' key press 
+    }
 }
 
 

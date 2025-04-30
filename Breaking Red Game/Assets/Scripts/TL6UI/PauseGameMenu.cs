@@ -18,21 +18,23 @@ using System.Collections.Generic;
 public class PauseGameMenu : MonoBehaviour
 {  
     public static bool IsPaused = false; //indicate whether game is paused or not 
-    public GameObject PauseMenu; // pause menu object to be connected with script 
+    public GameObject PauseMenuUI; // just the pause menu panel
+    public GameObject PauseMenu; //whole canvas  
     private List<AudioSource> allAudioSources = new List<AudioSource>(); // To store all active AudioSources
     private List<bool> audioSourceStates = new List<bool>(); // To store the state, play or pause
     private bool _menuActivated; //inventory manager being activated? 
     public GameObject inventoryMenu; //inventory manager object 
     public static PauseGameMenu instance; 
-    private GameUIFacade facade; 
+    private GameUIFacade facade; //pattern
     public Button inventoryButton;
+    public Button pauseButton; 
 
 
     // Pause menu called => in view, Pause menu uncalled=> not in view 
     void Start()
     { 
         //initializing pause menu state 
-        PauseMenu.SetActive(false); 
+        PauseMenuUI.SetActive(false); 
         IsPaused = false; 
         Time.timeScale = 1f; //ensure time is running on scene start
         //LoadGame(); COMMENTED OUT FOR GAME TESTING PURPOSES
@@ -40,29 +42,63 @@ public class PauseGameMenu : MonoBehaviour
         if (inventoryButton != null)
         {
             inventoryButton.onClick.AddListener(ViewInventory);
+            Debug.Log("Inventory butoon clicked!"); 
         } 
+
+        if (pauseButton != null)
+        {
+            pauseButton.onClick.RemoveAllListeners(); // getting rid of all old listeners 
+            pauseButton.onClick.AddListener(() =>
+            {
+                Debug.Log("Pause Button Clicked"); 
+
+                if (IsPaused)
+                {
+                    ResumeGame();
+                }
+                else
+                {
+                    PauseGame();
+                } 
+            });
+        }
     }
 
     // Singleton Pattern 
     // https://refactoring.guru/design-patterns/singleton 
-    void Awake()
+    private void Awake()
     {
-        if (instance != null && instance !=this)
+        if (instance == null)
         {
-            Destroy(gameObject); // prevent duplicates 
-            return; 
+            instance = this;
+            DontDestroyOnLoad(gameObject); // Ensures pause menu persists across scenes
+            Debug.Log("pause menu instance initialized.");
         }
-
-        instance = this; 
-        DontDestroyOnLoad(gameObject); 
+        else
+        {
+            Destroy(gameObject); // Destroy duplicate pause menu if one already exists
+            return;
+        }
     }
 
     // How pause menu called, p pressed to either call pause menu or remove it from the screen 
     void Update()
     {
+        // Prevent 'P' toggle when clicking on UI elements
+        if (EventSystem.current.currentSelectedGameObject != null)
+            return;
+
         //Toggle pause state when 'P' is pressed
-        if(Input.GetKeyDown(KeyCode.P)){
+        if(Input.GetKeyDown(KeyCode.P))
+        {
             Debug.Log("P was pressed"); 
+
+            if (PauseMenuUI == null)
+            {
+                Debug.LogWarning("PauseMenu is null. Did you forget to assign it?");
+                return;
+            }
+
             if (IsPaused)
             {
                 ResumeGame(); 
@@ -78,7 +114,19 @@ public class PauseGameMenu : MonoBehaviour
     public void ResumeGame()
     {
 
-        PauseMenu.SetActive(false); //pause menu goes away 
+        // Ensure the whole Canvas is active first
+        if (PauseMenu != null && !PauseMenu.activeInHierarchy)
+        {
+            PauseMenu.SetActive(true);  // 🔧 This line ensures the Canvas itself is active
+        }
+
+        if( PauseMenuUI == null)
+        {
+            Debug.LogWarning("Pause menu is null"); 
+            return; 
+        }
+
+        PauseMenuUI.SetActive(false); //pause menu goes away 
         Time.timeScale=1f; // resuming the game
         IsPaused = false; //game is not paused
         Debug.Log("Game has resumed."); 
@@ -94,7 +142,16 @@ public class PauseGameMenu : MonoBehaviour
     //Function to pause the game
     public void PauseGame()
     {
-        PauseMenu.SetActive(true); //pause menu called 
+        if (!PauseMenu.activeInHierarchy) //making sure canvas is active 
+            PauseMenu.SetActive(true);
+
+        if (PauseMenuUI == null)
+        {
+            Debug.LogWarning("PauseMenu is null. Did you forget to assign it?");
+            return;
+        } 
+
+        PauseMenuUI.SetActive(true); //pause menu panel called 
         Time.timeScale = 0f; // pausing the game freezing time
         IsPaused = true; //game is paused
         Debug.Log("Game is paused."); 
@@ -195,8 +252,29 @@ public class PauseGameMenu : MonoBehaviour
         Time.timeScale = _menuActivated ? 0 : 1;
 
         inventoryMenu.SetActive(_menuActivated);
-        PauseMenu.SetActive(!_menuActivated); //taking down pause menu when inventory pulled up. 
+        PauseMenuUI.SetActive(!_menuActivated); //taking down pause menu when inventory pulled up. 
     }
 
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (PauseMenuUI != null){
+            PauseMenuUI.SetActive(false); // Hide it when loading a new scene
+            Debug.Log("PauseMenu Canvas found and disabled.");
+        }
+        else
+        {
+            Debug.LogWarning("PauseMenu Canvas is still null after scene load."); 
+        }
+    }
 }
  
