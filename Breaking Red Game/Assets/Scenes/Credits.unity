@@ -326,8 +326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5880e1a39ff4ef3a757b26e38a975f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuitButton: {fileID: 0}
-  StartButton: {fileID: 0}
 --- !u!1 &1079721191
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,8 +519,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "TL1: Bidhan \nTL2: Todd\nTL2: Alex\nTL3: Mark\nTL4: Shan\nTL5:  Hengyi
-    \nTL6:  Liz Beltran"
+  m_text: "TL1: Bidhan Ratna\nTL2: Todd Carter\nTL2: Alex Senst \nTL3: Mark Eldridge\nTL4:
+    Shan Peck\nTL5:  Hengyi Tian  \nTL6:  Liz Beltran"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
