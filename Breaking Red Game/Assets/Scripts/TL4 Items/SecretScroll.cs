@@ -22,6 +22,7 @@ public class SecretScroll : MonoBehaviour
             //scrollText.text = "You found the secret scroll!";
             // Display the message panel
             scrollMessage.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
@@ -30,6 +31,7 @@ public class SecretScroll : MonoBehaviour
     {
         scrollMessage.SetActive(false);  // Hide the message
         Destroy(gameObject);
+        Time.timeScale = 1f;
     }
 }
 
