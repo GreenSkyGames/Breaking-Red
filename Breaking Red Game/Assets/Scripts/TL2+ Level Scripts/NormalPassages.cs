@@ -136,6 +136,8 @@ public class NormalPassage : TerrainObjects
                 return new Vector2(79.71f, -24.84f);
             case "L2.1":
                 return new Vector2(214.56f, -18.97f);
+            case "L2.2":
+                return new Vector2(195.36f, -35.92f);
             case "IL2": 
                 return new Vector2(181.2f, -14.6f);
             case "L3": 

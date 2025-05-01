@@ -144,9 +144,9 @@ public class PlayerController : MonoBehaviour
     // When player enters the platform's area (trigger zone)
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("MovingPlatform"))
+        if (other.CompareTag("MovingPlatform") || other.CompareTag("BCBridge"))
         {
-            Debug.Log("Moving Platform checked on?");
+            Debug.Log("Platforms and bridges on");
             isOnPlatform = true;
         }
         else if (other.CompareTag("IL2") || other.CompareTag("L3") || other.CompareTag("IL3") || other.CompareTag("L4") || other.CompareTag("L5"))
