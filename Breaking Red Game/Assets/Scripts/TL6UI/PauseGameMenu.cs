@@ -408,7 +408,8 @@ public class PauseGameMenu : MonoBehaviour
                         bool isUnlocked = PlayerPrefs.GetInt($"Passage_{passageTag}_Unlocked") == 1;
                         if (isUnlocked)
                         {
-                            passage.revealPassageway(true);
+                            Debug.Log("PauseGame messing with stuff");
+                            passage.revealPassageway();
                         }
                     }
                 }

@@ -10,6 +10,8 @@ public class LockedPassage : NormalPassage
     [SerializeField] private SlidingDoor slidingDoor; // Reference to the SlidingDoor script
     [SerializeField] private SlidingDoor slidingDoor2; // Reference to the SlidingDoor script
 
+    private bool wolfDead = false;
+
     //private CanvasGroup doorOverlayInstance;
     //private GameObject slidingDoor1;
     //private GameObject slidingDoor2;
@@ -43,22 +45,22 @@ public class LockedPassage : NormalPassage
     {
         if (Input.GetKeyDown(KeyCode.B)) // Press "E" to unlock
         {
-            revealPassageway(false);
+            revealPassageway();
         }
     }
 
-    public void revealPassageway(bool wolfDead)
+    public void revealPassageway()
     {
         Debug.Log("wolfDead: " + wolfDead + " unlocked: " + isUnlocked);
-        if (isUnlocked && !wolfDead)
+        if (!isUnlocked && !wolfDead)
         {
             Debug.Log("Got here");
-            isUnlocked = true;
             StartCoroutine(wolfDeathWait());
             wolfDead = true;
         }
         else if (!isUnlocked)
         {
+            Debug.Log("Skipped");
             isUnlocked = true;
             StartCoroutine(FadeOutDoorOverlay());
         }
@@ -67,13 +69,17 @@ public class LockedPassage : NormalPassage
 
     private IEnumerator wolfDeathWait()
     {
-        Debug.Log("Waiting");
+        Debug.Log("Waiting at " + Time.time);
         yield return new WaitForSeconds(4);
+        isUnlocked = true;
+        Debug.Log("Finished wait at " + Time.time);
         StartCoroutine(FadeOutDoorOverlay());
     }
 
     private IEnumerator FadeOutDoorOverlay()
     {
+        Debug.Log("FadeOutDoorOverlay() started at " + Time.time);
+        Debug.Log(StackTraceUtility.ExtractStackTrace());
         if (doorOverlay == null) yield break;
 
         CanvasGroup cg = doorOverlay.GetComponent<CanvasGroup>();

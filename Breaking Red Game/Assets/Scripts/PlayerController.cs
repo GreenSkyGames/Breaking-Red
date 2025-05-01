@@ -175,6 +175,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("MovingPlatform"))
         {
+            Debug.Log("Off the platform");
             isOnPlatform = false;
             // Check if player is now on the boundary layer after stepping off the platform
             /*if (isOnBoundary && !justTeleported && !grounded)
