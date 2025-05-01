@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1978041626428467116}
   - component: {fileID: 9215087072161739325}
   - component: {fileID: 6223687652294196881}
-  - component: {fileID: 7553738508956972946}
   - component: {fileID: 6926258273967790637}
   m_Layer: 0
   m_Name: CanOfTuna
@@ -167,22 +166,6 @@ PolygonCollider2D:
       - {x: -1.2099999, y: -2.62}
       - {x: 0.5, y: -2.62}
   m_UseDelaunayMesh: 0
---- !u!114 &7553738508956972946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3632287126691881095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1880d29b71a7434c80ffa5b8cb31d70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectAmount: 0
-  itemType: 8
-  sprite: {fileID: -3924118577205823429, guid: 2d02f3cfb69eff4409aa4d39b13eec0a, type: 3}
-  itemDescription: Canned fish? Sounds like a cat's dream. MWAHAHA
 --- !u!114 &6926258273967790637
 MonoBehaviour:
   m_ObjectHideFlags: 0

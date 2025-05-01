@@ -79,7 +79,8 @@ public class PowerUpManager : MonoBehaviour
         }
         else if (powerUp is OwlsWing || powerUp is CanOfTuna)
         {
-            bool isAdded = InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite, powerUp.itemDescription);
+            InventoryManager inventoryManager = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
+            bool isAdded = inventoryManager.addToInventory(powerUp.itemType.ToString(), powerUp.sprite, powerUp.itemDescription);
             if (isAdded)
             {
                 AudioManager.instance.Play("PowerUpSound");
@@ -163,7 +164,8 @@ public class PowerUpManager : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.L))  // 'L' for Store for Later
             {
-                bool isAdded = InventoryManager.sInstance.addToInventory(powerUp.itemType.ToString(), powerUp.sprite, powerUp.itemDescription);
+                InventoryManager inventoryManager = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
+                bool isAdded = inventoryManager.addToInventory(powerUp.itemType.ToString(), powerUp.sprite, powerUp.itemDescription);
                 if (isAdded)
                 {
                     AudioManager.instance.Play("ClickSound"); // play click sound effect
