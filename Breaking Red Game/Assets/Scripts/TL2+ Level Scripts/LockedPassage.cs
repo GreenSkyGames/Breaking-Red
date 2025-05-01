@@ -108,4 +108,9 @@ public class LockedPassage : NormalPassage
             base.OnTriggerEnter2D(other);
         }
     }
+
+    public bool IsPassageUnlocked()
+    {
+        return isUnlocked;
+    }
 }

@@ -38,6 +38,7 @@ public class setNPC : NPC
 */
 public class NPCManager : MonoBehaviour
 {
+	public static Dictionary<string, bool> deadNPCs = new Dictionary<string, bool>();  // Track all dead NPCs by tag
 	public float speed = 2;
 	public float attackRange = 1;
 	public float attackCooldown = 1;
@@ -95,6 +96,13 @@ public class NPCManager : MonoBehaviour
 		inventoryManager = FindAnyObjectByType<InventoryManager>();
 
 		playerObj = GameObject.FindWithTag("Player");
+
+		// If this NPC is marked as dead, destroy it immediately
+		if (deadNPCs.ContainsKey(gameObject.tag) && deadNPCs[gameObject.tag])
+		{
+			Destroy(gameObject);
+			return;
+		}
 
 		//Debug.Log("myCanvas tag is " + myCanvas.tag);
 
@@ -376,92 +384,44 @@ public class NPCManager : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-			//Debug.Log("Death Test: " + gameObject.tag);
+            //This is for updating the killList on the player object:
+            dialogueManager.addKill(gameObject.tag);
 
-			//This is for updating the killList on the player object:
-			dialogueManager.addKill(gameObject.tag);
+            // Mark this NPC as dead
+            deadNPCs[gameObject.tag] = true;
 
-            // Disable rendering and movement, but keep the object active
-            if (enemySR != null)
+            //System for making enemies affect terrain on death:
+            if (gameObject.CompareTag("TheWolf"))
             {
-                enemySR.enabled = false;
+                Debug.Log("TheWolf has been killed.");
+
+                // Find door with tag "L2"
+                GameObject door = GameObject.FindWithTag("L2");
+
+                // Check if the door is found
+                if (door != null)
+                {
+                    Debug.Log("Found L2 door.");
+                    var lockedPassage = door.GetComponent<LockedPassage>();
+                    if (lockedPassage != null)
+                    {
+                        lockedPassage.revealPassageway(false);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("LockedPassage component is missing from the door.");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("L2 door not found.");
+                }
             }
 
-			this.gameObject.SetActive(false);
-
-            // Update killed scene image
-            SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
-            sceneManager.UpdateSceneImage();
-
-            //Example of how to make different enemies drop items on death:
-            if (gameObject.tag == "PurpleTorchEnemy")
-			{
-				if (hasDropped) return;
-				hasDropped = true;
-				//Item drop here
-				gameObject.GetComponent<NPCManager>().DropLoot();
-			}
-
-            if (gameObject.tag == "TheFish")
-			{
-				//This if() stops a second item from dropping
-				//This is a quick fix for what is probably a coroutine problem
-				if (hasDropped) return;
-				hasDropped = true;
-
-				//Item drop here
-				gameObject.GetComponent<NPCManager>().DropLoot();
-			}
-            if (gameObject.tag == "TheOwl")
-			{
-				if (hasDropped) return;
-				hasDropped = true;
-				//Item drop here
-				gameObject.GetComponent<NPCManager>().DropLoot();
-			}
-
-			//System for making enemies affect terrain on death:
-			if (gameObject.CompareTag("TheWolf"))
-			{
-				Debug.Log("TheWolf has been disabled.");
-
-				// Find door with tag "L2"
-				GameObject door = GameObject.FindWithTag("L2");
-
-				// Check if the door is found
-				if (door != null)
-				{
-					Debug.Log("Found L2 door.");
-					var lockedPassage = door.GetComponent<LockedPassage>();
-					if (lockedPassage != null)
-					{
-						lockedPassage.revealPassageway(false);
-					}
-					else
-					{
-						Debug.LogWarning("LockedPassage component is missing from the door.");
-					}
-				}
-				else
-				{
-					Debug.LogWarning("L2 door not found.");
-				}
-			}
-
-			//This catches the death of the Axman.
-			//The final victory screen can be triggered here.
-			if (gameObject.CompareTag("TheAxman"))
-			{
-				Debug.Log("TheAxman has been disabled.  Victory!");
-				//Triggering the victory screen 
-				SceneManager.LoadScene("Victory"); // player wins the game! 
-
-			}
-
-			//Debug.Log("Death test!" + gameObject.tag);
-
-            // Optionally, you might want to add other game over logic here,
-            // such as displaying a game over screen, triggering events, etc.
+            // Completely destroy the NPC and all its components
+            Destroy(gameObject);
+            Destroy(this);
+            return;
         }
         else
         {
@@ -470,7 +430,6 @@ public class NPCManager : MonoBehaviour
             {
                 enemySR.enabled = true;
             }
-
         }
     }
 
