@@ -179,4 +179,10 @@ MonoBehaviour:
   effectAmount: 2
   itemType: 4
   sprite: {fileID: -8022317073333284825, guid: 26bf3697777ab184eb51108bab849ac9, type: 3}
-  itemDescription: Woah! Did the wind just get stronger or did I just get faster?
+  itemDescription: 'Woah! Did the wind just get stronger or did I just get faster?
+
+
+    R
+    to Remove
+
+    U to Use'

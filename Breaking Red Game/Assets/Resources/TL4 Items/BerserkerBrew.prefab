@@ -141,4 +141,10 @@ MonoBehaviour:
   effectAmount: 1
   itemType: 2
   sprite: {fileID: -5805156128971586636, guid: b6d5e74f01c81c04b9509a1acf766303, type: 3}
-  itemDescription: Suddenly I feel so strong! I could kill anything! MWAHAHAHA
+  itemDescription: 'Suddenly I feel so strong! I could kill anything! MWAHAHAHA
+
+
+    R
+    to Remove
+
+    U to Use'
