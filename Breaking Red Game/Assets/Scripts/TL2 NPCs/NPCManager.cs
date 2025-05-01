@@ -418,6 +418,9 @@ public class NPCManager : MonoBehaviour
                 }
             }
 
+            SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
+            sceneManager.UpdateSceneImage();
+
             // Completely destroy the NPC and all its components
             Destroy(gameObject);
             Destroy(this);

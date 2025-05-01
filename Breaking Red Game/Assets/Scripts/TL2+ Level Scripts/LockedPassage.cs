@@ -54,7 +54,8 @@ public class LockedPassage : NormalPassage
         Debug.Log("wolfDead: " + wolfDead + " unlocked: " + isUnlocked);
         if (!isUnlocked && !wolfDead)
         {
-            Debug.Log("Got here");
+            Debug.Log("Got here");        
+            isUnlocked = true;
             StartCoroutine(wolfDeathWait());
             wolfDead = true;
         }
@@ -71,7 +72,7 @@ public class LockedPassage : NormalPassage
     {
         Debug.Log("Waiting at " + Time.time);
         yield return new WaitForSeconds(4);
-        isUnlocked = true;
+
         Debug.Log("Finished wait at " + Time.time);
         StartCoroutine(FadeOutDoorOverlay());
     }
@@ -79,7 +80,6 @@ public class LockedPassage : NormalPassage
     private IEnumerator FadeOutDoorOverlay()
     {
         Debug.Log("FadeOutDoorOverlay() started at " + Time.time);
-        Debug.Log(StackTraceUtility.ExtractStackTrace());
         if (doorOverlay == null) yield break;
 
         CanvasGroup cg = doorOverlay.GetComponent<CanvasGroup>();

@@ -57,9 +57,6 @@ public class SlidingDoor : MovingPlatform
 
     public void UnlockDoor()
     {
-        Debug.Log("UnlockDoor() called on " + gameObject.name + " at " + Time.time);
-        // Optional: print stack trace
-        Debug.Log(StackTraceUtility.ExtractStackTrace());
         _unlocked = true;
         Debug.Log("unlocked!");
     }
