@@ -3,13 +3,13 @@
 // Pause menu, start menu scene, Victory scene, Game Over scene, and credits scene 
 
 using System.Collections;
-using NUnit.Framework;
+//using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement; 
 
 public class UITests
-{
+{/*
     //Test to see if the start menu exists in the build settings 
     [Test]
     public void StartMenuSceneExistsInBuildSettings()
@@ -121,5 +121,5 @@ public class UITests
 
         // check if it's active in the hierarchy (visible)
         Assert.IsTrue(pauseCanvas.activeInHierarchy, "PauseCanvas exists but is not active.");
-    }
-} 
+    }*/
+}

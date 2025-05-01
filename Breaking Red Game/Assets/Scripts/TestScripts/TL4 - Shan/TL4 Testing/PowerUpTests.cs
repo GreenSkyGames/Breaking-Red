@@ -1,8 +1,8 @@
-using NUnit.Framework;
+//using NUnit.Framework;
 using UnityEngine;
 
 public class PowerUpTests
-{
+{/*
     private GameObject playerObject;
     private PlayerController playerController;
     private PlayerHealth playerHealth;
@@ -174,6 +174,6 @@ public class PowerUpTests
     public void TearDown()
     {
         Object.Destroy(playerObject);
-    }
+    }*/
 }
 

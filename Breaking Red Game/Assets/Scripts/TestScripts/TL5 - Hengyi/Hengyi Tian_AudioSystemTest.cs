@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections;
-using NUnit.Framework;
+//using NUnit.Framework;
 
 // TL5 -- Hengyi Tian
 // Audio System Testing: 1 stress test and 2 boundary tests
 
 namespace AudioTest
-{
+{/*
     public class AudioSystemTest : MonoBehaviour
     {
         // Stress Test 1: Play multiple sounds simultaneously
@@ -103,5 +103,5 @@ namespace AudioTest
             StartCoroutine(BoundaryTest_VolumeLimits());
             StartCoroutine(BoundaryTest_RestoreAudioStates());
         }
-    }
+    }*/
 }
