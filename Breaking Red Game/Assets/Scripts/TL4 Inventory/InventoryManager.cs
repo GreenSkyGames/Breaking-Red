@@ -32,8 +32,11 @@ public class InventoryManager : MonoBehaviour
 
     void CheckClueSize()
     {
-        maxInventorySize = clueInventoryUIManager.GetCurrentClueInventorySize();
-        Debug.Log("Clue inventory size: " + maxInventorySize);
+        if(clueInventoryUIManager != null) //to avoid null reference message. 
+        {
+            maxInventorySize = clueInventoryUIManager.GetCurrentClueInventorySize();
+            Debug.Log("Clue inventory size: " + maxInventorySize);
+        } 
     }
 
 
