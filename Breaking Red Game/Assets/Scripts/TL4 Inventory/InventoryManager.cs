@@ -141,8 +141,18 @@ public class InventoryManager : MonoBehaviour
         bool isCollectible = false;
         foreach (var slot in itemSlot)
         {
+            if (slot.isOccupied)
+            {
+                Debug.Log("Slot occupied with item: " + slot.itemName);
+            }
+            else
+            {
+                Debug.Log("Empty slot");
+            }
+
             if (slot.itemName == "OwlsWing" || slot.itemName == "CanOfTuna")
             {
+                Debug.Log("collectibles here");
                 isCollectible = true;
             }
         }

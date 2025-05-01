@@ -390,10 +390,37 @@ public class NPCManager : MonoBehaviour
             // Mark this NPC as dead
             deadNPCs[gameObject.tag] = true;
 
+            //Example of how to make different enemies drop items on death:
+            if (gameObject.tag == "PurpleTorchEnemy")
+            {
+                if (hasDropped) return;
+                hasDropped = true;
+                //Item drop here
+                gameObject.GetComponent<NPCManager>().DropLoot();
+            }
+
+            if (gameObject.tag == "TheFish")
+            {
+                //This if() stops a second item from dropping
+                //This is a quick fix for what is probably a coroutine problem
+                if (hasDropped) return;
+                hasDropped = true;
+
+                //Item drop here
+                gameObject.GetComponent<NPCManager>().DropLoot();
+            }
+            if (gameObject.tag == "TheOwl")
+            {
+                if (hasDropped) return;
+                hasDropped = true;
+                //Item drop here
+                gameObject.GetComponent<NPCManager>().DropLoot();
+            }
+
             //System for making enemies affect terrain on death:
             if (gameObject.CompareTag("TheWolf"))
             {
-                Debug.Log("TheWolf has been killed.");
+                Debug.Log("TheWolf has been disabled.");
 
                 // Find door with tag "L2"
                 GameObject door = GameObject.FindWithTag("L2");
@@ -417,6 +444,21 @@ public class NPCManager : MonoBehaviour
                     Debug.LogWarning("L2 door not found.");
                 }
             }
+
+            //This catches the death of the Axman.
+            //The final victory screen can be triggered here.
+            if (gameObject.CompareTag("TheAxman"))
+            {
+                Debug.Log("TheAxman has been disabled.  Victory!");
+                //Triggering the victory screen 
+                SceneManager.LoadScene("Victory"); // player wins the game! 
+
+            }
+
+            //Debug.Log("Death test!" + gameObject.tag);
+
+            // Optionally, you might want to add other game over logic here,
+            // such as displaying a game over screen, triggering events, etc.
 
             SceneTransitionManager sceneManager = FindObjectOfType<SceneTransitionManager>();
             sceneManager.UpdateSceneImage();

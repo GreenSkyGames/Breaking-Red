@@ -888,11 +888,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: c8f34089-b51c-470d-a67d-e06de3994e67
+  cloudProjectId: c08ee95f-821a-428a-9d40-74a3b227d4cd
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Breaking Red
-  organizationId: lizbeltran
+  projectName: Breaking Red 2025-02-19_14-02-28
+  organizationId: asenst2004
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
