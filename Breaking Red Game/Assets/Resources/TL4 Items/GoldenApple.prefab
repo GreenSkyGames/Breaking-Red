@@ -140,4 +140,10 @@ MonoBehaviour:
   effectAmount: 1
   itemType: 1
   sprite: {fileID: -6699131238817029377, guid: 078df8d4f8af7ce4fad828454b3a81a2, type: 3}
-  itemDescription: Tasty and will get your health back up! What's not to like?
+  itemDescription: 'Tasty and will get your health back up! What''s not to like?
+
+
+    R
+    to Remove
+
+    U to Use'

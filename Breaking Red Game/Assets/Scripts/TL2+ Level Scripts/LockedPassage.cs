@@ -41,13 +41,13 @@ public class LockedPassage : NormalPassage
         }
     }*/
 
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetKeyDown(KeyCode.B)) // Press "E" to unlock
         {
             revealPassageway();
         }
-    }
+    }*/
 
     public void revealPassageway()
     {
