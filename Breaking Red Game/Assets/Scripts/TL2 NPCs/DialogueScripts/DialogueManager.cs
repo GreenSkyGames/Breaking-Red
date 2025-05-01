@@ -92,6 +92,7 @@ public class DialogueManager : MonoBehaviour
 		GameEventsManager.instance.dialogueEvents.onEnterDialogue += enterDialogue;
 		//GameEventsManager.instance.inputEvents.onSubmitPressed += SubmitPressed; //useful if using unity input system
 		GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex += updateChoiceIndex;
+		_dialogueBoxCanvas.gameObject.SetActive(false);
 	}
 
 	//When disabled, the functions are unsubscribed from the manager.
