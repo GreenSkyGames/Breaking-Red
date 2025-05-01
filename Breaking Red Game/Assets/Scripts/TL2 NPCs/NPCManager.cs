@@ -405,7 +405,7 @@ public class NPCManager : MonoBehaviour
                     var lockedPassage = door.GetComponent<LockedPassage>();
                     if (lockedPassage != null)
                     {
-                        lockedPassage.revealPassageway(false);
+                        lockedPassage.revealPassageway();
                     }
                     else
                     {
