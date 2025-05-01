@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Platforms and bridges on");
             isOnPlatform = true;
         }
-        else if (other.CompareTag("IL2") || other.CompareTag("L3") || other.CompareTag("IL3") || other.CompareTag("L4") || other.CompareTag("L5"))
+        else if (other.CompareTag("IL2") || other.CompareTag("L2.1") || other.CompareTag("L2.2") || other.CompareTag("L4.1") || other.CompareTag("L4.2") || other.CompareTag("L3.1") || other.CompareTag("L3") || other.CompareTag("IL3") || other.CompareTag("L4") || other.CompareTag("L5") )
         {
             isOnBoundary = false;
             isOnPlatform = true;
