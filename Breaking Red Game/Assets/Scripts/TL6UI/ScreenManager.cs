@@ -29,7 +29,7 @@ public class UIScreenManager : MonoBehaviour
     {
         Debug.Log("Quitting game.");
         Application.Quit();//quitting the game 
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         AudioManager.instance.Play("ClickSound"); // Play sound on button click
     } 
 

@@ -6,9 +6,7 @@
  * It inherets from TerrainObjects
  */
 using System.Collections;
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NormalPassage : TerrainObjects
@@ -142,6 +140,8 @@ public class NormalPassage : TerrainObjects
                 return new Vector2(181.2f, -14.6f);
             case "L3": 
                 return new Vector2(288.23f, -0.26f);
+            case "L3.1":
+                return new Vector2(281.94f, -27.2f);
             case "IL3": 
                 return new Vector2(317.29f, -61.84f);
             case "L4": 

@@ -1,8 +1,4 @@
-using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
-using JetBrains.Annotations;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class Level3 : LevelLoader
 {

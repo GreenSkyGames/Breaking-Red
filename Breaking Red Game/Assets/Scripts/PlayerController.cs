@@ -7,9 +7,6 @@
  * It inherets from MonoBehaviour */
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Cinemachine;
-using UnityEditor.Rendering.LookDev;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
