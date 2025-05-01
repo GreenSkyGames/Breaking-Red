@@ -129,7 +129,6 @@ public class NPCManager : MonoBehaviour
 		GameEventsManager.instance.dialogueEvents.onStartHostility += onHostility;
 		GameEventsManager.instance.dialogueEvents.onStopHostility += offHostility;
 		//GameEventsManager.instance.dialogueEvents.onGatherClue += gatherClue;
-		myCanvas.gameObject.SetActive(false);
 	}
 
 	//When an NPC is disabled, the functions are removed as events.
