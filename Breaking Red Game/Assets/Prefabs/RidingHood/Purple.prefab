@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 6048510446368128549}
   - component: {fileID: 7979292521135610977}
   - component: {fileID: -4038415551397849832}
+  - component: {fileID: 229482004550075217}
   m_Layer: 6
   m_Name: Purple
   m_TagString: Player
@@ -234,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadePanel: {fileID: 0}
-  _speed: 5
+  speed: 5
   scaleSpeed: 2
   seedHeight: 1
   shrunkHeight: 0
@@ -255,6 +256,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   attackDamage: 1
+  killList: []
 --- !u!95 &6048510446368128549
 Animator:
   serializedVersion: 7
@@ -307,5 +309,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choicePrompt: {fileID: 0}
   inventorySlots: []
-  messageText: {fileID: 0}
   healthMessageGroup: {fileID: 0}
+  inventoryFullGroup: {fileID: 0}
+--- !u!114 &229482004550075217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8849911227503075234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfcd2036b0875d645bce5d5a84a289d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollMessage: {fileID: 0}
+  scrollText: {fileID: 0}
