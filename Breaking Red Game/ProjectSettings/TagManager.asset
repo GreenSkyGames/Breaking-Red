@@ -58,6 +58,8 @@ TagManager:
   - L2.1
   - L4.2
   - L2.2
+  - SecretScroll
+  - L3.1
   layers:
   - Default
   - TransparentFX
