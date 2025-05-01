@@ -57,6 +57,7 @@ TagManager:
   - L4.1
   - L2.1
   - L4.2
+  - L2.2
   layers:
   - Default
   - TransparentFX
