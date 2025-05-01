@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
      * It interacts with the displayDialogueBox() function and the triggerDialogue() function */
     private void Update()
     {
-        if (Input.GetButtonDown("PlayerActivate")) //Set to F
+        if (Input.GetButtonDown("PlayerActivate") || (Gamepad.current != null && Gamepad.current.selectButton.wasPressedThisFrame)) //Set to F
         {
 			//Debug.Log("test");
             //This checks if there is an enemy in range of the ActivatePoint gameobject that is bound to the player.

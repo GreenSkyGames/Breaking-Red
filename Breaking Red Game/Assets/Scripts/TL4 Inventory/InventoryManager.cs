@@ -107,28 +107,12 @@ public class InventoryManager : MonoBehaviour
     public bool addToInventory(string itemName, Sprite itemSprite, string itemDescription)
     {
         Debug.Log($"maxInventory = " + maxInventorySize);
-        /*for(int i = 0; i < itemSlot.Length; i++){
-            Debug.Log($"Item slot: " + itemSlot[i] + "\n");
-        }
-        if (itemSlot.Length <= maxInventorySize)
-        {
-            for (int i = 0; i < itemSlot.Length; i++)
-            {
-                if(itemSlot[i] != null && itemSlot[i].isOccupied == false)
-                {
-                    itemSlot[i].updateInventoryUI(itemName, itemSprite, itemDescription);
-                    return true;
-                }
-            }
-        }*/
-        // Iterate through only the currently available active slots (up to maxInventorySize)
         for (int i = 0; i < maxInventorySize; i++)
         {
             if (itemSlot[i] != null && itemSlot[i].isOccupied == false)
             {
-                // Update the inventory UI for the first available slot
                 itemSlot[i].updateInventoryUI(itemName, itemSprite, itemDescription);
-                return true; // Successfully added item to the inventory
+                return true; // successfully added item to the inventory
             }
         }
         Debug.Log("Inventory is full or slot invalid!");
