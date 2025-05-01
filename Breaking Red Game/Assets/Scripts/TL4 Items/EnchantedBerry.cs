@@ -6,8 +6,7 @@ public class EnchantedBerry : PowerUpTemplate
     {
         if (playerController != null)
         {
-            //playerController.sanity += effectAmount;
-            //Debug.Log($"Sanity increased to {playerController.sanity}");
+            playerController.removeKill();
         }
     }
 }

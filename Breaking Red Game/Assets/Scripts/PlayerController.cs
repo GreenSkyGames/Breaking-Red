@@ -324,4 +324,19 @@ public class PlayerController : MonoBehaviour
 			Debug.Log("All kills: " + string.Join(", ", killList));
         }
 	}
+
+    public void removeKill()
+    {
+        if (killList.Count > 0)
+        {
+            string lastKill = killList[killList.Count - 1];
+            killList.RemoveAt(killList.Count - 1);
+            Debug.Log("Removed last kill: " + lastKill);
+            Debug.Log("Remaining kills: " + string.Join(", ", killList));
+        }
+        else
+        {
+            Debug.Log("Kill list is empty — nothing to remove.");
+        }
+    }
 }
